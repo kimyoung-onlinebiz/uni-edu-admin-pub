@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.styleGuide_wrapper { width:100%; min-height:100vh; /* 화면 전체 높이 사용 */ }
+.styleGuide_wrapper .adminHeader { background:#e6e8f3; height:120px; margin-left:280px; padding-left:50px }
+.styleGuide_wrapper .styleGuide_lnb { 
+    width:280px; /* 고정 너비 */
+    background-color:var(--neutral_900);
+    color:var(--textLight);
+    position:fixed; /* 왼쪽 고정 */
+    height:100%;
+    padding:50px 0 0 0;
+    top:0;
+    overflow-y:auto; /* 내용이 길어지면 스크롤 */
+}
+.styleGuide_wrapper .styleGuide_lnb h1 { text-align:center; }
+.styleGuide_wrapper .adminHeader h1 { font-size:40px; font-weight:900; padding-top:15px; }
+.styleGuide_wrapper .adminHeader p { font-size:16px; }
+.styleGuide_wrapper nav ul { margin:48px 0 0 0; border-top:1px solid #444; padding:24px 0 0 24px;}
+.styleGuide_wrapper nav ul a { color:var(--neutral_600); font-size:15px; padding-bottom:8px; display:inline-block; font-weight:500;  }
+.styleGuide_wrapper nav ul a.on,.styleGuide_wrapper nav ul a:hover { color:#fff; }
+.styleGuide_wrapper .styleGuide_content { 
+    padding:40px 0 120px 50px;
+    margin-left:280px;
+}
+.styleGuide_wrapper .styleGuide_content > h2 { font-size:30px; font-weight:700; border-top:1px solid var(--neutral_300); padding:32px 0 8px; margin-top:32px; }
+.styleGuide_wrapper .styleGuide_content > h2 + h3 { padding-top:10px; }
+.styleGuide_wrapper .styleGuide_content .guide h3:first-child { margin-top:0; }
+.styleGuide_wrapper h2:first-child { padding:0; margin:0; border:none; }
+.styleGuide_wrapper .color { display:flex; gap:24px; }
+.styleGuide_wrapper .color dt { width:80px; height:80px; border-radius:var(--border_radius); text-align:center; line-height:80px; margin-right:10px; }
+.styleGuide_wrapper .color dd { font-size:14px; color:var(--neutral_600); }
+.styleGuide_wrapper .color dd:nth-child(2) { margin-top:16px; color:var(--neutral_900); font-weight:600; }
+
+.styleGuide_wrapper footer { margin-top:66px; }
+.styleGuide_wrapper .btn_icon { border:1px solid #ccc; padding:8px 24px 8px 16px; border-radius:5px; margin-left:24px; }
+.styleGuide_wrapper .guide dd { font-size:20px; font-weight:700; }
+.styleGuide_wrapper .flex { display:flex; gap:26px; }
+.styleGuide_wrapper .guide dt,.styleGuide_wrapper h3 { font-size:20px; font-weight:700; padding-bottom:8px; padding-top:16px; }
+.styleGuide_wrapper .component_example { display:flex; gap:16px; align-items:center; }
+.styleGuide_wrapper .component_example.icon .material-symbols-rounded { font-size:20px; }
+.styleGuide_content code,.styleGuide_content strong,.styleGuide_content em,.styleGuide_content u { color:var(--primary_600); font-weight:600; background:var(--neutral_100); padding:2px 6px; border-radius:4px; font-size:90%; }
+.styleGuide_content .flex code { color:#333; font-weight:500; }
+.styleGuide_content .btn_group { margin-bottom:8px; }
+.styleGuide_wrapper h4 { margin:20px 0 8px 0; }

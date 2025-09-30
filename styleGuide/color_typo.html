@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="styleGuide.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body class="styleGuide_wrapper">
+    <header class="adminHeader">
+        <h1>STYLE GUIDE</h1>
+        <p>이 페이지는 어드민 페이지에 사용되는 주요 UI 컴포넌트와 스타일을 보여줍니다. 개발 시 참고해 주세요.</p>
+    </header>
+   
+
+    <!-- lnb -->
+    <section class="styleGuide_lnb">
+        <h1><img src="/assets/images/logo.png" alt=""></h1>
+        <nav>
+            <ul>
+                <li><a href="link.html">html 링크</a></li>
+                <li><a href="color_typo.html" class="on">Color Palette, Typography</a></li>
+                <li><a href="input.html">Input, Form, Table, Button</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- //lnb -->
+
+    <section class="styleGuide_content">
+       
+        <h2>색상 팔레트</h2>
+        <h3>Neutral</h3>
+        <div class="color">
+            <dl>
+                <dt class="neutral_0" style="border:1px solid #ddd"></dt>
+                <dd class="neutral_0">neutral_0</dd>
+                <dd>#fff</dd>
+            </dl>
+            <dl>
+                <dt class="neutral_100" style="border:1px solid #ddd"></dt>
+                <dd>neutral_100</dd>
+                <dd>#fafafa</dd>
+            </dl>
+            <dl>
+                <dt class="neutral_200"></dt>
+                <dd>neutral_200</dd>
+                <dd>#f2f4fc</dd>
+            </dl>
+            <dl>
+                <dt class="neutral_300"></dt>
+                <dd>neutral_300</dd>
+                <dd>#e4e4e4</dd>
+            </dl>
+            <dl>
+                <dt class="neutral_600"></dt>
+                <dd>neutral_600</dd>
+                <dd>#aaa</dd>
+            </dl>
+            <dl>
+                <dt class="neutral_800"></dt>
+                <dd>neutral_800</dd>
+                <dd>#414656</dd>
+            </dl>
+            <dl>
+                <dt class="neutral_900"></dt>
+                <dd>neutral_900</dd>
+                <dd>#111</dd>
+            </dl>
+        </div>
+        <h3>Primary</h3>
+        <div class="color">
+            <dl>
+                <dt class="primary_100"></dt>
+                <dd>primary_100</dd>
+                <dd>#eef4fe</dd>
+            </dl>
+            <dl>
+                <dt class="primary_300"></dt>
+                <dd>primary_300</dd>
+                <dd>#e4e7f1</dd>
+            </dl>
+            <dl>
+                <dt class="primary_500"></dt>
+                <dd>primary_500</dd>
+                <dd>#326cf9</dd>
+            </dl>
+            <dl>
+                <dt class="primary_600"></dt>
+                <dd>primary_600</dd>
+                <dd>#2553cc</dd>
+            </dl>
+            <dl>
+                <dt class="primary_700"></dt>
+                <dd>primary_700</dd>
+                <dd>#1c3e99</dd>
+            </dl>
+            <dl>
+                <dt class="primary_800"></dt>
+                <dd>primary_800</dd>
+                <dd>#414656</dd>
+            </dl>
+        </div>
+        <h3>System</h3>
+        <div class="color">
+            <dl>
+                <dt class="error_color"></dt>
+                <dd>error_color</dd>
+                <dd>#ef4444</dd>
+            </dl>
+            <dl>
+                <dt class="warning_color"></dt>
+                <dd>warning_color</dd>
+                <dd>#eab308</dd>
+            </dl>
+            <dl>
+                <dt class="success_color"></dt>
+                <dd>success_color</dd>
+                <dd>#16a34a</dd>
+            </dl>
+             <dl>
+                <dt class="end_color"></dt>
+                <dd>end_color</dd>
+                <dd>#326cf9</dd>
+            </dl>
+             <dl>
+                <dt class="temporary_color"></dt>
+                <dd>temporary_color</dd>
+                <dd>#888</dd>
+            </dl>
+        </div>
+        
+        <!-- 폰트 및 텍스트 스타일 -->
+        <h2>폰트 및 텍스트 스타일</h2>
+        <div class="guide">
+            <dl>
+                <dt>폰트</dt>
+                <dd>Pretendard(프리텐다드) 
+                    <a href="https://cactus.tistory.com/306" class="btn_icon" target="_blank"><span class="icon_material material-icons">download</span> 다운로드</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>본문 텍스트</dt>
+                <dd>
+                     <p>기본 본문 텍스트입니다. 폰트 크기 14px, <code>var(--font_base)</code>, line-height 1.5</p>
+                     <p class="font_small">작은 텍스트입니다. 폰트 크기 12px, <code>var(--font_small)</code></p>
+                     <p class="font_medium">중간 텍스트입니다. 폰트 크기 16px, <code>var(--font_medium)</code></p>
+                     <p class="font_large">큰 텍스트입니다. 폰트 크기 18px, <code>var(--font_large)</code></p>
+                     <p class="font_xlarge">더 큰 텍스트입니다. 폰트 크기 28px, <code>var(--font_xlarge)</code></p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>강조 텍스트</dt>
+                <dd>
+                    <p><strong>굵은 텍스트</strong>는 중요 내용을 강조할 때 사용합니다.</p>
+                    <p><em>기울임 텍스트</em>는 약간의 강조가 필요할 때 사용합니다.</p>
+                    <p><u>밑줄 텍스트</u>는 링크나 중요한 부분에 밑줄을 추가할 때 사용합니다.</p>
+                </dd>
+            </dl>
+             <dl>
+                <dt>텍스트 두께</dt>
+                <dd>
+                   <ul>
+						<li style="font-weight:100;">font-weight:100</li>
+						<li style="font-weight:200;">font-weight:200</li>
+						<li style="font-weight:300;">font-weight:300</li>
+						<li style="font-weight:400;">font-weight:400</li>
+						<li style="font-weight:500;">font-weight:500</li>
+						<li style="font-weight:600;">font-weight:600</li>
+						<li style="font-weight:700;">font-weight:700</li>
+						<li style="font-weight:800;">font-weight:800</li>
+						<li style="font-weight:900;">font-weight:900</li>
+					</ul>
+                </dd>
+            </dl>
+             <dl>
+                <dt>텍스트 정렬</dt>
+                <dd class="flex">
+                    <div>
+                        <h4><code>class="align_left"</code></h4>
+                        <p class="align_left" style="width:120px; border:1px solid #ddd; padding:5px; margin-top:10px;">왼쪽 정렬</p>
+                    </div>
+                    <div>
+                        <h4><code>class="align_right"</code></h4>
+                        <p class="align_right" style="width:120px; border:1px solid #ddd; padding:5px; margin-top:10px;">오른쪽 정렬</p>
+                    </div>
+                    <div>
+                        <h4><code>class="align_center"</code></h4>
+                        <p class="align_center" style="width:120px; border:1px solid #ddd; padding:5px; margin-top:10px;">가운데 정렬</p>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>텍스트 색상</dt>
+                <dd class="flex">
+                    <div>
+                        <h4><code>class="txtNeutral_0"</code></h4>
+                        <p class="txtNeutral_0" style="background:#111;">txtNeutral_0</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtNeutral_100"</code></h4>
+                        <p class="txtNeutral_100" style="background:#111;">txtNeutral_100</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtNeutral_300"</code></h4>
+                        <p class="txtNeutral_300">txtNeutral_300</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtNeutral_600"</code></h4>
+                        <p class="txtNeutral_600">txtNeutral_600</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtNeutral_800"</code></h4>
+                        <p class="txtNeutral_800">txtNeutral_800</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtNeutral_900"</code></h4>
+                        <p class="txtNeutral_900">txtNeutral_900</p>
+                    </div>
+                </dd>
+                <dd class="flex">
+                    <div>
+                        <h4><code>class="txtPrimary_100"</code></h4>
+                        <p class="txtPrimary_100">txtPrimary_100</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtPrimary_500"</code></h4>
+                        <p class="txtPrimary_500">txtPrimary_500</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtPrimary_600"</code></h4>
+                        <p class="txtPrimary_600">txtPrimary_600</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtPrimary_700"</code></h4>
+                        <p class="txtPrimary_700">txtPrimary_700</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtPrimary_800"</code></h4>
+                        <p class="txtPrimary_700">txtPrimary_800</p>
+                    </div>
+                </dd>
+                <dd class="flex">
+                    <div>
+                        <h4><code>class="txtError_color"</code></h4>
+                        <p class="txtError_color">txtError_color</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtWarning_color"</code></h4>
+                        <p class="txtWarning_color">txtWarning_color</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtSuccess_color"</code></h4>
+                        <p class="txtSuccess_color">txtSuccess_color</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtEnd_color"</code></h4>
+                        <p class="txtEnd_color">txtEnd_color</p>
+                    </div>
+                    <div>
+                        <h4><code>class="txtTemporary_color"</code></h4>
+                        <p class="txtTemporary_color">txtTemporary_color</p>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        
+        <!-- //폰트 및 텍스트 스타일 -->
+        <!-- 아이콘 -->
+        <h2>아이콘</h2>
+        <div class="guide">
+            <h3>Material Icons (Google)</h3>
+            <p style="margin-top:8px;">Google Material Icons를 사용합니다.
+            <a href="https://fonts.google.com/icons" class="btn_icon" target="_blank"><span class="material-symbols-rounded">open_in_new</span> 아이콘 검색</a>
+            </p>
+            <p style="margin-top:8px;">아이콘은 텍스트와 동일하게 취급되므로, 텍스트 크기와 색상을 조절하여 사용할 수 있습니다.</p>
+            <dl>
+                <dt>사용 방법</dt>
+                <dd>
+                    <p>라운드 된 라인으로 이루어진 디자인</p>
+                    <code>&lt;span class="material-symbols-rounded"&gt;home&lt;/span&gt;</code>
+                </dd>
+                <dd style="margin-top:8px;">
+                    <p>색이 채워진 디자인</p>
+                    <code>&lt;span class="material-symbols-rounded icon_fill"&gt;home&lt;/span&gt;</code>
+                </dd>
+                <p>태그에 material-symbols-rounded 클래스를 추가한 후 아이콘 이름을 영문으로 적는다.<br />면적이 채워진 디자인은 icon_fill 클래스도 추가</p>
+            </dl>
+            <h3>아이콘 예시</h3>
+            <div class="component_example icon">
+                <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                <span class="material-symbols-rounded">keyboard_arrow_up</span>
+                <span class="material-symbols-rounded">keyboard_arrow_left</span>
+                <span class="material-symbols-rounded">keyboard_arrow_right</span>
+                <span class="material-symbols-rounded">keyboard_double_arrow_left</span>
+                <span class="material-symbols-rounded">keyboard_double_arrow_right</span>
+                <span class="material-symbols-rounded">logout</span>
+                <span class="material-symbols-rounded">login</span>
+                <span class="material-symbols-rounded">download</span>
+                <span class="material-symbols-rounded">upload</span>
+                <span class="material-symbols-rounded">search</span>
+                <span class="material-symbols-rounded">book</span>
+                <span class="material-symbols-rounded">dvr</span>
+                <span class="material-symbols-rounded">lightbulb_circle</span>
+                
+            </div>
+            <div class="component_example icon">
+                <span class="material-symbols-rounded">clarify</span>
+                <span class="material-symbols-rounded">desktop_windows</span>
+                <span class="material-symbols-rounded">domain_verification</span>
+                <span class="material-symbols-rounded icon_fill">incomplete_circle</span>
+                <span class="material-symbols-rounded">local_library</span>
+                <span class="material-symbols-rounded">display_settings</span>
+                <span class="material-symbols-rounded">content_paste_search</span>
+                <span class="material-symbols-rounded">fact_check</span>
+                <span class="material-symbols-rounded">leaderboard</span>
+                <span class="material-symbols-rounded">comment</span>
+                <span class="material-symbols-rounded">assignment_ind</span>
+                <span class="material-symbols-rounded">handshake</span>
+                <span class="material-symbols-rounded">developer_board</span>
+                <span class="material-symbols-rounded">calendar_today</span>
+                <span class="material-symbols-rounded">delete</span>
+                <span class="material-symbols-rounded">menu</span>
+                <span class="material-symbols-rounded">file_copy</span>
+                <span class="material-symbols-rounded">save</span>
+                <span class="material-symbols-rounded">arrow_drop_down</span>
+                <span class="material-symbols-rounded">arrow_drop_up</span>
+                <span class="material-symbols-rounded">arrow_left</span>
+                <span class="material-symbols-rounded">arrow_right</span>
+            </div>
+            <div class="component_example icon">
+                <span class="material-symbols-rounded icon_fill">settings</span>
+                <span class="material-symbols-rounded">border_color</span>
+                <span class="material-symbols-rounded">gpp_maybe</span>
+                <span class="material-symbols-rounded">close</span>
+                <span class="material-symbols-rounded">sound_detection_loud_sound</span>
+                <span class="material-symbols-rounded">add_circle</span>
+                <span class="material-symbols-rounded">attach_file</span>
+                <span class="material-symbols-rounded">horizontal_rule</span>
+                <span class="material-symbols-rounded">add</span>
+                <span class="material-symbols-rounded">add_photo_alternate</span>
+                <span class="material-symbols-rounded">timer</span>
+            </div>
+        </div>
+    </section>
+
+    
+
+</body>
+</html>

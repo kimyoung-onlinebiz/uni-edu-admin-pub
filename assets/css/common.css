@@ -176,3 +176,15 @@ a:hover { color:var(--primary_600); }
 
 /* 기본 아이콘 크기 */
 button span.material-symbols-rounded,.material-symbols-rounded.paddingR4  { padding-right:4px; }
+
+/* 대표 버튼 스타일 */
+.btn { font-size:var(--font_base); border:1px solid var(--neutral_800); padding:0 24px; height:32px; border-radius:var(--borderRadius); background:var(--neutral_0); }
+.btn:hover { background:var(--neutral_100)}
+.btn:disabled { background:var(--neutral_300) !important; border:1px solid var(--neutral_300) !important; color:var(--neutral_600) !important; cursor:not-allowed; }
+.btn.material-symbols-rounded,.btn.primary.material-symbols-rounded { font-size:22px; height:32px; text-align:center; padding:0 8px; }
+.btn.material-symbols-rounded.medium,.btn.primary.material-symbols-rounded.medium { font-size:22px; height:40px; text-align:center; padding:0 8px; }
+.btn.primary { font-size:var(--font_base); border:1px solid var(--primary_500); background:var(--primary_500); color:var(--neutral_0); }
+.btn.primary:hover { border:1px solid var(--primary_600); background:var(--primary_600); }
+.btn.secondary { font-size:var(--font_base); border:1px solid var(--neutral_800); background:var(--neutral_800); color:var(--neutral_0); }
+.btn.secondary:hover { border:1px solid var(--primary_800); background:var(--primary_800); color:var(--neutral_0); }
+.btn.medium,.btn.primary.medium,.btn.secondary.medium { font-size:var(--font_medium); height:40px; }

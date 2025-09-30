@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="styleGuide.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body class="styleGuide_wrapper">
+    <header class="adminHeader">
+        <h1>STYLE GUIDE</h1>
+        <p>이 페이지는 어드민 페이지에 사용되는 주요 UI 컴포넌트와 스타일을 보여줍니다. 개발 시 참고해 주세요.</p>
+    </header>
+   
+
+    <!-- lnb -->
+    <section class="styleGuide_lnb">
+        <h1><img src="/assets/images/logo.png" alt=""></h1>
+        <nav>
+            <ul>
+                <li><a href="link.html">html 링크</a></li>
+                <li><a href="color_typo.html">Color Palette, Typography</a></li>
+                <li><a href="styleGuide_input.html" class="on">Input, Form, Table, Button</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- //lnb -->
+
+    <section class="styleGuide_content">
+       
+        <h2>버튼</h2>
+        <h3>기본 버튼</h3>
+        <div class="component_example">
+            <button class="btn">
+                <span class="material-symbols-rounded">attach_file</span> 첨부파일
+            </button>
+            <button class="btn">
+                14px 기본버튼
+            </button>
+            <button class="btn" disabled>
+                disabled
+            </button>
+            <button class="btn material-symbols-rounded">search</button>
+            <button class="btn medium">
+                16px 버튼
+            </button>
+            <button class="btn medium" disabled>
+                16px 버튼
+            </button>
+            <button class="btn medium">
+                <span class="material-symbols-rounded">add_circle</span>16px 버튼
+            </button>
+            <button class="btn material-symbols-rounded medium">search</button>
+        </div>
+        <h3>강조 버튼</h3>
+        <div class="component_example">
+            <button class="btn primary">
+                <span class="material-symbols-rounded">attach_file</span> 첨부파일
+            </button>
+            <button class="btn primary">
+                14px 기본버튼
+            </button>
+            <button class="btn primary" disabled>
+                disabled
+            </button>
+            <button class="btn primary material-symbols-rounded">search</button>
+            <button class="btn medium primary">
+                16px 버튼
+            </button>
+            <button class="btn medium primary" disabled>
+                16px 버튼
+            </button>
+            <button class="btn medium primary">
+                <span class="material-symbols-rounded">add_circle</span>16px 버튼
+            </button>
+            <button class="btn primary material-symbols-rounded medium">search</button>
+        </div> 
+        <h3>보조 버튼</h3>
+        <div class="component_example">
+            <button class="btn secondary">
+                <span class="material-symbols-rounded">attach_file</span> 첨부파일
+            </button>
+            <button class="btn secondary">
+                14px 기본버튼
+            </button>
+            <button class="btn secondary" disabled>
+                disabled
+            </button>
+            <button class="btn primary material-symbols-rounded">search</button>
+            <button class="btn medium secondary">
+                16px 버튼
+            </button>
+            <button class="btn medium secondary" disabled>
+                16px 버튼
+            </button>
+            <button class="btn medium secondary">
+                <span class="material-symbols-rounded">add_circle</span>16px 버튼
+            </button>
+            <button class="btn primary material-symbols-rounded medium">search</button> 
+        </div>
+        <h3>버튼 사용 예시</h3>
+        <div class="btn_group">
+            <button class="btn">초기화</button>
+            <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+            <button class="btn_openClose"></button>
+        </div>
+        <div class="btn_group">
+            <button class="btn medium">초기화</button>
+            <button class="btn medium primary"><span class="material-symbols-rounded">search</span>검색</button>
+        </div>
+        <h4>테이블 내 첨부파일 버튼</h4>
+        <button class="btn_fileType">JPG</button>
+        <button class="btn_fileType">png</button>
+
+        <h2>페이징</h2>
+        <!-- 페이징 -->
+        <div class="paging">
+            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+            <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+			<a href="#none">1</a>
+			<a href="#none" class="active">2</a>
+			<a href="#none">3</a>
+			<a href="#none">4</a>
+			<a href="#none">5</a>
+			<a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+        </div>
+        <!-- //페이징 -->
+
+        <h2>인풋</h2>
+        <h3>체크박스</h3>
+        <div class="form_group">
+            <div class="form_check">
+                <input type="checkbox" name="chk_1" id="chk_1">
+                <label for="chk_1">기본</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" name="chk_1" id="chk_2" checked="">
+                <label for="chk_2">선택됨</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" name="chk_1" id="chk_3" disabled="">
+                <label for="chk_3">비활성화</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" name="chk_1" id="chk_4" disabled="" checked="">
+                <label for="chk_4">선택된 비활성화</label>
+            </div>
+        </div>
+        <h3>라디오버튼</h3>
+        <div class="form_group">
+           <div class="form_check">
+               <input type="radio" name="radio_1" id="radio_1">
+               <label for="radio_1">기본</label>
+           </div>    
+           <div class="form_check">
+                <input type="radio" name="radio_1" id="radio_2" checked="">
+                <label for="radio_2">선택됨</label>
+           </div>
+        </div>
+        <h3>캘린더</h3>
+        <div class="form_group calendar">
+            <input type="date" id="searchStartDate" placeholder="시작일">
+            <span>~</span>
+            <input type="date" id="searchEndDate" placeholder="종료일">
+            <ul class="btn_date_range">
+                <li><button class="active">당일</button></li>
+                <li><button>당월</button></li>
+                <li><button>전일</button></li>
+                <li><button>전월</button></li>
+                <li><button>연간</button></li>
+            </ul>
+        </div>
+        <h3>셀렉트박스</h3>
+        <div class="form_group">
+            <select name="" id="">
+                <option value="">전체과정</option>
+                <option value="">과정1</option>
+                <option value="">과정2</option>
+                <option value="">과정3</option>
+            </select>
+        </div>
+        <br />
+        <div class="form_group">
+            <select name="" id="" disabled="">
+                <option value="">선택불가</option>
+                <option value="">과정1</option>
+                <option value="">과정2</option>
+                <option value="">과정3</option>
+            </select>
+        </div>
+
+        <h2>탭 디자인</h2>
+        <h3>첫번째 탭</h3>
+        <ul class="first_tab">
+            <li><a href="#tab1" class="active">전체</a></li>
+            <li><a href="#tab2">전화/제휴(수기입력 전용)</a></li>
+            <li><a href="#tab3">탭 3</a></li>
+        </ul>
+
+        <h2>테이블</h2>
+        <h3>기본 테이블</h3>
+        <!-- 테이블 -->
+        <table class="data_table">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>유입경로</th>
+                    <th>문의과정</th>
+                    <th>상담유형</th>
+                    <th>이름</th>
+                    <th>회원여부</th>
+                    <th>전화번호</th>
+                    <th>상담내용</th>
+                    <th>개인정보<br />동의여부</th>
+                    <th>상담여부</th>
+                    <th>담당자</th>
+                    <th>등록자</th>
+                    <th>등록일</th>
+                    <th>처리일</th>
+                    <th>첨부파일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>간편상담</td>
+                    <td>기타</td>
+                    <td>전화전화전화</td>
+                    <td>홍길동</td>
+                    <td>회원</td>
+                    <td>010-222-3333</td>
+                    <td>010-222-3333</td>
+                    <td>무료강의를 들으려고 합니다...</td>
+                    <td>Y</td>
+                    <td>부재중</td>
+                    <td>이순신</td>
+                    <td>안중근</td>
+                    <td>2025-02-22</td>
+                    <td>2025-02-22</td>
+                    <td>
+                        <button class="btn_fileType">JPG</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>간편상담</td>
+                    <td>기타</td>
+                    <td>전화전화전화</td>
+                    <td>홍길동</td>
+                    <td>회원</td>
+                    <td>010-222-3333</td>
+                    <td>010-222-3333</td>
+                    <td>무료강의를 들으려고 합니다...</td>
+                    <td>Y</td>
+                    <td>
+                        <span class="txtError_color">부재중</span>
+                    </td>
+                    <td>이순신</td>
+                    <td>안중근</td>
+                    <td>2025-02-22</td>
+                    <td>2025-02-22</td>
+                    <td>
+                        <button class="btn_fileType">JPG</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>간편상담</td>
+                    <td>기타</td>
+                    <td>전화전화전화</td>
+                    <td>홍길동</td>
+                    <td>회원</td>
+                    <td>010-222-3333</td>
+                    <td>010-222-3333</td>
+                    <td>무료강의를 들으려고 합니다...</td>
+                    <td>Y</td>
+                    <td> <span class="txtEnd_color">완료</span></td>
+                    <td>이순신</td>
+                    <td>안중근</td>
+                    <td>2025-02-22</td>
+                    <td>2025-02-22</td>
+                    <td>
+                        <button class="btn_fileType">JPG</button>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>간편상담</td>
+                    <td>기타</td>
+                    <td>전화전화전화</td>
+                    <td>홍길동</td>
+                    <td>회원</td>
+                    <td>010-222-3333</td>
+                    <td>010-222-3333</td>
+                    <td>무료강의를 들으려고 합니다...</td>
+                    <td>Y</td>
+                    <td> <span class="txtSuccess_color">재통화</span></td>
+                    <td>이순신</td>
+                    <td>안중근</td>
+                    <td>2025-02-22</td>
+                    <td>2025-02-22</td>
+                    <td>
+                        <button class="btn_fileType">JPG</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>간편상담</td>
+                    <td>기타</td>
+                    <td>전화전화전화</td>
+                    <td>홍길동</td>
+                    <td>회원</td>
+                    <td>010-222-3333</td>
+                    <td>010-222-3333</td>
+                    <td>무료강의를 들으려고 합니다...</td>
+                    <td>Y</td>
+                    <td> <span class="txtTemporary_color">임시저장</span></td>
+                    <td>이순신</td>
+                    <td>안중근</td>
+                    <td>2025-02-22</td>
+                    <td>2025-02-22</td>
+                    <td>
+                        <button class="btn_fileType">JPG</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    <!-- 기타 필요한 컴포넌트들 추가... (체크박스, 라디오, 모달, 페이징 등) -->
+    </section>
+
+    
+
+</body>
+</html>
