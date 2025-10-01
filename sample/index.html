@@ -202,9 +202,15 @@
 
                         <!-- 캘린더 -->
                         <div class="form_group calendar">
-                            <input type="date" id="searchStartDate" placeholder="시작일">
-                            <span>~</span>
-                            <input type="date" id="searchEndDate" placeholder="종료일">
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                            </div>
+                            <span class="calendar_bullet">~</span>
+                            <div class="form_warning">
+                                <input type="date" id="searchEndDate" placeholder="종료일">
+                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                            </div>
                             <ul class="btn_date_range">
                                 <li><button class="active">당일</button></li>
                                 <li><button>당월</button></li>
