@@ -81,6 +81,7 @@
 
 /* 공통 컴포넌트:입력 필드 */
 .form_group { display:flex; gap:20px; }
+.form_group.alignC { align-items:center; }
 .form_check { display:flex; align-items:center; }
 .calendar_bullet { display:inline-block; color:var(--neutral_600); margin:5px -8px 0; }
 .form_group .btn_date_range { display:flex; align-items:center; }
@@ -95,6 +96,8 @@
 .btn_groupRight { margin-top:40px; display:flex; gap:16px; justify-content:right; }
 .btn_groupRight button { min-width:120px; height:40px; }
 .form_warning p { font-size:var(--font_small); margin-top:8px; font-weight:500; }
+.inline_dl { display:flex; align-items:center; gap:16px; }
+.inline_dl dt { font-weight:600; color:var(--neutral_900);  }
 
 /* 첫번째 탭 */
 .first_tab { display:flex; align-items:center; gap:8px; margin-bottom:20px; border-bottom:1px solid var(--neutral_300); }
