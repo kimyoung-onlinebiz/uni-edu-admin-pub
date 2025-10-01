@@ -84,7 +84,7 @@ http://scripts.sil.org/OFL
     --borderRadius:4px;
     --borderRadius_2:8px;
 
-    --shadow_light:2px 3px 2px rgba(0,0,0,.1);
+    --shadow_light:2px 2px 2px rgba(0,0,0,.1);
 }
 
 /* 기본 스타일 초기화 및 폰트 설정 */
@@ -108,6 +108,8 @@ select:disabled { background-color:var(--neutral_300); cursor:not-allowed; }
 select:focus { border:1px solid var(--neutral_800); outline:transparent; }
 label { cursor:pointer; }
 input:disabled,textarea:disabled,input:disabled+label,textarea:disabled+label { cursor:not-allowed; }
+input.width_100 { width:100%; }
+input.width_80px { width:80px; }
 
 table { position:relative; max-width:none;	width:auto; min-width:100%; width:100%;border-collapse:collapse; border:0; border-spacing:0; }
 caption, legend { text-indent:-9999px; overflow:hidden; height:0; }
@@ -187,4 +189,19 @@ button span.material-symbols-rounded,.material-symbols-rounded.paddingR4  { padd
 .btn.primary:hover { border:1px solid var(--primary_600); background:var(--primary_600); }
 .btn.secondary { font-size:var(--font_base); border:1px solid var(--neutral_800); background:var(--neutral_800); color:var(--neutral_0); }
 .btn.secondary:hover { border:1px solid var(--primary_800); background:var(--primary_800); color:var(--neutral_0); }
-.btn.medium,.btn.primary.medium,.btn.secondary.medium { font-size:var(--font_medium); height:40px; }
+.btn.medium,.btn.primary.medium,.btn.secondary.medium { height:40px; }
+
+/* 기본 레이어 스타일 */
+.layer_wrapper { background:var(--neutral_0); display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.3); justify-content:center; align-items:center; z-index: 1000; }
+.layer_wrapper.active { display:flex; }
+.layer_header { position:relative; display:flex; padding:0 16px 21px 16px; }
+.layer_header .btn_layerClose { position:absolute; right:0; top:-6px; font-size:30px; }
+.layer_header h2 { font-size:20px; font-weight:600; }
+.layer_basic { background:var(--neutral_0); border-radius:12px; padding:29px 20px 32px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); text-align:center; }
+.layer_content { overflow:auto; overflow-x:hidden; max-height:580px; padding-right:8px; }
+.layer_content::-webkit-scrollbar { width:6px; }
+.layer_content::-webkit-scrollbar-track { border-radius:3px; background:var(--neutral_0); }
+.layer_content::-webkit-scrollbar-thumb { border-radius:3px; background:var(--neutral_300); }
+.layer_content::-webkit-scrollbar-thumb:hover { border-radius:3px; background:var(--neutral_500); }
+.layer_btnSection { margin-top:20px; display:flex; justify-content:right; gap:16px; }
+.layer_btnSection .btn { min-width:120px; height:40px; }

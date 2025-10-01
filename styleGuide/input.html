@@ -41,20 +41,20 @@
                 <span class="material-symbols-rounded">attach_file</span> 첨부파일
             </button>
             <button class="btn">
-                14px 기본버튼
+                기본버튼
             </button>
             <button class="btn" disabled>
                 disabled
             </button>
             <button class="btn material-symbols-rounded">search</button>
             <button class="btn medium">
-                16px 버튼
+                세로 40px 버튼
             </button>
             <button class="btn medium" disabled>
-                16px 버튼
+                세로 40px 버튼
             </button>
             <button class="btn medium">
-                <span class="material-symbols-rounded">add_circle</span>16px 버튼
+                <span class="material-symbols-rounded">add_circle</span>세로 40px 버튼
             </button>
             <button class="btn material-symbols-rounded medium">search</button>
         </div>
@@ -64,20 +64,20 @@
                 <span class="material-symbols-rounded">attach_file</span> 첨부파일
             </button>
             <button class="btn primary">
-                14px 기본버튼
+                기본버튼
             </button>
             <button class="btn primary" disabled>
                 disabled
             </button>
             <button class="btn primary material-symbols-rounded">search</button>
             <button class="btn medium primary">
-                16px 버튼
+                세로 40px 버튼
             </button>
             <button class="btn medium primary" disabled>
-                16px 버튼
+                세로 40px 버튼
             </button>
             <button class="btn medium primary">
-                <span class="material-symbols-rounded">add_circle</span>16px 버튼
+                <span class="material-symbols-rounded">add_circle</span>세로 40px 버튼
             </button>
             <button class="btn primary material-symbols-rounded medium">search</button>
         </div> 
@@ -87,20 +87,20 @@
                 <span class="material-symbols-rounded">attach_file</span> 첨부파일
             </button>
             <button class="btn secondary">
-                14px 기본버튼
+                기본버튼
             </button>
             <button class="btn secondary" disabled>
                 disabled
             </button>
             <button class="btn primary material-symbols-rounded">search</button>
             <button class="btn medium secondary">
-                16px 버튼
+                세로 40px 버튼
             </button>
             <button class="btn medium secondary" disabled>
-                16px 버튼
+                세로 40px 버튼
             </button>
             <button class="btn medium secondary">
-                <span class="material-symbols-rounded">add_circle</span>16px 버튼
+                <span class="material-symbols-rounded">add_circle</span>세로 40px 버튼
             </button>
             <button class="btn primary material-symbols-rounded medium">search</button> 
         </div>
@@ -117,6 +117,12 @@
         <h4>테이블 내 첨부파일 버튼</h4>
         <button class="btn_fileType">JPG</button>
         <button class="btn_fileType">png</button>
+        <h4>테이블 아래 우측 버튼 리스트</h4>
+        <div class="btn_groupRight"> 
+            <button class="btn">삭제</button>
+            <button class="btn primary">저장</button>
+            <button class="btn secondary">등록</button>
+        </div>
 
         <h2>페이징</h2>
         <!-- 페이징 -->
@@ -344,7 +350,52 @@
                 </tr>
             </tbody>
         </table>
-
+        <!-- 기본 테이블 -->
+        <h3>뷰 테이블</h3>
+        <table class="table_view">
+            <colgroup>
+                <col style="width:200px">
+                <col>
+                <col style="width:200px">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>배너 유형</th>
+                    <td>PC 좌측 스카이배너</td>
+                    <th><span class="essential">*</span>순서</th>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>배너 제목</th>
+                    <td colspan="3">김영편입 박람회(2025)</td>
+                </tr>
+               <tr>
+                    <th>등록자</th>
+                    <td>홍길동</td>
+                    <th>등록일</th>
+                    <td>2025-12-22</td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>이미지</th>
+                    <td colspan="3"><img src="https://www.kystudy.co.krFiles/Banner/2025-09-02/inlineBn_20250902_01.png"alt=""></td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>연결 URL</th>
+                    <td colspan="3">
+                        <p>https://www.kystudy.co.kr</p>
+                        <div class="form_check">
+                            <input type="checkbox" name="chk_1" id="chk_1">
+                            <label for="chk_1">새 창 열기</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>내용</th>
+                    <td colspan="3">내용내용????</td>
+                </tr>
+            </tbody>
+        </table>
 
     <!-- 기타 필요한 컴포넌트들 추가... (체크박스, 라디오, 모달, 페이징 등) -->
     </section>
