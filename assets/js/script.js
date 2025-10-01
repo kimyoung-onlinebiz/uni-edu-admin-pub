@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const layerWrapper = document.querySelector('.layer_wrapper');
     const bannerListLayer = document.querySelector('.banner_list');
     const bannerPositionLayer = document.querySelector('.banner_position');
+    const bannerPreview = document.querySelector('.layer_bannerPreview');
 
     // 사이드바 토글
     if (toggleButton && adminWrapper && adminSidebar && adminContent && footer) {
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchSection) {
         searchSection.style.height = searchSection.offsetHeight + 'px';
     }
- 
+
     // 검색영역 토글
     if (btnOpenClose && searchSection) {
         btnOpenClose.addEventListener('click', () => {
@@ -48,17 +49,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 배너 관리 배너 목록 버튼 클릭 시 배너 목록 레이어 활성화
-    document.querySelector('.btn_bannerList .btn').addEventListener('click', () => {
-        bannerListLayer.classList.add('active');
-    });
+    const btnBannerList = document.querySelector('.btn_bannerList .btn');
+    if (btnBannerList && bannerListLayer) {
+        btnBannerList.addEventListener('click', () => {
+            bannerListLayer.classList.add('active');
+        });
+    }
 
     // 배너 위치 안내 버튼 클릭 시 배너 위치 레이어 활성화
-    document.querySelector('.btn_bannerPosition').addEventListener('click', () => {
-        bannerPositionLayer.classList.add('active');
-    });
+    const btnBannerPosition = document.querySelector('.btn_bannerPosition');
+    if (btnBannerPosition && bannerPositionLayer) {
+        btnBannerPosition.addEventListener('click', () => {
+            bannerPositionLayer.classList.add('active');
+        });
+    }
+
+    // 배너 클릭 시 배너 미리보기 레이어 활성화
+    const btnBannerPreviewList = document.querySelectorAll('.btn_bannerPreview');
+    if (btnBannerPreviewList.length > 0 && bannerPreview) {
+        btnBannerPreviewList.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); // a 태그의 기본 동작 방지
+                bannerPreview.classList.add('active');
+            });
+        });
+    }
 
     // 닫기 버튼(.btn_layerClose) 또는 확인 버튼(.layer_btnSection button) 클릭 시 모든 레이어 비활성화
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (
             e.target.classList.contains('btn_layerClose') ||
             (e.target.closest('.layer_btnSection') && e.target.classList.contains('btn'))

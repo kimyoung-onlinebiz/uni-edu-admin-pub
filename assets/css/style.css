@@ -167,8 +167,8 @@ th .essential { color:var(--error_color); margin-right:4px; margin-left:-11px; }
 /* 배너관리 */
 .content_header button { font-size:26px; color:var(--neutral_600); vertical-align:-4px; margin-left:4px; }
 .content_header button:hover { font-size:26px; color:var(--primary_800); vertical-align:-4px; }
-.banner_preview { display:block; width:150px; margin:0 auto; }
-.banner_preview img { width:100% }
+.btn_bannerPreview { display:block; width:150px; margin:0 auto; }
+.btn_bannerPreview img { width:100% }
 .banner_list .layer_basic { width:580px; }
 .layer_basic td { padding:16px 20px; }
 .banner_list .layer_basic td img { width:90%; }

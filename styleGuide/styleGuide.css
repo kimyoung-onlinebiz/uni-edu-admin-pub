@@ -35,10 +35,11 @@
 .styleGuide_wrapper .btn_icon { border:1px solid #ccc; padding:8px 24px 8px 16px; border-radius:5px; margin-left:24px; }
 .styleGuide_wrapper .guide dd { font-size:20px; font-weight:700; }
 .styleGuide_wrapper .flex { display:flex; gap:26px; }
-.styleGuide_wrapper .guide dt,.styleGuide_wrapper h3 { font-size:20px; font-weight:700; padding-bottom:8px; padding-top:16px; }
+.styleGuide_wrapper .guide dt,.styleGuide_wrapper h3 { font-size:20px; font-weight:700; padding-bottom:8px; padding-top:24px; }
 .styleGuide_wrapper .component_example { display:flex; gap:16px; align-items:center; }
 .styleGuide_wrapper .component_example.icon .material-symbols-rounded { font-size:20px; }
 .styleGuide_content code,.styleGuide_content strong,.styleGuide_content em,.styleGuide_content u { color:var(--primary_600); font-weight:600; background:var(--neutral_100); padding:2px 6px; border-radius:4px; font-size:90%; }
 .styleGuide_content .flex code { color:#333; font-weight:500; }
 .styleGuide_content .btn_group { margin-bottom:8px; }
 .styleGuide_wrapper h4 { margin:20px 0 8px 0; }
+.styleGuide_wrapper .flex h4 { margin:0px 0 8px 0; }
