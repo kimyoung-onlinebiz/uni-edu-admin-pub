@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#" class="active">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">display_settings</span>사이트 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">어드민관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">어드민 메뉴관리</a></li>
+                        <li><a href="#none">프론트 메뉴관리</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">프론트관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">배너관리</a></li>
+                        <li><a href="#none">팝업관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">쿠폰관리</a>
+                </li>
+                <li>
+                    <a href="#">게시판 설정</a>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">약관관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이용약관</a></li>
+                        <li><a href="#none">개인정보처리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>팝업 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사이트 관리</a></li>
+                    <li><a href="#none">프론트 관리</a></li>
+                    <li>팝업 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>팝업 제목</dt>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>사용여부</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">사용</option>
+                                <option value="">미사용</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt>기간검색</dt>
+                    <dd>
+
+                        <div class="form_group">
+                               <select name="" id="">
+                                    <option value="">전체</option>
+                                    <option value="">일주일</option>
+                                    <option value="">한달</option>
+                                    <option value="">일년</option>
+                                    <option value="">직접입력</option>
+                                </select>
+                               
+                               <div class="form_warning">
+                                   <input type="date" id="searchStartDate"placeholder="시작일">
+                                   <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                               </div>
+                               
+                               <span class="calendar_bullet">~</span>
+                               
+                                <div class="form_warning">
+                                   <input type="date" id="searchEndDate"placeholder="종료일">
+                                   <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                               </div>
+                           </div>
+
+                    </dd>
+                </dl>
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn">삭제</button>
+                    <button class="btn secondary">등록</button>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </th>
+                        <th>No</th>
+                        <th>팝업 제목</th>
+                        <th>미리보기</th>
+                        <th>노출 기기</th>
+                        <th>기간</th>
+                        <th>등록자</th>
+                        <th>등록일</th>
+                        <th>사용여부</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td><a href="#none">김영편입 박람회(2025) (2025)(2025)</a></td>
+                        <td>
+                            <a href="#none">2025년 서버 업데이트 알림</a>
+                        </td>
+                        <td></td>
+                        <td>장*정</td>
+                        <td>2026-07-01</td>
+                        <td>사용</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="width_80px">
+                        </td>
+                        <td><a href="#none">김영편입 박람회(2025)</a></td>
+                        <td>
+                            <a href="#none" class="btn_bannerPreview">
+                                <img src="https://www.kystudy.co.kr/Files/Banner/2025-06-24/layer_250624.png" alt="">
+                            </a>
+                        </td>
+                        <td>모바일</td>
+                        <td>2025-07-02 ~ 2026-07-01</td>
+                        <td>장*정</td>
+                        <td>2026-07-01</td>
+                        <td>사용</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="width_80px">
+                        </td>
+                        <td><a href="#none">김영편입 박람회(2025)</a></td>
+                        <td>
+                            <a href="#none" class="btn_bannerPreview">
+                                <img src="https://www.kystudy.co.kr/Files/Banner/2025-06-24/layer_250624.png" alt="">
+                            </a>
+                        </td>
+                        <td>모바일</td>
+                        <td>2025-07-02 ~ 2026-07-01</td>
+                        <td>장*정</td>
+                        <td>2026-07-01</td>
+                        <td>사용</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 배너 미리보기 레이어 -->
+            <div class="layer_wrapper layer_bannerPreview">
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>미리보기</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <img src="https://www.kystudy.co.kr/Files/Banner/2025-09-02/topBtn_20250902.png" alt="">
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //배너 미리보기 레이어 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
