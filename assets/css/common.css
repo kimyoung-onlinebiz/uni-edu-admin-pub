@@ -116,7 +116,7 @@ a { text-decoration:none; transition:all .2s; }
 a:hover { color:var(--primary_600); }
 input[type="file"] { padding:2px; width:320px; }
 .file_search { display:flex; flex-direction:column; }
-.file_search .fileSearch_after button { font-size:21px; color:var(--error_color); }
+.fileSearch_after button { font-size:21px; color:var(--error_color); margin-top:-2px; }
 .fileSearch_after { display:flex; align-items:start; gap:8px; }
 
 /* 색상 팔레트 */
@@ -182,6 +182,7 @@ input[type="file"] { padding:2px; width:320px; }
 .marginT8 { margin-top:8px; }
 .marginT16 { margin-top:16px; }
 .marginT24 { margin-top:24px; }
+.marginB0 { margin-bottom:0 !important; }
 
 /* 기본 아이콘 크기 */
 button span.material-symbols-rounded,.material-symbols-rounded.paddingR4  { padding-right:4px; }
@@ -208,11 +209,11 @@ button span.material-symbols-rounded,.material-symbols-rounded.paddingR4  { padd
 /* 기본 레이어 스타일 */
 .layer_wrapper { background:var(--neutral_0); display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.3); justify-content:center; align-items:center; z-index: 1000; }
 .layer_wrapper.active { display:flex; }
-.layer_header { position:relative; display:flex; padding:0 16px 21px 16px; }
+.layer_header { position:relative; display:flex; flex-flow:column; text-align:left; padding:0 16px 21px 16px; }
 .layer_header .btn_layerClose { position:absolute; right:0; top:-6px; font-size:30px; }
 .layer_header h2 { font-size:20px; font-weight:600; }
 .layer_basic { background:var(--neutral_0); border-radius:12px; padding:29px 20px 32px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); text-align:center; }
-.layer_content { overflow:auto; overflow-x:hidden; max-height:580px; padding-right:8px; }
+.layer_content { overflow:auto; overflow-x:hidden; max-height:580px;min-height:150px; }
 .layer_content::-webkit-scrollbar { width:6px; }
 .layer_content::-webkit-scrollbar-track { border-radius:3px; background:var(--neutral_0); }
 .layer_content::-webkit-scrollbar-thumb { border-radius:3px; background:var(--neutral_300); }

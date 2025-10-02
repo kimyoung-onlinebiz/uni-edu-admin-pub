@@ -170,6 +170,12 @@
                 <label for="radio_2">선택됨</label>
            </div>
         </div>
+        <h3>라디오, 체크박스 텍스트와 한줄로 정렬</h3>
+        사회복지사 1급 시험대비 강좌 쿠폰
+            <div class="form_check inline">
+                <input type="checkbox" name="inline_01" id="inline_01">
+                <label for="inline_01">내용 노출</label>
+            </div>
         <h3>캘린더</h3>
         <div class="form_group calendar">
             <input type="date" id="searchStartDate" placeholder="시작일">
@@ -233,6 +239,11 @@
             <dt>팝업을 띄우지 않는 간격</dt>
             <dd><input type="text" class="width_80px"> 일</dd>
         </dl>
+
+        <h4>검색 input</h4>
+        <div class="search_input">
+            <input type="text" placeholder="검색어를 입력해 주세요.">
+        </div>
 
         <br />
 
@@ -324,6 +335,73 @@
             <li><a href="#tab2">전화/제휴(수기입력 전용)</a></li>
             <li><a href="#tab3">탭 3</a></li>
         </ul>
+
+        <h2>레이어</h2>
+        <div class="btn_group btn_bannerList">
+                <button class="btn">배너 목록</button>
+            </div>
+
+            <!-- 레이어_ 배너목록 -->
+            <div class="layer_wrapper banner_list"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>배너목록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="search_section">
+                            <dl class="search_box">
+                                <dt>배너유형</dt>
+                                <dd>MO 스트립 배너(하단)</dd>
+                                <dd>
+                                    <div class="form_group calendar">
+                                        <input type="date" id="" placeholder="시작일">
+                                    </div>
+                                </dd>
+                            </dl>
+
+                        </div>
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>순서</th>
+                                    <th>배너</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><img src="https://www.kystudy.co.kr/Files/Banner/2025-06-24/layer_250624.png"
+                                            alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><img src="https://www.kystudy.co.kr/Files/Banner/2025-09-02/middleBtn_20250902.png"
+                                            alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><img src="https://www.kystudy.co.kr/Files/Banner/2025-09-02/topBtn_20250902.png"
+                                            alt=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary btn_close">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_ 배너목록 -->
 
         <h2>테이블</h2>
         <h3>기본 테이블</h3>

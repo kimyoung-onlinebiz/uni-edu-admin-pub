@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#" class="active">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">display_settings</span>사이트 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">어드민관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">어드민 메뉴관리</a></li>
+                        <li><a href="#none">프론트 메뉴관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">프론트관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">배너관리</a></li>
+                        <li><a href="#none">팝업관리</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#" class="active_depth_3">쿠폰관리</a>
+                </li>
+                <li>
+                    <a href="#">게시판 설정</a>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">약관관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이용약관</a></li>
+                        <li><a href="#none">개인정보처리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>쿠폰 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사이트 관리</a></li>
+                    <li><a href="#none">프론트 관리</a></li>
+                    <li>쿠폰 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>쿠폰 발급</h3>
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>쿠폰 제목</th>
+                        <td>박람회 상담 후 결제 쿠폰</td>
+                    </tr>
+                    <tr>
+                        <th>쿠폰 코드</th>
+                        <td>KY00DFSFDF</td>
+                    </tr>
+                  <tr>
+                        <th>유효 기간</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="expirationPeriod" id="expirationPeriod_1">
+                                    <label for="expirationPeriod_1">없음</label>
+                                </div>    
+                                <div class="form_check">
+                                    <input type="radio" name="expirationPeriod" id="expirationPeriod_2" checked="">
+                                    <label for="expirationPeriod_2">있음</label>
+                                </div>
+                                <div class="form_warning">
+                                    <input type="date" id="searchStartDate" placeholder="시작일">
+                                    <!-- p class="txtError_color">날짜가 올바르지 않습니다.</!-->
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="searchEndDate" placeholder="종료일">
+                                    <!-- p class="txtError_color">날짜가 올바르지 않습니다.</!-->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_groupRight"> 
+                <button class="btn">취소</button>
+                <button class="btn primary">발급</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+            <h4>쿠폰 발급대상</h4>
+
+            <!-- 데이터 영역 -->
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn">삭제</button>
+                    <button class="btn btn_excelUpload"><span class="material-symbols-rounded">upload</span>엑셀 업로드</button>
+                    <button class="btn secondary btn_couponIssue">대상 추가</button>
+                </div>
+
+                <!-- 레이어 엑셀 업로드 -->
+                <div class="layer_wrapper excel_upload"><!-- active 추가 시 화면 노출 -->
+                    <div class="layer_basic">
+
+                        <div class="layer_header">
+                            <h2>엑셀 업로드</h2>
+                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                            <div>
+                                정해진 엑셀 양식에 입력하여 업로드 하세요.
+                                <button class="btn_fileType"><span class="material-symbols-rounded">download</span>엑셀 양식 다운로드</button>
+                            </div>
+                        </div>
+
+                        <!-- layer 내용 -->
+                        <div class="layer_content">
+                            <!-- 파일 업로드 드래그 앤 드롭 위치-->
+                            <div class="fileSearch_before" style="height:150px;">
+                                
+                            </div>
+                            <!-- //파일 업로드 드래그 앤 드롭 위치-->
+                            <div class="fileSearch_after">
+                                <a href="#none">file_01.excel</a>
+                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                            </div>
+                        </div>
+                        <!-- //layer 내용 -->
+                        <div class="layer_btnSection">
+                            <button class="btn btn_close">취소</button>
+                            <button class="btn primary">등록</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //레이어 엑셀 업로드 -->
+
+                <!-- 레이어_쿠폰 발급대상 -->
+                <div class="layer_wrapper coupon_issue"><!-- active 추가 시 화면 노출 -->
+                    <div class="layer_basic">
+
+                        <div class="layer_header">
+                            <h2>쿠폰 발급대상</h2>
+                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        </div>
+
+                        <!-- layer 내용 -->
+                        <div class="layer_content">
+
+                            <div class="search_section">
+                                <div class="search_box">
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">이름</option>
+                                            <option value="">아이디</option>
+                                        </select>
+                                    </div>
+                                    <!-- //셀렉트박스 -->
+                                    <div class="search_input">
+                                        <input type="text" placeholder="검색어를 입력해 주세요.">
+                                    </div>
+                                </div>
+                                <dl class="search_box">
+                                    <dt>기간</dt>
+                                    <dd>
+                                        <!-- 셀렉트박스 -->
+                                        <div class="form_group">
+                                            <select name="" id="">
+                                                <option value="">전체</option>
+                                                <option value="">선택</option>
+                                            </select>
+                                            <div class="form_warning">
+                                                <input type="date" id="searchStartDate" placeholder="시작일">
+                                                <!-- p class="txtError_color">날짜가 올바르지 않습니다.</!-->
+                                            </div>
+                                            <span class="calendar_bullet">~</span>
+                                            <div class="form_warning">
+                                                <input type="date" id="searchEndDate" placeholder="종료일">
+                                                <!-- p class="txtError_color">날짜가 올바르지 않습니다.</!-->
+                                            </div>
+                                        </div>
+                                        <!-- //셀렉트박스 -->
+                                    </dd>
+                                </dl>
+
+                                <div class="btn_group">
+                                    <button class="btn">초기화</button>
+                                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                                </div>
+
+                            </div>
+                            <!-- 테이블 -->
+                            <table class="data_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>
+                                        </th>
+                                        <th>No</th>
+                                        <th>아이디</th>
+                                        <th>이름</th>
+                                        <th>가입일</th>
+                                        <th>최근 접속일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>1</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                          <div class="form_check">
+                                                <input type="checkbox" name="" id="">
+                                            </div>  
+                                        </td>
+                                        <td>2</td>
+                                        <td>ky****</td>
+                                        <td>김평원</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                        <td>2025-01-22 15:12:11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- 페이징 -->
+                        <div class="paging">
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                            <a href="#none">1</a>
+                            <a href="#none" class="active">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+                        </div>
+                        <!-- //페이징 -->
+                        <!-- //layer 내용 -->
+                        <div class="layer_btnSection">
+                            <button class="btn secondary">전체 선택</button>
+                            <button class="btn btn_close">취소</button>
+                            <button class="btn primary">추가</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //레이어_쿠폰 발급대상 -->
+
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>발급 일시</th>
+                        <th>유효 기간</th>
+                        <th>사용 일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>kh00009898</td>
+                        <td>홍길동 </td>
+                        <td>2023-11-11 12:11:11</td>
+                        <td>-</td>
+                        <td>2026-07-01</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>kh00009898</td>
+                        <td>홍길동 </td>
+                        <td>2023-11-11 12:11:11</td>
+                        <td>2026-07-01</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
