@@ -57,6 +57,8 @@
                 <span class="material-symbols-rounded">add_circle</span>세로 40px 버튼
             </button>
             <button class="btn material-symbols-rounded medium">search</button>
+            <button type="button" class="btn"><span class="material-symbols-rounded">Autorenew</span>비밀번호 초기화</button>
+            <button class="btn btn_excelUpload"><span class="material-symbols-rounded">upload</span>엑셀 업로드</button>
         </div>
         <h3>강조 버튼</h3>
         <div class="component_example">
@@ -80,6 +82,7 @@
                 <span class="material-symbols-rounded">add_circle</span>세로 40px 버튼
             </button>
             <button class="btn primary material-symbols-rounded medium">search</button>
+            
         </div> 
         <h3>보조 버튼</h3>
         <div class="component_example">
@@ -102,7 +105,7 @@
             <button class="btn medium secondary">
                 <span class="material-symbols-rounded">add_circle</span>세로 40px 버튼
             </button>
-            <button class="btn primary material-symbols-rounded medium">search</button> 
+            <button class="btn primary material-symbols-rounded medium">search</button>
         </div>
         <h3>버튼 사용 예시</h3>
         <div class="btn_group">
@@ -232,6 +235,24 @@
             <input type="text" class="width_80px" placeholder="Top">
             <input type="text" class="width_80px" placeholder="Left">
             <p class="txtError_color">위치를 입력해주세요.</p>
+        </div>
+
+        <div class="form_group">
+            <div class="form_check">
+                <input type="radio" name="privacy" id="privacy_1">
+                <label for="privacy_1">포함</label>
+            </div>
+            <div class="form_check">
+                <input type="radio" name="privacy" id="privacy_2" checked="">
+                <label for="privacy_2">미포함</label>
+            </div>
+             <p class="txtError_color">개인정보 포함여부를 체크해주세요.</p>
+        </div>
+
+        <h4>긍정 안내 문구 뜨는 input</h4>
+        <div class="form_warning">
+            <input type="text" class="width_80px">
+            <p class="txtSuccess_color">사용할 수 있는 아이디입니다.</p>
         </div>
 
         <h4>제목과 함께 쓰이는 input</h4>
@@ -865,6 +886,34 @@
             </tbody>
         </table>
         <!-- 기본 테이블 -->
+
+        <h3>기본 테이블 왼쪽 정렬</h3>
+        <table class="data_table align_left"> <!-- align_left 추가하면 td 왼쪽 정렬 -->
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>순서</th>
+                    <th>배너</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1111</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2222</td>
+                </tr>
+            </tbody>
+        </table>
         <h3>뷰 테이블</h3>
         <table class="table_view">
             <colgroup>

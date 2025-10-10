@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#" class="active">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">display_settings</span>사이트 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">사용자 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">관리자 관리</a></li>
+                        <li><a href="#none" class="active_depth_3">관리자 권한 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">로그 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">다운로드 로그</a></li>
+                        <li><a href="#none">로그인 로그</a></li>
+                        <li><a href="#none">메뉴 로그</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">회원 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">회원 관리</a></li>
+                        <li><a href="#none">탈퇴회원 관리</a></li>
+                        <li><a href="#none">IP/MAC 관리</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#">교강사/조교 관리</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>관리자 권한 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사용자 관리</a></li>
+                    <li>관리자 권한 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col style="width:10%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>역할코드</th>
+                        <td>Consulting Leader</td>
+                    </tr>
+                    <tr>
+                        <th>역할명</th>
+                        <td>최고 관리자</td>
+                    </tr>
+                    <tr>
+                        <th>설명</th>
+                        <td>LMS 전체 제어, 권한 관리</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn primary">수정</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
