@@ -38,7 +38,7 @@
 .styleGuide_wrapper .guide dt,.styleGuide_wrapper h3 { font-size:20px; font-weight:700; padding-bottom:8px; padding-top:24px; }
 .styleGuide_wrapper .component_example { display:flex; gap:16px; align-items:center; }
 .styleGuide_wrapper .component_example.icon .material-symbols-rounded { font-size:20px; }
-.styleGuide_content code,.styleGuide_content strong,.styleGuide_content em,.styleGuide_content u { color:var(--primary_600); font-weight:600; background:var(--neutral_100); padding:2px 0; border-radius:4px; font-size:90%; }
+.styleGuide_content code,.styleGuide_content strong,.styleGuide_content em,.styleGuide_content u { color:var(--primary_600); font-weight:600; background:var(--neutral_100); padding:2px 0; border-radius:4px; }
 .styleGuide_content .flex code { color:#333; font-weight:500; }
 .styleGuide_content .btn_group { margin-bottom:8px; }
 .styleGuide_wrapper h4 { margin:20px 0 8px 0; font-weight:600; }

@@ -64,9 +64,10 @@
 /* 검색영역 */
 .search_section { position:relative; background:var(--neutral_200); border-radius:var(--borderRadius_2); margin-bottom:40px; padding:20px 32px; transition:all .2s; box-shadow:var(--shadow_light); }
 .search_section.small { height:72px; overflow:hidden; }
-.search_box { display:flex; gap:12px; align-items:center; margin-bottom:12px; }
-.search_box dt { color:var(--neutral_900); font-weight:600; font-size:var(--font_medium); min-width:100px; padding-right:20px; }
+.search_box { display:flex; gap:12px; align-items:start; margin-bottom:12px; }
+.search_box dt { color:var(--neutral_900); font-weight:600; font-size:var(--font_medium); min-width:100px; padding-right:20px; padding-top:5px; }
 .search_box dt:not(:first-of-type) { padding-left:60px; }
+.search_box dd .form_group { min-height:32px; }
 .search_section .search_box:last-of-type { margin-bottom:0; }
 .search_section .search_box input[type="text"] { flex:1; height:32px; padding:0 12px; border:1px solid var(--neutral_500); border-radius:4px; font-size:var(--font_base); color:var(--neutral_900); }
 .search_section .search_box select { min-width:156px; }
@@ -90,7 +91,7 @@
 .form_check.inline input { margin-right:5px; }
 .form_check.inline label { vertical-align:middle; }
 .calendar_bullet { display:inline-block; color:var(--neutral_600); margin:5px -8px 0; }
-.form_group .btn_date_range { display:flex; align-items:center; }
+.form_group .btn_date_range { display:flex; align-items:start; }
 .form_group .btn_date_range li { color:var(--neutral_800); border-top:1px solid var(--neutral_500); border-bottom:1px solid var(--neutral_500); }
 .form_group .btn_date_range li:first-child { border-radius:var(--borderRadius) 0 0 var(--borderRadius); overflow:hidden; border-left:1px solid var(--neutral_500); }
 .form_group .btn_date_range li:last-child { border-radius:0 var(--borderRadius) var(--borderRadius) 0; overflow:hidden; border-right:1px solid var(--neutral_500);}
@@ -351,3 +352,7 @@ ease-in-out; }
 .dd-nochildren .dd-placeholder {
     display: none;
 }
+
+/* 로그보기 */
+.btn_see_reasons { width:300px; }
+.see_reasons .layer_content { max-height:400px; overflow:auto; }

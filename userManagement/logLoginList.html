@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#" class="active">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">display_settings</span>사이트 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">사용자 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">관리자 관리</a></li>
+                        <li><a href="#none">관리자 권한 관리</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">로그 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">다운로드 로그</a></li>
+                        <li><a href="#none" class="active_depth_3">로그인 로그</a></li>
+                        <li><a href="#none">메뉴 로그</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">회원 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">회원 관리</a></li>
+                        <li><a href="#none">탈퇴회원 관리</a></li>
+                        <li><a href="#none">IP/MAC 관리</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#">교강사/조교 관리</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>로그인 로그</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사용자 관리</a></li>
+                    <li><a href="#none">로그 관리</a></li>
+                    <li>로그인 로그</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>로그 검색</dt>
+                    <dd>
+                         <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">이름</option>
+                                <option value="">아이디</option>
+                                <option value="">IP</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>구분</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">관리자 권한</option>
+                            </select>
+
+                            <div class="form_check">
+                                <input type="checkbox" name="logLine" id="logLine_1">
+                                <label for="logLine_1">국가평생교육진흥원 계정</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="checkbox" name="logLine" id="logLine_2">
+                                <label for="logLine_2">내부 IP 제외</label>
+                            </div>
+                            
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>기간검색</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">관리자 권한</option>
+                            </select>
+
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                            </div>
+                            <span class="calendar_bullet">~</span>
+                            <div class="form_warning">
+                                <input type="date" id="searchEndDate" placeholder="종료일">
+                                <p class="txtError_color">종료일은 시작일보다 
+                같거나 늦어야 합니다.</p>
+                            </div>
+                            
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                </div>
+            </div>
+
+            <!-- 레이어_엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <tbody>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>구분</th>
+                        <th>IP</th>
+                        <th>로그인</th>
+                        <th>로그아웃</th>
+                        <th>로그인 실패</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>nad2****</td>
+                        <td>
+                            홍*동
+                        </td>
+                        <td>통합관리자</td>
+                        <td>123.111.111.11</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>
+                            <span class="txtError_color">[1회] 2025-07-02 16:08:40</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>nad2****</td>
+                        <td>
+                            홍*동
+                        </td>
+                        <td>통합관리자</td>
+                        <td>123.111.111.11</td>
+                        <td>2025-02-22</td>
+                        <td>2025-02-23</td>
+                        <td>
+                            <span class="txtError_color">[1회] 2025-07-02 16:08:40</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>nad2****</td>
+                        <td>
+                            홍*동
+                        </td>
+                        <td>통합관리자</td>
+                        <td>123.111.111.11</td>
+                        <td>2025-02-22</td>
+                        <td>2025-02-23</td>
+                        <td>
+                            <span class="txtError_color">[1회] 2025-07-02 16:08:40</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+ 
+            
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

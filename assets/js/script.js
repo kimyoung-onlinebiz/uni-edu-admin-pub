@@ -77,6 +77,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // .btn_download_reason 클릭 시 download_reason 레이어 활성화_다운로드 로그 엑셀 다운로드
+    const btnDownloadReasonList = document.querySelectorAll('.btn_download_reason');
+    const downloadReasonLayer = document.querySelector('.download_reason');
+    if (btnDownloadReasonList.length > 0 && downloadReasonLayer) {
+        btnDownloadReasonList.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                downloadReasonLayer.classList.add('active');
+            });
+        });
+    }
+
+    // .btn_see_reasons 클릭 시 see_reasons 레이어 활성화_다운로드 로그 사유 보기
+    const btnSeeReasonsList = document.querySelectorAll('.btn_see_reasons');
+    const seeReasonsLayer = document.querySelector('.see_reasons');
+    if (btnSeeReasonsList.length > 0 && seeReasonsLayer) {
+        btnSeeReasonsList.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                seeReasonsLayer.classList.add('active');
+            });
+        });
+    }
+
     // 닫기/확인 버튼 클릭 시 레이어 닫기
     document.addEventListener('click', function (e) {
         if (

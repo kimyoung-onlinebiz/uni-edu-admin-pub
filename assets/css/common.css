@@ -104,7 +104,7 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus,input[type=tel]
 input[type="checkbox"],input[type="radio"] { width:16px; height:16px; margin-right:8px; vertical-align:middle; cursor:pointer; accent-color:var(--primary_500); }
 td:has(> input[type="checkbox"]:only-child):not(:has(> label)) > input[type="checkbox"],td:has(> input[type="radio"]:only-child):not(:has(> label)) > input[type="checkbox"] { margin: 0 !important;}
 select { appearance:none; background:#fff url(../images/select_arrow.png) no-repeat calc(100% - 12px) center; padding-right:40px; cursor:pointer; color:var(--neutral_600); width:auto; }
-input[type="date"] { color:var(--neutral_600); }
+input[type="date"] { color:var(--neutral_600); width:200px; }
 select:disabled { background-color:var(--neutral_300); cursor:not-allowed; }
 select:focus { border:1px solid var(--neutral_800); outline:transparent; }
 label { cursor:pointer; }
@@ -227,3 +227,7 @@ a.btn { line-height:28px; }
 .layer_content::-webkit-scrollbar-thumb:hover { border-radius:3px; background:var(--neutral_500); }
 .layer_btnSection { margin-top:20px; display:flex; justify-content:right; gap:16px; }
 .layer_btnSection .btn { min-width:120px; height:40px; }
+
+/* 말줄임 */
+.ellipsis { display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ellipsis_multiline { text-overflow:ellipsis; overflow:hidden; display:-webkit-box !important;-webkit-box-orient:vertical; -webkit-line-clamp:2;  }
