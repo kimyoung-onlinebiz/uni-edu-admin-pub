@@ -128,6 +128,13 @@
             <button class="btn secondary">등록</button>
         </div>
 
+        <div class="btn_groupRight"> 
+            <button class="btn secondary">목록</button>
+            <button class="btn">SMS 발송</button>
+            <button class="btn">학적부</button>
+            <button class="btn primary">수정</button>
+        </div>
+
         <h2>페이징</h2>
         <!-- 페이징 -->
         <div class="paging">
@@ -339,16 +346,37 @@
 
             <!-- 선택 이후 -->
             <div class="fileSearch_after">
-                <a href="#none">file_01.excel</a>
-                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
-            </div>
-             <div class="fileSearch_after">
-                <a href="#none">file_02.hwp</a>
-                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                <div>
+                    <a href="#none">file_01.excel</a>
+                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                </div>
+                <div>
+                    <a href="#none">file_01.excel</a>
+                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                </div>
             </div>
             <!-- //선택 이후 -->
         </div>
         <!-- //파일 첨부 -->
+
+        <h4>파일첨부 - 드래그 앤 드롭</h4>
+        <div class="file_dragUpload">
+            <div class="drag_area">
+                <label for="fileUpload">클릭</label>
+                <input type="file" class="transparent" id="fileUpload" multiple>
+                또는 파일을 드래그해서 <br />업로드 해주세요.
+            </div>
+            <div class="fileSearch_after">
+                <div>
+                    <a href="#none">file_01.excel</a>
+                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                </div>
+                <div>
+                    <a href="#none">file_01.excel</a>
+                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                </div>
+            </div>
+        </div>
 
 
         <h2>탭 디자인</h2>
@@ -358,6 +386,25 @@
             <li><a href="#tab2">전화/제휴(수기입력 전용)</a></li>
             <li><a href="#tab3">탭 3</a></li>
         </ul>
+
+        <!-- 탭 -->
+        <div class="tab_container">
+
+            <ul class="first_tab">
+                <li><a href="#tab1" class="active" data-tab="tab1">첫번째 탭</a></li>
+                <li><a href="#tab2" data-tab="tab2">두번째 탭</a></li>
+            </ul>
+
+            <div class="tab_contents">
+                <div id="tab1" class="tab_content active"> <!-- active 추가 시 노출 -->
+                    <p style="border:1px solid #ccc; height:150px; padding:20px;">탭 첫번째 내용</p>
+                </div>
+                <div id="tab2" class="tab_content">
+                     <p style="border:1px solid #ccc; height:150px; padding:20px;">탭 두번째 내용</p>
+                </div>
+            </div>
+        </div>
+        <!-- //탭 -->
 
         <h3>제일 큰 탭</h3>
         <ul class="big_tab">
@@ -452,18 +499,30 @@
                     </div>
 
                     <!-- layer 내용 -->
-                    <div class="layer_content">
-                        <!-- 파일 업로드 드래그 앤 드롭 위치-->
-                        <div class="fileSearch_before" style="height:150px;">
-                            
+                        <div class="layer_content">
+                            <!-- 파일 업로드 드래그 앤 드롭 위치-->
+                            <div class="file_dragUpload">
+                                <div class="drag_area">
+                                    <label for="fileUpload">클릭</label>
+                                    <input type="file" class="transparent" id="fileUpload" multiple>
+                                    또는 파일을 드래그해서 <br />업로드 해주세요.
+                                </div>
+                                <div class="fileSearch_after">
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 파일 업로드 드래그 앤 드롭 위치-->
+
                         </div>
-                        <!-- //파일 업로드 드래그 앤 드롭 위치-->
-                        <div class="fileSearch_after">
-                            <a href="#none">file_01.excel</a>
-                            <button type="button" class="material-symbols-rounded" title="삭제">close</button>
-                        </div>
-                    </div>
-                    <!-- //layer 내용 -->
+                        <!-- //layer 내용 -->
+                         
                     <div class="layer_btnSection">
                         <button class="btn btn_close">취소</button>
                         <button class="btn primary">등록</button>

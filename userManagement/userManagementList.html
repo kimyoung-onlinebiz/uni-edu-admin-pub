@@ -57,18 +57,18 @@
                         <li><a href="#none">관리자 권한 관리</a></li>
                     </ul>
                 </li>
-                <li class="active_depth_2">
+                <li>
                     <a href="#">로그 관리</a>
                     <ul class="depth_3">
                         <li><a href="#none">다운로드 로그</a></li>
-                        <li><a href="#none" class="active_depth_3">로그인 로그</a></li>
+                        <li><a href="#none">로그인 로그</a></li>
                         <li><a href="#none">메뉴 로그</a></li>
                     </ul>
                 </li>
-                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 class 추가 -->
                     <a href="#">회원 관리</a>
                     <ul class="depth_3">
-                        <li><a href="#none">회원 관리</a></li>
+                        <li><a href="#none" class="active_depth_3">회원 관리</a></li>
                         <li><a href="#none">탈퇴회원 관리</a></li>
                         <li><a href="#none">IP/MAC 관리</a></li>
                     </ul>
@@ -82,13 +82,13 @@
         <!-- Content -->
         <main class="admin_content" id="container">
             <header class="content_header">
-                <h2>로그인 로그</h2>
+                <h2>회원 관리</h2>
                 <!-- 빵부스러기 -->
                 <ul class="breadcrumb">
                     <li><a href="#none">홈</a></li>
                     <li><a href="#none">사용자 관리</a></li>
-                    <li><a href="#none">로그 관리</a></li>
-                    <li>로그인 로그</li>
+                    <li><a href="#none">회원 관리</a></li>
+                    <li>회원 관리</li>
                 </ul>
                 <!-- //빵부스러기 -->
             </header>
@@ -96,7 +96,7 @@
             <!-- 검색 섹션 -->
             <section class="search_section">
                 <dl class="search_box">
-                    <dt>로그 검색</dt>
+                    <dt>회원 검색</dt>
                     <dd>
                          <!-- 셀렉트박스 -->
                         <div class="form_group">
@@ -115,24 +115,14 @@
                     </dd>
                 </dl>
                 <dl class="search_box">
-                    <dt>구분</dt>
+                    <dt>상태</dt>
                     <dd>
                         <!-- 셀렉트박스 -->
                         <div class="form_group">
                             <select name="" id="">
                                 <option value="">전체</option>
                                 <option value="">관리자 권한</option>
-                            </select>
-
-                            <div class="form_check">
-                                <input type="checkbox" name="logLine" id="logLine_1">
-                                <label for="logLine_1">국가평생교육진흥원 계정</label>
-                            </div>
-                            <div class="form_check">
-                                <input type="checkbox" name="logLine" id="logLine_2">
-                                <label for="logLine_2">내부 IP 제외</label>
-                            </div>
-                            
+                            </select> 
                         </div>
                         <!-- //셀렉트박스 -->
                     </dd>
@@ -181,59 +171,10 @@
                     <span>총 <strong>99</strong>건</span>
                 </div>
                 <div class="table_actions">
-                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                    <button class="btn">공인인증 예외자</button>
+                    <button class="btn">MAC 예외자</button>
                 </div>
             </div>
-
-            <!-- 레이어_엑셀 다운로드 -->
-            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
-                <div class="layer_basic">
-
-                    <div class="layer_header">
-                        <h2>다운로드 사유 입력</h2>
-                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                    </div>
-
-                    <!-- layer 내용 -->
-                    <div class="layer_content">
-                        
-                        <!-- 테이블 -->
-                        <table class="table_view">
-                            <colgroup>
-                                <col>
-                                <col style="width:400px;">
-                            </colgroup>
-                             <tbody>
-                                <tr>
-                                    <th>사유</th>
-                                    <td>
-                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>파기일</th>
-                                    <td>
-                                        <!-- 캘린더 -->
-                                        <div class="form_group calendar">
-                                            <div class="form_warning">
-                                                <input type="date" id="" placeholder="파기일 선택">
-                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
-                                            </div>
-                                        </div>
-                                        <!-- //캘린더 -->
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- //layer 내용 -->
-                    <div class="layer_btnSection">
-                        <button class="btn btn_close">취소</button>
-                        <button class="btn primary">저장</button>
-                    </div>
-                </div>
-            </div>
-            <!-- //레이어_엑셀 다운로드 -->
 
             <!-- 테이블 -->
             <table class="data_table">
@@ -246,61 +187,81 @@
                     <col>
                     <col>
                     <col>
+                    <col>
+                    <col>
                 </colgroup>
                 <thead>
                     <tr>
+                        <th>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </th>
                         <th>No</th>
                         <th>아이디</th>
                         <th>이름</th>
-                        <th>구분</th>
-                        <th>IP</th>
-                        <th>로그인</th>
-                        <th>로그아웃</th>
-                        <th>로그인 실패</th>
+                        <th>상태</th>
+                        <th>가입일</th>
+                        <th>최근 접속일</th>
+                        <th>담당 PM</th>
+                        <th>수정자</th>
+                        <th>수정일</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
                         <td>8</td>
                         <td>nad2****</td>
                         <td>
-                            홍*동
+                            <a href="#none">홍*동</a>
                         </td>
-                        <td>통합관리자</td>
-                        <td>123.111.111.11</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>
-                            <span class="txtError_color">[1회] 2025-07-02 16:08:40</span>
-                        </td>
+                        <td>정상</td>
+                        <td>2025-11-11</td>
+                        <td>2025-11-11</td>
+                        <td>홍*동</td>
+                        <td>홍*동</td>
+                        <td>2025-01-11</td>
                     </tr>
                     <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
                         <td>8</td>
                         <td>nad2****</td>
                         <td>
-                            홍*동
+                            <a href="#none">홍*동</a>
                         </td>
-                        <td>통합관리자</td>
-                        <td>123.111.111.11</td>
-                        <td>2025-02-22</td>
-                        <td>2025-02-23</td>
-                        <td>
-                            <span class="txtError_color">[1회] 2025-07-02 16:08:40</span>
-                        </td>
+                        <td><span class="txtError_color">탈퇴 신청</span></td>
+                        <td>2025-11-11</td>
+                        <td>2025-11-11</td>
+                        <td>홍*동</td>
+                        <td>홍*동</td>
+                        <td>2025-01-11</td>
                     </tr>
                     <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
                         <td>8</td>
                         <td>nad2****</td>
                         <td>
-                            홍*동
+                            <a href="#none">홍*동</a>
                         </td>
-                        <td>통합관리자</td>
-                        <td>123.111.111.11</td>
-                        <td>2025-02-22</td>
-                        <td>2025-02-23</td>
-                        <td>
-                            <span class="txtError_color">[1회] 2025-07-02 16:08:40</span>
-                        </td>
+                        <td><span class="txtError_color">탈퇴 신청</span></td>
+                        <td>2025-11-11</td>
+                        <td>2025-11-11</td>
+                        <td>홍*동</td>
+                        <td>홍*동</td>
+                        <td>2025-01-11</td>
                     </tr>
                 </tbody>
             </table>

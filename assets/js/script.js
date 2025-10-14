@@ -1,114 +1,98 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 요소 선택
-    const adminWrapper = document.querySelector('.admin_wrapper');
-    const adminSidebar = document.querySelector('.admin_lnb');
-    const adminContent = document.querySelector('.admin_content');
-    const footer = document.querySelector('.admin_footer');
-    const searchSection = document.querySelector('.search_section');
+    const $ = sel => document.querySelector(sel);
+    const $$ = sel => Array.from(document.querySelectorAll(sel));
 
     // 사이드바 토글
-    const toggleButton = document.querySelector('.toggle_sidebar');
-    if (toggleButton && adminWrapper && adminSidebar && adminContent && footer) {
-        toggleButton.addEventListener('click', () => {
-            const isClosed = adminWrapper.classList.toggle('sidebar_closed');
-            toggleButton.classList.toggle('close');
-            adminSidebar.style.marginLeft = isClosed ? '-260px' : '0';
-            adminContent.style.marginLeft = isClosed ? '20px' : '280px';
-            footer.style.marginLeft = isClosed ? '20px' : '280px';
-            footer.style.width = isClosed ? 'calc(100% - 20px)' : 'calc(100% - 280px)';
+    const wrapper = $('.admin_wrapper'), sidebar = $('.admin_lnb'), content = $('.admin_content'), footer = $('.admin_footer');
+    const toggleBtn = $('.toggle_sidebar');
+    if (toggleBtn && wrapper && sidebar && content && footer) {
+        toggleBtn.addEventListener('click', () => {
+            const closed = wrapper.classList.toggle('sidebar_closed');
+            toggleBtn.classList.toggle('close');
+            sidebar.style.marginLeft = closed ? '-260px' : '0';
+            content.style.marginLeft = closed ? '20px' : '280px';
+            footer.style.marginLeft = closed ? '20px' : '280px';
+            footer.style.width = closed ? 'calc(100% - 20px)' : 'calc(100% - 280px)';
         });
     }
 
-    // .search_section 내부에 .btn_openClose 버튼이 있을 때만 초기 height 인라인 적용
+    // .search_section 초기 height (btn_openClose 있을 때만)
+    const searchSection = $('.search_section');
     if (searchSection && searchSection.querySelector('.btn_openClose')) {
         searchSection.style.height = searchSection.offsetHeight + 'px';
-    }
-
-    // 검색영역 토글
-    const btnOpenClose = document.querySelector('.btn_group .btn_openClose');
-    if (btnOpenClose && searchSection) {
-        btnOpenClose.addEventListener('click', () => {
-            const isSmall = searchSection.classList.toggle('small');
-            btnOpenClose.classList.toggle('close');
-            const dls = searchSection.querySelectorAll('dl');
-            dls.forEach((dl, idx) => {
-                if (isSmall) {
-                    dl.style.opacity = idx === 0 ? '1' : '0';
-                    dl.style.pointerEvents = idx === 0 ? 'auto' : 'none';
-                } else {
-                    dl.style.opacity = '1';
-                    dl.style.pointerEvents = 'auto';
-                }
-            });
-            searchSection.style.height = isSmall ? '' : searchSection.offsetHeight + 'px';
-        });
-    }
-
-    // 레이어 활성화 버튼과 레이어 매핑
-    const layerButtonMap = [
-        { selector: '.btn_bannerList .btn', layer: '.banner_list' },
-        { selector: '.btn_bannerPosition', layer: '.banner_position' },
-        { selector: '.btn_couponIssue', layer: '.coupon_issue', all: true },
-        { selector: '.btn_bannerPreview', layer: '.layer_bannerPreview', all: true }
-    ];
-
-    layerButtonMap.forEach(({ selector, layer, all }) => {
-        const buttons = all ? document.querySelectorAll(selector) : [document.querySelector(selector)].filter(Boolean);
-        const layerElem = document.querySelector(layer);
-        if (buttons.length && layerElem) {
-            buttons.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    layerElem.classList.add('active');
+        const btnOpen = $('.btn_group .btn_openClose');
+        if (btnOpen) {
+            btnOpen.addEventListener('click', () => {
+                const small = searchSection.classList.toggle('small');
+                btnOpen.classList.toggle('close');
+                const dls = searchSection.querySelectorAll('dl');
+                dls.forEach((dl, i) => {
+                    dl.style.opacity = small ? (i === 0 ? '1' : '0') : '1';
+                    dl.style.pointerEvents = small ? (i === 0 ? 'auto' : 'none') : 'auto';
                 });
+                searchSection.style.height = small ? '' : searchSection.offsetHeight + 'px';
             });
         }
+    }
+
+    // 레이어 토글 공통 함수 (selector 여러개 지원)
+    const map = [
+        { sel: '.btn_bannerList .btn', layer: '.banner_list', many: false },
+        { sel: '.btn_bannerPosition', layer: '.banner_position', many: false },
+        { sel: '.btn_couponIssue', layer: '.coupon_issue', many: true },
+        { sel: '.btn_bannerPreview', layer: '.layer_bannerPreview', many: true },
+        { sel: '.btn_excelUpload', layer: '.excel_upload', many: true },
+        { sel: '.btn_download_reason', layer: '.download_reason', many: true },
+        { sel: '.btn_see_reasons', layer: '.see_reasons', many: true },
+        { sel: '.btn_sendingSms', layer: '.sending_sms', many: true },
+        { sel: '.btn_studyCounseling', layer: '.study_counseling', many: true } // 추가됨
+    ];
+    map.forEach(({ sel, layer, many }) => {
+        const layerEl = $(layer);
+        if (!layerEl) return;
+        const btns = many ? $$(sel) : [$(sel)].filter(Boolean);
+        btns.forEach(b => b.addEventListener('click', e => { e.preventDefault(); layerEl.classList.add('active'); }));
     });
 
-    // .btn_excelUpload 클릭 시 excel_upload 레이어 활성화
-    const btnExcelUploadList = document.querySelectorAll('.btn_excelUpload');
-    const excelUploadLayer = document.querySelector('.excel_upload');
-    if (btnExcelUploadList.length > 0 && excelUploadLayer) {
-        btnExcelUploadList.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                excelUploadLayer.classList.add('active');
-            });
-        });
-    }
-
-    // .btn_download_reason 클릭 시 download_reason 레이어 활성화_다운로드 로그 엑셀 다운로드
-    const btnDownloadReasonList = document.querySelectorAll('.btn_download_reason');
-    const downloadReasonLayer = document.querySelector('.download_reason');
-    if (btnDownloadReasonList.length > 0 && downloadReasonLayer) {
-        btnDownloadReasonList.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                downloadReasonLayer.classList.add('active');
-            });
-        });
-    }
-
-    // .btn_see_reasons 클릭 시 see_reasons 레이어 활성화_다운로드 로그 사유 보기
-    const btnSeeReasonsList = document.querySelectorAll('.btn_see_reasons');
-    const seeReasonsLayer = document.querySelector('.see_reasons');
-    if (btnSeeReasonsList.length > 0 && seeReasonsLayer) {
-        btnSeeReasonsList.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                seeReasonsLayer.classList.add('active');
-            });
-        });
-    }
-
-    // 닫기/확인 버튼 클릭 시 레이어 닫기
-    document.addEventListener('click', function (e) {
-        if (
-            e.target.classList.contains('btn_layerClose') ||
-            (e.target.closest('.layer_btnSection') && e.target.classList.contains('btn_close'))
-        ) {
+    // 레이어 닫기: .btn_layerClose 또는 .layer_btnSection 내부의 .btn_close 일 때만 닫기
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn_layerClose') ||
+            (e.target.closest('.layer_btnSection') && e.target.classList.contains('btn_close'))) {
             const layer = e.target.closest('.layer_wrapper');
             if (layer) layer.classList.remove('active');
         }
+    });
+
+    // 탭 (HTML에서 초기 active 지정)
+    document.querySelectorAll('.tab_container').forEach(container => {
+        const links = container.querySelectorAll('[data-tab]');
+        const contents = container.querySelectorAll('.tab_content');
+        links.forEach(a => a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const id = a.dataset.tab || (a.getAttribute('href') || '').replace('#','');
+            if (!id) return;
+            links.forEach(l => l.classList.remove('active')); a.classList.add('active');
+            contents.forEach(c => c.classList.toggle('active', c.id === id));
+        }));
+    });
+
+    // .school_register 내 btn_openClose 클릭 시 해당 버튼에만 close 토글, 형제 테이블만 숨김 처리
+    document.querySelectorAll('.school_register .btn_openClose').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const header = btn.closest('h3');
+            if (!header) return;
+
+            const closing = btn.classList.toggle('close');
+
+            // header(=h3)는 그대로 두고, header 다음 요소들 중 다음 h3 전까지의 table 요소들만 토글
+            let el = header.nextElementSibling;
+            while (el && el.tagName.toLowerCase() !== 'h3') {
+                if (el.tagName.toLowerCase() === 'table') {
+                    el.style.display = closing ? 'none' : '';
+                }
+                el = el.nextElementSibling;
+            }
+        });
     });
 });

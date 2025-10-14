@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#" class="active">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">assignment_ind</span>사용자 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">사용자 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">관리자 관리</a></li>
+                        <li><a href="#none">관리자 권한 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">로그 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">다운로드 로그</a></li>
+                        <li><a href="#none">로그인 로그</a></li>
+                        <li><a href="#none">메뉴 로그</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">회원 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">회원 관리</a></li>
+                        <li><a href="#none">탈퇴회원 관리</a></li>
+                        <li><a href="#none">IP/MAC 관리</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#">교강사/조교 관리</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>회원 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사용자 관리</a></li>
+                    <li><a href="#none">회원 관리</a></li>
+                    <li>회원 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+            <!-- 테이블 -->
+            <h3>기본 정보</h3>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>이름</th>
+                        <td>홍길동</td>
+                        <th><span class="essential">*</span>아이디</th>
+                        <td>dfsg1232354</td>
+                    </tr>
+                    <tr>
+                        <th>상태</th>
+                        <td>정상</td>
+                        <th>가입일</th>
+                        <td>2025-01-11</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰</th>
+                        <td>010-111-1111</td>
+                        <th>이메일</th>
+                        <td>ky@kimyoung.co.kr</td>
+                    </tr>
+                    <tr>
+                        <th>거주지역</th>
+                        <td>서울시 강남구</td>
+                        <th>주소</th>
+                        <td>[06777] 서울시 서초구 강남대로 273(서초동, 송남빌딩) 212호</td>
+                    </tr>
+                   <tr>
+                        <th>장애 여부</th>
+                        <td>비대상</td>
+                        <th>보훈 여부</th>
+                        <td>대상</td>
+                    </tr>
+                    <tr>
+                        <th>SMS 수신 동의</th>
+                        <td>동의</td>
+                        <th>이메일 수신 동의</th>
+                        <td>동의</td>
+                    </tr>
+                    <tr>
+                        <th>마케팅 및 광고 활용 동의</th>
+                        <td colspan="3">동의</td>
+                    </tr>
+                    <tr>
+                        <th>최근 접속 일시</th>
+                        <td colspan="3">2025-01-11 16:20:11</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">부가 정보</h4>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>가입 경로</th>
+                        <td>사이트</td>
+                        <th>추천인</th>
+                        <td>dfsg1232354</td>
+                    </tr>
+                    <tr>
+                        <th>김영편입 아이디</th>
+                        <td colspan="3">-</td>
+                    </tr>
+                    <tr>
+                        <th>소개 캠퍼스 명</th>
+                        <td>-</td>
+                        <th>소개 직원 명</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>최종학력</th>
+                        <td colspan="3">대학교(4년제)/2학년/재학</td>
+                    </tr>
+                    <tr>
+                        <th>학교명</th>
+                        <td>김영대학교</td>
+                        <th>학과/학년</th>
+                        <td>김영학과/2학년</td>
+                    </tr>
+                   <tr>
+                        <th>학업 목표</th>
+                        <td>일반편입</td>
+                        <th>목표 전공</th>
+                        <td>경영학</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">
+                담당 PM
+                <a href="#none" class="btn btn_studyCounseling">학습상담</a>
+            </h4>
+
+            <!-- 레이어_학습상담 -->
+            <div class="layer_wrapper study_counseling"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>학습상담</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 탭 -->
+                        <div class="tab_container">
+
+                            <ul class="first_tab">
+                                <li><a href="#studyCounseling_1" class="active" data-tab="studyCounseling_1">학습상담</a></li>
+                                <li><a href="#studyCounseling_2" data-tab="studyCounseling_2">학습 설계</a></li>
+                            </ul>
+
+                            <div class="tab_contents">
+                                <div id="studyCounseling_1" class="tab_content active"> <!-- active 추가 시 노출 -->
+
+                                    <!-- 메모 혹은 내용 쓰기 area -->
+                                    <div class="memo_area">
+                                        <textarea name="" id="" placeholder="학습상담 내용을 입력해 주세요."></textarea>
+                                        <div class="byte_count">
+                                            <span id="smsByte">0</span> / 80byte
+                                        </div>
+                                        <button class="btn primary">저장</button>
+                                    </div>
+                                    <!-- //메모 혹은 내용 쓰기 area -->
+                                    <!-- 댓글 리스트 -->
+                                    <div class="comment_list scroll">
+                                        <ul>
+                                            <li>
+                                                <div class="comment_item">
+                                                    <p>현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청</p>
+                                                    <div class="writer_info">
+                                                        <span>홍길동</span>
+                                                        <span>2025-02-10 12:20:59</span>
+                                                        <button class=" material-symbols-rounded" title="삭제">delete</button> <!-- 댓글 삭제 버튼 -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="comment_item">
+                                                    <p>현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선  학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청</p>
+                                                    <div class="writer_info">
+                                                        <span>홍길동</span>
+                                                        <span>2025-02-10 12:20:59</span>
+                                                        <button class=" material-symbols-rounded" title="삭제">delete</button> <!-- 댓글 삭제 버튼 -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                             <li>
+                                                <div class="comment_item">
+                                                    <p>현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시</p>
+                                                    <div class="writer_info">
+                                                        <span>홍길동</span>
+                                                        <span>2025-02-10 12:20:59</span>
+                                                        <button class=" material-symbols-rounded" title="삭제">delete</button> <!-- 댓글 삭제 버튼 -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="studyCounseling_2" class="tab_content">
+
+                                    <!-- 파일 드래그 앤 드롭 업로드 -->
+                                    <div class="file_dragUpload">
+                                        <div class="drag_area">
+                                            <label for="fileUpload">클릭</label>
+                                            <input type="file" class="transparent" id="fileUpload" multiple>
+                                            또는 파일을 드래그해서 <br />업로드 해주세요.
+                                        </div>
+                                        <div class="fileSearch_after">
+                                            <div>
+                                                <a href="#none">file_01.excel</a>
+                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                            </div>
+                                            <div>
+                                                <a href="#none">file_01.excel</a>
+                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //파일 드래그 앤 드롭 업로드 -->
+
+                                    <!-- 테이블 스크롤 -->
+                                    <div class="layer_scroll marginT40">
+                                        <table class="data_table">
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col style="width:10%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>파일 제목</th>
+                                                    <th>등록자</th>
+                                                    <th>등록일</th>
+                                                    <th>삭제</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계122211.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="#none">학습설계.docx</a>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>2025-02-10 12:20:59</td>
+                                                    <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //테이블 스크롤 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //탭 -->
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- //레이어_학습상담 -->
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>PM 명</th>
+                        <td>홍길동</td>
+                    </tr>
+                    <tr>
+                        <th>학습 설계</th>
+                        <td><a href="#none">학습설계.docx</a></td>
+                    </tr>
+                    <tr>
+                        <th>학습상담 내용</th>
+                        <td>학습상담 내용 내용 내용 내용 내용 내용</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">부가 정보</h4>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>가입 경로</th>
+                        <td>사이트</td>
+                        <th>추천인</th>
+                        <td>dfsg1232354</td>
+                    </tr>
+                    <tr>
+                        <th>김영편입 아이디</th>
+                        <td colspan="3">-</td>
+                    </tr>
+                    <tr>
+                        <th>소개 캠퍼스 명</th>
+                        <td>-</td>
+                        <th>소개 직원 명</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>최종학력</th>
+                        <td colspan="3">대학교(4년제)/2학년/재학</td>
+                    </tr>
+                    <tr>
+                        <th>학교명</th>
+                        <td>김영대학교</td>
+                        <th>학과/학년</th>
+                        <td>김영학과/2학년</td>
+                    </tr>
+                   <tr>
+                        <th>학업 목표</th>
+                        <td>일반편입</td>
+                        <th>목표 전공</th>
+                        <td>경영학</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">
+                결제 정보
+            </h4>
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>분야</th>
+                        <th>강좌명</th>
+                        <th>수강료(원)</th>
+                        <th>할인금액(원)</th>
+                        <th>결제금액(원)</th>
+                        <th>상태</th>
+                        <th>결제정보</th>
+                        <th>결제 일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>패키지</td>
+                        <td>
+                            <a href="#none">2025년 2학기 3기 학점은행제 16과목</a>
+                        </td>
+                        <td>3,755,000</td>
+                        <td>3,755,000</td>
+                        <td>3,755,000</td>
+                        <td>결제 완료</td>
+                        <td>퀵 계좌이체</td>
+                        <td>2025-02-10 12:20:59</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>패키지</td>
+                        <td>
+                            <a href="#none">2025년 2학기 3기 학점은행제 16과목</a>
+                        </td>
+                        <td>3,755,000</td>
+                        <td>3,755,000</td>
+                        <td>3,755,000</td>
+                        <td><span class="txtTemporary_color">결제 실패</span></td>
+                        <td>가상계좌</td>
+                        <td>2025-02-10 12:20:59</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>패키지</td>
+                        <td>
+                            <a href="#none">2025년 2학기 3기 학점은행제 16과목</a>
+                        </td>
+                        <td>3,755,000</td>
+                        <td>3,755,000</td>
+                        <td>3,755,000</td>
+                        <td><span class="txtError_color">환불요청</span></td>
+                        <td>카드</td>
+                        <td>2025-02-10 12:20:59</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">
+                SMS 발송 이력 
+            </h4>
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>유형</th>
+                        <th>내용</th>
+                        <th>발송일시</th>
+                        <th>결과</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>가입 인사</td>
+                        <td>
+                            합격 결과로 인정받는 김영평생교육원 회원이 되신 것을 진심으로 환영합니다!
+                        </td>
+                        <td>2025-02-10 12:20:59</td>
+                        <td>발송완료(3019)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn btn_sendingSms">SMS 발송</button>
+                <button class="btn btn_schoolRegister">학적부</button>
+                <button class="btn primary">수정</button>
+            </div>
+
+            <!-- 레이어_SMS 발송 -->
+            <div class="layer_wrapper sending_sms"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>SMS 발송</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col style="width:450px;">
+                            </colgroup>
+                             <tbody>
+                                <tr>
+                                    <th>이름</th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th>아이디</th>
+                                    <td>ky12223</td>
+                                </tr>
+                                <tr>
+                                    <th>휴대폰</th>
+                                    <td>010-111-2222</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                        <!-- 메모 혹은 내용 쓰기 area -->
+                        <div class="memo_area">
+                            <dl>
+                                <dt>담당자</dt>
+                                <dd><input type="text" placeholder="담당자를 입력해 주세요."></dd>
+                            </dl>
+                            <dl>
+                                <dt>회신번호</dt>
+                                <dd><input type="tel" placeholder="회신번호를 입력해 주세요."></dd>
+                            </dl>
+                            <dl>
+                                <dt>내용</dt>
+                                <dd>
+                                    <textarea name="" id="" placeholder="SMS 내용을 입력해 주세요."></textarea>
+                                    <div class="byte_count">
+                                        <span id="smsByte">0</span> / 80byte
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- //메모 혹은 내용 쓰기 area -->
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">발송</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_SMS 발송 -->
+
+            <!-- 레이어_학적부 -->
+            <div class="layer_wrapper school_register active"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>학적부</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 탭 -->
+                        <div class="tab_container">
+
+                            <ul class="first_tab">
+                                <li><a href="#schoolRegister_1" class="active" data-tab="schoolRegister_1">수강 현황</a></li>
+                                <li><a href="#schoolRegister_2" data-tab="schoolRegister_2">학습 현황</a></li>
+                                <li><a href="#schoolRegister_3" data-tab="schoolRegister_3">게시판 문의</a></li>
+                            </ul>
+
+                            <div class="tab_contents">
+                                <div id="schoolRegister_1" class="tab_content active"> <!-- active 추가 시 노출 -->
+                                    <h3>
+                                        <button class="btn_openClose"></button>수강 현황(일반과정)
+                                    </h3>
+                                    <!-- 테이블 스크롤 -->
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>년도</th>
+                                                <th>학기</th>
+                                                <th>기수</th>
+                                                <th>전공</th>
+                                                <th>과정</th>
+                                                <th>출석률</th>
+                                                <th>최근학습일</th>
+                                                <th>과락여부</th>
+                                                <th>진도</th>
+                                                <th>과제</th>
+                                                <th>중간</th>
+                                                <th>기말</th>
+                                                <th>토론</th>
+                                                <th>퀴즈</th>
+                                                <th>복습시험</th>
+                                                <th>총점</th>
+                                                <th>학습기간</th>
+                                                <th>수료여부</th>
+                                                <th>반정보</th>
+                                                <th>기간연장</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제 16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제 16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                   
+
+                                    <h3>
+                                        <button class="btn_openClose"></button>수강 현황(실습과정)
+                                    </h3>
+                                    <!-- 테이블 스크롤 -->
+                                   
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>년도</th>
+                                                <th>학기</th>
+                                                <th>기수</th>
+                                                <th>전공</th>
+                                                <th>과정</th>
+                                                <th>출석률</th>
+                                                <th>최근학습일</th>
+                                                <th>과락여부</th>
+                                                <th>진도</th>
+                                                <th>온라인과제/교안</th>
+                                                <th>실습보고서/참관일지</th>
+                                                <th>실습평가서/모의평가지</th>
+                                                <th>총점</th>
+                                                <th>학습기간</th>
+                                                <th>수료여부</th>
+                                                <th>반정보</th>
+                                                <th>기간연장</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+
+                                    <h3>
+                                        <button class="btn_openClose"></button>수강신청 현황
+                                    </h3>
+                                    <!-- 테이블 스크롤 -->
+                                    
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>년도</th>
+                                                <th>학기</th>
+                                                <th>기수</th>
+                                                <th>전공</th>
+                                                <th>과정명</th>
+                                                <th>학습기간</th>
+                                                <th>교육비</th>
+                                                <th>과세</th>
+                                                <th>신청일</th>
+                                                <th>결제수단</th>
+                                                <th>결제상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>2025-02-10</td>
+                                                <td>2,000,000</td>
+                                                <td>10,000</td>
+                                                <td>2025-02-10</td>
+                                                <td>카드</td>
+                                                <td>대기중</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>2025-02-10</td>
+                                                <td>2,000,000</td>
+                                                <td>10,000</td>
+                                                <td>2025-02-10</td>
+                                                <td>카드</td>
+                                                <td>대기중</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+
+                                </div>
+                                <div id="schoolRegister_2" class="tab_content">
+
+                                    <h3>
+                                        <button class="btn_openClose"></button>학습 현황(일반과정)
+                                    </h3>
+                                    <!-- 테이블 스크롤 -->
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>년도</th>
+                                                <th>학기</th>
+                                                <th>기수</th>
+                                                <th>전공</th>
+                                                <th>과정</th>
+                                                <th>출석률</th>
+                                                <th>최근학습일</th>
+                                                <th>과락여부</th>
+                                                <th>진도</th>
+                                                <th>과제</th>
+                                                <th>중간</th>
+                                                <th>기말</th>
+                                                <th>토론</th>
+                                                <th>퀴즈</th>
+                                                <th>복습시험</th>
+                                                <th>총점</th>
+                                                <th>학습기간</th>
+                                                <th>수료여부</th>
+                                                <th>반정보</th>
+                                                <th>기간연장</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제 16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제 16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                   
+
+                                    <h3>
+                                        <button class="btn_openClose"></button>학습 현황(실습과정)
+                                    </h3>
+                                    <!-- 테이블 스크롤 -->
+                                   
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>년도</th>
+                                                <th>학기</th>
+                                                <th>기수</th>
+                                                <th>전공</th>
+                                                <th>과정</th>
+                                                <th>출석률</th>
+                                                <th>최근학습일</th>
+                                                <th>과락여부</th>
+                                                <th>진도</th>
+                                                <th>온라인과제/교안</th>
+                                                <th>실습보고서/참관일지</th>
+                                                <th>실습평가서/모의평가지</th>
+                                                <th>총점</th>
+                                                <th>학습기간</th>
+                                                <th>수료여부</th>
+                                                <th>반정보</th>
+                                                <th>기간연장</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>100%</td>
+                                                <td>2025-02-10</td>
+                                                <td>과락</td>
+                                                <td>100%</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>100</td>
+                                                <td>2025-02-10 ~ 2025-08-09</td>
+                                                <td>수료</td>
+                                                <td>2기</td>
+                                                <td>7일</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+
+                                    <h3>
+                                        <button class="btn_openClose"></button>학습 현황(자격증)
+                                    </h3>
+                                    <!-- 테이블 스크롤 -->
+                                    
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>년도</th>
+                                                <th>학기</th>
+                                                <th>기수</th>
+                                                <th>전공</th>
+                                                <th>과정명</th>
+                                                <th>학습기간</th>
+                                                <th>교육비</th>
+                                                <th>과세</th>
+                                                <th>신청일</th>
+                                                <th>결제수단</th>
+                                                <th>결제상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>2025-02-10</td>
+                                                <td>2,000,000</td>
+                                                <td>10,000</td>
+                                                <td>2025-02-10</td>
+                                                <td>카드</td>
+                                                <td>대기중</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>2025</td>
+                                                <td>2학기</td>
+                                                <td>3기</td>
+                                                <td>경영학</td>
+                                                <td>2025년 2학기 3기 학점은행제16과목</td>
+                                                <td>2025-02-10</td>
+                                                <td>2,000,000</td>
+                                                <td>10,000</td>
+                                                <td>2025-02-10</td>
+                                                <td>카드</td>
+                                                <td>대기중</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                                <div id="schoolRegister_3" class="tab_content">
+                                    
+                                    <!-- 테이블 스크롤 -->
+                                    
+                                        <table class="data_table">
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>분류</th>
+                                                    <th>제목</th>
+                                                    <th>답변</th>
+                                                    <th>작성일</th>
+                                                    <th>답변일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>공개상담</td>
+                                                    <td>
+                                                        <a href="#none">상담 요청</a>
+                                                    </td>
+                                                    <td>대기</td>
+                                                    <td>2025-02-10</td>
+                                                    <td>2025-02-10</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    <!-- //테이블 스크롤 -->    
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- //탭 -->
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- //레이어_학적부 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
