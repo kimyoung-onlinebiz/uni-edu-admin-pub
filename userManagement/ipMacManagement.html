@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#" class="active">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">assignment_ind</span>사용자 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">사용자 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">관리자 관리</a></li>
+                        <li><a href="#none">관리자 권한 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">로그 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">다운로드 로그</a></li>
+                        <li><a href="#none">로그인 로그</a></li>
+                        <li><a href="#none">메뉴 로그</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">회원 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">회원 관리</a></li>
+                        <li><a href="#none">탈퇴회원 관리</a></li>
+                        <li><a href="#none" class="active_depth_3">IP/MAC 관리</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#">교강사/조교 관리</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>IP/MAC 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사용자 관리</a></li>
+                    <li><a href="#none">회원 관리</a></li>
+                    <li>IP/MAC 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>검색</dt>
+                    <dd>
+                         <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">이름</option>
+                                <option value="">아이디</option>
+                                <option value="">MAC address 주소</option>
+                                <option value="">IP</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>상태</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">사용</option>
+                                <option value="">사용(관리자)</option>
+                                <option value="">대기</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                    <dt>예외처리</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">공인인증</option>
+                                <option value="">MAC</option>
+                                <option value="">중복 로그인</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn btn_ipMac_update"><span class="material-symbols-rounded">History</span>등록/수정 이력</button>
+                </div>
+            </div>
+
+            <!-- 레이어_IP/MAC 등록/수정 -->
+            <div class="layer_wrapper ipMac_registration_update"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>IP/MAC 등록ㆍ수정 이력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <div class="search_section">
+                            <dl class="search_box">
+                                <dt>IP</dt>
+                                <dd><input type="text"></dd>
+                                <dt>MAC</dt>
+                                <dd><input type="text"></dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>검색</dt>
+                                <dd>
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">이름</option>
+                                            <option value="">아이디</option>
+                                        </select>
+                                    </div>
+                                    <!-- //셀렉트박스 -->
+                                </dd>
+                                <dd>
+                                    <div class="search_input">
+                                        <input type="text" placeholder="검색어를 입력해 주세요.">
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>이름</th>
+                                    <th>아이디</th>
+                                    <th>MAC address 주소(IP)</th>
+                                    <th>사유</th>
+                                    <th>상태</th>
+                                    <th>관리</th>
+                                    <th>등록자</th>
+                                    <th>변경일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td>n****</td>
+                                    <td><p>99-F5-AA-DD-66-00</p><p>(111.222.33.444)</p></td>
+                                    <td>공공장소</td>
+                                    <td>사용</td>
+                                    <td>등록</td>
+                                    <td>홍길동</td>
+                                    <td>2025-01-22</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td>n****</td>
+                                    <td><p>99-F5-AA-DD-66-00</p><p>(111.222.33.444)</p></td>
+                                    <td>공공장소</td>
+                                    <td>사용</td>
+                                    <td>등록</td>
+                                    <td>홍길동</td>
+                                    <td>2025-01-22</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td>n****</td>
+                                    <td><p>99-F5-AA-DD-66-00</p><p>(111.222.33.444)</p></td>
+                                    <td>공공장소</td>
+                                    <td>사용</td>
+                                    <td>등록</td>
+                                    <td>홍길동</td>
+                                    <td>2025-01-22</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td>n****</td>
+                                    <td><p>99-F5-AA-DD-66-00</p><p>(111.222.33.444)</p></td>
+                                    <td>공공장소</td>
+                                    <td>사용</td>
+                                    <td>등록</td>
+                                    <td>홍길동</td>
+                                    <td>2025-01-22</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td>n****</td>
+                                    <td><p>99-F5-AA-DD-66-00</p><p>(111.222.33.444)</p></td>
+                                    <td>공공장소</td>
+                                    <td>사용</td>
+                                    <td>등록</td>
+                                    <td>홍길동</td>
+                                    <td>2025-01-22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- 페이징 -->
+                        <div class="paging">
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                            <a href="#none">1</a>
+                            <a href="#none" class="active">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+                        </div>
+                        <!-- //페이징 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_IP/MAC 등록/수정 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2">No</th>
+                        <th rowspan="2">아이디</th>
+                        <th rowspan="2">이름</th>
+                        <th rowspan="2">MAC address 주소</th>
+                        <th rowspan="2">IP</th>
+                        <th rowspan="2">상태</th>
+                        <th colspan="3">예외처리</th>
+                        <th rowspan="2">변경일</th>
+                    </tr>
+                    <tr>
+                        <th>공인인증</th>
+                        <th>MAC</th>
+                        <th>중복 로그인</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>nad2****</td>
+                        <td><a href="#none"  class="btn_ipMac">홍*동</a></td>
+                        <td>99-F5-AA-DD-66-00</td>
+                        <td>111.222.33.444 </td>
+                        <td>사용</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>2021-11-11</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>nad2****</td>
+                        <td><a href="#none"  class="btn_ipMac">홍*동</a></td>
+                        <td>99-F5-AA-DD-66-00</td>
+                        <td>111.222.33.444 </td>
+                        <td>사용</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>2021-11-11</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>nad2****</td>
+                        <td><a href="#none"  class="btn_ipMac">홍*동</a></td>
+                        <td>99-F5-AA-DD-66-00</td>
+                        <td>111.222.33.444 </td>
+                        <td>사용</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>2021-11-11</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_IP/MAC 등록/수정 -->
+            <div class="layer_wrapper ipMac_registration"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>IP/MAC 등록ㆍ수정 <button class="btn"><span class="material-symbols-rounded">add</span>추가</button></h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>MAC</th>
+                                    <th>IP</th>
+                                    <th>증빙서류</th>
+                                    <th>상태</th>
+                                    <th>중복</th>
+                                    <th>중복 사유</th>
+                                    <th>삭제 사유</th>
+                                    <th>삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text"></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <td><button type="button" class="btn"><span class="material-symbols-rounded">attach_file</span>첨부파일</button></td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">미등록</option>
+                                            <option value="">사용</option>
+                                            <option value="">사용(관리자)</option>
+                                            <option value="">대기</option>
+                                        </select>
+                                    </td>
+                                    <td>Y</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">이사</option>
+                                            <option value="">공공장소</option>
+                                            <option value="">기타</option>
+                                            <option value="">회사</option>
+                                            <option value="">가족</option>
+                                            <option value="">동일 기수</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">이사</option>
+                                            <option value="">공공장소</option>
+                                            <option value="">기타</option>
+                                        </select>
+                                    </td>
+                                    <td><button type="button" class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text"></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <td><button type="button" class="btn"><span class="material-symbols-rounded">attach_file</span>첨부파일</button></td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">미등록</option>
+                                            <option value="">사용</option>
+                                            <option value="">사용(관리자)</option>
+                                            <option value="">대기</option>
+                                        </select>
+                                    </td>
+                                    <td>Y</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">이사</option>
+                                            <option value="">공공장소</option>
+                                            <option value="">기타</option>
+                                            <option value="">회사</option>
+                                            <option value="">가족</option>
+                                            <option value="">동일 기수</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">이사</option>
+                                            <option value="">공공장소</option>
+                                            <option value="">기타</option>
+                                        </select>
+                                    </td>
+                                    <td><button type="button" class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text"></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <td><button type="button" class="btn"><span class="material-symbols-rounded">attach_file</span>첨부파일</button></td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">미등록</option>
+                                            <option value="">사용</option>
+                                            <option value="">사용(관리자)</option>
+                                            <option value="">대기</option>
+                                        </select>
+                                    </td>
+                                    <td>Y</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">이사</option>
+                                            <option value="">공공장소</option>
+                                            <option value="">기타</option>
+                                            <option value="">회사</option>
+                                            <option value="">가족</option>
+                                            <option value="">동일 기수</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">선택</option>
+                                            <option value="">이사</option>
+                                            <option value="">공공장소</option>
+                                            <option value="">기타</option>
+                                        </select>
+                                    </td>
+                                    <td><button type="button" class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                            </the>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_IP/MAC 등록/수정 -->
+            
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

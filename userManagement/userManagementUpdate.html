@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#" class="active">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">assignment_ind</span>사용자 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">사용자 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">관리자 관리</a></li>
+                        <li><a href="#none">관리자 권한 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">로그 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">다운로드 로그</a></li>
+                        <li><a href="#none">로그인 로그</a></li>
+                        <li><a href="#none">메뉴 로그</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">회원 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">회원 관리</a></li>
+                        <li><a href="#none">탈퇴회원 관리</a></li>
+                        <li><a href="#none">IP/MAC 관리</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#">교강사/조교 관리</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>회원 정보 수정</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사용자 관리</a></li>
+                    <li><a href="#none">회원 관리</a></li>
+                    <li>회원 정보 수정</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+            <!-- 테이블 -->
+            <h3>기본 정보</h3>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>이름</th>
+                        <td>홍길동</td>
+                        <th><span class="essential">*</span>아이디</th>
+                        <td>dfsg1232354</td>
+                    </tr>
+                    <tr>
+                        <th>상태</th>
+                        <td>정상</td>
+                        <th>가입일</th>
+                        <td>2025-01-11</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰</th>
+                        <td>010-111-1111</td>
+                        <th>이메일</th>
+                        <td>ky@kimyoung.co.kr</td>
+                    </tr>
+                    <tr>
+                        <th>거주지역</th>
+                        <td>
+                           
+                            <select name="" id="">
+                                <option value="">서울</option>
+                            </select>
+                           
+                        </td>
+                        <th>주소</th>
+                        <td>
+                            <div class="form_group">
+                                <input type="text" name="" id="" readonly="readonly">
+                                <button type="button" class="btn primary">주소 검색</button>
+                            </div>
+                            <div class="form_group column marginT8">
+                                <input type="text" name="" id="" readonly="readonly">
+                                <input type="text" name="" id="">
+                            </div>
+                        </td>
+                    </tr>
+                   <tr>
+                        <th>장애 여부</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="disability" id="disability_1">
+                                    <label for="disability_1">비대상</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="disability" id="disability_2">
+                                    <label for="disability_2">대상</label>
+                                </div>
+                                <button type="button" class="btn primary"><span class="material-symbols-rounded">attach_file</span>첨부파일</button>
+                            </div>
+                        </td>
+                        <th>보훈 여부</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="rewardingPatriotism" id="rewardingPatriotism_1">
+                                    <label for="rewardingPatriotism_1">비대상</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="rewardingPatriotism" id="rewardingPatriotism_2">
+                                    <label for="rewardingPatriotism_2">대상</label>
+                                </div>
+                                <button type="button" class="btn primary"><span class="material-symbols-rounded">attach_file</span>첨부파일</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>SMS 수신 동의</th>
+                        <td>동의</td>
+                        <th>이메일 수신 동의</th>
+                        <td>동의</td>
+                    </tr>
+                    <tr>
+                        <th>마케팅 및 광고 활용 동의</th>
+                        <td colspan="3">동의</td>
+                    </tr>
+                    <tr>
+                        <th>최근 접속 일시</th>
+                        <td colspan="3">2025-01-11 16:20:11</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">부가 정보</h4>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>가입 경로</th>
+                        <td>
+                            
+                            <select name="" id="">
+                                <option value="">사이트</option>
+                            </select>
+                           
+                        </td>
+                        <th>추천인</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>김영편입 아이디</th>
+                        <td colspan="3">
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>소개 캠퍼스 명</th>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <th>소개 직원 명</th>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>최종학력</th>
+                        <td colspan="3">
+                            <div class="form_group">
+                                <select name="" id="">
+                                    <option value="">대학교(4년제)</option>
+                                    <option value="">대학교(2년제)</option>
+                                    <option value="">고등학교</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">4학년</option>
+                                    <option value="">3학년</option>
+                                    <option value="">2학년</option>
+                                    <option value="">1학년</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">졸업</option>
+                                    <option value="">재학</option>
+                                    <option value="">중퇴</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>학교명</th>
+                        <td>
+                            <input type="text" name="" id="">
+                        </td>
+                        <th>학과/학년</th>
+                        <td>
+                            <div class="form_group">
+                                <input type="text" name="" id="">
+                                <select name="" id="">
+                                    <option value="">졸업</option>
+                                    <option value="">재학</option>
+                                    <option value="">중퇴</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                   <tr>
+                        <th>학업 목표</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="studyObjectives" id="studyObjectives_1">
+                                    <label for="studyObjectives_1">편입</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="studyObjectives" id="studyObjectives_2">
+                                    <label for="studyObjectives_2">취업</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="studyObjectives" id="studyObjectives_3">
+                                    <label for="studyObjectives_3">대학원 진학</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="studyObjectives" id="studyObjectives_4">
+                                    <label for="studyObjectives_4">자격증 취득</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="studyObjectives" id="studyObjectives_5">
+                                    <label for="studyObjectives_5">기타</label>
+                                    <input type="text" class="marginL10" placeholder="직접입력">
+                                </div>
+                            </div>
+                        </td>
+                        <th>목표 전공</th>
+                        <td>
+                            <select name="" id="">
+                                <option value="">경영학</option>
+                                <option value="">영문학</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">
+                담당 컨설턴트
+            </h4>
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>컨설턴트 명</th>
+                        <td>
+                            <select name="" id="">
+                                <option value="">홍길동</option>
+                                <option value="">장소정</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>학습 설계</th>
+                        <td><a href="#none">학습설계.docx</a></td>
+                    </tr>
+                    <tr>
+                        <th>학습상담 내용</th>
+                        <td>학습상담 내용 내용 내용 내용 내용 내용</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_groupRight">
+                <button type="button" class="btn secondary">취소</button>
+                <button type="button" class="btn primary">저장</button>
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -47,7 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_sendingSms', layer: '.sending_sms', many: true },// SMS 발송 레이어
         { sel: '.btn_studyCounseling', layer: '.study_counseling', many: true },// 학습상담 레이어
         { sel: '.btn_schoolRegister', layer: '.school_register', many: true }, // 학적부 레이어
-        { sel: '.btn_paymentCourse', layer: '.payment_course', many: true } // 결제 강좌 레이어
+        { sel: '.btn_paymentCourse', layer: '.payment_course', many: true }, // 결제 강좌 레이어
+        { sel: '.btn_withdrawalApproval', layer: '.withdrawal_approval', many: true }, // 탈퇴승인 레이어
+        { sel: '.btn_ipMac', layer: '.ipMac_registration', many: true }, // ip/mac 등록 레이어
+        { sel: '.btn_ipMac_update', layer: '.ipMac_registration_update', many: true } // ip/mac 이력관리 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);
