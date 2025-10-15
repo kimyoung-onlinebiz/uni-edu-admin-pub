@@ -37,15 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 레이어 토글 공통 함수 (selector 여러개 지원)
     const map = [
-        { sel: '.btn_bannerList .btn', layer: '.banner_list', many: false },
-        { sel: '.btn_bannerPosition', layer: '.banner_position', many: false },
-        { sel: '.btn_couponIssue', layer: '.coupon_issue', many: true },
-        { sel: '.btn_bannerPreview', layer: '.layer_bannerPreview', many: true },
-        { sel: '.btn_excelUpload', layer: '.excel_upload', many: true },
-        { sel: '.btn_download_reason', layer: '.download_reason', many: true },
-        { sel: '.btn_see_reasons', layer: '.see_reasons', many: true },
-        { sel: '.btn_sendingSms', layer: '.sending_sms', many: true },
-        { sel: '.btn_studyCounseling', layer: '.study_counseling', many: true } // 추가됨
+        { sel: '.btn_bannerList .btn', layer: '.banner_list', many: false },//배너 목록 보기 레이어
+        { sel: '.btn_bannerPosition', layer: '.banner_position', many: false },//배너 위치 이미지 보기 레이어
+        { sel: '.btn_couponIssue', layer: '.coupon_issue', many: true },//쿠폰 발급대상 레이어
+        { sel: '.btn_bannerPreview', layer: '.layer_bannerPreview', many: true },//배너 미리보기 레이어
+        { sel: '.btn_excelUpload', layer: '.excel_upload', many: true },//엑셀 업로드 레이어
+        { sel: '.btn_download_reason', layer: '.download_reason', many: true },//다운로드 사유 쓰기 레이어
+        { sel: '.btn_see_reasons', layer: '.see_reasons', many: true },// 다운로드 사유 보기 레이어
+        { sel: '.btn_sendingSms', layer: '.sending_sms', many: true },// SMS 발송 레이어
+        { sel: '.btn_studyCounseling', layer: '.study_counseling', many: true },// 학습상담 레이어
+        { sel: '.btn_schoolRegister', layer: '.school_register', many: true }, // 학적부 레이어
+        { sel: '.btn_paymentCourse', layer: '.payment_course', many: true } // 결제 강좌 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

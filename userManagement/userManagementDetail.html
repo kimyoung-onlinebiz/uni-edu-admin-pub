@@ -520,7 +520,7 @@
                     <tr>
                         <th>No</th>
                         <th>분야</th>
-                        <th>강좌명</th>
+                        <th>결제 강좌명</th>
                         <th>수강료(원)</th>
                         <th>할인금액(원)</th>
                         <th>결제금액(원)</th>
@@ -534,7 +534,7 @@
                         <td>8</td>
                         <td>패키지</td>
                         <td>
-                            <a href="#none">2025년 2학기 3기 학점은행제 16과목</a>
+                            <a href="#none" class="btn_paymentCourse">2025년 2학기 3기 학점은행제 16과목</a>
                         </td>
                         <td>3,755,000</td>
                         <td>3,755,000</td>
@@ -547,7 +547,7 @@
                         <td>8</td>
                         <td>패키지</td>
                         <td>
-                            <a href="#none">2025년 2학기 3기 학점은행제 16과목</a>
+                            <a href="#none" class="btn_paymentCourse">2025년 2학기 3기 학점은행제 16과목</a>
                         </td>
                         <td>3,755,000</td>
                         <td>3,755,000</td>
@@ -560,7 +560,7 @@
                         <td>8</td>
                         <td>패키지</td>
                         <td>
-                            <a href="#none">2025년 2학기 3기 학점은행제 16과목</a>
+                            <a href="#none" class="btn_paymentCourse">2025년 2학기 3기 학점은행제 16과목</a>
                         </td>
                         <td>3,755,000</td>
                         <td>3,755,000</td>
@@ -571,6 +571,112 @@
                     </tr>
                 </tbody>
             </table>
+
+            <!-- 레이어_결제 정보 -->
+            <div class="layer_wrapper payment_course"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>결제 정보</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                             <tbody>
+                                <tr>
+                                    <th>결제정보</th>
+                                    <td>퀵 계좌이체</td>
+                                    <th>상태</th>
+                                    <td>결제 완료</td>
+                                </tr>
+                                <tr>
+                                    <th>결제 일시</th>
+                                    <td colspan="3">2025-07-02 12:30:59</td>
+                                </tr>
+                                <tr>
+                                    <th>수강료(원)</th>
+                                    <td>3,755,000</td>
+                                    <th>할인금액(원)</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>결제금액(원)</th>
+                                    <td colspan="3">3,755,000</td>
+                                </tr>
+                                <tr>
+                                    <th>쿠폰 적용 여부</th>
+                                    <td colspan="3">미적용</td>
+                                </tr>
+                                <tr>
+                                    <th>쿠폰 제목</th>
+                                    <td>사회복지사1급 시험 대비 할인 쿠폰</td>
+                                    <th>할인방식</th>
+                                    <td>정액제(원) 30,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                        <table class="data_table marginT32">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>분야</th>
+                                    <th>강좌명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>8</td>
+                                    <td>정보통신공학</td>
+                                    <td>운영체제</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>정보통신공학</td>
+                                    <td>운영체제</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>정보통신공학</td>
+                                    <td>운영체제</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>정보통신공학</td>
+                                    <td>운영체제</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>정보통신공학</td>
+                                    <td>운영체제</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary btn_close">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_결제 정보 -->
 
             <h4 class="borderN">
                 SMS 발송 이력 
@@ -679,7 +785,7 @@
             <!-- //레이어_SMS 발송 -->
 
             <!-- 레이어_학적부 -->
-            <div class="layer_wrapper school_register active"> <!-- active 추가 시 화면 노출 -->
+            <div class="layer_wrapper school_register"> <!-- active 추가 시 화면 노출 -->
                 <div class="layer_basic">
 
                     <div class="layer_header">
@@ -1369,7 +1475,7 @@
                     </div>
                     <!-- //layer 내용 -->
                     <div class="layer_btnSection">
-                        <button class="btn primary">확인</button>
+                        <button class="btn primary btn_close">확인</button>
                     </div>
                 </div>
             </div>
