@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#" class="active">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">assignment_ind</span>사용자 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">사용자 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">관리자 관리</a></li>
+                        <li><a href="#none">관리자 권한 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">로그 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">다운로드 로그</a></li>
+                        <li><a href="#none">로그인 로그</a></li>
+                        <li><a href="#none">메뉴 로그</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">회원 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">회원 관리</a></li>
+                        <li><a href="#none">탈퇴회원 관리</a></li>
+                        <li><a href="#none">IP/MAC 관리</a></li>
+                    </ul>
+                </li>
+                 <li class="active_depth_2">
+                    <a href="#">교강사/조교 관리</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>교강사/조교 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사용자 관리</a></li>
+                    <li>교강사/조교 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+            <!-- 테이블 -->
+            <h3>기본 정보</h3>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>이름</th>
+                        <td>홍길동</td>
+                        <th><span class="essential">*</span>아이디</th>
+                        <td>dfsg1232354</td>
+                    </tr>
+                    <tr>
+                        <th>구분</th>
+                        <td>교수</td>
+                        <th><span class="essential">*</span>전공</th>
+                        <td>컴퓨터공학</td>
+                    </tr>
+                    <tr>
+                        <th>상태</th>
+                        <td>활동</td>
+                        <th>촬영교수</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="filmingProfessor" id="filmingProfessor_1" value="본인" checked disabled>
+                                    <label for="filmingProfessor_1">본인</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="filmingProfessor" id="filmingProfessor_2" disabled>
+                                    <label for="filmingProfessor_2">본인 외</label>
+                                    <input type="text" class="marginL10" disabled>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰</th>
+                        <td>010-1234-5678</td>
+                        <th>이메일</th>
+                        <td>ky@example.com</td>
+                    </tr>
+                   <tr>
+                        <th>주소</th>
+                        <td colspan="3">
+                           <p>06777</p><p>서울시 서초구 강남대로 273(서초동, 송남빌딩) 212호</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>최근 접속 일시</th>
+                        <td>2025-07-23 16:20:57</td>
+                        <th>비밀번호 오류 횟수</th>
+                        <td>2 <button class="btn marginL10"><span class="material-symbols-rounded">Refresh</span>비밀번호 초기화</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">부가 정보</h4>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>학력</th>
+                        <td>김영대학교</td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>보유 학위</th>
+                        <td>학위</td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>경력</th>
+                        <td>경력</td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>수상경력</th>
+                        <td>수상경력</td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>저서/논문</th>
+                        <td>저서/논문</td>
+                    </tr>
+                    <tr>
+                        <th>기타</th>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
