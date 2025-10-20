@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>편성 템플릿 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li>편성 템플릿 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>
+                편성 템플릿 등록
+                <span>*표시된 항목은 필수 입력 항목입니다.</span>
+            </h3>
+            <!-- 템플릿 등록 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>템플릿 명</dt>
+                    <dd><input type="text" placeholder="템플릿 명을 입력해주세요."></dd>
+                    <dt>템플릿 코드</dt>
+                    <dd><input type="text" disabled></dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>템플릿 유형</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">유형선택</option>
+                            <option value="">일반 이론</option>
+                            <option value="">사히복지현장실습</option>
+                        </select>
+                    </dd>
+                    <dt><span class="essential">*</span>사용 여부</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="useYn" id="useYn_1" value="Y" checked>
+                                <label for="useYn_1">사용</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useYn" id="useYn_2" value="N">
+                                <label for="useYn_2">미사용</label>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt><span class="essential">*</span>기수 총 주차 수</dt>
+                    <dd><input type="text" class="width_80px marginR10"> 주차</dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt>메모</dt>
+                    <dd class="width_100">
+                        <textarea placeholder="메모를 입력해주세요." class="width_100"></textarea>
+                    </dd>
+                </dl>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <span class="essential">*</span> 항목 유형
+
+                            <div class="icon_tooltip">
+                                <button class="material-symbols-rounded btn_help" title="안내사항 보기">Help</button>
+                                <div class="tooltip">
+                            템플릿 유형에 따라 다음 항목을 각각 1회씩 반드시 등록해야 합니다.
+                                    <ul>
+                                        <li>일반 이론: 중간고사, 기말고사, 과제, 토론, 퀴즈, OT, 커뮤니티</li>
+                                        <li>사회복지현장실습: 과제, 실습보고서, 실습평가서</li>
+                                    </ul>
+                                    위 필수 항목 중 하나라도 누락된 경우, 템플릿 등록이 불가합니다.
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <span class="essential">*</span>주차/지속 기간
+                        </th>
+                        <th>
+                            <span class="essential">*</span>
+                            기준 요일
+                        </th>
+                        <th>
+                            <span class="essential">*</span> 시작/종료 시간
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+                            <p class="no_txt">템플릿 유형을 선택해주세요.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <span class="essential">*</span> 항목 유형
+
+                            <div class="icon_tooltip">
+                                <button class="material-symbols-rounded btn_help" title="안내사항 보기">Help</button>
+                                <div class="tooltip">
+                            템플릿 유형에 따라 다음 항목을 각각 1회씩 반드시 등록해야 합니다.
+                                    <ul>
+                                        <li>일반 이론: 중간고사, 기말고사, 과제, 토론, 퀴즈, OT, 커뮤니티</li>
+                                        <li>사회복지현장실습: 과제, 실습보고서, 실습평가서</li>
+                                    </ul>
+                                    위 필수 항목 중 하나라도 누락된 경우, 템플릿 등록이 불가합니다.
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <span class="essential">*</span>주차/지속 기간
+                        </th>
+                        <th>
+                            <span class="essential">*</span>
+                            기준 요일
+                        </th>
+                        <th>
+                            <span class="essential">*</span> 시작/종료 시간
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" value="중간고사" readonly>
+                        </td>
+                        <td>
+                            
+                             <input type="text" class="width_50px marginR10">주차
+                             <input type="text" class="width_50px marginR10 marginL24"> 일간
+                           
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">요일 선택</option>
+                            </select>
+                        </td>
+                        <td>
+                            <dl class="inline_dl">
+                                <dt>시작</dt>
+                                <dd>
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                </dd>
+                                <dt>종료</dt>
+                                <dd>
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" value="실습보고서" readonly>
+                        </td>
+                        <td>
+                            <dl class="inline_dl">
+                                <dt>실습인정기간</dt>
+                                <dd>
+                                    <input type="text" class="width_50px marginR10">일간
+                                </dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">요일 선택</option>
+                            </select>
+                        </td>
+                        <td>
+                            <dl class="inline_dl">
+                                <dt>시작</dt>
+                                <dd>
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                </dd>
+                                <dt>종료</dt>
+                                <dd>
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                    <input type="time" name="" id="">
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">삭제</button>
+                <button class="btn primary">저장</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

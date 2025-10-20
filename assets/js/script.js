@@ -100,4 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 안내사항보기-간단 툴팁 토글 (외부 클릭 시 닫기, 하나만 열림)
+    document.querySelectorAll('.icon_tooltip').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // 다른 열려있는 툴팁 닫기
+            document.querySelectorAll('.icon_tooltip.open').forEach(o => { if (o !== icon) o.classList.remove('open'); });
+            icon.classList.toggle('open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.icon_tooltip.open').forEach(o => o.classList.remove('open'));
+    });
+
 });

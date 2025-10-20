@@ -187,23 +187,12 @@
         </div>
         <h3>라디오, 체크박스 텍스트와 한줄로 정렬</h3>
         사회복지사 1급 시험대비 강좌 쿠폰
-            <div class="form_check inline">
-                <input type="checkbox" name="inline_01" id="inline_01">
-                <label for="inline_01">내용 노출</label>
-            </div>
-        <h3>캘린더</h3>
-        <div class="form_group calendar">
-            <input type="date" id="searchStartDate" placeholder="시작일">
-            <span class="calendar_bullet">~</span>
-            <input type="date" id="searchEndDate" placeholder="종료일">
-            <ul class="btn_date_range">
-                <li><button class="active">당일</button></li>
-                <li><button>당월</button></li>
-                <li><button>전일</button></li>
-                <li><button>전월</button></li>
-                <li><button>연간</button></li>
-            </ul>
+        <div class="form_check inline">
+            <input type="checkbox" name="inline_01" id="inline_01">
+            <label for="inline_01">내용 노출</label>
         </div>
+        
+
         <h3>셀렉트박스</h3>
         <div class="form_group">
             <select name="" id="">
@@ -272,6 +261,18 @@
              <p class="txtError_color">개인정보 포함여부를 체크해주세요.</p>
         </div>
 
+        <h4>위아래 정렬 가운데 input은 alignC 추가</h4>
+        <div class="form_group alignC">
+            시작
+            <select name="" id="">
+                <option value="">직접입력</option>
+                <option value="">당일</option>
+                <option value="">금주</option>
+                <option value="">당월</option>
+                <option value="">당해</option>
+            </select>
+        </div>
+
         <h4>긍정 안내 문구 뜨는 input</h4>
         <div class="form_warning">
             <input type="text" class="width_80px">
@@ -280,7 +281,7 @@
 
         <h4>제목과 함께 쓰이는 input</h4>
         <dl class="inline_dl marginT8">
-            <dt>팝업을 띄우지 않는 간격</dt>
+            <dt>제목과 함께 쓰이는 input</dt>
             <dd><input type="text" class="width_80px"> 일</dd>
         </dl>
 
@@ -290,7 +291,7 @@
         </div>
 
         <br />
-
+        <h4>캘린더</h4>
         <!-- 캘린더 -->
         <div class="form_group calendar">
             <div class="form_warning">
@@ -312,6 +313,30 @@
             </ul>
         </div>
         <!-- //캘린더 -->
+
+        <h4>캘린더</h4>
+        <div class="form_group">
+            <select name="" id="">
+                 <option value="">직접입력</option>
+                 <option value="">당일</option>
+                 <option value="">금주</option>
+                 <option value="">당월</option>
+                 <option value="">당해</option>
+            </select>
+            
+            <div class="form_warning">
+                <input type="date" id="searchStartDate"placeholder="시작일">
+                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+            </div>
+            
+            <span class="calendar_bullet">~</span>
+            
+            <div class="form_warning">
+                <input type="date" id="searchEndDate"placeholder="종료일">
+                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+            </div>
+        </div>
+         
 
         <br />
         <div class="form_warning">
@@ -392,6 +417,84 @@
                 </div>
             </div>
         </div>
+
+        <h2>검색</h2>
+        <!-- 검색 섹션 -->
+        <section class="search_section">
+            <dl class="search_box">
+                <dt>템플릿 정보</dt>
+                <dd>
+                    <div class="form_group">
+                        <select name="" id="">
+                            <option value="">템플릿 유형</option>
+                            <option value="">일반 이론</option>
+                            <option value="">사회복지현장실습</option>
+                        </select>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="search_input">
+                        <input type="text" placeholder="템플릿 명 또는 코드를 입력해주세요.">
+                    </div>
+                </dd>
+            </dl>
+            <dl class="search_box">
+                <dt>생성 일자</dt>
+                <dd>
+
+                    <div class="form_group">
+                         <select name="" id="">
+                             <option value="">직접입력</option>
+                             <option value="">당일</option>
+                             <option value="">금주</option>
+                             <option value="">당월</option>
+                             <option value="">당해</option>
+                         </select>
+                        
+                         <div class="form_warning">
+                            <input type="date" id="searchStartDate"placeholder="시작일">
+                            <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                         </div>
+                        
+                        <span class="calendar_bullet">~</span>
+                        
+                         <div class="form_warning">
+                            <input type="date" id="searchEndDate"placeholder="종료일">
+                            <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                        </div>
+                    </div>
+
+                </dd>
+            </dl>
+            <dl class="search_box">
+                <dt>사용여부</dt>
+                <dd>
+
+                    <div class="form_group">
+                        <div class="form_check">
+                            <input type="radio" name="useStatus" id="useStatus_all" checked="">
+                            <label for="useStatus_all">전체</label>
+                        </div>
+                        <div class="form_check">
+                            <input type="radio" name="useStatus" id="useStatus_selected">
+                            <label for="useStatus_selected">사용</label>
+                        </div>
+                        <div class="form_check">
+                            <input type="radio" name="useStatus" id="useStatus_disabled">
+                            <label for="useStatus_disabled">미사용</label>
+                        </div>
+                    </div>
+
+                </dd>
+            </dl>
+
+            <div class="btn_group">
+                <button class="btn">초기화</button>
+                <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                <button class="btn_openClose"></button>
+            </div>
+        </section>
+        <!-- //검색 섹션 -->
 
 
         <h2>탭 디자인</h2>
@@ -820,6 +923,261 @@
                 </div>
             </div>
             <!-- //레이어_쿠폰 발급대상 -->
+        <br />
+       
+        <a href="#none" class="btn btn_studyCounseling">학습상담</a>
+
+        <!-- 레이어_학습상담 -->
+        <div class="layer_wrapper study_counseling"> <!-- active 추가 시 화면노출 -->
+            <div class="layer_basic">
+
+                <div class="layer_header">
+                    <h2>학습상담</h2>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                </div>
+
+                <!-- layer 내용 -->
+                <div class="layer_content">
+                    
+                    <!-- 탭 -->
+                    <div class="tab_container">
+
+                        <ul class="first_tab">
+                            <li><a href="#studyCounseling_1" class="active" data-tab="studyCounseling_1">학습상담</a></li>
+                            <li><a href="#studyCounseling_2" data-tab="studyCounseling_2">학습 설계</a></li>
+                        </ul>
+
+                        <div class="tab_contents">
+                            <div id="studyCounseling_1" class="tab_content active"> <!-- active 추가 시 노출 -->
+
+                                <!-- 메모 혹은 내용 쓰기 area -->
+                                <div class="memo_area">
+                                    <textarea name="" id="" placeholder="학습상담 내용을 입력해 주세요."></textarea>
+                                    <div class="byte_count">
+                                        <span id="smsByte">0</span> / 80byte
+                                    </div>
+                                    <button class="btn primary">저장</button>
+                                </div>
+                                <!-- //메모 혹은 내용 쓰기 area -->
+                                <!-- 댓글 리스트 -->
+                                <div class="comment_list scroll">
+                                    <ul>
+                                        <li>
+                                            <div class="comment_item">
+                                                <p>현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청</p>
+                                                <div class="writer_info">
+                                                    <span>홍길동</span>
+                                                    <span>2025-02-10 12:20:59</span>
+                                                    <button class=" material-symbols-rounded" title="삭제">delete</button> <!-- 댓글 삭제 버튼 -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="comment_item">
+                                                <p>현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선  학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시 해당 입력경로까지 접속이 번거로움 현재 접속 경로와 같이 단순화 요청</p>
+                                                <div class="writer_info">
+                                                    <span>홍길동</span>
+                                                    <span>2025-02-10 12:20:59</span>
+                                                    <button class=" material-symbols-rounded" title="삭제">delete</button> <!-- 댓글 삭제 버튼 -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                         <li>
+                                            <div class="comment_item">
+                                                <p>현재 행정에서도 학습자 유선문의시 문의 내역을 기재하고 있음. 유선 문의가 많을 시</p>
+                                                <div class="writer_info">
+                                                    <span>홍길동</span>
+                                                    <span>2025-02-10 12:20:59</span>
+                                                    <button class=" material-symbols-rounded" title="삭제">delete</button> <!-- 댓글 삭제 버튼 -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="studyCounseling_2" class="tab_content">
+
+                                <!-- 파일 드래그 앤 드롭 업로드 -->
+                                <div class="file_dragUpload">
+                                    <div class="drag_area">
+                                        <label for="fileUpload">클릭</label>
+                                        <input type="file" class="transparent" id="fileUpload" multiple>
+                                        또는 파일을 드래그해서 <br />업로드 해주세요.
+                                    </div>
+                                    <div class="fileSearch_after">
+                                        <div>
+                                            <a href="#none">file_01.excel</a>
+                                            <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                        </div>
+                                        <div>
+                                            <a href="#none">file_01.excel</a>
+                                            <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //파일 드래그 앤 드롭 업로드 -->
+
+                                <!-- 테이블 스크롤 -->
+                                <div class="layer_scroll marginT40">
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col style="width:10%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>파일 제목</th>
+                                                <th>등록자</th>
+                                                <th>등록일</th>
+                                                <th>삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계122211.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <a href="#none">학습설계.docx</a>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td>2025-02-10 12:20:59</td>
+                                                <td><button class="material-symbols-rounded" title="삭제">delete</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //테이블 스크롤 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //탭 -->
+                </div>
+                <!-- //layer 내용 -->
+                <div class="layer_btnSection">
+                    <button class="btn primary">저장</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- //레이어_학습상담 -->
+        <br />
+        <br />
+         툴팁
+        <div class="icon_tooltip">
+            <button class="material-symbols-rounded btn_help" title="안내사항 보기">Help</button>
+            <div class="tooltip">
+        템플릿 유형에 따라 다음 항목을 각각 1회씩 반드시등록해야 합니다.
+                <ul>
+                    <li>일반 이론: 중간고사, 기말고사, 과제, 토론, 퀴즈, OT, 커뮤니티</li>
+                    <li>사회복지현장실습: 과제, 실습보고서, 실습평가서</li>
+                </ul>
+                위 필수 항목 중 하나라도 누락된 경우, 템플릿 등록이 불가합니다.
+            </div>
+        </div>
+        <br />
+
 
         <h2>테이블</h2>
         <h3>기본 테이블</h3>
@@ -845,7 +1203,21 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>유입경로</th>
+                    <th>
+                        툴팁
+                        <div class="icon_tooltip">
+                            <button class="material-symbols-rounded btn_help" title="안내사항 보기">Help</button>
+                            <div class="tooltip">
+                        템플릿 유형에 따라 다음 항목을 각각 1회씩 반드시 등록해야 합니다.
+                                <ul>
+                                    <li>일반 이론: 중간고사, 기말고사, 과제, 토론, 퀴즈, OT, 커뮤니티</li>
+                                    <li>사회복지현장실습: 과제, 실습보고서, 실습평가서</li>
+                                </ul>
+                                위 필수 항목 중 하나라도 누락된 경우, 템플릿 등록이 불가합니다.
+                            </div>
+                        </div>
+
+                    </th>
                     <th>문의과정</th>
                     <th>상담유형</th>
                     <th>이름</th>
@@ -862,6 +1234,11 @@
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td colspan="15">
+                        <p class="no_txt">내용이 없을때 내용이 없을때</p>
+                    </td>
+                </tr>
                 <tr>
                     <td>간편상담</td>
                     <td>기타</td>
@@ -1030,8 +1407,185 @@
                     </td>
                 </tr>
                 <tr>
+                    <th><span class="essential">*</span>연결 URL</th>
+                    <td colspan="3">
+                        <p>https://www.kystudy.co.kr</p>
+                        <div class="form_check align_left">
+                            <input type="checkbox" name="chk_1" id="chk_1">
+                            <label for="chk_1">새 창 열기</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>연결 URL</th>
+                    <td colspan="3">
+                        <span>https://www.kystudy.co.kr</span>
+                        <div class="form_check inline">
+                            <input type="checkbox" name="chk_1" id="chk_1">
+                            <label for="chk_1">새 창 열기</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
                     <th><span class="essential">*</span>내용</th>
                     <td colspan="3">내용내용????</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table_view">
+            <colgroup>
+                <col style="width:15%">
+                <col style="width:35%">
+                <col style="width:15%">
+                <col style="width:35%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th><span class="essential">*</span>이름</th>
+                    <td>홍길동</td>
+                    <th><span class="essential">*</span>아이디</th>
+                    <td>dfsg1232354</td>
+                </tr>
+                <tr>
+                    <th>구분</th>
+                    <td>교수</td>
+                    <th><span class="essential">*</span>전공</th>
+                    <td>컴퓨터공학</td>
+                </tr>
+                <tr>
+                    <th>상태</th>
+                    <td>활동</td>
+                    <th>촬영교수</th>
+                    <td>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="checkbox" name="filmingProfessor" id="filmingProfessor_1" value="본인" checked disabled>
+                                <label for="filmingProfessor_1">본인</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="checkbox" name="filmingProfessor" id="filmingProfessor_2" disabled>
+                                <label for="filmingProfessor_2">본인 외</label>
+                                <input type="text" class="marginL10" disabled>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대폰</th>
+                    <td>010-1234-5678</td>
+                    <th>이메일</th>
+                    <td>ky@example.com</td>
+                </tr>
+               <tr>
+                    <th>주소</th>
+                    <td colspan="3">
+                       <p>06777</p><p>서울시 서초구 강남대로 273(서초동, 송남빌딩) 212호</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>최근 접속 일시</th>
+                    <td>2025-07-23 16:20:57</td>
+                    <th>비밀번호 오류 횟수</th>
+                    <td>2 <button class="btn marginL10"><span class="material-symbols-rounded">Refresh</span>비밀번호 초기화</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>글쓰기 테이블</h3>
+        <table class="table_view">
+            <colgroup>
+                <col style="width:12%">
+                <col>
+                <col style="width:12%">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th><span class="essential">*</span>이름</th>
+                    <td>
+                        <div class="form_warning">
+                            <input type="text" placeholder="이름을 입력해 주세요.">
+                            <p class="txtError_color">올바른 이름을 입력해 주세요.</p>
+                        </div>
+                    </td>
+                    <th><span class="essential">*</span>아이디</th>
+                    <td>
+                        <div class="form_warning">
+                            <input type="text" placeholder="아이디를 입력해 주세요.">
+                            <p class="txtError_color">중복 아이디입니다.</p>
+                            <p class="txtSuccess_color">사용할 수 있는 아이디입니다.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>구분</th>
+                    <td>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                            <option value="">교수</option>
+                            <option value="">강사</option>
+                            <option value="">조교</option>
+                        </select>
+                    </td>
+                    <th><span class="essential">*</span>전공</th>
+                    <td>
+                        <div class="form_warning">
+                            <input type="text" placeholder="전공을 입력해 주세요.">
+                            <p class="txtError_color">올바른 전공을 입력해 주세요.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>상태</th>
+                    <td>
+                         <select name="" id="">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                    <th>촬영교수</th>
+                    <td>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="checkbox" name="filmingProfessor" id="filmingProfessor_1" value="본인">
+                                <label for="filmingProfessor_1">본인</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="checkbox" name="filmingProfessor" id="filmingProfessor_2" value="본인 외">
+                                <label for="filmingProfessor_2">본인 외</label>
+                                <input type="text" class="marginL10" placeholder="직접 입력해 주세요.">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대폰</th>
+                    <td>
+                        <input type="text" placeholder="휴대폰 번호를 입력해 주세요.">
+                    </td>
+                    <th>이메일</th>
+                    <td>
+                        <input type="text" placeholder="이메일 주소를 입력해 주세요.">
+                    </td>
+                </tr>
+               <tr>
+                    <th>주소</th>
+                    <td colspan="3">
+                       <div class="form_group">
+                            <input type="text" name="" id="" placeholder="우편번호">
+                            <button type="button" class="btn primary">주소 검색</button>
+                        </div>
+                        <div class="form_group column marginT8">
+                            <input type="text" name="" id="" placeholder="주소를 입력해 주세요." class="width_50">
+                            <input type="text" name="" id="" placeholder="상세 주소를 입력해 주세요." class="width_50">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>최근 접속 일시</th>
+                    <td>-</td>
+                    <th>비밀번호 오류 횟수</th>
+                    <td>-</td>
                 </tr>
             </tbody>
         </table>

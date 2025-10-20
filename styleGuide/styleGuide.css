@@ -36,7 +36,7 @@
 .styleGuide_wrapper .guide dd { font-size:20px; font-weight:700; }
 .styleGuide_wrapper .flex { display:flex; gap:26px; }
 .styleGuide_wrapper .guide dt,.styleGuide_wrapper h3 { font-size:20px; font-weight:700; padding-bottom:8px; padding-top:24px; }
-.styleGuide_wrapper .component_example { display:flex; gap:16px; align-items:center; }
+.styleGuide_wrapper .component_example { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
 .styleGuide_wrapper .component_example.icon .material-symbols-rounded { font-size:20px; }
 .styleGuide_content code,.styleGuide_content strong,.styleGuide_content em,.styleGuide_content u { color:var(--primary_600); font-weight:600; background:var(--neutral_100); padding:2px 0; border-radius:4px; }
 .styleGuide_content .flex code { color:#333; font-weight:500; }
