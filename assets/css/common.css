@@ -180,6 +180,7 @@ input[type="file"].transparent { visibility:hidden; position:absolute; left:0; t
 .marginT40 { margin-top:40px !important; }
 .marginT50 { margin-top:50px !important; }
 .marginB0 { margin-bottom:0 !important; }
+.marginL4 { margin-left:4px !important; }
 .marginL8 { margin-left:8px !important; }
 .marginL10 { margin-left:10px !important; }
 .marginL24 { margin-left:24px !important; }
@@ -228,4 +229,6 @@ a.btn { line-height:28px; }
 
 /* 말줄임 */
 .ellipsis { display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.ellipsis_multiline { text-overflow:ellipsis; overflow:hidden; display:-webkit-box !important;-webkit-box-orient:vertical; -webkit-line-clamp:2;  }
+.ellipsis_multiline { text-overflow:ellipsis; overflow:hidden; display:-webkit-box !important;-webkit-box-orient:vertical; -webkit-line-clamp:2; }
+
+.hr { border:0; height:1px; background:none; margin:20px 0; }

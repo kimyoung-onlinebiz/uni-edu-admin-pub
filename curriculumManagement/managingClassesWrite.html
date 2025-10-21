@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>학기/기수(학점은행제) 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li><a href="#none">편성 관리</a></li>
+                    <li>학기/기수(학점은행제) 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+
+            <h3>기수 등록</h3>
+
+            <ul class="big_tab">
+                <li><a href="#tab1" class="active">학기 정보</a></li>
+                <li><a href="#tab2">과정 성격별 주차 일정</a></li>
+                <li><a href="#tab3">평가 일정</a></li>
+                <li><a href="#tab4">과정 편성</a></li>
+            </ul>
+            
+            <h4 class="borderN">
+                학기 정보 등록
+                <span>* 표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+
+            <!-- 학기 정보 등록 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>년도</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">년도 선택</option>
+                        </select>
+                    </dd>
+                    <dt><span class="essential">*</span>학기/기수</dt>
+                    <dd>
+                        <select name="" id="" class="marginR10">
+                            <option value="">학기 선택</option>
+                        </select>
+                        학기
+                    </dd>
+                    <dd>
+                        <select name="" id="" class="marginR10">
+                            <option value="">기수 선택</option>
+                        </select>
+                        기수
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>학습 시작일</dt>
+                    <dd>
+                        <div class="form_group calendar">
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                                <p class="txtError_color">종료일은 시작일보다 
+                같거나 늦어야 합니다.</p>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>편성 템플릿</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                        </select>
+
+                        <ul class="template_selection">
+                            <li>
+                                <span>[코드]학점은행제 일반 이론</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>[코드]학점은행제 사회복지현장실습</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>[코드]학점은행제 사회복지현장실습</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>[코드]학점은행제 사회복지현장실습</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>[코드]학점은행제 사회복지현장실습</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>[코드]학점은행제 사회복지현장실습</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>사용 여부</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="useYn" id="useYn_1" value="Y" checked>
+                                <label for="useYn_1">사용</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useYn" id="useYn_2" value="N">
+                                <label for="useYn_2">미사용</label>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt><span class="essential">*</span>노출 여부</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="exposure" id="exposure_1" value="Y" checked>
+                                <label for="exposure_1">사용</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="exposure" id="exposure_2" value="N">
+                                <label for="exposure_2">미사용</label>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn primary">적용</button>
+                </div>
+            </section>
+            <!-- //학기 정보 등록 섹션 -->
+
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>수강신청 기간</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>학습 기간</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>국평원 운영 보고(예정)</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>학습자 강의 평가</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="hr">
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>원점수 공개 및 이의 신청</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>최종 성적 공개</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>성적증명서 발급</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>국평원 성적보고(예정)</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="hr">
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>학점인정 신청</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>학위 취득</th>
+                        <td>
+
+                            <!-- 캘린더 -->
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2" />
+                                    <p class="txtError_color">종료일은 시작일보다 
+                    같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 --> 
+
+            <!-- //데이터 영역 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">수정</button>
+                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
