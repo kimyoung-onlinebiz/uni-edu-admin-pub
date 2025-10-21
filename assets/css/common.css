@@ -82,7 +82,7 @@ iframe { border:0; margin:0; padding:0; }
 button { border:none; cursor:pointer; font-weight:500; transition:all .2s; background:transparent}
 input::placeholder,textarea::placeholder { color:var(--neutral_600); }
 input[type="text"],input[type="tel"],input[type="password"],input[type="file"],input[type="number"],input[type="email"],input[type="date"],input[type="search"],input[type="time"],textarea,select { border:1px solid var(--neutral_500); height:32px; vertical-align:middle; padding:0 16px; border-radius:var(--borderRadius); }
-input[type="time"] { width:100px; }
+input[type="time"] { width:140px; padding:0 8px;}
 input:disabled,textarea:disabled,input:read-only, textarea:read-only { background-color:var(--neutral_300); color:var(--neutral_600); }
 input[type=text]:focus,input[type=password]:focus,textarea:focus,input[type=tel]:focus,select:focus,input[type=number]:focus { border:1px solid var(--neutral_800); outline:transparent; color:var(--neutral_900); }
 input[type="checkbox"],input[type="radio"] { width:16px; height:16px; margin-right:8px; vertical-align:middle; cursor:pointer; accent-color:var(--primary_500); }
@@ -195,6 +195,7 @@ button span.material-symbols-rounded,.material-symbols-rounded.paddingR4,a span.
 .width_50 { width:50% }
 .width_50px { width:50px; }
 .width_80px { width:80px; }
+.width_280px { width:280px !important; }
 
 /* 대표 버튼 스타일 */
 .btn { display:inline-block; font-size:var(--font_base); border:1px solid var(--neutral_800); padding:0 24px; height:32px; border-radius:var(--borderRadius); background:var(--neutral_0); }
