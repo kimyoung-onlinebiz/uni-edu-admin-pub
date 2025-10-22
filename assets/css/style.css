@@ -428,3 +428,4 @@ ease-in-out; }
 .weekly_schedule span { color:var(--neutral_600); }
 .table_actions .btn_scheduleHelp { min-width:30px; margin-right:-8px; }
 .registration_process .layer_basic { width:1000px; }
+.table_comment { margin-top:16px; color:var(--neutral_600); font-size:var(--font_small); font-weight:700; }
