@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_paymentCourse', layer: '.payment_course', many: true }, // 결제 강좌 레이어
         { sel: '.btn_withdrawalApproval', layer: '.withdrawal_approval', many: true }, // 탈퇴승인 레이어
         { sel: '.btn_ipMac', layer: '.ipMac_registration', many: true }, // ip/mac 등록 레이어
-        { sel: '.btn_ipMac_update', layer: '.ipMac_registration_update', many: true } // ip/mac 이력관리 레이어
+        { sel: '.btn_ipMac_update', layer: '.ipMac_registration_update', many: true }, // ip/mac 이력관리 레이어
+        { sel: '.btn_scheduleHelp', layer: '.schedule_help', many: true } // 학기/기수 관리 일정 자동 설정 도움말 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);
