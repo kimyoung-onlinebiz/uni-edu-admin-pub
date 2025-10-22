@@ -63,6 +63,7 @@
 
 /* 검색영역 */
 .search_section,.memo_area,.file_dragUpload { position:relative; background:var(--neutral_200); border-radius:var(--borderRadius_2); margin-bottom:40px; padding:20px 32px; transition:all .2s; box-shadow:var(--shadow_light); }
+.search_section.viewPeriod { background:var(--neutral_100); border:1px solid var(--neutral_300); }
 .search_section.small { height:72px; overflow:hidden; }
 .search_box { display:flex; gap:20px; align-items:start; margin-bottom:12px; }
 .search_box dt { color:var(--neutral_900); font-weight:600; font-size:var(--font_medium); min-width:100px; padding-right:20px; padding-top:5px; }
@@ -402,6 +403,7 @@ ease-in-out; }
 .ipMac_registration_update .layer_basic { width:820px; height:750px; }
 .ipMac_registration_update .layer_content { max-height:620px; }
 .no_txt { color:var(--neutral_500); text-align:center; padding:60px 0; }
+.no_txt button { display:block; margin:20px auto 0; }
 .icon_tooltip { position:relative; display:inline-block; margin-left:4px; color:var(--neutral_500); font-size:18px; cursor:pointer; }
 .icon_tooltip button { color:var(--neutral_600); font-size:21px; vertical-align:-6px; }
 .tooltip { opacity:0; visibility:hidden; transition:opacity .18s ease, transform .18s ease, visibility .18s; position:absolute; top:35px; left:-14px; width:400px; border-radius:8px; background:var(--neutral_800); color:#fff; font-size:12px; padding:16px 20px; text-align:left;  z-index:100; box-shadow:var(--shadow_light); }

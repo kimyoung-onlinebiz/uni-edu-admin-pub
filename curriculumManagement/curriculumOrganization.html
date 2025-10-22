@@ -89,15 +89,14 @@
 
             <ul class="big_tab">
                 <li><a href="#tab1">학기 정보</a></li>
-                <li><a href="#tab2" class="active">과정 성격별 주차 일정</a></li>
+                <li><a href="#tab2">과정 성격별 주차 일정</a></li>
                 <li><a href="#tab3">평가 일정</a></li>
-                <li><a href="#tab4">과정 편성</a></li>
+                <li><a href="#tab4" class="active">과정 편성</a></li>
             </ul>
 
-            <h4 class="borderN">주차별 일정 등록<span>* 표시된 항목은 필수 입력 항목입니다.</span>
-            </h4>
+            <h4 class="borderN">과정 편성 등록<span>* 표시된 항목은 필수 입력 항목입니다.</span> </h4>
 
-            <!-- 주차별 일정 등록 섹션 -->
+            <!-- 등록 섹션 -->
             <section class="search_section viewPeriod">
                 <dl class="weekly_schedule">
                     <dt>2026년도 1학기 1기</dt>
@@ -111,107 +110,127 @@
                     </dd>
                 </dl>
             </section>
-            <!-- //검색 섹션 -->
-
-            <ul class="first_tab">
-                <li><a href="#tab1" class="active">학점은행제 일반 이론</a></li>
-                <li><a href="#tab2">학점은행제 사회복지현장실습</a></li>
-            </ul>
+            <!-- //등록 섹션 -->
 
             <!-- 데이터 영역 -->
 
             <div class="table_top">
-                <p></p>
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
                 <div class="table_actions">
-                    <button class="btn">일정 자동 설정</button>
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                    <button class="btn">편성 과정 삭제</button>
+                    <select name="" id="">
+                        <option value="">마감 적용</option>
+                        <option value="">마감 임박</option>
+                        <option value="">마감</option>
+                    </select>
+                    <button class="btn primary">편성 과정 등록</button>
                 </div>
             </div>
 
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <tbody>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+
+
             <!-- 테이블 -->
-            <table class="data_table">
+            <table class="table_view">
                 <colgroup>
                     <col>
                     <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
                 </colgroup>
-                <thead>
-                    <tr>
-                        <th>주차</th>
-                        <th>진행 기간</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <td><span class="essential">*</span> OT</td>
-                        <td>
-                            <!-- 캘린더 -->
-                            <div class="form_group calendar">
-                                <div class="form_warning">
-                                    <input type="date" id="" placeholder="시작일">
-                                    <p class="txtError_color">날짜가 올바르지 않습니다.</p>
-                                </div>
-                                <span class="calendar_bullet">~</span>
-                                <div class="form_warning">
-                                    <input type="date" id="" placeholder="종료일">
-                                    <p class="txtError_color">종료일은 시작일보다 
-                    같거나 늦어야 합니다.</p>
-                                </div>
+                        <th>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
                             </div>
-                            <!-- //캘린더 -->
-                        </td>
+                        </th>
+                        <th>No</th>
+                        <th>편성 코드</th>
+                        <th>과정 코드</th>
+                        <th>과정 명</th>
+                        <th>총 학점</th>
+                        <th>전공</th>
+                        <th>교육비</th>
+                        <th>최대 정원</th>
+                        <th>마감 구분</th>
                     </tr>
                     <tr>
-                        <td><span class="essential">*</span> 1주차</td>
-                        <td>
-                            <!-- 캘린더 -->
-                            <div class="form_group calendar">
-                                <div class="form_warning">
-                                    <input type="date" id="" placeholder="시작일">
-                                    <p class="txtError_color">날짜가 올바르지 않습니다.</p>
-                                </div>
-                                <span class="calendar_bullet">~</span>
-                                <div class="form_warning">
-                                    <input type="date" id="" placeholder="종료일">
-                                    <p class="txtError_color">종료일은 시작일보다 
-                    같거나 늦어야 합니다.</p>
-                                </div>
+                        <td colspan="10">
+                            <div class="no_txt">
+                                등록된 과정이 없습니다.<br />편성 과정을 등록해주세요.
+                                <button class="btn primary">2025년도 2학기 1기 과정 동일하게 등록하기</button>
                             </div>
-                            <!-- //캘린더 -->
                         </td>
                     </tr>
-                    <tr>
-                        <td><span class="essential">*</span> 3주차</td>
-                        <td>
-                            <!-- 캘린더 -->
-                            <div class="form_group calendar">
-                                <div class="form_warning">
-                                    <input type="date" id="" placeholder="시작일">
-                                    <p class="txtError_color">날짜가 올바르지 않습니다.</p>
-                                </div>
-                                <span class="calendar_bullet">~</span>
-                                <div class="form_warning">
-                                    <input type="date" id="" placeholder="종료일">
-                                    <p class="txtError_color">종료일은 시작일보다 
-                    같거나 늦어야 합니다.</p>
-                                </div>
-                            </div>
-                            <!-- //캘린더 -->
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="essential">*</span> 8주차</td>
-                        <td>
-                            중간고사 응시 기간입니다.
-                        </td>
-                    </tr>
-                    
                 </tbody>
             </table>
+
             <!-- //테이블 -->
 
             <div class="btn_groupRight"> 
                 <button class="btn secondary">목록</button>
-                <button class="btn">수정</button>
-                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+                <button class="btn primary">저장</button>
             </div>
 
             <!-- //데이터 영역 -->
