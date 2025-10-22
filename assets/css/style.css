@@ -63,7 +63,7 @@
 
 /* 검색영역 */
 .search_section,.memo_area,.file_dragUpload { position:relative; background:var(--neutral_200); border-radius:var(--borderRadius_2); margin-bottom:40px; padding:20px 32px; transition:all .2s; box-shadow:var(--shadow_light); }
-.search_section.viewPeriod { background:var(--neutral_100); border:1px solid var(--neutral_300); }
+.viewPeriod { position:relative; border-radius:var(--borderRadius_2); margin-bottom:40px; padding:20px 32px; transition:all .2s; box-shadow:var(--shadow_light); background:var(--neutral_100); border:1px solid var(--neutral_300); }
 .search_section.small { height:72px; overflow:hidden; }
 .search_box { display:flex; gap:20px; align-items:start; margin-bottom:12px; }
 .search_box dt { color:var(--neutral_900); font-weight:600; font-size:var(--font_medium); min-width:100px; padding-right:20px; padding-top:5px; }
@@ -88,7 +88,7 @@
 /* 공통 컴포넌트:입력 필드 */
 .form_group { display:flex; gap:20px; flex-wrap:wrap; }
 .form_group.column { flex-direction:column; gap:8px; }
-.form_group.alignC { align-items:center !important; }
+.alignC { align-items:center !important; }
 .data_table td .form_group,.data_table th .form_group { justify-content:center; }
 .data_table.align_left td .form_group,.data_table.align_left th .form_group { justify-content:left; }
 .form_check { display:flex; align-items:center; justify-content:center; }
@@ -112,7 +112,9 @@
 .form_warning p,.form_group p { font-size:var(--font_small); margin-top:8px; font-weight:500; }
 .form_group > p { margin-top:0; }
 .inline_dl { display:flex; align-items:center; gap:16px; justify-content:center; }
-.inline_dl dt { font-weight:600; color:var(--neutral_900); }
+.inline_dl.align_left { justify-content:flex-start; }
+.inline_dl input { margin-right:4px; }
+.inline_dl dt { font-weight:600; color:var(--neutral_900); min-width:100px; }
 .form_warning { text-align:left; }
 
 /* 첫번째 탭 */
@@ -127,7 +129,7 @@
 h3+.big_tab { margin-top:0px; }
 .big_tab li { width:100%; text-align:center; }
 .big_tab li:first-child a { border-radius:var(--borderRadius_2) 0 0 var(--borderRadius_2); }
-.big_tab li:last-child a { border-radius:0 var(--borderRadius) var(--borderRadius) 0; }
+.big_tab li:last-child a { border-radius:0 var(--borderRadius_2) var(--borderRadius_2) 0; }
 .big_tab li a { display:block; font-size:var(--font_large); color:var(--neutral_500); padding:12px 0 15px; border:1px solid var(--neutral_500); background:var(--neutral_0); font-weight:500; margin-left:-1px; }
 .big_tab li a.active,.big_tab li a:hover { background:var(--primary_500); color:var(--neutral_0); border:1px solid var(--primary_500); }
 
@@ -425,3 +427,4 @@ ease-in-out; }
 .weekly_schedule dt { color:var(--primary_500); }
 .weekly_schedule span { color:var(--neutral_600); }
 .table_actions .btn_scheduleHelp { min-width:30px; margin-right:-8px; }
+.registration_process .layer_basic { width:1000px; }
