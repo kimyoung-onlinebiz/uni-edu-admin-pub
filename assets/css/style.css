@@ -83,8 +83,9 @@
 .btn_group .btn_openClose { margin-left:4px; min-width:32px; width:32px; height:32px; background:var(--neutral_300); border:1px solid var(--neutral_500); border-radius:var(--borderRadius); }
 .btn_group .btn_openClose:before { content:"arrow_drop_up"; font-family:'Material Symbols Rounded'; color:var(--neutral_800); font-size:27px; line-height:1.2; }
 .btn_group .btn_openClose.close:before { content:"arrow_drop_down"; }
-.admin_content h4 { display:flex; align-items:center; justify-content:space-between; color: var(--Neutral_900); font-size:20px; font-weight:600; margin-top:40px; padding:20px 0 14px 16px; border-top:1px solid var(--neutral_300); }
+.admin_content h4 { display:flex; align-items:center; justify-content:space-between; color: var(--Neutral_900); font-size:20px; font-weight:600; margin-top:40px; padding:20px 16px 14px 16px; border-top:1px solid var(--neutral_300); }
 .admin_content h4.borderN { border:none; padding-top:0; }
+.admin_content h4 strong { color:var(--primary_500); }
 
 /* 공통 컴포넌트:입력 필드 */
 .form_group { display:flex; gap:20px; flex-wrap:wrap; }
@@ -161,6 +162,13 @@ h3+.big_tab { margin-top:0px; }
 /* 테이블 뷰 */
 .table_view th,.table_view td { padding:15px 20px; vertical-align:middle; line-height:1.3; text-align:left; border:1px solid #dfe8ec; }
 .essential { color:var(--error_color); margin-right:4px; margin-left:-11px; }
+
+/* 중첩 테이블 */
+.table_overlay td:first-child,.table_overlay th:first-child { border-left:1px solid var(--neutral_300); }
+.table_overlay td:last-child,.table_overlay th:last-child { border-right:1px solid var(--neutral_300); }
+.table_overlay td,.table_overlay th { text-align:center; background:var(--neutral_0); border:1px solid var(--neutral_300); }
+.table_overlay tbody td:hover { background:var(--neutral_0); }
+.table_overlay th { background:var(--neutral_200); }
 
 /* 로그인 */
 .login_wrapper { display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; }
@@ -419,11 +427,12 @@ ease-in-out; }
 .tooltip:before { position:absolute; left:18px; top:-5px; content:""; width:8px; height:10px; transform:rotate(45deg); flex-shrink:0; background:var(--neutral_800); }
 
 /* 기수관리 */
-.template_selection { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:20px; margin-top:16px; }
-dd .template_selection { margin:0; }
+.template_selection,.detailed_subject { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:20px; margin-top:16px; }
+.inline_dl .template_selection { margin:0; }
+.detailed_subject { flex-direction:column; align-items:flex-start; }
 .template_selection li { padding:4px 20px; border:1px solid var(--neutral_500); border-radius:30px; }
-.template_selection span { color:var(--primary_800); font-weight:500; }
-.template_selection button { color:var(--error_color); font-weight:500; }
+.template_selection span,.detailed_subject span { color:var(--primary_800); font-weight:500; }
+.template_selection button,.detailed_subject button { color:var(--error_color); font-weight:500; }
 
 /* 학점은행제 관리 */
 .weekly_schedule { display:flex; gap:20px; justify-content:center; }

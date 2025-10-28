@@ -239,3 +239,4 @@ a.btn { line-height:28px; }
 
 .hr { border:0; height:1px; background:none; margin:20px 0; }
 .icon_new { color:var(--error_color); font-weight:600; margin-left:4px; }
+s { color:var(--neutral_600) }

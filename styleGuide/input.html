@@ -61,6 +61,8 @@
             <button class="btn btn_excelUpload"><span class="material-symbols-rounded">upload</span>엑셀 업로드</button>
             <button class="btn"><span class="material-symbols-rounded">add_circle</span>다운로드 사유 보기</button>
             <button class="btn marginL10"><span class="material-symbols-rounded">Refresh</span>비밀번호 초기화</button>
+            <button class="btn"><span class="material-symbols-rounded">playlist_add</span>편성과정 추가</button>
+            <button class="btn marginL24"><span class="material-symbols-rounded">credit_score</span>금액 자동 계산</button>
         </div>
         <h3>강조 버튼</h3>
         <div class="component_example">
@@ -1458,8 +1460,29 @@
                     <td>2</td>
                 </tr>
                 <tr>
-                    <th><span class="essential">*</span>배너 제목</th>
-                    <td colspan="3">김영편입 박람회(2025)</td>
+                    <th><span class="essential">*</span>버튼 예시</th>
+                    <td colspan="3">
+                        <div class="btn_group">
+                            <button class="btn"><span class="material-symbols-rounded">playlist_add</span>편성과정 추가</button>
+                            <button class="btn primary"><span class="material-symbols-rounded">arrow_right_alt</span>다음 기수로 전환</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>버튼 예시</th>
+                    <td colspan="3">
+                        <div class="btn_group">
+                            <button class="btn">편성과정 추가</button>
+                            <button class="btn secondary">까만색 버튼</button>
+                            <button class="btn primary">다음 기수로 전환</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>버튼 예시-단일</th>
+                    <td colspan="3">
+                        <button class="btn">편성과정 추가</button>
+                    </td>
                 </tr>
                <tr>
                     <th>등록자</th>
@@ -1686,6 +1709,58 @@
             </tbody>
         </table>
         <p class="table_comment">※전공 코드는 시스템 통일성을 위해 영어 약어로 입력해주시길 바랍니다. 예: 경영학(Business Administration) → BA</p>
+
+        <h3>중첩 테이블</h3>
+        <table class="table_view">
+            <colgroup>
+                <col style="width:200px">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>패키지 설명</th>
+                    <td colspan="3">
+                        25년 2학기 학점은행제 8과목 24학점 선택
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="essential">*</span>편성과정</th>
+                    <td>
+                        <table class="table_overlay">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>편성코드</th>
+                                    <th>편성코드 정보</th>
+                                    <th>편성 과정 명</th>
+                                    <th><span class="essential">*</span>교육비</th>
+                                    <th>원교육비</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>234dfsgfhfdhgf</td>
+                                    <td>2025학년 2학기 2기</td>
+                                    <td>조직심리학</td>
+                                    <td>
+                                        <input type="text" class="width_150 marginR10">원
+                                    </td>
+                                    <td>
+                                        69,000원 <s>(210,000원)</s>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         
 
     <!-- 기타 필요한 컴포넌트들 추가... (체크박스, 라디오, 모달, 페이징 등) -->

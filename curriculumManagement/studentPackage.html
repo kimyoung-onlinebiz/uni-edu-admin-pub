@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body> 
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li class="active_depth_2"><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>학습자별 패키지 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li>학습자별 패키지 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+
+            <h3>패키지 등록</h3>
+
+            <ul class="big_tab">
+                <li><a href="#tab1">기본 정보</a></li>
+                <li><a href="#tab2">편성과정 </a></li>
+                <li><a href="#tab2" class="active">과정별 금액 등록</a></li>
+            </ul>
+            
+            <h4 class="borderN">
+                편성 과정 등록
+                <span>* 표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>회원 ID</th>
+                        <td>오지현(ddf34234fg)</td>
+                        <th><span class="essential">*</span>패키지 금액</th>
+                        <td>
+                             261,000원
+                             <button class="btn marginL24"><span class="material-symbols-rounded">credit_score</span>금액 자동 계산</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>패키지 명</th>
+                        <td>김영평생교육원 패키지1</td>
+                        <th><span class="essential">*</span>패키지 코드</th>
+                        <td>25ssdggh4</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h4 class="borderN">
+                학점은행제(1)
+                <small>총 <strong>8</strong>건</small>
+            </h4>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>패키지 설명</th>
+                        <td colspan="3">
+                            25년 2학기 학점은행제 8과목 24학점 선택
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>편성과정</th>
+                        <td>
+                            <table class="table_overlay">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>편성코드</th>
+                                        <th>편성코드 정보</th>
+                                        <th>편성 과정 명</th>
+                                        <th><span class="essential">*</span>교육비</th>
+                                        <th>원교육비</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>234dfsgfhfdhgf</td>
+                                        <td>2025학년 2학기 2기</td>
+                                        <td>조직심리학</td>
+                                        <td>
+                                            <input type="text" class="width_150 marginR10">원
+                                            <p class="txtError_color warning">교육비를 입력해주세요.</p>
+                                        </td>
+                                        <td>
+                                            69,000원 <s>(210,000원)</s>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>234dfsgfhfdhgf</td>
+                                        <td>2025학년 2학기 2기</td>
+                                        <td>조직심리학</td>
+                                        <td>
+                                            <input type="text" class="width_150 marginR10">원
+                                        </td>
+                                        <td>
+                                            69,000원 <s>(210,000원)</s>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>234dfsgfhfdhgf</td>
+                                        <td>2025학년 2학기 2기</td>
+                                        <td>조직심리학</td>
+                                        <td>
+                                            <input type="text" class="width_150 marginR10">원
+                                        </td>
+                                        <td>
+                                            69,000원 <s>(210,000원)</s>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>234dfsgfhfdhgf</td>
+                                        <td>2025학년 2학기 2기</td>
+                                        <td>조직심리학</td>
+                                        <td>
+                                            <input type="text" class="width_150 marginR10">원
+                                        </td>
+                                        <td>
+                                            69,000원 <s>(210,000원)</s>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>234dfsgfhfdhgf</td>
+                                        <td>2025학년 2학기 2기</td>
+                                        <td>조직심리학</td>
+                                        <td>
+                                            <input type="text" class="width_150 marginR10">원
+                                        </td>
+                                        <td>
+                                            69,000원 <s>(210,000원)</s>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>234dfsgfhfdhgf</td>
+                                        <td>2025학년 2학기 2기</td>
+                                        <td>조직심리학</td>
+                                        <td>
+                                            <input type="text" class="width_150 marginR10">원
+                                        </td>
+                                        <td>
+                                            69,000원 <s>(210,000원)</s>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!-- //데이터 영역 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">임시저장</button>
+                <button class="btn primary">회원 장바구니 적용</button>
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
