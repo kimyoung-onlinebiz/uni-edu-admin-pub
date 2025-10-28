@@ -52,7 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_ipMac', layer: '.ipMac_registration', many: true }, // ip/mac 등록 레이어
         { sel: '.btn_ipMac_update', layer: '.ipMac_registration_update', many: true }, // ip/mac 이력관리 레이어
         { sel: '.btn_scheduleHelp', layer: '.schedule_help', many: true }, // 학기/기수 관리 일정 자동 설정 도움말 레이어
-        { sel: '.btn_registrationProcess', layer: '.registration_process', many: true } // 편성 과정 등록 레이어
+        { sel: '.btn_registrationProcess', layer: '.registration_process', many: true }, // 편성 과정 등록 레이어
+        { sel: '.btn_contentRegistration', layer: '.content_registration', many: true }, // 과정별 콘텐츠 등록 레이어
+        { sel: '.btn_examRegistration', layer: '.exam_registration', many: true }, // 시험 등록 레이어
+        { sel: '.btn_difficultySetting', layer: '.difficulty_setting', many: true }, // 난이도 설정 레이어
+        { sel: '.btn_relativeEvaluation', layer: '.relative_evaluation', many: true } // 상대평가 설정 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body> 
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li class="active_depth_2"><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>과정 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li>과정 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+
+            <h3>기수 등록</h3>
+
+            <ul class="big_tab">
+                <li><a href="#tab1">기본 정보</a></li>
+                <li><a href="#tab2" class="active">주차별 콘텐츠 정보</a></li>
+                <li><a href="#tab3">평가 정보</a></li>
+            </ul>
+            
+            <h4 class="borderN">
+                주차별 콘텐츠 정보 등록
+                <span>* 표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+
+            <!-- 학기 정보 등록 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>과정 명</dt>
+                    <dd>
+                        <input type="text" class="width_320px">
+                        <p class="txtError_color warning">과정명을 입력해주세요.</p>
+                    </dd>
+                    <dt><span class="essential">*</span>과정 코드</dt>
+                    <dd>
+                        <input type="text">
+                        <p class="txtError_color warning">과정 코드를 입력해주세요.</p>
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>콘텐츠 코드</dt>
+                    <dd>
+                        <button class="btn secondary btn_contentRegistration"><span class="material-symbols-rounded">search</span>과정별 콘텐츠 검색</button>
+                        <ul class="template_selection">
+                            <li>
+                                <span>인체생리학 CDMS0098</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>인체생리학 CDMS0098</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>인체생리학 CDMS0098</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+                            <li>
+                                <span>인체생리학 CDMS0098</span>
+                                <button class="btn_delete material-symbols-rounded">close</button>
+                            </li>
+    
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="btn_group">
+                    <button class="btn primary">코드 적용</button>
+                </div>
+            </section>
+            <p class="table_comment">※과정별 콘텐츠를 등록하면, 해당 강의 영상이 자동으로 주차 및 차시 별로 배정됩니다.</p>
+            <!-- //학기 정보 등록 섹션 -->
+
+            <!-- 레이어_과정별 콘텐츠 등록 -->
+            <div class="layer_wrapper content_registration"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>과정별 콘텐츠 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <div class="search_section">
+                            <dl class="search_box">
+                                <dt>콘텐츠 정보</dt>
+                                <dd>
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">콘텐츠 명</option>
+                                        </select>
+                                    </div>
+                                    <!-- //셀렉트박스 -->
+                                </dd>
+                                <dd>
+                                    <div class="search_input">
+                                        <input type="text" placeholder="검색어를 입력해 주세요.">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>콘텐츠 구분</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="radio" name="contentDivision" id="contentDivision_1">
+                                            <label for="contentDivision_1">전체</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="contentDivision" id="contentDivision_2" checked="">
+                                            <label for="contentDivision_2">신규</label>
+                                        </div>
+                                         <div class="form_check">
+                                            <input type="radio" name="contentDivision" id="contentDivision_3" checked="">
+                                            <label for="contentDivision_3">재평가</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="search_box alignC">
+                                <dt>사용 여부</dt>
+                                <dd>
+                                    <input type="radio" name="" id=""> 사용
+                                </dd>
+                            </dl>
+                            <div class="btn_group">
+                                <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                            </div>
+                        </div>
+
+                        <div class="table_top">
+                            <div class="table_sort">
+                                <select>
+                                    <option value="">20</option>
+                                </select>
+                                <span>총 <strong>99</strong>건</span>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </th>
+                                    <th>No</th>
+                                    <th>콘텐츠 코드 </th>
+                                    <th>콘텐츠 명</th>
+                                    <th>구분</th>
+                                    <th>교수 명</th>
+                                    <th>주차 수</th>
+                                    <th>강의 수</th>
+                                    <th>사용 여부</th>
+                                    <th>등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>c013342</td>
+                                    <td>조직심리학</td>
+                                    <td>신규</td>
+                                    <td>김영규</td>
+                                    <td>14</td>
+                                    <td>26</td>
+                                    <td>Y</td>
+                                    <td>2025-01-11</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>c013342</td>
+                                    <td>조직심리학</td>
+                                    <td>신규</td>
+                                    <td>김영규</td>
+                                    <td>14</td>
+                                    <td>26</td>
+                                    <td>Y</td>
+                                    <td>2025-01-11</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>c013342</td>
+                                    <td>조직심리학</td>
+                                    <td>신규</td>
+                                    <td>김영규</td>
+                                    <td>14</td>
+                                    <td>26</td>
+                                    <td>Y</td>
+                                    <td>2025-01-11</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>c013342</td>
+                                    <td>조직심리학</td>
+                                    <td>신규</td>
+                                    <td>김영규</td>
+                                    <td>14</td>
+                                    <td>26</td>
+                                    <td>Y</td>
+                                    <td>2025-01-11</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>c013342</td>
+                                    <td>조직심리학</td>
+                                    <td>신규</td>
+                                    <td>김영규</td>
+                                    <td>14</td>
+                                    <td>26</td>
+                                    <td>Y</td>
+                                    <td>2025-01-11</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 페이징 -->
+                        <div class="paging">
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                            <a href="#none">1</a>
+                            <a href="#none" class="active">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+                        </div>
+                        <!-- //페이징 -->
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">선택</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_과정별 콘텐츠 등록 -->
+
+
+            <h4 class="borderN">차시 상세 내용</h4>
+            <div class="no_txt border">
+                등록된 차시 정보가 없습니다.<br />
+                주차별 차시 정보 등록에서 "콘텐츠 코드"를 등록 후 [코드 적용] 버튼을 눌러주세요.
+            </div>
+
+            <h4 class="borderN">
+                차시 상세 내용
+                <button class="btn btn_examRegistration">시험 차시 등록</button>
+            </h4>
+
+            <!-- 레이어_시험차시 등록 -->
+            <div class="layer_wrapper exam_registration"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>시험 차시 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>주차 선택</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">8주차</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>시험 유형</th>
+                                    <td>
+                                        <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="testType" id="testType_1">
+                                                <label for="testType_1">중간고사</label>
+                                            </div>    
+                                            <div class="form_check">
+                                                <input type="radio" name="testType" id="testType_2">
+                                                <label for="testType_2">기말고사</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학습 목표</th>
+                                    <td>
+                                        <input type="text" placeholder="중간고사 진행 차시입니다.">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학습 내용</th>
+                                    <td>
+                                        <input type="text" placeholder="중간고사 진행 차시입니다.">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_시험차시 등록 -->
+
+            <div class="lesson_detailContent">
+                <div class="lesson_detailContent_left scroll_deep">
+                    <ul>
+                        <li><a href="#none" class="active">1주차</a></li>
+                        <li><a href="#none">2주차</a></li>
+                        <li><a href="#none">3주차</a></li>
+                        <li><a href="#none">4주차</a></li>
+                        <li><a href="#none">5주차</a></li>
+                        <li><a href="#none">6주차</a></li>
+                        <li><a href="#none">7주차</a></li>
+                        <li><a href="#none">8주차</a></li>
+                        <li><a href="#none">9주차</a></li>
+                        <li><a href="#none">10주차</a></li>
+                        <li><a href="#none">11주차</a></li>
+                        <li><a href="#none">12주차</a></li>
+                        <li><a href="#none">13주차</a></li>
+                        <li><a href="#none">14주차</a></li>
+                    </ul>
+                </div>
+                <div class="lesson_detailContent_right">
+                    <div class="scroll_deep">
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th rowspan="3">1차시</th>
+                                    <th>제목</th>
+                                    <td>해부생리학</td>
+                                </tr>
+                                <tr>
+                                    <th>학습 목표</th>
+                                    <td>
+                                        <ol>
+                                            <li>해부학과 생리학의 개념을 이해하고 세부 분야를 설명할 수 있다.</li>
+                                            <li>인체 대사작용과 항상성의 조절기전을 설명할 수 있다.</li>
+                                            <li>해부학적 자세를 이해하고 인체의 면과 방향에 관련된 용어를 기술할 수 있다.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학습 내용</th>
+                                    <td>
+                                        <ol>
+                                            <li>해부학과 생리학의 기초 개념 이해</li>
+                                            <li>해부학과 생리학의 기초 개념 이해</li>
+                                            <li>해부학과 생리학의 기초 개념 이해</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="3">2차시</th>
+                                    <th>제목</th>
+                                    <td>해부생리학</td>
+                                </tr>
+                                <tr>
+                                    <th>학습 목표</th>
+                                    <td>
+                                        <ol>
+                                            <li>해부학과 생리학의 개념을 이해하고 세부 분야를 설명할 수 있다.</li>
+                                            <li>인체 대사작용과 항상성의 조절기전을 설명할 수 있다.</li>
+                                            <li>해부학적 자세를 이해하고 인체의 면과 방향에 관련된 용어를 기술할 수 있다.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학습 내용</th>
+                                    <td>
+                                        <ol>
+                                            <li>해부학과 생리학의 기초 개념 이해</li>
+                                            <li>해부학과 생리학의 기초 개념 이해</li>
+                                            <li>해부학과 생리학의 기초 개념 이해</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="3">3차시</th>
+                                    <th>제목</th>
+                                    <td>해부생리학</td>
+                                </tr>
+                                <tr>
+                                    <th>학습 목표</th>
+                                    <td>
+                                        <ol>
+                                            <li>해부학과 생리학의 개념을 이해하고 세부 분야를 설명할 수 있다.</li>
+                                            <li>인체 대사작용과 항상성의 조절기전을 설명할 수 있다.</li>
+                                            <li>해부학적 자세를 이해하고 인체의 면과 방향에 관련된 용어를 기술할 수 있다.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">수정</button>
+                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

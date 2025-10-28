@@ -199,6 +199,7 @@ button span.material-symbols-rounded,.material-symbols-rounded.paddingR4,a span.
 .width_80px { width:80px; }
 .width_150px { width:150px; }
 .width_280px { width:280px !important; }
+.width_320px { width:320px !important; }
 
 /* 대표 버튼 스타일 */
 .btn { display:inline-block; font-size:var(--font_base); border:1px solid var(--neutral_800); padding:0 24px; height:32px; border-radius:var(--borderRadius); background:var(--neutral_0); }
@@ -220,12 +221,15 @@ a.btn { line-height:28px; }
 .layer_header { position:relative; display:flex; flex-flow:column; text-align:left; padding:0 16px 18px 16px; }
 .layer_header .btn_layerClose { position:absolute; right:0; top:-6px; font-size:30px; }
 .layer_header h2 { display:flex;  align-items:center; font-size:20px; font-weight:600; gap:16px }
-.layer_basic { position:relative; background:var(--neutral_0); border-radius:12px; padding:30px 32px 80px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); text-align:center; }
-.layer_content { overflow:auto; overflow-x:hidden; max-height:580px;min-height:150px; }
-.layer_content::-webkit-scrollbar,.scroll::-webkit-scrollbar { width:6px; }
+.layer_basic { position:relative; background:var(--neutral_0); border-radius:12px; padding:30px 32px 80px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); text-align:center; min-width:500px; }
+.layer_content { overflow:auto; overflow-x:hidden; max-height:580px;min-height:150px; padding-right:8px; }
+.layer_content::-webkit-scrollbar,.scroll::-webkit-scrollbar,.scroll_deep::-webkit-scrollbar { width:6px; }
 .layer_content::-webkit-scrollbar-track,.scroll::-webkit-scrollbar-track { border-radius:3px; background:var(--neutral_0); }
 .layer_content::-webkit-scrollbar-thumb,.scroll::-webkit-scrollbar-thumb { border-radius:3px; background:var(--neutral_300); }
+.scroll_deep::-webkit-scrollbar-thumb { border-radius:3px; background:var(--neutral_500); }
 .layer_content::-webkit-scrollbar-thumb:hover,.scroll::-webkit-scrollbar-thumb:hover { border-radius:3px; background:var(--neutral_500); }
+.scroll_deep::-webkit-scrollbar-thumb:hover { border-radius:3px; background:var(--neutral_500); }
+
 .layer_btnSection { position:absolute; bottom:20px; right:32px; margin-top:20px; display:flex; gap:16px; }
 .layer_btnSection .btn { min-width:120px; height:40px; }
 

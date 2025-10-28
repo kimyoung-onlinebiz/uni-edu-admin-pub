@@ -14,7 +14,7 @@
     <script src="/assets/js/script.js"></script>
 </head>
 
-<body>
+<body> 
     <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
 
     <div class="admin_wrapper" id="wrapper">
@@ -53,16 +53,16 @@
                 <li> <!-- 선택 시 active_depth_2 -->
                     <a href="#">편성 템플릿 관리</a>
                 </li>
-                <li class="active_depth_2">
+                <li>
                     <a href="#">편성 관리</a>
                     <ul class="depth_3">
-                        <li><a href="#none" class="active_depth_3">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
                         <li><a href="#none">일반과정 관리</a></li>
                         <li><a href="#none">민간자격증 관리</a></li>
                     </ul>
                 </li>
                 <li><a href="#">전공 관리</a></li>
-                <li><a href="#">과정 관리</a></li>
+                <li class="active_depth_2"><a href="#">과정 관리</a></li>
                 <li><a href="#">동일교과정 그룹 관리</a></li>
                 <li><a href="#">CDMS</a></li>
                 <li><a href="#">교재 관리</a></li>
@@ -74,30 +74,30 @@
         <!-- Content -->
         <main class="admin_content" id="container">
             <header class="content_header">
-                <h2>학기/기수(학점은행제) 관리</h2>
+                <h2>과정 관리</h2>
                 <!-- 빵부스러기 -->
                 <ul class="breadcrumb">
                     <li><a href="#none">홈</a></li>
                     <li><a href="#none">교육과정 관리</a></li>
-                    <li><a href="#none">편성 관리</a></li>
-                    <li>학기/기수(학점은행제) 관리</li>
+                    <li>과정 관리</li>
                 </ul>
                 <!-- //빵부스러기 -->
             </header>
 
-            <h3>기수 등록</h3> 
+            <!-- 데이터 영역 -->
+
+            <h3>과정 등록</h3>
 
             <ul class="big_tab">
-                <li><a href="#tab1">학기 정보</a></li>
-                <li><a href="#tab2">과정 성격별 주차 일정</a></li>
-                <li><a href="#tab3">평가 일정</a></li>
-                <li><a href="#tab4" class="active">과정 편성</a></li>
+                <li><a href="#tab1" class="active">기본 정보</a></li>
+                <li><a href="#tab2">주차별 콘텐츠 정보</a></li>
+                <li><a href="#tab3">평가 정보</a></li>
             </ul>
-
-            <h4 class="borderN">과정 편성 등록<span>* 표시된 항목은 필수 입력 항목입니다.</span> </h4>
-
-
-            <!-- 데이터 영역 -->
+            
+            <h4 class="borderN">
+                기본 정보 등록
+                <span>* 표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
 
             <!-- 테이블 -->
             <table class="table_view">
@@ -110,55 +110,55 @@
                 <tbody>
                     <tr>
                         <th><span class="essential">*</span>과정 명</th>
-                        <td>조직심리학</td>
-                        <th><span class="essential">*</span>편성 코드</th>
-                        <td>23425345</td>
-                    </tr>
-                    <tr>
+                        <td>
+                            <input type="text" placeholder="과정 명을입력해주세요.">
+                            <p class="txtError_color warning">과정 명을 입력해주세요.</p>
+                        
+                        </td>
                         <th><span class="essential">*</span>과정 코드</th>
-                        <td colspan="3">C0DD</td>
-                    </tr>
-                   <tr>
-                        <th><span class="essential">*</span>전공</th>
-                        <td>심리학</td>
-                        <th><span class="essential">*</span>교과정 그룹</th>
-                        <td>조직심리학</td>
-                    </tr>
-                    <tr>
-                        <th><span class="essential">*</span>패키지 성격</th>
-                        <td colspan="3">
-                            <div class="form_group">
-                                <div class="form_check">
-                                    <input type="radio" name="packageCharacter" id="packageCharacter_1">
-                                    <label for="packageCharacter_1">학점은행제 이론</label>
-                                </div>    
-                                <div class="form_check">
-                                        <input type="radio" name="packageCharacter" id="packageCharacter_2">
-                                        <label for="packageCharacter_2">학점은행제 실습</label>
-                                </div>
-                                <div class="form_check">
-                                        <input type="radio" name="packageCharacter" id="packageCharacter_3">
-                                        <label for="packageCharacter_3">자격증</label>
-                                </div>
-                                <div class="form_check">
-                                        <input type="radio" name="packageCharacter" id="packageCharacter_4">
-                                        <label for="packageCharacter_4">독학사</label>
-                                </div>
-                                <div class="form_check">
-                                        <input type="radio" name="packageCharacter" id="packageCharacter_5">
-                                        <label for="packageCharacter_5">민간자격증</label>
-                                </div>
-                            </div>
+                        <td>
+                            <input type="text" placeholder="과정 코드입력해주세요.">
+                            <p class="txtError_color warning">과정 코드를 입력해주세요.</p>
                         </td>
                     </tr>
                     <tr>
-                        <th><span class="essential">*</span>학점</th>
-                        <td>3학점</td>
-                        <th><span class="essential">*</span>차시</th>
-                        <td>2차시</td>
+                        <th><span class="essential">*</span>전공</th>
+                        <td>
+                            <input type="text" placeholder="전공 명을 입력해주세요.">
+                            <p class="txtError_color warning">전공 명을 입력해주세요.</p>
+                        </td>
+                        <th><span class="essential">*</span>교과정 그룹</th>
+                        <td>
+                            <select name="" id="">
+                                <option value="">교과정 그룹</option>
+                            </select>
+                            <p class="txtError_color warning">교과정 그룹을 선택해주세요.</p>
+                        </td>
+                    </tr>
+                   <tr>
+                        <th><span class="essential">*</span>성격</th>
+                        <td colspan="3">일반 이론</td>
                     </tr>
                     <tr>
-                        <th>이수 구분</th>
+                        <th><span class="essential">*</span>학점</th>
+                        <td colspan="3">
+                            <input type="text" placeholder="학점 입력"class="width_150px marginR10"> 점
+                            <p class="txtError_color warning">학점을 입력해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>차시</th>
+                        <td colspan="3">
+                            <select name="" id="" class="marginR10">
+                                <option value="">차시 선택</option>
+                            </select>
+                            차시
+                            <p class="txtError_color warning">차시를 선택해주세요.</p>
+                            <p class="table_comment">※차시는 설정 후 변경할 수 없으므로 신중하게 선택하시기 바랍니다</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>이수구분</th>
                         <td colspan="3">
                             <div class="form_group">
                                 <div class="form_check">
@@ -174,30 +174,69 @@
                                     <label for="courseType_3">교양</label>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-                     <tr>
-                        <th>교강사</th>
-                        <td colspan="3">
-                            <div class="form_group">
-                                <div class="form_check">
-                                    <input type="checkbox" name="instructorType" id="instructorType_1" value="">
-                                    <label for="instructorType_1">교ㆍ강사</label>
-                                </div>
-                                <div class="form_check">
-                                    <input type="checkbox" name="instructorType" id="instructorType_2">
-                                    <label for="instructorType_2">조교</label>
-                                </div>
-                            </div>
+                            <p class="txtError_color warning">이수구분을 선택해주세요.</p>
+
+                            <dl class="inline_dl marginT8 align_left">
+                                <dt>전공 필수</dt>
+                                <dd>
+                                     <select name="" id="">
+                                        <option value="">전공 명</option>
+                                     </select>
+                                </dd>
+                                <dd>
+                                    <ul class="template_selection">
+                                        <li>
+                                            <span>사회복지사 2급</span>
+                                            <button class="btn_delete material-symbols-rounded">close</button>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl class="inline_dl marginT8 align_left">
+                                <dt>전공 선택</dt>
+                                <dd>
+                                     <select name="" id="">
+                                        <option value="">전공 명</option>
+                                     </select>
+                                </dd>
+                                <dd>
+                                    <ul class="template_selection">
+                                        <li>
+                                            <span>사회복지사 2급</span>
+                                            <button class="btn_delete material-symbols-rounded">close</button>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            
                         </td>
                     </tr>
                     <tr>
-                        <th><span class="essential">*</span>편성 과정</th>
+                        <th><span class="essential">*</span>촬영 교수</th>
+                        <td colspan="3">
+                            
+                            <select name="" id="">
+                                <option value="">교수명</option>
+                            </select>
+                            <p class="txtError_color warning">교수 이름을 선택해주세요.</p>
+
+                            <ul class="template_selection">
+                                <li>
+                                    <span>홍길동</span>
+                                    <button class="btn_delete material-symbols-rounded">close</button>
+                                </li>
+                            </ul>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>교재</th>
                         <td colspan="3"><button class="btn"><span class="material-symbols-rounded">menu_book</span>교재 검색</button></td>
                     </tr>
-                    <tr>
+                     <tr>
                         <th><span class="essential">*</span>모집 인원</th>
                         <td colspan="3">
+                           
                             <dl class="inline_dl align_left">
                                 <dt>최대 모집 인원 수</dt>
                                 <dd><input type="text" class="width_80px align_right"> 명</dd>
@@ -209,6 +248,7 @@
                             <p class="txtError_color warning">모집 인원수를 작성해주세요.</p>
                         </td>
                     </tr>
+                    
                     <tr>
                         <th><span class="essential">*</span>교육비</th>
                         <td colspan="3">
@@ -229,36 +269,60 @@
                                 <dt class="txtError_color">판매가</dt>
                                 <dd><input type="text" class="width_150px align_right"> 원</dd>
                             </dl>
+                            <p class="txtError_color warning">판매가를 정확히 입력해주세요.</p>
                         </td>
                     </tr>
                     <tr>
-                        <th>마감 구분</th>
+                        <th><span class="essential">*</span>사용 여부</th>
                         <td colspan="3">
                             <div class="form_group">
                                 <div class="form_check">
-                                    <input type="checkbox" name="deadlineType" id="deadlineType_1" value="">
-                                    <label for="deadlineType_1">마감 임박</label>
+                                    <input type="radio" name="useStatus" id="useStatus_selected">
+                                    <label for="useStatus_selected">사용</label>
                                 </div>
                                 <div class="form_check">
-                                    <input type="checkbox" name="deadlineType" id="deadlineType_2">
-                                    <label for="deadlineType_2">마감(폐강)</label>
+                                    <input type="radio" name="useStatus" id="useStatus_disabled">
+                                    <label for="useStatus_disabled">미사용</label>
                                 </div>
                             </div>
+                            <p class="txtError_color warning">사용 여부를 체크해주세요.</p>
                         </td>
                     </tr>
                     <tr>
-                        <th><span class="essential">*</span>노출 여부</th>
+                        <th><span class="essential">*</span>수업 개요</th>
                         <td colspan="3">
-                            <div class="form_group">
-                                <div class="form_check">
-                                    <input type="radio" name="exposureStatus" id="exposureStatus_1" >
-                                    <label for="exposureStatus_1">노출</label>
-                                </div>
-                                <div class="form_check">
-                                    <input type="radio" name="exposureStatus" id="exposureStatus_2" checked="">
-                                    <label for="exposureStatus_2">비노출</label>
-                                </div>
-                            </div>
+                            <textarea class="width_100" rows="4" placeholder="수업 개요를 입력해주세요."></textarea>
+                            <p class="txtError_color warning">수업 개요를 입력해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>수업 목표</th>
+                        <td colspan="3">
+                            <textarea class="width_100" rows="4" placeholder="수업 목표를 입력해주세요."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>수업 대상</th>
+                        <td colspan="3">
+                            <textarea class="width_100" rows="4" placeholder="수업 대상을 입력해주세요."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>수업 방법</th>
+                        <td colspan="3">
+                            <textarea class="width_100" rows="4" placeholder="수업 방법을 입력해주세요."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>학습 운영 안내</th>
+                        <td colspan="3">
+                            <textarea class="width_100" rows="4" placeholder="학습 운영 안내를 입력해주세요."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td colspan="3">
+                            <textarea class="width_100" rows="4" placeholder="메모를 입력해주세요."></textarea>
                         </td>
                     </tr>
                 </tbody>
@@ -266,13 +330,14 @@
 
             <!-- //테이블 -->
 
-            <div class="btn_groupRight"> 
-                <button class="btn secondary">목록</button>
-                <button class="btn">삭제</button>
-                <button class="btn primary">저장</button>
-            </div>
 
             <!-- //데이터 영역 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">수정</button>
+                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+            </div>
 
         </main>
 
