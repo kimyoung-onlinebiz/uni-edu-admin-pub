@@ -23,7 +23,7 @@
 /* lnb */
 .admin_wrapper .admin_lnb { position:fixed; top:80px; width:280px; height:100vh; transition: margin-left 0.3s ease-in-out; background:#0d1a40; padding:0 14px 0 20px; z-index:1000; }
 .admin_wrapper .admin_lnb:after { content:""; width:12px; height:12px; position:absolute; right:-12px; top:0; background:url(../../assets/images/leftTop_round.png) no-repeat; }
-.admin_lnb h2 { display:flex; align-items:center; width:240px; height:100px; color:var(--primary_300); font-size:22px; font-weight:600; border-bottom:1px solid var(--primary_300); padding:20px 12px; margin-bottom:24px; }
+.admin_lnb h2 { display:flex; align-items:center; width:240px; height:100px; color:var(--primary_300); font-size:22px; font-weight:600; border-bottom:1px solid var(--primary_300); padding:20px 12px; }
 .admin_lnb h2 .material-symbols-rounded { font-size:24px; margin-right:6px; }
 .admin_lnb .toggle_sidebar { position:absolute; right:0; top:20px; width:16px; height:60px; background:var(--neutral_500); color:var(--neutral_800); font-size:26px; border-radius:8px 0 0 8px; transition:background-color 0.2s; text-indent:-5px; padding-top:3px; }
 .admin_lnb .toggle_sidebar:before { content:"arrow_left"; font-family:'Material Symbols Rounded'; }
@@ -36,13 +36,14 @@
 .admin_lnb .sidebar_menu::-webkit-scrollbar-thumb:hover { border-radius:3px; background:var(--primary_700); }
 .admin_lnb .sidebar_menu a { position:relative; display:block; }
 .admin_lnb .sidebar_menu a:hover { color:var(--neutral_0) !important; }
-.sidebar_menu > li { transition:max-height 0.3s cubic-bezier(0.4,0,0.2,1); overflow:hidden; border-top:1px solid #334679; padding:8px 0 12px; }
+.sidebar_menu > li { transition:max-height 0.3s cubic-bezier(0.4,0,0.2,1); overflow:hidden; border-bottom:1px solid #334679; padding:8px 0; }
 .sidebar_menu > li.open { overflow:visible; transition:all .3s; }
 .sidebar_menu > li.active_depth_2 { background:var(--primary_900); border-top:1px solid #334679; }
 .admin_lnb .sidebar_menu > li > a { color:var(--neutral_500); font-size:var(--font_medium); padding:10px 20px 8px; font-weight:600; border-radius:4px; }
 .admin_lnb .sidebar_menu li a { border-radius:var(--borderRadius); }
 .admin_lnb .sidebar_menu li a:hover { background:var(--primary_800); }
 .admin_lnb .sidebar_menu > li.active_depth_2 > a { color:var(--neutral_0); }
+.admin_lnb .sidebar_menu > li.active_depth_2 > a:only-child,.admin_lnb .sidebar_menu > li.active_depth_2 > a:only-child:hover { background:var(--primary_700) }
 .admin_lnb .sidebar_menu > li.active_depth_2 > a:hover { background:none; }
 .admin_lnb .sidebar_menu .depth_3 > li > a { color:var(--neutral_300); padding:5px 12px; margin:0 8px; padding-left:30px; }
 .admin_lnb .sidebar_menu .depth_3 > li > a.active_depth_3 { color:var(--neutral_0); font-weight:600; background:var(--primary_700); }
