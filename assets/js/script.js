@@ -56,7 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_contentRegistration', layer: '.content_registration', many: true }, // 과정별 콘텐츠 등록 레이어
         { sel: '.btn_examRegistration', layer: '.exam_registration', many: true }, // 시험 등록 레이어
         { sel: '.btn_difficultySetting', layer: '.difficulty_setting', many: true }, // 난이도 설정 레이어
-        { sel: '.btn_relativeEvaluation', layer: '.relative_evaluation', many: true } // 상대평가 설정 레이어
+        { sel: '.btn_relativeEvaluation', layer: '.relative_evaluation', many: true }, // 상대평가 설정 레이어
+        { sel: '.btn_difficultyView', layer: '.difficulty_view', many: true }, // 설정된 난이도 보기 레이어
+        { sel: '.btn_examPreview', layer: '.exam_preview', many: true } // 시험문항 미리보기 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

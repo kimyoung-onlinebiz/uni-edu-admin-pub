@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#" class="active">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded"> domain_verification</span>학습운영 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">평가 설정 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">이론평가 설정</a></li>
+                        <li><a href="#none">실습평가 설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">문제은행 관리</a>
+                </li>
+                <li>
+                    <a href="#">제출물 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">과제 관리</a></li>
+                        <li><a href="#none">토론 관리</a></li>
+                        <li><a href="#none">평가/보고서 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">수강/반 편성 관리</a>
+                </li>
+                 <li>
+                    <a href="#">강의평가 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">문항 관리</a></li>
+                        <li><a href="#none">설문 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>이론평가 설정</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습운영 관리</a></li>
+                    <li><a href="#none">평가설정 관리</a></li>
+                    <li>이론평가 설정</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+            <h3>중간고사 등록</h3>
+
+            <!-- 데이터 영역 -->
+
+            <ul class="big_tab">
+                <li><a href="#tab1" class="active">기본 정보</a></li>
+                <li><a href="#tab2">문제 리스트</a></li>
+            </ul>
+
+            <h4 class="borderN">기본 정보<span>* 표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>평가 학기</th>
+                        <td>2026년도 1학기 2기</td>
+                    </tr>
+                    <tr>
+                        <th>평가 과정</th>
+                        <td>[2612C0100] 조직심리학</td>
+                    </tr>
+                    <tr>
+                        <th>시험 기간</th>
+                        <td>
+                            <dl class="flex">
+                                <dt><strong>정규 시험</strong></dt>
+                                <dd class="marginL24">
+                                    2026-05-01 ~ 2026-05-07
+                                </dd>
+                            </dl>
+                            <dl class="flex">
+                                <dt><strong>추가 시험</strong></dt>
+                                <dd class="marginL24">
+                                    2026-05-01 ~ 2026-05-07
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>시험 정보</th>
+                        <td>
+                            <dl class="flex">
+                                <dt><strong>총 문항 수(총 배점)</strong></dt>
+                                <dd class="marginL24">
+                                    25문항(25점) <button type="button" class="btn marginL24 btn_difficultyView">문제 유형 및 난이도 확인</button>
+                                </dd>
+                            </dl>
+                            <dl class="flex">
+                                <dt><strong>응시시간</strong></dt>
+                                <dd class="marginL24">
+                                    60분
+                                </dd>
+                            </dl>
+                            <p class="table_comment">※ 장애등급 등록 학습자는 응시시간 90분 적용</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>시험 내용</th>
+                        <td>
+                            <textarea name="" id="" placeholder="시험 내용을 입력하세요." class="width_100"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_문제 유형 및 난이도 설정 -->
+            <div class="layer_wrapper difficulty_view"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>문제 유형 및 난이도 설정</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <div class="search_section">
+                            <dl class="search_box alignC">
+                                <dt>문제 유형</dt>
+                                <dd>객관식/주관식(단답형)</dd>
+                                <dt>난이도</dt>
+                                <dd>5등급</dd>
+                            </dl>
+                        </div>
+                        
+                        <h3>난이도별 문항 출제 설정</h3>
+
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>문제 유형</th>
+                                    <th colspan="2">난이도별 문항 출제 수</th>
+                                    <th>배점</th>
+                                    <th>백분율 배점</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="6">객관식</td>
+                                    <td>A</td>
+                                    <td>
+                                        2문항
+                                    </td>
+                                    <td>
+                                        2점
+                                    </td>
+                                    <td>
+                                        2점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>D</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>합계</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="6">주관식<br />(단답형)</td>
+                                    <td>A</td>
+                                    <td>
+                                        2문항
+                                    </td>
+                                    <td>
+                                        2점
+                                    </td>
+                                    <td>
+                                        2점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>D</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>합계</td>
+                                    <td>
+                                        10문항
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                    <td>
+                                        100점
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table_view marginT24">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>전체 문항 수</th>
+                                    <td>26문항</td>
+                                    <th>배점</th>
+                                    <td>5점</td>
+                                    <th>배점</th>
+                                    <td>5점</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="layer_btnSection">
+                            <button class="btn btn_close">닫기</button>
+                        </div>
+                    </div>
+                    <!-- //layer 내용 -->
+                </div>
+            </div>
+            <!-- //레이어_문제 유형 및 난이도 설정 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">수정</button>
+                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+            </div>
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

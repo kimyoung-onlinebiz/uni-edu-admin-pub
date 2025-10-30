@@ -63,7 +63,7 @@
 .content_header .breadcrumb a:hover { color:var(--neutral_900); }
 
 /* 검색영역 */
-.search_section,.memo_area,.file_dragUpload { position:relative; background:var(--neutral_200); border-radius:var(--borderRadius_2); margin-bottom:40px; padding:20px 32px; transition:all .2s; box-shadow:var(--shadow_light); }
+.search_section,.memo_area,.file_dragUpload,.page_comment { position:relative; background:var(--neutral_200); border-radius:var(--borderRadius_2); margin-bottom:40px; padding:20px 32px; transition:all .2s; box-shadow:var(--shadow_light); }
 .viewPeriod { position:relative; border-radius:var(--borderRadius_2); margin-bottom:40px; padding:20px 32px; transition:all .2s; box-shadow:var(--shadow_light); background:var(--neutral_100); border:1px solid var(--neutral_300); }
 .search_section.small { height:72px; overflow:hidden; }
 .search_box { display:flex; gap:20px; align-items:start; margin-bottom:12px; }
@@ -227,7 +227,8 @@ h3+.big_tab { margin-top:0px; }
 .search_input input[type="text"] { width:480px; padding-left:40px !important; }
 .search_input:before { position:absolute; left:15px; content:"search"; font-family:'Material Symbols Rounded'; color:var(--neutral_500); font-size:22px; }
 .layer_wrapper .search_input input[type="text"] { width:270px; }
-.layer_wrapper h3 { font-size:var(--font_medium); font-weight:600; margin:0 0 12px 16px; text-align:left;  }
+.layer_wrapper h3 { font-size:var(--font_medium); font-weight:600; margin:0 0 12px 16px; text-align:left; }
+.layer_wrapper h3 strong { color:var(--primary_500); font-weight:600; }
 
 /* 쿠폰 발급대상 레이어 */
 .layer_wrapper.coupon_issue .layer_basic { width:1000px; }
@@ -455,3 +456,19 @@ ease-in-out; }
 .lesson_detailContent .lesson_detailContent_right { border-radius:0 var(--borderRadius_2) var(--borderRadius_2) 0; background:var(--neutral_300);border:1px solid var(--neutral_500); padding:20px 30px 20px 40px; flex:1; }
 .lesson_detailContent .lesson_detailContent_right > div { height:358px; overflow-y:scroll; padding-right:8px; }
 .lesson_detailContent .lesson_detailContent_right td { background:var(--neutral_0); }
+
+/* 학습 운영 관리 */
+.question_txt { max-width:600px; }
+.exam_preview .layer_content { width:1000px; }
+.exam_content { text-align:left; margin-top:40px; }
+.exam_question h4 { padding:16px 20px; font-weight:500; background:var(--neutral_100); font-size:var(--font_base); border-top:1px solid #000; border-bottom:1px solid var(--neutral_300); margin-top:16px; }
+
+/* exam_choice: 동그라미 안 숫자 표시 */
+.exam_choice { padding:16px 20px; counter-reset: exam-counter; }
+.exam_choice li { list-style:none; counter-increment: exam-counter; position:relative; padding-left:24px; margin-bottom:4px; }
+.exam_choice li::before { content:counter(exam-counter); position:absolute; left:0; top:3px; width:14px; height:14px; line-height:14px; border-radius:50%; text-align:center; font-size:var(--font_small); border:1px solid var(--neutral_600); }
+.exam_question .right_answer { background:var(--primary_100); padding:16px 20px; }
+.exam_content .right_answer strong { display:block; color:var(--primary_500); font-size:var(--font_medium); margin-bottom:4px; }
+.page_comment { background:var(--neutral_100); border:1px solid var(--neutral_300); }
+.page_comment li { position:relative; padding-left:12px; }
+.page_comment li:before { content:""; width:3px; height:3px; border-radius:50%; background:var(--neutral_600); position:absolute; left:0; top:50%; transform:translateY(-50%); }

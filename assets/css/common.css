@@ -200,6 +200,7 @@ button span.material-symbols-rounded,.material-symbols-rounded.paddingR4,a span.
 .width_150px { width:150px; }
 .width_280px { width:280px !important; }
 .width_320px { width:320px !important; }
+.flex { display:flex; align-items:center; }
 
 /* 대표 버튼 스타일 */
 .btn { display:inline-block; font-size:var(--font_base); border:1px solid var(--neutral_800); padding:0 24px; height:32px; border-radius:var(--borderRadius); background:var(--neutral_0); }

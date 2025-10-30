@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#" class="active">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded"> domain_verification</span>학습운영 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">평가 설정 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">이론평가 설정</a></li>
+                        <li><a href="#none">실습평가 설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">문제은행 관리</a>
+                </li>
+                <li>
+                    <a href="#">제출물 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">과제 관리</a></li>
+                        <li><a href="#none">토론 관리</a></li>
+                        <li><a href="#none">평가/보고서 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">수강/반 편성 관리</a>
+                </li>
+                 <li>
+                    <a href="#">강의평가 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">문항 관리</a></li>
+                        <li><a href="#none">설문 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>이론평가 설정</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습운영 관리</a></li>
+                    <li><a href="#none">평가설정 관리</a></li>
+                    <li>이론평가 설정</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+            <h3>중간고사</h3>
+
+            <!-- 데이터 영역 -->
+
+            <ul class="big_tab">
+                <li><a href="#tab1">기본 정보</a></li>
+                <li><a href="#tab2" class="active">문제 리스트</a></li>
+            </ul>
+
+            <h4 class="borderN">문제 리스트<span>* 표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>평가 학기</th>
+                        <td>2026년도 1학기 2기</td>
+                    </tr>
+                    <tr>
+                        <th>평가 과정</th>
+                        <td>[2612C0100] 조직심리학</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr class="hr">
+            <div class="table_top align_right">
+                <div class="table_actions">
+                    <button class="btn btn_examPreview"><span class="material-symbols-rounded">fact_check</span>문제 미리보기</button>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </th>
+                        <th>No</th>
+                        <th>문항번호</th>
+                        <th>문제 유형</th>
+                        <th>문항</th>
+                        <th>난이도</th>
+                        <th>배점</th>
+                        <th>백분율 배점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>200</td>
+                        <td>주관식(단답형)</td>
+                        <td>
+                            <a href="#none" class="question_txt ellipsis">인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종 인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종</a>
+                        </td>
+                        <td>중</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>200</td>
+                        <td>주관식(단답형)</td>
+                        <td>
+                            <a href="#none" class="question_txt ellipsis">인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종</a>
+                        </td>
+                        <td>중</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>200</td>
+                        <td>주관식(단답형)</td>
+                        <td>
+                            <a href="#none" class="question_txt ellipsis">인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종 인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종</a>
+                        </td>
+                        <td>중</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 레이어_문제 미리보기 -->
+            <div class="layer_wrapper exam_preview"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>문제 미리보기</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <div class="search_section">
+                            <dl class="search_box">
+                                <dt>문항 정보</dt>
+                                <dd>
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">문항내용</option>
+                                            <option value="">보기</option>
+                                        </select>
+                                    
+                                        <!-- //셀렉트박스 -->
+                                        <div class="search_input">
+                                            <input type="text" placeholder="검색어를 입력해주세요.">
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <div class="btn_group">
+                                <button class="btn">초기화</button>
+                                <button class="btn primary">문항 검색</button>
+                            </div>
+
+                        </div>
+                        
+                        <!-- 1번 문항 -->
+                        <div class="exam_content">
+                            <h3>문항 번호 <strong>1번</strong></h3>
+                            <!-- 테이블 -->
+                            <table class="data_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>주/차시</th>
+                                        <th>문제 유형</th>
+                                        <th>문항 구분</th>
+                                        <th>난이도</th>
+                                        <th>정답률</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0주차 0차시</td>
+                                        <td>단일선택형</td>
+                                        <td>중간고사</td>
+                                        <td>상</td>
+                                        <td>76%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 시험문제 -->
+                            <div class="exam_question">
+                                <h4>다음 중 조직의 구성원이 조직 목표를달성하기 위해 수행하는 행동양식을 무엇이라하는가?</h4>
+                                <ol class="exam_choice">
+                                    <li>조직심리학은 응용심리학의 한 분야이다.</li>
+                                    <li>조직행동론은 개인과 집단의 행동을 연구한다.</li>
+                                    <li>조직문화는 조직의 가치관과 신념을 포함한다.</li>
+                                    <li><img src="https://www.ibstudy.co.kr/Files/Banner/2025-10-23/20251023091129_89246913_216x100_%EC%95%84%ED%8F%89%EC%9B%90.png" alt=""></li>
+                                </ol>
+                                <div class="right_answer">
+                                    <strong>정답: ③</strong>
+                                    <p>산업 및 조직심리학은 응용심리학의 한 분야로써, 산업심리학은 인사심리학으로도 알려져 있으며 효과적인 직무설계, 종업원 선발과 훈련, 수행 평가와 관련된 영역을 연구하는 심리학 분야이다. 보기 ③의 내용의 <b><u>심리적 문제</b></u>에 관한 치료는 임상심리학과 관련된 설명이다. 또한 조직심리학은 심리문제에 대한 치료계획이 아닌 심리평가를 통하여 평가하며 치료계획을 세워 심리치료를 진행하는 것이다.</p>
+                                </div>
+                            </div>
+                            <!-- //시험문제 -->
+                        </div>
+                        <!-- //1번 문항 -->
+
+                        <!-- 2번 문항 -->
+                        <div class="exam_content">
+                            <h3>문항 번호 <strong>2번</strong></h3>
+                            <!-- 테이블 -->
+                            <table class="data_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>주/차시</th>
+                                        <th>문제 유형</th>
+                                        <th>문항 구분</th>
+                                        <th>난이도</th>
+                                        <th>정답률</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0주차 0차시</td>
+                                        <td>단일선택형</td>
+                                        <td>중간고사</td>
+                                        <td>상</td>
+                                        <td>76%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 시험문제 -->
+                            <div class="exam_question">
+                                <h4>다음 중 조직의 구성원이 조직 목표를달성하기 위해 수행하는 행동양식을 무엇이라하는가?</h4>
+                                <div class="right_answer">
+                                    <strong>정답: 매개변인(Mediator Variable)</strong>
+                                    <p>산업 및 조직심리학은 응용심리학의 한 분야로써, 산업심리학은 인사심리학으로도 알려져 있으며 효과적인 직무설계, 종업원 선발과 훈련, 수행 평가와 관련된 영역을 연구하는 심리학 분야이다. 보기 ③의 내용의 <b><u>심리적 문제</b></u>에 관한 치료는 임상심리학과 관련된 설명이다. 또한 조직심리학은 심리문제에 대한 치료계획이 아닌 심리평가를 통하여 평가하며 치료계획을 세워 심리치료를 진행하는 것이다.</p>
+                                </div>
+                            </div>
+                            <!-- //시험문제 -->
+                        </div>
+                        <!-- //2번 문항 -->
+
+                        <div class="layer_btnSection">
+                            <button class="btn btn_close">닫기</button>
+                        </div>
+                        
+                    </div>
+                    <!-- //layer 내용 -->
+                </div>
+            </div>
+            <!-- //레이어_문제 미리보기 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">수정</button>
+                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+            </div>
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#" class="active">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded"> domain_verification</span>학습운영 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">평가 설정 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">이론평가 설정</a></li>
+                        <li><a href="#none">실습평가 설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">문제은행 관리</a>
+                </li>
+                <li>
+                    <a href="#">제출물 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">과제 관리</a></li>
+                        <li><a href="#none">토론 관리</a></li>
+                        <li><a href="#none">평가/보고서 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">수강/반 편성 관리</a>
+                </li>
+                 <li>
+                    <a href="#">강의평가 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">문항 관리</a></li>
+                        <li><a href="#none">설문 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>이론평가 설정</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습운영 관리</a></li>
+                    <li><a href="#none">평가설정 관리</a></li>
+                    <li>이론평가 설정</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>평가 학기 정보</dt>
+                    <dd>
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">년도</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">학기</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">기수</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>소속</dt>
+                    <dd class="marginL10">
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전공</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">편성과정 명</option>
+                            </select>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>사용여부</dt>
+                    <dd class="marginL10">
+
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_all" checked="">
+                                <label for="useStatus_all">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_selected">
+                                <label for="useStatus_selected">사용</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_disabled">
+                                <label for="useStatus_disabled">미사용</label>
+                            </div>
+                        </div>
+
+                    </dd>
+
+                    <dt class="marginL24">등록여부</dt>
+                    <dd class="marginL10">
+
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="registration" id="registration_all" checked="">
+                                <label for="registration_all">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="registration" id="registration_selected">
+                                <label for="registration_selected">등록</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="registration" id="registration_disabled">
+                                <label for="registration_disabled">미등록</label>
+                            </div>
+                        </div>
+
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <ul class="first_tab">
+                <li><a href="#tab1" class="active">중간고사</a></li>
+                <li><a href="#tab2">기말고사</a></li>
+                <li><a href="#tab3">과제</a></li>
+                <li><a href="#tab4">토론</a></li>
+                <li><a href="#tab5">퀴즈</a></li>
+            </ul>
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn"><span class="material-symbols-rounded">quick_reference</span>자동 일괄 출제</button>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </th>
+                        <th>No</th>
+                        <th>년도</th>
+                        <th>학기</th>
+                        <th>기수</th>
+                        <th>전공</th>
+                        <th>편성코드</th>
+                        <th>편성과정 명</th>
+                        <th>중간고사</th>
+                        <th>개강 여부</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>2026</td>
+                        <td>1학기</td>
+                        <td>2기</td>
+                        <td>심리학</td>
+                        <td>조직심리학</td>
+                         <td>25454342dfsgddf</td>
+                        <td>
+                            <button class="btn primary">출제 필요</button>
+                        </td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>2026</td>
+                        <td>1학기</td>
+                        <td>2기</td>
+                        <td>심리학</td>
+                        <td>조직심리학</td>
+                        <td>25454342dfsgddf</td>
+                        <td>
+                            <a href="#none" class="btn">출제 완료</a>
+                        </td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>2026</td>
+                        <td>1학기</td>
+                        <td>2기</td>
+                        <td>심리학</td>
+                        <td>조직심리학</td>
+                        <td>25454342dfsgddf</td>
+                        <td>
+                            <a href="#none" class="btn">출제 완료</a>
+                        </td>
+                        <td>Y</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
