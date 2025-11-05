@@ -111,7 +111,7 @@ input[type="file"].transparent { visibility:hidden; position:absolute; left:0; t
 .file_dragUpload .drag_area { border:2px dashed var(--neutral_500); border-radius:var(--borderRadius); padding:20px 0; text-align:center; color:var(--neutral_600); background:var(--neutral_300); transition:all .2s; }
 .file_dragUpload .drag_area:hover { border-color:var(--neutral_600); color:var(--neutral_900); background:var(--neutral_100); }
 .file_dragUpload .btn { text-align:right; position:absolute; right:32px; bottom:20px; }
-input.align_right { text-align:right; }
+input.align_right { margin-right:4px; }
 
 /* 색상 팔레트 */
 .neutral_0 { background-color:var(--neutral_0); }
@@ -197,14 +197,15 @@ button span.material-symbols-rounded,.material-symbols-rounded.paddingR4,a span.
 .width_50 { width:50% }
 .width_50px { width:50px; }
 .width_80px { width:80px; }
-.width_150px { width:150px; }
+.width_120px { width:120px !important; }
+.width_150px { width:150px !important; }
 .width_280px { width:280px !important; }
 .width_320px { width:320px !important; }
 .flex { display:flex; align-items:center; }
 
 /* 대표 버튼 스타일 */
 .btn { display:inline-block; font-size:var(--font_base); border:1px solid var(--neutral_800); padding:0 24px; height:32px; border-radius:var(--borderRadius); background:var(--neutral_0); }
-.btn span { margin-left:-6px; }
+.btn span { margin-left:-4px; }
 a.btn { line-height:28px; }
 .btn:hover { background:var(--neutral_100); color:var(--neutral_900);}
 .btn:disabled { background:var(--neutral_300) !important; border:1px solid var(--neutral_300) !important; color:var(--neutral_600) !important; cursor:not-allowed; }
@@ -232,6 +233,7 @@ a.btn { line-height:28px; }
 .scroll_deep::-webkit-scrollbar-thumb:hover { border-radius:3px; background:var(--neutral_500); }
 
 .layer_btnSection { position:absolute; bottom:20px; right:32px; margin-top:20px; display:flex; gap:16px; }
+.layer_btnSection.left { right:initial; left:32px; }
 .layer_btnSection .btn { min-width:120px; height:40px; }
 
 /* 말줄임 */

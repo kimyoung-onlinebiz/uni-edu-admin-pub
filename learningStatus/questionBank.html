@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1600px" />
+        <title>메가스터디아카데미원격평생교육원</title>
+        <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+        <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+        <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+        <script src="/assets/js/jquery-3.7.1.min.js"></script>
+        <script src="/assets/js/script.js"></script>
+    </head>
+
+    <body>
+        <p class="skip_navi"><a href="#container">본문 바로가기</a></p>
+
+        <div class="admin_wrapper" id="wrapper">
+
+            <!-- Header -->
+            <header class="admin_header">
+                <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="#">사이트관리 </a></li>
+                        <li><a href="#">사용자 관리</a></li>
+                        <li><a href="#">교육과정 관리</a></li>
+                        <li><a href="#" class="active">학습운영 관리</a></li>
+                        <li><a href="#">학습현황 관리</a></li>
+                        <li><a href="#">학습지원 관리</a></li>
+                        <li><a href="#">매출통계 관리</a></li>
+                    </ul>
+                </nav>
+                <div class="header_right">
+                    <span class="user-info">최고관리자(권한)</span>
+                    <button class="material-symbols-rounded icon_fill">settings</button>
+                    <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+                </div>
+            </header>
+            <!-- //Header -->
+
+            <!-- LNB -->
+            <nav class="admin_lnb">
+                <h2><span class="material-symbols-rounded"> domain_verification</span>학습운영 관리</h2>
+
+                <!-- lnb 열고 닫기 버튼 -->
+                <button class="toggle_sidebar"></button>
+                <!-- //lnb 열고 닫기 버튼 -->
+
+                <ul class="sidebar_menu">
+                    <li>
+                        <a href="#">평가 설정 관리</a>
+                        <ul class="depth_3">
+                            <li><a href="#none">이론평가 설정</a></li>
+                            <li><a href="#none">실습평가 설정</a></li>
+                        </ul>
+                    </li>
+                    <li class="active_depth_2">
+                        <a href="#">문제은행 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">제출물 관리</a>
+                        <ul class="depth_3">
+                            <li><a href="#none">과제 관리</a></li>
+                            <li><a href="#none">토론 관리</a></li>
+                            <li><a href="#none">평가/보고서 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">수강/반 편성 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">강의평가 관리</a>
+                        <ul class="depth_3">
+                            <li><a href="#none">문항 관리</a></li>
+                            <li><a href="#none">설문 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Content -->
+            <main class="admin_content" id="container">
+                <header class="content_header">
+                    <h2>문제은행 관리</h2>
+                    <!-- 빵부스러기 -->
+                    <ul class="breadcrumb">
+                        <li><a href="#none">홈</a></li>
+                        <li><a href="#none">학습운영 관리</a></li>
+                        <li>문제은행 관리</li>
+                    </ul>
+                    <!-- //빵부스러기 -->
+                </header>
+
+                <div class="questionBank_wrap">
+                    <!-- 과정 정보 -->
+                    <div class="course_list">
+
+                        <!-- 검색 섹션 -->
+                        <section class="search_section">
+                            <dl class="search_box">
+                                <dt>과정 정보</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">과정 명</option>
+                                            <option value="">과정 명이 길어지면 어떻게 되나요</option>
+                                            <option value="">과정 코드</option>
+                                        </select>
+                                        <div class="search_input">
+                                            <input type="text" placeholder="검색어를 입력해주세요.">
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <div class="btn_group">
+                                <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                            </div>
+                        </section>
+                        <!-- //검색 섹션 -->
+
+                        <div class="scroll">
+                            <table class="data_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>과정 명</th>
+                                        <th>과정 코드</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="#none">조직심리학</a></td>
+                                        <td>WD2001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#none">재무관리</a></td>
+                                        <td>IP2002</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                    <!-- 과정 정보 -->
+                    <div class="course_detail">
+                        <header>
+                            <h3>조직심리학[C010184]</h3>
+                            <button class="btn">난이도 변경 이력</button>
+                        </header>
+
+                        <!-- 검색 섹션 -->
+                        <section class="search_section">
+                            <dl class="search_box">
+                                <dt>문제 정보</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <select name="" id="" class="small">
+                                            <option value="">문제 유형</option>
+                                            <option value="">단일선택형</option>
+                                            <option value="">다중선택</option>
+                                            <option value="">서술형</option>
+                                        </select>
+                                        <select name="" id="" class="small">
+                                            <option value="">문항 구분</option>
+                                            <option value="">중간고사</option>
+                                            <option value="">기말고사</option>
+                                            <option value="">퀴즈</option>
+                                        </select>
+                                        <select name="" id="" class="small">
+                                            <option value="">난이도 선택</option>
+                                            <option value="">상</option>
+                                            <option value="">중상</option>
+                                            <option value="">중</option>
+                                            <option value="">중하</option>
+                                            <option value="">하</option>
+                                        </select>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>정답률</dt>
+                                <dd>
+                                    <div class="form_group percent">
+                                        <input type="number" class="width_80px">% <span class="calendar_bullet">~</span> <input type="number" class="width_80px">%
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="search_input">
+                                        <input type="text" placeholder="검색어를 입력해주세요." class="width_280px">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>사용여부</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="radio" name="useStatus" id="useStatus_all" checked="">
+                                            <label for="useStatus_all">전체</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="useStatus" id="useStatus_selected">
+                                            <label for="useStatus_selected">사용</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="useStatus" id="useStatus_disabled">
+                                            <label for="useStatus_disabled">미사용</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <div class="btn_group">
+                                <button class="btn">초기화</button>
+                                <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                                <button class="btn_openClose"></button>
+                            </div>
+                        </section>
+                        <!-- //검색 섹션 -->
+
+                        <div class="table_top">
+                            <div class="table_sort">
+                                <select>
+                                    <option value="">20</option>
+                                </select>
+                                <span>총 <strong>99</strong>건</span>
+                            </div>
+                            <div class="table_actions">
+                                <select name="" id="">
+                                    <option value="">선택 항목 작업</option>
+                                    <option value="">미리보기</option>
+                                    <option value="">난이도 일괄 변경</option>
+                                    <option value="">선택 문항 복사</option>
+                                    <option value="">선택 난이도 수정</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">중간고사 - 상향</option>
+                                    <option value="">중간고사 - 평준화</option>
+                                    <option value="">기말고사 - 상향</option>
+                                    <option value="">기말고사 - 평준화</option>
+                                </select>
+                                <button class="btn btn_singleRegistr">개별 등록</button>
+                                <button class="btn secondary btn_batchRegistr">일괄 등록</button>
+                            </div>
+                        </div>
+
+                        <!-- 레이어_개별 등록 -->
+                        <div class="layer_wrapper single_registr">
+                            <div class="layer_basic">
+                                <div class="layer_header">
+                                    <h2>개별 등록</h2>
+                                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                                </div>
+                                <div class="layer_content">
+                                    <!-- 테이블 -->
+                                    <table class="table_view">
+                                        <colgroup>
+                                            <col style="width:100px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>과정 정보</th>
+                                                <td>[C03585]조직심리학</td>
+                                                <th>문항 번호</th>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+                                                <th>주/차시</th>
+                                                <td colspan="3">
+                                                    <select name="" id="">
+                                                        <option value="">주 선택</option>
+                                                        <option value="">1주</option>
+                                                        <option value="">2주</option>
+                                                        <option value="">3주</option>
+                                                    </select>
+                                                    <select name="" id="">
+                                                        <option value="">차시 선택</option>
+                                                        <option value="">1차시</option>
+                                                        <option value="">2차시</option>
+                                                        <option value="">3차시</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>문제 유형</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">문제 유형 선택</option>
+                                                        <option value="">객관식</option>
+                                                        <option value="">주관식</option>
+                                                        <option value="">서술형</option>
+                                                    </select>
+                                                    <p class="txtError_color warning">문제 유형을 선택해주세요.</p>
+                                                </td>
+                                                <th>문항 구분</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">문항 선택</option>
+                                                        <option value="">중간고사</option>
+                                                        <option value="">기말고사</option>
+                                                        <option value="">퀴즈</option>
+                                                    </select>
+                                                    <p class="txtError_color warning">문항 구분을 선택해주세요.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>문항 내용</th>
+                                                <td colspan="3">
+                                                    <textarea name="" id="" class="width_100" placeholder="문제 본문 텍스트를 입력해주세요."></textarea>
+
+                                                    <!-- 첨부파일 버튼형 -->
+                                                     <div class="file_search btn_type marginT16">
+                                                        <label for="fileUpload" class="btn primary">
+                                                           <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                                        </label>
+                                                        <input type="file" class="transparent" id="fileUpload" multiple="">
+                                                        <div class="fileSearch_after">
+                                                            <div>
+                                                                <a href="#none">file_01.excel</a>
+                                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                            </div>
+                                                            <div>
+                                                                <a href="#none">file_01.excel</a>
+                                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                            </div>
+                                                        </div>
+                                                     </div>
+                                                    <!-- //첨부파일 버튼형 -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>정답</th>
+                                                <td colspan="3">
+                                                    <input type="text" placeholder="대소문자 구분해서 정답을 등록해주세요." class="width_50">
+                                                    <button class="btn marginL8"><span class="material-symbols-rounded">add</span>유사 답안 추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>유사 답안</th>
+                                                <td colspan="3">
+                                                    <input type="text" placeholder="유사 답안을 입력해주세요. ※ 여러 개일 경우, “|”로 구분" class="width_50">
+                                                    <button class="btn marginL8 secondary"><span class="material-symbols-rounded">remove</span>유사 답안 삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>보기</th>
+                                                <td colspan="3">
+                                                    <!-- 보기 내용 입력 -->
+                                                    <ol class="answer_option">
+                                                        <li>
+                                                            <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                            <!-- 첨부파일 버튼형 -->
+                                                            <div class="file_search btn_type">
+                                                                <label for="answer_01" class="btn primary">
+                                                                <span class="material-symbols-rounded">attach_file</span></label>
+                                                                <input type="file" class="transparent" id="answer_01" multiple="">
+                                                                <div class="fileSearch_after">
+                                                                    <div>
+                                                                        <a href="#none">file_01.excel</a>
+                                                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //첨부파일 버튼형 -->
+                                                        </li>
+                                                        <li>
+                                                            <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                            <!-- 첨부파일 버튼형 -->
+                                                            <div class="file_search btn_type">
+                                                                <label for="answer_02" class="btn primary">
+                                                                <span class="material-symbols-rounded">attach_file</span></label>
+                                                                <input type="file" class="transparent" id="answer_02" multiple="">
+                                                                <div class="fileSearch_after">
+                                                                    <div>
+                                                                        <a href="#none">file_01.excel</a>
+                                                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //첨부파일 버튼형 -->
+                                                        </li>
+                                                        <li>
+                                                            <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                            <!-- 첨부파일 버튼형 -->
+                                                            <div class="file_search btn_type">
+                                                                <label for="answer_03" class="btn primary">
+                                                                <span class="material-symbols-rounded">attach_file</span></label>
+                                                                <input type="file" class="transparent" id="answer_03" multiple="">
+                                                                <div class="fileSearch_after">
+                                                                    <div>
+                                                                        <a href="#none">file_01.excel</a>
+                                                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //첨부파일 버튼형 -->
+                                                        </li>
+                                                        <li>
+                                                            <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                            <!-- 첨부파일 버튼형 -->
+                                                            <div class="file_search btn_type">
+                                                                <label for="answer_04" class="btn primary">
+                                                                <span class="material-symbols-rounded">attach_file</span></label>
+                                                                <input type="file" class="transparent" id="answer_04" multiple="">
+                                                                <div class="fileSearch_after">
+                                                                    <div>
+                                                                        <a href="#none">file_01.excel</a>
+                                                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //첨부파일 버튼형 -->
+                                                        </li>
+                                                    </ol>
+                                                    <!-- //보기 내용 입력 -->
+                                                    <!-- 보기 추가 버튼 -->
+                                                    <div class="btn_answerOption">
+                                                        <button class="btn"><span class="material-symbols-rounded">add</span>보기 추가</button>
+                                                        <button class="btn secondary"><span class="material-symbols-rounded">remove</span>보기 삭제</button>
+                                                    </div>
+                                                    <!-- //보기 추가 버튼 --> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>정답</th>
+                                                <td colspan="3">
+                                                   <div class="form_group">
+                                                        <div class="form_check">
+                                                            <input type="radio" name="rightAnswer" id="rightAnswer_1">
+                                                            <label for="rightAnswer_1">1번</label>
+                                                        </div>
+                                                        <div class="form_check">
+                                                            <input type="radio" name="rightAnswer" id="rightAnswer_2">
+                                                            <label for="rightAnswer_2">2번</label>
+                                                        </div>
+                                                        <div class="form_check">
+                                                            <input type="radio" name="rightAnswer" id="rightAnswer_3">
+                                                            <label for="rightAnswer_3">3번</label>
+                                                        </div>
+                                                        <div class="form_check">
+                                                            <input type="radio" name="rightAnswer" id="rightAnswer_4">
+                                                            <label for="rightAnswer_4">4번</label>
+                                                        </div>
+                                                        <div class="form_check">
+                                                            <input type="checkbox" name="rightAnswer" id="multipleAnswers" value="복수 정답일 경우 체크">
+                                                            <label for="multipleAnswers">복수 정답일 경우 체크</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>해설</th>
+                                                <td colspan="3">
+                                                     <textarea name="" id="" class="width_100" placeholder="해설 내용을 입력해주세요."></textarea>
+                                                    <!-- 첨부파일 버튼형 -->
+                                                     <div class="file_search btn_type marginT16">
+                                                        <label for="fileUpload_explanation" class="btn primary">
+                                                           <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                                        </label>
+                                                        <input type="file" class="transparent" id="fileUpload_explanation" multiple="">
+                                                        <div class="fileSearch_after">
+                                                            <div>
+                                                                <a href="#none">file_01.excel</a>
+                                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                            </div>
+                                                            <div>
+                                                                <a href="#none">file_01.excel</a>
+                                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                            </div>
+                                                        </div>
+                                                     </div>
+                                                    <!-- //첨부파일 버튼형 -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>난이도</th>
+                                                <td colspan="3">
+                                                    <select name="" id="">
+                                                        <option value="">난이도 선택</option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>사용 여부</th>
+                                                <td colspan="3">
+                                                    <div class="form_group">
+                                                        <div class="form_check">
+                                                            <input type="radio" name="useYn" id="useYn_1" value="Y" checked>
+                                                            <label for="useYn_1">사용</label>
+                                                        </div>
+                                                        <div class="form_check">
+                                                            <input type="radio" name="useYn" id="useYn_2" value="N">
+                                                            <label for="useYn_2">미사용</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>버전</th>
+                                                <td colspan="3">
+                                                    1
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //layer 내용 -->
+                                <div class="layer_btnSection left">
+                                    <button class="btn">새 버전 등록</button>
+                                    <button class="btn btn_historyManagement">이력 관리</button>
+                                </div>
+                                <div class="layer_btnSection">
+                                    <button class="btn btn_close">취소</button>
+                                    <button class="btn primary">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //레이어_개별 등록 -->
+                        <!-- 레이어_이력 관리 -->
+                        <div class="layer_wrapper history_management">
+                            <div class="layer_basic">
+                                <div class="layer_header">
+                                    <h2>이력 관리</h2>
+                                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                                </div>
+                                <div class="layer_content">
+                                    <!-- 테이블 -->
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>버전</th>
+                                                <td>문항 번호</td>
+                                                <th>문제 유형</th>
+                                                <td>난이도</td>
+                                                <td>사용여부</td>
+                                                <td>등록일</td>
+                                                <td>비고</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>단일선택형</td>
+                                                <td>A</td>
+                                                <td>Y</td>
+                                                <td>2026-07-01</td>
+                                                <td>최초 등록</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>단일선택형</td>
+                                                <td>A</td>
+                                                <td>Y</td>
+                                                <td>2026-07-01</td>
+                                                <td>최초 등록</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //layer 내용 -->
+                                <div class="layer_btnSection">
+                                    <button class="btn btn_close">취소</button>
+                                    <button class="btn primary">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //레이어_이력관리 -->
+                        <!-- 레이어_일괄 등록 -->
+                        <div class="layer_wrapper batch_registr">
+                            <div class="layer_basic">
+
+                                <div class="layer_header">
+                                    <h2>일괄 등록</h2>
+                                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                                    <div>
+                                        파일 업로드 전 엑셀 파일의 셀 서식을 ＂텍스트＂로 저장 후 등록해주세요.
+                                        <button class="btn_fileType"><span class="material-symbols-rounded">download</span>엑셀 양식 다운로드</button>
+                                    </div>
+                                </div>
+
+                                <!-- layer 내용 -->
+                                <div class="layer_content">
+                                    <table class="table_view">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>과정 명</th>
+                                                <td>[C03585]조직심리학</td>
+                                            </tr>
+                                            <tr>
+                                                <th>파일 업로드</th>
+                                                <td>
+                                                    <!-- 첨부파일 버튼형 -->
+                                                    <div class="file_search btn_type">
+                                                        <label for="fileUpload" class="btn primary">
+                                                            <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                                        </label>
+                                                        <input type="file" class="transparent" id="fileUpload" multiple>
+                                                        <div class="fileSearch_after">
+                                                            <div>
+                                                                <a href="#none">file_01.excel</a>
+                                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //첨부파일 버튼형 -->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <!-- //layer 내용 -->
+                                <div class="layer_btnSection">
+                                    <button class="btn btn_close">취소</button>
+                                    <button class="btn primary">저장</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </th>
+                                    <th>No</th>
+                                    <th>문항번호</th>
+                                    <th>문제 유형</th>
+                                    <th>문항 구분</th>
+                                    <th>문항 내용</th>
+                                    <th>난이도</th>
+                                    <th>사용여부</th>
+                                    <th>등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>8</td>
+                                    <td>300</td>
+                                    <td>단일선택형</td>
+                                    <td>퀴즈</td>
+                                    <td>
+                                        <p class="question_content ellipsis">리더가 영향력을 행사하는 방법 길면 말줄임 길면 말줄임 길면 말줄임</p>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">A</option>
+                                            <option value="">B</option>
+                                            <option value="">C</option>
+                                            <option value="">D</option>
+                                        </select>
+                                    </td>
+                                    <td>Y</td>
+                                    <td>2026-07-01</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>8</td>
+                                    <td>300</td>
+                                    <td>단일선택형</td>
+                                    <td>퀴즈</td>
+                                    <td>
+                                        <p class="question_content ellipsis">리더가 영향력을 행사하는 방법 길면 말줄임 길면 말줄임 길면 말줄임</p>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">A</option>
+                                            <option value="">B</option>
+                                            <option value="">C</option>
+                                            <option value="">D</option>
+                                        </select>
+                                    </td>
+                                    <td>Y</td>
+                                    <td>2026-07-01</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>8</td>
+                                    <td>300</td>
+                                    <td>단일선택형</td>
+                                    <td>퀴즈</td>
+                                    <td>
+                                        <p class="question_content ellipsis">리더가 영향력을 행사하는 방법 길면 말줄임 길면 말줄림 길면 말줄임</p>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">A</option>
+                                            <option value="">B</option>
+                                            <option value="">C</option>
+                                            <option value="">D</option>
+                                        </select>
+                                    </td>
+                                    <td>Y</td>
+                                    <td>2026-07-01</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+                        <div class="btn_groupRight">
+                            <button class="btn">취소</button>
+                            <button class="btn primary">저장</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- footer -->
+            <footer class="admin_footer">
+                <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+            </footer>
+            <!-- //footer -->
+        </div>
+    </body>
+
+</html>

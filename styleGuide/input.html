@@ -318,7 +318,7 @@
         <input type="text" class="width_150px align_right" placeholder="오른쪽 정렬임"> 명
 
         <br />
-        <h4>캘린더</h4>
+        <h3>캘린더</h3>
         <!-- 캘린더 -->
         <div class="form_group calendar">
             <div class="form_warning">
@@ -381,6 +381,26 @@
             </div>
         </div>
         <!-- //캘린더 -->
+        <br />
+        <div class="form_group percent">
+             <input type="number" class="width_80px">% <span class="calendar_bullet">~</span> <input type="number" class="width_80px">%
+        </div>
+        <br />
+        <dl class="search_box">
+            <dt>정답률</dt>
+            <dd>
+
+                <div class="form_group percent">
+                    <input type="number" class="width_80px">% <span class="calendar_bullet">~</span> <input type="number" class="width_80px">%
+                </div>
+
+            </dd>
+            <dd>
+                 <div class="search_input">
+                    <input type="text" placeholder="검색어를 입력해주세요.">
+                </div>
+            </dd>
+        </dl>
 
         <br />
         <h4>시간 선택-분까지</h4>
@@ -426,6 +446,30 @@
                 <option value="">MO 스트립 배너(하단)</option>
             </select>
             <p class="txtError_color">아이디 또는 비밀번호가 올바르지 않습니다.</p>
+        </div>
+
+        <Br />
+        <div class="form_group">
+            <select name="" id="" class="small">
+                <option value="">문제 유형</option>
+                <option value="">단일선택형</option>
+                <option value="">다중선택</option>
+                <option value="">서술형</option>
+            </select>
+            <select name="" id="" class="small">
+                <option value="">문항 구분</option>
+                <option value="">중간고사</option>
+                <option value="">기말고사</option>
+                <option value="">퀴즈</option>
+            </select>
+            <select name="" id="" class="small">
+                <option value="">난이도 선택</option>
+                <option value="">상</option>
+                <option value="">중상</option>
+                <option value="">중</option>
+                <option value="">중하</option>
+                <option value="">하</option>
+            </select>
         </div>
 
         <h3>파일첨부</h3>
@@ -487,6 +531,26 @@
                 </div>
             </div>
         </div>
+
+        <h4>파일첨부 - 버튼형</h4>
+        <!-- 첨부파일 버튼형 -->
+        <div class="file_search btn_type">
+            <label for="fileUpload" class="btn primary">
+                <span class="material-symbols-rounded">attach_file</span>첨부파일
+            </label>
+            <input type="file" class="transparent" id="fileUpload" multiple>
+            <div class="fileSearch_after">
+                <div>
+                    <a href="#none">file_01.excel</a>
+                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                </div>
+                <div>
+                    <a href="#none">file_01.excel</a>
+                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                </div>
+            </div>
+        </div>
+        <!-- //첨부파일 버튼형 -->
 
         <h2>검색</h2>
         <!-- 검색 섹션 -->
