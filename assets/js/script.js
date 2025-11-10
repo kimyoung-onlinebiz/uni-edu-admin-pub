@@ -61,7 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_examPreview', layer: '.exam_preview', many: true }, // 시험문항 미리보기 레이어
         { sel: '.btn_singleRegistr', layer: '.single_registr', many: true }, // 시험문항 개별등록 레이어
         { sel: '.btn_historyManagement', layer: '.history_management', many: true }, // 시험문항 이력관리 레이어
-        { sel: '.btn_batchRegistr', layer: '.batch_registr', many: true } // 시험문항 일괄등록 레이어
+        { sel: '.btn_batchRegistr', layer: '.batch_registr', many: true }, // 시험문항 일괄등록 레이어
+        { sel: '.btn_reDeployment', layer: '.re_deployment', many: true }, // 수강자 반 재배정 레이어
+        { sel: '.btn_classAssignment', layer: '.class_assignment', many: true }, // 반배정 레이어
+        { sel: '.btn_noReDeployment', layer: '.re_deployment.no', many: true } // 추가 반배정 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);
@@ -124,5 +127,33 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', () => {
         document.querySelectorAll('.icon_tooltip.open').forEach(o => o.classList.remove('open'));
     });
+    
+    // Swiper - 학습운영관리 수강/반 편성관리 스와이퍼
+        var classAssignment_swiper = new Swiper('.classAssignment_swiper .swiper-container', {
+        loop: true,
+        slidesPerView: 4,
+        initialSlide: 1,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction : false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+    });
+
+    // pause autoplay on mouse enter, resume on mouse leave
+    try {
+        const root = document.querySelector('.classAssignment_swiper');
+        if (root && classAssignment_swiper && classAssignment_swiper.autoplay) {
+            root.addEventListener('mouseenter', () => {
+                try { classAssignment_swiper.autoplay.stop(); } catch (e) { /* ignore */ }
+            });
+            root.addEventListener('mouseleave', () => {
+                try { classAssignment_swiper.autoplay.start(); } catch (e) { /* ignore */ }
+            });
+        }
+    } catch (e) { /* ignore errors */ }
 
 });
