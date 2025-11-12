@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#" class="active">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded"> domain_verification</span>학습운영 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">평가 설정 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론평가 설정</a></li>
+                        <li><a href="#none">실습평가 설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">문제은행 관리</a>
+                </li>
+                <li>
+                    <a href="#">제출물 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">과제 관리</a></li>
+                        <li><a href="#none">토론 관리</a></li>
+                        <li><a href="#none">평가/보고서 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">수강/반 편성 관리</a>
+                </li>
+                 <li class="active_depth_2">
+                    <a href="#">강의평가 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">문항 관리</a></li>
+                        <li><a href="#none" class="active_depth_3">설문 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>설문 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습운영 관리</a></li>
+                    <li><a href="#none">강의평가 관리</a></li>
+                    <li>설문 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+
+            <!-- 과정정보 -->
+            <div class="surveyInfo">
+                <!-- 과정 정보 -->
+                <div class="surveyInfo_left">
+                    <h3>과정 정보</h3>
+                    <table class="table_view">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>설문조사명(카테고리)</th>
+                                <td>일반생물학 강의 평가(종합강의평가)</td>
+                            </tr>
+                            <tr>
+                                <th>편성과정 명</th>
+                                <td>일반생물학</td>
+                            </tr>
+                            <tr>
+                                <th>년도/학기/기수</th>
+                                <td>2025년도 1학기 9기</td>
+                            </tr>
+                            <tr>
+                                <th>수강 신청 기간</th>
+                                <td>2025-08-27~2025-09-09</td>
+                            </tr>
+                            <tr>
+                                <th>교수</th>
+                                <td>
+                                    <button class="btn marginR10 btn_profScore">교수별 평점</button>
+                                    곽미라, 정의훈, 송기영, 편미숙
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 레이어_교수별 평점 -->
+                    <div class="layer_wrapper prof_score"> <!-- active 추가 시 화면 노출 -->
+                        <div class="layer_basic">
+
+                            <div class="layer_header">
+                                <h2>담당 교수별 평점</h2>
+                                <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                            </div>
+
+                            <!-- layer 내용 -->
+                            <div class="layer_content">
+                                <table class="data_table">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>반</th>
+                                            <th>교수 명</th>
+                                            <th>평점</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>정의훈</td>
+                                            <td>95점</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>정의훈</td>
+                                            <td>95점</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>정의훈</td>
+                                            <td>95점</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="layer_btnSection">
+                                    <button class="btn btn_close">닫기</button>
+                                </div>
+                                
+                            </div>
+                            <!-- //layer 내용 -->
+                        </div>
+                    </div>
+                    <!-- //레이어_담당 교수별 평점 --> 
+                </div>
+                <!-- //과정 정보 -->
+
+
+                <!-- 참여현황, 과정 평점 -->
+                <div class="surveyInfo_right">
+                    <div class="surveyInfo_box">
+                        <h4>참여 현황</h4>
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>총원</th>
+                                    <td>275명</td>
+                                </tr>
+                                <tr>
+                                    <th>참여자</th>
+                                    <td>275명</td>
+                                </tr>
+                                <tr>
+                                    <th>미참여자</th>
+                                    <td>275명</td>
+                                </tr>
+                                <tr>
+                                    <th>참여율</th>
+                                    <td>
+                                        44%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="surveyInfo_box">
+                        <h4>과정 평점</h4>
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>이전 학기 대비</th>
+                                    <td>+1.8점</td>
+                                </tr>
+                                <tr>
+                                    <th>2025년도 1학기<br />9기 평균</th>
+                                    <td>95.6점</td>
+                                </tr>
+                                <tr>
+                                    <th>중간값 점수</th>
+                                    <td>88.4점</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //참여현황, 과정 평점 -->
+            </div> 
+            <!-- //과정정보 -->
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>반 정보</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">전공 명</option>
+                        </select>
+                    </dd>
+                    <dt>설문자 정보</dt>
+                    <dd>
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">이름</option>
+                            </select>
+                            <div class="search_input">
+                                <input type="text" placeholder="검색어를 입력하세요." class="width_320px">
+                            </div> 
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>참여 여부</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="participation" id="participation_all" checked="">
+                                <label for="participation_all">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="participation" id="participation_selected">
+                                <label for="participation_selected">참여</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="participation" id="participation_disabled">
+                                <label for="participation_disabled">미참여</label>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+            <div class="table_top">
+                <div class="table_sort medium_500">
+                    <span>전체 과정 평점 <strong>97.3점</strong></span>
+                    <span>최고 점수 <strong>100점</strong></span>
+                    <span>최저 점수 <strong>80점</strong></span>
+                </div>
+                <div class="table_actions">
+                    <select name="" id="">
+                        <option value="">최신 참여 순</option>
+                        <option value="">반별 순</option>
+                    </select> 
+                </div>
+            </div>
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>반</th>
+                        <th>교수</th>
+                        <th>이름</th>
+                        <th>아이디</th>
+                        <th>설문참여 일시</th>
+                        <th>평점</th>
+                        <th>설문조사 결과</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>홍길동</td>
+                        <td>최민수</td>
+                        <td>ddf34212k</td>
+                        <td>2025-09-05 09:15:22</td>
+                        <td>100점</td>
+                        <td><button class="btn btn_evaluationResult">보기</button></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>홍길동</td>
+                        <td>최민수</td>
+                        <td>ddf34212k</td>
+                        <td>2025-09-05 09:15:22</td>
+                        <td>100점</td>
+                        <td><button class="btn">보기</button></td>
+                    </tr>
+                     <tr>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>홍길동</td>
+                        <td>최민수</td>
+                        <td>ddf34212k</td>
+                        <td>2025-09-05 09:15:22</td>
+                        <td>100점</td>
+                        <td><button class="btn">보기</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 레이어_설문 결과 -->
+            <div class="layer_wrapper evaluation_result"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>홍길동님 설문 결과</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <h3>응답 요약</h3>
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>평균 점수</th>
+                                    <th>최고 응답</th>
+                                    <th>최저 응답</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4.2점</td>
+                                    <td>문항 2 외 N개 (5점)</td>
+                                    <td>문항 21 (3점)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- 1번 문항 -->
+                        <div class="exam_content">
+                            <h3>
+                                문항 번호 <strong>1번</strong>
+                            </h3>
+                            <!-- 평가 결과 -->
+                            <div class="evaluationResult_detail">
+                                <div class="question">(수강) 나는 학적 열의를 가지고 강의에 임하였다.</div>
+                                <ul>
+                                    <li>
+                                        <p>그렇다</p>
+                                        <div class="graph_section">
+                                            <div>
+                                                <p style="--max:5; --count:2;"></p> 
+                                            </div>
+                                            
+                                            <span>2점</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //평가 결과 -->
+                        </div>
+                        <!-- //1번 문항 -->
+                        <!-- 2번 문항 -->
+                        <div class="exam_content">
+                            <h3>
+                                문항 번호 <strong>2번</strong>
+                            </h3>
+                            <!-- 평가 결과 -->
+                            <div class="evaluationResult_detail">
+                                <div class="question">(수강) 나는 학적 열의를 가지고 강의에 임하였다.</div>
+                                <ul>
+                                    <li>
+                                        <p>매우 그렇다</p>
+                                        <div class="graph_section">
+                                            <div>
+                                                <p style="--max:5; --count:3;"></p> 
+                                            </div>
+                                            
+                                            <span>3점</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //평가 결과 -->
+                        </div>
+                        <!-- //2번 문항 -->
+
+                        <!-- 3번 문항 -->
+
+                        <div class="exam_content">
+                            <h3>
+                                문항 번호 <strong>3번</strong>
+                            </h3>
+                            <!-- 평가 결과 -->
+                            <div class="evaluationResult_detail">
+                                <div class="question">(수강) 나는 학적 열의를 가지고 강의에 임하였다.</div>
+                                <ul>
+                                    <li>
+                                        <p>그렇다</p>
+                                        <div class="graph_section">
+                                            <div>
+                                                <p style="--max:5; --count:2;"></p> 
+                                            </div>
+                                            
+                                            <span>2점</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //평가 결과 -->
+                        </div>
+                        <!-- //3번 문항 -->
+
+                        <div class="layer_btnSection">
+                            <button class="btn btn_close">닫기</button>
+                        </div>
+                        
+                    </div>
+                    <!-- //layer 내용 -->
+                </div>
+            </div>
+            <!-- //레이어_설문 결과 --> 
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn primary">저장</button>
+            </div>
+            
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#" class="active">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded"> domain_verification</span>학습운영 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">평가 설정 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론평가 설정</a></li>
+                        <li><a href="#none">실습평가 설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">문제은행 관리</a>
+                </li>
+                <li>
+                    <a href="#">제출물 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">과제 관리</a></li>
+                        <li><a href="#none">토론 관리</a></li>
+                        <li><a href="#none">평가/보고서 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">수강/반 편성 관리</a>
+                </li>
+                 <li class="active_depth_2">
+                    <a href="#">강의평가 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">문항 관리</a></li>
+                        <li><a href="#none">설문 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>문항 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습운영 관리</a></li>
+                    <li><a href="#none">강의평가 관리</a></li>
+                    <li>문항 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>문항 정보</dt>
+                    <dd>
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">카테고리 명</option>
+                                <option value="">종합강의평가</option>
+                                <option value="">사복실습강의평가</option>
+                            </select>
+                            <input type="text" class="width_320px" placeholder="제목을 입력해주세요.">
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt><span class="essential">*</span>사용 여부</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_all" checked="">
+                                <label for="useStatus_all">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_selected">
+                                <label for="useStatus_selected">사용</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_disabled">
+                                <label for="useStatus_disabled">미사용</label>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn">문항 삭제</button>
+                    <button class="btn btn_examPreview">전체 문항 미리보기</button>
+                    <button class="btn secondary btn_questionRegistration"><span class="material-symbols-rounded">quick_reference</span>문항 등록</button>
+                </div>
+            </div>
+
+            <!-- 레이어_평가 문항 등록 -->
+            <div class="layer_wrapper question_registration">
+                <div class="layer_basic">
+                    <div class="layer_header">
+                        <h2>문항 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px">
+                                <col>
+                                <col style="width:400px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <td colspan="3">
+                                        <div class="form_group">
+                                            <select name="" id="">
+                                                <option value="">카테고리 선택</option>
+                                                <option value="">종합강의평가</option>
+                                                <option value="">실습강의평가</option>
+                                            </select>
+                                            <button class="btn"><span class="material-symbols-rounded">playlist_add</span>카테고리 추가</button>
+                                        </div>
+                                        <div class="form_group marginT16">
+                                            <input type="text" placeholder="+ 새 카테고리를 추가해주세요.">
+                                            <button class="btn primary">적용</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>문항 구분</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">강의</option>
+                                        </select>
+                                        <p class="txtError_color warning">문항 옵션을 선택해주세요.</p>
+                                    </td>
+                                    <th><span class="essential">*</span>문항 유형</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">단일 선택형</option>
+                                            <option value="">서술형</option>
+                                        </select>
+                                        <p class="txtError_color warning">문항 유형을 선택해주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>문항 내용</th>
+                                    <td colspan="3">
+                                        <textarea name="" id="" class="width_100" placeholder="문항 본문 텍스트를 입력해주세요."></textarea>
+                                        <p class="txtError_color warning">문항 내용을 입력해주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>보기</th>
+                                    <td colspan="3">
+                                        <!-- 보기 내용 입력 -->
+                                        <ol class="answer_option">
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                            </li>
+                                        </ol>
+                                        <!-- //보기 내용 입력 -->
+                                        <!-- 보기 추가 버튼 -->
+                                        <div class="btn_answerOption">
+                                            <button class="btn"><span class="material-symbols-rounded">add</span>보기 추가</button>
+                                            <button class="btn secondary"><span class="material-symbols-rounded">remove</span>보기 삭제</button>
+                                        </div>
+                                        <!-- //보기 추가 버튼 --> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>사용 여부</th>
+                                    <td colspan="3">
+                                       <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="useYn" id="useYn_1" value="Y" checked>
+                                                <label for="useYn_1">사용</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="useYn" id="useYn_2" value="N">
+                                                <label for="useYn_2">미사용</label>
+                                            </div>
+                                        </div>
+                                        <p class="txtError_color warning">사용 여부를 선택해주세요.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_개별 등록 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </th>
+                        <th>No</th>
+                        <th>카테고리</th>
+                        <th>제목</th>
+                        <th>보기수</th>
+                        <th>사용여부</th>
+                        <th>등록자</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>종합강의평가</td>
+                        <td>
+                            <a href="#none" class="question_txt ellipsis">인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종 인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종</a>
+                        </td>
+                        <td>5개</td>
+                        <td>Y</td>
+                        <td>오지현</td>
+                         <td>2025-11-22</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>종합강의평가</td>
+                        <td>
+                            <a href="#none" class="question_txt ellipsis">인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종 인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종</a>
+                        </td>
+                        <td>5개</td>
+                        <td>Y</td>
+                        <td>오지현</td>
+                         <td>2025-11-22</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>종합강의평가</td>
+                        <td>
+                            <a href="#none" class="question_txt ellipsis">인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종 인간의 욕구가 그 중요도별로 5개 단계를 형성한다는 동기이론 일종</a>
+                        </td>
+                        <td>5개</td>
+                        <td>Y</td>
+                        <td>오지현</td>
+                         <td>2025-11-22</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+             <!-- 레이어_문항 미리보기 -->
+            <div class="layer_wrapper exam_preview"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>전체 문항 미리보기</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <div class="exam_content">
+                            <ul class="first_tab">
+                                <li><a href="#tab1" class="active">전체</a></li>
+                                <li><a href="#tab2">종합강의평가</a></li>
+                                <li><a href="#tab3">실습강의평가</a></li>
+                            </ul>
+                            <!-- 1번 문항 -->
+                            <h3>
+                                문항 번호 <strong>1번</strong>
+                                <select name="" id="">
+                                    <option value="">문항번호 순</option>
+                                </select>
+                            </h3>
+                            <!-- 테이블 -->
+                            <table class="data_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>문제 유형</th>
+                                        <th>카테고리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>단일선택형</td>
+                                        <td>외한어실습강의평가</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 시험문제 -->
+                            <div class="exam_question">
+                                <h4>(만족도) 전체 교육과정 운영에 대해 만족하며 다른 사람에게 추천하실 의향이 있으십니까? </h4>
+                                <ol class="exam_choice">
+                                    <li>전혀 그렇지 않다.</li>
+                                    <li>그렇지 않다.</li>
+                                    <li>보통이다.</li>
+                                    <li>그렇다.</li>
+                                    <li>매우 그렇다.</li>
+                                </ol>
+                            </div>
+                            <!-- //시험문제 -->
+                        </div>
+                        <!-- //1번 문항 -->
+        
+                        <div class="layer_btnSection left">
+                            <button class="btn"><span class="material-symbols-rounded">arrow_left_alt</span>이전 문항</button>
+                        </div>
+                        <div class="layer_btnSection">
+                            <button class="btn primary">다음 문항<span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+                        </div>
+                        
+                    </div>
+                    <!-- //layer 내용 -->
+                </div>
+            </div>
+            <!-- //레이어_문항 미리보기 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

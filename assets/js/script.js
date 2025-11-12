@@ -64,7 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_batchRegistr', layer: '.batch_registr', many: true }, // 시험문항 일괄등록 레이어
         { sel: '.btn_reDeployment', layer: '.re_deployment', many: true }, // 수강자 반 재배정 레이어
         { sel: '.btn_classAssignment', layer: '.class_assignment', many: true }, // 반배정 레이어
-        { sel: '.btn_noReDeployment', layer: '.re_deployment.no', many: true } // 추가 반배정 레이어
+        { sel: '.btn_noReDeployment', layer: '.re_deployment.no', many: true }, // 추가 반배정 레이어
+        { sel: '.btn_questionRegistration', layer: '.question_registration', many: true }, // 강의 평가 관리 평가문항 등록 레이어
+        { sel: '.btn_evaluationResult', layer: '.evaluation_result', many: true }, // 강의 평가 결과 레이어
+        { sel: '.btn_profScore', layer: '.prof_score', many: true } // 교수별 평점 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);
