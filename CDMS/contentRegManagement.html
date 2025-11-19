@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li class="active_depth_2"><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>콘텐츠 등록 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li>콘텐츠 등록 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>콘텐츠 정보</dt>
+                    <dd>
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">콘텐츠 명</option>
+                            </select>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="콘텐츠 명 또는 코드를 입력해주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>사용여부</dt>
+                    <dd>
+
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_all" checked="">
+                                <label for="useStatus_all">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_selected">
+                                <label for="useStatus_selected">사용</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="useStatus" id="useStatus_disabled">
+                                <label for="useStatus_disabled">미사용</label>
+                            </div>
+                        </div>
+
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->            
+
+            <!-- 데이터 영역 -->
+
+            <!-- 테이블 -->
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn">복사</button>
+                    <button class="btn"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                    <button class="btn secondary">콘텐츠 등록</button>
+                </div>
+            </div>
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </th>
+                        <th>No</th>
+                        <th>콘텐츠 코드</th>
+                        <th>콘텐츠 명</th>
+                        <th>콘텐츠 성격</th>
+                        <th>구분</th>
+                        <th>교수 명</th>
+                        <th>강의 수</th>
+                        <th>사용여부</th>
+                        <th>강의노트</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>CDMS0013</td>
+                        <td>조직심리학</td>
+                        <td>학점은행제</td>
+                        <td>신규</td>
+                        <td>신지원</td>
+                        <td>26</td>
+                        <td>Y</td>
+                        <td><button class="btn primary">등록</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>CDMS0013</td>
+                        <td>조직심리학</td>
+                        <td>학점은행제</td>
+                        <td>신규</td>
+                        <td>신지원</td>
+                        <td>26</td>
+                        <td>Y</td>
+                        <td><button class="btn">수정</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form_check">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td>8</td>
+                        <td>CDMS0013</td>
+                        <td>조직심리학</td>
+                        <td>학점은행제</td>
+                        <td>신규</td>
+                        <td>신지원</td>
+                        <td>26</td>
+                        <td>Y</td>
+                        <td><button class="btn primary">등록</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

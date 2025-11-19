@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li class="active_depth_2"><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>콘텐츠 등록 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li>콘텐츠 등록 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>콘텐츠 등록</h3>
+            <ul class="big_tab">
+                <li><a href="#tab1" class="active">기본 정보</a></li>
+                <li><a href="#tab2">콘텐츠 구성</a></li>
+            </ul>
+            
+            <!-- 데이터 영역 -->
+            <h4 class="borderN">
+                기본 정보 등록
+                <span>*표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:10%">
+                    <col style="width:40%">
+                    <col style="width:10%">
+                    <col style="width:40%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>콘텐츠 명</th>
+                        <td>
+                            <input type="text" placeholder="콘텐츠 명을 입력해주세요." class="width_100">
+                            <p class="txtError_color warning">콘텐츠 명을 정확히 입력해주세요.</p>
+                        </td>
+                        <th><span class="essential">*</span>콘텐츠 코드</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>제작(임대)년도</th>
+                        <td>
+                            <select name="" id="">
+                                <option value="">년</option>
+                            </select>
+                            <p class="txtError_color warning">제작(임대)년도를 선택해주세요.</p>
+                        </td>
+                        <th><span class="essential">*</span>촬영 교수</th>
+                        <td>
+                            <div class="form_group">
+                                <select name="" id="">
+                                    <option value="">교수명</option>
+                                </select>
+                                <button class="btn btn_professorProfile">프로필 확인하기</button>
+                            </div>
+                            <p class="txtError_color warning">교수명을 선택해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>평가 구분</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_1">
+                                    <label for="radio_1">신규</label>
+                                </div>    
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_2" checked="">
+                                    <label for="radio_2">재평가</label>
+                                </div>
+                            </div>
+                        </td>
+                        <th><span class="essential">*</span>콘텐츠 성격</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">학점은행제</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                   <tr>
+                        <th>메모</th>
+                        <td colspan="3">
+                            <textarea name="" id="" class="width_100" placeholder="메모를 입력해주세요."></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_교수프로필 -->
+            <div class="layer_wrapper professor_profile"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>손유정 교수님 프로필</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>학력</th>
+                                    <td>
+                                        <ul class="bullet_circle">
+                                            <li>대신대학교 종교교육학과 학사</li>
+                                            <li>한국외국어대학교 외국어로서의 한국어교육 전공 석사</li>
+                                            <li>한국외국어대학교 외국어로서의 한국어교육 전공 석사한국외국어대학교 외국어로서의 한국어교육 전공 석사</li>
+                                            <li>한국외국어대학교 외국어로서의 한국어교육 전공 석사한국외국어대학교 외국어로서의 한국어교육 전공 석사</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>경력</th>
+                                    <td>
+                                        <ul class="bullet_circle">
+                                            <li>대구사이버대학교 한국어다문화학과 강의</li>
+                                            <li>세명대학교 미디어문화학부 강의</li>
+                                            <li>한국외국어대학교 강의</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary btn_close">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_ 배너목록 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -143,7 +143,7 @@ h3+.big_tab { margin-top:0px; }
 .paging a.active, .paging a:hover { background:var(--primary_100); color:var(--primary_500); }
 
 /* 테이블 스타일 */
-.table_top { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.table_top { position:relative; display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
 .table_top.align_right {  justify-content:flex-end; }
 .table_top .table_sort { display:flex; align-items:center; gap:20px; }
 .table_top .table_sort { display:flex; align-items:center; gap:20px; }
@@ -161,6 +161,8 @@ h3+.big_tab { margin-top:0px; }
 .data_table td a:not(.btn),.table_view td a:not(.btn) { text-decoration:underline; }
 .data_table tbody tr:hover,.table_view tbody td:hover { background-color:var(--primary_100); /* 호버 효과 */}
 .data_table thead > tr:first-child > th { border-top:none; }
+tr.important td { background:var(--primary_100); font-weight:600; }
+tr.important td a { font-weight:600; }
 
 /* 테이블 뷰 */
 .table_view th,.table_view td { padding:15px 20px; vertical-align:middle; line-height:1.3; text-align:left; border:1px solid #dfe8ec; }
@@ -577,3 +579,14 @@ td .file_search.btn_type a { text-decoration:none; }
 .surveyInfo .surveyInfo_right .surveyInfo_box { width:50%; }
 .surveyInfo .surveyInfo_right .surveyInfo_box table { height:210px; }
 .surveyInfo .surveyInfo_right .surveyInfo_box td { background:var(--neutral_0); }
+.tab_required { position:absolute; right:0; top:-50px;color:var(--error_color); font-weight:500; font-size: var(--font_small); }
+.preview { margin:16px 0; }
+.bullet_circle,.bullet_num { padding-left:20px; }
+.bullet_circle li { list-style-type:disc; }
+.bullet_num li { list-style-type:decimal; }
+.bullet_hyphen li { position:relative; padding-left:20px; }
+.bullet_hyphen li:before { position:absolute; left:5px;content:"-"; }
+.skin_preview { width:240px; height:164px; background:var(--neutral_300) url(../../assets/images/preview_logo.png) center no-repeat; border:1px solid var(--neutral_500); border-radius:var(--borderRadius); }
+.content_composition { display:flex; gap:60px; }
+.content_composition .search_box { align-items:center; }
+.content_composition .search_box select { width:500px; }

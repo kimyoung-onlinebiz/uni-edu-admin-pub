@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li class="active_depth_2"><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>콘텐츠 등록 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li>콘텐츠 등록 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>콘텐츠 등록</h3>
+            <ul class="big_tab">
+                <li><a href="#tab1">기본 정보</a></li>
+                <li><a href="#tab2" class="active">콘텐츠 구성</a></li>
+            </ul>
+            
+            <!-- 데이터 영역 -->
+            <h4 class="borderN">
+                콘텐츠 구성 등록
+                <span>*표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+            <!-- 콘텐츠 구성 등록 섹션 -->
+            <section class="search_section content_composition">
+                <div class="skin_preview">
+
+                </div>
+                <div>
+                    <dl class="search_box">
+                        <dt>콘텐츠 명</dt>
+                        <dd>언어학개론</dd>
+                    </dl>
+                    <dl class="search_box">
+                        <dt>콘텐츠 코드</dt>
+                        <dd>LANG101</dd>
+                    </dl>
+                    <dl class="search_box">
+                        <dt><span class="essential">*</span>스킨 선택</dt>
+                        <dd>
+                            <select name="" id="">
+                                <option value="">A타입(Skin0001)</option>
+                            </select>
+                            <p class="txtError_color warning">스킨을 선택해주세요.</p>
+                        </dd>
+                    </dl>
+                    <dl class="search_box">
+                        <dt><span class="essential">*</span>페이지 수</dt>
+                        <dd>
+                            <select name="" id="">
+                                <option value="">8페이지</option>
+                            </select>
+                            <p class="txtError_color warning">페이지 수를 선택해주세요.</p>
+                        </dd>
+                    </dl>
+                    <div class="btn_group">
+                        <button class="btn primary">적용</button>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- //콘텐츠 구성 등록 섹션 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>페이지</th>
+                        <th>페이지 구성 항목</th>
+                        <th>음향 요소</th>
+                        <th>옵션 추가</th>
+                        <th>이수 시간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">항목명</option>
+                            </select>
+                        </td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>
+                            <input type="number" class="marginR10"> 분
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">항목명</option>
+                            </select>
+                        </td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>
+                            <input type="number" class="marginR10"> 분
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">항목명</option>
+                            </select>
+                        </td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>
+                            <input type="number" class="marginR10"> 분
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">항목명</option>
+                            </select>
+                        </td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>항목 등록 시, 음향 요소가 노출됩니다.</td>
+                        <td>
+                            <input type="number" class="marginR10"> 분
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>페이지</th>
+                        <th>페이지 구성 항목</th>
+                        <th>음향 요소</th>
+                        <th>옵션 추가</th>
+                        <th>이수 시간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">항목명</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">나레이션</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">영어듣기 MP3</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">의견 입력</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">퀴즈</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">주요 용어 해설</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">VOD 영상 재생</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" class="marginR10"> 분
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">항목명</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">나레이션</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">영어듣기 MP3</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">의견 입력</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">퀴즈</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">주요 용어 해설</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">VOD 영상 재생</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" class="marginR10"> 분
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">항목명</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">나레이션</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">영어듣기 MP3</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">의견 입력</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">퀴즈</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">주요 용어 해설</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">VOD 영상 재생</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" class="marginR10"> 분
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+            
+            <h4>노출/사용 여부 등록</h4>
+            <table class="table_view">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>사용 여부</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="useYn" id="useYn_1" value="Y" checked>
+                                    <label for="useYn_1">사용</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="useYn" id="useYn_2" value="N">
+                                    <label for="useYn_2">미사용</label>
+                                </div>
+                                <p class="txtError_color">사용 여부를 선택해주세요.</p>
+                            </div>
+                        </td>
+                         <th><span class="essential">*</span>노출 여부</th>
+                        <td>
+                            <div class="form_group alignC">
+                                <div class="form_check">
+                                    <input type="radio" name="exposureStatus" id="exposureStatus_1" >
+                                    <label for="exposureStatus_1">노출</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="exposureStatus" id="exposureStatus_2" checked="">
+                                    <label for="exposureStatus_2">비노출</label>
+                                </div>
+                                <p class="txtError_color">노출 여부를 선택해주세요.</p>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">수정</button>
+                <button class="btn primary">저장</button>
+            </div>
+
+
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

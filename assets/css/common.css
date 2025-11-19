@@ -202,6 +202,9 @@ button span.material-symbols-rounded,.material-symbols-rounded.paddingR4,a span.
 .width_150px { width:150px !important; }
 .width_280px { width:280px !important; }
 .width_320px { width:320px !important; }
+.width_400px { width:400px !important; }
+.width_500px { width:500px !important; }
+.width_600px { width:600px !important; }
 .flex { display:flex; align-items:center; }
 
 /* 대표 버튼 스타일 */
