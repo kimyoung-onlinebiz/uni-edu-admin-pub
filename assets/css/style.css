@@ -592,5 +592,5 @@ td .file_search.btn_type a { text-decoration:none; }
 .content_composition .search_box { align-items:center; }
 .content_composition .search_box select { width:500px; }
 .note_registration { display:flex; border:1px solid var(--neutral_500); border-radius:var(--borderRadius_2); }
-.note_registration .list { width:500px; padding:20px 32px; border-right:1px solid var(--neutral_500); }
+.note_registration .list { width:500px; max-height:1600px; padding:20px 32px; border-right:1px solid var(--neutral_500); overflow:auto; }
 .note_registration .note_detail { flex:1; padding:20px 32px; background:var(--neutral_300); }
