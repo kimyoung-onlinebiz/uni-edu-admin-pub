@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li class="active_depth_2"><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>콘텐츠 등록 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li><a href="#none">CDMS</a></li>
+                    <li>콘텐츠 등록 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>강의노트 등록</h3>
+            <ul class="big_tab">
+                <li><a href="#tab1">기본 정보</a></li>
+                <li><a href="#tab2" class="active">강의 노트 구성</a></li>
+            </ul>
+            
+            <!-- 데이터 영역 -->
+            <h4 class="borderN">
+                강의 노트 구성 등록
+                <span>*표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+            
+            <div class="note_registration">
+                <!-- 주차 차시 -->
+                <div class="list">
+                    <!-- 테이블 -->
+                    <div class="table_top align_right">
+                        <div class="table_actions">
+                            <button class="btn">샘플 강의 설정</button>
+                            <button class="btn secondary btn_addLecture"><span class="material-symbols-rounded">add</span>강의 추가 등록</button>
+                        </div>
+                    </div>
+                    <table class="data_table">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width:270px;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>선택</th>
+                                <th>주</th>
+                                <th>차시</th>
+                                <th>강의명</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="radio">
+                                </td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="align_left">OT</td>
+                                <td><button class="material-symbols-rounded">delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio">
+                                </td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="align_left">언어의 특성 <span class="btn_fileType marginL10">샘플</span></td>
+                                <td><button class="material-symbols-rounded">delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio">
+                                </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="align_left">고대의 문자생활: 차자표기</td>
+                                <td><button class="material-symbols-rounded">delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio">
+                                </td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td class="align_left">고대의 문자생활: 차자표기 길면 두줄 길면 두줄 길면 두줄</td>
+                                <td><button class="material-symbols-rounded">delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- //테이블 -->
+                    <!-- 레이어_나레이션 등록 -->
+                    <div class="layer_wrapper add_lecture"> <!-- active 추가 시 화면 노출 -->
+                        <div class="layer_basic">
+
+                            <div class="layer_header">
+                                <h2>강의 추가</h2>
+                                <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                            </div>
+
+                            <!-- layer 내용 -->
+                            <div class="layer_content">
+                                <div class="page_comment">
+                                    <ul>
+                                        <li>신규 강의는 원하는 주차/차시를 선택하여 등록할 수 있습니다.<br />
+                                        단, 이미 동일한 주차/차시가 존재할 경우 등록할 수 없습니다. 
+                                        </li>
+                                        <li>중간 위치에 강의를 배치하려면, 먼저 기존 강의를 삭제한 뒤 해당 주차/차시로 새 강의를 등록해야 합니다.</li>
+                                    </ul>
+                                </div>
+                                <!-- 테이블 -->
+                                <table class="table_view">
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><span class="essential">*</span>강의 추가 주차/차시</th>
+                                            <td>
+                                                <div class="form_group">
+                                                    <select name="" id="">
+                                                        <option value="">주차 선택</option>
+                                                    </select>
+                                                    <select name="" id="">
+                                                        <option value="">차시 선택</option>
+                                                    </select>
+                                                </div>
+                                                <p class="txtError_color warning">주차를 선택해주세요.</p>
+                                            </td>
+                                        </tr>
+                                         <tr>
+                                            <th><span class="essential">*</span>강의 명</th>
+                                            <td>
+                                                <input type="text" placeholder="강의 명을 입력해주세요." class="width_100">
+                                                <p class="txtError_color warning">강의 명을 입력해주세요.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //layer 내용 -->
+                            <div class="layer_btnSection">
+                                <button class="btn primary btn_close">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //레이어_ 배너목록 -->
+                </div>
+                <!-- //주차 차시 -->
+                <div class="note_detail">
+                    <table class="table_view">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>학습 단위</th>
+                                <td>1주차 1차시</td>
+                            </tr>
+                            <tr>
+                                <th>강의 명</th>
+                                <td><input type="text" placeholder="강의 명을 입력하세요." class="width_100"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table_view marginT24">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col style="width:150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th rowspan="2">1페이지</th>
+                                <th rowspan="2">
+                                    학습목표+학습내용
+                                    <p class="table_comment marginT8">* 이수시간: 0초</p>
+                                </th>
+                                <td>
+                                    <p>학습목표</p>
+                                    <textarea name="" id="" class="width_100 marginT8" placeholder="학습목표를 입력해주세요."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>학습내용</p>
+                                    <textarea name="" id="" class="width_100 marginT8" placeholder="학습내용을 입력해주세요."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2페이지</th>
+                                <th>
+                                    사전학습
+                                    <p class="table_comment marginT8">* 이수시간: 0초</p>
+                                </th>
+                                <td>
+                                    <button class="btn btn_narrationRegistration"><span class="material-symbols-rounded">playlist_add</span>나레이션 등록</button>
+                                    <table class="table_overlay marginT16">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>항목</th>
+                                                <th>등록</th>
+                                                <th>순서</th>
+                                                <th>등록 건 수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>용어 입력</td>
+                                                <td>
+                                                    <button class="btn primary btn_termInput">등록</button>
+                                                </td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                                <td>
+                                                    총 <button class="btn_termInput_detail"><strong class="txtEnd_color">5</strong> 건</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>3페이지</th>
+                                <th>
+                                    학습하기
+                                    <p class="table_comment marginT8">* 이수시간: 2450초</p>
+                                </th>
+                                <td>
+                                    <table class="table_overlay">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>항목</th>
+                                                <th>등록</th>
+                                                <th>순서</th>
+                                                <th>등록 건 수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>VOD 영상 재생</td>
+                                                <td>
+                                                    <button class="btn primary btn_vodRegistration">등록</button>
+                                                </td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                                <td>
+                                                    총 <button><strong class="txtEnd_color">2</strong> 건</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>4페이지</th>
+                                <th>
+                                    심화문제
+                                    <p class="table_comment marginT8">* 이수시간: 0초</p>
+                                </th>
+                                <td>
+                                    <button class="btn"><span class="material-symbols-rounded">playlist_add</span>나레이션 등록</button>
+                                    <button class="btn marginL10"><span class="material-symbols-rounded">playlist_add</span>영어듣기 MP3 등록</button>
+                                    <table class="table_overlay marginT16">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>항목</th>
+                                                <th>등록</th>
+                                                <th>순서</th>
+                                                <th>등록 건 수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>퀴즈</td>
+                                                <td>
+                                                    <button class="btn primary">등록</button>
+                                                </td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                                <td>
+                                                    총 <button><strong class="txtEnd_color">0</strong> 건</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>의견입력</td>
+                                                <td>
+                                                    <button class="btn primary btn_professorOpinion">등록</button>
+                                                </td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                                <td>
+                                                    총 <button class=" btn_professorOpinion_list"><strong class="txtEnd_color">5</strong> 건</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>5페이지</th>
+                                <th>
+                                    심화문제 풀이
+                                    <p class="table_comment marginT8">* 이수시간: 0초</p>
+                                </th>
+                                <td>
+                                    <table class="table_overlay">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>항목</th>
+                                                <th>등록</th>
+                                                <th>순서</th>
+                                                <th>등록 건 수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>VOD 영상 재생</td>
+                                                <td>
+                                                    <button class="btn primary">등록</button>
+                                                </td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                                <td>
+                                                    총 <button><strong class="txtEnd_color">0</strong> 건</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>6페이지</th>
+                                <th>
+                                    학습퀴즈
+                                    <p class="table_comment marginT8">* 이수시간: 0초</p>
+                                </th>
+                                <td>
+                                    <table class="table_overlay">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>항목</th>
+                                                <th>등록</th>
+                                                <th>순서</th>
+                                                <th>등록 건 수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>퀴즈</td>
+                                                <td>
+                                                    <button class="btn primary">등록</button>
+                                                </td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                                <td>
+                                                    총 <button><strong class="txtEnd_color">0</strong> 건</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>의견입력</td>
+                                                <td>
+                                                    <button class="btn primary">등록</button>
+                                                </td>
+                                                <td>
+                                                    <input type="number">
+                                                </td>
+                                                <td>
+                                                    총 <button><strong class="txtEnd_color">0</strong> 건</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>7 페이지</th>
+                                <th>
+                                    학습정리
+                                    <p class="table_comment marginT8">* 이수시간: 0초</p>
+                                </th>
+                                <td>
+                                    <textarea name="" id="" class="width_100" placeholder="학습 정리 내용을 입력해주세요."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>8페이지</th>
+                                <th>
+                                    다음 강의 안내
+                                    <p class="table_comment marginT8">* 이수시간: 0초</p>
+                                </th>
+                                <td>
+                                    다음 강의 명이 자동으로 노출됩니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">사용 여부</th>
+                                <td>
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="radio" name="useYn" id="useYn_1" value="Y">
+                                            <label for="useYn_1">사용</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="useYn" id="useYn_2" value="N">
+                                            <label for="useYn_2">미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">노출 여부</th>
+                                <td>
+                                    <div class="form_group alignC">
+                                        <div class="form_check">
+                                            <input type="radio" name="exposureStatus" id="exposureStatus_1" >
+                                            <label for="exposureStatus_1">노출</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="exposureStatus" id="exposureStatus_2">
+                                            <label for="exposureStatus_2">비노출</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 레이어_나레이션 등록 -->
+            <div class="layer_wrapper narration_registration"> <!-- active 추가 시화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>나레이션 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>파일 등록</th>
+                                    <td>
+                                        <!-- 첨부파일 버튼형 -->
+                                        <div class="file_search btn_type">
+                                            <label for="fileUpload" class="btn primary">
+                                                <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                            </label>
+                                            <input type="file" class="transparent" id="fileUpload" multiple>
+                                            <div class="fileSearch_after">
+                                                <div>
+                                                    <a href="#none">file_01.mp3</a>
+                                                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //첨부파일 버튼형 -->
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <th>미리듣기</th>
+                                    <td>
+                                        <button class="btn marginR10"><span class="material-symbols-rounded">graphic_eq</span>미리듣기</button>
+                                        <span class="txtTemporary_color">00:00:00</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_나레이션 등록 -->
+
+            <!-- 레이어_용어 입력 -->
+            <div class="layer_wrapper term_input"> <!-- active 추가 시화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>용어 해설 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>용어</th>
+                                    <td>
+                                        <input type="text" placeholder="용어를 입력해주세요." class="width_100">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>용어 설명</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="용어 설명을 작성해주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_용어 입력 -->
+
+            <!-- 레이어_용어 입력 상세 -->
+            <div class="layer_wrapper termInput_detail"> <!-- active 추가 시화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>용어 입력 상세</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:180px;">
+                                <col style="width:380px">
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>용어</th>
+                                    <th>용어 설명</th>
+                                    <th>수정</th>
+                                    <th>삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <tr>
+                                    <td>8</td>
+                                    <td>언어의 자의성</td>
+                                    <td class="align_left">언어를 구성하는 음성과 의미 간에 필연적 관계가 없는 것을 말한다. 길면 길면 길면 길면길면 길면</td>
+                                    <td><button class="btn">수정</button></td>
+                                    <td><button class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>언어의 자의성</td>
+                                    <td class="align_left">언어를 구성하는 음성과 의미 간에 필연적 관계가 없는 것을 말한다. 길면 길면 길면 길면길면 길면</td>
+                                    <td><button class="btn">수정</button></td>
+                                    <td><button class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>언어의 자의성</td>
+                                    <td class="align_left">언어를 구성하는 음성과 의미 간에 필연적 관계가 없는 것을 말한다. 길면 길면 길면 길면길면 길면</td>
+                                    <td><button class="btn">수정</button></td>
+                                    <td><button class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_용어 입력 상세 -->
+            
+
+            <!-- 레이어_VOD 영상 재생 등록 등록 -->
+            <div class="layer_wrapper vod_registration"> <!-- active 추가 시화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>VOD 영상 재생 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>Kollus ID</th>
+                                    <td>
+                                        <input type="text" placeholder="Kollus ID를 입력해주세요."> <button class="btn secondary marginL10">유효성 검사</button>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <th>미리듣기</th>
+                                    <td>
+                                        <button class="btn marginR10"><span class="material-symbols-rounded">graphic_eq</span>미리듣기</button>
+                                        <span class="txtTemporary_color">00:00:00</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_VOD 영상 재생 등록 -->
+
+            <!-- 레이어_퀴즈 등록 -->
+            <div class="layer_wrapper quiz_registration active">
+                <div class="layer_basic">
+                    <div class="layer_header">
+                        <h2>퀴즈 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:100px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><span class="essential">*</span>퀴즈 종류</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">퀴즈 종류 선택</option>
+                                            <option value="">객관식</option>
+                                            <option value="">주관식</option>
+                                            <option value="">OX</option>
+                                        </select>
+                                        <p class="txtError_color warning">퀴즈 종류를 선택해주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>문제 입력</th>
+                                    <td>
+                                        <textarea name="" id="" class="width_100" placeholder="문제 본문 텍스트를 입력해주세요."></textarea>
+
+                                        <!-- 첨부파일 버튼형 -->
+                                         <div class="file_search btn_type marginT16">
+                                            <label for="fileUpload" class="btn primary">
+                                               <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                            </label>
+                                            <input type="file" class="transparent" id="fileUpload" multiple="">
+                                            <div class="fileSearch_after">
+                                                <div>
+                                                    <a href="#none">file_01.jpg</a>
+                                                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                </div>
+                                            </div>
+                                         </div>
+                                        <!-- //첨부파일 버튼형 -->
+                                         <p class="txtError_color warning">문제를 입력해주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>예제 입력</th>
+                                    <td>
+                                        <input type="text" placeholder="예제를 입력해주세요." class="width_100">
+                                        <p class="txtError_color warning">예제를 입력해주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>보기</th>
+                                    <td>
+                                        <!-- 보기 내용 입력 -->
+                                        <ol class="answer_option">
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                <!-- 첨부파일 버튼형 -->
+                                                <div class="file_search btn_type">
+                                                    <label for="answer_01" class="btn primary">
+                                                    <span class="material-symbols-rounded">attach_file</span></label>
+                                                    <input type="file" class="transparent" id="answer_01" multiple="">
+                                                    <div class="fileSearch_after">
+                                                        <div>
+                                                            <a href="#none">file_01.excel</a>
+                                                            <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //첨부파일 버튼형 -->
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                <!-- 첨부파일 버튼형 -->
+                                                <div class="file_search btn_type">
+                                                    <label for="answer_02" class="btn primary">
+                                                    <span class="material-symbols-rounded">attach_file</span></label>
+                                                    <input type="file" class="transparent" id="answer_02" multiple="">
+                                                    <div class="fileSearch_after">
+                                                        <div>
+                                                            <a href="#none">file_01.excel</a>
+                                                            <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //첨부파일 버튼형 -->
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                <!-- 첨부파일 버튼형 -->
+                                                <div class="file_search btn_type">
+                                                    <label for="answer_03" class="btn primary">
+                                                    <span class="material-symbols-rounded">attach_file</span></label>
+                                                    <input type="file" class="transparent" id="answer_03" multiple="">
+                                                    <div class="fileSearch_after">
+                                                        <div>
+                                                            <a href="#none">file_01.excel</a>
+                                                            <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //첨부파일 버튼형 -->
+                                            </li>
+                                            <li>
+                                                <input type="text" placeholder="보기 내용을 입력해주세요.">
+                                                <!-- 첨부파일 버튼형 -->
+                                                <div class="file_search btn_type">
+                                                    <label for="answer_04" class="btn primary">
+                                                    <span class="material-symbols-rounded">attach_file</span></label>
+                                                    <input type="file" class="transparent" id="answer_04" multiple="">
+                                                    <div class="fileSearch_after">
+                                                        <div>
+                                                            <a href="#none">file_01.excel</a>
+                                                            <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //첨부파일 버튼형 -->
+                                            </li>
+                                        </ol>
+                                        <p class="txtError_color warning">1번 보기 내용을 입력해주세요.</p>
+                                        <!-- //보기 내용 입력 -->
+                                        <!-- 보기 추가 버튼 -->
+                                        <div class="btn_answerOption">
+                                            <button class="btn"><span class="material-symbols-rounded">add</span>보기 추가</button>
+                                            <button class="btn secondary"><span class="material-symbols-rounded">remove</span>보기 삭제</button>
+                                        </div>
+                                        <!-- //보기 추가 버튼 --> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>정답</th>
+                                    <td>
+                                       <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="rightAnswer" id="rightAnswer_1">
+                                                <label for="rightAnswer_1">1번</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="rightAnswer" id="rightAnswer_2">
+                                                <label for="rightAnswer_2">2번</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="rightAnswer" id="rightAnswer_3">
+                                                <label for="rightAnswer_3">3번</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="rightAnswer" id="rightAnswer_4">
+                                                <label for="rightAnswer_4">4번</label>
+                                            </div>
+                                            <p class="txtError_color warning">정답을 입력해주세요.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 주관식 -->
+                                <tr>
+                                    <th><span class="essential">*</span>답안 입력</th>
+                                    <td>
+                                        <input type="text" placeholder="답안을 입력해주세요." class="width_50">
+                                        <button class="btn marginL8"><span class="material-symbols-rounded">add</span>유사 답안 추가</button>
+                                        <p class="txtError_color warning">답안을 입력해주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span>유사 답안</th>
+                                    <td>
+                                        <input type="text" placeholder="유사 답안을 입력해주세요. ※ 여러 개일 경우, “|”로 구분" class="width_50">
+                                        <button class="btn marginL8 secondary"><span class="material-symbols-rounded">remove</span>유사 답안 삭제</button>
+                                        <p class="txtError_color warning">유사 답안을 입력해주세요.</p>
+                                    </td>
+                                </tr>
+                                <!-- //주관식 -->
+                                <!-- OX -->
+                                <tr>
+                                    <th><span class="essential">*</span>정답</th>
+                                    <td>
+                                        <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="ox" id="ox_o">
+                                                <label for="ox_o">O</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="ox" id="ox_x">
+                                                <label for="ox_x">X</label>
+                                            </div>
+                                        </div>
+                                        <p class="txtError_color warning">정답을 체크해주세요.</p>
+                                    </td>
+                                </tr>
+                                <!-- //OX -->
+                                <tr>
+                                    <th>해설</th>
+                                    <td colspan="3">
+                                         <textarea name="" id="" class="width_100" placeholder="해설 내용을 입력해주세요."></textarea>
+                                        <!-- 첨부파일 버튼형 -->
+                                         <div class="file_search btn_type marginT16">
+                                            <label for="fileUpload_explanation" class="btn primary">
+                                               <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                            </label>
+                                            <input type="file" class="transparent" id="fileUpload_explanation" multiple="">
+                                            <div class="fileSearch_after">
+                                                <div>
+                                                    <a href="#none">file_01.png</a>
+                                                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                </div>
+                                            </div>
+                                         </div>
+                                        <!-- //첨부파일 버튼형 -->
+                                        <p class="txtError_color warning">해설 내용을 입력해주세요.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_개별 등록 -->
+
+            <!-- 레이어_심화문제 의견 입력 -->
+            <div class="layer_wrapper professor_opinion"> <!-- active 추가 시화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>의견 입력 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>교수님 의견</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="교수님의 의견을 작성해주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_심화문제 의견 입력 -->
+
+            <!-- 레이어_의견 입력 상세 -->
+            <div class="layer_wrapper professorOpinion_list"> <!-- active 추가 시화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>의견 입력 상세</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:450px">
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>주제</th>
+                                    <th>수정</th>
+                                    <th>삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <tr>
+                                    <td>8</td>
+                                    <td class="align_left">언어를 구성하는 음성과 의미 간에 필연적 관계가 없는 것을 말한다. 길면 길면 길면 길면길면 길면</td>
+                                    <td><button class="btn">수정</button></td>
+                                    <td><button class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td class="align_left">언어를 구성하는 음성과 의미 간에 필연적 관계가 없는 것을 말한다. 길면 길면 길면 길면길면 길면</td>
+                                    <td><button class="btn">수정</button></td>
+                                    <td><button class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td class="align_left">언어를 구성하는 음성과 의미 간에 필연적 관계가 없는 것을 말한다. 길면 길면 길면 길면길면 길면</td>
+                                    <td><button class="btn">수정</button></td>
+                                    <td><button class="material-symbols-rounded">delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_의견 입력 상세 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn">취소</button>
+                <button class="btn primary">저장</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

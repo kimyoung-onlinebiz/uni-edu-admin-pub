@@ -68,7 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_questionRegistration', layer: '.question_registration', many: true }, // 강의 평가 관리 평가문항 등록 레이어
         { sel: '.btn_evaluationResult', layer: '.evaluation_result', many: true }, // 강의 평가 결과 레이어
         { sel: '.btn_profScore', layer: '.prof_score', many: true }, // 교수별 평점 레이어
-        { sel: '.btn_professorProfile', layer: '.professor_profile', many: true } // 교수프로필 레이어
+        { sel: '.btn_professorProfile', layer: '.professor_profile', many: true }, // 교수프로필 레이어
+        { sel: '.btn_addLecture', layer: '.add_lecture', many: true }, // 강의 추가 등록 레이어
+        { sel: '.btn_narrationRegistration', layer: '.narration_registration', many: true }, // 나레이션 등록 레이어
+        { sel: '.btn_termInput', layer: '.term_input', many: true }, // 용어 입력 레이어
+        { sel: '.btn_termInput_detail', layer: '.termInput_detail', many: true }, // 용어 상세보기 레이어
+        { sel: '.btn_vodRegistration', layer: '.vod_registration', many: true }, // VOD 등록 레이어
+        { sel: '.btn_professorOpinion', layer: '.professor_opinion', many: true }, // 교수님 의견 레이어
+        { sel: '.btn_professorOpinion_list', layer: '.professorOpinion_list', many: true } // 교수님 의견 상세 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

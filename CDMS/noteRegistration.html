@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#" class="active">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">local_library</span>교육과정 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">편성 템플릿 관리</a>
+                </li>
+                <li>
+                    <a href="#">편성 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학기/기수(학점은행제) 관리</a></li>
+                        <li><a href="#none">일반과정 관리</a></li>
+                        <li><a href="#none">민간자격증 관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전공 관리</a></li>
+                <li><a href="#">과정 관리</a></li>
+                <li><a href="#">동일교과정 그룹 관리</a></li>
+                <li class="active_depth_2"><a href="#">CDMS</a></li>
+                <li><a href="#">교재 관리</a></li>
+                <li><a href="#">패키지 관리</a></li>
+                <li><a href="#">학습자별 패키지 관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>콘텐츠 등록 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">교육과정 관리</a></li>
+                    <li><a href="#none">CDMS</a></li>
+                    <li>콘텐츠 등록 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>강의노트 등록</h3>
+            <ul class="big_tab">
+                <li><a href="#tab1" class="active">기본 정보</a></li>
+                <li><a href="#tab2">강의 노트 구성</a></li>
+            </ul>
+            
+            <!-- 데이터 영역 -->
+            <h4 class="borderN">
+                기본 정보 등록
+                <span>*표시된 항목은 필수 입력 항목입니다.</span>
+            </h4>
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:10%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>등록 타입</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_1">
+                                    <label for="radio_1">엑셀 일괄 등록</label>
+                                </div>    
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_2" checked="">
+                                    <label for="radio_2">시스템 일괄 등록</label>
+                                </div>
+                            </div>
+                            <p class="txtError_color warning">등록 타입을 선택해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>임시 주차 선택</th>
+                        <td>
+                            <div class="form_group">
+                                <select name="" id="">
+                                    <option value="">임시 주차 선택</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">주차당 차시 선택</option>
+                                </select>
+                                <div class="form_check">
+                                    <input type="checkbox" name="inline_01" id="inline_01">
+                                    <label for="inline_01">OT 생성</label>
+                                </div>
+                            </div>
+                            <p class="txtError_color warning">임시 주차를 선택해주세요.</p>
+                            <p class="table_comment">※ 중간·기말·오프라인 수업 참석 주차는 제공 콘텐츠가 없으므로 등록 시 제외해주세요. (예: 이론 15주차 과정 → 임시 주차: “13주차”로 등록)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>파일 등록</th>
+                        <td>
+                            <button class="btn btn_excelUpload"><span class="material-symbols-rounded">upload</span>엑셀 업로드</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어 엑셀 업로드 -->
+            <div class="layer_wrapper excel_upload"><!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>엑셀 업로드</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        <div>
+                            정해진 엑셀 양식에 입력하여 업로드 하세요.
+                            <button class="btn_fileType"><span class="material-symbols-rounded">download</span>엑셀 양식 다운로드</button>
+                        </div>
+                    </div>
+
+                    <!-- layer 내용 -->
+                        <div class="layer_content">
+                            <!-- 파일 업로드 드래그 앤 드롭 위치-->
+                            <div class="file_dragUpload">
+                                <div class="drag_area">
+                                    <label for="fileUpload">클릭</label>
+                                    <input type="file" class="transparent" id="fileUpload" multiple>
+                                    또는 파일을 드래그해서 <br />업로드 해주세요.
+                                </div>
+                                <div class="fileSearch_after">
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 파일 업로드 드래그 앤 드롭 위치-->
+
+                        </div>
+                        <!-- //layer 내용 -->
+
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">등록</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어 엑셀 업로드 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn primary">저장 후 다음 단계로 <span class="material-symbols-rounded marginL4">arrow_right_alt</span></button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
