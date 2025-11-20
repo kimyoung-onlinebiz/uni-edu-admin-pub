@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_termInput_detail', layer: '.termInput_detail', many: true }, // 용어 상세보기 레이어
         { sel: '.btn_vodRegistration', layer: '.vod_registration', many: true }, // VOD 등록 레이어
         { sel: '.btn_professorOpinion', layer: '.professor_opinion', many: true }, // 교수님 의견 레이어
-        { sel: '.btn_professorOpinion_list', layer: '.professorOpinion_list', many: true } // 교수님 의견 상세 레이어
+        { sel: '.btn_professorOpinion_list', layer: '.professorOpinion_list', many: true }, // 교수님 의견 상세 레이어
+        { sel: '.btn_quizRegistration', layer: '.quiz_registration', many: true } // 퀴즈 등록 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);
