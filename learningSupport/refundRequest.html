@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#" class="active">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">handshake</span>학습지원 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">상담관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">상담유입관리</a></li>
+                        <li><a href="#none">상담원상태</a></li>
+                        <li><a href="#none">상담대기</a></li>
+                        <li><a href="#none">상담연결이력</a></li>
+                        <li><a href="#none">상담원이관</a></li>
+                        <li><a href="#none">상담데이터</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">무료학습설계</a>
+                </li>
+                <li><a href="#">1:1 문의</a></li>
+                <li class="active_depth_2"><a href="#">환불신청게시판</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li>
+                    <a href="#">SMS/메일관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">SMS 관리</a></li>
+                        <li><a href="#none">메일 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>환불신청게시판</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습지원 관리</a></li>
+                    <li>환불신청게시판</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                 <dl class="search_box">
+                    <dt>회원</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">전체</option>
+                            <option value="">ID</option>
+                            <option value="">이름</option>
+                        </select>
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>기간검색</dt>
+                    <dd>
+                        <div class="form_group calendar">
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                            </div>
+                            <span class="calendar_bullet">~</span>
+                            <div class="form_warning">
+                                <input type="date" id="searchEndDate" placeholder="종료일">
+                                <p class="txtError_color">종료일은 시작일보다 
+                같거나 늦어야 합니다.</p>
+                            </div>
+                            <ul class="btn_date_range">
+                                <li><button class="active">당일</button></li>
+                                <li><button>당월</button></li>
+                                <li><button>전일</button></li>
+                                <li><button>전월</button></li>
+                                <li><button>연간</button></li>
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>환불상태</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">전체</option>
+                            <option value="">ID</option>
+                            <option value="">이름</option>
+                        </select>
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                    <button class="btn secondary btn_refundRequest">환불신청서</button>
+                </div>
+            </div>
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <tbody>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th>No</th>
+                        <th>년도</th>
+                        <th>학기</th>
+                        <th>기수</th>
+                        <th>ID</th>
+                        <th>이름</th>
+                        <th>과정명</th>
+                        <th>패키지명</th>
+                        <th>결제금액</th>
+                        <th>환불요청금액</th>
+                        <th>신청사유</th>
+                        <th>상담원</th>
+                        <th>결제수단</th>
+                        <th>환불상태</th>
+                        <th>신청일자</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>홍길동</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                            <a href="#none">kimyoung11</a>
+                        </td>
+                        <td>김명</td>
+                        <td>상담심리학</td>
+                        <td>경영학패키지</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>서비스불만</td>
+                        <td>홍길동</td>
+                        <td>신용카드</td>
+                        <td>환불신청</td>
+                        <td>2025-11-22</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>홍길동</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                            <a href="#none">kimyoung11</a>
+                        </td>
+                        <td>김명</td>
+                        <td>상담심리학</td>
+                        <td>경영학패키지</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>서비스불만</td>
+                        <td>홍길동</td>
+                        <td>신용카드</td>
+                        <td>환불신청</td>
+                        <td>2025-11-22</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>홍길동</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                            <a href="#none">kimyoung11</a>
+                        </td>
+                        <td>김명</td>
+                        <td>상담심리학</td>
+                        <td>경영학패키지</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>서비스불만</td>
+                        <td>홍길동</td>
+                        <td>신용카드</td>
+                        <td>환불신청</td>
+                        <td>2025-11-22</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_교육비 환불 신청서 -->
+            <div class="layer_wrapper refund_request"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>교육비 환불 신청서</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="table_top align_right">
+                            <table class="table_overlay">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th rowspan="2">결재</th>
+                                    <th>담당</th>
+                                    <th>팀장</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:150px">
+                                <col>
+                                <col style="width:150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>성명</th>
+                                    <td>홍길동(hong)</td>
+                                    <th>연락처</th>
+                                    <td>010-****-1111</td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td>hong@gmail.com</td>
+                                    <th>환불신청일</th>
+                                    <td>2025-09-09</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="data_table marginT24">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>학기 및 기수</th>
+                                    <th>전공</th>
+                                    <th>과목명</th>
+                                    <th>결제일</th>
+                                    <th>결제방법</th>
+                                    <th>환불방법</th>
+                                    <th>결제액</th>
+                                    <th>환불액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>2025년 2학기 4기</p>
+                                        <p>25.09.10~25.12.23</p>
+                                    </td>
+                                    <td>영문학</td>
+                                    <td>영문법</td>
+                                    <td>2025-09-09</td>
+                                    <td>무통장입금</td>
+                                    <td>무통장입금(가상계좌)</td>
+                                    <td>85,000</td>
+                                    <td>85,000</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>2025년 2학기 4기</p>
+                                        <p>25.09.10~25.12.23</p>
+                                    </td>
+                                    <td>영문학</td>
+                                    <td>영문법</td>
+                                    <td>2025-09-09</td>
+                                    <td>무통장입금</td>
+                                    <td>무통장입금(가상계좌)</td>
+                                    <td>85,000</td>
+                                    <td>85,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot> <!-- 테이블 푸터(바닥글) -->
+                                <tr>
+                                    <th colspan="6">총 금액</th>
+                                    <td><strong class="txtError_color">170,000</strong></td>
+                                    <td><strong class="txtError_color">170,000</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <table class="table_view marginT24">
+                            <colgroup>
+                                <col style="width:180px">
+                                <col>
+                                <col style="width:180px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>환불사유</th>
+                                    <td>수강할 시간이 없음</td>
+                                    <th>비고</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>환불계좌</th>
+                                    <td colspan="3">
+                                        <dl class="bank_info">
+                                            <dt>은행명</dt>
+                                            <dd>국민은행</dd>
+                                        </dl>
+                                        <dl class="bank_info">
+                                            <dt>예금주</dt>
+                                            <dd>김영</dd>
+                                        </dl>
+                                        <dl class="bank_info">
+                                            <dt>계좌번호</dt>
+                                            <dd>1234-50-324-12345</dd>
+                                        </dl>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>본인여부</th>
+                                    <td colspan="3">
+                                        <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">Y</label>
+                                            </div>
+                                            <div class="form_check">
+                                                    <input type="radio" name="" id="">
+                                                    <label for="">N</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>통장사본</th>
+                                    <td><a href="#none">sol_20250904_120350.png</a></td>
+                                    <th>관계증명제출여부</th>
+                                    <td><a href="#none">sol_20250904_120350.png</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <strong>위와 같이 납부한 교육비 환불을 신청합니다.</strong>
+                        <span>메가스터디아카데미원격평생교육원 담당자 귀하</span>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">수정</button>
+                        <button class="btn primary">출력</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_교육비 환불 신청서 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#" class="active">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">handshake</span>학습지원 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">상담관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">상담유입관리</a></li>
+                        <li><a href="#none">상담원상태</a></li>
+                        <li><a href="#none">상담대기</a></li>
+                        <li><a href="#none">상담연결이력</a></li>
+                        <li><a href="#none">상담원이관</a></li>
+                        <li><a href="#none">상담데이터</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">무료학습설계</a>
+                </li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">환불신청게시판</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li class="active_depth_2">
+                    <a href="#">SMS/메일관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">SMS 관리</a></li>
+                        <li><a href="#none">메일 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>SMS 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습지원 관리</a></li>
+                    <li>SMS 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+             <h3>SMS 등록</h3>
+
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:180px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <tr>
+                        <th>발송타입</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">개별</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">일괄</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">시스템</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>개별발송</th>
+                        <td>
+                            <button class="btn btn_searchMemberDetail">회원 검색</button>
+                            <textarea name="" id="" class="width_100 marginT8" placeholder="휴대폰 번호 ‘-’없이 숫자만 입력. 엔터나 ,(콤마)로 번호 구분"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>일괄발송</th>
+                        <td><button class="btn btn_excelUpload"><span class="material-symbols-rounded">upload</span>엑셀 업로드</button></td>
+                    </tr>
+                    <tr>
+                        <th>제목</th>
+                        <td><input type="text" class="width_100" placeholder="SMS 제목을 입력해주세요."></td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td>
+                            <textarea name="" id="" class="width_100" placeholder="세지를 입력해주세요. 90Byte초과 시 LMS로 자동 전환됩니다."></textarea>
+                            <div class="byte_info">
+                                <p>SMS</p>
+                                <span><strong>0</strong> / 90 Byte</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>발신번호</th>
+                        <td>
+                            <input type="tel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>발송옵션</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="">
+                                    <label for="">즉시발송</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="">
+                                    <label for="">예약발송</label>
+                                </div>
+                                
+                                <div class="form_warning">
+                                    <input type="date" id="searchStartDate" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2">
+                                    <p class="txtError_color">종료일은 시작일보다 
+                                같거나 늦어야 합니다.</p>
+                                </div>
+                                </div>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 레이어 엑셀 업로드 -->
+            <div class="layer_wrapper excel_upload"><!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>엑셀 업로드</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        <div>
+                            정해진 엑셀 양식에 입력하여 업로드 하세요.
+                            <button class="btn_fileType"><span class="material-symbols-rounded">download</span>엑셀 양식 다운로드</button>
+                        </div>
+                    </div>
+
+                    <!-- layer 내용 -->
+                        <div class="layer_content">
+                            <!-- 파일 업로드 드래그 앤 드롭 위치-->
+                            <div class="file_dragUpload">
+                                <div class="drag_area">
+                                    <label for="fileUpload">클릭</label>
+                                    <input type="file" class="transparent" id="fileUpload" multiple>
+                                    또는 파일을 드래그해서 <br />업로드 해주세요.
+                                </div>
+                                <div class="fileSearch_after">
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 파일 업로드 드래그 앤 드롭 위치-->
+
+                        </div>
+                        <!-- //layer 내용 -->
+
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">등록</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어 엑셀 업로드 -->
+
+            <!-- 레이어_회원 검색 -->
+            <div class="layer_wrapper search_memberDetail"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>회원 검색</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="search_section">
+                            <dl class="search_box">
+                                <dt>학기/차시</dt>
+                                <dd>
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="" class="small">
+                                            <option value="">년도</option>
+                                        </select>
+                                        <select name="" id="" class="small">
+                                            <option value="">학기</option>
+                                        </select>
+                                        <select name="" id="" class="small">
+                                            <option value="">기수</option>
+                                        </select>
+                                    </div>
+                                    <!-- //셀렉트박스 -->
+                                </dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>교육과정</dt>
+                                <dd>
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <!-- //셀렉트박스 -->
+                                </dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>회원</dt>
+                                <dd>
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">ID</option>
+                                            <option value="">이름</option>
+                                        </select>
+                                        <div class="search_input">
+                                            <input type="text" placeholder="검색어를 입력해주세요.">
+                                        </div>
+                                    </div>
+                                    <!-- //셀렉트박스 -->
+                                </dd>
+                                <dt>개인정보동의 여부</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="radio" name="" id="">
+                                            <label for="">Y</label>
+                                        </div>
+                                        <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">N</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="btn_group">
+                                <button class="btn">초기화</button>
+                                <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox">
+                                    </th>
+                                    <th>아이디</th>
+                                    <th>회원명</th>
+                                    <th>휴대폰번호</th>
+                                    <th>이메일</th>
+                                    <th>수신여부</th>
+                                    <th>회원구분</th>
+                                    <th>회원상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>kimyoung</td>
+                                    <td>홍길동</td>
+                                    <td>010-****-0000</td>
+                                    <td>ky@kimyoung.co.kr</td>
+                                    <td>Y</td>
+                                    <td>교육원</td>
+                                    <td>정상회원</td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>kimyoung</td>
+                                    <td>홍길동</td>
+                                    <td>010-****-0000</td>
+                                    <td>ky@kimyoung.co.kr</td>
+                                    <td>Y</td>
+                                    <td>교육원</td>
+                                    <td>정상회원</td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>kimyoung</td>
+                                    <td>홍길동</td>
+                                    <td>010-****-0000</td>
+                                    <td>ky@kimyoung.co.kr</td>
+                                    <td>Y</td>
+                                    <td>교육원</td>
+                                    <td>정상회원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- 페이징 -->
+                        <div class="paging">
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                            <a href="#none">1</a>
+                            <a href="#none" class="active">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+                        </div>
+                        <!-- //페이징 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_회원 검색 -->
+
+            <div class="btn_groupRight">
+                <button class="btn">취소</button>
+                <button class="btn primary">저장</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

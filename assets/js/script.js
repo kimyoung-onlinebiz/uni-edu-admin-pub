@@ -76,7 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_vodRegistration', layer: '.vod_registration', many: true }, // VOD 등록 레이어
         { sel: '.btn_professorOpinion', layer: '.professor_opinion', many: true }, // 교수님 의견 레이어
         { sel: '.btn_professorOpinion_list', layer: '.professorOpinion_list', many: true }, // 교수님 의견 상세 레이어
-        { sel: '.btn_quizRegistration', layer: '.quiz_registration', many: true } // 퀴즈 등록 레이어
+        { sel: '.btn_quizRegistration', layer: '.quiz_registration', many: true }, // 퀴즈 등록 레이어
+        { sel: '.btn_noticePreview', layer: '.notice_preview', many: true }, // 공지사항 내용 미리보기 레이어
+        { sel: '.btn_assignChange', layer: '.assign_change', many: true }, // 상담원 근무/배정 변경 레이어
+        { sel: '.btn_reasonHolding', layer: '.reason_holding', many: true }, // 보유사유 등록 레이어
+        { sel: '.btn_counselingAssign', layer: '.counseling_assign', many: true }, // 상담원 배정 레이어
+        { sel: '.btn_searchMember', layer: '.search_member', many: true }, // 회원검색 레이어
+        { sel: '.btn_memberConfirmation', layer: '.member_confirmation', many: true }, // 대상확인 레이어
+        { sel: '.btn_memberInfo', layer: '.member_info', many: true }, // 상담 데이터 등록 회원정보 레이어
+        { sel: '.btn_refundRequest', layer: '.refund_request', many: true }, // 환불신청서 레이어
+        { sel: '.btn_categoryManagement', layer: '.category_management', many: true }, // 카테고리 관리 레이어
+        { sel: '.btn_searchMemberDetail', layer: '.search_memberDetail', many: true } // sms/메일 회원검색 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

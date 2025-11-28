@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#" class="active">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">handshake</span>학습지원 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">상담관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">상담유입관리</a></li>
+                        <li><a href="#none">상담원상태</a></li>
+                        <li><a href="#none">상담대기</a></li>
+                        <li><a href="#none">상담연결이력</a></li>
+                        <li><a href="#none">상담원이관</a></li>
+                        <li><a href="#none">상담데이터</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">무료학습설계</a>
+                </li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">환불신청게시판</a></li>
+                <li class="active_depth_2"><a href="#">FAQ</a></li>
+                <li>
+                    <a href="#">SMS/메일관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">SMS 관리</a></li>
+                        <li><a href="#none">메일 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>FAQ</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습지원 관리</a></li>
+                    <li>FAQ</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                 <dl class="search_box">
+                    <dt>FAQ 검색</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">대분류</option>
+                            <option value="">회원정보</option>
+                        </select>
+                    </dd>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">소분류</option>
+                            <option value="">회원가입/탈퇴</option>
+                            <option value="">회원정보</option>
+                        </select>
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                        </div>
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn btn_categoryManagement"><span class="material-symbols-rounded">category</span>카테고리 등록</button>
+                    <button class="btn secondary">등록</button>
+                </div>
+            </div>
+
+            <!-- 레이어_카테고리 등록 -->
+            <div class="layer_wrapper category_management"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>카테고리 등록</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="search_section">
+                            <dl class="search_box">
+                                <dt>대분류</dt>
+                                <dd>
+                                    <input type="text" placeholder="대분류를 입력해 주세요.">
+                                </dd>
+                                <dt>소분류</dt>
+                                <dd>
+                                    <input type="text" placeholder="소분류를 입력해 주세요.">
+                                </dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>대분류 순서</dt>
+                                <dd>
+                                    <input type="number">
+                                </dd>
+                                <dt>상태</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="radio" name="radio_1" id="">
+                                            <label for="">사용</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="radio_1"id="">
+                                            <label for="">미사용</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="btn_group">
+                                <button class="btn primary">등록</button>
+                            </div>
+                        </div>
+
+                        <div class="page_comment">
+                            <ul>
+                                <li>동일 대분류+소분류 조합은 등록할 수 없습니다.</li>
+                                <li>순서값은 직접 수정 후 [저장]을 눌러야 반영됩니다.</li>
+                                <li>연결수> 0인 항목은 삭제할 수 없습니다. 상태를 미사용으로 전환하세요.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>대분류</th>
+                                    <th>소분류</th>
+                                    <th>순서</th>
+                                    <th>상태</th>
+                                    <th>소분류 연결 수</th>
+                                    <th>수정</th>
+                                    <th>삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>8</td>
+                                    <td>회원정보</td>
+                                    <td>가입</td>
+                                    <td>1</td>
+                                    <td>
+                                        <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="radio_1" id="">
+                                                <label for="">사용</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="radio_1"id="">
+                                                <label for="">미사용</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>
+                                        <button class="btn">수정</button>
+                                    </td>
+                                    <td>
+                                        <button class="material-symbols-rounded">delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="number"></td>
+                                    <td>
+                                        <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="radio_1" id="">
+                                                <label for="">사용</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="radio_1"id="">
+                                                <label for="">미사용</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>
+                                        <button class="btn primary">저장</button>
+                                    </td>
+                                    <td>
+                                        <button class="material-symbols-rounded">delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <!-- 페이징 -->
+                    <div class="paging">
+                        <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                        <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                        <a href="#none">1</a>
+                        <a href="#none" class="active">2</a>
+                        <a href="#none">3</a>
+                        <a href="#none">4</a>
+                        <a href="#none">5</a>
+                        <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                        <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+                    </div>
+                    <!-- //페이징 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_카테고리 등록 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:650px">
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>대분류</th>
+                        <th>소분류</th>
+                        <th>제목</th>
+                        <th>등록자</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>회원정보</td>
+                        <td>가입/탈퇴</td>
+                        <td class="align_left">
+                            <a href="#none" class="ellipsis faq_subject">회원가입 방법을 알려주세요 알려주세요 알려주세요 알려주세요 알려주세요 알려주세요 알려주세요 알려주세요 길다 길다 길다 길다 길다 길다 길다</a>
+                        </td>
+                        <td>김명</td>
+                        <td>2025-11-22</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>회원정보</td>
+                        <td>가입/탈퇴</td>
+                        <td class="align_left">
+                            <a href="#none">회원가입 방법을 알려주세요</a>
+                        </td>
+                        <td>김명</td>
+                        <td>2025-11-22</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>회원정보</td>
+                        <td>가입/탈퇴</td>
+                        <td class="align_left">
+                            <a href="#none">회원가입 방법을 알려주세요</a>
+                        </td>
+                        <td>김명</td>
+                        <td>2025-11-22</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

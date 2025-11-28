@@ -88,6 +88,7 @@
 .admin_content h4 { display:flex; align-items:center; justify-content:space-between; color: var(--Neutral_900); font-size:20px; font-weight:600; margin-top:40px; padding:20px 16px 14px 16px; border-top:1px solid var(--neutral_300); }
 .admin_content h4.borderN { border:none; padding-top:0; }
 .admin_content h4 strong { color:var(--primary_500); }
+.admin_content h3 + h4 { border:none; margin-top:-3px; padding-top:0; }
 
 /* 공통 컴포넌트:입력 필드 */
 .form_group { display:flex; gap:20px; flex-wrap:wrap; }
@@ -591,6 +592,52 @@ td .file_search.btn_type a { text-decoration:none; }
 .content_composition { display:flex; gap:60px; }
 .content_composition .search_box { align-items:center; }
 .content_composition .search_box select { width:500px; }
-.note_registration { display:flex; border:1px solid var(--neutral_500); border-radius:var(--borderRadius_2); }
+.note_registration { display:flex; border:1px solid var(--neutral_500); border-radius:var(--borderRadius_2); overflow:hidden; }
 .note_registration .list { width:500px; max-height:1600px; padding:20px 32px; border-right:1px solid var(--neutral_500); overflow:auto; }
 .note_registration .note_detail { flex:1; padding:20px 32px; background:var(--neutral_300); }
+.notice_preview .layer_content { width:1050px; }
+
+/* 상담원 상태 */
+.counselor_status { display:flex; gap:20px; }
+.counselor_status .status { width:500px; display:flex; text-align:center;flex-direction:column; gap:10px; padding:32px 32px 24px; position:relative; border-radius:var(--borderRadius_2); transition:all .2s; box-shadow:var(--shadow_light); background:var(--neutral_100); border:1px solid var(--neutral_300); text-align:center; }
+.counselor_status .status dl { display:flex; justify-content:center; }
+.counselor_status .status dt,.counselor_status .status dd { font-size:var(--font_large); font-weight:600; }
+.counselor_status .status dd { color:var(--neutral_500); }
+.counselor_status .status dd:before { content:"|"; padding:0 8px; font-weight:400; }
+.counselor_status .hoursWork { font-size:20px; font-weight:600; }
+.counselor_status .hoursWork strong { color:var(--success_color); font-weight:600; }
+.counselor_status .hoursWork span:first-child:after { content:": " }
+.counselor_status .table { padding:27px 32px 24px; flex:1; background:var(--neutral_300); border-radius:var(--borderRadius_2); overflow:hidden; border:1px solid var(--neutral_500); }
+.counselor_status .table h3 { font-size:var(--font_medium); font-weight:600; margin-bottom:12px; }
+.counselor_status .table strong { color:var(--primary_500); }
+.counseler_notice { display:flex; gap:40px; }
+.counseler_notice div { width:50%; }
+.counseler_notice div h4 { border-top:none; border-bottom:1px solid var(--neutral_900); padding-top:0; }
+.counseler_notice div li { position:relative; display:flex; padding:16px 20px 16px 20px; height:65px; border-bottom:1px solid var(--neutral_300); align-items:center; justify-content:space-between; }
+.counseler_notice div li p,.counseler_notice div li a { display:list-item; list-style:disc; list-style-position:inside; width:80%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.counseler_notice div li a { width:100%; }
+.counseler_notice div li p.complete { color:var(--neutral_600); }
+.counseler_notice div li button { width:102px; }
+.tooltip.right { left:initial; right:-80px; }
+.tooltip.right:before { left:initial; right:88px; }
+.change_history .tooltip { width:300px; }
+.reason_holding .layer_content,.counseling_assign .layer_content,.search_member .layer_content,.member_confirmation .layer_content { width:800px; }
+.off td { color:var(--neutral_600); background:var(--neutral_100); }
+.refund_request .table_overlay { width:300px; min-width:300px; }
+.refund_request .table_overlay td { height:38px; }
+.refund_request .layer_content { width:1000px; }
+.data_table tfoot { border-bottom:1px solid #dfe8ec; }
+.refund_request .layer_content { width:1000px; padding-bottom:20px; }
+.bank_info { display:flex; gap:16px; align-items:center; }
+.bank_info dt { font-weight:600; min-width:60px; padding-right:8px; }
+.refund_request .layer_content > strong { display:block; font-weight:600; font-size:var(--font_large); margin:40px 0 10px; }
+.faq_subject { width:650px }
+.category_management .layer_content { width:1100px; }
+.category_management .search_section, .category_management .page_comment { margin-bottom:20px; }
+.byte_info { display:flex; justify-content:flex-end; margin-top:8px; }
+.byte_info p { font-weight:500; margin-right:4px; }
+.byte_info strong { color:var(--primary_500); }
+.byte_info span { color:var(--neutral_500); }
+.byte_info span:before { content:"(" }
+.byte_info span:after { content:")" }
+.search_memberDetail .layer_content { width:1000px; }

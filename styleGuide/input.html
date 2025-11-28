@@ -64,6 +64,57 @@
             <button class="btn"><span class="material-symbols-rounded">playlist_add</span>편성과정 추가</button>
             <button class="btn marginL24"><span class="material-symbols-rounded">credit_score</span>금액 자동 계산</button>
             <button class="btn"><span class="material-symbols-rounded">quick_reference</span>자동 일괄 출제</button>
+            <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <tbody>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
         </div>
         <h3>강조 버튼</h3>
         <div class="component_example">
@@ -1330,7 +1381,7 @@
         <!-- //레이어_학습상담 -->
         <br />
         <br />
-         툴팁
+        <h3>툴팁</h3>
         <div class="icon_tooltip">
             <button class="material-symbols-rounded btn_help" title="안내사항 보기">Help</button>
             <div class="tooltip">
@@ -1343,7 +1394,20 @@
             </div>
         </div>
         <br />
-
+        <br />
+        <h3>툴팁 화살표 오른쪽 기준 (tooltip에 right 클래스 추가)</h3>
+        <div class="icon_tooltip">
+            <button class="material-symbols-rounded btn_help icon_fill" title="변경이력 보기">Visibility</button>
+            <div class="tooltip right" style="width:300px;">
+                <ul>
+                    <li>김메가(mega.lee) 2025-09-08 오전 10:10</li>
+                    <li>이메가(mega.lee) 2025-09-08 오전 10:09</li>
+                    <li>이메가(mega.lee) 2025-09-08 오전 10:09</li>
+                    <li>이메가(mega.lee) 2025-09-08 오전 10:09</li>
+                    <li>이메가(mega.lee) 2025-09-08 오전 10:09</li>
+                </ul>
+            </div>
+        </div>
         <h3>내용 없을때- 위 아래 border 있는 경우</h3>
         <div class="no_txt border">
             반 생성 후, 미배정 인원을 반에 자동 배정해 주세요.

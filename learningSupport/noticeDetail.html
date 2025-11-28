@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#" class="active">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">handshake</span>학습지원 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">상담관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">상담유입관리</a></li>
+                        <li><a href="#none">상담원상태</a></li>
+                        <li><a href="#none">상담대기</a></li>
+                        <li><a href="#none">상담연결이력</a></li>
+                        <li><a href="#none">상담원이관</a></li>
+                        <li><a href="#none">상담데이터</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">무료학습설계</a>
+                </li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">환불신청게시판</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li>
+                    <a href="#">SMS/메일관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">SMS 관리</a></li>
+                        <li><a href="#none">메일 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>공지사항</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습지원 관리</a></li>
+                    <li>공지사항</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>분류</th>
+                        <td>학사</td>
+                        <th>중요공지</th>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>제목</th>
+                        <td colspan="3">[공지] 원천사 시스템 점검 안내 (우리(7/13), 국민(7/20), 농협(7/21))</td>
+                    </tr>
+                    <tr>
+                        <th>등록자</th>
+                        <td>홍길동(gdhong)</td>
+                        <th>등록일</th>
+                        <td>2025-12-11</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td colspan="3">
+                            <img src="https://cdn.ibstudy.co.kr/Content_new/event/2025/notiMobile_0825/noti_mobile_01.png" alt="">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>첨부파일</th>
+                        <td colspan="3">
+                            <a href="#none">첨부파일첨부파일.png(20MB)</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div class="btn_groupRight">
+                <button class="btn secondary">목록</button>
+                <button class="btn">삭제</button>
+                <button class="btn primary">수정</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#" class="active">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">handshake</span>학습지원 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">상담관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">상담유입관리</a></li>
+                        <li><a href="#none">상담원상태</a></li>
+                        <li><a href="#none">상담대기</a></li>
+                        <li><a href="#none">상담연결이력</a></li>
+                        <li><a href="#none">상담원이관</a></li>
+                        <li><a href="#none">상담데이터</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">무료학습설계</a>
+                </li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">환불신청게시판</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li>
+                    <a href="#">SMS/메일관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">SMS 관리</a></li>
+                        <li><a href="#none">메일 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>무료 학습 설계</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습지원 관리</a></li>
+                    <li>무료 학습 설계</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>무료 학습설계 등록</h3>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:150px">
+                    <col>
+                    <col style="width:150px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <tr>
+                        <th>설계신청 과정</th>
+                        <td>학위취득자 타전공</td>
+                        <th>신청일</th>
+                        <td>2025-07-07 오전 08:33</td>
+                    </tr>
+                    <tr>
+                        <th>ID</th>
+                        <td><a href="#none" target="_blank">kimyoung11</a></td>
+                        <th>이름</th>
+                        <td>김영이</td>
+                    </tr>
+                    <tr>
+                        <th>최종학력</th>
+                        <td colspan="3">4년제 학사학위</td>
+                    </tr>
+                    <tr>
+                        <th>대학교</th>
+                        <td>김영대학교</td>
+                        <th>학과</th>
+                        <td>경영학과</td>
+                    </tr>
+                   <tr>
+                        <th>휴대폰</th>
+                        <td>010-111-1111</td>
+                        <th>이메일</th>
+                        <td>kimyoung222@naver.com</td>
+                    </tr>
+                    <tr>
+                        <th>학점취득 희망시점</th>
+                        <td>2026.02</td>
+                        <th>취득목표 전공</th>
+                        <td>전문학사 / 경영</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td colspan="3">내용내용 내용 내용 내용</td>
+                    </tr>
+                    <tr>
+                        <th>자격증 보유현황</th>
+                        <td>
+                            <ul class="bullet_circle">
+                                <li>자격증명: 평생교육사 취득일자: 2025-06-09</li>
+                                <li>자격증명: 평생교육사 취득일자: 2025-06-09</li>
+                                <li>자격증명: 평생교육사 취득일자: 2025-06-09</li>
+                            </ul>
+                        </td>
+                        <th>현재보유학점현황</th>
+                        <td><a href="#none">보유학점.png</a></td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>학점인정 예상결과</th>
+                        <td colspan="3">
+                            <div class="table_top align_right">
+                                <div class="table_actions">
+                                    <button class="btn"><span class="material-symbols-rounded">add</span>추가</button>
+                                </div>
+                            </div>
+                            <table class="table_overlay">
+                                <colgroup>
+                                    <col>
+                                    <col style="width:400px">
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup> 
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>과목명</th>
+                                        <th>전적대 학점</th>
+                                        <th>인정 예상 학점</th>
+                                        <th>삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">전공 필수</option>
+                                                <option value="">전공 선택</option>
+                                                <option value="">일반</option>
+                                                <option value="">교양</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="width_100">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <button class="material-symbols-rounded">delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">전공 필수</option>
+                                                <option value="">전공 선택</option>
+                                                <option value="">일반</option>
+                                                <option value="">교양</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="width_100">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <button class="material-symbols-rounded">delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">전공 필수</option>
+                                                <option value="">전공 선택</option>
+                                                <option value="">일반</option>
+                                                <option value="">교양</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="width_100">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <button class="material-symbols-rounded">delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">전공 필수</option>
+                                                <option value="">전공 선택</option>
+                                                <option value="">일반</option>
+                                                <option value="">교양</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="width_100">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <button class="material-symbols-rounded">delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">전공필수</option>
+                                                <option value="">전공선택</option>
+                                                <option value="">일반</option>
+                                                <option value="">교양</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="width_100">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <button class="material-symbols-rounded">delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>향후 학점취득 계획</th>
+                        <td colspan="3">
+                            <table class="table_overlay">
+                                <colgroup>
+                                    <col>
+                                    <col style="width:400px">
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup> 
+                                <thead>
+                                    <tr>
+                                        <th>전공필수</th>
+                                        <th>전공선택</th>
+                                        <th>일반선택</th>
+                                        <th>교양</th>
+                                        <th>이수학점</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                        <td>
+                                            <input type="number">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>답변</th>
+                        <td colspan="3">
+                            <textarea name="" id="" class="width_100" placeholder="답변을 입력해주세요"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>첨부파일</th>
+                        <td colspan="3">
+                            <!-- 첨부파일 버튼형 -->
+                            <div class="file_search btn_type">
+                                <label for="fileUpload" class="btn primary">
+                                    <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                </label>
+                                <input type="file" class="transparent" id="fileUpload" multiple>
+                                <div class="fileSearch_after">
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //첨부파일 버튼형 -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn_groupRight">
+                <button class="btn">취소</button>
+                <button class="btn primary">저장</button>
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

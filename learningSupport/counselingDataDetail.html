@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#" class="active">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">handshake</span>학습지원 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">공지사항</a>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">상담관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">상담유입관리</a></li>
+                        <li><a href="#none">상담원상태</a></li>
+                        <li><a href="#none">상담대기</a></li>
+                        <li><a href="#none">상담연결이력</a></li>
+                        <li><a href="#none">상담원이관</a></li>
+                        <li><a href="#none" class="active_depth_3">상담데이터</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">무료학습설계</a>
+                </li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">환불신청게시판</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li>
+                    <a href="#">SMS/메일관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">SMS 관리</a></li>
+                        <li><a href="#none">메일 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>상담원 상태</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습지원 관리</a></li>
+                    <li><a href="#none">상담 관리</a></li>
+                    <li>상담 데이터</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>상담 데이터 등록</h3>
+            <h4>
+                기본 정보
+                <a href="#none" class="btn">원본 유입 로그보기</a>
+            </h4>
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>상담코드</th>
+                        <td>20250911-001</td>
+                        <th>상담신청일</th>
+                        <td>2025-07-07 오전 08:33</td>
+                    </tr>
+                    <tr>
+                        <th>회원명</th>
+                        <td>
+                            홍길동
+                            <button class="btn marginL8 btn_memberInfo">회원정보</button>
+                        </td>
+                        <th>회원 여부</th>
+                        <td>
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_1">
+                                    <label for="radio_1">회원</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_2">
+                                    <label for="radio_2">비회원</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>연락처(개인정보활용동의)</th>
+                        <td>010-111-1111(Y)</td>
+                        <th>유입경로</th>
+                        <td>카카오톡</td>
+                    </tr>
+                    <tr>
+                        <th>문의과정</th>
+                        <td colspan="3">사회복지사 2급</td>
+                    </tr>
+                   <tr>
+                        <th>내용</th>
+                        <td colspan="3">무료강의를 듣고자합니다 무료강의를 듣고자합니다</td>
+                    </tr>
+                    <tr>
+                        <th>상담원</th>
+                        <td>김영이</td>
+                        <th>배정상태</th>
+                        <td><strong class="txtError_color marginR10">성공</strong>(자동배정, 2025-09-09 오후 04:20)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_회원정보 배정 -->
+            <div class="layer_wrapper member_info"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>회원정보</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <h3>고객정보</h3>
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:180px">
+                                <col>
+                                <col style="width:150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>이름</th>
+                                    <td>홍길동</td>
+                                    <th>아이디</th>
+                                    <td>dfsg1232354</td>
+                                </tr>
+                                <tr>
+                                    <th>상태</th>
+                                    <td>정상</td>
+                                    <th>가입일</th>
+                                    <td>2025-01-11</td>
+                                </tr>
+                                <tr>
+                                    <th>휴대폰</th>
+                                    <td>010-111-1111</td>
+                                    <th>이메일</th>
+                                    <td>ky@kimyoung.co.kr</td>
+                                </tr>
+                                <tr>
+                                    <th>거주지역</th>
+                                    <td>서울시 강남구</td>
+                                    <th>주소</th>
+                                    <td>[06777] 서울시 서초구 강남대로 273(서초동, 송남빌딩) 212호</td>
+                                </tr>
+                            <tr>
+                                    <th>장애 여부</th>
+                                    <td>비대상</td>
+                                    <th>보훈 여부</th>
+                                    <td>대상</td>
+                                </tr>
+                                <tr>
+                                    <th>SMS 수신 동의</th>
+                                    <td>동의</td>
+                                    <th>이메일 수신 동의</th>
+                                    <td>동의</td>
+                                </tr>
+                                <tr>
+                                    <th>마케팅 및 광고 활용 동의</th>
+                                    <td colspan="3">동의</td>
+                                </tr>
+                                <tr>
+                                    <th>최근 접속 일시</th>
+                                    <td colspan="3">2025-01-11 16:20:11</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_회원정보 -->
+
+            <h4 class="borderN">배정이력</h4>
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>배정일시</th>
+                        <th>담당자</th>
+                        <th>방식</th>
+                        <th>결과</th>
+                        <th>사유</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>2025-07-02 12:30:59</td>
+                        <td>홍길동</td>
+                        <td>자동</td>
+                        <td>성공</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2025-07-02 12:30:59</td>
+                        <td>홍길동</td>
+                        <td>수동</td>
+                        <td>실패</td>
+                        <td>상담원부재</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">상담 타임라인</h4>
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>상담시간</th>
+                        <th>담당자</th>
+                        <th>상담유형</th>
+                        <th>상담내용</th>
+                        <th>상담여부</th>
+                        <th>상담완료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>2025-07-02 12:30:59</td>
+                        <td>홍길동</td>
+                        <td>학위</td>
+                        <td>일교차 큰 날씨, 건강 유의</td>
+                        <td>완료</td>
+                        <td>등록</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2025-07-02 12:30:59</td>
+                        <td>홍길동</td>
+                        <td>학위</td>
+                        <td>일교차 큰 날씨, 건강 유의</td>
+                        <td>완료</td>
+                        <td>등록</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">상담 내용 등록</h4>
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:100px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>상담유형</th>
+                        <td>
+                            <select name="" id="" class="width_280px">
+                                <option value="">상담유형</option>
+                                <option value="">학위</option>
+                                <option value="">사복</option>
+                                <option value="">자격증</option>
+                                <option value="">단순문의</option>
+                            </select>
+                            <p class="txtError_color warning">상담 유형을 선택해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>상담내용</th>
+                        <td colspan="3">
+                            <input type="text" class="width_100" placeholder="상담내용을 입력해주세요.">
+                            <p class="txtError_color warning">상담 내용을 입력해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>상담여부</th>
+                        <td colspan="3">
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">완료</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">연락대기</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">부재중</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">재통화</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">오번호</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">기타</label>
+                                </div>
+                            </div>
+                            <p class="txtError_color warning">상담 여부를 선택해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>상담완료</th>
+                        <td colspan="3">
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">등록</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">등록 예정</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">미등록 종료</label>
+                                </div>
+                            </div>
+                            <p class="txtError_color warning">상담 결과를 체크해주세요.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_groupRight">
+                <button class="btn">취소</button>
+                <button class="btn primary">저장</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

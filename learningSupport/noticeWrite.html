@@ -103,7 +103,7 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th>분류</th>
+                        <th><span class="essential">*</span>분류</th>
                         <td>
                             <div class="form_group">
                                 <div class="form_check">
@@ -119,112 +119,134 @@
                                     <label for="noticeCategory_3">실습</label>
                                 </div>
                             </div>
+                            <p class="txtError_color warning">공지 분류를 선택해주세요.</p>
                         </td>
-                        <th><span class="essential">*</span>순서</th>
+                        <th>중요</th>
                         <td>
-                            <!-- 안내 문구 뜨는 input -->
-                            <div class="form_warning">
-                                <input type="text" class="width_80px">
-                                <p class="txtError_color">아이디 또는 비밀번호가 올바르지 않습니다.</p>
-                            </div>
-                            <!-- //안내 문구 뜨는 input -->
+                            <input type="checkbox" >
                         </td>
                     </tr>
                     <tr>
-                        <th><span class="essential">*</span>배너 제목</th>
-                        <td colspan="3"><input type="text" class="width_100" placeholder="배너 제목을 입력해주세요."></td>
+                        <th><span class="essential">*</span>제목</th>
+                        <td colspan="3"><input type="text" class="width_100" placeholder="공지 제목을 입력해주세요."></td>
                     </tr>
                     <tr>
                         <th>등록자</th>
-                        <td>-</td>
+                        <td>홍길동(gdhong)</td>
                         <th>등록일</th>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <th>사용여부</th>
-                        <td colspan="3">
-                            <div class="form_group">
-                                <div class="form_check">
-                                    <input type="radio" name="radio_1" id="radio_1">
-                                    <label for="radio_1">기본</label>
-                                </div>
-                                <div class="form_check">
-                                    <input type="radio" name="radio_1" id="radio_2" checked="">
-                                    <label for="radio_2">선택됨</label>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>기간</th>
-                        <td colspan="3">
-                            <div class="form_group">
-                                <div class="form_check">
-                                    <input type="radio" name="radio_3" id="radio_4">
-                                    <label for="radio_4">기본</label>
-                                </div>
-                                <div class="form_check">
-                                    <input type="radio" name="radio_3" id="radio_5" checked="">
-                                    <label for="radio_5">선택됨</label>
-                                </div>
-                                
-                                <div class="form_warning">
-                                    <input type="date" id="searchStartDate" placeholder="시작일">
-                                    <p class="txtError_color">날짜가 올바르지 않습니다.</p>
-                                </div>
-                                
-                                <span class="calendar_bullet">~</span>
-                                
-                                 <div class="form_warning">
-                                    <input type="date" id="searchEndDate" placeholder="종료일">
-                                    <p class="txtError_color">날짜가 올바르지 않습니다.</p>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><span class="essential">*</span>이미지</th>
-                        <td colspan="3">
-                            <!-- 파일 첨부 -->
-                            <div class="file_search">
-
-                                <!-- 선택 이전 -->
-                                <!-- input type="file">
-                                 //선택 이전 -->
-
-                                <!-- 선택 이후 -->
-                                <div class="fileSearch_after">
-                                    <a href="#none"><img src="https://www.kystudy.co.kr/Files/Banner/2025-06-24/layer_250624.png" alt=""></a>
-                                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
-                                </div>
-                                <!-- //선택 이후 -->
-                            </div>
-                            <!-- //파일 첨부 -->
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><span class="essential">*</span>연결 URL</th>
-                        <td colspan="3">
-                            <input type="text" class="width_100" placeholder="연결 URL을 입력해 주세요.">
-                            <div class="form_check marginT8 align_left">
-                                <input type="checkbox" name="chk_1" id="aa_1">
-                                <label for="aa_1">새 창 열기</label>
-                            </div>
-                        </td>
+                        <td>2025-12-11</td>
                     </tr>
                     <tr>
                         <th><span class="essential">*</span>내용</th>
                         <td colspan="3">
-                            <input type="text" class="width_100" placeholder="내용을 입력해 주세요.">
+                            웹 에디터 영역
+                            <p class="txtError_color warning">내용을 입력해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>노출기간 설정</th>
+                        <td colspan="3">
+                            <div class="form_group calendar">
+                                <div class="form_warning">
+                                    <input type="date" id="searchStartDate" placeholder="시작일">
+                                    <input id="" type="time" name="" step="2">
+                                    <p class="txtError_color">종료일은 시작일보다 
+                            같거나 늦어야 합니다.</p>
+                                </div>
+                                <span class="calendar_bullet">~</span>
+                                <div class="form_warning">
+                                    <input type="date" id="searchEndDate" placeholder="종료일">
+                                    <input id="" type="time" name="" step="2">
+                                    <p class="txtError_color">종료일은 시작일보다 
+                            같거나 늦어야 합니다.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>노출여부</th>
+                        <td colspan="3">
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="exposureStatus" id="exposureStatus_1" >
+                                    <label for="exposureStatus_1">노출</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="exposureStatus" id="exposureStatus_2" checked="">
+                                    <label for="exposureStatus_2">비노출</label>
+                                </div>
+                                <button class="btn btn_noticePreview">미리보기</button>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
+            <!-- 공지 미리보기 레이어 -->
+            <div class="layer_wrapper notice_preview">
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>공지 미리보기</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:200px">
+                                <col>
+                                <col style="width:200px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>분류</th>
+                                    <td>학사</td>
+                                    <th>중요공지</th>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>제목</th>
+                                    <td colspan="3">[공지] 원천사 시스템 점검 안내 (우리(7/13), 국민(7/20), 농협(7/21))</td>
+                                </tr>
+                                <tr>
+                                    <th>등록자</th>
+                                    <td>홍길동(gdhong)</td>
+                                    <th>등록일</th>
+                                    <td>2025-12-11</td>
+                                </tr>
+                                <tr>
+                                    <th>내용</th>
+                                    <td colspan="3">
+                                        <img src="https://cdn.ibstudy.co.kr/Content_new/event/2025/notiMobile_0825/noti_mobile_01.png" alt="">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>첨부파일</th>
+                                    <td colspan="3">
+                                        <a href="#none">첨부파일첨부파일.png(20MB)</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary btn_close">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //공지 미리보기 레이어 -->
+
             <div class="btn_groupRight">
-                <button class="btn secondary">목록</button>
-                <button class="btn">삭제</button>
-                <button class="btn primary">수정</button>
+                <button class="btn">취소</button>
+                <button class="btn primary">저장</button>
             </div>
 
             <!-- //데이터 영역 -->
