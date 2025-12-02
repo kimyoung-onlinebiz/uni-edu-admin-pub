@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+   <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#" class="active">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">incomplete_circle</span>매출통계 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+             
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">전체 매출관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">전체매출</a> <!-- 선택 시 active_depth_3 -->
+                        </li>
+                        <li><a href="#none">상담원별 매출</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">회원통계</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none" class="active_depth_3">가입자현황</a>
+                            <ul class="depth_4">
+                                <li><a href="#none" class="active_depth_4">신규가입자 수</a></li>
+                                <li><a href="#none">지역별 회원 수</a></li>
+                                <li><a href="#none">가입경로 및 목적</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">탈퇴 현황</a></li>
+                        <li><a href="#none">실시간 접속 현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">학습통계</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">시험 통계</a></li>
+                        <li><a href="#none">난이도별 정답률</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">운영자 보고</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학습자 운영 현황 보고</a></li> 
+                        <li>
+                            <a href="#none">교수 강의평가</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                        <li>
+                            <a href="#none">강의평가 명단</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                        <li>
+                            <a href="#none">강의평가 문항별 통계</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>신규가입자 수</h2>
+
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">매출통계 관리</a></li>
+                    <li><a href="#none">회원통계</a></li>
+                    <li>신규가입자 수</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+            
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>기간검색</dt>
+                    <dd>
+
+                        <!-- 캘린더 -->
+                        <div class="form_group calendar">
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                            </div>
+                            <span class="calendar_bullet">~</span>
+                            <div class="form_warning">
+                                <input type="date" id="searchEndDate" placeholder="종료일">
+                            </div>
+                            <ul class="btn_date_range">
+                                <li><button class="active">당일</button></li>
+                                <li><button>당월</button></li>
+                                <li><button>전일</button></li>
+                                <li><button>전월</button></li>
+                                <li><button>연간</button></li>
+                            </ul>
+                        </div>
+                        <!-- //캘린더 -->
+
+                    </dd>
+                </dl>
+                
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                </div>
+            </section>
+
+            <!-- //검색 섹션 -->
+
+            <div class="table_top align_right">
+                <div class="table_actions"> 
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                </div>
+            </div>
+
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+
+            <!-- 그래프 영역 -->
+            <div class="chart_section">
+                <div id="chart_div" style="width:100%; height:400px; border:1px solid #eee;">그래프 영역</div>
+            </div>
+            <!-- //그래프 영역 -->
+
+            <!-- 데이터 영역 -->
+
+            <table class="data_table marginT40">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>신규가입자수</th>
+                        <th>전년동기 가입자 수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>합계</strong></td>
+                        <td><strong class="txtImportant_color">100</strong></td>
+                        <td><strong class="txtImportant_color">100</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-31</td>
+                        <td>12</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-31</td>
+                        <td>12</td>
+                        <td>11</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

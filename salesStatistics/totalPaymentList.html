@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+   <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#" class="active">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">incomplete_circle</span>매출통계 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+             
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">전체 매출관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none" class="active_depth_3">전체매출</a> <!-- 선택 시 active_depth_3 -->
+                        </li>
+                        <li><a href="#none">상담원별 매출</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">회원통계</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">가입자현황</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">신규가입자 수</a></li>
+                                <li><a href="#none">지역별 회원 수</a></li>
+                                <li><a href="#none">가입경로 및 목적</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">탈퇴 현황</a></li>
+                        <li><a href="#none">실시간 접속 현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">학습통계</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">시험 통계</a></li>
+                        <li><a href="#none">난이도별 정답률</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">운영자 보고</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학습자 운영 현황 보고</a></li> 
+                        <li>
+                            <a href="#none">교수 강의평가</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                        <li>
+                            <a href="#none">강의평가 명단</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                        <li>
+                            <a href="#none">강의평가 문항별 통계</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>전체매출</h2>
+
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">매출통계 관리</a></li>
+                    <li><a href="#none">전체 매출 관리</a></li>
+                    <li>전체매출</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+            
+            <!-- 검색 섹션 -->
+            <section class="search_section marginB0">
+                <dl class="search_box">
+                    <dt class="width_120px">기간검색</dt>
+                    <dd>
+
+                        <!-- 캘린더 -->
+                        <div class="form_group calendar">
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                            </div>
+                            <span class="calendar_bullet">~</span>
+                            <div class="form_warning">
+                                <input type="date" id="searchEndDate" placeholder="종료일">
+                            </div>
+                            <ul class="btn_date_range">
+                                <li><button class="active">당일</button></li>
+                                <li><button>당월</button></li>
+                                <li><button>전일</button></li>
+                                <li><button>전월</button></li>
+                                <li><button>연간</button></li>
+                            </ul>
+                        </div>
+                        <!-- //캘린더 -->
+
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt class="width_120px">결제상태</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">매출</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">환불</label>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt class="width_120px">학기/차시 구분</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">년도</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">학기</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">기수</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt class="width_120px">교육과정 구분</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt class="width_120px">회원 검색</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">아이디</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <p class="table_comment">※ 최소 한 개 이상의 검색 조건을 선택해야 데이터가 표시됩니다.</p>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <table class="table_view marginT40">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>검색기간</th>
+                        <td>2025-02-22 ~ 2025-03-22</td>
+                        <th>학기/차시</th>
+                        <td>2025년 1학기 1기수</td>
+                    </tr>
+                    <tr>
+                        <th>교육과정(전공/과정)</th>
+                        <td>사회복지학/가족복지론</td>
+                        <th>회원(ID/이름)</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>매출액(건)</th>
+                        <td>100,000(2건)</td>
+                        <th>환불액(건)</th>
+                        <td>10,000(1건)</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>합계</th>
+                        <td colspan="3"><strong class="txtImportant_color">90,000(1건)</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h4 class="borderN">2025년 월별 매출 현황
+                <span>※ 검색한 기간의 전일기준  매출데이터가 표시됩니다.</span>
+            </h4>
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>합계</th>
+                        <th>1월</th>
+                        <th>2월</th>
+                        <th>3월</th>
+                        <th>4월</th>
+                        <th>5월</th>
+                        <th>6월</th>
+                        <th>7월</th>
+                        <th>8월</th>
+                        <th>9월</th>
+                        <th>10월</th>
+                        <th>11월</th>
+                        <th>12월</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>판매금액합(금년)</th>
+                        <td>
+                            <strong class="txtImportant_color">1,200,000</strong>
+                        </td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>판매금액합(전년)</th>
+                        <td>
+                            <strong class="txtImportant_color">1,200,000</strong>
+                        </td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>YoY</th>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtEnd_color">-200%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtEnd_color">-30%</strong>
+                        </td>
+                         <td>
+                            <strong class="txtEnd_color">-30%</strong>
+                        </td>
+                        
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                        <td>
+                            <strong class="txtImportant_color">100%</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="table_top marginT40">
+                <div class="table_sort">
+                    <select>
+                        <option value="name">이름순</option>
+                        <option value="date">날짜순</option>
+                        <option value="amount">금액순</option>
+                    </select>
+                    <span>총 <strong>1,234</strong>건</span>
+                </div>
+                <div class="table_actions"> 
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                    <button class="btn secondary btn_nationalSubsidy">국고보조금 등록</button>
+                </div>
+            </div>
+
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+
+            <!-- 레이어_국가 보조금 입력 -->
+            <div class="layer_wrapper national_subsidy"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>
+                            국고보조금 입력
+                            <button class="btn btn_excelUpload"><span class="material-symbols-rounded">upload</span>엑셀 업로드</button>
+                        </h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+                    <!-- 레이어 엑셀 업로드 -->
+                    <div class="layer_wrapper excel_upload"><!-- active 추가 시 화면 노출 -->
+                        <div class="layer_basic">
+
+                            <div class="layer_header">
+                                <h2>엑셀 업로드</h2>
+                                <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                                <div>
+                                    정해진 엑셀 양식에 입력하여 업로드 하세요.
+                                    <button class="btn_fileType"><span class="material-symbols-rounded">download</span>엑셀 양식 다운로드</button>
+                                </div>
+                            </div>
+
+                            <!-- layer 내용 -->
+                                <div class="layer_content">
+                                    <!-- 파일 업로드 드래그 앤 드롭 위치-->
+                                    <div class="file_dragUpload">
+                                        <div class="drag_area">
+                                            <label for="fileUpload">클릭</label>
+                                            <input type="file" class="transparent" id="fileUpload" multiple>
+                                            또는 파일을 드래그해서 <br />업로드 해주세요.
+                                        </div>
+                                        <div class="fileSearch_after">
+                                            <div>
+                                                <a href="#none">file_01.excel</a>
+                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                            </div>
+                                            <div>
+                                                <a href="#none">file_01.excel</a>
+                                                <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 파일 업로드 드래그 앤 드롭 위치-->
+
+                                </div>
+                                <!-- //layer 내용 -->
+
+                            <div class="layer_btnSection">
+                                <button class="btn btn_close">취소</button>
+                                <button class="btn primary">등록</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //레이어 엑셀 업로드 -->
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="search_section">
+                            <dl class="search_box">
+                                <dt>학기/차시 구분</dt>
+                                <dd>
+                                    <!-- 셀렉트박스 -->
+                                    <div class="form_group">
+                                        <select name="" id="">
+                                            <option value="">년도</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">학기</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">기수</option>
+                                        </select>
+                                    </div>
+                                    <!-- //셀렉트박스 -->
+                                </dd>
+                            </dl>
+                            <div class="btn_group">
+                                <button class="btn">초기화</button>
+                                <button class="btn primary">검색</button>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="table_top">
+                            <div class="table_sort">
+                                <select>
+                                    <option value="">20</option>
+                                </select>
+                                <span>총 <strong>99</strong>건</span>
+                            </div>
+                            <div class="table_actions">
+                                <dl class="inline_dl">
+                                    <dt>국고보조금 입금일</dt>
+                                    <dd>
+                                        <input type="date">
+                                    </dd>
+                                </dl>
+                                <button class="btn">일괄 적용</button>
+                            </div>
+                        </div> 
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox">
+                                    </th>
+                                    <th>No</th>
+                                    <th>년도</th>
+                                    <th>학기</th>
+                                    <th>기수</th>
+                                    <th>전공</th>
+                                    <th>과정</th>
+                                    <th>패키지명</th>
+                                    <th>ID</th>
+                                    <th>이름</th>
+                                    <th>결제금액</th>
+                                    <th>환불금액</th>
+                                    <th>국고보조금</th>
+                                    <th>결제/환불일</th>
+                                    <th>국고보조금 입금일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>8</td>
+                                    <td>2025</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>사회복지학</td>
+                                    <td>가족복지론</td>
+                                    <td>블라패키지</td>
+                                    <td>kimyoung11</td>
+                                    <td>홍길동</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td><input type="number"></td>
+                                    <td>
+                                        <p>2025-06-27</p>
+                                        <p>2025-06-27</p>
+                                    </td>
+                                    <td>
+                                        <input type="date">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>8</td>
+                                    <td>2025</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>사회복지학</td>
+                                    <td>가족복지론</td>
+                                    <td>블라패키지</td>
+                                    <td>kimyoung11</td>
+                                    <td>홍길동</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td><input type="number"></td>
+                                    <td>
+                                        <p>2025-06-27</p>
+                                        <p>2025-06-27</p>
+                                    </td>
+                                    <td>
+                                        <input type="date">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <!-- 페이징 -->
+                    <div class="paging">
+                        <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                        <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                        <a href="#none">1</a>
+                        <a href="#none" class="active">2</a>
+                        <a href="#none">3</a>
+                        <a href="#none">4</a>
+                        <a href="#none">5</a>
+                        <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                        <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+                    </div>
+                    <!-- //페이징 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">등록</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_국가보조금 입력 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>결제상태</th>
+                        <th>결제코드</th>
+                        <th>년도</th>
+                        <th>학기</th>
+                        <th>기수</th>
+                        <th>전공</th>
+                        <th>과정</th>
+                        <th>패키지명</th>
+                        <th>ID</th>
+                        <th>이름</th>
+                        <th>결제금액</th>
+                        <th>환불금액</th>
+                        <th>국고보조금</th>
+                        <th>결제일</th>
+                        <th>환불일</th>
+                        <th>쿠폰</th>
+                        <th>결제수단</th>
+                        <th>컨설턴트</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td><strong class="txtImportant_color">환불</strong></td>
+                        <td>12345</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>10</td>
+                        <td>컴퓨터공학</td>
+                        <td>프로그래밍</td>
+                        <td>블라패키지</td>
+                        <td>kimyoung</td>
+                        <td>이순신</td>
+                        <td>1,000,000</td>
+                        <td>20,000</td>
+                        <td>-</td>
+                        <td>2025-06-27</td>
+                        <td>2025-06-27</td>
+                        <td>5만원 할인권</td>
+                        <td>신용카드</td>
+                        <td>김영이</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong class="txtSuccess_color">매출</strong></td>
+                        <td>12345</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>10</td>
+                        <td>컴퓨터공학</td>
+                        <td>프로그래밍</td>
+                        <td>블라패키지</td>
+                        <td>kimyoung</td>
+                        <td>이순신</td>
+                        <td>1,000,000</td>
+                        <td>20,000</td>
+                        <td>-</td>
+                        <td>2025-06-27</td>
+                        <td>2025-06-27</td>
+                        <td>5만원 할인권</td>
+                        <td>신용카드</td>
+                        <td>김영이</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+				<a href="#none">1</a>
+				<a href="#none" class="active">2</a>
+				<a href="#none">3</a>
+				<a href="#none">4</a>
+				<a href="#none">5</a>
+				<a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

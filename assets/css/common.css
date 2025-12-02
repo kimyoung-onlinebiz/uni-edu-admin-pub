@@ -106,7 +106,7 @@ input[type="file"].transparent { visibility:hidden; position:absolute; left:0; t
 .fileSearch_after button { font-size:21px; color:var(--error_color); margin-top:-2px; background:transparent; }
 .fileSearch_after { display:flex; align-items:start; gap:12px; margin-top:16px; }
 .fileSearch_after div { display:flex; align-items:center; }
-.file_dragUpload { margin-bottom:0 !important; }
+.file_dragUpload { margin-bottom:4px !important; }
 .file_dragUpload label { cursor:pointer; color:var(--primary_500); text-decoration:underline; }
 .file_dragUpload label:hover { color:var(--primary_600); }
 .file_dragUpload .drag_area { border:2px dashed var(--neutral_500); border-radius:var(--borderRadius); padding:20px 0; text-align:center; color:var(--neutral_600); background:var(--neutral_300); transition:all .2s; }
@@ -148,7 +148,7 @@ input.align_right { margin-right:4px; }
 .txtPrimary_600 { color:var(--primary_600); }
 .txtPrimary_700 { color:var(--primary_700); }
 .txtPrimary_800 { color:var(--primary_800); }
-.txtError_color { color:var(--error_color) !important; }
+.txtError_color,.txtImportant_color { color:var(--error_color) !important; }
 .txtWarning_color { color:var(--warning_color); }
 .txtSuccess_color { color:var(--success_color); }
 .txtEnd_color { color:var(--primary_500); }

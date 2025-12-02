@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+   <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리</a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#" class="active">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">incomplete_circle</span>매출통계 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+             
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">전체 매출관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">전체매출</a> <!-- 선택 시 active_depth_3 -->
+                        </li>
+                        <li><a href="#none">상담원별 매출</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">회원통계</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">가입자현황</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">신규가입자 수</a></li>
+                                <li><a href="#none">지역별 회원 수</a></li>
+                                <li><a href="#none">가입경로 및 목적</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">탈퇴 현황</a></li>
+                        <li><a href="#none">실시간 접속 현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">학습통계</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">시험 통계</a></li>
+                        <li><a href="#none">난이도별 정답률</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">운영자 보고</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">학습자 운영 현황 보고</a></li> 
+                        <li>
+                            <a href="#none">교수 강의평가</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                        <li>
+                            <a href="#none">강의평가 명단</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                        <li>
+                            <a href="#none">강의평가 문항별 통계</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>학습자 운영 현황 보고</h2>
+
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">매출통계 관리</a></li>
+                    <li><a href="#none">운영자 보고</a></li>
+                    <li>학습자 운영 현황 보고</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+            
+            <!-- 검색 섹션 -->
+            <section class="search_section marginB0">
+                <dl class="search_box">
+                    <dt class="width_120px">선택</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">운영현황</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">성적보고</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">출석부</label>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt class="width_120px">학기/차시 구분</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">년도</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">학기</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">기수</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt class="width_120px">교육과정</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt class="width_120px">교수명</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+                
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <p class="table_comment">※ 최소 한 개 이상의 검색 조건을 선택해야 데이터가 표시됩니다.</p>
+            <!-- //검색 섹션 -->
+
+
+            <!-- 운영현황 내용 -->
+            <h4 class="borderN">
+                운영현황
+                <div class="table_actions"> 
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                    <button class="btn secondary btn_nationalSubsidy">보고서 전체다운로드</button>
+                </div>
+            </h4>
+            
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>구분</th>
+                        <th>년도</th>
+                        <th>학기</th>
+                        <th>기수</th>
+                        <th>과정명</th>
+                        <th>교수명</th>
+                        <th>반</th>
+                        <th>수강료</th>
+                        <th>할인액</th>
+                        <th>결제일</th>
+                        <th>이름</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>운영현황</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>가족생활교육</td>
+                        <td>김메가</td>
+                        <td>1</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>2025-07-01 9:50</td>
+                        <td>김영</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>운영현황</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>가족생활교육</td>
+                        <td>김메가</td>
+                        <td>1</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>2025-07-01 9:50</td>
+                        <td>김영</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>운영현황</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>가족생활교육</td>
+                        <td>김메가</td>
+                        <td>1</td>
+                        <td>100,000</td>
+                        <td>100,000</td>
+                        <td>2025-07-01 9:50</td>
+                        <td>김영</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //운영현황 내용 -->
+
+            <!-- 성적보고 내용 -->
+            <h4 class="borderN">
+                성적보고
+                <div class="table_actions"> 
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                </div>
+            </h4>
+            
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>년도</th>
+                        <th>학기</th>
+                        <th>기수</th>
+                        <th>과정명</th>
+                        <th>교수명</th>
+                        <th>중간성적</th>
+                        <th>기말성적</th>
+                        <th>기타성적</th>
+                        <th>출석성적</th>
+                        <th>출석률</th>
+                        <th>이름</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>가족생활교육</td>
+                        <td>김메가</td>
+                        <td>12</td>
+                        <td>33</td>
+                        <td>15</td>
+                        <td>15</td>
+                        <td>100</td>
+                        <td>김영</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>가족생활교육</td>
+                        <td>김메가</td>
+                        <td>12</td>
+                        <td>33</td>
+                        <td>15</td>
+                        <td>15</td>
+                        <td>100</td>
+                        <td>김영</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //성적보고 내용 -->
+
+            <!-- 출석부 내용 -->
+             <h4 class="borderN">
+                출석부
+                <div class="table_actions"> 
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                </div>
+            </h4>
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="3">NO</th>
+                        <th rowspan="3">년도</th>
+                        <th rowspan="3">학기</th>
+                        <th rowspan="3">기수</th>
+                        <th rowspan="3">과정명</th>
+                        <th rowspan="3">교수명</th>
+                        <th rowspan="3">ID</th>
+                        <th colspan="28">주차</th>
+                        <th rowspan="3">출석</th>
+                        <th rowspan="3">출석률</th>
+                        <th rowspan="3">결석수</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">1</th>
+                        <th colspan="2">2</th>
+                        <th colspan="2">3</th>
+                        <th colspan="2">4</th>
+                        <th colspan="2">5</th>
+                        <th colspan="2">6</th>
+                        <th colspan="2">7</th>
+                        <th>8</th>
+                        <th colspan="2">9</th>
+                        <th colspan="2">10</th>
+                        <th colspan="2">11</th>
+                        <th colspan="2">12</th>
+                        <th colspan="2">13</th>
+                        <th colspan="2">14</th>
+                        <th>15</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>중간</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>기말</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>2025</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>가족생활교육</td>
+                        <td>김메가</td>
+                        <td>kimyoung11</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>/</td>
+                        <td>O</td>
+                        <td>7</td>
+                        <td>7%</td>
+                        <td>11</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //출석부 내용 -->
+
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+				<a href="#none">1</a>
+				<a href="#none" class="active">2</a>
+				<a href="#none">3</a>
+				<a href="#none">4</a>
+				<a href="#none">5</a>
+				<a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

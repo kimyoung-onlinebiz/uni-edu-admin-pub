@@ -86,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_memberInfo', layer: '.member_info', many: true }, // 상담 데이터 등록 회원정보 레이어
         { sel: '.btn_refundRequest', layer: '.refund_request', many: true }, // 환불신청서 레이어
         { sel: '.btn_categoryManagement', layer: '.category_management', many: true }, // 카테고리 관리 레이어
-        { sel: '.btn_searchMemberDetail', layer: '.search_memberDetail', many: true } // sms/메일 회원검색 레이어
+        { sel: '.btn_searchMemberDetail', layer: '.search_memberDetail', many: true }, // sms/메일 회원검색 레이어
+        { sel: '.btn_nationalSubsidy', layer: '.national_subsidy', many: true } // 국가보조금 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

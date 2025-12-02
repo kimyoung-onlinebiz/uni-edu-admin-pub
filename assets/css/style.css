@@ -38,7 +38,7 @@
 .admin_lnb .sidebar_menu a:hover { color:var(--neutral_0) !important; }
 .sidebar_menu > li { transition:max-height 0.3s cubic-bezier(0.4,0,0.2,1); overflow:hidden; border-bottom:1px solid #334679; padding:8px 0; }
 .sidebar_menu > li.open { overflow:visible; transition:all .3s; }
-.sidebar_menu > li.active_depth_2 { background:var(--primary_900); border-top:1px solid #334679; }
+.sidebar_menu > li.active_depth_2 { background:var(--primary_900); }
 .admin_lnb .sidebar_menu > li > a { color:var(--neutral_500); font-size:var(--font_medium); padding:10px 20px 8px; font-weight:600; border-radius:4px; }
 .admin_lnb .sidebar_menu li a { border-radius:var(--borderRadius); }
 .admin_lnb .sidebar_menu li a:hover { background:var(--primary_800); }
@@ -55,7 +55,7 @@
 /* content */
 .admin_content .content_header h2 { color:var(--neutral_900); font-size:var(--font_xlarge); font-weight:700; }
 .admin_content > h3 { display:flex; align-items:center; justify-content:space-between; color:var(--primary_500); font-size:21px; font-weight:700; margin:3px 0 12px 16px; }
-.admin_content > h3 span,.admin_content > h4 span { color:var(--error_color); font-size:var(--font_small); font-weight:500; }
+.admin_content > h3 span,.admin_content > h4 > span { color:var(--error_color); font-size:var(--font_small); font-weight:500; }
 .admin_content .content_header { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; padding:0 16px; }
 .content_header .breadcrumb { display:flex; align-items:center; font-size:var(--font_base); color:var(--neutral_800); }
 .content_header .breadcrumb a { color:var(--neutral_600); }
@@ -154,6 +154,7 @@ h3+.big_tab { margin-top:0px; }
 .data_table::before,.table_view::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid #000; }
 .data_table th,.data_table td { padding:11px 8px; text-align:center; vertical-align:middle; line-height:1.3; }
 .data_table th,.table_view th { background:var(--neutral_100); border:1px solid var(--neutral_300); border-bottom:none; font-weight:500; text-align:center; }
+.data_table tbody th { border-bottom:1px solid var(--neutral_300); }
 .data_table td { border:1px solid #dfe8ec; text-align:center; background:var(--neutral_0); }
 .data_table.align_left td { text-align:left; }
 .data_table.align_left .form_check { justify-content:start; }
@@ -641,3 +642,7 @@ td .file_search.btn_type a { text-decoration:none; }
 .byte_info span:before { content:"(" }
 .byte_info span:after { content:")" }
 .search_memberDetail .layer_content { width:1000px; }
+
+/* 통계 */
+.national_subsidy input[type="date"] { width:150px; }
+.national_subsidy input[type="number"] { color:var(--error_color); }
