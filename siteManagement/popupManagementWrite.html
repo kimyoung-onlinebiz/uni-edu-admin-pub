@@ -106,46 +106,40 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th>노출 위치</th>
-                        <td>
-                            <div class="form_group">
-                                <select name="" id="">
-                                    <option value="">PC 탑배너</option>
-                                    <option value="">PC 헤더 배너</option>
-                                    <option value="">PC 이벤트 배너</option>
-                                    <option value="">PC 빅 배너</option>
-                                    <option value="">PC 스카이 배너(좌)</option>
-                                    <option value="">PC 스카이 배너(우)</option>
-                                    <option value="">PC 스트립 배너(중단)</option>
-                                    <option value="">PC 스트립 배너(하단)</option>
-                                    <option value="">PC 인라인 배너</option>
-                                    <option value="">MO 빅 배너</option>
-                                    <option value="">MO 스트립 배너(상단)</option>
-                                    <option value="">MO 스트립 배너(중단)</option>
-                                    <option value="">MO 스트립 배너(하단)</option>
-                                </select>
-                               
-                            </div>
-                           
+                        <th><span class="essential">*</span>노출 위치</th>
+                        <td colspan="3">
+                            <select name="" id="">
+                                <option value="">PC 탑배너</option>
+                                <option value="">PC 헤더 배너</option>
+                                <option value="">PC 이벤트 배너</option>
+                                <option value="">PC 빅 배너</option>
+                                <option value="">PC 스카이 배너(좌)</option>
+                                <option value="">PC 스카이 배너(우)</option>
+                                <option value="">PC 스트립 배너(중단)</option>
+                                <option value="">PC 스트립 배너(하단)</option>
+                                <option value="">PC 인라인 배너</option>
+                                <option value="">MO 빅 배너</option>
+                                <option value="">MO 스트립 배너(상단)</option>
+                                <option value="">MO 스트립 배너(중단)</option>
+                                <option value="">MO 스트립 배너(하단)</option>
+                            </select>
+                            <p class="txtError_color warning">노출 위치를 선택해주세요.</p>
                         </td>
+                        
+                    </tr>
+                    <tr>
                         <th><span class="essential">*</span>팝업 제목</th>
-                        <td>
+                        <td colspan="3">
                             <!-- 안내 문구 뜨는 input -->
                             <div class="form_warning">
-                                <input type="text" class="width_100%">
-                                <p class="txtError_color">제목을 입력해 주세요.</p>
+                                <input type="text" class="width_100" placeholder="제목을 입력해 주세요.">
+                                <p class="txtError_color">제목을 입력해주세요.</p>
                             </div>
                             <!-- //안내 문구 뜨는 input -->
                         </td>
                     </tr>
                     <tr>
-                        <th>등록자</th>
-                        <td>-</td>
-                        <th>등록일</th>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <th>노출 기기</th>
+                        <th><span class="essential">*</span>노출 기기</th>
                         <td>
                             <div class="form_group">
                                 <div class="form_check">
@@ -162,7 +156,7 @@
                                 </div>
                             </div>
                         </td>
-                        <th>사용 여부</th>
+                        <th><span class="essential">*</span>사용 여부</th>
                         <td>
                             <div class="form_group">
                                 <div class="form_check">
@@ -174,10 +168,11 @@
                                     <label for="radio_5">미사용</label>
                                 </div>
                             </div>
+                            <p class="txtError_color">사용 여부를 체크해주세요.</p>
                         </td>
                     </tr>
                     <tr>
-                        <th>기간</th>
+                        <th><span class="essential">*</span>기간</th>
                         <td colspan="3">
                             <div class="form_group">
                                 <div class="form_check">
@@ -204,19 +199,19 @@
                         </td>
                     </tr>
                     <tr>
-                        <th><span class="essential">*</span>크기</th>
+                        <th><span class="essential">*</span>크기(px)</th>
                         <td>
                             <div class="form_warning">
-                                <input type="text" class="width_80px" placeholder="가로">
-                                <input type="text" class="width_80px" placeholder="세로">
+                                <input type="number" class="width_80px" placeholder="가로"> 
+                                <input type="number" class="width_80px" placeholder="세로">
                                 <p class="txtError_color">크기를 입력해주세요.</p>
                             </div>
                         </td>
-                        <th><span class="essential">*</span>위치</th>
+                        <th><span class="essential">*</span>위치(px)</th>
                         <td>
                             <div class="form_warning">
-                                <input type="text" class="width_80px" placeholder="Top">
-                                <input type="text" class="width_80px" placeholder="Left">
+                                <input type="number" class="width_80px" placeholder="Top">
+                                <input type="number" class="width_80px" placeholder="Left">
                                 <p class="txtError_color">위치를 입력해주세요.</p>
                             </div>
                         </td>
@@ -236,12 +231,33 @@
                             </div>
                             <dl class="inline_dl marginT8 align_left">
                                 <dt>팝업을 띄우지 않는 간격</dt>
-                                <dd><input type="text" class="width_80px"> 일</dd>
+                                <dd><input type="number" class="width_80px"> 일</dd>
                             </dl>
                         </td>
                     </tr>
+                    
                     <tr>
-                        <th><span class="essential">*</span>내용</th>
+                        <th>이미지 파일</th>
+                        <td colspan="3">
+                            <!-- 파일 첨부 -->
+                            <div class="file_search">
+
+                                <!-- 선택 이전 -->
+                                <input type="file">
+                                
+
+                                <!-- 선택 이후 -->
+                                <div class="fileSearch_after">
+                                    <a href="#none"><img src="https://www.kystudy.co.kr/Files/Banner/2023-11-22/wingBanner_20231122.png" alt=""></a>
+                                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                </div>
+                                <!-- //선택 이후 -->
+                            </div>
+                            <!-- //파일 첨부 -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
                         <td colspan="3">
                             <div class="form_check align_left">
                                 <input type="checkbox" name="chk_1" id="chk_1">
@@ -249,6 +265,12 @@
                             </div>
                             <textarea name="" id="" placeholder="내용을 입력해 주세요." class="width_100 marginT8"></textarea>
                         </td>
+                    </tr>
+                    <tr>
+                        <th>등록자</th>
+                        <td>-</td>
+                        <th>등록일</th>
+                        <td>-</td>
                     </tr>
                 </tbody>
             </table>

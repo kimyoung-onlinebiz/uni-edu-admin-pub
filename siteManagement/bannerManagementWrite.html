@@ -106,75 +106,44 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th>배너 유형</th>
+                        <th><span class="essential">*</span>배너 유형</th>
                         <td>
                             <div class="form_group">
-                                <div class="form_warning">
-                                    <select name="" id="">
-                                        <option value="">PC 탑배너</option>
-                                        <option value="">PC 헤더 배너</option>
-                                        <option value="">PC 이벤트 배너</option>
-                                        <option value="">PC 빅 배너</option>
-                                        <option value="">PC 스카이 배너(좌)</option>
-                                        <option value="">PC 스카이 배너(우)</option>
-                                        <option value="">PC 스트립 배너(중단)</option>
-                                        <option value="">PC 스트립 배너(하단)</option>
-                                        <option value="">PC 인라인 배너</option>
-                                        <option value="">MO 빅 배너</option>
-                                        <option value="">MO 스트립 배너(상단)</option>
-                                        <option value="">MO 스트립 배너(중단)</option>
-                                        <option value="">MO 스트립 배너(하단)</option>
-                                    </select>
-                                    <p class="txtError_color">아이디 또는 비밀번호가 올바르지 않습니다.</p>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">PC</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="" id="">
+                                    <label for="">모바일</label>
                                 </div>
                             </div>
+                            <p class="txtError_color warning">배너 유형을 선택하세요.</p>
                         </td>
-                        <th><span class="essential">*</span>순서</th>
+                        <th><span class="essential">*</span>배너 상세</th>
                         <td>
-                            <!-- 안내 문구 뜨는 input -->
-                            <div class="form_warning">
-                                <input type="text" class="width_80px">
-                                <p class="txtError_color">아이디 또는 비밀번호가 올바르지 않습니다.</p>
-                            </div>
-                            <!-- //안내 문구 뜨는 input -->
+                            <select name="" id="">
+                                <option value="">빅 배너</option>
+                                <option value="">빅 배너 모아보기</option>
+                            </select>
+                            <p class="txtError_color warning">배너를 선택하세요.</p>
                         </td>
                     </tr>
                     <tr>
-                        <th><span class="essential">*</span>배너 제목</th>
+                        <th><span class="essential">*</span>배너명</th>
                         <td colspan="3"><input type="text" class="width_100" placeholder="배너 제목을 입력해주세요."></td>
                     </tr>
                     <tr>
-                        <th>등록자</th>
-                        <td>-</td>
-                        <th>등록일</th>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <th>사용여부</th>
-                        <td colspan="3">
-                            <div class="form_group">
-                                <div class="form_check">
-                                    <input type="radio" name="radio_1" id="radio_1">
-                                    <label for="radio_1">기본</label>
-                                </div>
-                                <div class="form_check">
-                                    <input type="radio" name="radio_1" id="radio_2" checked="">
-                                    <label for="radio_2">선택됨</label>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>기간</th>
+                        <th><span class="essential">*</span>기간</th>
                         <td colspan="3">
                             <div class="form_group">
                                 <div class="form_check">
                                     <input type="radio" name="radio_3" id="radio_4">
-                                    <label for="radio_4">기본</label>
+                                    <label for="radio_4">상시</label>
                                 </div>
                                 <div class="form_check">
                                     <input type="radio" name="radio_3" id="radio_5" checked="">
-                                    <label for="radio_5">선택됨</label>
+                                    <label for="radio_5">기간</label>
                                 </div>
                                 
                                 <div class="form_warning">
@@ -198,12 +167,12 @@
                             <div class="file_search">
 
                                 <!-- 선택 이전 -->
-                                <!-- input type="file">
-                                 //선택 이전 -->
+                                <input type="file">
+                                
 
                                 <!-- 선택 이후 -->
                                 <div class="fileSearch_after">
-                                    <a href="#none"><img src="https://www.kystudy.co.kr/Files/Banner/2025-06-24/layer_250624.png" alt=""></a>
+                                    <a href="#none"><img src="https://www.kystudy.co.kr/Files/Banner/2023-11-22/wingBanner_20231122.png" alt=""></a>
                                     <button type="button" class="material-symbols-rounded" title="삭제">close</button>
                                 </div>
                                 <!-- //선택 이후 -->
@@ -222,18 +191,40 @@
                         </td>
                     </tr>
                     <tr>
-                        <th><span class="essential">*</span>내용</th>
+                        <th>사용여부</th>
                         <td colspan="3">
-                            <input type="text" class="width_100" placeholder="내용을 입력해 주세요.">
+                            <div class="form_group">
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_1">
+                                    <label for="radio_1">기본</label>
+                                </div>
+                                <div class="form_check">
+                                    <input type="radio" name="radio_1" id="radio_2" checked="">
+                                    <label for="radio_2">선택됨</label>
+                                </div>
+                            </div>
                         </td>
                     </tr>
+                    <tr>
+                        <th><span class="essential">*</span>메모</th>
+                        <td colspan="3">
+                            <input type="text" class="width_100" placeholder="메모를 입력해 주세요.">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>등록자</th>
+                        <td>-</td>
+                        <th>등록일</th>
+                        <td>-</td>
+                    </tr>
+
                 </tbody>
             </table>
 
             <div class="btn_groupRight">
                 <button class="btn secondary">목록</button>
-                <button class="btn">삭제</button>
-                <button class="btn primary">수정</button>
+                <button class="btn">취소</button>
+                <button class="btn primary">저장</button>
             </div>
 
             <!-- //데이터 영역 -->
