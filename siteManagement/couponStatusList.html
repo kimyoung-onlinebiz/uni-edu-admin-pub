@@ -67,8 +67,8 @@
                 <li class="active_depth_2">
                     <a href="#" class="active_depth_3">쿠폰관리</a>
                     <ul class="depth_3">
-                        <li><a href="#none" class="active_depth_3">쿠폰 등록</a></li>
-                        <li><a href="#none">쿠폰 지급/현황</a></li>
+                        <li><a href="#none">쿠폰 등록</a></li>
+                        <li><a href="#none" class="active_depth_3">쿠폰 지급/현황</a></li>
                     </ul>
                 </li>
                 <li>
@@ -87,13 +87,13 @@
         <!-- Content -->
         <main class="admin_content" id="container">
             <header class="content_header">
-                <h2>쿠폰 등록</h2>
+                <h2>쿠폰 지급/현황</h2>
                 <!-- 빵부스러기 -->
                 <ul class="breadcrumb">
                     <li><a href="#none">홈</a></li>
                     <li><a href="#none">사이트 관리</a></li>
                     <li><a href="#none">쿠폰 관리</a></li>
-                    <li>쿠폰 등록</li>
+                    <li>쿠폰 지급/현황</li>
                 </ul>
                 <!-- //빵부스러기 -->
             </header>
@@ -116,13 +116,27 @@
                     </dd>
                 </dl>
                 <dl class="search_box">
-                    <dt>쿠폰 유형</dt>
+                    <dt>쿠폰 지급팀</dt>
                     <dd>
                         <!-- 셀렉트박스 -->
                         <select name="" id="">
                             <option value="">전체</option>
-                            <option value="">일반쿠폰</option>
-                            <option value="">제휴쿠폰</option>
+                            <option value="">상담팀</option>
+                            <option value="">행정팀</option>
+                            <option value="">기획팀</option>
+                            <option value="">마케팅팀</option>
+                        </select>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                    <dt>쿠폰 사용여부</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <select name="" id="">
+                            <option value="">전체</option>
+                            <option value="">사용</option>
+                            <option value="">미사용</option>
+                            <option value="">회수</option>
+                            <option value="">기간만료</option>
                         </select>
                         <!-- //셀렉트박스 -->
                     </dd>
@@ -146,7 +160,7 @@
                     <span>총 <strong>99</strong>건</span>
                 </div>
                 <div class="table_actions">
-                    <button class="btn secondary">등록</button>
+                    <button class="btn secondary">지급</button>
                 </div>
             </div>
 
@@ -161,64 +175,49 @@
                     <col>
                     <col>
                     <col>
-                    <col>
-                    <col>
-                    <col>
                 </colgroup>
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>유형</th>
                         <th>쿠폰명</th>
                         <th>쿠폰 코드</th>
-                        <th>쿠폰종류<br />(정액/정률)</th>
-                        <th>할인대상</th>
-                        <th>지급방식</th>
-                        <th>유효기간</th>
+                        <th>아이디</th>
+                        <th>회원명</th>
+                        <th>쿠폰 유효기간</th>
                         <th>사용여부</th>
-                        <th>등록자</th>
-                        <th>최종수정일</th>
+                        <th>지급팀</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>8</td>
-                        <td>일반쿠폰</td>
                         <td><a href="#none">사회복지사1급 시험 대비강좌 무료 쿠폰</a></td>
                         <td>kycp12345</td>
-                        <td>100%</td>
-                        <td>전체</td>
-                        <td>단일</td>
+                        <td>ky*****</td>
+                        <td>김영이</td>
                         <td>2025-07-02~2025-07-31</td>
                         <td>Y</td>
-                        <td>홍길동</td>
-                        <td>2023-02-20</td>
+                        <td>상담팀</td>
                     </tr>
                     <tr>
                         <td>8</td>
-                        <td>일반쿠폰</td>
                         <td><a href="#none">사회복지사1급 시험 대비강좌 무료 쿠폰</a></td>
                         <td>kycp12345</td>
-                        <td>100%</td>
-                        <td>전체</td>
-                        <td>단일</td>
+                        <td>ky*****</td>
+                        <td>김영이</td>
                         <td>2025-07-02~2025-07-31</td>
                         <td>Y</td>
-                        <td>홍길동</td>
-                        <td>2023-02-20</td>
+                        <td>상담팀</td>
                     </tr>
                     <tr>
                         <td>8</td>
-                        <td>일반쿠폰</td>
                         <td><a href="#none">사회복지사1급 시험 대비강좌 무료 쿠폰</a></td>
                         <td>kycp12345</td>
-                        <td>100%</td>
-                        <td>전체</td>
-                        <td>단일</td>
+                        <td>ky*****</td>
+                        <td>김영이</td>
                         <td>2025-07-02~2025-07-31</td>
                         <td>Y</td>
-                        <td>홍길동</td>
-                        <td>2023-02-20</td>
+                        <td>상담팀</td>
                     </tr>
                 </tbody>
             </table>

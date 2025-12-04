@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#" class="active">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">display_settings</span>사이트 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">어드민관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">어드민 메뉴관리</a></li>
+                        <li><a href="#none">프론트 메뉴관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">프론트관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">배너관리</a></li>
+                        <li><a href="#none">팝업관리</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#" class="active_depth_3">쿠폰관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">쿠폰 등록</a></li>
+                        <li><a href="#none" class="active_depth_3">쿠폰 지급/현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">게시판 설정</a>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">약관관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이용약관</a></li>
+                        <li><a href="#none">개인정보처리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>쿠폰 지급/현황</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">사이트 관리</a></li>
+                    <li><a href="#none">쿠폰 관리</a></li>
+                    <li>쿠폰 지급/현황</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>쿠폰 지급</h3>
+
+            <!-- 데이터 영역 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:200px">
+                    <col>
+                    <col style="width:200px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="essential">*</span>쿠폰코드</th>
+                        <td colspan="3">
+                            55fgeerhgyh
+                            <div class="form_check inline">
+                                <input type="checkbox" name="" id="">
+                                <label for="">기지급된 회원 제외</label>
+                            </div>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>쿠폰명</th>
+                        <td colspan="3">
+                            사회복지사1급 시험 대비강좌 무료 쿠폰
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>쿠폰사용기간</th>
+                        <td colspan="3">지급일로부터 15일</td>
+                    </tr>
+                    <tr>
+                        <th>설명</th>
+                        <td colspan="3">특정그룹일괄 제공</td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>지급팀/권한</th>
+                        <td>상담팀</td>
+                        <th><span class="essential">*</span>지급 사유</th>
+                        <td>제휴처</td>
+                    </tr>
+                    <tr>
+                        <th><span class="essential">*</span>회원 아이디</th>
+                        <td colspan="3">kimyoung, hong245, 123hi, kimyoung, hong245, 123hi,kimyoung, hong245, 123hi, kimyoung,hong245, 123hi, kimyoung,hong245,123hi, kimyoung, hong245, 123hi, kimyoung, hong245, 123hi,kimyoung,hong245, 123hi, kimyoung, hong245, 123hi, kimyoung, hong245, 123hi,kimyoung, hong245,123hi, kimyoung, hong245, 123hi, kimyoung,hong245, 123hi, kimyoung, hong245, 123hi, kimyoung,hong245, 123hi,kimyoung,hong245, 123hi, kimyoung, hong245, 123hi, kimyoung, hong245, 123hi, kimyoung, hong245,123hi, kimyoung, hong245, 123hi, kimyoung, hong245,123hi, kimyoung, hong245, 123hi,</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- //데이터 영역 -->
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+            </div>
+
+            <h4>쿠폰 지급 회원리스트</h4>
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn primary">회수</button>
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th>No</th>
+                        <th>쿠폰 코드</th>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>쿠폰 지급일</th>
+                        <th>쿠폰 유효기간</th>
+                        <th>쿠폰 상태</th>
+                        <th>사용/회수 일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>kycp12345</td>
+                        <td>ky*****</td>
+                        <td>김영이</td>
+                        <td>2023-02-20 15:57:17</td>
+                        <td>2023-02-20</td>
+                        <td><strong class="txtTemporary_color">미사용</strong></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>kycp12345</td>
+                        <td>ky*****</td>
+                        <td>김영이</td>
+                        <td>2023-02-20 15:57:17</td>
+                        <td>2023-02-20</td>
+                        <td><strong>사용</strong></td>
+                        <td>2026-02-25-15:22:20</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>kycp12345</td>
+                        <td>ky*****</td>
+                        <td>김영이</td>
+                        <td>2023-02-20 15:57:17</td>
+                        <td>2023-02-20</td>
+                        <td><strong class="txtError_color">회수</strong></td>
+                        <td>2026-02-25-15:22:20(김메가)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+            
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

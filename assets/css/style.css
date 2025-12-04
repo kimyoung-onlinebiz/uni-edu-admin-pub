@@ -641,7 +641,7 @@ td .file_search.btn_type a { text-decoration:none; }
 .byte_info span { color:var(--neutral_500); }
 .byte_info span:before { content:"(" }
 .byte_info span:after { content:")" }
-.search_memberDetail .layer_content { width:1000px; }
+.search_memberDetail .layer_content,.package_search .layer_content,.coupon_list .layer_content { width:1000px; }
 
 /* 통계 */
 .national_subsidy input[type="date"] { width:150px; }
