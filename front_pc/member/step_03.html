@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
+    <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+   <div class="login_wrapper">
+        <header>
+            <h1>
+                <a href="#none"><img src="../assets/images/common/Logo.svg" alt="메가스터디아카데미원격평생교육원"></a>
+            </h1>
+            <h2>회원가입</h2>
+        </header>
+        <div class="login_box">
+
+            <ol class="join_progress">
+                <li>1</li>
+                <li>2</li>
+                <li class="active">3</li>
+                <li>4</li>
+            </ol>
+
+            <div class="join_title">
+                <h3>기본정보 입력</h3>
+                <p><span class="essential">*</span>표시된 항목은 필수 입력 항목입니다.</p>
+            </div>
+
+            <div class="join_container">
+
+                <div class="login_input">
+
+                    <div class="input_area">
+                        <h3><span class="essential">*</span>아이디</h3>
+                        <div class="multiple">
+                            <input type="text" id="user_name" placeholder="아이디를 입력해주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                            <button class="btn_delete" type="button" aria-label="입력값 삭제">
+                                <span class="material-symbols-rounded">close</span>
+                            </button>
+                            <button class="btn primary">중복확인</button>
+                        </div>
+                    </div>
+                    <p class="success_message">사용 가능한 아이디입니다.</p>
+                    <p class="error_message">중복 아이디입니다.</p>
+
+                    <div class="login_input">
+                        <div class="input_area">
+                            <h3><span class="essential">*</span>비밀번호<span>영문+숫자+특수문자 중 2가지 이상 조합(8~16자)</span></h3>
+                            <input type="password" placeholder="비밀번호를 입력해주세요." class="error"> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                            <button class="btn_delete" type="button" aria-label="입력값 삭제">
+                                <span class="material-symbols-rounded">close</span>
+                            </button>
+                        </div>
+                        <p class="error_message">사용 불가능한 비밀번호 입니다. 영문+숫자+특수문자 중 2가지 이상 조합 (8~16자)</p>
+                        <div class="input_area">
+                            <h3><span class="essential">*</span>비밀번호 확인</h3>
+                            <input type="password" placeholder="새로운 비밀번호를 한번 더 입력해주세요." class="success"> <!-- 성공이었을때 success 클래스 추가 초록 border -->
+                            <button class="btn_delete" type="button" aria-label="입력값 삭제">
+                                <span class="material-symbols-rounded">close</span>
+                            </button>
+                        </div>
+                    </div>    
+                    <p class="success_message">사용 가능한 비밀번호 입니다.</p>
+
+                    <div class="input_area">
+                        <h3><span class="essential">*</span>이름</h3>
+                        <input type="text" value="김영이" disabled> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                    </div>
+
+                    <div class="input_area">
+                        <h3><span class="essential">*</span>이메일</h3>
+                        <div class="multiple">
+                            <input type="email" placeholder="이메일을 입력해주세요."> 
+                            <button class="btn_delete" type="button" aria-label="입력값 삭제">
+                                <span class="material-symbols-rounded">close</span>
+                            </button>
+                            <button class="btn primary">중복확인</button>
+                        </div>
+                        <div class="multiple">
+                            <input type="email" value="ky122@kimyoung.co.kr" disabled> 
+                            <button class="btn_delete" type="button" aria-label="입력값 삭제">
+                                <span class="material-symbols-rounded">close</span>
+                            </button>
+                            <button class="btn primary inactive">인증완료</button>
+                        </div>
+                        <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                    </div>
+
+                    <div class="border input_area">
+                        <h3><span class="essential">*</span>최종학력</h3>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                            <option value="">고등학교 졸업자</option>
+                            <option value="">전문대학 졸업자</option>
+                            <option value="">대학교 졸업자</option>
+                            <option value="">외국대학 졸업자</option>
+                            <option value="">대학 중퇴자</option>
+                        </select>
+                    </div>
+                    <p class="error_message">최종학력을 입력해주세요.</p>
+
+                    <div class="input_area">
+                        <h3><span class="essential">*</span>학습목적</h3>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                            <option value="">취업</option>
+                            <option value="">편입</option>
+                            <option value="">자격증 취득</option>
+                            <option value="">대학원 진학</option>
+                            <option value="">기타</option>
+                        </select>
+                    </div>
+
+                    <div class="input_area">
+                        <h3><strong class="txtPrimary_normal">(선택)</strong>추가정보</h3>
+                        <div class="multiple">
+                            <input type="text" placeholder="주소를 입력해주세요."> 
+                            <button class="btn primary">주소검색</button>
+                        </div>
+                        <input type="text" class="marginT16" placeholder="상세 주소를 입력해주세요."> 
+                    </div>
+
+                    <div class="input_area">
+                        <h3>유입경로</h3>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                            <option value="">포털검색</option>
+                            <option value="">블로그,SNS</option>
+                            <option value="">친구추천</option>
+                            <option value="">기타</option>
+                        </select>
+                    </div>
+
+                    <div class="input_area">
+                        <h3>추천인 ID</h3>
+                        <input type="text" value="sdf234" disabled> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                    </div>
+
+                    <div class="input_area">
+                        <h3>담당 컨설턴트</h3>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                        </select>
+                    </div>
+                    
+
+                   
+                    <ul class="btn_login">
+                        <li><button type="button" class="inactive">가입하기</button></li>
+                        <li><button type="button">가입하기</button></li>
+                    </ul>
+                    
+                </div>
+
+        </div>
+
+        <!-- footer -->
+        <footer class="login_footer">
+            <ul>
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+            </ul>
+           <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+    
+</body>
+</html>

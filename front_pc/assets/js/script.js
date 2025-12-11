@@ -2,94 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const $ = sel => document.querySelector(sel);
     const $$ = sel => Array.from(document.querySelectorAll(sel));
 
-    // 사이드바 토글
-    const wrapper = $('.admin_wrapper'), sidebar = $('.admin_lnb'), content = $('.admin_content'), footer = $('.admin_footer');
-    const toggleBtn = $('.toggle_sidebar');
-    if (toggleBtn && wrapper && sidebar && content && footer) {
-        toggleBtn.addEventListener('click', () => {
-            const closed = wrapper.classList.toggle('sidebar_closed');
-            toggleBtn.classList.toggle('close');
-            sidebar.style.marginLeft = closed ? '-260px' : '0';
-            content.style.marginLeft = closed ? '20px' : '280px';
-            footer.style.marginLeft = closed ? '20px' : '280px';
-            footer.style.width = closed ? 'calc(100% - 20px)' : 'calc(100% - 280px)';
-        });
-    }
-
-    // .search_section 초기 height (btn_openClose 있을 때만)
-    const searchSection = $('.search_section');
-    if (searchSection && searchSection.querySelector('.btn_openClose')) {
-        searchSection.style.height = searchSection.offsetHeight + 'px';
-        const btnOpen = $('.btn_group .btn_openClose');
-        if (btnOpen) {
-            btnOpen.addEventListener('click', () => {
-                const small = searchSection.classList.toggle('small');
-                btnOpen.classList.toggle('close');
-                const dls = searchSection.querySelectorAll('dl');
-                dls.forEach((dl, i) => {
-                    dl.style.opacity = small ? (i === 0 ? '1' : '0') : '1';
-                    dl.style.pointerEvents = small ? (i === 0 ? 'auto' : 'none') : 'auto';
-                });
-                searchSection.style.height = small ? '' : searchSection.offsetHeight + 'px';
-            });
-        }
-    }
 
     // 레이어 토글 공통 함수 (selector 여러개 지원)
     const map = [
-        { sel: '.btn_bannerList .btn', layer: '.banner_list', many: false },//배너 목록 보기 레이어
-        { sel: '.btn_bannerPosition', layer: '.banner_position', many: false },//배너 위치 이미지 보기 레이어
-        { sel: '.btn_couponIssue', layer: '.coupon_issue', many: true },//쿠폰 발급대상 레이어
-        { sel: '.btn_bannerPreview', layer: '.layer_bannerPreview', many: true },//배너 미리보기 레이어
-        { sel: '.btn_excelUpload', layer: '.excel_upload', many: true },//엑셀 업로드 레이어
-        { sel: '.btn_download_reason', layer: '.download_reason', many: true },//다운로드 사유 쓰기 레이어
-        { sel: '.btn_see_reasons', layer: '.see_reasons', many: true },// 다운로드 사유 보기 레이어
-        { sel: '.btn_sendingSms', layer: '.sending_sms', many: true },// SMS 발송 레이어
-        { sel: '.btn_studyCounseling', layer: '.study_counseling', many: true },// 학습상담 레이어
-        { sel: '.btn_schoolRegister', layer: '.school_register', many: true }, // 학적부 레이어
-        { sel: '.btn_paymentCourse', layer: '.payment_course', many: true }, // 결제 강좌 레이어
-        { sel: '.btn_withdrawalApproval', layer: '.withdrawal_approval', many: true }, // 탈퇴승인 레이어
-        { sel: '.btn_ipMac', layer: '.ipMac_registration', many: true }, // ip/mac 등록 레이어
-        { sel: '.btn_ipMac_update', layer: '.ipMac_registration_update', many: true }, // ip/mac 이력관리 레이어
-        { sel: '.btn_scheduleHelp', layer: '.schedule_help', many: true }, // 학기/기수 관리 일정 자동 설정 도움말 레이어
-        { sel: '.btn_registrationProcess', layer: '.registration_process', many: true }, // 편성 과정 등록 레이어
-        { sel: '.btn_contentRegistration', layer: '.content_registration', many: true }, // 과정별 콘텐츠 등록 레이어
-        { sel: '.btn_examRegistration', layer: '.exam_registration', many: true }, // 시험 등록 레이어
-        { sel: '.btn_difficultySetting', layer: '.difficulty_setting', many: true }, // 난이도 설정 레이어
-        { sel: '.btn_relativeEvaluation', layer: '.relative_evaluation', many: true }, // 상대평가 설정 레이어
-        { sel: '.btn_difficultyView', layer: '.difficulty_view', many: true }, // 설정된 난이도 보기 레이어
-        { sel: '.btn_examPreview', layer: '.exam_preview', many: true }, // 시험문항 미리보기 레이어
-        { sel: '.btn_singleRegistr', layer: '.single_registr', many: true }, // 시험문항 개별등록 레이어
-        { sel: '.btn_historyManagement', layer: '.history_management', many: true }, // 시험문항 이력관리 레이어
-        { sel: '.btn_batchRegistr', layer: '.batch_registr', many: true }, // 시험문항 일괄등록 레이어
-        { sel: '.btn_reDeployment', layer: '.re_deployment', many: true }, // 수강자 반 재배정 레이어
-        { sel: '.btn_classAssignment', layer: '.class_assignment', many: true }, // 반배정 레이어
-        { sel: '.btn_noReDeployment', layer: '.re_deployment.no', many: true }, // 추가 반배정 레이어
-        { sel: '.btn_questionRegistration', layer: '.question_registration', many: true }, // 강의 평가 관리 평가문항 등록 레이어
-        { sel: '.btn_evaluationResult', layer: '.evaluation_result', many: true }, // 강의 평가 결과 레이어
-        { sel: '.btn_profScore', layer: '.prof_score', many: true }, // 교수별 평점 레이어
-        { sel: '.btn_professorProfile', layer: '.professor_profile', many: true }, // 교수프로필 레이어
-        { sel: '.btn_addLecture', layer: '.add_lecture', many: true }, // 강의 추가 등록 레이어
-        { sel: '.btn_narrationRegistration', layer: '.narration_registration', many: true }, // 나레이션 등록 레이어
-        { sel: '.btn_termInput', layer: '.term_input', many: true }, // 용어 입력 레이어
-        { sel: '.btn_termInput_detail', layer: '.termInput_detail', many: true }, // 용어 상세보기 레이어
-        { sel: '.btn_vodRegistration', layer: '.vod_registration', many: true }, // VOD 등록 레이어
-        { sel: '.btn_professorOpinion', layer: '.professor_opinion', many: true }, // 교수님 의견 레이어
-        { sel: '.btn_professorOpinion_list', layer: '.professorOpinion_list', many: true }, // 교수님 의견 상세 레이어
-        { sel: '.btn_quizRegistration', layer: '.quiz_registration', many: true }, // 퀴즈 등록 레이어
-        { sel: '.btn_noticePreview', layer: '.notice_preview', many: true }, // 공지사항 내용 미리보기 레이어
-        { sel: '.btn_assignChange', layer: '.assign_change', many: true }, // 상담원 근무/배정 변경 레이어
-        { sel: '.btn_reasonHolding', layer: '.reason_holding', many: true }, // 보유사유 등록 레이어
-        { sel: '.btn_counselingAssign', layer: '.counseling_assign', many: true }, // 상담원 배정 레이어
-        { sel: '.btn_searchMember', layer: '.search_member', many: true }, // 회원검색 레이어
-        { sel: '.btn_memberConfirmation', layer: '.member_confirmation', many: true }, // 대상확인 레이어
-        { sel: '.btn_memberInfo', layer: '.member_info', many: true }, // 상담 데이터 등록 회원정보 레이어
-        { sel: '.btn_refundRequest', layer: '.refund_request', many: true }, // 환불신청서 레이어
-        { sel: '.btn_categoryManagement', layer: '.category_management', many: true }, // 카테고리 관리 레이어
-        { sel: '.btn_searchMemberDetail', layer: '.search_memberDetail', many: true }, // sms/메일 회원검색 레이어
-        { sel: '.btn_nationalSubsidy', layer: '.national_subsidy', many: true }, // 국가보조금 레이어
-        { sel: '.btn_packageSearch', layer: '.package_search', many: true }, // 과정/패키지 검색 레이어
-        { sel: '.btn_couponSearch', layer: '.coupon_list', many: true } // 쿠폰 검색 레이어
+        { sel: '.btn_siteAgree', layer: '.layer_siteAgree', many: false },//사이트 이용약관 레이어
+        { sel: '.btn_privacyAgree', layer: '.layer_privacyAgree', many: false },//개인정보 수집 및 이용 동의 레이어
+        { sel: '.btn_provideInfo', layer: '.layer_provideInfo', many: false },//개인정보 제3자 제공 동의 레이어
+        { sel: '.btn_privacyAgree_02', layer: '.layer_privacyAgree_02', many: false },//개인정보 수집 및 이용 동의 레이어
+        { sel: '.btn_marketingAgree', layer: '.layer_marketingAgree', many: false },//마케팅 목적 이용 및 정보 수신 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);
@@ -120,65 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
     });
 
-    // .school_register 내 btn_openClose 클릭 시 해당 버튼에만 close 토글, 형제 테이블만 숨김 처리
-    document.querySelectorAll('.school_register .btn_openClose').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const header = btn.closest('h3');
-            if (!header) return;
-
-            const closing = btn.classList.toggle('close');
-
-            // header(=h3)는 그대로 두고, header 다음 요소들 중 다음 h3 전까지의 table 요소들만 토글
-            let el = header.nextElementSibling;
-            while (el && el.tagName.toLowerCase() !== 'h3') {
-                if (el.tagName.toLowerCase() === 'table') {
-                    el.style.display = closing ? 'none' : '';
-                }
-                el = el.nextElementSibling;
-            }
-        });
-    });
-
-    // 안내사항보기-간단 툴팁 토글 (외부 클릭 시 닫기, 하나만 열림)
-    document.querySelectorAll('.icon_tooltip').forEach(icon => {
-        icon.addEventListener('click', (e) => {
-            e.stopPropagation();
-            // 다른 열려있는 툴팁 닫기
-            document.querySelectorAll('.icon_tooltip.open').forEach(o => { if (o !== icon) o.classList.remove('open'); });
-            icon.classList.toggle('open');
-        });
-    });
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.icon_tooltip.open').forEach(o => o.classList.remove('open'));
-    });
-    
-    // Swiper - 학습운영관리 수강/반 편성관리 스와이퍼
-        var classAssignment_swiper = new Swiper('.classAssignment_swiper .swiper-container', {
-        loop: true,
-        slidesPerView: 4,
-        initialSlide: 1,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction : false,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-    });
-
-    // pause autoplay on mouse enter, resume on mouse leave
-    try {
-        const root = document.querySelector('.classAssignment_swiper');
-        if (root && classAssignment_swiper && classAssignment_swiper.autoplay) {
-            root.addEventListener('mouseenter', () => {
-                try { classAssignment_swiper.autoplay.stop(); } catch (e) { /* ignore */ }
-            });
-            root.addEventListener('mouseleave', () => {
-                try { classAssignment_swiper.autoplay.start(); } catch (e) { /* ignore */ }
-            });
-        }
-    } catch (e) { /* ignore errors */ }
 
 });

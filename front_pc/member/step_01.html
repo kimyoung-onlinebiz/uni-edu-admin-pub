@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
+    <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+   <div class="login_wrapper">
+        <header>
+            <h1>
+                <a href="#none"><img src="../assets/images/common/Logo.svg" alt="메가스터디아카데미원격평생교육원"></a>
+            </h1>
+            <h2>회원가입</h2>
+        </header>
+        <div class="login_box">
+
+            <ol class="join_progress">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+
+            <div class="join_title">
+                <h3>약관동의</h3>
+                <p>메가스터디아카데미 원격평생교육원에 오신 걸 환영합니다.</p>
+            </div>
+
+            <div class="join_container">
+
+                <!-- 전체 동의하기 -->
+                <div class="all_agree">
+                    <label>
+                        <input type="checkbox" id="">
+                        <span>전체 동의하기</span>
+                        <p>필수동의 항목 및 마케팅 정보수신(선택)에 전체 동의합니다.</p>
+                    </label>
+                </div>
+                <!-- //전체 동의하기 -->
+                <div class="agree_box">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="chk">
+                                <span><strong>[필수]</strong>사이트 이용약관 동의</span>
+                            </label>
+                            <a href="#none" class="btn_view btn_siteAgree material-symbols-rounded">keyboard_arrow_right</a>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="chk">
+                                <span><strong>[필수]</strong> 개인정보 수집 및 이용에 대한 동의</span>
+                            </label>
+                            <a href="#none" class="btn_view btn_privacyAgree material-symbols-rounded">keyboard_arrow_right</a>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="chk">
+                                <span><strong>[필수]</strong> 개인정보 제3자 제공 동의</span>
+                            </label>
+                            <a href="#none" class="btn_view btn_provideInfo material-symbols-rounded">keyboard_arrow_right</a>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="chk">
+                                <span><strong class="txtPrimary_normal">[선택]</strong> 개인정보 수집 및 이용 동의</span>
+                            </label>
+                            <a href="#none" class="btn_view btn_privacyAgree_02 material-symbols-rounded">keyboard_arrow_right</a>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="chk">
+                                <span><strong class="txtPrimary_normal">[선택]</strong> 마케팅 목적 이용 및 정보 수신</span>
+                            </label>
+                            <a href="#none" class="btn_view btn_marketingAgree material-symbols-rounded">keyboard_arrow_right</a>
+
+                            <div class="form_group">
+                                <label class="form_check">
+                                    <input type="checkbox" name="chk_1" id="chk_1">
+                                    SMS
+                                </label>
+                                <label class="form_check">
+                                    <input type="checkbox" name="chk_1" id="chk_1">
+                                    이메일
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="btn_login">
+                    <li><button type="button" class="inactive">다음</button></li>
+                    <li><button type="button">다음</button></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 레이어 사이트 이용약관 동의 -->
+        <div class="layer_wrapper layer_siteAgree"><!-- active 추가 시 화면 노출 -->
+            <div class="layer_basic">
+
+                <div class="layer_header">
+                    <h2>사이트 이용약관 동의</h2>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                </div>
+
+                <!-- layer 내용 -->
+                <div class="layer_content">
+                    본 약관은 “메가스터디아카데미원격평생교육원”(이하 "교육원"이라 합니다.) 서비스(이하 '서비스'라 합니다)의 이용과 관련하여 현행 법령에 위배되지 않는 범위 내에서 회원의 기본적인 권리와 책임사항을 정하는 것을 목적으로 합니다.본 약관은 “메가스터디아카데미원격평생교육원”(이하 "교육원"이라 합니다.) 서비스(이하 '서비스'라 합니다)의 이용과 관련하여 현행 법령에 위배되지 않는 범위 내에서 회원의 기본적인 권리와 책임사항을 정하는 것을 목적으로 합니다.이 약관에 명시되지 않은 사항에 대해서는 관계법령, 교육원이 정한 서비스의 개별이용약관, 세부이용지침 및 규칙 등의 규정을 따르게 됩니다.
+                </div>
+                <!-- //layer 내용 -->
+
+                <div class="layer_btnSection">
+                    <button class="btn btn_close">취소</button>
+                    <button class="btn primary">동의</button>
+                </div>
+            </div>
+        </div>
+        <!-- //레이어 사이트 이용약관 동의 -->
+        <!-- 레이어 개인정보 수집 및 이용 동의 -->
+        <div class="layer_wrapper layer_privacyAgree"><!-- active 추가 시 화면 노출 -->
+            <div class="layer_basic">
+
+                <div class="layer_header">
+                    <h2>개인정보 수집 및 이용 동의</h2>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                </div>
+
+                <!-- layer 내용 -->
+                <div class="layer_content">
+                    <div class="privacy_section privacy_content scroll">
+                       
+                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
+                            <table class="table_view marginT8">
+                                <colgroup>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                </colgroup>
+                                <tr>
+                                    <th scope="col">수집 및 이용 목적</th>
+                                    <th scope="col">수집하는 개인정보 항목</th>
+                                    <th scope="col">보유 및 이용기간</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        이용자 식별 및 회원 서비스 제공
+                                    </td>
+                                    <td>
+                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
+                                    </td>
+                                    <td rowspan="2">
+                                        회원 탈퇴 시까지
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
+                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
+                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
+                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
+                        </div>
+                        <!-- //이용약관 내용 -->
+                </div>
+                <!-- //layer 내용 -->
+
+                <div class="layer_btnSection">
+                    <button class="btn btn_close">취소</button>
+                    <button class="btn primary">동의</button>
+                </div>
+            </div>
+        </div>
+       
+        <!-- //레이어 개인정보 수집 및 이용 동의 -->
+
+        <!-- 레이어 개인정보 제3자 제공 동의 -->
+        <div class="layer_wrapper layer_provideInfo"><!-- active 추가 시 화면 노출 -->
+            <div class="layer_basic">
+
+                <div class="layer_header">
+                    <h2>개인정보 제3자 제공 동의</h2>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                </div>
+
+                <!-- layer 내용 -->
+                <div class="layer_content">
+                    <div class="privacy_section privacy_content scroll">
+                       
+                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
+                            <table class="table_view marginT8">
+                                <colgroup>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                </colgroup>
+                                <tr>
+                                    <th scope="col">수집 및 이용 목적</th>
+                                    <th scope="col">수집하는 개인정보 항목</th>
+                                    <th scope="col">보유 및 이용기간</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        이용자 식별 및 회원 서비스 제공
+                                    </td>
+                                    <td>
+                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
+                                    </td>
+                                    <td rowspan="2">
+                                        회원 탈퇴 시까지
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
+                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
+                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
+                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
+                        </div>
+                        <!-- //이용약관 내용 -->
+                </div>
+                <!-- //layer 내용 -->
+
+                <div class="layer_btnSection">
+                    <button class="btn btn_close">취소</button>
+                    <button class="btn primary">동의</button>
+                </div>
+            </div>
+        </div>
+       
+        <!-- //레이어 개인정보 제3자 제공 동의 -->
+
+        <!-- 레이어 개인정보 수집 및 이용 동의 -->
+        <div class="layer_wrapper layer_privacyAgree_02"><!-- active 추가 시 화면 노출 -->
+            <div class="layer_basic">
+
+                <div class="layer_header">
+                    <h2>개인정보 수집 및 이용 동의</h2>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                </div>
+
+                <!-- layer 내용 -->
+                <div class="layer_content">
+                    <div class="privacy_section privacy_content scroll">
+                       
+                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
+                            <table class="table_view marginT8">
+                                <colgroup>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                </colgroup>
+                                <tr>
+                                    <th scope="col">수집 및 이용 목적</th>
+                                    <th scope="col">수집하는 개인정보 항목</th>
+                                    <th scope="col">보유 및 이용기간</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        이용자 식별 및 회원 서비스 제공
+                                    </td>
+                                    <td>
+                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
+                                    </td>
+                                    <td rowspan="2">
+                                        회원 탈퇴 시까지
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
+                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
+                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
+                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
+                        </div>
+                        <!-- //이용약관 내용 -->
+                </div>
+                <!-- //layer 내용 -->
+
+                <div class="layer_btnSection">
+                    <button class="btn btn_close">취소</button>
+                    <button class="btn primary">동의</button>
+                </div>
+            </div>
+        </div>
+       
+        <!-- //레이어 개인정보 수집 및 이용 동의 -->
+
+        <!-- 레이어 마케팅 목적 이용 및 정보 수신 -->
+        <div class="layer_wrapper layer_marketingAgree"><!-- active 추가 시 화면 노출 -->
+            <div class="layer_basic">
+
+                <div class="layer_header">
+                    <h2>마케팅 목적 이용 및 정보 수신</h2>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                </div>
+
+                <!-- layer 내용 -->
+                <div class="layer_content">
+                    <div class="privacy_section privacy_content scroll">
+                       
+                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
+                            <table class="table_view marginT8">
+                                <colgroup>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                </colgroup>
+                                <tr>
+                                    <th scope="col">수집 및 이용 목적</th>
+                                    <th scope="col">수집하는 개인정보 항목</th>
+                                    <th scope="col">보유 및 이용기간</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        이용자 식별 및 회원 서비스 제공
+                                    </td>
+                                    <td>
+                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
+                                    </td>
+                                    <td rowspan="2">
+                                        회원 탈퇴 시까지
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
+                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
+                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
+                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
+                        </div>
+                        <!-- //이용약관 내용 -->
+                </div>
+                <!-- //layer 내용 -->
+
+                <div class="layer_btnSection">
+                    <button class="btn btn_close">취소</button>
+                    <button class="btn primary">동의</button>
+                </div>
+            </div>
+        </div>
+       
+        <!-- //레이어 마케팅 목적 이용 및 정보 수신 -->
+
+        <!-- footer -->
+        <footer class="login_footer">
+            <ul>
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+            </ul>
+           <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+    
+</body>
+</html>
