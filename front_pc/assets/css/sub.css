@@ -19,9 +19,11 @@
 .login_box .login_input h3 { display:block; font-size:var(--font_medium); font-weight:700; padding:4px 8px 9px; }
 .login_box .login_input h3 span { font-size:var(--font_small); color:var(--neutral_600); font-weight:500; margin-left:8px; }
 .login_box .login_input .input_area { position:relative; margin-bottom:16px; }
+.login_box .login_input .input_area .timer { position:absolute; right:8px; top:20px; }
+.login_box .login_input .input_area .timer span { color: var(--neutral_500); margin-right:5px;}
 
 .login_box .login_input .btn_delete { position:absolute; right:20px; bottom:20px;  background:var(--neutral_500); border-radius:30px; text-align:center; width:20px; height:20px; }
-.login_box .login_input .btn_delete span { color:var(--neutral_0); padding:0; }
+.login_box .login_input .btn_delete span { color:var(--neutral_0); padding:0; font-size:18px; }
 .login_box .login_input .btn_delete:hover { background:var(--neutral_600); }
 .login_box .btn_login button { background:var(--primary_normal); color:#fff; width:100%; height:52px; font-size:var(--font_large); font-weight:700; border-radius:var(--borderRadius); margin:20px 0 0; }
 .login_box .btn_login button:hover { background:var(--primary_normal_hover); }
@@ -39,3 +41,19 @@
 .login_wrapper .login_footer p { font-size:var(--font_small); color:var(--neutral_600); margin-top:8px; }
 .login_box .error_message,.login_box .success_message { padding-top:0; }
 .login_input .form_group { margin-bottom:20px;  justify-content:space-between; }
+
+/* 회원가입 */
+.join_progress { display:flex; align-items:flex-start; gap:30px; margin-bottom:20px; }
+.join_progress li { position:relative; display:flex; width:20px; height:20px; border-radius:50%; background:var(--neutral_0); color:#fff; font-size:var(--font_xsmall); font-weight:500; justify-content:center; align-items:center; color:var(--neutral_500); border:1px solid var(--neutral_500); }
+.join_progress li.active { background:var(--primary_normal); border:1px solid var(--primary_normal); color:#fff; }
+.join_progress li:after { position:absolute; right:-31px; content:""; height:1px; background:var(--neutral_500); width:30px; }
+.join_progress li:last-child:after { content:none; }
+.join_title { text-align:center; margin-bottom:60px; }
+.join_title h3 { font-size:var(--font_2xlarge); font-weight:700; margin-bottom:12px; }
+.join_title h3 span { font-size:var(--small); font-weight:500; color:var(--neutral_600); }
+.join_container { width:450px; }
+.join_container .all_agree { border:1px solid var(--neutral_300); padding:12px 16px; margin-bottom:24px; border-radius:var(--borderRadius_2); width:100%; }
+.join_container .all_agree span { font-size:var(--font_large); font-weight:500; vertical-align:middle; }
+.join_container .all_agree p { font-size:var(--font_xsmall); color:var(--neutral_600); margin:7px 0 0 33px; }
+.join_container .agree_box li { display:flex; align-items:center; margin-bottom:12px; }
+.join_container .agree_box strong { color:var(--error_color); }
