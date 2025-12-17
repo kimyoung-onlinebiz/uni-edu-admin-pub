@@ -220,6 +220,7 @@ a.btn { line-height:28px; }
 .btn.secondary { font-size:var(--font_base); border:1px solid var(--neutral_800); background:var(--neutral_800); color:var(--neutral_0); }
 .btn.secondary:hover { border:1px solid var(--primary_800); background:var(--primary_800); color:var(--neutral_0); }
 .btn.medium,.btn.primary.medium,.btn.secondary.medium { height:40px; }
+button.pointer,.btn:disabled.pointer,input:disabled.pointer { cursor:pointer !important }
 
 /* 기본 레이어 스타일 */
 .layer_wrapper { background:var(--neutral_0); display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.3); justify-content:center; align-items:center; z-index: 1000; }
