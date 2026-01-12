@@ -109,7 +109,7 @@ input[type="file"].transparent { visibility:hidden; position:absolute; left:0; t
 .file_dragUpload { margin-bottom:4px !important; }
 .file_dragUpload label { cursor:pointer; color:var(--primary_500); text-decoration:underline; }
 .file_dragUpload label:hover { color:var(--primary_600); }
-.file_dragUpload .drag_area { border:2px dashed var(--neutral_500); border-radius:var(--borderRadius); padding:20px 0; text-align:center; color:var(--neutral_600); background:var(--neutral_300); transition:all .2s; }
+.file_dragUpload .drag_area { border:2px dashed var(--neutral_500); border-radius:var(--borderRadius); padding:20px 0; text-align:center; color:var(--neutral_600); background:var(--neutral_300); transition:all .2s; margin-bottom:8px; }
 .file_dragUpload .drag_area:hover { border-color:var(--neutral_600); color:var(--neutral_900); background:var(--neutral_100); }
 .file_dragUpload .btn { text-align:right; position:absolute; right:32px; bottom:20px; }
 input.align_right { margin-right:4px; }
@@ -246,6 +246,7 @@ color: var(--neutral_600) !important; }
 /* 말줄임 */
 .ellipsis { display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .ellipsis_multiline { text-overflow:ellipsis; overflow:hidden; display:-webkit-box !important;-webkit-box-orient:vertical; -webkit-line-clamp:2; }
+.ellipsis.width_90 { max-width:90%; width:auto; }
 
 .hr { border:0; height:1px; background:none; margin:20px 0; }
-.icon_new { color:var(--error_color); font-weight:600; margin-left:6px; text-decoration:none; display:inline-block; vertical-align:top; }
+.icon_new { color:var(--error_color); font-weight:600; margin-left:6px; text-decoration:none; display:inline-block; vertical-align:6px; }
