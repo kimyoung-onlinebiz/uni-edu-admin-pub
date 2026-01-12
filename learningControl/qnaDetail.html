@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#" class="active">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">book</span>학습현황 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">채점 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 채점 관리</a></li>
+                        <li><a href="#none">실습 채점 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">통합현황 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 통합현황</a></li>
+                        <li><a href="#none">실습 통합현황</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공결 관리</a></li>
+                <li>
+                    <a href="#">재시험/추가시험 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">재시험 관리</a></li>
+                        <li><a href="#none">추가시험 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">성적/수료 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">종합 성적 관리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 성적 관리</a></li>
+                                <li><a href="#none">실습 성적 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">상대평가 성적처리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 상대평가</a></li>
+                                <li><a href="#none">실습 상대평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사회복지현장실습 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">현장실습 운영관리</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">학습게시판 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">과정 공지사항</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">공지사항 템플릿 관리</a></li>
+                                <li><a href="#none">공지사항 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">학습자료실</a></li>
+                        <li><a href="#none" class="active_depth_3">학습Q&A</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>학습Q&A</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습현황 관리</a></li>
+                    <li><a href="#none">학습게시판 관리</a></li>
+                    <li>학습Q&A</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>학습Q&A 상세</h3>
+
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>평가 학기 정보</th>
+                        <td colspan="3">
+                            <div class="form_group">
+                                <select name="" id="">
+                                    <option value="">2025</option>
+                                </select>
+                                <select name="" id="" disabled="">
+                                    <option value="">1학기</option>
+                                </select>
+                                <select name="" id="" disabled="">
+                                    <option value="">6기(2025-05-01)</option>
+                                </select>
+                                <select name="" id="" disabled="">
+                                    <option value="">심리학</option>
+                                </select>
+                                <select name="" id="" disabled="">
+                                    <option value="">소비심리학</option>
+                                </select>
+                                <select name="" id="" disabled="">
+                                    <option value="">1반</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>제목</th>
+                        <td>10주차 1강 내용 문의드립니다.</td>
+                        <th>분류</th>
+                        <td>강의 내용 </td>
+                    </tr>
+                    <tr>
+                        <th>작성자</th>
+                        <td>김민지 (minji87)</td>
+                        <th>작성일</th>
+                        <td>2025-10-01</td>
+                    </tr>
+                    <tr>
+                        <th>본문 내용</th>
+                        <td colspan="3">
+                            안녕하세요 교수님. 10주차 1강 내용 중에 소비자 의사결정 과정에 대해 좀 더 자세한 설명 부탁드립니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>첨부파일</th>
+                        <td colspan="3">
+                            <a href="#none">10주차 1강 강의내용.jpg</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>조회수</th>
+                        <td colspan="3">15</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!-- 레이어_답변하기 -->
+            <div class="layer_wrapper answer_section"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>답변하기</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:15%">
+                                <col style="width:35%">
+                                <col style="width:15%">
+                                <col style="width:35%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>편성 과정</th>
+                                    <td colspan="3">2025 1학기 6기 심리학 소비자심리학 1반</td>
+                                </tr>
+                                <tr>
+                                    <th>제목</th>
+                                    <td>10주차 1강 내용 문의드립니다.</td>
+                                    <th>분류</th>
+                                    <td>강의 내용 </td>
+                                </tr>
+                                <tr>
+                                    <th>작성자</th>
+                                    <td>김민지 (minji87)</td>
+                                    <th>작성일</th>
+                                    <td>2025-10-01</td>
+                                </tr>
+                                <tr>
+                                    <th>답변 작성</th>
+                                    <td colspan="3">
+                                        <div style="width:900px; height:300px;">
+                                            웹 에디터 자리
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>첨부 파일</th>
+                                    <td>
+                                        <div class="file_search btn_type">
+                                            <label for="fileUpload" class="btn primary">
+                                                <span class="material-symbols-rounded">attach_file</span>첨부파일
+                                            </label>
+                                            <input type="file" class="transparent" id="fileUpload" multiple="">
+                                            <div class="fileSearch_after">
+                                                <div>
+                                                    <a href="#none">file_01.excel</a>
+                                                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                </div>
+                                                <div>
+                                                    <a href="#none">file_01.excel</a>
+                                                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_답변하기 -->
+
+            <h4 class="borderN">
+                답변 내용
+                <button class="btn btn_answerSection"><span class="material-symbols-rounded">border_color</span>답변하기</button>
+            </h4>
+
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+                            <p class="no_txt">현재 이 질문에는 등록된 답변이 없습니다.<br />
+[답변하기] 버튼을 통해 답변을 작성해주시기 바랍니다.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">
+                답변 내용
+                <button class="btn btn_answerSection"><span class="material-symbols-rounded">border_color</span>추가 답변하기</button>
+            </h4>
+
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>답변자(ID)</th>
+                        <td>이승현(prof_shyun)</td>
+                        <th>답변일</th>
+                        <td>2025-10-03</td>
+                    </tr>
+                    <tr>
+                        <th>답변 내용</th>
+                        <td colspan="3">
+                            안녕하세요.<br />
+아주 제대로 이해하셨군요!<br />
+안녕하세요.<br />
+아주 제대로 이해하셨군요!
+                            <div class="btn_answerOption">
+                                <button class="btn"><span class="material-symbols-rounded">edit</span>답변 수정</button>
+                                <button class="btn secondary"><span class="material-symbols-rounded">remove</span>답변 삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>첨부 파일</th>
+                        <td colspan="3">
+                            <a href="#none">10주차 1강 강의 내용 부가 설명.pdf</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="borderN">답변 내용(2)</h4>
+
+            <!-- 테이블 -->
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>답변자(ID)</th>
+                        <td>이승현(prof_shyun)</td>
+                        <th>답변일</th>
+                        <td>2025-10-03</td>
+                    </tr>
+                    <tr>
+                        <th>답변 내용</th>
+                        <td colspan="3">
+                            안녕하세요.<br />
+아주 제대로 이해하셨군요!<br />
+안녕하세요.<br />
+아주 제대로 이해하셨군요!
+                            <div class="btn_answerOption">
+                                <button class="btn"><span class="material-symbols-rounded">edit</span>답변 수정</button>
+                                <button class="btn secondary"><span class="material-symbols-rounded">remove</span>답변 삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>첨부 파일</th>
+                        <td colspan="3">
+                            <a href="#none">10주차 1강 강의 내용 부가 설명.pdf</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- //테이블 -->
+
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+                <button class="btn primary">저장</button>
+            </div>
+             
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

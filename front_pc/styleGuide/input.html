@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1600px"/>
     <title>메가스터디아카데미원격평생교육원</title>
-    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0">
     <link rel="stylesheet" href="styleGuide.css?v=1.0">
-    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <script src="/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
 </head>
 <body class="styleGuide_wrapper">
     <header class="adminHeader">
@@ -98,7 +98,7 @@
                                         <div class="form_group calendar">
                                             <div class="form_warning">
                                                 <input type="date" id="" placeholder="파기일 선택">
-                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                                <p class="error_message">날짜가 올바르지 않습니다.</p>
                                             </div>
                                         </div>
                                         <!-- //캘린더 -->
@@ -311,20 +311,18 @@
             <button type="button" class="btn primary">주소 검색</button>
         </div>
 
-        <h4>안내 문구 뜨는 input</h4>
-        <div class="form_warning">
-            <input type="text" class="width_80px">
-            <p class="txtError_color">아이디 또는 비밀번호가 올바르지 않습니다.</p>
-        </div>
-        <h4>안내 문구 뜨는 iniput-단독</h4>
-        <p class="txtError_color warning">전공 명을 입력해주세요.</p>
+        <h4>에러 문구 뜨는 input</h4>
+        <input type="text" class="error">
+        <p class="error_message">아이디 또는 비밀번호가 올바르지 않습니다.</p>
+
+        <h4>긍정 문구 뜨는 input</h4>
+        <input type="text" class="success">
+        <p class="success_message">사용할 수 있는 아이디입니다.</p>
         
         <br />
-        <div class="form_warning">
-            <input type="text" class="width_80px" placeholder="Top">
-            <input type="text" class="width_80px" placeholder="Left">
-            <p class="txtError_color">위치를 입력해주세요.</p>
-        </div>
+        <input type="text" class="width_80px" placeholder="Top">
+        <input type="text" class="width_80px" placeholder="Left">
+        <p class="error_message">위치를 입력해주세요.</p>
 
         <div class="form_group">
             <div class="form_check">
@@ -335,7 +333,7 @@
                 <input type="radio" name="privacy" id="privacy_2" checked="">
                 <label for="privacy_2">미포함</label>
             </div>
-             <p class="txtError_color">개인정보 포함여부를 체크해주세요.</p>
+             <p class="error_message">개인정보 포함여부를 체크해주세요.</p>
         </div>
 
         <h4>위아래 정렬 가운데 input은 alignC 추가</h4>
@@ -350,13 +348,6 @@
             </select>
         </div>
 
-        <h4>긍정 안내 문구 뜨는 input</h4>
-        <div class="form_warning">
-            <input type="text" class="width_80px">
-            <p class="txtSuccess_color">사용할 수 있는 아이디입니다.</p>
-        </div>
-        <h4>긍정 안내 문구 뜨는 iniput-단독</h4>
-        <p class="txtSuccess_color warning">사용할 수 있는 아이디입니다.</p>
 
         <h4>제목과 함께 쓰이는 input - 가운데 정렬</h4>
         <dl class="inline_dl marginT8">
@@ -384,12 +375,12 @@
         <div class="form_group calendar">
             <div class="form_warning">
                 <input type="date" id="searchStartDate" placeholder="시작일">
-                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                <p class="error_message">날짜가 올바르지 않습니다.</p>
             </div>
             <span class="calendar_bullet">~</span>
             <div class="form_warning">
                 <input type="date" id="searchEndDate" placeholder="종료일">
-                <p class="txtError_color">종료일은 시작일보다 
+                <p class="error_message">종료일은 시작일보다 
 같거나 늦어야 합니다.</p>
             </div>
             <ul class="btn_date_range">
@@ -414,14 +405,14 @@
             
             <div class="form_warning">
                 <input type="date" id="searchStartDate" placeholder="시작일">
-                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                <!-- p class="error_message">날짜가 올바르지 않습니다.<p -->
             </div>
             
             <span class="calendar_bullet">~</span>
             
             <div class="form_warning">
                 <input type="date" id="searchEndDate" placeholder="종료일">
-                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                <!-- p class="error_message">날짜가 올바르지 않습니다.<p -->
             </div>
         </div>
         <h4>캘린더</h4>
@@ -430,14 +421,14 @@
             <div class="form_warning">
                 <input type="date" id="searchStartDate" placeholder="시작일">
                  <input id="" type="time" name="" step="2" />
-                <p class="txtError_color">종료일은 시작일보다 
+                <p class="error_message">종료일은 시작일보다 
         같거나 늦어야 합니다.</p>
             </div>
             <span class="calendar_bullet">~</span>
             <div class="form_warning">
                 <input type="date" id="searchEndDate" placeholder="종료일">
                 <input id="" type="time" name="" step="2" />
-                <p class="txtError_color">종료일은 시작일보다 
+                <p class="error_message">종료일은 시작일보다 
         같거나 늦어야 합니다.</p>
             </div>
         </div>
@@ -506,7 +497,7 @@
                 <option value="">MO 스트립 배너(중단)</option>
                 <option value="">MO 스트립 배너(하단)</option>
             </select>
-            <p class="txtError_color">아이디 또는 비밀번호가 올바르지 않습니다.</p>
+            <p class="error_message">아이디 또는 비밀번호가 올바르지 않습니다.</p>
         </div>
 
         <Br />
@@ -648,14 +639,14 @@
                         
                          <div class="form_warning">
                             <input type="date" id="searchStartDate"placeholder="시작일">
-                            <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                            <!-- p class="error_message">날짜가 올바르지 않습니다.<p -->
                          </div>
                         
                         <span class="calendar_bullet">~</span>
                         
                          <div class="form_warning">
                             <input type="date" id="searchEndDate"placeholder="종료일">
-                            <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                            <!-- p class="error_message">날짜가 올바르지 않습니다.<p -->
                         </div>
                     </div>
 
@@ -913,12 +904,12 @@
                                         </select>
                                         <div class="form_warning">
                                             <input type="date" id="searchStartDate" placeholder="시작일">
-                                            <!-- p class="txtError_color">날짜가 올바르지 않습니다.</!-->
+                                            <!-- p class="error_message">날짜가 올바르지 않습니다.</!-->
                                         </div>
                                         <span class="calendar_bullet">~</span>
                                         <div class="form_warning">
                                             <input type="date" id="searchEndDate" placeholder="종료일">
-                                            <!-- p class="txtError_color">날짜가 올바르지 않습니다.</!-->
+                                            <!-- p class="error_message">날짜가 올바르지 않습니다.</!-->
                                         </div>
                                     </div>
                                     <!-- //셀렉트박스 -->
@@ -1522,7 +1513,7 @@
                     <td>무료강의를 들으려고 합니다...</td>
                     <td>Y</td>
                     <td>
-                        <span class="txtError_color">부재중</span>
+                        <span class="error_message">부재중</span>
                     </td>
                     <td>이순신</td>
                     <td>안중근</td>
@@ -1801,14 +1792,14 @@
                     <td>
                         <div class="form_warning">
                             <input type="text" placeholder="이름을 입력해 주세요.">
-                            <p class="txtError_color">올바른 이름을 입력해 주세요.</p>
+                            <p class="error_message">올바른 이름을 입력해 주세요.</p>
                         </div>
                     </td>
                     <th><span class="essential">*</span>아이디</th>
                     <td>
                         <div class="form_warning">
                             <input type="text" placeholder="아이디를 입력해 주세요.">
-                            <p class="txtError_color">중복 아이디입니다.</p>
+                            <p class="error_message">중복 아이디입니다.</p>
                             <p class="txtSuccess_color">사용할 수 있는 아이디입니다.</p>
                         </div>
                     </td>
@@ -1827,7 +1818,7 @@
                     <td>
                         <div class="form_warning">
                             <input type="text" placeholder="전공을 입력해 주세요.">
-                            <p class="txtError_color">올바른 전공을 입력해 주세요.</p>
+                            <p class="error_message">올바른 전공을 입력해 주세요.</p>
                         </div>
                     </td>
                 </tr>

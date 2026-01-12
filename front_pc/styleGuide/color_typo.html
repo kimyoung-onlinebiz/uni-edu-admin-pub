@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1600px"/>
     <title>메가스터디아카데미원격평생교육원</title>
-    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0">
     <link rel="stylesheet" href="styleGuide.css?v=1.0">
-    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <script src="/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
 </head>
 <body class="styleGuide_wrapper">
     <header class="adminHeader">
@@ -60,7 +60,7 @@
             <dl>
                 <dt class="neutral_600"></dt>
                 <dd>neutral_600</dd>
-                <dd>#aaa</dd>
+                <dd>#888</dd>
             </dl>
             <dl>
                 <dt class="neutral_800"></dt>
@@ -76,34 +76,67 @@
         <h3>Primary</h3>
         <div class="color">
             <dl>
-                <dt class="primary_100"></dt>
-                <dd>primary_100</dd>
-                <dd>#eef4fe</dd>
+                <dt class="primary_light"></dt>
+                <dd>primary_light</dd>
+                <dd>#e9f1fe</dd>
             </dl>
             <dl>
-                <dt class="primary_300"></dt>
-                <dd>primary_300</dd>
-                <dd>#e4e7f1</dd>
+                <dt style="background:#DEE9FD"></dt>
+                <dd>primary_light_hover</dd>
+                <dd>#DEE9FD</dd>
             </dl>
             <dl>
-                <dt class="primary_500"></dt>
-                <dd>primary_500</dd>
-                <dd>#326cf9</dd>
+                <dt class="primary_normal"></dt>
+                <dd>primary_normal</dd>
+                <dd>#256ef4</dd>
             </dl>
             <dl>
-                <dt class="primary_600"></dt>
-                <dd>primary_600</dd>
-                <dd>#2553cc</dd>
+                <dt style="background:#2163DC"></dt>
+                <dd>primary_normal_hover</dd>
+                <dd>#2163DC</dd>
             </dl>
             <dl>
-                <dt class="primary_700"></dt>
-                <dd>primary_700</dd>
-                <dd>#1c3e99</dd>
+                <dt class="primary_dark"></dt>
+                <dd>primary_dark</dd>
+                <dd>#1c53b7</dd>
             </dl>
             <dl>
-                <dt class="primary_800"></dt>
-                <dd>primary_800</dd>
-                <dd>#414656</dd>
+                <dt class="primary_darker"></dt>
+                <dd>primary_darker</dd>
+                <dd>#0d2755</dd>
+            </dl>
+        </div>
+        <h3>Secondary</h3>
+        <div class="color">
+            <dl>
+                <dt class="secondary_light"></dt>
+                <dd>secondary_light</dd>
+                <dd>#e7ebf7</dd>
+            </dl>
+            <dl>
+                <dt style="background:#dbe1f3"></dt>
+                <dd>secondary_light_hover</dd>
+                <dd>#dbe1f3</dd>
+            </dl>
+            <dl>
+                <dt class="secondary_normal"></dt>
+                <dd>secondary_normal</dd>
+                <dd>#0e38b1</dd>
+            </dl>
+             <dl>
+                <dt style="background:#0d329f"></dt>
+                <dd>secondary_normal_hover</dd>
+                <dd>#0d329f</dd>
+            </dl>
+            <dl>
+                <dt class="secondary_dark"></dt>
+                <dd>secondary_dark</dd>
+                <dd>#0b2a85</dd>
+            </dl>
+            <dl>
+                <dt class="secondary_darker"></dt>
+                <dd>secondary_darker</dd>
+                <dd>#05143e</dd>
             </dl>
         </div>
         <h3>System</h3>
@@ -126,7 +159,7 @@
              <dl>
                 <dt class="end_color"></dt>
                 <dd>end_color</dd>
-                <dd>#326cf9</dd>
+                <dd>#256ef4</dd>
             </dl>
              <dl>
                 <dt class="temporary_color"></dt>
@@ -147,11 +180,18 @@
             <dl>
                 <dt>본문 텍스트</dt>
                 <dd>
-                     <p>기본 본문 텍스트입니다. 폰트 크기 14px, <code>var(--font_base)</code>, line-height 1.5</p>
-                     <p class="font_small">작은 텍스트입니다. 폰트 크기 12px, <code>var(--font_small)</code></p>
-                     <p class="font_medium">중간 텍스트입니다. 폰트 크기 16px, <code>var(--font_medium)</code></p>
-                     <p class="font_large">큰 텍스트입니다. 폰트 크기 18px, <code>var(--font_large)</code></p>
-                     <p class="font_xlarge">더 큰 텍스트입니다. 폰트 크기 28px, <code>var(--font_xlarge)</code></p>
+                    <p class="xsmall_400">font-size:12px, font-weight:400; <code>class="xsmall_400"</code></p>
+                    <p class="small_400">font-size:14px, font-weight:400; <code>class="small_400"</code></p>
+                    <p class="small_500">font-size:14px, font-weight:500; <code>class="small_500"</code></p>
+                    <p class="base_400">font-size:15px, font-weight:400; <code>class="base_400"</code></p>
+                    <p class="base_500">font-size:15px, font-weight:500; <code>class="base_500"</code></p>
+                    <p class="base_600">font-size:15px, font-weight:600; <code>class="base_600"</code></p>
+                    <p class="medium_500">font-size:16px, font-weight:500; <code>class="medium_500"</code></p>
+                    <p class="medium_600">font-size:16px, font-weight:600; <code>class="medium_600"</code></p>
+                    <p class="large_500">font-size:18px, font-weight:500; <code>class="large_500"</code></p>
+                    <p class="large_600">font-size:18px, font-weight:600; <code>class="large_600"</code></p>
+                    <p class="xlarge_700">font-size:20px, font-weight:700; <code>class="xlarge_700"</code></p>
+                    <p class="xxlarge_700">font-size:28px, font-weight:700; <code>class="xxlarge_700"</code></p>
                 </dd>
             </dl>
             <dl>
@@ -199,79 +239,56 @@
                 <dt>텍스트 색상</dt>
                 <dd class="flex">
                     <div>
-                        <h4><code>class="txtNeutral_0"</code></h4>
                         <p class="txtNeutral_0" style="background:#111;">txtNeutral_0</p>
                     </div>
                     <div>
-                        <h4><code>class="txtNeutral_100"</code></h4>
                         <p class="txtNeutral_100" style="background:#111;">txtNeutral_100</p>
                     </div>
                     <div>
-                        <h4><code>class="txtNeutral_300"</code></h4>
                         <p class="txtNeutral_300">txtNeutral_300</p>
                     </div>
                     <div>
-                        <h4><code>class="txtNeutral_600"</code></h4>
                         <p class="txtNeutral_600">txtNeutral_600</p>
                     </div>
                     <div>
-                        <h4><code>class="txtNeutral_800"</code></h4>
                         <p class="txtNeutral_800">txtNeutral_800</p>
                     </div>
                     <div>
-                        <h4><code>class="txtNeutral_900"</code></h4>
                         <p class="txtNeutral_900">txtNeutral_900</p>
                     </div>
                 </dd>
                 <dd class="flex">
                     <div>
-                        <h4><code>class="txtPrimary_100"</code></h4>
-                        <p class="txtPrimary_100">txtPrimary_100</p>
+                        <p class="txtPrimary_light">txtPrimary_light</p>
                     </div>
                     <div>
-                        <h4><code>class="txtPrimary_500"</code></h4>
-                        <p class="txtPrimary_500">txtPrimary_500</p>
+                        <p class="txtPrimary_normal">txtPrimary_normal</p>
                     </div>
                     <div>
-                        <h4><code>class="txtPrimary_600"</code></h4>
-                        <p class="txtPrimary_600">txtPrimary_600</p>
+                        <p class="txtPrimary_dark">txtPrimary_dark</p>
                     </div>
                     <div>
-                        <h4><code>class="txtPrimary_700"</code></h4>
-                        <p class="txtPrimary_700">txtPrimary_700</p>
-                    </div>
-                    <div>
-                        <h4><code>class="txtPrimary_800"</code></h4>
-                        <p class="txtPrimary_700">txtPrimary_800</p>
+                        <p class="txtPrimary_darker">txtPrimary_darker</p>
                     </div>
                 </dd>
+                
                 <dd class="flex">
                     <div>
-                        <h4><code>class="txtError_color"</code></h4>
-                        <p class="txtEror_color">txtError_color</p>
-                    </div>
-                    <div>
-                        <h4><code>class="txtWarning_color"</code></h4>
-                        <p class="txtWarning_color">txtWarning_color</p>
-                    </div>
-                    <div>
-                        <h4><code>class="txtSuccess_color"</code></h4>
-                        <p class="txtSuccess_color">txtSuccess_color</p>
-                    </div>
-                    <div>
-                        <h4><code>class="txtEnd_color"</code></h4>
-                        <p class="txtEnd_color">txtEnd_color</p>
-                    </div>
-                    <div>
-                        <h4><code>class="txtTemporary_color"</code></h4>
-                        <p class="txtTemporary_color">txtTemporary_color</p>
-                    </div>
-                    <div>
-                        <h4><code>class="txtError_color"</code></h4>
                         <p class="txtError_color">txtError_color</p>
                     </div>
                     <div>
-                        <h4><code>class="txtImportant_color"</code></h4>
+                        <p class="txtWarning_color">txtWarning_color</p>
+                    </div>
+                    <div>
+                        <p class="txtSuccess_color">txtSuccess_color</p>
+                    </div>
+                    <div>
+                        <p class="txtEnd_color">txtEnd_color</p>
+                    </div>
+                    <div>
+                        <p class="txtTemporary_color">txtTemporary_color</p>
+                    </div>
+                    <div>
                         <p class="txtImportant_color">txtImportant_color</p>
                     </div>
                 </dd>

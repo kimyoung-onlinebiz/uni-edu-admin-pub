@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#" class="active">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">book</span>학습현황 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">채점 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">이론 채점 관리</a></li>
+                        <li><a href="#none">실습 채점 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">통합현황 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 통합현황</a></li>
+                        <li><a href="#none">실습 통합현황</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공결 관리</a></li>
+                <li>
+                    <a href="#">재시험/추가시험 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">재시험 관리</a></li>
+                        <li><a href="#none">추가시험 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">성적/수료 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">종합 성적 관리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 성적 관리</a></li>
+                                <li><a href="#none">실습 성적 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">상대평가 성적처리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 상대평가</a></li>
+                                <li><a href="#none">실습 상대평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사회복지현장실습 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">현장실습 운영관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">학습게시판 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">과정 공지사항</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">공지사항 템플릿 관리</a></li>
+                                <li><a href="#none">공지사항 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">학습자료실</a></li>
+                        <li><a href="#none">학습Q&A</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>이론 채점 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습현황 관리</a></li>
+                    <li><a href="#none">채점관리</a></li>
+                    <li>이론 채점 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>과제 채점</h3>
+            <h4>
+                기본 정보
+                <button class="btn btn_scoringStatus">채점 현황 바로보기</button>
+            </h4>
+
+            <!-- 레이어_채점 현황 바로보기 -->
+            <div class="layer_wrapper scoring_status"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>채점 현황</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>응시율</th>
+                                    <th>채점완료</th>
+                                    <th>전체 평균</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>87.5%(70/80)</td>
+                                    <td>92.9%(65/70)</td>
+                                    <td>18.99점</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+                         <!-- 테이블 -->
+                        <table class="data_table marginT16">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>반</th>
+                                    <th>대상자</th>
+                                    <th>제출자</th>
+                                    <th>미제출자</th>
+                                    <th>채점완료</th>
+                                    <th>채점 필요 인원</th>
+                                    <th>전체 평균</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1반</td>
+                                    <td>40명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>0건</td>
+                                    <td>19.55점</td>
+                                </tr>
+                                <tr>
+                                    <td>1반</td>
+                                    <td>40명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>0건</td>
+                                    <td>19.55점</td>
+                                </tr>
+                                <tr>
+                                    <td>1반</td>
+                                    <td>40명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>0건</td>
+                                    <td>19.55점</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_채점 현황 바로보기 -->
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>평가 학기</th>
+                        <td>2025년도 1학기 6기</td>
+                        <th>평가 과정 명</th>
+                        <td>소비자심리학</td>
+                    </tr>
+                    <tr>
+                        <th>제출 기간</th>
+                        <td>2025-05-01 00:00 ~ 2025-05-27 00:00</td>
+                        <th>과제 정보</th>
+                        <td>
+                            <dl class="inline">
+                                <dt><strong>총 배점</strong></dt>
+                                <dd>20점</dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>과제 내용</th>
+                        <td colspan="3">[ASG0100] 조직심리학 2025년 과제 <button class="btn marginL24 btn_previewAssignments"><span class="material-symbols-rounded">fact_check</span>과제 미리보기</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_과제 미리보기 -->
+            <div class="layer_wrapper preview_assignments"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>과제 미리보기</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>학습자 제출 형식</th>
+                                    <td>[과제] 페이지에서 파일 형식으로 제출 (학습자명.hwp 혹은 학습자명.doc)</td>
+                                </tr>
+                                <tr>
+                                    <th>과제 주차/주제</th>
+                                    <td>▶ 주제 : 자신에게 일이 주는 의미와 가치가 무엇인지 기술하시오. 앞으로 하고 싶은 일은 무엇이고 구체적인 직무가 무엇인지 설명하시오.<br>▶ 주차: 4주 1차시</td>
+                                </tr>
+                                <tr>
+                                    <th>과제내용</th>
+                                    <td>학습한 내용을 토대로 아래의 내용이 포함되도록 기술합니다. 특히 개인의 사례에 대해 구체적으로 기술 할수록 좋은 평가에 긍정적인 영향을 미칩니다.<br><br>※ 과제에 포함되어야 할 내용/작성 시 유의사항<br>1. 직업의 목적과 의미, 성립 요건 기술<br>2. 직업을 선택할 때 자신이 중요하게 여기는 가치 기술<br>3. 하고 싶은 일(진로 포함)과 구체적인 직무 내용 기술</td>
+                                </tr>
+                                <tr>
+                                    <th>학습자 전달사항</th>
+                                    <td>- 주제와 관련된 개념을 기술하고 설명을 포함 시킵니다.<br>- 개인적인 경험과 사례를 구체적으로 기술하고 느낀 점을 기술합니다.<br>- A4용지 2페이지(글자크기 11pt) 분량으로 작성합니다.<br>- 다른 사람의 답안을 그대로 제출하거나 가져온 내용을 그대로 붙여넣기 하는 경우 평가에 부정적입니다.</td>
+                                </tr>
+                                <tr>
+                                    <th>평가기준</th>
+                                    <td>
+                                        <table class="table_overlay">
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>항목</th>
+                                                    <th>배분율</th>
+                                                    <th>상세내용</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>과제 이해도</td>
+                                                    <td>25</td>
+                                                    <td>주제와 내용을 명확히 이해하고 작성했는가?</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>충실성</td>
+                                                    <td>25</td>
+                                                    <td>제시한 내용을 모두 포함하고 있는가?</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_과제 미리보기 -->
+
+
+            <h4 class="borderN">채점 관리 및 제출 현황</h4>
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box alignC">
+                    <dt>관리 교수 명</dt>
+                    <dd>
+                        홍길동
+                    </dd>
+                    <dt>반 정보</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">반 전체</option>
+                        </select>
+                    </dd>
+                </dl>
+
+                <dl class="search_box alignC">
+                    <dt>제출 여부</dt>
+                    <dd>
+
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="" id="" checked="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">제출</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">미제출</label>
+                            </div>
+                        </div>
+
+                    </dd>
+                    <dt>채점 여부</dt>
+                    <dd>
+
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="" id="" checked="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">채점 완료</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">미채점</label>
+                            </div>
+                        </div>
+
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>적용</button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+            <div class="table_top marginT16">
+                <div class="table_sort">
+                    <select>
+                        <option value="">반 전체</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn">학습자 전체 모사율 분석</button>
+                    <button class="btn secondary"><span class="material-symbols-rounded">download</span>과제물 일괄 다운로드</button>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th>No</th>
+                        <th>반</th>
+                        <th>이름(ID)</th>
+                        <th>점수</th>
+                        <th>모사율</th>
+                        <th>제출 일시</th>
+                        <th>과제물</th>
+                        <th>채점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>12</td>
+                        <td>20%</td>
+                        <td>2025-04-02 20:25:33</td>
+                        <td><button class="btn"><span class="material-symbols-rounded">download</span>다운로드</button></td>
+                        <td><button class="btn primary btn_assignmentsResult">채점 필요</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>12</td>
+                        <td>20%</td>
+                        <td>2025-04-02 20:25:33</td>
+                        <td><button class="btn"><span class="material-symbols-rounded">download</span>다운로드</button></td>
+                        <td>채점 완료</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>12</td>
+                        <td>20%</td>
+                        <td>2025-04-02 20:25:33</td>
+                        <td>미제출</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>12</td>
+                        <td>20%</td>
+                        <td>2025-04-02 20:25:33</td>
+                        <td><button class="btn"><span class="material-symbols-rounded">download</span>다운로드</button></td>
+                        <td>채점 완료</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>12</td>
+                        <td>20%</td>
+                        <td>2025-04-02 20:25:33</td>
+                        <td>미제출</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 레이어_채점 결과 -->
+            <div class="layer_wrapper assignments_result"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>과제 채점</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>평가 학기</th>
+                                    <td>2025년도 1학기 6기</td>
+                                    <th>평가 과정</th>
+                                    <td>[2516C0100] 소비자심리학</td>
+                                </tr>
+                                <tr>
+                                    <th>평가 항목 유형</th>
+                                    <td>과제</td>
+                                    <th>제출일</th>
+                                    <td>2025-05-24 16:11:56</td>
+                                </tr>
+                                <tr>
+                                    <th>응시자</th>
+                                    <td colspan="3">김민준(kmj001)</td>
+                                </tr>
+                                <tr>
+                                    <th>제출 과제물</th>
+                                    <td colspan="3"><a href="#none">소비자심리학_김민준_과제 제출_250524.hwp</a></td>
+                                </tr>
+                                <tr>
+                                    <th>모사율</th>
+                                    <td colspan="3">22%</td>
+                                </tr>
+                                <tr>
+                                    <th>과제 제목</th>
+                                    <td colspan="3">소비자심리학 김민준 과제</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                        <h3 class="marginT40">채점 결과</h3>
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><span class="essential">*</span> 과제 점수</th>
+                                    <td>
+                                        <input type="number"> / 20점
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="essential">*</span> 평가 의견</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="평가 의견을 작성해 주세요.(20자 이상)" class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_채점 결과 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+            </div>
+             
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -48,7 +48,9 @@ http://scripts.sil.org/OFL
     --primary_dark:#1c53b7;
     --primary_darker:#0d2755;
     --secondary_light:#e7ebf7; 
+    --secondary_light_hover:#dbe1f3; 
     --secondary_normal:#0e38b1; 
+    --secondary_normal_hover:#0d329f; 
     --secondary_dark:#0b2a85;
     --secondary_darker:#05143e;
     --error_color:#ef4444;
@@ -105,7 +107,7 @@ caption, legend { text-indent:-9999px; overflow:hidden; height:0; }
 address { font-style:normal; }
 textarea { resize:vertical; min-height:100px; padding-top:8px; padding-bottom:8px; text-align:left; }
 a { text-decoration:none; transition:all .2s; }
-a:hover { color:var(--primary_600); }
+a:hover { color:var(--secondary_normal); }
 input[type="file"] { padding:2px; width:320px; }
 input[type="file"].transparent { visibility:hidden; position:absolute; left:0; top:0; width:1px; height:1px; }
 .file_search { display:flex; flex-direction:column; }
@@ -140,6 +142,8 @@ input.align_right { margin-right:4px; }
 .error_color { background-color:var(--error_color); }
 .warning_color { background-color:var(--warning_color); }
 .success_color { background-color:var(--success_color); }
+.end_color { background-color:var(--primary_normal); }
+.temporary_color { background-color:var(--neutral_600); }
 
 /*폰트 컬러 */
 .txtNeutral_0 { color:var(--neutral_0); }
@@ -159,18 +163,18 @@ input.align_right { margin-right:4px; }
 
 
 /* 폰트 사이즈 */
+.xsmall_400 { font-size:var(--font_xsmall); font-weight:400; }
+.small_400 { font-size:var(--font_small); font-weight:400; }
+.small_500 { font-size:var(--font_small); font-weight:500; }
 .base_400 { font-size:var(--font_base); font-weight:400; }
 .base_500 { font-size:var(--font_base); font-weight:500; }
 .base_600 { font-size:var(--font_base); font-weight:600; }
-.small_400 { font-size:var(--font_small); font-weight:400; }
-.small_500 { font-size:var(--font_small); font-weight:500; }
-.xsmall_400 { font-size:var(--font_xsmall); font-weight:400; }
 .medium_500 { font-size:var(--font_medium); font-weight:500; }
 .medium_600 { font-size:var(--font_medium); font-weight:600; }
 .large_500 { font-size:var(--font_large); font-weight:500; }
 .large_600 { font-size:var(--font_large); font-weight:600; }
-.large_700 { font-size:var(--font_xlarge); font-weight:700; }
-.xlarge_700 { font-size:var(--font_2xlarge); font-weight:700; }
+.xlarge_700 { font-size:var(--font_xlarge); font-weight:700; }
+.xxlarge_700 { font-size:var(--font_2xlarge); font-weight:700; }
 
 /* 텍스트 정렬 */
 .align_left { text-align:left !important; }

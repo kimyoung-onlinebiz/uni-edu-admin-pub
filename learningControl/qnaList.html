@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#" class="active">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">book</span>학습현황 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">채점 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 채점 관리</a></li>
+                        <li><a href="#none">실습 채점 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">통합현황 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 통합현황</a></li>
+                        <li><a href="#none">실습 통합현황</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공결 관리</a></li>
+                <li>
+                    <a href="#">재시험/추가시험 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">재시험 관리</a></li>
+                        <li><a href="#none">추가시험 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">성적/수료 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">종합 성적 관리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 성적 관리</a></li>
+                                <li><a href="#none">실습 성적 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">상대평가 성적처리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 상대평가</a></li>
+                                <li><a href="#none">실습 상대평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사회복지현장실습 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">현장실습 운영관리</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">학습게시판 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">과정 공지사항</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">공지사항 템플릿 관리</a></li>
+                                <li><a href="#none">공지사항 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">학습자료실</a></li>
+                        <li><a href="#none" class="active_depth_3">학습Q&A</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>학습Q&A</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습현황 관리</a></li>
+                    <li><a href="#none">학습게시판 관리</a></li>
+                    <li>학습Q&A</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>편성학기 정보</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="" class="small">
+                                <option value="">년도</option>
+                            </select>
+                            <select name="" id="" class="small">
+                                <option value="">학기</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">기수(개강일)</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">전공</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">과정</option>
+                            </select>
+                            <select name="" id="" class="small">
+                                <option value="">반</option>
+                            </select>
+                            </div>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>편성과정 정보</dt>
+                    <dd>
+                        <!-- 셀렉트박스 -->
+                        <select name="" id="">
+                            <option value="">편성과정 명</option>
+                        </select>
+                        <!-- //셀렉트박스 -->
+                    </dd>
+                    <dd>
+                        <div class="search_input">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>등록일</dt>
+                    <dd>
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">직접입력</option>
+                                <option value="">당일</option>
+                                <option value="">금주</option>
+                                <option value="">당월</option>
+                                <option value="">당해</option>
+                            </select>
+                            
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                            </div>
+                            
+                            <span class="calendar_bullet">~</span>
+                            
+                            <div class="form_warning">
+                                <input type="date" id="searchEndDate" placeholder="종료일">
+                                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>답변일</dt>
+                    <dd>
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">직접입력</option>
+                                <option value="">당일</option>
+                                <option value="">금주</option>
+                                <option value="">당월</option>
+                                <option value="">당해</option>
+                            </select>
+                            
+                            <div class="form_warning">
+                                <input type="date" id="searchStartDate" placeholder="시작일">
+                                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                            </div>
+                            
+                            <span class="calendar_bullet">~</span>
+                            
+                            <div class="form_warning">
+                                <input type="date" id="searchEndDate" placeholder="종료일">
+                                <!-- p class="txtError_color">날짜가 올바르지 않습니다.<p -->
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>댭변 여부</dt>
+                    <dd>
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">답변 완료</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">미답변</label>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+
+            <!-- //검색 섹션 -->
+
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn primary">회수</button>
+                    <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:250px;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th>No</th>
+                        <th>년도</th>
+                        <th>학기</th>
+                        <th>기수</th>
+                        <th>전공</th>
+                        <th>편성과정 명</th>
+                        <th>분류</th>
+                        <th>제목</th>
+                        <th>등록자(ID)</th>
+                        <th>등록일</th>
+                        <th>답변자(ID)</th>
+                        <th>최종 답변일</th>
+                        <th>답변여부</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>2025</td>
+                        <td>1학기</td>
+                        <td>6기</td>
+                        <td>심리학</td>
+                        <td>소비자심리학</td>
+                        <td>강의내용</td>
+                        <td class="align_left"><a href="#none" class="ellipsis width_90">10주차 1강 내용 문의드립니다. 길떄 길때 길때</a><span class="icon_new">N</span></td>
+                        <td>김민지 (minji87)</td>
+                        <td>2023-02-20 15:57:17</td>
+                        <td>이승현 (prof_shyun)</td>
+                        <td>2025-10-03 23:59:59</td>
+                        <td><span class="txtError_color">미답변</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>2025</td>
+                        <td>1학기</td>
+                        <td>6기</td>
+                        <td>심리학</td>
+                        <td>소비자심리학</td>
+                        <td>강의내용</td>
+                        <td class="align_left"><a href="#none" class="ellipsis width_90">10주차 1강 내용 문의드립니다. 길떄 길때 길때</a><span class="icon_new">N</span></td>
+                        <td>김민지 (minji87)</td>
+                        <td>2023-02-20 15:57:17</td>
+                        <td>이승현 (prof_shyun)</td>
+                        <td>2025-10-03 23:59:59</td>
+                        <td><span class="txtSuccess_color">답변완료</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>8</td>
+                        <td>2025</td>
+                        <td>1학기</td>
+                        <td>6기</td>
+                        <td>심리학</td>
+                        <td>소비자심리학</td>
+                        <td>강의내용</td>
+                        <td class="align_left"><a href="#none" class="ellipsis width_90">10주차 1강 내용 문의드립니다. 길떄 길때 길때</a><span class="icon_new">N</span></td>
+                        <td>김민지 (minji87)</td>
+                        <td>2023-02-20 15:57:17</td>
+                        <td>이승현 (prof_shyun)</td>
+                        <td>2025-10-03 23:59:59</td>
+                        <td><span class="txtEnd_color">답변진행중</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 레이어_ 엑셀 다운로드 -->
+            <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>다운로드 사유 입력</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col style="width:400px;">
+                            </colgroup>
+                             <thead>
+                                <tr>
+                                    <th>사유</th>
+                                    <td>
+                                        <textarea name="" id="" placeholder="다운로드 사유를 입력해 주세요." class="width_100"></textarea>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>파기일</th>
+                                    <td>
+                                        <!-- 캘린더 -->
+                                        <div class="form_group calendar">
+                                            <div class="form_warning">
+                                                <input type="date" id="" placeholder="파기일 선택">
+                                                <p class="txtError_color">날짜가 올바르지 않습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //캘린더 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_엑셀 다운로드 -->
+            
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

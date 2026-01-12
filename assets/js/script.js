@@ -89,7 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_searchMemberDetail', layer: '.search_memberDetail', many: true }, // sms/메일 회원검색 레이어
         { sel: '.btn_nationalSubsidy', layer: '.national_subsidy', many: true }, // 국가보조금 레이어
         { sel: '.btn_packageSearch', layer: '.package_search', many: true }, // 과정/패키지 검색 레이어
-        { sel: '.btn_couponSearch', layer: '.coupon_list', many: true } // 쿠폰 검색 레이어
+        { sel: '.btn_couponSearch', layer: '.coupon_list', many: true }, // 쿠폰 검색 레이어
+        { sel: '.btn_scoringStatus', layer: '.scoring_status', many: true }, // 학습현황관리 채점 현황 레이어
+        { sel: '.btn_questionMarks', layer: '.question_marks', many: true }, // 편성 과정별 문항 채점 레이어
+        { sel: '.btn_questionMarks_detail', layer: '.questionMarks_detail', many: true }, // 편성 과정별 문항 채점 상세 레이어
+        { sel: '.btn_scoreResult', layer: '.score_result', many: true }, // 학습현황관리 채점결과 레이어
+        { sel: '.btn_previewAssignments', layer: '.preview_assignments', many: true }, // 과제 미리보기 레이어
+        { sel: '.btn_assignmentsResult', layer: '.assignments_result', many: true }, // 과제 채점 레이어
+        { sel: '.btn_answerSection', layer: '.answer_section', many: true }, // 답변하기 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

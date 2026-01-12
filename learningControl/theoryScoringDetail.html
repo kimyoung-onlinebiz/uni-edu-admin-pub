@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#" class="active">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">book</span>학습현황 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">채점 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none" class="active_depth_3">이론 채점 관리</a></li>
+                        <li><a href="#none">실습 채점 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">통합현황 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 통합현황</a></li>
+                        <li><a href="#none">실습 통합현황</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공결 관리</a></li>
+                <li>
+                    <a href="#">재시험/추가시험 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">재시험 관리</a></li>
+                        <li><a href="#none">추가시험 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">성적/수료 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">종합 성적 관리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 성적 관리</a></li>
+                                <li><a href="#none">실습 성적 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">상대평가 성적처리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 상대평가</a></li>
+                                <li><a href="#none">실습 상대평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사회복지현장실습 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">현장실습 운영관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">학습게시판 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">과정 공지사항</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">공지사항 템플릿 관리</a></li>
+                                <li><a href="#none">공지사항 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">학습자료실</a></li>
+                        <li><a href="#none">학습Q&A</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>이론 채점 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습현황 관리</a></li>
+                    <li><a href="#none">채점관리</a></li>
+                    <li>이론 채점 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3>중간고사 채점</h3>
+            <h4>
+                기본 정보
+                <button class="btn btn_scoringStatus">채점 현황 바로보기</button>
+            </h4>
+
+            <!-- 레이어_채점 현황 바로보기 -->
+            <div class="layer_wrapper scoring_status"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>채점 현황</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>응시율</th>
+                                    <th>채점완료</th>
+                                    <th>전체 평균</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>87.5%(70/80)</td>
+                                    <td>92.9%(65/70)</td>
+                                    <td>18.99점</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+                         <!-- 테이블 -->
+                        <table class="data_table marginT16">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>반</th>
+                                    <th>대상자</th>
+                                    <th>응시자</th>
+                                    <th>미응시자</th>
+                                    <th>채점완료</th>
+                                    <th>채점 필요 인원</th>
+                                    <th>전체 평균</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1반</td>
+                                    <td>40명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>0건</td>
+                                    <td>19.55점</td>
+                                </tr>
+                                <tr>
+                                    <td>1반</td>
+                                    <td>40명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>0건</td>
+                                    <td>19.55점</td>
+                                </tr>
+                                <tr>
+                                    <td>1반</td>
+                                    <td>40명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>35명</td>
+                                    <td>0건</td>
+                                    <td>19.55점</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_채점 현황 바로보기 -->
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col style="width:35%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>평가 학기</th>
+                        <td>2025년도 1학기 6기</td>
+                        <th>평가 과정 명</th>
+                        <td>소비자심리학</td>
+                    </tr>
+                    <tr>
+                        <th>시험기간</th>
+                        <td>
+                            <dl class="inline">
+                                <dt><strong>정규 시험</strong></dt>
+                                <dd>2025-09-01 ~ 2025-09-10</dd>
+                            </dl>
+                            <dl class="inline">
+                                <dt><strong>추가 시험</strong></dt>
+                                <dd>2025-09-01 ~ 2025-09-10</dd>
+                            </dl>
+                        </td>
+                        <th>시험 상태</th>
+                        <td>진행 종료</td>
+                    </tr>
+                    <tr>
+                        <th>시험 정보</th>
+                        <td colspan="3">
+                            <dl class="inline">
+                                <dt><strong>총 문항 수(총 배점)</strong></dt>
+                                <dd>25문항(25점)</dd>
+                            </dl>
+                            <dl class="inline">
+                                <dt><strong>응시시간</strong></dt>
+                                <dd>60분</dd>
+                            </dl>
+                        </td>
+                    </tr>
+                   <tr>
+                        <th>시험 내용</th>
+                        <td colspan="3">학습운영 관리 > 평가설정 관리 > 이론평가설정에서 설정한 “시험 내용”이 노출됩니다.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h4 class="borderN">채점 관리 및 응시 현황</h4>
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box alignC">
+                    <dt>관리 교수 명</dt>
+                    <dd>
+                        홍길동
+                    </dd>
+                    <dt>반 정보</dt>
+                    <dd>
+                        <select name="" id="">
+                            <option value="">반 전체</option>
+                        </select>
+                    </dd>
+                </dl>
+
+                <dl class="search_box alignC">
+                    <dt>응시 여부</dt>
+                    <dd>
+
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="" id="" checked="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">응시</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">미응시</label>
+                            </div>
+                        </div>
+
+                    </dd>
+                    <dt>채점 여부</dt>
+                    <dd>
+
+                        <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="" id="" checked="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">채점 완료</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">미채점</label>
+                            </div>
+                        </div>
+
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>적용</button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+            <p class="table_comment">※ “주관식(단답형) 채점필요” 상태는 객관식 문항은 자동 채점되었으나, 학습자가 작성한 주관식(단답형) 답안이 문제은행에 등록된 정답 또는 유사답안과 일치하지 않아 <strong>별도 채점이 필요한 경우</strong>를 의미합니다. 해당 상태는 <strong>미채점으로 간주</strong>됩니다.</p>
+
+
+            <!-- 데이터 영역 -->
+            <div class="table_top marginT16">
+                <div class="table_sort">
+                    <select>
+                        <option value="">20</option>
+                    </select>
+                    <span>총 <strong>99</strong>건</span>
+                </div>
+                <div class="table_actions">
+                    <button class="btn secondary btn_questionMarks">일괄채점</button>
+                </div>
+            </div>
+
+            <!-- 레이어_편성 과정별 문항 채점 -->
+            <div class="layer_wrapper question_marks"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>편성 과정별 중간고사 문항 채점</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>평가 학기</th>
+                                    <td>2025년도 1학기 6기</td>
+                                    <th>평가 과정</th>
+                                    <td>[2516C0100] 소비자심리학</td>
+                                </tr>
+                                <tr>
+                                    <th>총 응시 인원</th>
+                                    <td colspan="3">100명</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                        <!-- 검색 -->
+                         <div class="search_section marginT24">
+                            <dl class="search_box">
+                                <dt>채점 여부</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="radio" name="" id="" checked="">
+                                            <label for="">전체</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="" id="">
+                                            <label for="">채점완료</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="" id="">
+                                            <label for="">채점필요</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dt>문항 유형</dt>
+                                <dd>
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="radio" name="" id="" checked="">
+                                            <label for="">전체</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="" id="">
+                                            <label for="">객관식</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="radio" name="" id="">
+                                            <label for="">주관식(단답형)</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="search_box">
+                                <dt>문항 상세 검색</dt>
+                                <dd>
+                                    <div class="search_input">
+                                        <input type="text" placeholder="검색어를 입력해 주세요.">
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <div class="btn_group">
+                                <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                            </div>
+
+                        </div>
+                        <!-- //검색 -->
+
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width:340px;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>문항 번호</th>
+                                    <th>유형</th>
+                                    <th>문제</th>
+                                    <th>난이도</th>
+                                    <th>응시 인원</th>
+                                    <th>채점 여부</th>
+                                    <th>최종 수정일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2546</td>
+                                    <td>객관식</td>
+                                    <td class="align_left">소비자들의 브랜드 인지도와 관련이 없는 것은?</td>
+                                    <td>A</td>
+                                    <td>55</td>
+                                    <td><button class="btn primary btn_questionMarks_detail">채점 필요</button></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2546</td>
+                                    <td>주관식(단답형)</td>
+                                    <td class="align_left">브랜드 충성도가 기업에 주는 이익에 포함되지 않는 것은? 긴 문제 긴 문제 긴 문제 긴 문제 긴 문제 긴 문제</td>
+                                    <td>A</td>
+                                    <td>55</td>
+                                    <td>채점완료</td>
+                                    <td>2025.01.11</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2546</td>
+                                    <td>주관식(단답형)</td>
+                                    <td class="align_left">브랜드 충성도가 기업에 주는 이익에 포함되지 않는 것은?</td>
+                                    <td>A</td>
+                                    <td>55</td>
+                                    <td>채점완료</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2546</td>
+                                    <td>주관식(단답형)</td>
+                                    <td class="align_left">브랜드 충성도가 기업에 주는 이익에 포함되지 않는 것은?</td>
+                                    <td>A</td>
+                                    <td>55</td>
+                                    <td>채점완료</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2546</td>
+                                    <td>주관식(단답형)</td>
+                                    <td class="align_left">브랜드 충성도가 기업에 주는 이익에 포함되지 않는 것은?</td>
+                                    <td>A</td>
+                                    <td>55</td>
+                                    <td>채점완료</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2546</td>
+                                    <td>주관식(단답형)</td>
+                                    <td class="align_left">브랜드 충성도가 기업에 주는 이익에 포함되지 않는 것은?</td>
+                                    <td>A</td>
+                                    <td>55</td>
+                                    <td>채점완료</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2546</td>
+                                    <td>주관식(단답형)</td>
+                                    <td class="align_left">브랜드 충성도가 기업에 주는 이익에 포함되지 않는 것은?</td>
+                                    <td>A</td>
+                                    <td>55</td>
+                                    <td>채점완료</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_편성 과정별  문항 채점 -->
+
+            <!-- 레이어_문항 상세 채점 -->
+            <div class="layer_wrapper questionMarks_detail"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>중간고사 문항 상세 채점</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>평가 학기</th>
+                                    <td>2025년도 1학기 6기</td>
+                                    <th>평가 과정</th>
+                                    <td>[2516C0100] 소비자심리학</td>
+                                </tr>
+                                <tr>
+                                    <th>문항 번호</th>
+                                    <td>2533</td>
+                                    <th>문항 유형</th>
+                                    <td>주관식(단답형)</td>
+                                </tr>
+                                <tr>
+                                    <th>총 응시 인원</th>
+                                    <td>27명</td>
+                                    <th>채점 여부</th>
+                                    <td><span class="txtError_color">채점 필요</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                        <div class="exam_question">
+                            <h4>다음 중 조직의 구성원이 조직 목표를달성하기 위해 수행하는 행동양식을 무엇이라하는가?</h4>
+                            <div class="right_answer">
+                                <strong>정답: 매개변인(Mediator Variable)</strong>
+                                <p>산업 및 조직심리학은 응용심리학의 한 분야로써, 산업심리학은 인사심리학으로도 알려져 있으며 효과적인 직무설계, 종업원 선발과 훈련, 수행 평가와 관련된 영역을 연구하는 심리학 분야이다. 보기 ③의 내용의 <b><u>심리적 문제</u></b>에 관한 치료는 임상심리학과 관련된 설명이다. 또한 조직심리학은 심리문제에 대한 치료계획이 아닌 심리평가를 통하여 평가하며 치료계획을 세워 심리치료를 진행하는 것이다.</p>
+                            </div>
+                        </div>
+                        <h4>학습자 답안리스트</h4>
+                        <!-- 검색 -->
+                         <div class="search_section">
+                            <dl class="search_box">
+                                <dt>학습자 답안 검색</dt>
+                                <dd>
+                                    <div class="search_input">
+                                        <input type="text" placeholder="검색어를 입력해 주세요." class="width_400px">
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <div class="btn_group">
+                                <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                            </div>
+
+                        </div>
+                        <!-- //검색 -->
+
+                        <div class="table_top align_right">
+                            <div class="table_actions">
+                                <div class="form_group alignC">
+                                    <strong>일괄 정답 처리</strong>
+                                    <div class="form_check">
+                                        <input type="radio" name="" id="">
+                                        <label for="">정답</label>
+                                    </div>
+                                    <div class="form_check">
+                                        <input type="radio" name="" id="">
+                                        <label for="">오답</label>
+                                    </div>
+                                </div>
+                                <button class="btn">일괄 적용</button>
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col style="width:340px;">
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox">
+                                    </th>
+                                    <th>No</th>
+                                    <th>학습자 답안</th>
+                                    <th>동일 답안 수</th>
+                                    <th>정답 여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>8</td>
+                                    <td>전문성</td>
+                                    <td>14</td>
+                                    <td>
+                                         <div class="form_group align_center">
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">정답</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">오답</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>8</td>
+                                    <td>전문성</td>
+                                    <td>14</td>
+                                    <td>
+                                         <div class="form_group align_center">
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">정답</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">오답</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>8</td>
+                                    <td>전문성</td>
+                                    <td>14</td>
+                                    <td>
+                                         <div class="form_group align_center">
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">정답</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">오답</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">채점 결과 저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_문항 상세 채점 -->
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>반</th>
+                        <th>이름(ID)</th>
+                        <th>점수</th>
+                        <th>응시시간</th>
+                        <th>시험 응시</th>
+                        <th>채점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>미응시</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>15.88</td>
+                        <td>2025-04-28 20:25:33 ~ 2025-04-28 20:40:50</td>
+                        <td><button class="btn btn_scoreResult">채점 결과</button></td>
+                        <td><span>채점완료</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>15.88</td>
+                        <td>2025-04-28 20:25:33 ~ 2025-04-28 20:40:50</td>
+                        <td><button class="btn">채점 결과</button></td>
+                        <td><span class="txtError_color">주관식(단답형) 채점필요</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>1반</td>
+                        <td>김민준(kmj001)</td>
+                        <td>15.88</td>
+                        <td>2025-04-28 20:25:33 ~ 2025-04-28 20:40:50</td>
+                        <td><button class="btn">채점 결과</button></td>
+                        <td><span class="txtError_color">주관식(단답형) 채점필요</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //테이블 -->
+
+            <!-- 레이어_채점 결과 -->
+            <div class="layer_wrapper score_result"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>중간고사 채점 결과</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>평가 학기</th>
+                                    <td>2025년도 1학기 6기</td>
+                                    <th>평가 과정</th>
+                                    <td>[2516C0100] 소비자심리학</td>
+                                </tr>
+                                <tr>
+                                    <th>평가 항목 유형</th>
+                                    <td>중간고사</td>
+                                    <th>응시자</th>
+                                    <td>김민준(kmj001)</td>
+                                </tr>
+                                <tr>
+                                    <th>응시 시작시간</th>
+                                    <td>2025-04-27 18:58:00</td>
+                                    <th>응시 종료시간</th>
+                                    <td>2025-04-27 19:58:00</td>
+                                </tr>
+                                <tr>
+                                    <th>응시 IP</th>
+                                    <td colspan="3">192.168.0.1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                        <h3 class="marginT40">응답 요약</h3>
+                        <table class="data_table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>객관식</th>
+                                    <th>주관식(단답형)</th>
+                                    <th>총점</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>51.00 / 80.00</td>
+                                    <td>12.00 / 20.00</td>
+                                    <td>63.00 / 100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>51.00 / 80.00</td>
+                                    <td>12.00 / 20.00</td>
+                                    <td>63.00 / 100.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- 1번 문항 -->
+                        <div class="exam_content">
+                            <h3>문항 번호 <strong>1번</strong></h3>
+                            <!-- 테이블 -->
+                            <table class="data_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>문제 유형</th>
+                                        <th>난이도</th>
+                                        <th>배점 / 백분율 배점</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>객관식</td>
+                                        <td>A</td>
+                                        <td>1.5점 / 6점</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 시험문제 -->
+                            <div class="exam_question">
+                                <h4>다음 중 조직의 구성원이 조직 목표를달성하기 위해 수행하는 행동양식을 무엇이라하는가?</h4>
+                                <ol class="exam_choice">
+                                    <li>조직심리학은 응용심리학의 한 분야이다.</li>
+                                    <li>조직행동론은 개인과 집단의 행동을 연구한다.</li>
+                                    <li>조직문화는 조직의 가치관과 신념을 포함한다.</li>
+                                    <li><img src="https://www.ibstudy.co.kr/Files/Banner/2025-12-31/20251231171421_850701046_aside_floBn.png" alt=""></li>
+                                </ol>
+
+                                <table class="table_view">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>응시자 선택</th>
+                                            <td><strong class="txtSuccess_color">정답</strong></td>
+                                            <td>④</td>
+                                            <th>획득 점수</th>
+                                            <td><strong class="txtSuccess_color">1.5점</strong> / 1.5점</td>
+                                            <td><strong class="txtSuccess_color">6점</strong> / 6점</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="right_answer">
+                                    <strong>정답: ③</strong>
+                                    <p>산업 및 조직심리학은 응용심리학의 한 분야로써, 산업심리학은 인사심리학으로도 알려져 있으며 효과적인 직무설계, 종업원 선발과 훈련, 수행 평가와 관련된 영역을 연구하는 심리학 분야이다. 보기 ③의 내용의 <b><u>심리적 문제</b></u>에 관한 치료는 임상심리학과 관련된 설명이다. 또한 조직심리학은 심리문제에 대한 치료계획이 아닌 심리평가를 통하여 평가하며 치료계획을 세워 심리치료를 진행하는 것이다.</p>
+                                </div>
+                            </div>
+                            <!-- //시험문제 -->
+                        </div>
+                        <!-- //1번 문항 -->
+
+                        <!-- 2번 문항 -->
+                        <div class="exam_content">
+                            <h3>문항 번호 <strong>2번</strong></h3>
+                            <!-- 테이블 -->
+                            <table class="data_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>문제 유형</th>
+                                        <th>난이도</th>
+                                        <th>배점 / 백분율 배점</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>객관식</td>
+                                        <td>A</td>
+                                        <td>1.5점 / 6점</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 시험문제 -->
+                            <div class="exam_question">
+                                <h4>다음 중 조직의 구성원이 조직 목표를달성하기 위해 수행하는 행동양식을 무엇이라하는가?</h4>
+                                <ol class="exam_choice">
+                                    <li>조직심리학은 응용심리학의 한 분야이다.</li>
+                                    <li>조직행동론은 개인과 집단의 행동을 연구한다.</li>
+                                    <li>조직문화는 조직의 가치관과 신념을 포함한다.</li>
+                                    <li><img src="https://www.ibstudy.co.kr/Files/Banner/2025-12-31/20251231171421_850701046_aside_floBn.png" alt=""></li>
+                                </ol>
+
+                                <table class="table_view">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>응시자 선택</th>
+                                            <td><strong class="txtSuccess_color">정답</strong></td>
+                                            <td>④</td>
+                                            <th>획득 점수</th>
+                                            <td><strong class="txtSuccess_color">1.5점</strong> / 1.5점</td>
+                                            <td><strong class="txtSuccess_color">6점</strong> / 6점</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="right_answer">
+                                    <strong>정답: ③</strong>
+                                    <p>산업 및 조직심리학은 응용심리학의 한 분야로써, 산업심리학은 인사심리학으로도 알려져 있으며 효과적인 직무설계, 종업원 선발과 훈련, 수행 평가와 관련된 영역을 연구하는 심리학 분야이다. 보기 ③의 내용의 <b><u>심리적 문제</b></u>에 관한 치료는 임상심리학과 관련된 설명이다. 또한 조직심리학은 심리문제에 대한 치료계획이 아닌 심리평가를 통하여 평가하며 치료계획을 세워 심리치료를 진행하는 것이다.</p>
+                                </div>
+                            </div>
+                            <!-- //시험문제 -->
+                        </div>
+                        <!-- //2번 문항 -->
+
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_채점 결과 -->
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+                <a href="#none">1</a>
+                <a href="#none" class="active">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+            <!-- //페이징 -->
+
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
