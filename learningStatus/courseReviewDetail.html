@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#" class="active">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded"> domain_verification</span>학습운영 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">평가 설정 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론평가 설정</a></li>
+                        <li><a href="#none">실습평가 설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">문제은행 관리</a>
+                </li>
+                <li>
+                    <a href="#">제출물 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">과제 관리</a></li>
+                        <li><a href="#none">토론 관리</a></li>
+                        <li><a href="#none">평가/보고서 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">수강/반 편성 관리</a>
+                </li>
+                 <li>
+                    <a href="#">강의평가 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">문항 관리</a></li>
+                        <li><a href="#none">설문 관리</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2">
+                    <a href="#">수강후기 관리</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>수강후기 관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습운영 관리</a></li>
+                    <li>수강후기 관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <!-- 데이터 영역 -->
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:15%">
+                    <col>
+                    <col style="width:15%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>편성 학기</th>
+                        <td>2026년도 1학기 2기</td>
+                        <th>쿠폰코드</th>
+                        <td>생명과학 일반생물학</td>
+                    </tr>
+                    <tr>
+                        <th>등록일</th>
+                        <td>2025-12-01</td>
+                        <th>등록자</th>
+                        <td>김다은(daeun_k12)</td>
+                    </tr>
+                    <tr>
+                        <th>승인 여부</th>
+                        <td>
+                            <div class="form_group">
+                                <select name="" id="">
+                                    <option value="">대기</option>
+                                </select>
+                                <button class="btn primary">적용</button>
+                            </div>
+                        </td>
+                        <th>조회수</th>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>해쉬태그</th>
+                        <td colspan="3">
+                            <dl class="inline">
+                                <dt><strong>학습 경험</strong></dt>
+                                <dd class="marginL24">
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">학습동기 부여</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">기초다지기최적화</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">복습용추천</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">체계적 강의구성</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">비전공자추천</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            
+                            <dl class="inline marginT8">
+                                <dt><strong>강의 내용</strong></dt>
+                                <dd class="marginL24">
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">핵심정리</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">개념이해도움</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">전공기초탄탄</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">실무연계도움</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">명확한 예시</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <dl class="inline marginT8">
+                                <dt><strong>강사 및 운영</strong></dt>
+                                <dd class="marginL24">
+                                    <div class="form_group">
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">자세한 설명</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">친절한 안내</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">과제부담최소화</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">평가대비도움</label>
+                                        </div>
+                                        <div class="form_check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for="">시간관리수월</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>제목</th>
+                        <td colspan="3">
+                            전공 공부에 큰 도움!
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td colspan="3">
+                            일반생물학을 학점은행제로 듣는 게 조금 걱정됐는데, 강의 구성이 체계적이라 생각보다 훨씬 따라가기 쉬웠어요.<br />핵심 개념을 짧은 단위로 잘 설명해줘서 진도 관리가 편했고, 시험 전에 다시 보기 기능이 있어서 복습도 수월했습니다.특히 세포 구조나 생명과학 기초 개념들은 이해 위주로 설명해줘서 암기 부담이 많이 줄었어요.<br />과제와 퀴즈도 난이도가 적당해서 직장 다니면서 병행하기에도 무리 없었습니다.일반생물학 기초를 잡아야 하는 분들께 정말 추천하고 싶은 강의예요!
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+            <div class="btn_groupRight"> 
+                <button class="btn secondary">목록</button>
+            </div>
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
