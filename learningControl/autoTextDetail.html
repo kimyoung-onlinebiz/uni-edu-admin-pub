@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px" />
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+    <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#" class="active">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">book</span>학습현황 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+
+            <ul class="sidebar_menu">
+                <li> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">채점 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 채점 관리</a></li>
+                        <li><a href="#none">실습 채점 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">통합현황 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">이론 통합현황</a></li>
+                        <li><a href="#none">실습 통합현황</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공결 관리</a></li>
+                <li>
+                    <a href="#">재시험/추가시험 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">재시험 관리</a></li>
+                        <li><a href="#none">추가시험 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">성적/수료 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">종합 성적 관리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 성적 관리</a></li>
+                                <li><a href="#none">실습 성적 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">상대평가 성적처리</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">이론 상대평가</a></li>
+                                <li><a href="#none">실습 상대평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사회복지현장실습 관리</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">현장실습 운영관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">학습게시판 관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">과정 공지사항</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">공지사항 템플릿 관리</a></li>
+                                <li><a href="#none">공지사항 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">학습자료실</a></li>
+                        <li><a href="#none">학습Q&A</a></li>
+                    </ul>
+                </li>
+                <li class="active_depth_2"><a href="#">자동문자 발송관리</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>자동문자 발송관리</h2>
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">학습현황 관리</a></li>
+                    <li>자동문자 발송관리</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+
+            <h3 class="align_left">
+                자동문자 발송관리 상세
+                <div class="icon_tooltip">
+                    <button class="material-symbols-rounded btn_help" title="안내사항 보기">Help</button>
+                    <div class="tooltip">
+                        <strong>자동문자 발송관리 도움말</strong>
+                        <ol>
+                            <li>저장을 하지 않아도 발송일정에 따라 자동으로 발송이 됩니다.</li>
+                            <li>저장 시에는 변경된 제목과 내용, 일정으로 발송이 됩니다.</li>
+                            <li>문자 전송 완료 이후 일정 변경 시 문구가 동일하면 같은 번호로는 재전송 되지 않습니다.</li>
+                            <li>기본 발송 문구가 수정이 필요하시면 개발자에게 문의 주세요.</li>
+                        </ol>
+                    </div>
+                </div>
+            </h3>
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>편성 학기 정보</dt>
+                    <dd>
+                         <div class="form_group">
+                            <select name="" id="">
+                                <option value="">년도</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">학기</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">기수(개강일)</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+
+                <div class="btn_group">
+                    <button class="btn">초기화</button>
+                    <button class="btn primary"><span class="material-symbols-rounded">search</span>검색</button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <table class="table_view">
+                <colgroup>
+                    <col style="width:120px;">
+                    <col>
+                </colgroup>
+                 <tbody>
+                    <tr>
+                        <th>편성 과정 정보</th>
+                        <td>
+                            <ul class="bullet_hyphen">
+                                <li>편성 학기: 2026년 1학기 1기</li>
+                                <li>학습 기간: 2026년 03월 04일 00:00:00 ~ 2026년 6월 16일 23시 59분 59초</li>
+                                <li>중간고사: 2026년 04월 26일 00:00:00 ~ 2026년 04월 29일 16:59:59</li>
+                                <li>과제: 2026년 03월 18일 00:00:00 ~ 2026년 03월 31일 23:59:59</li>
+                                <li>토론: 2026년 03월 18일 00:00:00 ~ 2026년 03월 31일 23:59:59</li>
+                                <li>퀴즈: 2026년 04월 01일 00:00:00 ~ 2026년 04월 07일 23:59:59</li>
+                                <li>기말고사: 2026년 06월 07일 00:00:00 ~ 2026년 06월 10일 23:59:59</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>아이디</th>
+                        <td>ky12223</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰</th>
+                        <td>010-111-2222</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

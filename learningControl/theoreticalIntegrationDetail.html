@@ -199,7 +199,7 @@
                         <td>2025-04-02 20:25:33</td>
                         <td>2025-04-02 20:25:33</td>
                         <td>O</td>
-                        <td><button class="btn">확인하기</button></td>
+                        <td><button class="btn btn_learningLog">확인하기</button></td>
                     </tr>
                     <tr>
                         <td>8</td>
@@ -229,12 +229,272 @@
             </table>
             <!-- //테이블 -->
 
+            <!-- 레이어_ 학습창 로그 -->
+            <div class="layer_wrapper learning_log"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>학습창 로그</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>평가 학기</th>
+                                    <td>2025년도 1학기 6기</td>
+                                    <th>평가 과정</th>
+                                    <td>[2516C0100] 인적자원관리</td>
+                                </tr>
+                                <tr>
+                                    <th>차시 정보</th>
+                                    <td>1주차 1차시</td>
+                                    <th>강좌명</th>
+                                    <td>인적자원관리 – 1주차 1차시</td>
+                                </tr>
+                                <tr>
+                                    <th>진도율</th>
+                                    <td colspan="3">100%</td>
+                                </tr>
+                                <tr>
+                                    <th>학습자 이름</th>
+                                    <td colspan="3">김민준(kmj001)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- 탭 -->
+                        <div class="tab_container marginT24">
+
+                            <ul class="first_tab">
+                                <li><a href="#tab1" class="active" data-tab="tab1">페이지 요약</a></li>
+                                <li><a href="#tab2" data-tab="tab2">세부 로그</a></li>
+                            </ul>
+
+                            <div class="tab_contents">
+                                <div id="tab1" class="tab_content active"> <!-- active 추가 시 노출 -->
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>페이지</th>
+                                                <th>필수 학습 시간</th>
+                                                <th>회원 학습 시간</th>
+                                                <th>진도율</th>
+                                                <th>수강 시작일</th>
+                                                <th>수강 종료일</th>
+                                                <th>출석 여부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>1초</td>
+                                                <td>1초</td>
+                                                <td>100%</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>출석</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="tab2" class="tab_content">
+                                    <table class="data_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>학습 저장 시간</th>
+                                                <th>페이지</th>
+                                                <th>페이지 학습 시작시간</th>
+                                                <th>페이지 학습 종료시간</th>
+                                                <th>사용자 IP</th>
+                                                <th>학습 창</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>1</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>2</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>3</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>4</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>5</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>6</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>7</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1초</td>
+                                                <td>8</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>2025-05-12 14:09:00</td>
+                                                <td>000.000.000.000</td>
+                                                <td>PC</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //탭 -->
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_학습창 로그 -->
+
             <div class="btn_groupRight"> 
                 <button class="btn secondary">목록</button>
                 <button class="btn primary">저장</button>
             </div>
              
-
             <!-- //데이터 영역 -->
 
         </main>

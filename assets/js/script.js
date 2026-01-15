@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { sel: '.btn_previewAssignments', layer: '.preview_assignments', many: true }, // 과제 미리보기 레이어
         { sel: '.btn_assignmentsResult', layer: '.assignments_result', many: true }, // 과제 채점 레이어
         { sel: '.btn_answerSection', layer: '.answer_section', many: true }, // 답변하기 레이어
+        { sel: '.btn_learningLog', layer: '.learning_log', many: true }, // 학습현황관리 학습창 로그 레이어
+        { sel: '.btn_retestApproval', layer: '.retest_approval', many: true }, // 학습현황관리 재시험 승인 레이어
     ];
     map.forEach(({ sel, layer, many }) => {
         const layerEl = $(layer);

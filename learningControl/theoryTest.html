@@ -129,8 +129,8 @@
             </header>
 
             <ul class="big_tab">
-                <li><a href="#tab1" class="active">통합현황</a></li>
-                <li><a href="#tab2">중간고사</a></li>
+                <li><a href="#tab1">통합현황</a></li>
+                <li><a href="#tab2" class="active">중간고사</a></li>
                 <li><a href="#tab3">기말고사</a></li>
                 <li><a href="#tab4">과제</a></li>
                 <li><a href="#tab5">토론</a></li>
@@ -164,78 +164,85 @@
                                 <option value="">반</option>
                             </select>
                         </div>
+                        <div class="search_input marginT8">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                        </div>
                     </dd>
                 </dl>
                 <dl class="search_box">
-                    <dt>학습 상태</dt>
+                    <dt>학습자 정보</dt>
                     <dd>
                         <div class="form_group">
+                            <select name="" id="">
+                                <option value="">이름</option>
+                            </select>
+                            <div class="search_input">
+                                <input type="text" placeholder="검색어를 입력해 주세요.">
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>담당 컨설턴트</dt>
+                    <dd>
+                        <select name="" id="" class="small">
+                            <option value="">컨설턴트 명</option>
+                        </select>
+                    </dd>
+                    
+                </dl>
+                 <dl class="search_box">
+                    <dt>시험 종류</dt>
+                    <dd>
+                        <select name="" id="" class="small">
+                            <option value="">일반</option>
+                        </select>
+                    </dd>
+                    <dt>응시 여부</dt>
+                    <dd>
+                        <div class="form_group alignC">
                             <div class="form_check">
                                 <input type="radio" name="" id="" checked="">
                                 <label for="">전체</label>
                             </div>
                             <div class="form_check">
                                 <input type="radio" name="" id="">
-                                <label for="">학습자</label>
+                                <label for="">응시</label>
                             </div>
                             <div class="form_check">
                                 <input type="radio" name="" id="">
-                                <label for="">미학습자</label>
+                                <label for="">미응시</label>
+                            </div>
+                            <input type="date" id="searchStartDate" placeholder="시작일">
+                            <span class="calendar_bullet">~</span>
+                            <input type="date" id="searchEndDate" placeholder="종료일">
+                            <p class="txtError_color warning">시작일을 다시 입력해주세요<div class=""></div></p>
+                        </div>
+                        
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt>채점여부</dt>
+                    <dd>
+                        <div class="form_group alignC">
+                            <div class="form_check">
+                                <input type="radio" name="" id="" checked="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">채점완료</label>
+                            </div>
+                            <div class="form_check">
+                                <input type="radio" name="" id="">
+                                <label for="">미채점</label>
                             </div>
                         </div>
                     </dd>
-                    
-                </dl>
-                <dl class="search_box">
-                    <dt>학습자 정보</dt>
-                    <dd>
-                        <select name="" id="" class="small">
-                            <option value="">이름</option>
-                            <option value="">ID</option>
-                        </select>
-                    </dd>
-                    <dd>
-
-                        <div class="search_input">
-                            <input type="text" placeholder="검색어를 입력해주세요.">
-                        </div>
-
-                    </dd>
-                </dl>
-                <dl class="search_box">
-                    <dt>출석률</dt>
+                    <dt>점수</dt>
                     <dd>
                         <div class="form_group percent">
-                            <input type="number" class="width_80px">% 이상 <span class="calendar_bullet">~</span> <input type="number" class="width_80px">% 이하
+                            <input type="number" class="width_80px">점 이상 <span class="calendar_bullet">~</span> <input type="number" class="width_80px">점 이하
                         </div>
-                    </dd>
-                    <dt>주차별 출석수</dt>
-                    <dd>
-                        <div class="form_group">
-                            <select name="" id="" class="small">
-                                <option value="">선택</option>
-                                <option value="">1주차</option>
-                                <option value="">2주차</option>
-                                <option value="">3주차</option>
-                            </select>
-                            <input type="number" class="width_80px">
-                            <div class="form_check">
-                                <input type="radio" name="" id="">
-                                <label for="">이상</label>
-                            </div>
-                            <div class="form_check">
-                                <input type="radio" name="" id="">
-                                <label for="">이하</label>
-                            </div>
-                        </div>
-                    </dd>
-                </dl>
-                <dl class="search_box">
-                    <dt>담당 컨설턴트</dt>
-                    <dd>
-                        <select name="" id="" class="small">
-                            <option value="">컨설턴트 명</option>
-                        </select>
                     </dd>
                 </dl>
 
@@ -248,8 +255,6 @@
             <!-- //검색 섹션 -->
 
             <!-- 데이터 영역 -->
-
-            
 
             <div class="table_top">
                 <div class="table_sort">
@@ -394,6 +399,16 @@
                     <col>
                     <col>
                     <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
                 </colgroup>
                 <thead>
                     <tr>
@@ -404,69 +419,152 @@
                         <th>년도</th>
                         <th>학기</th>
                         <th>기수</th>
-                        <th>편성과정명</th>
+                        <th>편성<br />과정명</th>
                         <th>반</th>
+                        <th>시험 종류</th>
+                        <th>관리 교수</th>
                         <th>이름(ID)</th>
                         <th>컨설턴트</th>
-                        <th>출석률</th>
-                        <th>최근 학습일</th>
-                        <th>진도/차시/결석</th>
-                        <th>과락</th>
-                        <th>진도</th>
+                        <th>응시여부</th>
+                        <th>재시험 요청</th>
+                        <th>재시험 부여</th>
+                        <th>시험지 보기</th>
+                        <th>점수</th>
+                        <th>백분율 점수</th>
+                        <th>응시시간</th>
+                        <th>종료시간</th>
+                        <th>응시IP</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td>8</td>
+                        <td>200</td>
                         <td>2025</td>
                         <td>1</td>
                         <td>6</td>
-                        <td>인적자원관리</td>
+                        <td>한국어로서의외국어교육론</td>
                         <td>1</td>
-                        <td><a href="#none">김*준(kmj001)</a></td>
+                        <td>일반</td>
+                        <td>김맹식</td>
+                        <td>정*원<br />(hawon610)</td>
                         <td>홍나라</td>
-                        <td>100%</td>
-                        <td>2025-08-04</td>
-                        <td>30/30/0</td>
-                        <td>N</td>
-                        <td>15</td>
+                        <td>Y</td>
+                        <td>-</td>
+                        <td><span class="txtSuccess_color">부여완료</span></td>
+                        <td><button class="btn small">시험지 보기</button></td>
+                        <td>17.75<br />/25</td>
+                        <td>71<br />/100</td>
+                        <td>2025-06-24<br />00:00:00</td>
+                        <td>2025-06-24<br />00:00:00</td>
+                        <td>00.00.00.00</td>
                     </tr>
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td>8</td>
+                        <td>200</td>
                         <td>2025</td>
                         <td>1</td>
                         <td>6</td>
-                        <td>인적자원관리</td>
+                        <td>한국어로서의외국어교육론</td>
                         <td>1</td>
-                        <td><a href="#none">김*준(kmj001)</a></td>
+                        <td>일반</td>
+                        <td>김맹식</td>
+                        <td>정*원<br />(hawon610)</td>
                         <td>홍나라</td>
-                        <td>100%</td>
-                        <td>2025-08-04</td>
-                        <td>30/30/0</td>
-                        <td>N</td>
-                        <td>15</td>
+                        <td>Y</td>
+                        <td>승인</td>
+                        <td><button class="btn small">재시험</button></td>
+                        <td><button class="btn small">시험지 보기</button></td>
+                        <td>17.75<br />/25</td>
+                        <td>71<br />/100</td>
+                        <td>2025-06-24<br />00:00:00</td>
+                        <td>2025-06-24<br />00:00:00</td>
+                        <td>00.00.00.00</td>
                     </tr>
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td>8</td>
+                        <td>200</td>
                         <td>2025</td>
                         <td>1</td>
                         <td>6</td>
-                        <td>인적자원관리</td>
+                        <td>한국어로서의외국어교육론</td>
                         <td>1</td>
-                        <td><a href="#none">김*준(kmj001)</a></td>
+                        <td>일반</td>
+                        <td>김맹식</td>
+                        <td>정*원<br />(hawon610)</td>
                         <td>홍나라</td>
-                        <td>100%</td>
-                        <td>2025-08-04</td>
-                        <td>30/30/0</td>
-                        <td>N</td>
-                        <td>15</td>
+                        <td>Y</td>
+                        <td><button class="btn small btn_retestApproval">대기</button></td>
+                        <td>-</td>
+                        <td><button class="btn small">시험지 보기</button></td>
+                        <td>17.75<br />/25</td>
+                        <td>71<br />/100</td>
+                        <td>2025-06-24<br />00:00:00</td>
+                        <td>2025-06-24<br />00:00:00</td>
+                        <td>00.00.00.00</td>
                     </tr>
                 </tbody>
             </table>
             <!-- //테이블 -->
+
+            <!-- 레이어_재시험 승인 처리 -->
+            <div class="layer_wrapper retest_approval"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>재시험 승인 처리</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:150px;">
+                                <col style="width:450px;">
+                            </colgroup>
+                             <tbody>
+                                <tr>
+                                    <th>재시험 승인 설정</th>
+                                    <td>
+                                        <div class="form_group">
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">승인</label>
+                                            </div>
+                                            <div class="form_check">
+                                                <input type="radio" name="" id="">
+                                                <label for="">반려</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <th>관리자 반려 사유</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">관리자 반려 사유 선택</option>
+                                            <option value="">응시 사유 미비</option>
+                                            <option value="">동일 사유로 중복 신청</option>
+                                            <option value="">증빙자료 누락</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //테이블 -->
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_재시험 승인 처리 -->
 
             <!-- 페이징 -->
             <div class="paging">
