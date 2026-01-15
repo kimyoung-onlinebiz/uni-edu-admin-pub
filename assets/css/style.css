@@ -96,6 +96,7 @@
 .form_group.column { flex-direction:column; gap:8px; }
 .form_group.align_center { justify-content:center; }
 .alignC { align-items:center !important; }
+
 .data_table th .form_group { justify-content:center; }
 .data_table.align_left td .form_group,.data_table.align_left th .form_group { justify-content:left; }
 .form_check { display:flex; align-items:center; justify-content:center; }
