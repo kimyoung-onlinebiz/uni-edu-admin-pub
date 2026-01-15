@@ -122,6 +122,7 @@
 .form_group > p { margin-top:0; }
 .inline_dl { display:flex; align-items:center; gap:16px; justify-content:center; }
 .inline_dl.align_left { justify-content:flex-start; }
+.inline_dl.small dt { min-width:60px; }
 .inline_dl input { margin-right:4px; }
 .inline_dl dt { font-weight:600; color:var(--neutral_900); min-width:100px; }
 .form_warning { text-align:left; }
