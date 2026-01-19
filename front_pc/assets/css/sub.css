@@ -37,6 +37,7 @@
 .login_wrapper .login_footer a { font-size:var(--font_base); color:var(--neutral_600); }
 .login_wrapper .login_footer p { font-size:var(--font_small); color:var(--neutral_600); margin-top:8px; }
 .login_input .form_group { margin-bottom:20px;  justify-content:space-between; }
+.login_input .result_id { border: 1px solid var(--neutral_500); height:60px; vertical-align: middle; padding:20px 16px 0; border-radius:var(--borderRadius); }
 
 /* 회원가입 */
 .join_progress { display:flex; align-items:flex-start; gap:30px; margin-bottom:20px; }
