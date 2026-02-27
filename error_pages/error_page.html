@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>400 Bad Request</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+         body { font-family:Pretendard, -apple-system, BlinkMacSystemFont, "Malgun Gothic", dotum, sans-serif; background:#f2f2f2; color:#111; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; overflow:hidden; }
+         * { padding:0; margin:0; }
+         .error_container { text-align:center; padding:40px 20px; display:flex; flex-flow:column; gap:20px; animation:fadeIn .8s ease; width:100%; max-width:600px; }
+         .error_code { font-size:72px; font-weight:900; font-weight:bold; color: #ef4444; line-height:1; letter-spacing:-2px; margin:20px 0;}
+         .error_title { font-size:28px; font-weight:700; word-break:keep-all; }
+         .error_message { font-size:18px; color:#666; line-height:1.6; word-break: keep-all; margin-bottom:10px; }
+         .btn_area { display:flex; justify-content:center; gap:12px; margin-top:20px; }
+         .btn_area a { display:inline-block; margin-top:30px; padding:15px; background:#1c3e99; color:#fff; text-decoration:none; border-radius:8px; flex-grow:1; font-weight:600; transition:all 0.2s ease; }
+         .btn_area a:hover { background:#2553cc; }
+         .btn_area a:first-child:not(:last-child) { background:#777; }
+         .btn_area a:first-child:not(:last-child):hover { background:#888; }
+         .error_container img { max-width:100%; height:auto; }
+
+        @media (max-width: 768px) {
+            .error_code { font-size:55px; }
+            .error_title { font-size:24px; }
+        }
+
+        @media (max-width:480px) {
+            .error_container { gap:10px; }
+            .error_code { font-size:45px; }
+            .error_title  { font-size:20px; }
+            .error_message { font-size:15px; }
+        }
+
+        @keyframes fadeIn { 
+            from { opacity:0; transform:translateY(20px); }
+            to { opacity: 1; transform: translateY(0); } 
+        }
+         
+    </style>
+</head>
+<body>
+   <div class="error_container">
+        <p><img src="error_img.png" alt=""></p>
+        <div class="error_code">400 Bad Request</div>
+        <h1 class="error_title">요청을 처리할 수 없습니다.</h1>
+        <p class="error_message">
+            입력한 정보가 올바른지 다시 확인해주세요.
+        </p>
+        <div class="btn_area">
+            <!-- <a href="javascript:history.back();">이전</a> -->
+            <a href="/">메인</a>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
