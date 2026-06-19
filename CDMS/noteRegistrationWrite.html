@@ -499,39 +499,19 @@
                                 <th>3페이지</th>
                                 <th>
                                     학습하기
-                                    <p class="table_comment marginT8">* 이수시간: 2450초</p>
+                                    <p class="table_comment marginT8">* 이수시간 <input type="number"> 초</p>
                                 </th>
                                 <td>
-                                    <table class="table_overlay">
-                                        <colgroup>
-                                            <col>
-                                            <col>
-                                            <col>
-                                            <col>
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>항목</th>
-                                                <th>등록</th>
-                                                <th>순서</th>
-                                                <th>등록 건 수</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>VOD 영상 재생</td>
-                                                <td>
-                                                    <button class="btn primary btn_vodRegistration">등록</button>
-                                                </td>
-                                                <td>
-                                                    <input type="number">
-                                                </td>
-                                                <td>
-                                                    총 <button><strong class="txtEnd_color">2</strong> 건</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <p class="base_600">Kollus ID</p>
+                                    <input type="text" placeholder="Kollus ID" class="width_150px">
+                                    <button class="btn secondary marginL10">유효성 검사</button> <span class="marginL8">강의 시간 : 00:00:00</span>
+                                    <div class="marginT16">
+                                        <button class="btn secondary">영상 목차 설정</button>
+                                        <span class="marginL8 txtPrimary_600">영상 목차 설정 완료</span>
+                                       
+                                        <input type="checkbox" class="width_100 marginL24"> 목차 미사용
+                                       
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -732,6 +712,108 @@
                 </div>
             </div>
 
+            <!-- 레이어_영상 목차 설정 -->
+            <div class="layer_wrapper settingVideo_table active"> <!-- active 추가 시화면 노출 -->
+                <div class="layer_basic">
+
+                    <div class="layer_header">
+                        <h2>영상 목차 설정</h2>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </div>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="page_comment">
+                            <ul>
+                                <li>VOD 영상 내 특정 구간 별로 목차를 설정해주세요.</li>
+                                <li>학습자가 해당 목차를 선택하면 지정한 시작 시간으로 이동합니다.</li>
+                            </ul>
+                        </div>
+                        <!-- 테이블 -->
+                        <table class="table_view">
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>미리보기</th>
+                                    <td>
+                                        <!-- 플레이어 영역 -->
+                                        <iframe id="catePlayer" vcode="1T2izMKC" title="학습하기 영상 플레이어" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="local-network-access;loopback-network;" src="https://v.kr.kollus.com/s?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHB0IjoxNzgxOTA1NTczLCJjdWlkIjoidGVzdGVyNzc3IiwibWMiOlt7Im1ja2V5IjoiMVQyaXpNS0MifV19.uGw9oLnvnzvz1A9Ta4u2Jrav%2FWTevSTEtJC6I4r%2Fkko%3D&amp;custom_key=f05db21691a290c98e8331294e5097f2aa4ee102d11a454dfc22599eec1d5693&amp;pc_player_version=v3"></iframe>
+                                        <!-- //플레이어 영역 -->
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <th>영상 정보</th>
+                                    <td>
+                                        <p><strong class="txtPrimary_600">Kollus ID:</strong> KP6F2A9D84X1</p>
+                                        <p><strong class="txtPrimary_600">재생 시간:</strong> 00:00:00</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3 class="table_top marginT24">
+                            목차 목록
+                            <button class="btn"><span class="material-symbols-rounded">playlist_add</span>목차 추가</button>
+                        </h3>
+                        <table class="table_view">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>순서</th>
+                                    <th>시작 시간</th>
+                                    <th class="align_center"><span class="essential">*</span>종료 시간</th>
+                                    <th class="align_center"><span class="essential">*</span>목차명</th>
+                                    <th>삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>00:00:00</td>
+                                    <td>
+                                        <input type="time" step="1" min="00:00:00" max="23:59:59" class="width_100">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="목차명을 입력해주세요." class="width_100">
+                                    </td>
+                                    <td>
+                                        <button class="btn">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>00:00:00</td>
+                                    <td>
+                                        <input type="time" step="1" min="00:00:00" max="23:59:59" class="width_100">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="목차명을 입력해주세요." class="width_100">
+                                    </td>
+                                    <td>
+                                        <button class="btn">삭제</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn btn_close">취소</button>
+                        <button class="btn primary">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //레이어_ 배너목록 -->
+
             <!-- 레이어_나레이션 등록 -->
             <div class="layer_wrapper narration_registration"> <!-- active 추가 시화면 노출 -->
                 <div class="layer_basic">
@@ -895,7 +977,7 @@
             <!-- //레이어_용어 입력 상세 -->
             
 
-            <!-- 레이어_VOD 영상 재생 등록 등록 -->
+            <!-- 레이어_VOD 영상 재생 등록 -->
             <div class="layer_wrapper vod_registration"> <!-- active 추가 시화면 노출 -->
                 <div class="layer_basic">
 
