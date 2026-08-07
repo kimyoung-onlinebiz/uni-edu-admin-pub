@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1600px"/>
-    <title>메가스터디아카데미원격평생교육원</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>김영평생교육원</title>
     <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
     <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
     <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -15,45 +15,43 @@
    <div class="login_wrapper">
         <header>
             <h1>
-                <a href="#none"><img src="../assets/images/common/Logo.svg" alt="메가스터디아카데미원격평생교육원"></a>
+                <a href="#none"><img src="../assets/images/common/Logo.svg" alt="김영평생교육원"></a>
             </h1>
             <h2>로그인</h2>
         </header>
         <div class="login_box">
             <ul class="tab">
-                <li><a href="#none">일반 로그인</a></li>
-                <li><a href="#none">SMS 인증</a></li>
-                <li><a href="#none" class="active">공동 인증서</a></li>
+                <li><a href="login.html">일반 로그인</a></li>
+                <li><a href="login_sms.html">SMS 인증</a></li>
+                <li><a href="login_certificate.html" class="active" aria-current="page">공동 인증서</a></li>
             </ul>
-            <div class="login_input">
+            <form class="login_input" action="#none" method="post" novalidate>
                 <div class="input_area">
-                    <h3>아이디</h3>
-                    <input type="text" placeholder="아이디를 입력해주세요." class="error">
-                    <button class="btn_delete" type="button" aria-label="입력값 삭제">
+                    <header>
+                        <h4><label for="loginId">아이디</label></h4>
+                    </header>
+                    <input id="loginId" name="loginId" type="text" placeholder="아이디를 입력해주세요." autocomplete="username" class="error">
+                    <button class="btn_delete" type="button" aria-label="아이디 입력값 삭제">
                         <span class="material-symbols-rounded">close</span>
                     </button>
                 </div>
-                <div class="input_area">
-                    <h3>비밀번호</h3>
-                    <input type="password" placeholder="비밀번호를 입력해주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
-                    <button class="btn_delete" type="button" aria-label="입력값 삭제">
-                        <span class="material-symbols-rounded">close</span>
-                    </button>
-                </div>
-                <label class="base_400">
-                    <input type="checkbox"> 아이디 저장
+
+                <label class="login_check" for="saveId">
+                    <input id="saveId" name="saveId" type="checkbox"> 아이디 저장
                 </label>
-                <p class="error_message">등록된 아이디가 없습니다. 아이디가 없는 경우, 회원가입을 진행해주세요.</p>
+                <p class="error_message">해당 계정은 탈퇴 처리되어 로그인할 수 없습니다.<br />
+서비스 이용을 원하실 경우 재가입하거나 고객센터에 문의해주세요.</p>
                 <ul class="btn_login">
-                    <li><button type="button" class="inactive" disabled>로그인</button></li> <!-- 비활성 버튼일때 inactive 클래스 추가 -->
-                    <li><button type="button">로그인</button></li>
-                </ul>
-                <ul class="btn_find">
-                    <li><a href="#none">아이디/비밀번호 찾기</a></li>
-                    <li><a href="#none">회원가입</a></li>
+                    <li><button type="submit">로그인</button></li>
+                    <li><button type="submit" disabled>로그인</button></li>
                 </ul>
 
-            </div>
+                <ul class="btn_find">
+                    <li><a href="#none" class="btn_applyCertificate">인증서 등록</a></li>
+                    <li><a href="id_search.html">아이디/비밀번호 찾기</a></li>
+                    <li><a href="step_01.html">회원가입</a></li>
+                </ul>
+            </form>
         </div>
         <!-- footer -->
         <footer class="login_footer">
@@ -61,7 +59,7 @@
                 <li><a href="#none">이용약관</a></li>
                 <li><a href="#none">개인정보처리방침</a></li>
             </ul>
-           <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+           <p>copyright ⓒ 2026 김영평생교육원 All right reserved.</p>
         </footer>
         <!-- //footer -->
     </div>

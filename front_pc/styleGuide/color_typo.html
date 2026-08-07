@@ -2,29 +2,28 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1600px"/>
-    <title>메가스터디아카데미원격평생교육원</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>김영평생교육원</title>
     <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css?v=1.0">
     <link rel="stylesheet" href="styleGuide.css?v=1.0">
     <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/script.js"></script>
 </head>
-<body class="styleGuide_wrapper">
+<body class="styleGuide_wrapper styleGuide_color">
     <header class="adminHeader">
         <h1>STYLE GUIDE</h1>
-        <p>이 페이지는 어드민 페이지에 사용되는 주요 UI 컴포넌트와 스타일을 보여줍니다. 개발 시 참고해 주세요.</p>
+        <p>이 페이지는 프론트 PC 페이지에 사용되는 주요 UI 컴포넌트와 스타일을 보여줍니다.</p>
     </header>
    
 
     <!-- lnb -->
     <section class="styleGuide_lnb">
-        <h1><img src="/assets/images/logo.png" alt=""></h1>
+        <h1><img src="../assets/images/common/Logo.svg" alt="김영평생교육원"></h1>
         <nav>
             <ul>
-                <li><a href="link.html">html 링크</a></li>
+                <li><a href="link.html">프론트 PC html 링크</a></li>
                 <li><a href="color_typo.html" class="on">Color Palette, Typography</a></li>
                 <li><a href="input.html">Input, Form, Table, Button</a></li>
             </ul>
@@ -33,143 +32,154 @@
     <!-- //lnb -->
 
     <section class="styleGuide_content">
+        <div class="styleGuide_quickNav" aria-label="Color Typography 페이지 빠른 이동">
+            <a href="#sg-color">색상 팔레트</a>
+            <a href="#sg-typo">폰트 및 텍스트 스타일</a>
+            <a href="#sg-icon">아이콘</a>
+        </div>
        
-        <h2>색상 팔레트</h2>
+        <div class="styleGuide_note">
+            <strong>기준:</strong> 이 페이지는 common.css에 정의된 실제 CSS 변수와 공통 유틸리티 기준으로 정리한 스타일 가이드입니다.
+        </div>
+
+        <h2 id="sg-color">색상 팔레트</h2>
         <h3>Neutral</h3>
         <div class="color">
             <dl>
-                <dt class="neutral_0" style="border:1px solid #ddd"></dt>
-                <dd class="neutral_0">neutral_0</dd>
+                <dt style="background:var(--Neutral-0); border:1px solid #ddd;"></dt>
+                <dd>--Neutral-0</dd>
                 <dd>#fff</dd>
             </dl>
             <dl>
-                <dt class="neutral_100" style="border:1px solid #ddd"></dt>
-                <dd>neutral_100</dd>
-                <dd>#fafafa</dd>
+                <dt style="background:var(--Neutral-100); border:1px solid #ddd;"></dt>
+                <dd>--Neutral-100</dd>
+                <dd>#F7F8FA</dd>
             </dl>
             <dl>
-                <dt class="neutral_200"></dt>
-                <dd>neutral_200</dd>
+                <dt style="background:var(--Neutral-200);"></dt>
+                <dd>--Neutral-200</dd>
                 <dd>#f2f4fc</dd>
             </dl>
             <dl>
-                <dt class="neutral_300"></dt>
-                <dd>neutral_300</dd>
-                <dd>#e4e4e4</dd>
+                <dt style="background:var(--Neutral-300);"></dt>
+                <dd>--Neutral-300</dd>
+                <dd>#E4E7F1</dd>
             </dl>
             <dl>
-                <dt class="neutral_600"></dt>
-                <dd>neutral_600</dd>
+                <dt style="background:var(--Neutral-500);"></dt>
+                <dd>--Neutral-500</dd>
+                <dd>#B1B9CF</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-600);"></dt>
+                <dd>--Neutral-600</dd>
                 <dd>#888</dd>
             </dl>
             <dl>
-                <dt class="neutral_800"></dt>
-                <dd>neutral_800</dd>
+                <dt style="background:var(--Neutral-800);"></dt>
+                <dd>--Neutral-800</dd>
                 <dd>#414656</dd>
             </dl>
             <dl>
-                <dt class="neutral_900"></dt>
-                <dd>neutral_900</dd>
+                <dt style="background:var(--Neutral-900);"></dt>
+                <dd>--Neutral-900</dd>
                 <dd>#111</dd>
             </dl>
         </div>
         <h3>Primary</h3>
         <div class="color">
             <dl>
-                <dt class="primary_light"></dt>
-                <dd>primary_light</dd>
-                <dd>#e9f1fe</dd>
+                <dt style="background:var(--Primary-100);"></dt>
+                <dd>--Primary-100</dd>
+                <dd>#E9EBF7</dd>
             </dl>
             <dl>
-                <dt style="background:#DEE9FD"></dt>
-                <dd>primary_light_hover</dd>
-                <dd>#DEE9FD</dd>
+                <dt style="background:var(--Primary-200);"></dt>
+                <dd>--Primary-200</dd>
+                <dd>#DEE1F3</dd>
             </dl>
             <dl>
-                <dt class="primary_normal"></dt>
-                <dd>primary_normal</dd>
-                <dd>#256ef4</dd>
+                <dt style="background:var(--Primary-300);"></dt>
+                <dd>--Primary-300</dd>
+                <dd>#BAC0E7</dd>
             </dl>
             <dl>
-                <dt style="background:#2163DC"></dt>
-                <dd>primary_normal_hover</dd>
-                <dd>#2163DC</dd>
+                <dt style="background:var(--Primary-500);"></dt>
+                <dd>--Primary-500</dd>
+                <dd>#2235B0</dd>
             </dl>
             <dl>
-                <dt class="primary_dark"></dt>
-                <dd>primary_dark</dd>
-                <dd>#1c53b7</dd>
+                <dt style="background:var(--Primary-600);"></dt>
+                <dd>--Primary-600</dd>
+                <dd>#1B2A8D</dd>
             </dl>
             <dl>
-                <dt class="primary_darker"></dt>
-                <dd>primary_darker</dd>
-                <dd>#0d2755</dd>
-            </dl>
-        </div>
-        <h3>Secondary</h3>
-        <div class="color">
-            <dl>
-                <dt class="secondary_light"></dt>
-                <dd>secondary_light</dd>
-                <dd>#e7ebf7</dd>
+                <dt style="background:var(--Primary-700);"></dt>
+                <dd>--Primary-700</dd>
+                <dd>#14206A</dd>
             </dl>
             <dl>
-                <dt style="background:#dbe1f3"></dt>
-                <dd>secondary_light_hover</dd>
-                <dd>#dbe1f3</dd>
-            </dl>
-            <dl>
-                <dt class="secondary_normal"></dt>
-                <dd>secondary_normal</dd>
-                <dd>#0e38b1</dd>
-            </dl>
-             <dl>
-                <dt style="background:#0d329f"></dt>
-                <dd>secondary_normal_hover</dd>
-                <dd>#0d329f</dd>
-            </dl>
-            <dl>
-                <dt class="secondary_dark"></dt>
-                <dd>secondary_dark</dd>
-                <dd>#0b2a85</dd>
-            </dl>
-            <dl>
-                <dt class="secondary_darker"></dt>
-                <dd>secondary_darker</dd>
-                <dd>#05143e</dd>
+                <dt style="background:var(--Primary-800);"></dt>
+                <dd>--Primary-800</dd>
+                <dd>#0F184F</dd>
             </dl>
         </div>
         <h3>System</h3>
         <div class="color">
             <dl>
-                <dt class="error_color"></dt>
-                <dd>error_color</dd>
-                <dd>#ef4444</dd>
+                <dt style="background:var(--Error-soft);"></dt>
+                <dd>--Error-soft</dd>
+                <dd>#FFEBEB</dd>
             </dl>
             <dl>
-                <dt class="warning_color"></dt>
-                <dd>warning_color</dd>
-                <dd>#eab308</dd>
+                <dt style="background:var(--Error);"></dt>
+                <dd>--Error</dd>
+                <dd>#EF4444</dd>
             </dl>
             <dl>
-                <dt class="success_color"></dt>
-                <dd>success_color</dd>
-                <dd>#16a34a</dd>
+                <dt style="background:var(--Warning-soft);"></dt>
+                <dd>--Warning-soft</dd>
+                <dd>#FEF3E2</dd>
             </dl>
-             <dl>
-                <dt class="end_color"></dt>
-                <dd>end_color</dd>
-                <dd>#256ef4</dd>
+            <dl>
+                <dt style="background:var(--Warning);"></dt>
+                <dd>--Warning</dd>
+                <dd>#EAB308</dd>
             </dl>
-             <dl>
-                <dt class="temporary_color"></dt>
-                <dd>temporary_color</dd>
-                <dd>#888</dd>
+            <dl>
+                <dt style="background:var(--Success-soft);"></dt>
+                <dd>--Success-soft</dd>
+                <dd>#E7F8F0</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Success);"></dt>
+                <dd>--Success</dd>
+                <dd>#16A34A</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Info-soft);"></dt>
+                <dd>--Info-soft</dd>
+                <dd>#EBF1FE</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Info);"></dt>
+                <dd>--Info</dd>
+                <dd>#256EF4</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Secondary);"></dt>
+                <dd>--Secondary</dd>
+                <dd>#414656</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Placeholder);"></dt>
+                <dd>--Placeholder</dd>
+                <dd>#C2C8CC</dd>
             </dl>
         </div>
         
         <!-- 폰트 및 텍스트 스타일 -->
-        <h2>폰트 및 텍스트 스타일</h2>
+        <h2 id="sg-typo">폰트 및 텍스트 스타일</h2>
         <div class="guide">
             <dl>
                 <dt>폰트</dt>
@@ -180,18 +190,15 @@
             <dl>
                 <dt>본문 텍스트</dt>
                 <dd>
-                    <p class="xsmall_400">font-size:12px, font-weight:400; <code>class="xsmall_400"</code></p>
-                    <p class="small_400">font-size:14px, font-weight:400; <code>class="small_400"</code></p>
-                    <p class="small_500">font-size:14px, font-weight:500; <code>class="small_500"</code></p>
-                    <p class="base_400">font-size:15px, font-weight:400; <code>class="base_400"</code></p>
-                    <p class="base_500">font-size:15px, font-weight:500; <code>class="base_500"</code></p>
-                    <p class="base_600">font-size:15px, font-weight:600; <code>class="base_600"</code></p>
-                    <p class="medium_500">font-size:16px, font-weight:500; <code>class="medium_500"</code></p>
-                    <p class="medium_600">font-size:16px, font-weight:600; <code>class="medium_600"</code></p>
-                    <p class="large_500">font-size:18px, font-weight:500; <code>class="large_500"</code></p>
-                    <p class="large_600">font-size:18px, font-weight:600; <code>class="large_600"</code></p>
-                    <p class="xlarge_700">font-size:20px, font-weight:700; <code>class="xlarge_700"</code></p>
-                    <p class="xxlarge_700">font-size:28px, font-weight:700; <code>class="xxlarge_700"</code></p>
+                    <p style="font-size:var(--Font-2xsmall); font-weight:400;">font-size:12px, font-weight:400; <code>var(--Font-2xsmall)</code></p>
+                    <p style="font-size:var(--Font-xsmall); font-weight:400;">font-size:13px, font-weight:400; <code>var(--Font-xsmall)</code></p>
+                    <p style="font-size:var(--Font-small); font-weight:400;">font-size:14px, font-weight:400; <code>var(--Font-small)</code></p>
+                    <p style="font-size:var(--Font-base); font-weight:400;">font-size:15px, font-weight:400; <code>var(--Font-base)</code></p>
+                    <p style="font-size:var(--Font-medium); font-weight:500;">font-size:16px, font-weight:500; <code>var(--Font-medium)</code></p>
+                    <p style="font-size:var(--Font-large); font-weight:600;">font-size:18px, font-weight:600; <code>var(--Font-large)</code></p>
+                    <p style="font-size:var(--Font-xlarge); font-weight:700;">font-size:20px, font-weight:700; <code>var(--Font-xlarge)</code></p>
+                    <p style="font-size:var(--Font-2xlarge); font-weight:700;">font-size:24px, font-weight:700; <code>var(--Font-2xlarge)</code></p>
+                    <p style="font-size:var(--Font-3xlarge); font-weight:700;">font-size:28px, font-weight:700; <code>var(--Font-3xlarge)</code></p>
                 </dd>
             </dl>
             <dl>
@@ -239,57 +246,54 @@
                 <dt>텍스트 색상</dt>
                 <dd class="flex">
                     <div>
-                        <p class="txtNeutral_0" style="background:#111;">txtNeutral_0</p>
+                        <p style="color:var(--Neutral-0); background:#111;">var(--Neutral-0)</p>
                     </div>
                     <div>
-                        <p class="txtNeutral_100" style="background:#111;">txtNeutral_100</p>
+                        <p style="color:var(--Neutral-100); background:#111;">var(--Neutral-100)</p>
                     </div>
                     <div>
-                        <p class="txtNeutral_300">txtNeutral_300</p>
+                        <p style="color:var(--Neutral-300);">var(--Neutral-300)</p>
                     </div>
                     <div>
-                        <p class="txtNeutral_600">txtNeutral_600</p>
+                        <p style="color:var(--Neutral-600);">var(--Neutral-600)</p>
                     </div>
                     <div>
-                        <p class="txtNeutral_800">txtNeutral_800</p>
+                        <p style="color:var(--Neutral-800);">var(--Neutral-800)</p>
                     </div>
                     <div>
-                        <p class="txtNeutral_900">txtNeutral_900</p>
+                        <p style="color:var(--Neutral-900);">var(--Neutral-900)</p>
                     </div>
                 </dd>
                 <dd class="flex">
                     <div>
-                        <p class="txtPrimary_light">txtPrimary_light</p>
+                        <p style="color:var(--Primary-100);">var(--Primary-100)</p>
                     </div>
                     <div>
-                        <p class="txtPrimary_normal">txtPrimary_normal</p>
+                        <p style="color:var(--Primary-300);">var(--Primary-300)</p>
                     </div>
                     <div>
-                        <p class="txtPrimary_dark">txtPrimary_dark</p>
+                        <p style="color:var(--Primary-500);">var(--Primary-500)</p>
                     </div>
                     <div>
-                        <p class="txtPrimary_darker">txtPrimary_darker</p>
+                        <p style="color:var(--Primary-700);">var(--Primary-700)</p>
                     </div>
                 </dd>
                 
                 <dd class="flex">
                     <div>
-                        <p class="txtError_color">txtError_color</p>
+                        <p style="color:var(--Error);">var(--Error)</p>
                     </div>
                     <div>
-                        <p class="txtWarning_color">txtWarning_color</p>
+                        <p style="color:var(--Warning);">var(--Warning)</p>
                     </div>
                     <div>
-                        <p class="txtSuccess_color">txtSuccess_color</p>
+                        <p style="color:var(--Success);">var(--Success)</p>
                     </div>
                     <div>
-                        <p class="txtEnd_color">txtEnd_color</p>
+                        <p style="color:var(--Info);">var(--Info)</p>
                     </div>
                     <div>
-                        <p class="txtTemporary_color">txtTemporary_color</p>
-                    </div>
-                    <div>
-                        <p class="txtImportant_color">txtImportant_color</p>
+                        <p style="color:var(--Secondary);">var(--Secondary)</p>
                     </div>
                 </dd>
             </dl>
@@ -367,7 +371,7 @@
         
         <!-- //폰트 및 텍스트 스타일 -->
         <!-- 아이콘 -->
-        <h2>아이콘</h2>
+        <h2 id="sg-icon">아이콘</h2>
         <div class="guide">
             <h3>Material Icons (Google)</h3>
             <p style="margin-top:8px;">Google Material Icons를 사용합니다.

@@ -2,20 +2,24 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1600px"/>
-    <title>메가스터디아카데미원격평생교육원</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>김영평생교육원</title>
     <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/main.css?v=1.0">
     <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/swiper.js"></script>
 </head>
 <body>
    <div class="login_wrapper">
         <header>
             <h1>
-                <a href="#none"><img src="../assets/images/common/Logo.svg" alt="메가스터디아카데미원격평생교육원"></a>
+                <a href="#none"><img src="../assets/images/common/Logo.svg" alt="김영평생교육원"></a>
             </h1>
             <h2>회원가입</h2>
         </header>
@@ -25,342 +29,514 @@
                 <li class="active">1</li>
                 <li>2</li>
                 <li>3</li>
-                <li>4</li>
             </ol>
 
             <div class="join_title">
                 <h3>약관동의</h3>
-                <p>메가스터디아카데미 원격평생교육원에 오신 걸 환영합니다.</p>
+                <p>김영평생교육원에 오신 걸 환영합니다.</p>
             </div>
 
             <div class="join_container">
 
                 <!-- 전체 동의하기 -->
                 <div class="all_agree">
-                    <label>
-                        <input type="checkbox" id="">
-                        <span>전체 동의하기</span>
-                        <p>필수동의 항목 및 마케팅 정보수신(선택)에 전체 동의합니다.</p>
-                    </label>
+                    <div class="all_agree_head">
+                        <label class="all_agree_label">
+                            <input type="checkbox" class="js-agree-all">
+                            <span>전체 동의하기</span>
+                        </label>
+                        <p>이용약관, 개인정보 수집 및 이용(필수/선택), 정보수집 및 이용(선택), 마케팅 및 광고활용(선택)에 모두 동의합니다.</p>
+                    </div>
                 </div>
                 <!-- //전체 동의하기 -->
                 <div class="agree_box">
                     <ul>
                         <li>
-                            <label>
-                                <input type="checkbox" class="chk">
+                            <label class="agree_item_label">
+                                <input type="checkbox" class="js-agree-item js-agree-required">
                                 <span><strong>[필수]</strong>사이트 이용약관 동의</span>
                             </label>
-                            <a href="#none" class="btn_view btn_siteAgree material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="btn_view btn_siteAgree material-symbols-rounded">keyboard_arrow_down</a>
+                            <div class="agree_content" hidden>
+
+                                <!-- 이용약관 내용 -->
+                                <div class="privacy_section">
+                                    
+                                    <p class="heading">1장 총칙</p>
+                                    <dl>
+                                        <dt>제 1조 [목적]</dt>
+                                        <dd>본 약관은 “김영평생교육원”(이하 "교육원"이라 합니다.) 서비스(이하 '서비스'라 합니다)의 이용과 관련하여 현행 법령에 위배되지 않는 범위 내에서 회원의 기본적인 권리와 책임사항을 정하는 것을 목적으로 합니다. </dd>
+                                        <dt>제 2조 (약관의 효력 및 적용과 변경)</dt>
+                                        <dd>이 약관은 사이트를 통해 온라인으로 공시하고 회원의 동의와 교육원의 승낙으로 효력을 발생하며, 합리적인 사유가 발생할 경우 교육원은 관련법규에 위배되지 않는 범위 안에서 개정할 수 있습니다. <br>개정된 약관은 정당한 절차에 따라 사이트에 공지함으로써 효력을 발휘합니다. </dd>
+                                        <dt>제 3조 (약관 외 준칙)</dt>
+                                        <dd>이 약관에 명시되지 않은 사항에 대해서는 관계법령, 교육원이 정한 서비스의 개별이용약관, 세부이용지침 및 규칙 등의 규정을 따르게 됩니다. </dd>
+                                        <dt>제 4조 (용어의 정의)</dt>
+                                        <dd>
+                                            본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+                                            <ol>
+                                                <li>회원 : 사이트에 접속하여 이 약관에 동의함으로써 교육원과 서비스 이용계약을 체결하고 이용자 ID(이용자고유번호)와 Password(비밀번호)를 발급받은 자를 말합니다.</li>
+                                                <li>이용자 ID(이용자고유번호) : 회원 식별과 서비스 이용을 위하여 회원이 선정하고 교육원이 승인하여 부여하는 문자와 숫자의 조합을 말합니다. </li>
+                                                <li>PASSWORD(비밀번호) : 서비스 이용 시 이용자 ID와 일치하는 이용자임을 확인하고, 회원의 개인정보 보호를 위하여, 회원 자신이 설정, 관리하는 문자와 숫자의 조합을 말합니다.</li>
+                                                <li>이용자 정보 : 이용자가 교육원과 이용 계약 체결 시 교육원에 등록하는 이용자 ID, 성명, 주소 등 이용자의 신상에 관련된 정보를 말합니다.</li>
+                                                <li>강의 서비스 : 사이트를 통해 제공되는 강의 서비스를 말하며 그 이용 등에 관한 구체적인 사항은 본 약관 제14조에 기술된 바와 같습니다.</li>
+                                            </ol>
+                                        </dd>
+                                    </dl>
+                                    <p class="heading">2장 서비스 이용 계약 제 5조(이용계약의 성립)</p>
+                                    <dl>
+                                        <dt></dt>
+                                        <dd>이용계약은 사이트 회원으로 등록하길 희망한 자의 이용신청에 대한 교육원의 이용 승낙에 의하여 성립합니다.
+                                        </dd><dt>제 6조 (이용 신청 시 기재 사항)</dt>
+                                        <dd>이용 신청 시 사이트의 회원 가입 화면에서 교육원이 요청하는 소정의 정보를 온라인 양식의 신청서에 기재하여야 합니다. </dd>
+                                        <dt>제 7조 (이용신청의 승낙 등)</dt>
+
+                                        <dd>
+                                            <ol>
+                                                <li>교육원은 회원이 제6조에서 정한 사항을 정확히 기재하고 본 약관에 동의할 때 서비스의 이용신청을 승낙 합니다. </li>
+                                                <li>교육원은 다음 각호의 경우에는 이용신청의 승낙을 유보할 수 있습니다.
+                                                    <ol>
+                                                        <li>가. 기술상 서비스 제공이 불가능한 경우</li>
+                                                        <li>나. 제6조의 기재사항에 허위, 기재누락, 도용, 오기가 있는 경우</li>
+                                                        <li>다. 다른 사람 명의로 이용신청을 하였을 때</li>
+                                                        <li>라. 이용 신청 시 내용을 허위로 기재 하였을 때</li>
+                                                        <li>마. 이용 신청자가 이전에 회원자격을 상실한 사실이 있는 경우 </li>
+                                                    </ol>
+                                                </li>
+                                                <li>회원의 자격에 따라 서비스 이용범위는 세분화 될 수 있습니다. </li>
+                                            </ol>
+                                        </dd>
+                                    </dl>
+                                    <p class="heading">3장 서비스의 이용</p>
+                                    <dl>
+                                        <dt>제 8조 (서비스의 이용게시)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>교육원은 회원의 이용 신청을 승인한 때부터 서비스를 개시합니다.<br>단, 유료 서비스를 포함한 일부 서비스의 경우에는 결제가 완료된 이후 또는 교육원에서 지정한 일자부터 서비스를 개시합니다.</li>
+                                                <li>교육원의 업무상 또는 기술상의 장애로 인하여 서비스를 개시하지 못하는 경우에는 사이트에 공지하거나 회원에게 통지합니다.</li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 9조 (서비스의 이용시간)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>서비스의 이용은 연중무휴 1일 24시간을 원칙으로 합니다. <br>다만, 시스템 점검, 증설과 교체 및 고장 등의 이유로 교육원이 정한 기간에는 서비스가 일시 중지될 수 있습니다. <br>이러한 경우 교육원은 사전 또는 사후에 이를 공지합니다. </li>
+                                                <li>교육원은 서비스를 일정범위로 분할하여 각 범위 별로 이용 가능한 시간을 별도로 정할 수 있으며 이 경우 그 내용을 공지합니다.</li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 10조 (서비스의 변경 및 중지)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>교육원은 변경될 서비스의 내용 및 제공일자를 회원에게 통지하고 서비스를 변경하여 제공할 수 있습니다.</li>
+                                                <li>교육원은 다음 각 호에 해당하는 경우 서비스는 일부를 제한하거나 중단할 수 있습니다.
+                                                    <ol>
+                                                        <li>가. 서비스용 설비의 확장, 보수 등 공사로 인한 부득이한 경우</li>
+                                                        <li>나. 교육원 사정으로 불가피하게 서비스 중단이 필요한 경우</li>
+                                                        <li>다. 서비스 이용량의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 경우</li>
+                                                        <li>라. 새로운 서비스로 시스템을 정비, 교체하는 경우</li>
+                                                        <li>마. 기타 정전, 천재지변, 국가비상사태 등 불가항력적 사유가 있는 경우</li>
+                                                    </ol>
+                                                </li>
+                                                <li>교육원은 제2항에 의한 서비스 중단의 경우에는 회원에게 그 사실을 사전에 통지합니다. 다만, 교육원이 통제할 수 없는 사유로 인한 서비스의 중단으로 인하여 사전 통지가 불가능한 경우에는 예외로 합니다.</li>
+                                                <li>교육원은 교육원의 고의 또는 중대한 과실로 인하여 서비스가 중단되어 회원이 이미 결제한 유료 서비스를 이용할 수 없을 경우에는 당해 유료 서비스의 잔여기간을 보상하는 방식으로 회원에게 보상합니다.</li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 12조 (회원의 게시물) </dt>
+                                        <dd>
+                                            <ol>
+                                                <li>게시물이라 함은 교육원의 서비스를 포함한 회원이 올린 글, 교육원 개설 까페에 올린글 이미지, 각종 파일과 링크, 각종 덧글 등의 정보를 의미합니다. </li>
+                                                <li>회원이 서비스 내에 게시한 게시물로 인해 회원 개인에게 발생하는 손실이나 문제는 회원 개인의 책임이므로, 게시물 작성 시 관련법령에 위배되지 않도록 유의해야 합니다. </li>
+                                                <li>회원은 다음 각 호에 해당하는 게시물을 게시하거나 전달할 수 없으며 교육원은 서비스 내에 존재하는 게시물이 다음 각 호에 해당한다고 판단되는 경우 해당 게시물을 삭제, 이동 또는 등록거부 할 수 있습니다. 또한, 교육원은 게시물에 관련된 세부 이용지침을 별도로 정하여 시행할 수 있으며, 회원은 다음의 경우 자진 삭제하여야 합니다.
+                                                    <ol>
+                                                        <li>가. 교육원, 다른 회원 또는 제3자를 비방하거나 명예를 손상시키는 내용인 경우</li>
+                                                        <li>나. 공공질서 및 미풍양속에 위반되는 내용을 유포하는 경우</li>
+                                                        <li>다. 범죄적 행위에 결부된다고 인정되는 내용인 경우</li>
+                                                        <li>라. 교육원의 저작권, 제3자의 저작권 등 기타 권리를 침해하는 내용인 경우</li>
+                                                        <li>마. 법령을 위반하거나 타인의 권리를 침해하는 방식으로 정치적, 종교적 분쟁을 야기하는 경우</li>
+                                                        <li>바. 불필요하거나 승인되지 않은 광고, 판촉물을 게재하는 경우</li>
+                                                        <li>사. 타인의 개인정보를 도용, 사칭하여 작성한 내용이거나, 타인이 입력한 정보를 무단으로 위 변조한 내용인 경우</li>
+                                                        <li>아. 동일한 내용을 중복하여 다수 게시하는 등 게시의 목적에 어긋나는 경우</li>
+                                                        <li>자. 기타 관계 법령 및 교육원의 지침 등에 위반된다고 판단되는 경우</li>
+                                                    </ol>
+                                                </li>
+                                                <li>본 조 제3항 각 호에 해당하는 게시물을 게재하여 교육원으로부터 경고를 받은 회원의 경우 다음 각 호의 규정에 따라 서비스 이용이 제한될 수 있습니다.
+                                                    <ol>
+                                                        <li>가. 첫 번째 경고 : 관련 게시글 삭제, 2주 간 게시글 등록 불가</li>
+                                                        <li>나. 두 번째 경고 : 관련 게시글 삭제, 4주 간 게시글 등록 불가</li>
+                                                        <li>다. 세 번째 경고 : 관련 게시글 삭제, 영구 게시글 등록 불가 </li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 13조 (게시물의 저작권 등)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>이용자가 서비스 내에 게시한 게시물의 저작권은 저작권법에 의해 보호를 받습니다. 본 교육원에서 작성한 저작물에 대한 저작권 기타 지적재산권은 교육원에 귀속합니다.</li>
+                                                <li>이용자는 자신이 게시한 게시물을 교육원이 국내외에서 다음 각 호의 목적으로 사용하는 것을 허락합니다.
+                                                    <ol>
+                                                        <li>가. 서비스 내에서 이용자 게시물의 복제, 전송, 전시, 배포 및 우수 게시물을 서비스 화면에 노출하기 위하여 이용자 게시물의 크기를 <span>변환하거나 단순화하는 등의 방식으로 수정하는 것</span></li>
+                                                        <li>나. 교육원에서 운영하는 관련 사이트의 서비스 내에서 이용자 게시물을 전시, 배포하는 것. 단 회원이 전시, 배포에 동의하지 <span>아니할 경우, 교육원은 관련 사이트의 서비스 내에서 당해 회원의 게시물을 전시, 배포하지 않습니다.</span></li>
+                                                        <li>다. 교육원의 서비스를 홍보하기 위한 목적으로 미디어, 통신사 등에게 이용자의 게시물 내용을 보도, 방영하게 하는 것. <span>단 이 경우 교육원은 회원의 개별 동의 없이 미디어, 통신사 등에게 개인정보를 제공하지 않습니다.</span></li>
+                                                    </ol>
+                                                </li>
+                                                <li>회원이 탈퇴를 하거나 제19조 제2항에 의하여 회원 자격을 상실한 경우에 본인 계정에 기록된 게시물은 삭제됩니다. <br>다만 제3자에게 의하여 스크랩, 펌, 담기 등으로 다시 게시된 게시물과 공용 서비스 내에 기록된 게시물 등 다른 이용자의 정상적인 서비스 이용에 필요한 게시물은 삭제되지 않습니다.
+                                                </li>
+                                                <li>교육원은 합병, 영업양도, 교육원이 운영하는 사이트간의 통합 등의 사유로 원래의 게시물의 내용을 변경하지 않고 게시물의 게시 위치를 변경할 수 있습니다.</li>
+                                            </ol>
+                                        </dd>
+                                    </dl>
+
+                                    <dl>
+                                        <dt>제 14조 (강의 서비스 이용관련)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>회원은 교육원 사이트를 통해서 다양한 주제에 대한 강사의 강의 및 해설 등을 제공하는 강의 서비스를 이용할 수 있습니다.</li>
+                                                <li>강의 서비스는 유료로 제공될 수 있으며 이 경우 그 요금과 사용조건, 결제방법 등은 별도 고지하는 절차에 따릅니다. </li>
+                                                <li>강의 서비스 이용의 승인 시기는 교육원이 별도 고지하지 않는 한 회원이 강의 서비스 이용을 신청완료 후 교육원 일정에 따라 서비스 이용 가능합니다.</li>
+                                                <li>일부 강의 서비스는 별도의 동영상 재생 프로그램이나 어플리케이션 등을 설치해야 이용할 수 있습니다. 교육원은 그 이용조건 등을 설치 시 별도 고지합니다.</li>
+                                            </ol>
+                                        </dd>
+                                    </dl>
+                                    <p class="heading">4장 계약당사자의 의무</p>
+                                    <dl>
+                                        <dt>제 15조 (교육원의 의무)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>교육원은 관계 법령과 이 약관이 금지하거나 미풍 양속에 반하는 행위를 하지 않으며, 이 약관이 정하는 바에 따라 지속적이고 안정적으로 서비스를 제공하는데 최선을 다하여야 합니다.</li>
+                                                <li>교육원은 안정적인 서비스의 제공을 위하여, 설비에 장애가 생기거나 손상된 때에는 부득이한 사유가 없는 한 이를 지체 없이 수리 또는 복구합니다. </li>
+                                                <li>교육원은 회원의 개인정보 보호와 안전한 서비스 제공을 위하여 최선을 다합니다.</li>
+                                                <li>교육원은 회원의 개인정보를 본인의 승낙 없이 타인에게 누설, 배포하거나 제3자에게 배포, 제공하지 않습니다. 다만, 적법한 절차를 거친 국가기관의 요구나 수사상 또는 기타 공익을 위하여 필요하다고 인정되는 경우는 예외로 합니다. 교육원은 관련법령이 정하는 바에 따라서 회원 등록정보를 포함한 회원의 개인정보를 보호하기 위하여 노력하며 회원의 개인정보보호에 관해서는 관련법령 및 교육원이 정하는 '개인정보보호정책'에 정한 바에 의합니다. </li>
+                                                <li>교육원은 이용자로부터 서비스 이용과 관련되어 제기되는 의견이나 불만이 정당하다고 인정되는 경우 이를 즉시 처리하여야 합니다. 다만, 즉시 처리가 어려운 경우 이용자에게 그 사유와 처리 일정을 통보하여야 합니다. </li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 16조 (회원의 의무)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>교육원의 명시적 동의가 없는 한 회원의 이용권한은 회원 개인에 한정되며, 타인에게 양도, 증여하거나 이를 담보로 제공할 수 없습니다.</li>
+                                                <li>회원은 서비스 이용 시 다음 각 호의 행위를 하여서는 안됩니다.
+                                                    <ol>
+                                                        <li>가. 회원은 이용 신청 또는 변경 시 허위 사실을 기재하거나, 자신 또는 다른 회원의 ID 및 개인정보를 이용, 공유하는 <span>행위를 할 수 없습니다. </span></li>
+                                                        <li>나. 회원은 교육원이 제공하는 서비스를 통하여 얻은 정보를 상업적 목적으로 이용하거나 출판, 방송, 복제, 전송, 공유 등을<span>통하여 교육원의 허락 없이 제3자에 노출, 제공하는 행위를 할 수 없습니다. 단, 공익의 목적이나 회원의 이익을 위하여 필요한 경우에는 교육원에게 협의를 요청하고 사전 동의를 구하도록 합니다.</span></li>
+                                                        <li>다. 회원은 제3자의 권리나 저작권 등을 침해하는 행위를 할 수 없습니다.</li>
+                                                        <li>라. 회원은 교육원에서 공식적으로 인정한 경우를 제외하고는 서비스를 이용하여 상품 또는 용역을 판매하는 영업 활동 등의<span>상행위를 할 수 없으며, 특히 해킹, ID공유 등의 방법을 통해 교육원의 서비스를 제3자에게 제공, 공유, 노출 시키거나 판매하는 행위를 할 수 없습니다.</span></li>
+                                                        <li>마. 회원은 교육원의 사이트 운영을 저해하거나 다른 이용자의 서비스 이용을 방해하거나 교육원의 운영진, 직원 또는 관계자를<span>사칭하는 행위를 할 수 없습니다.</span></li>
+                                                        <li>바. 회원은 공서양속을 저해하는 부호, 문자, 음성, 음향 및 영상 등의 정보를 타인에게 유포시키는 행위를 할 수 없습니다.</li>
+                                                        <li>사. 회원은 포인트를 제3자와 유상거래 하거나 현금으로 전환하는 행위를 할 수 없습니다. </li>
+                                                    </ol>
+                                                </li>
+                                                <li>회원은 서비스의 이용을 위해 자신의 이용자 정보를 관리해야 하며 제6조의 등록사항에 변경이 있을 경우 교육원이 제공하는 서비스 내의 개인정보 수정 페이지를 통하여 변경 사항을 지체 없이 알려야 합니다. </li>
+                                            </ol>
+                                        </dd>
+                                    </dl>
+                                                    
+                                    <p class="heading">5장 계약해지 및 이용제한 </p>
+                                    <dl>
+                                        <dt>제 17조 (계약해지 및 이용제한) </dt>
+                                        <dd>
+                                            <ol>
+                                                <li>회원은 교육원이 제공하는 서비스 내의 회원탈퇴 기능을 통하여 언제라도 탈퇴를 요청할 수 있습니다. 교육원은 제10조 제2항 각호와 같은 불가피한 사정이 없는 한 회원의 탈퇴 요청을 지체 없이 처리합니다.</li>
+                                                <li>회원이 법령 또는 이 약관이 금지하거나 공서양속에 반하는 행위를 하는 경우, 교육원은 당해 회원에게 사전 통지를 한 후, 서비스 이용권한을 일정기간 제한하거나 이용권한을 상실시킬 수 있습니다. 단, 교육원이 회원이 이용권한을 상실시키기 위해서는 회원이 이를 시정하거나 소명할 수 있는 기회를 부여해야 합니다. </li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 18조 (양도 금지)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>회원은 서비스의 이용권한, 기타 이용 계약상 지위를 타인에게 양도, 증여할 수 없으며 게시물에 대한 저작권을 포함한 모든 권리 및 책임은 이를 게시한 회원에게 있습니다. </li>
+                                                <li>교육원이 제3자에게 합병, 분할합병 되거나 서비스를 제3자에게 양도함으로써 서비스의 제공 주체가 변경되는 경우, 교육원은 사전에 회원에게 통지합니다. 이 경우 합병, 분할 서비스 표준약관 합병, 서비스 양도에 반대하는 회원은 서비스 이용계약을 해지할 수 있습니다. </li>
+                                            </ol>
+                                        </dd>
+                                    </dl>
+                                                    
+                                    <p class="heading">6장 손해배상 등 </p>
+                                    <dl>
+                                        <dt>제 19조 (손해배상) </dt>
+                                        <dd>
+                                            <ol>
+                                                <li>
+                                                    교육원이 서비스를 제공하는 과정에 있어 고의 또는 중대한 과실로 서비스 장애나 오류가 발생하였을 경우, 아래 각 호의 내용으로 회원의 손해에 대하여 보상합니다. 
+                                                    <ol>
+                                                        <li>교육원은 시스템 점검, 증설과 교체 등 교육원이 정한 기간 외에 고의 또는 중대한 과실로 예고 없이 전체 서비스가 일시 중단될 경우 유료 서비스 이용기간을 연장하는 방법으로 회원에게 보상합니다.</li>
+                                                        <li>교육원의 과실로 회원이 결제한 유료 서비스를 이용할 수 없는 상황이 발생할 경우, 교육원은 해당 유료 서비스의 복원, 교환 또는 환불 조치를 통해 회원에게 보상합니다. </li>
+                                                    </ol>
+                                                </li>
+                                                <li>회원이 서비스를 이용함에 있어 행한 불법적 행위와 본 약관의 규정을 위반함으로 인하여 교육원에 손해가 발생하거나 제3자로부터 교육원이 손해배상 청구 또는 각종 이의제기를 받는 경우, 당해 회원은 교육원에 발생하는 손해를 배상하여야 합니다. </li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 20조 (면책사항)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>
+                                                    교육원은 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면제됩니다.
+                                                </li>
+                                                <li>교육원은 회원의 귀책사유로 인한 서비스의 이용장애에 대하여 책임을 지지 않습니다. </li>
+                                                <li>교육원은 회원이 교육원에서 제공하는 서비스로부터 기대되는 이익을 얻지 못하였거나 서비스 자료에 대한 취사선택 또는 이용으로 발생하는 손해 등에 대해서는 책임이 면제됩니다. </li>
+                                                <li>교육원은 제3자가 사이트에 저장, 게시 또는 전송한 정보, 자료, 사실의 신뢰도 및 정확성 등 내용에 대하여는 책임을 지지 않습니다.</li>
+                                                <li>교육원은 사이트에 입점, 연결되어 있는 제3자의 웹사이트(이하 '링크 사이트'라 합니다)가 있는 경우, 회원이 링크 사이트를 이용함에 따라 발생하는 문제에 대하여는 책임을 지지 않습니다.</li>
+                                            </ol>
+                                        </dd>
+                                        <dt>제 21조 (재판권 및 준거법)</dt>
+                                        <dd>
+                                            <ol>
+                                                <li>서비스 이용 중 발생한 회원과 교육원간의 소송은 민사소송법 상의 관할법원에 제기합니다. </li>
+                                                <li>교육원과 이용자간에 제기된 소송에는 대한민국헌법을 적용합니다.</li>
+                                            </ol>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                 <!-- //이용약관 내용 -->
+
+                            </div>
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" class="chk">
+                            <label class="agree_item_label">
+                                <input type="checkbox" class="js-agree-item js-agree-required">
                                 <span><strong>[필수]</strong> 개인정보 수집 및 이용에 대한 동의</span>
                             </label>
-                            <a href="#none" class="btn_view btn_privacyAgree material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="btn_view btn_privacyAgree material-symbols-rounded">keyboard_arrow_down</a>
+
+                            <div class="agree_content" hidden>
+                                <div class="privacy_section">
+                                    <table class="table_view">
+                                        <caption>개인정보 수집 및 이용에 대한 동의</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">수집 및 이용목적</th>
+                                                <td>홈페이지 회원 가입 및 회원 관리</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">수집항목</th>
+                                                <td>(필수) 이름, 아이디, 휴대전화번호, 이메일<br>
+                                        (선택) 거주지역, 학점은행제 이용목적, 최종학력, 김영편입ID, 김영편입 등록 캠퍼스 명(소개직원 명), 학점은행제 이용목적, 유입경로, 관심분야,담당 컨설턴트, 편입 수강 여부</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">보유 및 이용기간</th>
+                                                <td>
+                                        <strong>홈페이지 회원 탈퇴시까지</strong><br>
+                                        다음의 사유에 해당하는 경우에는 해당 기간 종료 시까지<br>
+                                        - 이름, 휴대전화번호는 중복수령 방지를 목적으로 회원탈퇴시점으로부터 1년간 보유 및 이용<br>
+                                        - 아이디 공유,양도, 불법 이용하는 부정사용자에 한하여 회원탈퇴 시점으로부터 1년간 보유 및 이용</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">동의거부권 및 불이익</th>
+                                                <td>
+                                        필수 동의사항에 동의하지 않으시는 경우 회원제서비스이용(회원가입)이 제한됩니다.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //이용약관 내용 -->
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" class="chk">
+                            <label class="agree_item_label">
+                                <input type="checkbox" class="js-agree-item js-agree-required">
                                 <span><strong>[필수]</strong> 개인정보 제3자 제공 동의</span>
                             </label>
-                            <a href="#none" class="btn_view btn_provideInfo material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="btn_view material-symbols-rounded">keyboard_arrow_down</a>
+
+                            <div class="agree_content" hidden>
+                                <div class="privacy_section">
+                                    <table class="table_view">
+                                        <caption>개인정보 제공 및 이용동의</caption>
+                                        <colgroup>
+                                            <col style="width:18%">
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">제공받는 자</th>
+                                                <th scope="col">국가평생교육진흥원 학점은행제</th>
+                                                <th scope="col">국세청</th>
+                                                <th scope="col">국가보훈처</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>근거법령</td>
+                                                <td>
+                                                    <ul class="list_bullet">
+                                                        <li>학점인정 등에 관한 법률 시행령 제19조 2 (고유식별정보의 처리) 학점인정 등에 관한 법률 시행령 제 4조 (학점인정 절차)</li>
+                                                        <li>국가평생교육진흥원 학점은행제 학사관리지침</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <ul class="list_bullet">
+                                                        <li>소득세법 제128조 원천징수사무처리규정 국세기본법 시행령 제85조의3</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <ul class="list_bullet">
+                                                        <li>국가유공자 등 예우 및 지원에 관한 법률, 국가유공자 등 예우 및 지원에 관한 법률 시행령, 보조금 관리에 관한 법률 시행령 제10조의 2 </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>이용목적</td>
+                                                <td>
+                                                    학습자등록, 학점인정신청, 사전보고 및 성적 등의 행정보고
+                                                </td>
+                                                <td>
+                                                    연말정산 간소화 서비스 이용
+                                                </td>
+                                                <td>
+                                                    국가유공자 및 국가유공자 손자녀 등의 수업료 국고보조금 신청
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>제공항목</td>
+                                                <td>
+                                                    성명, <strong>주민등록번호</strong>, 주소, 전화번호, 이메일주소, 최종출신교, 최종학력, 수강과목, 성적 
+                                                </td>
+                                                <td>
+                                                    성명, <strong>주민등록번호</strong>, 결제년월, 결제금액
+                                                </td>
+                                                <td>
+                                                    성명, 생년월일, 보훈번호, 학과, 성적, 신청학점, 수업료, 총 이수학점, 수강과목 등
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>보유 및 이용기간</td>
+                                                <td>
+                                                    개인정보취급방침 제2조 및 제3조 참조
+                                                </td>
+                                                <td>
+                                                    국세청의 보유기간에 따름(5년)
+                                                </td>
+                                                <td>
+                                                    국가보훈처 보유기간에 따름(5년)
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
+                            </div>
+                            <!-- 이용약관 내용 -->
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" class="chk">
+                            <label class="agree_item_label">
+                                <input type="checkbox" class="js-agree-item">
                                 <span><strong class="txtPrimary_normal">[선택]</strong> 개인정보 수집 및 이용 동의</span>
                             </label>
-                            <a href="#none" class="btn_view btn_privacyAgree_02 material-symbols-rounded">keyboard_arrow_right</a>
+                            <a href="#none" class="btn_view btn_privacyAgree_02 material-symbols-rounded">keyboard_arrow_down</a>
+
+                            <div class="agree_content" hidden>
+                                <div class="privacy_section">
+                                    <table class="table_view">
+                                        <caption>개인정보 수집 및 이용에 대한 동의</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                        </colgroup>
+                                        <tbody><tr>
+                                            <th scope="row">수집 및 이용목적</th>
+                                            <td>회원가입 및 회원관리</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">수집항목</th>
+                                            <td>거주지역, 학점은행제 이용목적, 최종학력, 김영편입ID, 김영편입 등록 캠퍼스 명(소개직원 명), 학점은행제 이용목적, 유입경로, 관심분야,담당 컨설턴트, 편입 수강 여부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">보유 및 이용기간</th>
+                                            <td><strong>회원탈퇴 시 또는 법정의무 보유기간 까지</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">동의거부권 및 불이익</th>
+                                            <td>선택 정보에 대한 수집 및 이용 동의를 거부하실 권리가 있으며, 미동의시에도 회원가입 및 서비스 이용은 가능합니다. 단, 교육원의 수강신청, 강의 수강, 이벤트 참여에 제한될 수 있습니다.</td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                            <!-- //이용약관 내용 -->
                         </li>
                         <li>
-                            <label>
-                                <input type="checkbox" class="chk">
-                                <span><strong class="txtPrimary_normal">[선택]</strong> 마케팅 목적 이용 및 정보 수신</span>
+                            <label class="agree_item_label">
+                                <input type="checkbox" class="js-agree-item">
+                                <span><strong class="txtPrimary_normal">[선택]</strong> 개인정보 제3자 제공 동의</span>
                             </label>
-                            <a href="#none" class="btn_view btn_marketingAgree material-symbols-rounded">keyboard_arrow_right</a>
-
-                            <div class="form_group">
-                                <label class="form_check">
-                                    <input type="checkbox" name="chk_1" id="chk_1">
-                                    SMS
-                                </label>
-                                <label class="form_check">
-                                    <input type="checkbox" name="chk_1" id="chk_1">
-                                    이메일
-                                </label>
+                            <a href="#none" class="btn_view material-symbols-rounded">keyboard_arrow_down</a>
+                            <div class="agree_content" hidden>
+                                <div class="privacy_section">
+                                    <p>개인정보 제3자 제공 동의 : 교육원은 다음의 경우 정보주체의 동의를 얻어 필요 최소한의 범위로만 제공합니다.</p>
+                                    <table class="table_view">
+                                        <caption>개인정보 수집 및 이용에 대한 동의</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">개인정보를 제공받는 자</th>
+                                            <td>㈜아이비김영</td>
+                                            <td>㈜브라운편입</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제공받는 자의 개인정보 이용목적</th>
+                                            <td><strong>편입정보 전달 또는 홍보 목적</strong></td>
+                                            <td><strong>편입정보 전달 또는 홍보 목적</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제공하는 개인정보 항목</th>
+                                            <td>성명, 생년월일, 수강과정, 주소, 관심 캠퍼스</td>
+                                            <td>성명, 생년월일, 수강과정, 주소, 관심 캠퍼스</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제공받는 자의 보유·이용기간</th>
+                                            <td><strong>서비스 동의 철회시</strong></td>
+                                            <td><strong>서비스 동의 철회시</strong></td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="agree_item_label">
+                                <input type="checkbox" class="js-agree-item">
+                                <span><strong class="txtPrimary_normal">[선택]</strong> 개인정보의 마케팅 및 광고 활용</span>
+                            </label>
+                            <a href="#none" class="btn_view btn_marketingAgree material-symbols-rounded">keyboard_arrow_down</a>
+                            <div class="agree_content" hidden>
+                                <div class="privacy_section">
+                                    <table class="table_view">
+                                        <caption>개인정보의 마케팅 및 광고 활용</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                        </colgroup>
+                                        <tbody><tr>
+                                            <th scope="row">수집 및 이용목적</th>
+                                            <td>신규서비스(제품) 개발 및 특화, <strong>이벤트, 광고성 정보 전달</strong>, 접속빈도 파악, 회원 서비스 이용 통계</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">수집항목</th>
+                                            <td>성명, 아이디, 이메일, 연락처</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">보유 및 이용기간</th>
+                                            <td><strong>회원탈퇴 시 또는 법정의무 보유기간 까지</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">동의거부권 및 불이익</th>
+                                            <td>선택 정보에 대한 수집 및 이용 동의를 거부하실 권리가 있으며, 미동의시에도 회원가입 및 서비스 이용은 가능합니다. 단, 교육원의 수강신청, 강의 수강, 이벤트 참여에 제한될 수 있습니다.</td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <ul class="btn_login">
-                    <li><button type="button" class="inactive">다음</button></li>
-                    <li><button type="button">다음</button></li>
+                    <li><button type="button" class="inactive js-join-next" disabled>다음</button></li>
                 </ul>
             </div>
         </div>
-        <!-- 레이어 사이트 이용약관 동의 -->
-        <div class="layer_wrapper layer_siteAgree"><!-- active 추가 시 화면 노출 -->
-            <div class="layer_basic">
 
-                <div class="layer_header">
-                    <h2>사이트 이용약관 동의</h2>
-                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                </div>
-
-                <!-- layer 내용 -->
-                <div class="layer_content">
-                    본 약관은 “메가스터디아카데미원격평생교육원”(이하 "교육원"이라 합니다.) 서비스(이하 '서비스'라 합니다)의 이용과 관련하여 현행 법령에 위배되지 않는 범위 내에서 회원의 기본적인 권리와 책임사항을 정하는 것을 목적으로 합니다.본 약관은 “메가스터디아카데미원격평생교육원”(이하 "교육원"이라 합니다.) 서비스(이하 '서비스'라 합니다)의 이용과 관련하여 현행 법령에 위배되지 않는 범위 내에서 회원의 기본적인 권리와 책임사항을 정하는 것을 목적으로 합니다.이 약관에 명시되지 않은 사항에 대해서는 관계법령, 교육원이 정한 서비스의 개별이용약관, 세부이용지침 및 규칙 등의 규정을 따르게 됩니다.
-                </div>
-                <!-- //layer 내용 -->
-
-                <div class="layer_btnSection">
-                    <button class="btn btn_close">취소</button>
-                    <button class="btn primary">동의</button>
-                </div>
-            </div>
-        </div>
-        <!-- //레이어 사이트 이용약관 동의 -->
-        <!-- 레이어 개인정보 수집 및 이용 동의 -->
-        <div class="layer_wrapper layer_privacyAgree"><!-- active 추가 시 화면 노출 -->
-            <div class="layer_basic">
-
-                <div class="layer_header">
-                    <h2>개인정보 수집 및 이용 동의</h2>
-                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                </div>
-
-                <!-- layer 내용 -->
-                <div class="layer_content">
-                    <div class="privacy_section privacy_content scroll">
-                       
-                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
-                            <table class="table_view marginT8">
-                                <colgroup>
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                </colgroup>
-                                <tr>
-                                    <th scope="col">수집 및 이용 목적</th>
-                                    <th scope="col">수집하는 개인정보 항목</th>
-                                    <th scope="col">보유 및 이용기간</th>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">
-                                        이용자 식별 및 회원 서비스 제공
-                                    </td>
-                                    <td>
-                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
-                                    </td>
-                                    <td rowspan="2">
-                                        회원 탈퇴 시까지
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
-                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
-                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
-                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
-                        </div>
-                        <!-- //이용약관 내용 -->
-                </div>
-                <!-- //layer 내용 -->
-
-                <div class="layer_btnSection">
-                    <button class="btn btn_close">취소</button>
-                    <button class="btn primary">동의</button>
-                </div>
-            </div>
-        </div>
-       
-        <!-- //레이어 개인정보 수집 및 이용 동의 -->
-
-        <!-- 레이어 개인정보 제3자 제공 동의 -->
-        <div class="layer_wrapper layer_provideInfo"><!-- active 추가 시 화면 노출 -->
-            <div class="layer_basic">
-
-                <div class="layer_header">
-                    <h2>개인정보 제3자 제공 동의</h2>
-                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                </div>
-
-                <!-- layer 내용 -->
-                <div class="layer_content">
-                    <div class="privacy_section privacy_content scroll">
-                       
-                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
-                            <table class="table_view marginT8">
-                                <colgroup>
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                </colgroup>
-                                <tr>
-                                    <th scope="col">수집 및 이용 목적</th>
-                                    <th scope="col">수집하는 개인정보 항목</th>
-                                    <th scope="col">보유 및 이용기간</th>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">
-                                        이용자 식별 및 회원 서비스 제공
-                                    </td>
-                                    <td>
-                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
-                                    </td>
-                                    <td rowspan="2">
-                                        회원 탈퇴 시까지
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
-                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
-                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
-                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
-                        </div>
-                        <!-- //이용약관 내용 -->
-                </div>
-                <!-- //layer 내용 -->
-
-                <div class="layer_btnSection">
-                    <button class="btn btn_close">취소</button>
-                    <button class="btn primary">동의</button>
-                </div>
-            </div>
-        </div>
-       
-        <!-- //레이어 개인정보 제3자 제공 동의 -->
-
-        <!-- 레이어 개인정보 수집 및 이용 동의 -->
-        <div class="layer_wrapper layer_privacyAgree_02"><!-- active 추가 시 화면 노출 -->
-            <div class="layer_basic">
-
-                <div class="layer_header">
-                    <h2>개인정보 수집 및 이용 동의</h2>
-                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                </div>
-
-                <!-- layer 내용 -->
-                <div class="layer_content">
-                    <div class="privacy_section privacy_content scroll">
-                       
-                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
-                            <table class="table_view marginT8">
-                                <colgroup>
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                </colgroup>
-                                <tr>
-                                    <th scope="col">수집 및 이용 목적</th>
-                                    <th scope="col">수집하는 개인정보 항목</th>
-                                    <th scope="col">보유 및 이용기간</th>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">
-                                        이용자 식별 및 회원 서비스 제공
-                                    </td>
-                                    <td>
-                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
-                                    </td>
-                                    <td rowspan="2">
-                                        회원 탈퇴 시까지
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
-                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
-                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
-                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
-                        </div>
-                        <!-- //이용약관 내용 -->
-                </div>
-                <!-- //layer 내용 -->
-
-                <div class="layer_btnSection">
-                    <button class="btn btn_close">취소</button>
-                    <button class="btn primary">동의</button>
-                </div>
-            </div>
-        </div>
-       
-        <!-- //레이어 개인정보 수집 및 이용 동의 -->
-
-        <!-- 레이어 마케팅 목적 이용 및 정보 수신 -->
-        <div class="layer_wrapper layer_marketingAgree"><!-- active 추가 시 화면 노출 -->
-            <div class="layer_basic">
-
-                <div class="layer_header">
-                    <h2>마케팅 목적 이용 및 정보 수신</h2>
-                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                </div>
-
-                <!-- layer 내용 -->
-                <div class="layer_content">
-                    <div class="privacy_section privacy_content scroll">
-                       
-                            <p>회사는 사용자의 동의에 근거하여 다음의 개인정보 항목을 수집하여 처리하고 있습니다.</p>
-                            <table class="table_view marginT8">
-                                <colgroup>
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                </colgroup>
-                                <tr>
-                                    <th scope="col">수집 및 이용 목적</th>
-                                    <th scope="col">수집하는 개인정보 항목</th>
-                                    <th scope="col">보유 및 이용기간</th>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">
-                                        이용자 식별 및 회원 서비스 제공
-                                    </td>
-                                    <td>
-                                        (필수) 아이디, 비밀번호, 이름, 생년월일, 이메일 주소, 휴대전화번호
-                                    </td>
-                                    <td rowspan="2">
-                                        회원 탈퇴 시까지
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>(선택) 학력정보, 출신대학, 학과명관심분야(대학전공/자격증), 가입경로, 주소, 추천인 정보</p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p class="txt_basicRed"><br/>※ 서비스 이용 과정에서 불법 및 부정 이용방지를 위해 다음과 같은 정보가 생성되어 수집될 수 있습니다.<br/>
-                                - 서비스 이용기록, 접속 로그, 접속 IP 정보</p>
-                            <p>※ 개인정보의 수집 및 이용 동의를 거부하실 권리가 있으며, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
-                            <p class="txt_basicRed"><br/>※ 만 14세 미만 회원이 가입 시 입력한 법정대리인 정보는 해당 회원이 성인이 되는 시점에 즉시 삭제됩니다.</p>
-                        </div>
-                        <!-- //이용약관 내용 -->
-                </div>
-                <!-- //layer 내용 -->
-
-                <div class="layer_btnSection">
-                    <button class="btn btn_close">취소</button>
-                    <button class="btn primary">동의</button>
-                </div>
-            </div>
-        </div>
-       
-        <!-- //레이어 마케팅 목적 이용 및 정보 수신 -->
 
         <!-- footer -->
         <footer class="login_footer">
@@ -368,7 +544,7 @@
                 <li><a href="#none">이용약관</a></li>
                 <li><a href="#none">개인정보처리방침</a></li>
             </ul>
-           <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+           <p>copyright ⓒ 2026 김영평생교육원 All right reserved.</p>
         </footer>
         <!-- //footer -->
     </div>

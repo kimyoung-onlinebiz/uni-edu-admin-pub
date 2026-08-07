@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>김영평생교육원</title>
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
+    <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+   <div class="login_wrapper">
+        <header>
+            <h1>
+                <a href="#none"><img src="../assets/images/common/Logo.svg" alt="김영평생교육원"></a>
+            </h1>
+            <h2>아이디/비밀번호 찾기</h2>
+        </header>
+        <div class="login_box">
+            <ul class="tab">
+                <li><a href="id_search.html">아이디 찾기</a></li>
+                <li><a href="pw_search.html" class="active" aria-current="page">비밀번호 찾기</a></li>
+            </ul>
+            <form class="login_input" action="#none" method="post" novalidate>
+                <div class="form_group">
+                    <div class="form_check">
+                        <input type="radio" name="radio_1" id="radio_1">
+                        <label for="radio_1">휴대전화 번호로 찾기</label>
+                    </div>
+                    <div class="form_check">
+                        <input type="radio" name="radio_1" id="radio_2" checked="">
+                        <label for="radio_2">이메일 주소로 찾기</label>
+                    </div>
+                </div>
+
+                <div class="input_area">
+                    <header>
+                        <h4><label for="userId">아이디</label></h4>
+                    </header>
+                    <input id="userId" name="userId" type="text" placeholder="아이디를 입력해주세요." autocomplete="username" disabled>
+                    <button class="btn_delete" type="button" aria-label="아이디 입력값 삭제">
+                        <span class="material-symbols-rounded">close</span>
+                    </button>
+                </div>
+
+                <div class="input_area">
+                    <header>
+                        <h4><label for="useremail">이메일 주소</label></h4>
+                    </header>
+                    <input id="useremail" name="useremail" type="email" placeholder="이메일 주소를 입력해주세요." autocomplete="username" disabled>
+                    <button class="btn_delete" type="button" aria-label="이메일 입력값 삭제">
+                        <span class="material-symbols-rounded">close</span>
+                    </button>
+                </div>
+
+                <ul class="btn_login">
+                    <li><button type="submit">재전송</button></li>
+                </ul>
+
+                 <!-- 인증번호 타이머 -->
+                <div class="input_area borderT">
+                    <header>
+                        <h4><label for="authCode">인증번호</label></h4>
+                        <p class="timer"><span class="material-symbols-rounded">timer</span>2:49</p>
+                    </header>
+                    <input id="authCode" name="authCode" type="text" placeholder="인증번호를 입력해주세요." Class="error">
+                </div>
+                <!-- //인증번호 타이머 -->
+
+                 <p class="error_message">인증번호가 일치하지 않습니다. 확인 후 다시 입력해주세요.</p>
+
+                <ul class="btn_login">
+                    <li><button type="submit" disabled>인증하기</button></li>
+                </ul>
+
+               
+
+                <ul class="btn_find">
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="step_01.html">회원가입</a></li>
+                </ul>
+            </form>
+        </div>
+        <!-- footer -->
+        <footer class="login_footer">
+            <ul>
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+            </ul>
+           <p>copyright ⓒ 2026 김영평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+    
+</body>
+</html>
