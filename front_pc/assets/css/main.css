@@ -127,8 +127,9 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .mainEasy_consult.login_after .mypage_status { background:var(--Primary-500); border-radius:8px; height:70px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
 .mainEasy_consult.login_after .status_item { width:123px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:var(--Neutral-0); }
 .mainEasy_consult.login_after .status_item span { font-size:14px; font-weight:600; line-height:1; }
-.mainEasy_consult.login_after .status_item strong { font-size:16px; font-weight:700; line-height:1; text-underline-offset:3px; transition:all .2s ease; border-bottom:1px solid transparent; padding: 0 3px; }
-.mainEasy_consult.login_after .status_item strong:hover { border-bottom:1px solid var(--Neutral-0); }
+.mainEasy_consult.login_after .status_item strong { font-size:16px; font-weight:700; line-height:1; text-underline-offset:3px; transition:all .2s ease; border-bottom:1px solid transparent; padding:0 3px; }
+.mainEasy_consult.login_after .status_item:hover strong {  border-bottom:1px solid var(--Neutral-0);}
+
 .mainEasy_consult.login_after .status_divider { color:var(--Neutral-300); font-size:14px; line-height:1; }
 
 .mainEasy_consult.login_after .mypage_shortcuts { display:flex; justify-content:space-between; margin-bottom:14px; }
