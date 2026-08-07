@@ -118,28 +118,30 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .mainEasy_consult .layer_agree h3 { font-size:var(--Font-medium); font-weight:700; margin:0; }
 .layer_consultAgree .layer_basic { width:300px; }
 
-.mainEasy_consult.login_after { border:1px solid var(--Neutral-500); border-radius:8px; padding:24px; background:#fff; }
+.mainEasy_consult.login_after { border:1px solid var(--Neutral-500); border-radius:8px; padding:24px; background:var(--Neutral-0); }
 .mainEasy_consult.login_after .mypage_head { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
 .mainEasy_consult.login_after .mypage_head p { font-size:20px; font-weight:700; line-height:1; }
-.mainEasy_consult.login_after .mypage_head p strong { color:#2235b0; font-weight:700; }
-.mainEasy_consult.login_after .mypage_head a { width:20px; height:20px; display:flex; align-items:center; justify-content:center; color:#2235b0; }
+.mainEasy_consult.login_after .mypage_head p strong { color:var(--Primary-500); font-weight:700; }
+.mainEasy_consult.login_after .mypage_head a { width:20px; height:20px; display:flex; align-items:center; justify-content:center; color:var(--Primary-500); }
 
-.mainEasy_consult.login_after .mypage_status { background:#2f3fb8; border-radius:8px; height:70px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
-.mainEasy_consult.login_after .status_item { width:123px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:#fff; }
+.mainEasy_consult.login_after .mypage_status { background:var(--Primary-500); border-radius:8px; height:70px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+.mainEasy_consult.login_after .status_item { width:123px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:var(--Neutral-0); }
 .mainEasy_consult.login_after .status_item span { font-size:14px; font-weight:600; line-height:1; }
-.mainEasy_consult.login_after .status_item strong { font-size:16px; font-weight:700; line-height:1; text-decoration:underline; text-underline-offset:3px; }
-.mainEasy_consult.login_after .status_divider { color:#e4e7f1; font-size:14px; line-height:1; }
+.mainEasy_consult.login_after .status_item strong { font-size:16px; font-weight:700; line-height:1; text-underline-offset:3px; transition:all .2s ease; border-bottom:1px solid transparent; padding: 0 3px; }
+.mainEasy_consult.login_after .status_item strong:hover { border-bottom:1px solid var(--Neutral-0); }
+.mainEasy_consult.login_after .status_divider { color:var(--Neutral-300); font-size:14px; line-height:1; }
 
-.mainEasy_consult.login_after .mypage_shortcuts { display:flex; gap:12px; margin-bottom:14px; }
-.mainEasy_consult.login_after .mypage_shortcuts li { width:76px; height:76px; }
+.mainEasy_consult.login_after .mypage_shortcuts { display:flex; justify-content:space-between; margin-bottom:14px; }
+.mainEasy_consult.login_after .mypage_shortcuts li { width:78px; height:76px; }
 .mainEasy_consult.login_after .mypage_shortcuts a { width:100%; height:100%; border-radius:8px; background:var(--Neutral-200); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; }
+.mainEasy_consult.login_after .mypage_shortcuts a:hover { background:var(--Neutral-300); }
 .mainEasy_consult.login_after .mypage_shortcuts strong { font-size:var(--Font-xsmall); font-weight:600; line-height:1; }
 
-.mainEasy_consult.login_after .mypage_notice_wrap { background:var(--Neutral-200); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:16px; }
-.mainEasy_consult.login_after .mypage_notice { display:flex; flex-direction:column; gap:4px; }
-.mainEasy_consult.login_after .mypage_notice span { width:max-content; height:24px; padding:0 10px; border:1px solid #2235b0; border-radius:100px; color:#2235b0; font-size:12px; font-weight:600; display:inline-flex; align-items:center; line-height:1; }
-.mainEasy_consult.login_after .mypage_notice p { font-size:14px; line-height:1.4; letter-spacing:-0.01em; }
-.mainEasy_consult.login_after .mypage_notice p strong { font-weight:700; }
+.mainEasy_consult.login_after .mypage_notice_wrap { background:var(--Neutral-200); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:12px; }
+.mainEasy_consult.login_after .mypage_notice { display:flex; flex-direction:column; gap:7px; }
+.mainEasy_consult.login_after .mypage_notice span { width:max-content; height:23px; padding:0 10px; border:1px solid #2235b0; border-radius:100px; color:#2235b0; font-size:12px; font-weight:600; display:inline-flex; align-items:center; line-height:1; }
+.mainEasy_consult.login_after .mypage_notice p { font-size:14px; line-height:1.4; letter-spacing:-0.01em; font-weight:600; letter-spacing:-0.02em; }
+.mainEasy_consult.login_after .mypage_notice p strong { font-weight:600; padding-right:2px;  }
 
 .main_course { display:flex; height:224px; gap:24px; }
 .course_info,.edu_tel li { border:1px solid var(--Neutral-300); }
@@ -309,14 +311,14 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .quick_floating .quick_kakao { background:#ffeb3b; color:var(--Neutral-900); }
 
 .quick_floating .quick_top { width:30px; height:30px; margin:0 auto; background:#fff; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); color:var(--Neutral-600); }
-.quick_floating .quick_top span { font-size:16px; font-size:500; }
-.mainEasy_consult .btn_layerClose { position:absolute; right:20px; top:0px; font-size:24px; }
+.quick_floating .quick_top span { font-size:16px; font-weight:500; }
+.mainEasy_consult .btn_layerClose { position:absolute; right:10px; top:6px; font-size:24px; }
 .layer_consult .layer_basic { width:400px; padding:24px 0 32px; }
 .layer_consult .mainEasy_consult { padding:0 25px; }
 .layer_consult .mainEasy_consult .layer_agree { top:-10px; }
 
 /* 이벤트 스와이퍼 */
-.layer_mainEvent .btn_layerClose { position:absolute; top:50%; margin:-300px 0 0 380px; font-size:30px; font-weight:300; color:var(--Neutral-0); }
+.layer_mainEvent .btn_layerClose { position:absolute; top:50%; margin:-300px 0 0 400px; font-size:30px; font-weight:300; color:var(--Neutral-0); }
 .layer_mainEvent .swiper-container { position:relative; width:430px; border-radius:var(--Border-2radius); overflow:hidden; }
 .layer_mainEvent .swiper-pagination { bottom:12px !important; }
 .layer_mainEvent .swiper-pagination-bullet-active { background:var(--Primary-600) !important; width:20px; border-radius:var(--Border-radius); transition:all .3s ease; }

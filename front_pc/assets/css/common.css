@@ -98,6 +98,7 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus,input[type=tel]
 input[type="checkbox"],input[type="radio"] { width:16px; height:16px; margin-right:8px; vertical-align:middle; cursor:pointer; accent-color:var(--Primary-500); margin-top:-2px; }
 td:has(> input[type="checkbox"]:only-child):not(:has(> label)) > input[type="checkbox"],td:has(> input[type="radio"]:only-child):not(:has(> label)) > input[type="radio"],th:has(> input[type="checkbox"]:only-child):not(:has(> label)) > input[type="checkbox"],th:has(> input[type="radio"]:only-child):not(:has(> label)) > input[type="radio"] { margin: 0 !important;}
 select { appearance:none; background:#fff url(../images/common/select_arrow.png) no-repeat calc(100% - 12px) center; padding-right:40px; cursor:pointer; color:var(--Neutral-500); width:auto; }
+select.is-selected { color:var(--Neutral-800); font-wieght:500; }
 input[type="date"] { color:var(--Neutral-500); width:220px; }
 select:disabled { background-color:var(--Neutral-300); cursor:not-allowed; }
 select:focus { border:1px solid var(--Neutral-800); outline:transparent; }

@@ -226,6 +226,23 @@ document.addEventListener('DOMContentLoaded', () => {
         onClick(q('.quick_floating .quick_top'), () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
 
+    // 네이티브 select 값 유무에 따라 텍스트 컬러 상태를 동기화
+    // - 값이 없으면 placeholder 톤(Neutral-500)
+    // - 값이 있으면 본문 톤(Neutral-800)
+    function initSelectValueColor() {
+        const syncSelectColor = (select) => {
+            // CSS의 `select.is-selected` 규칙을 토글해 색상만 제어한다.
+            select.classList.toggle('is-selected', Boolean(select.value));
+        };
+
+        qa('select').forEach((select) => {
+            // 초기 렌더(서버 바인딩 값 포함) 상태 반영
+            syncSelectColor(select);
+            // 사용자 선택 변경 시 상태 재동기화
+            on(select, 'change', () => syncSelectColor(select));
+        });
+    }
+
     // 레이어 설정 배열을 실제 레이어 바인딩으로 변환
     function initLayerBindings(registerLayers) {
         const setConsultAgreeState = (layer, isOpen) => {
@@ -546,7 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // - 위에서 정의한 초기화 함수를 실제 실행하는 구간.
     // - 초기화 순서를 여기서만 관리하면 전체 흐름 파악이 쉽다.
     // ============================================================
-    [initRelatedSite, initGnbToggle, initQuickTop].forEach((initializer) => initializer());
+    [initRelatedSite, initGnbToggle, initQuickTop, initSelectValueColor].forEach((initializer) => initializer());
     const registerLayers = createLayerRegistrar();
     [
         () => initLayerBindings(registerLayers),
