@@ -1,4 +1,6 @@
-﻿/* 로그인 */
+﻿/* layout */
+.wrap { max-width:1200px; margin:0 auto; }
+/* 로그인 */
 .login_wrapper { display:flex; flex-direction:column; align-items:center; min-height:100vh; }
 .login_wrapper header { width:100%;  }
 .login_wrapper header h1 { display:flex; justify-content:center; align-items:center; width:100%; height:80px; border-bottom:1px solid var(--Neutral-300); }
@@ -146,5 +148,147 @@
 .privacy_section > dl > dd > ol > li > ol li { margin-top:5px; }
 .privacy_section > dl > dd > ol > li > ol span { display:block; margin-left:20px; }
 .txt_basicRed { color:var(--Error) !important; font-weight:500; }
+
+/* 서브 공통 레이아웃 */
+.subpage_layout { display:flex; gap:64px; width:1280px; margin:0 auto; padding:100px 0 120px; align-items:flex-start; background:var(--Neutral-0); }
+.lnb_wrap { flex:0 0 256px; gap:24px; display:flex; flex-direction:column; align-items:stretch; }
+.lnb_wrap h2 { font-size:var(--Font-3xlarge); font-weight:700; line-height:1.2; padding:0 20px 0 20px; }
+.lnb_wrap nav > ul { display:flex; flex-direction:column; align-items:stretch; align-self:stretch; border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); padding-top:8px; }
+.lnb_wrap nav strong { position:relative; font-size:var(--Font-medium); font-weight:700; padding:16px 20px 8px 36px; display:block; }
+.lnb_wrap nav strong:before { content:""; position:absolute; left:19px; top:23px; width:6px; height:6px; background:currentColor; border-radius:50%; }
+.lnb_wrap nav > ul ul { width:100%; }
+.lnb_wrap nav > ul:last-child ul { margin-bottom:0; padding-bottom:16px; }
+.lnb_wrap nav strong.active { color:var(--Primary-500); }
+.lnb_wrap nav a { display:flex; width:100%; box-sizing:border-box; align-items:center; padding:8px 20px 8px 36px; transition:background .2s ease, color .2s ease, padding .2s ease; border-top:1px solid var(--Neutral-0); }
+.lnb_wrap nav a:hover, .lnb_wrap nav a.active { padding-left:42px; font-weight:600; background:#ECF2FE; }
+.lnb_wrap nav a.active { padding-left:36px; }
+.lnb_wrap .current_courses, .lnb_wrap .classroom_shortcut { background:var(--Neutral-200); border-radius:var(--Border-2radius); padding:4px 8px; }
+.lnb_wrap h3 { font-size:var(--Font-large); font-weight:700; border-bottom:1px solid var(--Neutral-300); padding-bottom:10px; margin-bottom:13px; }
+.lnb_wrap h3 strong { font-size:var(--Font-medium); color:var(--Primary-500); font-weight:700; margin-left:4px; }
+.lnb_wrap .current_courses a { padding:6px 8px; display:block; }
+.lnb_wrap .current_courses,.lnb_wrap .classroom_shortcut { display:flex; flex-direction:column; padding:20px 10px 20px 20px; }
+.current_courses div { height:165px; overflow-y:auto; }
+.lnb_wrap .classroom_shortcut a { display:flex; align-items:center; gap:8px; padding:6px 8px 6px 0; font-weight:600; }
+.lnb_wrap .classroom_shortcut a span { color:var(--Primary-500); padding-right:5px; }
+.subpage_content { flex:0 0 960px; min-width:0; }
+
+/* 스크롤 디자인 커스텀 */
+.scroll_design::-webkit-scrollbar { width:6px; }
+.scroll_design::-webkit-scrollbar-track { background:#fff; }
+.scroll_design::-webkit-scrollbar-thumb { background:#dfe2f2; border-radius:10px; }
+.scroll_design::-webkit-scrollbar-button { display:none; }
+
+.lnb_wrap .classroom_shortcut { background:var(--Neutral-0); border:1px solid var(--Neutral-300); }
+
+
+/* 나의 강의실 대시보드 */
+.classroom header { display:flex; align-items:center; justify-content:space-between; }
+.classroom .classroom_title { display:flex; align-items:center; gap:16px; }
+.classroom_title h1 { color:var(--Primary-500); font-size:var(--Font-2xlarge);  font-weight:700; }
+.classroom_title h1 span { color:var(--Neutral-900); }
+.classroom_title p { margin: 0; color:var(--Neutral-600); }
+.classroom header a { margin-top:0; }
+.dashboard_summary { display:flex; gap:24px; margin-top:24px; }
+.dashboard_summary .summary_card { height:214px; padding:24px; border:1px solid var(--Neutral-300); border-radius:var(--Border-radius);}
+
+
+/* 첫 번째 카드: 학점 / 메뉴 */
+.dashboard_summary .summary_card:first-child { flex:1 1 auto; min-width:0; display:flex; align-items:center; gap:42px; }
+.summary_card .score { display:flex; flex-direction:column; align-items:center; justify-content:center; width:190px; height:162px; flex-shrink:0; border-radius:8px; background:#f7f8fa; }
+.summary_card .score_circle { --progress:0; /* 0~100, JS에서 주입 */ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; width:110px; height:110px; border-radius:50%; box-sizing:border-box; background:conic-gradient(var(--Primary-500) calc(var(--progress) * 1%), #dfe3f2 0); }
+.summary_card .score_circle::before { content:""; position:absolute; inset:8px; border-radius:50%; background:#f7f8fa; }
+.summary_card .score_circle > * { position:relative; z-index:1; }
+.summary_card .score_circle span {font-size:var(--Font-small); font-weight:700; line-height:1; }
+.summary_card .score_circle div { color:var(--Primary-500); font-size:var(--Font-3xlarge); letter-spacing:-2px; line-height:1; }
+.summary_card .score_circle div strong { font-weight:800;  }
+.summary_card .score_circle small { display:inline-block; font-size:var(--Font-medium); vertical-align:middle;letter-spacing:normal; margin-left:3px; font-weight:700; }
+.summary_card .score p { margin:10px 0 0; font-size:var(--Font-small); font-weight:600; }
+
+.dashboard_summary .summary_card:first-child > ul { flex:1; margin:0; padding:0; list-style:none; }
+.dashboard_summary .summary_card:first-child > ul > li { display:flex; align-items:center; justify-content:space-between; min-height:54px; }
+.dashboard_summary .summary_card:first-child > ul > li > span { font-size:16px; font-weight:600; }
+.summary_card:first-child > ul > li > a { font-size:var(--Font-small); }
+.summary_card:first-child > ul > li:last-child > a { color:var(--Primary-500); font-size:30px; font-weight:600; width:100px; border-radius:0; text-align:center; margin-top:-3px; text-decoration:underline; text-decoration-color:transparent; text-underline-offset:3px; transition:color .2s ease, text-decoration-color .2s ease; }
+.summary_card:first-child > ul > li:last-child > a:hover {  text-decoration-color:var(--Primary-500); }
+.summary_card:first-child > ul > li:last-child > a span { font-size:28px; font-weight:500; vertical-align:-4px; }
+
+/* 두 번째 카드: 학습 공지사항 */
+.dashboard_summary .summary_card:last-child { flex:0 0 411px; width:411px; }
+.dashboard_summary .summary_card:last-child > header { display:flex; align-items:center; justify-content:space-between; padding-bottom:12px; border-bottom:1px solid var(--Neutral-300); }
+.dashboard_summary .summary_card:last-child > header h2 { margin:0; font-size:var(--Font-large); font-weight:700; }
+.dashboard_summary .summary_card:last-child > ul { margin:16px 0 0; padding:0; list-style:none; }
+.dashboard_summary .summary_card:last-child > ul > li { display:flex; align-items:center; gap:14px; height:37px; }
+.dashboard_summary .summary_card:last-child > ul > li > span { display:inline-flex; align-items:center; justify-content:center; min-width:69px; height:24px; padding:0 10px; box-sizing:border-box; border-radius:12px; background:#edf2ff; color:#3656c4; font-size:var(--Font-2xsmall); font-weight:600; }
+.dashboard_summary .summary_card:last-child > ul > li > a { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-decoration:none; }
+
+/* 수강 과목 */
+.classroom_subjects { margin-top:32px; }
+.classroom_subjects .subject_big_tabs { display:flex;  }
+.classroom_subjects .subject_big_tabs a { flex:1; height:56px; display:flex; align-items:center; justify-content:center; font-size:var(--Font-large); font-weight:600; color:var(--Placeholder); border-bottom:2px solid var(--Neutral-300); }
+.classroom_subjects .subject_big_tabs a.active { position:relative; color:var(--Primary-500); font-weight:700; }
+.classroom_subjects .subject_big_tabs a.active:after { content:""; position:absolute; bottom:-2px; left:0; width:100%; height:4px; background:var(--Primary-500); }
+
+.classroom_subjects .subject_sub_tabs { display:flex; gap:16px; padding:32px 0; }
+.classroom_subjects .subject_sub_tabs a { min-width:166px; height:40px;  border-radius:100px; display:flex; align-items:center; justify-content:center; font-size:var(--Font-medium); font-weight:600; background:var(--Neutral-200); padding-top:1px; color:var(--Placeholder);}
+.classroom_subjects .subject_sub_tabs a.active { background:var(--Primary-500); color:var(--Neutral-0); }
+.classroom_subjects .subject_panels { width:100%; }
+.classroom_subjects .subject_panel { display:none; }
+.classroom_subjects .subject_panel.active { display:block; }
+
+.classroom_subjects .subject_toolbar {  display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--Neutral-300); padding-bottom:16px; }
+.classroom_subjects .subject_toolbar p { font-size:var(--Font-medium); font-weight:500; margin-top:6px; }
+.classroom_subjects .subject_toolbar p strong { color:var(--Primary-500); font-weight:700; }
+.classroom_subjects .subject_sort { display:flex; align-items:center; gap:16px; }
+.classroom_subjects .subject_sort > span { color:var(--Neutral-800); font-size:var(--Font-small); font-weight:600; }
+.classroom_subjects .subject_select { height:32px; min-width:147px; border:1px solid var(--Neutral-300); border-radius:var(--Border-radius); background:var(--Neutral-0); padding:0 12px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.classroom_subjects .subject_select span { font-size:18px; color:var(--Neutral-600); }
+.classroom_subjects .subject_list { margin-top:32px; display:flex; flex-direction:column; gap:32px; }
+.classroom_subjects .subject_list > li { position:relative; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); display:flex; flex-direction:column; padding:24px; }
+.classroom_subjects .subject_item { width:100%; display:flex; align-items:center; justify-content:space-between; padding-left:10px; }
+.classroom_subjects .subject_item a { width:215px; height:40px; text-align:center; padding-top:5px; border:1px solid var(--Primary-500); }
+.classroom_subjects .subject_item_head { display:flex; gap:50px; margin-right:12px; }
+.classroom_subjects .subject_item_head dl dt { color:var(--Neutral-600); font-size:var(--Font-2xsmall); margin-bottom:6px; }
+.classroom_subjects .subject_item_head dl dd { max-width:220px; font-size:var(--Font-large); font-weight:700; word-break:break-all; }
+.classroom_subjects .subject_item_head dl dd span { font-weight:400; color:var(--Neutral-600); }
+.classroom_subjects .subject_item li:last-child { margin-top:12px; }
+.subject_item:has(> .subject_item_head):not(:has(> a)) dl:nth-child(1) dd { max-width:180px; width:180px; }
+.subject_item:has(> .subject_item_head):not(:has(> a)) dl:nth-child(2) dd { max-width:380px; width:380px; text-align:left; }
+.classroom_subjects .attendance_status { display:flex; align-items:center; height:60px; justify-content:center;  padding:0 24px; border-radius:var(--Border-radius); background:var(--Neutral-100); gap:50px; margin:24px 0; }
+.classroom_subjects .attendance_rate { font-size:var(--Font-medium); }
+.classroom_subjects .attendance_rate strong { font-weight:700; color:var(--Primary-500); }
+.classroom_subjects .attendance_bar { display:flex; align-items:center; gap:2px; }
+.attendance_bar span { width:32px; height:10px; background:var(--Neutral-300); }
+.attendance_bar span:first-of-type { border-radius:var(--Border-2radius) 0 0 var(--Border-2radius); }
+.attendance_bar span:last-of-type { border-radius:0  var(--Border-2radius) var(--Border-2radius) 0; }
+.attendance_bar span.attended { background:var(--Info); }
+.attendance_bar span.absent { background:var(--Error); }
+.attendance_bar span.offline { background:var(--Warning); cursor:pointer; }
+.attendance_info .material-symbols-rounded { display:inline-block; width:24px; }
+.attendance_info em { color:var(--Error); font-style:normal; font-weight:700; animation:FadeIn .6s infinite; }
+.attendance_info strong + span { color:var(--Neutral-600);  }
+.evaluation_status { display:flex; align-items:center; gap:36px; width:100%; }
+.evaluation_title { flex-shrink:0; color:var(--Neutral-600); font-weight:500; padding-left:30px; }
+.evaluation_list { flex:1; min-width:0; display:flex; align-items:center; gap:16px; }
+.evaluation_list .evaluation_item { flex:1; min-width:0; display:flex; align-items:center; justify-content:center; height:32px; box-sizing:border-box;
+border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  background:var(--Neutral-100); }
+.evaluation_list .evaluation_item dl { width:100%; display:flex; align-items:center; justify-content:center; gap:6px; }
+.evaluation_list .evaluation_item dt:after { content:"|"; padding-left:6px; }
+.evaluation_item dt,.evaluation_item dd { color:var(--Placeholder); font-size:var(--Font-small); font-weight:500; }
+.evaluation_list .evaluation_item.open_comingSoon dd { color:var(--Primary-500); }
+.evaluation_item.non_submission dd { color:var(--Error); }
+.evaluation_list a.evaluation_item { border:1px solid var(--Primary-500); background:var(--Neutral-0); }
+.evaluation_list a.evaluation_item dt,.evaluation_list a.evaluation_item dd { color:var(--Primary-500); }
+.evaluation_list a.evaluation_item.active { border:1px solid var(--Primary-500); background:var(--Primary-500); }
+.evaluation_list a.evaluation_item.active dt,.evaluation_list a.evaluation_item.active dd { color:var(--Neutral-0); }
+.exam_guideTxt { color:var(--Info); font-size:var(--Font-xsmall); padding:10px 20px; background:var(--Info-soft); border-radius:var(--Border-radius); margin-top:24px; }
+
+.tooltip { display:none; position:absolute; top:84px; padding:4px 16px;
+border-radius:var(--Border-radius); background:var(--Neutral-900); color:#fff; font-size:var(--Font-xsmall); font-weight:500; }
+.tooltip::before { content:""; position:absolute; left:27px; bottom:-8px;
+width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px solid transparent; border-right:6px solid transparent;
+}
+.quick_floating.quick_classroom { top:65%; }
+.quick_floating.quick_classroom a { background:var(--Neutral-0); border:1px solid var(--Neutral-300); width:90px; height:auto; display:flex; flex-direction:column; gap:10px; font-size:var(--Font-small); padding:16px 10px; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+
 
 

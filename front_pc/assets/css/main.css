@@ -32,8 +32,8 @@
 .header_wrapper .inner { justify-content:space-between; align-items:center; }
 .header_wrapper .gnb { position:relative; height:80px; border-bottom:1px solid var(--Neutral-300); }
 .header_wrapper .gnb nav { position:relative; z-index:1; width:1280px; margin:0 auto; height:80px; display:flex; justify-content:center; align-items:center; }
-.header_wrapper .gnb .gnb_menu { display:flex; justify-content:center; align-items:center; gap:52px; }
-.header_wrapper .gnb .gnb_menu a { position:relative; font-size:var(--Font-large);
+.header_wrapper .gnb .gnb_menu { display:flex; justify-content:center; align-items:center; gap:42px; }
+.header_wrapper .gnb .gnb_menu a { position:relative; font-size:var(--Font-xlarge);
  font-weight:700; padding:0 8px; height:80px; display:flex; align-items:center; justify-content:center; }
 .header_wrapper .gnb .gnb_menu a:after { position:absolute; bottom:0; left:0; right:0; content:""; display:block; border-bottom:3px solid var(--Primary-500); transform:scaleX(0); transform-origin:center center; transition:transform .2s ease; }
 .header_wrapper .gnb .gnb_menu a:hover:after,
@@ -188,10 +188,10 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .story_content .story_name { font-size:var(--Font-xlarge); font-weight:700; margin:6px 0; }
 .story_content .story_name strong { color:var(--Primary-500); margin-right:4px; }
 .story_content p { color:var(--Secondary); overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3; }
-.main_wrap .btn_moreView { font-size:var(--Font-small); color:var(--Neutral-500); align-self:flex-end; margin-top:11px; }
-.main_wrap .btn_moreView:hover { color:var(--Neutral-600); }
-.main_wrap .btn_moreView span { display:inline-flex; align-items:center; justify-content:center; width:1em; height:1em; vertical-align:-2px; margin-left:1px; font-size:var(--Font-small); font-weight:700; transform-origin:center center; transition:transform .4s ease; padding-top:1px; }
-.main_wrap .btn_moreView:hover span { transform:rotate(180deg); }
+.btn_moreView { font-size:var(--Font-small); color:var(--Neutral-500); align-self:flex-end; margin-top:11px; }
+.btn_moreView:hover { color:var(--Neutral-600); }
+.btn_moreView span { display:inline-flex; align-items:center; justify-content:center; width:1em; height:1em; vertical-align:-2px; margin-left:1px; font-size:var(--Font-small); font-weight:700; transform-origin:center center; transition:transform .4s ease; padding-top:1px; }
+.btn_moreView:hover span { transform:rotate(180deg); }
 
 .notice_link { display:flex; gap:24px; }
 .notice_link .board_card,
@@ -305,13 +305,13 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .site_footer .footer_bottom p { color:var(--Neutral-600); font-size:var(--Font-xsmall); }
 
 .quick_floating { position:fixed; right:24px; top:70%; z-index:100; display:flex; flex-direction:column; gap:12px; }
-.quick_floating a { border-radius:var(--Border-2radius); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; font-size:var(--Font-xsmall); line-height:1.1; transition:all 0.3s; }
+.quick_floating a { border-radius:var(--Border-2radius); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; font-size:var(--Font-xsmall); line-height:1.1; transition:all 0.3s; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 .quick_floating .quick_consult,
 .quick_floating .quick_kakao { width:76px; height:76px; gap:4px; }
 .quick_floating .quick_consult { background:#2235b0; color:var(--Neutral-0); }
-.quick_floating .quick_kakao { background:#ffeb3b; color:var(--Neutral-900); }
+.quick_floating .quick_kakao { background:#ffeb3b; color:var(--Neutral-900); border:1px solid #e2d132; }
 
-.quick_floating .quick_top { width:30px; height:30px; margin:0 auto; background:#fff; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); color:var(--Neutral-600); }
+.quick_floating .quick_top { width:30px; height:30px; margin:0 auto; background:#fff; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); color:var(--Neutral-600); box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 .quick_floating .quick_top span { font-size:16px; font-weight:500; }
 .mainEasy_consult .btn_layerClose { position:absolute; right:10px; top:6px; font-size:24px; }
 .layer_consult .layer_basic { width:400px; padding:24px 0 32px; }
