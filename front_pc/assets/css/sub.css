@@ -159,13 +159,14 @@
 .lnb_wrap nav > ul ul { width:100%; }
 .lnb_wrap nav > ul:last-child ul { margin-bottom:0; padding-bottom:16px; }
 .lnb_wrap nav strong.active { color:var(--Primary-500); }
-.lnb_wrap nav a { display:flex; width:100%; box-sizing:border-box; align-items:center; padding:8px 20px 8px 36px; transition:background .2s ease, color .2s ease, padding .2s ease; border-top:1px solid var(--Neutral-0); }
-.lnb_wrap nav a:hover, .lnb_wrap nav a.active { padding-left:42px; font-weight:600; background:#ECF2FE; }
+.lnb_wrap nav a { display:flex; width:100%; box-sizing:border-box; align-items:center; padding:8px 20px 8px 36px; transition:background .2s ease, color .2s ease, padding .2s ease; border-top:1px solid var(--Neutral-0); font-weight:500; }
+.lnb_wrap nav a:hover, .lnb_wrap nav a.active { background:#ECF2FE; color:var(--Primary-500); }
 .lnb_wrap nav a.active { padding-left:36px; }
 .lnb_wrap .current_courses, .lnb_wrap .classroom_shortcut { background:var(--Neutral-200); border-radius:var(--Border-2radius); padding:4px 8px; }
 .lnb_wrap h3 { font-size:var(--Font-large); font-weight:700; border-bottom:1px solid var(--Neutral-300); padding-bottom:10px; margin-bottom:13px; }
 .lnb_wrap h3 strong { font-size:var(--Font-medium); color:var(--Primary-500); font-weight:700; margin-left:4px; }
 .lnb_wrap .current_courses a { padding:6px 8px; display:block; }
+.lnb_wrap .current_courses a:hover { text-decoration:underline; text-decoration-color:var(--Primary-500); text-underline-offset:3px; }
 .lnb_wrap .current_courses,.lnb_wrap .classroom_shortcut { display:flex; flex-direction:column; padding:20px 10px 20px 20px; }
 .current_courses div { height:165px; overflow-y:auto; }
 .lnb_wrap .classroom_shortcut a { display:flex; align-items:center; gap:8px; padding:6px 8px 6px 0; font-weight:600; }
@@ -246,13 +247,17 @@
 .classroom_subjects .subject_list > li { position:relative; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); display:flex; flex-direction:column; padding:24px; }
 .classroom_subjects .subject_item { width:100%; display:flex; align-items:center; justify-content:space-between; padding-left:10px; }
 .classroom_subjects .subject_item a { width:215px; height:40px; text-align:center; padding-top:5px; border:1px solid var(--Primary-500); }
-.classroom_subjects .subject_item_head { display:flex; gap:50px; margin-right:12px; }
+.classroom_subjects .subject_item_head { display:flex; gap:40px; }
+.classroom_subjects .subject_item_head dl:nth-child(1) { width:140px; }
+.classroom_subjects .subject_item_head dl:nth-child(2) { width:230px; }
 .classroom_subjects .subject_item_head dl dt { color:var(--Neutral-600); font-size:var(--Font-2xsmall); margin-bottom:6px; }
-.classroom_subjects .subject_item_head dl dd { max-width:220px; font-size:var(--Font-large); font-weight:700; word-break:break-all; }
+.classroom_subjects .subject_item_head dl dd { font-size:var(--Font-large); font-weight:700; word-break:break-all; }
 .classroom_subjects .subject_item_head dl dd span { font-weight:400; color:var(--Neutral-600); }
 .classroom_subjects .subject_item li:last-child { margin-top:12px; }
-.subject_item:has(> .subject_item_head):not(:has(> a)) dl:nth-child(1) dd { max-width:180px; width:180px; }
-.subject_item:has(> .subject_item_head):not(:has(> a)) dl:nth-child(2) dd { max-width:380px; width:380px; text-align:left; }
+.subject_item:not(:has(> a, > ul)) > .subject_item_head { padding-left:40px; }
+.subject_item:not(:has(> a, > ul)) > .subject_item_head dl:nth-child(2) { width:360px; }
+.subject_item:not(:has(> a, > ul)) > .subject_item_head dl:nth-child(1) dd { max-width:180px; width:180px; }
+.subject_item:not(:has(> a, > ul)) > .subject_item_head dl:nth-child(2) dd { max-width:360px; width:360px; text-align:left; }
 .classroom_subjects .attendance_status { display:flex; align-items:center; height:60px; justify-content:center;  padding:0 24px; border-radius:var(--Border-radius); background:var(--Neutral-100); gap:50px; margin:24px 0; }
 .classroom_subjects .attendance_rate { font-size:var(--Font-medium); }
 .classroom_subjects .attendance_rate strong { font-weight:700; color:var(--Primary-500); }
@@ -264,7 +269,7 @@
 .attendance_bar span.absent { background:var(--Error); }
 .attendance_bar span.offline { background:var(--Warning); cursor:pointer; }
 .attendance_info .material-symbols-rounded { display:inline-block; width:24px; }
-.attendance_info em { color:var(--Error); font-style:normal; font-weight:700; animation:FadeIn .6s infinite; }
+.attendance_info em { color:var(--Error); font-style:normal; font-weight:700; animation:FadeIn .8s infinite; }
 .attendance_info strong + span { color:var(--Neutral-600);  }
 .evaluation_status { display:flex; align-items:center; gap:36px; width:100%; }
 .evaluation_title { flex-shrink:0; color:var(--Neutral-600); font-weight:500; padding-left:30px; }
@@ -277,8 +282,10 @@ border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  backgr
 .evaluation_list .evaluation_item.open_comingSoon dd { color:var(--Primary-500); }
 .evaluation_item.non_submission dd { color:var(--Error); }
 .evaluation_list a.evaluation_item { border:1px solid var(--Primary-500); background:var(--Neutral-0); }
+.evaluation_list a.evaluation_item:hover { background:var(--Neutral-100); }
 .evaluation_list a.evaluation_item dt,.evaluation_list a.evaluation_item dd { color:var(--Primary-500); }
 .evaluation_list a.evaluation_item.active { border:1px solid var(--Primary-500); background:var(--Primary-500); }
+.evaluation_list a.evaluation_item.active:hover { border:1px solid var(--Primary-700); background:var(--Primary-700); }
 .evaluation_list a.evaluation_item.active dt,.evaluation_list a.evaluation_item.active dd { color:var(--Neutral-0); }
 .exam_guideTxt { color:var(--Info); font-size:var(--Font-xsmall); padding:10px 20px; background:var(--Info-soft); border-radius:var(--Border-radius); margin-top:24px; }
 
