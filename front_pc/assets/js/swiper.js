@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Swiper 버전에 따라 pauseOnMouseEnter 옵션이 동작하지 않는 경우를 대비해
 // 마우스 진입/이탈 시 autoplay를 직접 stop/start 처리한다.
 function bindSwiperHoverPause(swiperInstance, hoverTarget) {
-    if (!swiperInstance?.autoplay || !hoverTarget) {
+    if (!swiperInstance?.autoplay || !hoverTarget || hoverTarget.classList.contains('event_banner')) {
         return;
     }
 
@@ -286,6 +286,8 @@ function initScholarshipPromotionSwipers() {
         };
 
         // 카드별로 독립 Swiper를 생성해 fraction과 버튼이 섞이지 않도록 한다.
+        const isEventBanner = cardEl.classList.contains('event_banner');
+
         const promotionSwiper = new Swiper(cardEl, {
             loop: true,
             speed: 450,
@@ -296,8 +298,8 @@ function initScholarshipPromotionSwipers() {
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
-                // 마우스를 올린 동안 자동재생을 일시정지한다.
-                pauseOnMouseEnter: true,
+                // 이벤트 배너는 마우스 오버 시 재생을 멈추지 않는다.
+                pauseOnMouseEnter: !isEventBanner,
             },
             fadeEffect: {
                 crossFade: true,
