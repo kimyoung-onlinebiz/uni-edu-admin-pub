@@ -269,7 +269,7 @@
 .attendance_bar span.absent { background:var(--Error); }
 .attendance_bar span.offline { background:var(--Warning); cursor:pointer; }
 .attendance_info .material-symbols-rounded { display:inline-block; width:24px; }
-.attendance_info em { color:var(--Error); font-style:normal; font-weight:700; animation:FadeIn .8s infinite; }
+.attendance_info em { color:var(--Error); font-style:normal; font-weight:700; animation:FadeIn 1s infinite; }
 .attendance_info strong + span { color:var(--Neutral-600);  }
 .evaluation_status { display:flex; align-items:center; gap:36px; width:100%; }
 .evaluation_title { flex-shrink:0; color:var(--Neutral-600); font-weight:500; padding-left:30px; }
