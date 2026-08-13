@@ -152,9 +152,9 @@ a.btn { line-height:28px; font-weight:500; }
 /* 4. 기본 레이어 스타일 */
 .layer_wrapper { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.7); justify-content:center; align-items:center; z-index: 1000; }
 .layer_wrapper.active { display:flex; }
-.layer_header { position:relative; display:flex; flex-flow:column; text-align:left; padding:0 16px 12px 0; border-bottom:1px solid var(--Neutral-300); margin-bottom:24px; }
-.layer_header .btn_layerClose { position:absolute; right:0; bottom:8px; font-size:24px; }
-.layer_header h4 { display:flex; align-items:center; font-size:var(--Font-xlarge); font-weight:700; gap:16px }
+.layer_wrapper header { position:relative; display:flex; flex-flow:column; text-align:left; padding:0 16px 12px 0; border-bottom:1px solid var(--Neutral-300); margin-bottom:24px; }
+.layer_wrapper header .btn_layerClose { position:absolute; right:0; bottom:8px; font-size:24px; }
+.layer_wrapper header h4 { display:flex; align-items:center; font-size:var(--Font-xlarge); font-weight:700; gap:16px }
 .layer_basic { position:relative; background:var(--Neutral-0); border-radius:8px; padding:24px 32px 32px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); text-align:center; min-width:400px; }
 .layer_content { overflow:auto; overflow-x:hidden; max-height:580px;min-height:150px;text-align:left; }
 .layer_content::-webkit-scrollbar,.scroll::-webkit-scrollbar,.scroll_deep::-webkit-scrollbar { width:6px; }
