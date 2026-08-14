@@ -274,7 +274,11 @@ document.addEventListener('DOMContentLoaded', () => {
             ...STATIC_LAYER_BINDINGS,
             // 아래 한 줄 추가만으로 신규 레이어를 붙일 수 있다.
             // 예시: { layer: '.layer_wrapper.sample', triggers: ['.btn_sample_open'] },
-            { layer: '.layer_wrapper.layer_consult', triggers: ['.quick_consult'] },
+            { layer: '.layer_wrapper.layer_consult', triggers: ['.quick_consult'] }, //상담 신청 레이어
+            { layer: '.layer_wrapper.layer_schoolSchedule', triggers: ['.btn_schoolSchedule'] }, //나의 강의실 주요 학사일정 레이어
+            { layer: '.layer_wrapper.layer_taskSubmission', triggers: ['.btn_taskSubmission'] }, //나의 강의실 과제 제출 레이어
+            { layer: '.layer_wrapper.layer_discussionSubmission', triggers: ['.btn_discussionSubmission'] }, //나의 강의실 토론 제출 레이어
+            { layer: '.layer_wrapper.layer_messageBox', triggers: ['.btn_messageBox'] }, //나의 강의실 쪽지함 레이어
         ]);
     }
 
@@ -470,12 +474,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 .get();
 
             if (!selected.length) {
-                $selected.text(placeholder).removeAttr('title');
+                $selected.text(placeholder).removeAttr('title').removeClass('active');
                 return;
             }
 
             const joined = selected.join(', ');
-            $selected.text(joined).attr('title', joined);
+            $selected.text(joined).attr('title', joined).addClass('active');
         };
 
         // 페이지(또는 scope) 내 custom_select 전체 동기화

@@ -353,10 +353,8 @@
                         <h1>오지현 <span>님</span></h1>
                         <p>현재 수강 중인 강의를 확인하고 학습을 진행하세요.</p>
                     </div>
-                    <a href="#none" class="btn primary">나의 주요 학사일정</a>
+                    <a href="#none" class="btn primary btn_schoolSchedule">나의 주요 학사일정</a>
                 </header>
-
-                
 
                 <section class="dashboard_summary">
 
@@ -384,7 +382,7 @@
 
                             <li>
                                 <span>쪽지함</span>
-                                <a href="#none">99<span class="material-symbols-rounded">Add</span></a>
+                                <a href="#none" class="btn_messageBox">99<span class="material-symbols-rounded">Add</span></a>
                             </li>
                         </ul>
                     </article>
@@ -438,8 +436,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select name="" id="">
-                                        <option value="">최근 수강완료 순</option>
-                                        <option value="">과정명 순</option>
+                                        <option value="최근 수강완료 순">최근 수강완료 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -528,17 +526,17 @@
                                                 </dl>
                                             </div>
 
-                                            <div class="evaluation_item non_submission">
+                                            <a href="#none" class="evaluation_item active btn_taskSubmission">
                                                 <dl>
                                                     <dt>과제</dt>
-                                                    <dd>미제출</dd>
+                                                    <dd>제출하기</dd>
                                                 </dl>
-                                            </div>
+                                            </a>
 
-                                            <a href="#none" class="evaluation_item">
+                                            <a href="#none" class="evaluation_item active btn_discussionSubmission">
                                                 <dl>
                                                     <dt>토론</dt>
-                                                    <dd>제출 확인</dd>
+                                                    <dd>제출하기</dd>
                                                 </dl>
                                             </a>
 
@@ -772,7 +770,7 @@
                                     <!-- //평가항목 현황 -->
 
                                     <!-- 시험 안내 -->
-                                    <div class="exam_guideTxt">
+                                    <div class="txt_guide">
                                         <span class="material-symbols-rounded icon_fill">info</span>
                                         시험 평가 항목이 비정상 종료된 경우, 이론 평가관리 > 시험응시 또는 퀴즈응시 메뉴에서 재응시를 진행해 주세요.
                                     </div>
@@ -792,8 +790,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select>
-                                        <option>최근 수강완료 순</option>
-                                        <option>과정명 순</option>
+                                        <option value="최근 수강완료 순">최근 수강완료 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -1010,8 +1008,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select name="" id="">
-                                        <option value="">수강 신청 순</option>
-                                        <option value="">과정명 순</option>
+                                        <option value="수강 신청 순">수강 신청 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -1068,8 +1066,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select name="" id="">
-                                        <option value="">최근 수강완료 순</option>
-                                        <option value="">과정명 순</option>
+                                        <option value="최근 수강완료 순">최근 수강완료 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -1126,8 +1124,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select name="" id="">
-                                        <option value="">최근 수강완료 순</option>
-                                        <option value="">과정명 순</option>
+                                        <option value="최근 수강완료 순">최근 수강완료 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -1191,8 +1189,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select name="" id="">
-                                        <option value="">최근 수강완료 순</option>
-                                        <option value="">과정명 순</option>
+                                        <option value="최근 수강완료 순">최근 수강완료 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -1249,8 +1247,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select name="" id="">
-                                        <option value="">최근 수강완료 순</option>
-                                        <option value="">과정명 순</option>
+                                        <option value="최근 수강완료 순">최근 수강완료 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -1307,8 +1305,8 @@
                                 <div class="subject_sort">
                                     <span>과정 정렬</span>
                                     <select name="" id="">
-                                        <option value="">수강 신청 순</option>
-                                        <option value="">과정명 순</option>
+                                        <option value="수강 신청 순">수강 신청 순</option>
+                                        <option value="과정명 순">과정명 순</option>
                                     </select>
                                 </div>
                             </div>
@@ -1357,6 +1355,496 @@
                     </div>
                 </section>
                 <!-- //수강 과목 -->
+
+                <!-- 레이어 / 나의 주요 학사일정 -->
+                <div class="layer_wrapper layer_schoolSchedule"> <!-- active 추가 시 화면 노출 -->
+                    <div class="layer_basic">
+
+                        <header>
+                            <div>
+                                <h1>나의 주요 학사일정</h1>
+                                <p>수강하고 있는 기수를 선택하면 상세 일정을 확인할 수 있습니다.</p>
+                            </div>
+                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        </header>
+
+                        <!-- layer 내용 -->
+                        <div class="layer_content">
+                            <div class="schedule_picker">
+                                <dl>
+                                    <dt>기수 선택</dt>
+                                    <dd>
+                                        <select name="" id="">
+                                            <option value="2026년 1학기 2기">2026년 1학기 2기</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>과정 선택</dt>
+                                    <dd>
+                                        <select name="" id="">
+                                            <option value="학점은행제 이론">학점은행제 이론</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="key_schedule">
+                                <div class="layer_contentTitle">
+                                    <h2>주요 일정</h2>
+                                    <dl>
+                                        <dt>수강기간</dt>
+                                        <dd>2026년 1월 7일(수) ~ 2026년 4월 21일(화)</dd>
+                                    </dl>
+                                </div>
+                                <ul class="schedule">
+                                    <li class="past">
+                                        <strong>토론 <span>종료</span></strong>
+                                        <p>2026년 1월 21일(수) ~<br />2026년 2월 3일(화)</p>
+                                    </li>
+                                    <li class="past">
+                                        <strong>퀴즈 <span>종료</span></strong>
+                                        <p>2026년 1월 21일(수) ~<br />2026년 2월 3일(화)</p>
+                                    </li>
+                                    <li class="current">
+                                        <strong>중간고사 <span>진행중</span></strong> 
+                                        <p>2026년 1월 21일(수) ~<br />2026년 2월 3일(화)</p>
+                                    </li>
+                                    <li class="future">
+                                        <strong>과제 <span>예정</span></strong>
+                                        <p>2026년 1월 21일(수) ~<br />2026년 2월 3일(화)</p>
+                                    </li>
+                                    <li class="future">
+                                        <strong>기말고사 <span>예정</span></strong>
+                                        <p>2026년 1월 21일(수) ~<br />2026년 2월 3일(화)</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 실습 -->
+                            <div class="key_schedule training">
+                                <div class="layer_contentTitle">
+                                    <h2>주요 일정</h2>
+                                    <dl>
+                                        <dt>수강기간</dt>
+                                        <dd>2026년 1월 7일(수) ~ 2026년 4월 21일(화)</dd>
+                                    </dl>
+                                </div>
+                                <ul class="schedule">
+                                    <li class="current">
+                                        <strong>오프라인 과제 <span>진행중</span></strong> 
+                                        <p>2026년 1월 21일(수) ~ 2026년 2월 3일(화)</p>
+                                    </li>
+                                    <li class="current">
+                                        <strong>온라인 과제 <span>진행중</span></strong> 
+                                        <p>2026년 1월 21일(수) ~ 2026년 2월 3일(화)</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="all_schedule">
+                                 <div class="layer_contentTitle">
+                                    <h2>전체 상세 일정</h2>
+                                </div>
+                                <dl>
+                                    <dt>수강기간</dt>
+                                    <dd>2026년 1월 7일(수) ~ 2026년 4월 21일(화)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>토론</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화) 23:59:59</dd>
+                                </dl>
+                                <dl>
+                                    <dt>퀴즈</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화) 23:59:59</dd>
+                                </dl>
+                                <dl>
+                                    <dt>중간고사</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화) 23:59:59</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>과제</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화) 23:59:59</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>기말고사</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화) 23:59:59</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>최종 성적 공개</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화)</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>이의신청</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화)</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>학위신청</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화)</dd>
+                                </dl>
+
+                            </div>
+
+                            <!-- 실습 내용 -->
+                            <div class="all_schedule">
+                                 <div class="layer_contentTitle">
+                                    <h2>전체 상세 일정</h2>
+                                </div>
+                                <dl>
+                                    <dt>수강기간</dt>
+                                    <dd>2026년 1월 7일(수) ~ 2026년 4월 21일(화)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>오프라인 과제</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화) 23:59:59</dd>
+                                </dl>
+                                <dl>
+                                    <dt>온라인과제</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화) 23:59:59</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>최종 성적 공개</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화)</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>이의신청</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화)</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>학위신청</dt>
+                                    <dd>2026년 1월 21일(수) 00:00:00 ~ 2026년 2월 3일(화)</dd>
+                                </dl>
+
+                            </div>
+                            <!-- //실습 내용 -->
+
+                        </div>
+                        <!-- //layer 내용 -->
+                    </div>
+                </div>
+                <!-- //레이어 / 나의 주요 학사일정 -->
+
+                <!-- 레이어 / 과제 제출 -->
+                <div class="layer_wrapper layer_taskSubmission"> <!-- active 추가 시 화면 노출 -->
+                    <div class="layer_basic">
+
+                        <header>
+                            <div>
+                                <h1>과제 제출</h1>
+                            </div>
+                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        </header>
+
+                        <!-- layer 내용 -->
+                        <div class="layer_content">
+                            <div class="submission_info">
+                                <dl>
+                                    <dt>과정 명</dt>
+                                    <dd>2026년도 1학기 2기 지역사회복지론</dd>
+                                    <dt>배점</dt>
+                                    <dd>20점</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제출 기간</dt>
+                                    <dd>2026.01.01 ~ 2026.04.30</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제출 상태</dt>
+                                    <dd>
+                                        <strong class="txt_error">제출 필요</strong>
+                                        <strong class="txt_info">제출 완료 (제출 일자: 2026.03.06 23:00:00)</strong>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="attachment"> <!-- 첨부 파일 없으면 영역 삭제 -->
+                                <div class="layer_contentTitle">
+                                    <h2>첨부파일</h2>
+                                </div>
+                                <div class="download">
+                                    <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                                    <a href="#none"><span class="material-symbols-rounded">download</span>다운로드</a>
+                                </div>
+                            </div>
+
+                            <!-- 에디터에서 작성한 내용 노출 -->
+                            <div class="editor_content">
+                                에디터에서 작성한 내용
+                            </div>
+                            <!-- //에디터에서 작성한 내용 노출 -->
+
+                            <div class="layer_contentTitle">
+                                <h2>과제 제출</h2>
+                            </div>
+
+                            <!-- 파일 업로드 드래그 앤 드롭 -->
+                            <div class="file_dragUpload">
+                                <div class="drag_area">
+                                    <input type="file" class="transparent" id="fileUpload" multiple>
+                                    파일을 여기에 끌어다 놓거나, '파일 선택' 버튼을 클릭해 첨부해주세요.
+                                    <label for="fileUpload" class="btn primary">파일 선택</label>
+                                </div>
+                                <div class="fileSearch_after">
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                    <div>
+                                        <a href="#none">file_01.excel</a>
+                                        <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 파일 업로드 드래그 앤 드롭 -->
+
+                            <div class="attachment"> <!-- 첨부 파일 없으면 영역 삭제 -->
+                                <div class="layer_contentTitle">
+                                    <h2>과제 제출</h2>
+                                </div>
+                                <div class="download">
+                                    <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                                    <div>
+                                        <a href="#none"><span class="material-symbols-rounded">download</span>다운로드</a>
+                                        <a href="#none"><span class="material-symbols-rounded">upload</span>파일 변경</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="txt_guide">
+                                <span class="material-symbols-rounded icon_fill">info</span>
+                                파일 드래그 혹은 [파일선택]을 클릭하여 제출할 과제 파일을 선택한 뒤, [과제 제출]을 눌러 제출합니다.
+                                <ul>
+                                    <li>과제 첨부 가능 파일 형식: .hwp / .hwt / .hwpx / .doc / .docx (최대 50MB)</li>
+                                    <li>과제물 제출 후 파일 손상 및 빈 파일 여부를 반드시 확인해주세요.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- //layer 내용 -->
+                        <div class="layer_btnSection">
+                            <button class="btn primary">과제 제출</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- //레이어 / 과제 제출 -->
+
+                <!-- 레이어 / 토론 제출 -->
+                <div class="layer_wrapper layer_discussionSubmission"> <!-- active 추가 시 화면 노출 -->
+                    <div class="layer_basic">
+
+                        <header>
+                            <div>
+                                <h1>토론 제출</h1>
+                            </div>
+                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        </header>
+
+                        <!-- layer 내용 -->
+                        <div class="layer_content">
+                            <div class="submission_info">
+                                <dl>
+                                    <dt>과정 명</dt>
+                                    <dd>2026년도 1학기 2기 지역사회복지론</dd>
+                                    <dt>배점</dt>
+                                    <dd>20점</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제출 기간</dt>
+                                    <dd>2026.01.01 ~ 2026.04.30</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제출 상태</dt>
+                                    <dd>
+                                        <strong class="txt_error">제출 필요</strong>
+                                        <strong class="txt_info">제출 완료 (제출 일자: 2026.03.06 23:00:00)</strong>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="attachment"> <!-- 첨부 파일 없으면 영역 삭제 -->
+                                <div class="layer_contentTitle">
+                                    <h2>첨부파일</h2>
+                                </div>
+                                <div class="download">
+                                    <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                                    <a href="#none"><span class="material-symbols-rounded">download</span>다운로드</a>
+                                </div>
+                            </div>
+
+                            <!-- 에디터에서 작성한 내용 노출 -->
+                            <div class="editor_content">
+                                에디터에서 작성한 내용
+                            </div>
+                            <!-- //에디터에서 작성한 내용 노출 -->
+
+                            <div class="layer_contentTitle">
+                                <h2>토론 제출</h2>
+                            </div>
+                            <div class="discussion_form">
+                                <input type="text" placeholder="(필수) 토론 제목을 작성해주세요.">
+                                <textarea placeholder="(필수) 위의 토론 주제에 맞는 내용을 작성해주세요."></textarea>
+                            </div>
+
+                        </div>
+                        <!-- //layer 내용 -->
+                        <div class="layer_btnSection">
+                            <button class="btn primary">토론 제출</button>
+                        </div>
+
+                        
+                    </div>
+                    
+                </div>
+                <!-- //레이어 / 토론 제출 -->
+
+                <!-- 레이어 / 쪽지함 -->
+                <div class="layer_wrapper layer_messageBox"> <!-- active 추가 시 화면 노출 -->
+                    <div class="layer_basic">
+
+                        <header>
+                            <div>
+                                <h1>쪽지함</h1>
+                            </div>
+                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        </header>
+
+                        <!-- layer 내용 -->
+                        <div class="layer_content noScroll">
+
+                            <!-- 쪽지함 정보 -->
+                            <div class="messageBox_info">
+                                <div class="list_count">
+                                    <span>전체 <strong>24</strong>건</span>
+                                    <span>안 읽은 쪽지 <strong>4</strong>건</span>
+                                </div>
+
+                                <div class="list_actions">
+                                    <button type="button" class="btn">전체 읽음 처리</button>
+                                    <button type="button" class="btn" aria-label="새로고침">
+                                        <i class="material-symbols-rounded">refresh</i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- //쪽지함 정보 -->
+
+                            <div class="message_content">
+
+                                <!-- 쪽지 리스트 -->
+                                <div class="message_list">
+                                    <select name="" id="">
+                                        <option value="">전체 유형</option>
+                                        <option value="평가 안내">평가 안내</option>
+                                        <option value="학사 공지">학사 공지</option>
+                                        <option value="실습 안내">실습 안내</option>
+                                        <option value="학습 수강">학습 수강</option>
+                                    </select>
+                                    <ul>
+
+                                        <li>
+                                            <a href="#none" class="active"> <!-- active 클래스 선택 -->
+                                                <div class="message_item_head">
+                                                    <span class="label lightBlue">평가안내</span>
+                                                    <span>2026-04-10</span>
+                                                </div>
+                                                <!-- 읽은 메일 read 클래스 추가 -->
+                                                <div class="message_item_body read">
+                                                    <div class="message_item_title">
+                                                        기말고사 응시 기간 안내
+                                                    </div>
+                                                    <div>2026년 1학기 2기 기말고사 응시 기간이 시작되었습니다. 기간 내 반드시 응시 부탁드립니다. 길면 말줄임 길면 말줄임 길면</div>
+                                                </div>
+                                                <!-- //읽은 메일 -->
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#none">
+                                                <div class="message_item_head">
+                                                    <span class="label lightBlue">평가안내</span>
+                                                    <span>2026-04-10</span>
+                                                </div>
+                                                <!-- 안본 메일 -->
+                                                <div class="message_item_body">
+                                                    <div class="message_item_title">
+                                                        기말고사 응시 기간 안내
+                                                    </div>
+                                                    <div>2026년 1학기 2기 기말고사 응시 기간이 시작되었습니다. 기간 내 반드시 응시 부탁드립니다.</div>
+                                                </div>
+                                                <!-- //안본 메일 -->
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <div class="message_item_head">
+                                                    <span class="label lightBlue">평가안내</span>
+                                                    <span>2026-04-10</span>
+                                                </div>
+                                                <!-- 안본 메일 -->
+                                                <div class="message_item_body">
+                                                    <div class="message_item_title">
+                                                        기말고사 응시 기간 안내
+                                                    </div>
+                                                    <div>2026년 1학기 2기 기말고사 응시 기간이 시작되었습니다. 기간 내 반드시 응시 부탁드립니다.</div>
+                                                </div>
+                                                <!-- //안본 메일 -->
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <div class="message_item_head">
+                                                    <span class="label lightBlue">평가안내</span>
+                                                    <span>2026-04-10</span>
+                                                </div>
+                                                <!-- 안본 메일 -->
+                                                <div class="message_item_body">
+                                                    <div class="message_item_title">
+                                                        기말고사 응시 기간 안내
+                                                    </div>
+                                                    <div>2026년 1학기 2기 기말고사 응시 기간이 시작되었습니다. 기간 내 반드시 응시 부탁드립니다.</div>
+                                                </div>
+                                                <!-- //안본 메일 -->
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- //쪽지 리스트 -->
+
+                                <!-- 쪽지 내용 -->
+                                <div class="message_txt">
+                                    <div class="message_head">
+                                        <span class="label lightBlue">평가안내</span>
+                                        <p>기말고사 응시 기간 안내</p>
+                                        <span>2026-04-10 (수) 10:00:01</span>
+                                    </div>
+                                    <div class="message_body">
+                                        안녕하세요.<br />김영평생교육원입니다.<br /><br />기말고사 응시 기간이 시작되었습니다.<br />아래 내용을 확인하시고 기간 내 반드시 응시해주시기 바랍니다.<br /><br />- 기말고사 응시 기간 : 2026년 4월 10일(수) ~ 2026년 4월 16일(화)<br />- 기말고사 응시 방법 : 나의 강의실 > 수강 과목 > 과정명 클릭 > 시험응시<br /><br />응시 기간 내 미응시 시, 성적에 반영되지 않으니 반드시 기간 내 응시 부탁드립니다.<br /><br />감사합니다.
+                                    </div>
+                                    <ul class="message_btns">
+                                        <li><button type="button" class="btn"><span class="material-symbols-rounded">keyboard_arrow_left</span>이전</button></li>
+                                        <li><button type="button" class="btn">다음<span class="material-symbols-rounded">keyboard_arrow_right</span></button></li>
+                                    </ul>    
+                                </div>
+                                <!-- //쪽지 내용 -->
+                            </div>
+                            
+                        </div>
+                        <!-- //layer 내용 -->
+                       
+                    </div>
+                    
+                </div>
+                <!-- //레이어 / 쪽지함 -->
 
             </section>
             <!-- //나의 강의실 -->

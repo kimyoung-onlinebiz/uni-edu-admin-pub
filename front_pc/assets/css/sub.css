@@ -183,12 +183,12 @@
 
 
 /* 나의 강의실 대시보드 */
-.classroom header { display:flex; align-items:center; justify-content:space-between; }
+.classroom > header { display:flex; align-items:center; justify-content:space-between; }
 .classroom .classroom_title { display:flex; align-items:center; gap:16px; }
 .classroom_title h1 { color:var(--Primary-500); font-size:var(--Font-2xlarge);  font-weight:700; }
 .classroom_title h1 span { color:var(--Neutral-900); }
 .classroom_title p { margin: 0; color:var(--Neutral-600); }
-.classroom header a { margin-top:0; }
+.classroom > header a { margin-top:0; }
 .dashboard_summary { display:flex; gap:24px; margin-top:24px; }
 .dashboard_summary .summary_card { height:214px; padding:24px; border:1px solid var(--Neutral-300); border-radius:var(--Border-radius);}
 
@@ -287,7 +287,10 @@ border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  backgr
 .evaluation_list a.evaluation_item.active { border:1px solid var(--Primary-500); background:var(--Primary-500); }
 .evaluation_list a.evaluation_item.active:hover { border:1px solid var(--Primary-700); background:var(--Primary-700); }
 .evaluation_list a.evaluation_item.active dt,.evaluation_list a.evaluation_item.active dd { color:var(--Neutral-0); }
-.exam_guideTxt { color:var(--Info); font-size:var(--Font-xsmall); padding:10px 20px; background:var(--Info-soft); border-radius:var(--Border-radius); margin-top:24px; }
+.txt_guide { color:var(--Info); font-size:var(--Font-xsmall); padding:10px 20px; background:var(--Info-soft); border-radius:var(--Border-radius); margin-top:24px; }
+.txt_guide ul { display:flex; flex-direction:column; gap:3px; margin-left:24px; }
+.txt_guide ul li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
+.txt_guide ul li::before { content:"•"; flex:0 0 12px; }
 
 .tooltip { display:none; position:absolute; top:84px; padding:4px 16px;
 border-radius:var(--Border-radius); background:var(--Neutral-900); color:#fff; font-size:var(--Font-xsmall); font-weight:500; }
@@ -297,5 +300,76 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .quick_floating.quick_classroom { top:65%; }
 .quick_floating.quick_classroom a { background:var(--Neutral-0); border:1px solid var(--Neutral-300); width:90px; height:auto; display:flex; flex-direction:column; gap:10px; font-size:var(--Font-small); padding:16px 10px; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 
+/* 레이어 나의 주요 학사일정 */
+.layer_schoolSchedule .schedule_picker { display:flex; align-items:center; gap:32px; }
+.layer_schoolSchedule .layer_basic { padding-bottom:50px; }
+.layer_schoolSchedule .schedule_picker dl { display:flex; align-items:center; gap:16px; }
+.layer_schoolSchedule .schedule_picker dt { font-size:var(--Font-medium); font-weight:700; }
+.layer_schoolSchedule .schedule { display:flex; gap:20px; }
+.layer_schoolSchedule .schedule li { border:1px solid var(--Primary-500); border-radius:var(--Border-2radius); padding:13px 8px 13px 12px; width:145px; display:flex; flex-direction:column; justify-content:center; gap:6px; background:var(--Neutral-0); }
+.training .schedule li { width:50%;}
+.layer_schoolSchedule .schedule li.past { border:1px solid var(--Neutral-300); background:var(--Neutral-100); }
+.layer_schoolSchedule .schedule li p { font-size:var(--Font-xsmall);  }
+.layer_schoolSchedule .schedule strong { display:flex; justify-content:space-between; align-items:center; margin-bottom:3px; }
+.layer_schoolSchedule .schedule strong span { width:58px;  text-align:center; margin-top:-4px;; display:inline-block; font-size:var(--Font-2xsmall); border:1px solid var(--Primary-500); border-radius:50px; padding:3px 0; background:var(--Primary-500); font-weight:500; color:var(--Neutral-0); line-height:1; }
+.layer_schoolSchedule .schedule li.past p { color:var(--Placeholder); }
+.layer_schoolSchedule .schedule .past strong { color:var(--Placeholder); }
+.layer_schoolSchedule .schedule .past strong span { background:var(--Neutral-0); color:var(--Placeholder); border:1px solid var(--Neutral-300); }
+.layer_schoolSchedule .schedule li.future { border:1px solid var(--Neutral-300); }
+.layer_schoolSchedule .schedule li.future p { color:var(--Neutral-600); }
+.layer_schoolSchedule .schedule .future strong span { background:var(--Neutral-0); color:var(--Primary-500); border:1px solid var(--Primary-500); }
+.all_schedule dl { display:flex; width:805px; align-items:center; flex-wrap:wrap; gap:16px; padding:16px 20px; border-bottom:1px solid var(--Neutral-300);}
+.layer_schoolSchedule .layer_contentTitle + dl { padding-top:0; margin-top:-12px;}
+.all_schedule dt { width:100px; font-weight:600; }
 
+/* 레이어 과제 제출 */
+.submission_info { display:flex;  gap:16px; padding:20px; background:var(--Neutral-100); border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); flex-direction:column; }
+.submission_info dl { display:flex; align-items:center; gap:24px; }
+.submission_info dt { font-weight:700; width:60px;  }
+.submission_info dd + dt { margin-left:60px; }
+.attachment .download { display:flex; align-items:center; gap:16px; justify-content:space-between; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:8px 20px; }
+.attachment .download div { display:flex; gap:16px; }
+.attachment .download p span { color:var(--Neutral-600); padding-left:10px; }
+.attachment a,.attachment p { font-size:var(--Font-small); }
+.editor_content { margin-top:32px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:40px; }
+.discussion_form { display:flex; flex-direction:column; gap:16px; }
 
+.discussion_form input,
+.discussion_form textarea { width: 100%; border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); }
+.discussion_form input {  height:50px; padding:0 20px;  }
+.discussion_form textarea { height:200px;  padding:20px; resize:none; }
+
+.layer_messageBox .layer_basic { padding-bottom:30px; width:980px; height:800px; }
+.layer_messageBox .layer_content { max-height:650px; }
+.layer_messageBox .message_content { display:flex; justify-content:space-between; gap:32px; }
+.layer_messageBox .list_actions button { font-size:var(--Font-small); color:var(--Neutral-800); }
+.layer_messageBox .list_actions button:last-child { width:40px; }
+.layer_messageBox .list_actions button:last-child i { display:inline-block; font-size:var(--Font-xlarge); margin-left:-8px; }
+.layer_messageBox .messageBox_info { display:flex; justify-content:space-between; border-bottom:1px solid var(--Neutral-300); padding-bottom:20px; }
+.messageBox_info .list_count { display:flex; align-items:center; }
+.messageBox_info .list_count span { display:flex; align-items:center; font-size:var(--Font-medium); font-weight:500; }
+.messageBox_info .list_count span:last-child strong { color:var(--Primary-500); }
+.messageBox_info .list_count span:first-child:after {content:"|"; color:var(--Placeholder); margin:0 16px; }
+.message_list {  border-right:1px solid var(--Neutral-300); padding:24px 0 24px 0; overflow:auto; overflow-x:hidden; max-height:595px;min-height:150px;text-align:left; width:460px; }
+.message_list li { display:block; width:380px; margin-top:24px; }
+.message_list li a { display:flex; flex-direction:column; width:380px; height:160px; align-items:center; justify-content:space-between; border:1px solid var(--Neutral-500); padding:25px; border-radius:var(--Border-2radius); }
+.message_list li a.active,.message_list li a:hover { border:1px solid var(--Primary-500); }
+.message_list .message_item_head { display:flex; width:100%; justify-content:space-between; }
+.message_list .message_item_head span { font-size:var(--Font-2xsmall); }
+.message_list .message_item_head span:last-child { color:var(--Placeholder); }
+.message_list .message_item_body { display:flex;  flex-direction:column; gap:2px; }
+.message_item_body .message_item_title { font-weight:700; }
+.message_item_body > div:not(.message_item_title) { font-size:var(--Font-small); display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:2; overflow:hidden; }
+.message_item_body.read .message_item_title { font-weight:400; }
+.message_item_body .message_item_title:before { content:"Mail"; padding-right:6px; font-family:'Material Symbols Rounded'; font-size:24px; font-weight:400; display:inline-block;  color:var(--Primary-500); font-variation-settings:'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24; vertical-align:middle; }
+.message_item_body.read .message_item_title:before { content:"drafts"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; }
+.layer_messageBox .message_txt { padding-top:24px; }
+.layer_messageBox .message_head { border-bottom:1px solid var(--Neutral-300); padding-bottom:20px; display:flex; flex-direction:column; }
+.layer_messageBox .message_head p { font-size:var(--Font-large); font-weight:700; margin:12px 0 8px; }
+.layer_messageBox .message_head span:last-child { color:var(--Placeholder); font-size:var(--Font-xsmall); }
+.layer_messageBox .message_body { padding:40px 20px 60px; border-bottom:1px solid var(--Neutral-300);  }
+.layer_messageBox .message_btns { display:flex; justify-content:space-between; align-items:center; padding:40px 0 0; }
+.layer_messageBox .message_btns span { font-weight:400; padding:0;}
+.layer_messageBox .message_btns button { border:1px solid var(--Primary-500); }
+.layer_messageBox .message_btns li:first-child span { margin-left:-8px; }
+.layer_messageBox .message_btns li:last-child span { margin-right:-8px; padding-left:4px;  }

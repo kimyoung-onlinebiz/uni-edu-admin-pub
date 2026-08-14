@@ -99,7 +99,7 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .main_wrap .main_controls { width:80px; position:absolute; right:25px; bottom:36px; display:flex; align-items:center;justify-content:center; gap:2px; border-radius:100px; background:rgba(255, 255, 255, 0.60); z-index:1; }
 
 /* 배너 모아보기 */
-.banner_list .layer_content { width:794px; }
+.banner_list .layer_content { width:810px; }
 .banner_list .layer_content ul { display:flex; gap:20px; flex-wrap:wrap; }
 .banner_list .layer_content ul li { display:block;background:url(../images/banner/main/bannerList.png) no-repeat center center; width:382px; height:160px; }
 
