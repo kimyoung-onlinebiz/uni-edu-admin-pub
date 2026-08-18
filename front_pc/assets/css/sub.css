@@ -371,4 +371,8 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .layer_messageBox .message_btns span { font-weight:400; padding:0;}
 .layer_messageBox .message_btns button { border:1px solid var(--Primary-500); }
 .layer_messageBox .message_btns li:first-child span { margin-left:-8px; }
-.layer_messageBox .message_btns li:last-child span { margin-right:-8px; padding-left:4px;  }
+.layer_messageBox .message_btns li:last-child span { margin-right:-8px; padding-left:4px; }
+
+/* 강의계획서 */
+.layer_coursePlan .layer_txt { padding:0 20px; }
+.layer_coursePlan .layer_basic { width:980px; height:800px; }

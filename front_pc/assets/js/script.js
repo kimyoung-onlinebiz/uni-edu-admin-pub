@@ -147,7 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
             bindings.forEach(({ layer, triggers = [], shouldLockScroll = true }) => {
                 const layerElement = typeof layer === 'string' ? q(layer) : layer;
                 const triggerElements = triggers
-                    .map((trigger) => (typeof trigger === 'string' ? q(trigger) : trigger))
+                    // 같은 셀렉터의 트리거가 여러 개여도 모두 이벤트 바인딩 대상에 포함한다.
+                    .flatMap((trigger) => {
+                        if (typeof trigger === 'string') {
+                            return qa(trigger);
+                        }
+
+                        return trigger ? [trigger] : [];
+                    })
                     .filter(Boolean);
 
                 bindLayer({
@@ -279,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_taskSubmission', triggers: ['.btn_taskSubmission'] }, //나의 강의실 과제 제출 레이어
             { layer: '.layer_wrapper.layer_discussionSubmission', triggers: ['.btn_discussionSubmission'] }, //나의 강의실 토론 제출 레이어
             { layer: '.layer_wrapper.layer_messageBox', triggers: ['.btn_messageBox'] }, //나의 강의실 쪽지함 레이어
+            { layer: '.layer_wrapper.layer_coursePlan', triggers: ['.btn_coursePlan'] }, //나의 강의실 강의계획서 레이어
         ]);
     }
 
