@@ -46,10 +46,10 @@
                             <p>실명이 아닌 경우 수강신청, 상담 등 제한이 있을 수 있습니다.</p>
                         </header>
                        
-                        <input type="text" id="user_name" placeholder="이름을 입력해주세요."> <!-- 인풋잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                        <input type="text" id="user_name" placeholder="이름을 입력해 주세요."> <!-- 인풋잘못작성 되었을때 error 클래스 추가 빨간 border -->
                     </div>
                     <p class="success_message" hidden>사용 가능한 이름입니다.</p>
-                    <p class="error_message" hidden>이름은 2자 이상 입력해주세요.</p>
+                    <p class="error_message" hidden>이름은 2자 이상 입력해 주세요.</p>
 
                     <div class="input_area">
                         <header>
@@ -59,7 +59,7 @@
                             <p>6~10자의 영어 소문자, 숫자 조합</p>
                         </header>
                         <div class="multiple">
-                            <input type="text" id="user_id" placeholder="아이디를 입력해주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                            <input type="text" id="user_id" placeholder="아이디를 입력해 주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
                             <button type="button" class="btn primary">중복확인</button>
                         </div>
                     </div>
@@ -72,15 +72,15 @@
                             <p>8~20자 이내의 영문, 숫자, 특수문자 조합 (단, ‘ ; - &lt; ( ) / \ 사용 불가)</p>
                         </header>
                         
-                        <input type="password" placeholder="비밀번호를 입력해주세요." class="error"> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                        <input type="password" placeholder="비밀번호를 입력해 주세요." class="error"> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
                     </div>
-                    <p class="error_message" hidden>비밀번호가 일치하지 않습니다. 다시 입력해주세요.</p>
+                    <p class="error_message" hidden>비밀번호가 일치하지 않습니다. 다시 입력해 주세요.</p>
 
                     <div class="input_area">
                         <header>
                             <h4><span class="essential">*</span>비밀번호 확인</h4>
                         </header>
-                        <input type="password" placeholder="새로운 비밀번호를 한번 더 입력해주세요." class="success"> <!-- 성공이었을때 success 클래스 추가 초록 border -->
+                        <input type="password" placeholder="비밀번호를 한번 더 입력해 주세요." class="success"> <!-- 성공이었을때 success 클래스 추가 초록 border -->
                     </div>
                     <p class="success_message" hidden>사용 가능한 비밀번호 입니다.</p>
 
@@ -88,7 +88,7 @@
                         <header>
                             <h4><span class="essential">*</span>휴대전화</h4>
                         </header>
-                        <input type="tel" placeholder="휴대전화 번호를 입력해주세요."> <!-- 성공이었을때 success 클래스 추가 초록 border -->
+                        <input type="tel" placeholder="휴대전화 번호를 입력해 주세요."> <!-- 성공이었을때 success 클래스 추가 초록 border -->
                     </div>
                     <p class="error_message" hidden>휴대전화 번호를 다시 확인해 주세요.(숫자만)</p>
 
@@ -97,7 +97,7 @@
                             <h4><span class="essential">*</span>이메일</h4>
                         </header>
                         <div class="multiple email">
-                            <input type="text" placeholder="이메일 아이디를 입력해주세요.">
+                            <input type="text" placeholder="이메일 주소를 입력해 주세요.">
                             <span>@</span>
                             <select name="" id="">
                                 <option value="">도메인 선택</option>
@@ -105,27 +105,31 @@
                             </select>
                         </div>
                         <div class="multiple email">
-                            <input type="text" placeholder="이메일 아이디를 입력해주세요.">
+                            <input type="text" placeholder="이메일 주소를 입력해 주세요.">
                             <span>@</span>
-                            <input type="text" placeholder="직접 입력해주세요.">
+                            <input type="text" placeholder="직접 입력해 주세요.">
+                            <button class="btn_delete" type="button" aria-label="이메일 입력값 삭제">
+                                <span class="material-symbols-rounded">close</span>
+                            </button>
                         </div>
                     </div>
 
                     <div class="input_area">
                         <header>
-                            <h4><span class="essential">*</span>SMS/이메일 수신동의</h4>
+                            <h4><span class="essential">*</span>SMS / 이메일 수신 동의</h4>
                             <p>학습 안내, 출석 관리 등 주요 안내사항은 SMS 및 이메일을 통해 안내됩니다.</p>
                         </header>
-                        <div class="comment">
-                            * 수신 미동의 시 개강 안내, 학사 일정, 할인 정보 등 중요 공지사항이 누락될 수 있습니다.
+                        <div class="txt_guide">
+                            
+                            수신 미동의 시 개강 안내, 학사 일정, 할인 정보 등 중요 공지사항이 누락될 수 있습니다.
                         </div>
                         
                         <dl class="flex_left">
-                            <dt><span class="essential">*</span>SMS 수신동의</dt>
+                            <dt><span class="essential">*</span>SMS 수신 동의</dt>
                             <dd>
                                 <div class="check_group">
                                     <label class="form_check">
-                                        <input type="radio" name="sms_agree" checked>동의
+                                        <input type="radio" name="sms_agree">동의
                                     </label>
                                     <label class="form_check">
                                         <input type="radio" name="sms_agree">비동의
@@ -134,7 +138,7 @@
                             </dd>
                         </dl>
                         <dl class="flex_left">
-                            <dt><span class="essential">*</span>이메일 수신동의</dt>
+                            <dt><span class="essential">*</span>이메일 수신 동의</dt>
                             <dd>
                                 <div class="check_group">
                                     <label class="form_check">

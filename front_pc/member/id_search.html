@@ -40,11 +40,13 @@
                     <header>
                         <h4><label for="useremail">이메일 주소</label></h4>
                     </header>
-                    <input id="useremail" name="useremail" type="email" placeholder="이메일 주소를 입력해주세요." autocomplete="username">
+                    <input id="useremail" name="useremail" type="email" placeholder="이메일 주소를 입력해 주세요." autocomplete="username">
                     <button class="btn_delete" type="button" aria-label="이메일 입력값 삭제">
                         <span class="material-symbols-rounded">close</span>
                     </button>
                 </div>
+                <p class="error_message" hidden>등록된 회원정보가 없습니다. 아이디가 없는 경우, 회원가입을 진행해주세요.</p>
+                
 
                 <ul class="btn_login">
                     <li><button type="submit" disabled>인증번호 발송</button></li>

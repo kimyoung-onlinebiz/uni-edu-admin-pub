@@ -17,49 +17,47 @@
             <h1>
                 <a href="#none"><img src="../assets/images/common/Logo.svg" alt="김영평생교육원"></a>
             </h1>
-            <h2>비밀번호 잠금 해제</h2>
+            <h2>로그인</h2>
         </header>
         <div class="login_box">
             <ul class="tab">
-                <li><a href="#none">SMS 인증</a></li>
-                <li><a href="#none" class="active" aria-current="page">이메일 인증</a></li>
+                <li><a href="login.html">일반 로그인</a></li>
+                <li><a href="login_sms.html">SMS 인증</a></li>
+                <li><a href="login_certificate.html" class="active" aria-current="page">공동 인증서</a></li>
             </ul>
             <form class="login_input" action="#none" method="post" novalidate>
-
                 <div class="input_area">
                     <header>
-                        <h4><label for="useremail">이메일 주소</label></h4>
+                        <h4><label for="loginId">아이디</label></h4>
                     </header>
-                    <input id="useremail" name="useremail" type="email" placeholder="이메일 주소를 입력해주세요." autocomplete="username" disabled>
-                </div>
-
-                <ul class="btn_login">
-                    <li><button type="button" disabled>인증번호 재발송</button></li>
-                    <li><button type="button" class="btn primary">인증번호 재발송</button></li>
-                </ul>
-
-                <p class="error_message">인증번호는 60초 후 재발송할 수 있습니다.</p>
-
-                <!-- 인증번호 타이머 -->
-                <div class="input_area borderT">
-                    <header>
-                        <h4><label for="authCode">인증번호</label></h4>
-                        <p class="timer"><span class="material-symbols-rounded">timer</span>2:49</p>
-                    </header>
-                    <input id="authCode" name="authCode" type="text" placeholder="인증번호를 입력해주세요." class="error">
+                    <input id="loginId" name="loginId" type="text" placeholder="아이디를 입력해 주세요." autocomplete="username" class="error">
                     <button class="btn_delete" type="button" aria-label="아이디 입력값 삭제">
                         <span class="material-symbols-rounded">close</span>
                     </button>
                 </div>
-                <!-- //인증번호 타이머 --> 
 
+                <div class="input_area">
+                    <header>
+                        <h4><label for="loginPassword">비밀번호</label></h4>
+                    </header>
+                    <input id="loginPassword" name="loginPassword" type="password" placeholder="비밀번호를 입력해 주세요.">
+                    <button class="btn_delete" type="button" aria-label="비밀번호 입력값 삭제">
+                        <span class="material-symbols-rounded">close</span>
+                    </button>
+                </div>
+
+                <label class="login_check" for="saveId">
+                    <input id="saveId" name="saveId" type="checkbox"> 아이디 저장
+                </label>
+                <p class="error_message">등록된 아이디가 없습니다. 아이디가 없는 경우, 회원가입을 진행해주세요.</p>
                 <ul class="btn_login">
-                    <li><button type="submit" disabled>인증하기</button></li>
-                    <li><button type="submit">인증하기</button></li>
+                    <li><button type="submit">등록하기</button></li>
+                    <li><button type="submit" disabled>등록하기</button></li>
                 </ul>
 
                 <ul class="btn_find">
-                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="#none">인증서 로그인</a></li>
+                    <li><a href="id_search.html">아이디/비밀번호 찾기</a></li>
                     <li><a href="step_01.html">회원가입</a></li>
                 </ul>
             </form>

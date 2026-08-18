@@ -38,16 +38,16 @@
                 <div class="login_input">
 
                     <div class="input_area">
-                        <h3>이름</h3>
-                        <input type="text" id="user_name" placeholder="이름을 입력해주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                        <h4>이름</h4>
+                        <input type="text" id="user_name" placeholder="이름을 입력해 주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
                         <button class="btn_delete" type="button" aria-label="입력값 삭제">
                             <span class="material-symbols-rounded">close</span>
                         </button>
                     </div>
 
                     <div class="input_area">
-                        <h3>이메일</h3>
-                        <input type="email" id="user_email" placeholder="이메일을 입력해주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                        <h4>이메일</h4>
+                        <input type="email" id="user_email" placeholder="이메일을 입력해 주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
                         <button class="btn_delete" type="button" aria-label="입력값 삭제">
                             <span class="material-symbols-rounded">close</span>
                         </button>
@@ -57,14 +57,18 @@
                         <li><button type="button">재전송</button></li>
                     </ul>
 
-                    <div class="border input_area">
-                        <h3>인증번호</h3>
-                        <p class="timer"><span class="material-symbols-rounded">timer</span>2:49</p>
-                        <input type="text" placeholder="인증번호를 입력해주세요." class="error"> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
-                        <button class="btn_delete" type="button" aria-label="입력값 삭제">
+                    <!-- 인증번호 타이머 -->
+                    <div class="input_area borderT">
+                        <header>
+                            <h4><label for="authCode">인증번호</label></h4>
+                            <p class="timer"><span class="material-symbols-rounded">timer</span>2:49</p>
+                        </header>
+                        <input id="authCode" name="authCode" type="text" placeholder="인증번호를 입력해 주세요." class="error">
+                        <button class="btn_delete" type="button" aria-label="아이디 입력값 삭제">
                             <span class="material-symbols-rounded">close</span>
-                        </button>
+                        </butto>
                     </div>
+                    <!-- //인증번호 타이머 -->
                     <p class="error_message">인증번호 입력 횟수를 초과했습니다. 다시 인증번호를 요청해주세요.</p>
                     <ul class="btn_login">
                         <li><button type="button" class="inactive">인증하기</button></li>
