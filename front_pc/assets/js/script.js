@@ -500,6 +500,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // 이벤트 위임으로 동적 요소까지 공통 처리
+        // custom_select는 div이므로 클릭 시 해당 박스 자체에 focus()를 주어
+        // .custom_select:focus 스타일이 적용되도록 처리한다.
+        // label[for] 클릭 시에도 같은 custom_select에 포커스가 가도록 보완 처리한다.
         $(document)
             .off(`click${CUSTOM_SELECT_EVENT_NS}`)
             .on(`click${CUSTOM_SELECT_EVENT_NS}`, (event) => {
@@ -509,19 +512,47 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
+                const $labelTarget = $target.closest('label[for]');
+                if ($labelTarget.length) {
+                    const targetId = $labelTarget.attr('for');
+                    const $labelCustomSelect = $('#' + targetId);
+                    if ($labelCustomSelect.length && $labelCustomSelect.hasClass('custom_select')) {
+                        $labelCustomSelect.focus();
+                    }
+                }
+
                 const $customSelect = $target.closest('.custom_select');
                 if (!$customSelect.length) {
                     closeAllCustomSelectOptions();
                     return;
                 }
 
+                $customSelect.focus();
                 const $options = $customSelect.find('.options');
                 $('.custom_select .options').not($options).hide();
-                $options.toggle();
+                const isOpen = !$options.is(':visible');
+                $options.toggle(isOpen);
+                $customSelect.attr('aria-expanded', String(isOpen));
             })
             .off(`change${CUSTOM_SELECT_EVENT_NS}`, '.custom_select .options input[type=checkbox]')
             .on(`change${CUSTOM_SELECT_EVENT_NS}`, '.custom_select .options input[type=checkbox]', function () {
-                syncCustomSelectLabel($(this).closest('.custom_select'));
+                const $customSelect = $(this).closest('.custom_select');
+                syncCustomSelectLabel($customSelect);
+                $customSelect.attr('aria-expanded', String($customSelect.find('.options').is(':visible')));
+            })
+            .off(`keydown${CUSTOM_SELECT_EVENT_NS}`)
+            .on(`keydown${CUSTOM_SELECT_EVENT_NS}`, '.custom_select', function (event) {
+                if (event.key !== 'Enter' && event.key !== ' ') {
+                    return;
+                }
+
+                event.preventDefault();
+                const $customSelect = $(this);
+                const $options = $customSelect.find('.options');
+                $('.custom_select .options').not($options).hide();
+                const isOpen = !$options.is(':visible');
+                $options.toggle(isOpen);
+                $customSelect.attr('aria-expanded', String(isOpen));
             });
 
         // 최초 1회 동기화

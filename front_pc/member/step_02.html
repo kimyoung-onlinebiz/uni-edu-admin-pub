@@ -53,9 +53,11 @@
 
                     <div class="input_area">
                         <header>
-                            <h4>
-                                <span class="essential">*</span>아이디
-                            </h4>
+                            <label for="user_id" class="field_label">
+                                <h4>
+                                    <span class="essential">*</span>아이디
+                                </h4>
+                            </label>
                             <p>6~10자의 영어 소문자, 숫자 조합</p>
                         </header>
                         <div class="multiple">
@@ -68,38 +70,46 @@
 
                     <div class="input_area">
                         <header>
-                            <h4><span class="essential">*</span>비밀번호</h4>
+                            <label for="user_password" class="field_label">
+                                <h4><span class="essential">*</span>비밀번호</h4>
+                            </label>
                             <p>8~20자 이내의 영문, 숫자, 특수문자 조합 (단, ‘ ; - &lt; ( ) / \ 사용 불가)</p>
                         </header>
                         
-                        <input type="password" placeholder="비밀번호를 입력해 주세요." class="error"> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
+                        <input type="password" id="user_password" placeholder="비밀번호를 입력해 주세요." class="error"> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
                     </div>
                     <p class="error_message" hidden>비밀번호가 일치하지 않습니다. 다시 입력해 주세요.</p>
 
                     <div class="input_area">
                         <header>
-                            <h4><span class="essential">*</span>비밀번호 확인</h4>
+                            <label for="user_password_confirm" class="field_label">
+                                <h4><span class="essential">*</span>비밀번호 확인</h4>
+                            </label>
                         </header>
-                        <input type="password" placeholder="비밀번호를 한번 더 입력해 주세요." class="success"> <!-- 성공이었을때 success 클래스 추가 초록 border -->
+                        <input type="password" id="user_password_confirm" placeholder="비밀번호를 한번 더 입력해 주세요." class="success"> <!-- 성공이었을때 success 클래스 추가 초록 border -->
                     </div>
                     <p class="success_message" hidden>사용 가능한 비밀번호 입니다.</p>
 
                     <div class="input_area">
                         <header>
-                            <h4><span class="essential">*</span>휴대전화</h4>
+                            <label for="user_phone" class="field_label">
+                                <h4><span class="essential">*</span>휴대전화</h4>
+                            </label>
                         </header>
-                        <input type="tel" placeholder="휴대전화 번호를 입력해 주세요."> <!-- 성공이었을때 success 클래스 추가 초록 border -->
+                        <input type="tel" id="user_phone" placeholder="휴대전화 번호를 입력해 주세요."> <!-- 성공이었을때 success 클래스 추가 초록 border -->
                     </div>
                     <p class="error_message" hidden>휴대전화 번호를 다시 확인해 주세요.(숫자만)</p>
 
                     <div class="input_area">
                         <header>
-                            <h4><span class="essential">*</span>이메일</h4>
+                            <label for="user_email" class="field_label">
+                                <h4><span class="essential">*</span>이메일</h4>
+                            </label>
                         </header>
                         <div class="multiple email">
-                            <input type="text" placeholder="이메일 주소를 입력해 주세요.">
+                            <input type="text" id="user_email" placeholder="이메일 주소를 입력해 주세요.">
                             <span>@</span>
-                            <select name="" id="">
+                            <select name="" id="user_email_domain">
                                 <option value="">도메인 선택</option>
                                 <option value="naver.com">naver.com</option>
                             </select>
@@ -107,7 +117,7 @@
                         <div class="multiple email">
                             <input type="text" placeholder="이메일 주소를 입력해 주세요.">
                             <span>@</span>
-                            <input type="text" placeholder="직접 입력해 주세요.">
+                            <input type="text" id="user_email_custom" placeholder="직접 입력해 주세요.">
                             <button class="btn_delete" type="button" aria-label="이메일 입력값 삭제">
                                 <span class="material-symbols-rounded">close</span>
                             </button>
@@ -157,9 +167,11 @@
                     
                     <div class="input_area">
                         <header>
-                            <h4>거주지역</h4>
+                            <label for="resident_region" class="field_label">
+                                <h4>거주지역</h4>
+                            </label>
                         </header>
-                        <select name="" id="">
+                        <select name="" id="resident_region">
                             <option value="">거주지역을 선택해 주세요.</option>
                             <option value="서울">서울</option>
                             <option value="경기">경기</option>
@@ -171,37 +183,41 @@
 
                     <div class="input_area">
                         <header>
-                            <h4>최종학력</h4>
+                            <label for="final_education_level" class="field_label">
+                                <h4>최종학력</h4>
+                            </label>
                         </header>
                         <div class="multiple final_education">
-                            <select name="" id="">
+                            <select name="" id="final_education_level">
                                 <option value="">학력</option>
                                 <option value="고등학교">고등학교</option>
                                 <option value="대학교">대학교</option>
                                 <option value="대학원">대학원</option>
                             </select>
-                            <select name="" id="">
+                            <select name="" id="final_education_grade">
                                 <option value="">학년</option>
                                 <option value="1학년">1학년</option>
                                 <option value="2학년">2학년</option>
                                 <option value="3학년">3학년</option>
                                 <option value="4학년">4학년</option>
                             </select>
-                            <select name="" id="">
+                            <select name="" id="final_education_status">
                                 <option value="">상태</option>
                                 <option value="재학">재학</option>
                                 <option value="졸업">졸업</option>
                             </select>
-                            <input type="date" name="" id="">
+                            <input type="date" name="" id="final_education_date">
                         </div>
-                        <input type="text" placeholder="대학, 고등학교 또는 기관명을 입력해 주세요." class="marginT16">
+                        <input type="text" id="education_name" placeholder="대학, 고등학교 또는 기관명을 입력해 주세요." class="marginT16">
                     </div>
 
                     <div class="input_area">
                         <header>
-                            <h4>유입경로</h4>
+                            <label for="inflow_path" class="field_label">
+                                <h4>유입경로</h4>
+                            </label>
                         </header>
-                        <select name="" id="">
+                        <select name="" id="inflow_path">
                             <option value="">유입경로를 선택해 주세요.</option>
                             <option value="포털검색">포털검색</option>
                             <option value="김영편입 사이트">김영편입 사이트</option>
@@ -212,29 +228,33 @@
                             <option value="친구 추천">친구 추천</option>
                             <option value="기타">기타</option>
                         </select>
-                        <input type="text" placeholder="친구ID를 입력해 주세요." class="marginT16">
+                        <input id="inflow_friend_id" type="text" placeholder="친구ID를 입력해 주세요." class="marginT16">
                     </div>
 
                     <div class="input_area">
                         <header>
-                            <h4>학점은행제 이용 목적</h4>
+                            <label for="education_purpose" class="field_label">
+                                <h4>학점은행제 이용 목적</h4>
+                            </label>
                         </header>
-                        <select name="" id="">
+                        <select name="" id="education_purpose">
                             <option value="">이용목적을 선택해 주세요.</option>
                             <option value="포털검색">포털검색</option>
                             <option value="블로그,SNS">블로그,SNS</option>
                             <option value="친구추천">친구추천</option>
                             <option value="기타">기타</option>
                         </select>
-                        <input type="text" placeholder="기타 내용을 입력해 주세요." class="marginT16">
+                        <input id="education_purpose_other" type="text" placeholder="기타 내용을 입력해 주세요." class="marginT16">
                     </div>
 
                      <div class="input_area">
                         <header>
-                            <h4>관심분야</h4>
+                            <label for="interest_field" class="field_label">
+                                <h4>관심분야</h4>
+                            </label>
                         </header>
                         <!-- 다중 선택 드롭다운 -->
-                        <div class="custom_select">
+                        <div class="custom_select" id="interest_field" tabindex="0" role="button" aria-expanded="false">
                             <span class="selected">관심분야를 선택해 주세요.</span>
                             <div class="options">
                                 <label><input type="checkbox" class="multiple_checkbox" value="일반 편입"> 일반 편입</label>
@@ -247,14 +267,16 @@
                             </div>
                         </div>
                         <!-- // 다중 선택 드롭다운 -->
-                        <input type="text" placeholder="기타 관심분야를 입력해 주세요." class="marginT16">
+                        <input id="interest_field_other" type="text" placeholder="기타 관심분야를 입력해 주세요." class="marginT16">
                     </div>
 
                      <div class="input_area">
                         <header>
-                            <h4>편입 수강 여부</h4>
+                            <label for="transfer_course_status" class="field_label">
+                                <h4>편입 수강 여부</h4>
+                            </label>
                         </header>
-                        <select name="" id="">
+                        <select name="" id="transfer_course_status">
                             <option value="">편입 수강 여부를 선택해 주세요.</option>
                             <option value="인강 수강">인강 수강</option>
                             <option value="오프라인 캠퍼스 수강">오프라인 캠퍼스 수강</option>
@@ -265,10 +287,12 @@
 
                      <div class="input_area">
                         <header>
-                            <h4>관심 캠퍼스 (캠퍼스 전용 할인쿠폰 발급)</h4>
+                            <label for="campus_interest" class="field_label">
+                                <h4>관심 캠퍼스 (캠퍼스 전용 할인쿠폰 발급)</h4>
+                            </label>
                         </header>
                         <!-- 다중 선택 드롭다운 -->
-                        <div class="custom_select">
+                        <div class="custom_select" id="campus_interest" tabindex="0" role="button" aria-expanded="false">
                             <span class="selected">관심 캠퍼스를 선택해 주세요.</span>
                             <div class="options">
                                 <label><input type="checkbox" class="multiple_checkbox" value="인강"> 인강</label>
@@ -281,14 +305,16 @@
                             </div>
                         </div>
                         <!-- // 다중 선택 드롭다운 -->
-                        <input type="text" placeholder="기타 관심 캠퍼스를 입력해 주세요." class="marginT16">
+                        <input id="campus_interest_other" type="text" placeholder="기타 관심 캠퍼스를 입력해 주세요." class="marginT16">
                     </div>
 
                     <div class="input_area">
                         <header>
-                            <h4>담당 컨설턴트</h4>
+                            <label for="consultant" class="field_label">
+                                <h4>담당 컨설턴트</h4>
+                            </label>
                         </header>
-                        <select name="" id="">
+                        <select name="" id="consultant">
                             <option value="">담당 컨설턴트를 선택해 주세요.</option>
                             <option value="홍길동">홍길동</option>
                             <option value="김철수">김철수</option>
@@ -299,9 +325,11 @@
 
                     <div class="input_area">
                         <header>
-                            <h4>문의사항</h4>
+                            <label for="inquiry_type" class="field_label">
+                                <h4>문의사항</h4>
+                            </label>
                         </header>
-                        <select name="" id="">
+                        <select name="" id="inquiry_type">
                             <option value="">문의사항을 선택해 주세요.</option>
                             <option value="전체">전체</option>
                             <option value="과정(취득)문의">과정(취득)문의</option>
@@ -309,19 +337,21 @@
                             <option value="실습과정">실습과정</option>
                             <option value="기타">기타</option>
                         </select>
-                        <input type="text" placeholder="기타 문의사항을 입력해 주세요." class="marginT16">
+                        <input id="inquiry_other" type="text" placeholder="기타 문의사항을 입력해 주세요." class="marginT16">
                     </div>
 
                     <div class="input_area">
                         <header>
-                            <h4>김영편입 ID</h4>
+                            <label for="kimyoung_id" class="field_label">
+                                <h4>김영편입 ID</h4>
+                            </label>
                         </header>
                         <div class="check_group">
                             <div>
                                 <label class="form_check">
                                     <input type="radio" name="id_status">수강
                                 </label>
-                                <input type="text" placeholder="김영편입 ID를 입력해 주세요." disabled>
+                                <input type="text" id="kimyoung_id" placeholder="김영편입 ID를 입력해 주세요." disabled>
                             </div>
                             <label class="form_check">
                                 <input type="radio" name="id_status">비수강
@@ -331,18 +361,20 @@
 
                     <div class="input_area">
                         <header>
-                            <h4>김영편입 소개 여부</h4>
+                            <label for="introduction_campus" class="field_label">
+                                <h4>김영편입 소개 여부</h4>
+                            </label>
                         </header>                        
                         <dl class="flex_left">
                             <dt>캠퍼스명</dt>
                             <dd>
-                                <input type="text" placeholder="캠퍼스명을 입력해 주세요.">
+                                <input id="introduction_campus" type="text" placeholder="캠퍼스명을 입력해 주세요.">
                             </dd>
                         </dl>
                         <dl class="flex_left">
                             <dt>소개 직원</dt>
                             <dd>
-                                <input type="text" placeholder="소개 직원명을 입력해 주세요.">
+                                <input id="introduction_staff" type="text" placeholder="소개 직원명을 입력해 주세요.">
                             </dd>
                         </dl>
                     </div>
