@@ -362,7 +362,6 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .message_list .message_item_body { display:flex;  flex-direction:column; gap:2px; }
 .message_item_body .message_item_title { font-weight:700; }
 .message_item_body > div:not(.message_item_title) { font-size:var(--Font-small); display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:2; overflow:hidden; }
-.message_item_body.read .message_item_title { font-weight:400; }
 .message_item_body .message_item_title:before { content:"Mail"; padding-right:6px; font-family:'Material Symbols Rounded'; font-size:24px; font-weight:400; display:inline-block;  color:var(--Primary-500); font-variation-settings:'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24; vertical-align:middle; }
 .message_item_body.read .message_item_title:before { content:"drafts"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; }
 .layer_messageBox .message_txt { padding-top:24px; }
