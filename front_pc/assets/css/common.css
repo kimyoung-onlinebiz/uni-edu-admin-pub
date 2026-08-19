@@ -286,7 +286,7 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 .form_warning { text-align:left; }
 
 /* 인라인 정의형 입력 레이아웃 */
-.flex_left { display:flex; gap:16px; justify-content:flex-start; align-items:center; padding:4px 8px 9px; }
+.flex_left { display:flex; gap:16px; justify-content:flex-start; align-items:center; padding:4px 0 9px; }
 .flex_center { display:flex; gap:16px; align-items:center; }
 .inline_dl input { margin-right:4px; }
 .flex_left dt { font-weight:600; min-width:100px; flex-shrink: 0; }
