@@ -244,7 +244,7 @@
 .classroom_subjects .subject_list { margin-top:32px; display:flex; flex-direction:column; gap:32px; }
 .classroom_subjects .subject_list > li { position:relative; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); display:flex; flex-direction:column; padding:24px; }
 .classroom_subjects .subject_item { width:100%; display:flex; align-items:center; justify-content:space-between; padding-left:10px; }
-.classroom_subjects .subject_item a { width:215px; height:40px; text-align:center; padding-top:5px; border:1px solid var(--Primary-500); }
+.classroom_subjects .subject_item a { width:200px; height:40px; text-align:center; padding-top:5px; border:1px solid var(--Primary-500); }
 .classroom_subjects .subject_item_head { display:flex; gap:40px; }
 .classroom_subjects .subject_item_head dl:nth-child(1) { width:140px; }
 .classroom_subjects .subject_item_head dl:nth-child(2) { width:230px; }
