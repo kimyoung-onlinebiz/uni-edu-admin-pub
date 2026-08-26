@@ -263,7 +263,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#none">
+                        <a href="#none" class="active">
                             <span class="material-symbols-rounded" aria-hidden="true">fact_check</span>
                             학습 공지사항
                         </a>
@@ -280,7 +280,7 @@
             <nav>
                 <ul>
                     <li>
-                        <strong class="active">이론 평가관리</strong>
+                        <strong>이론 평가관리</strong><!-- active 클래스 추가 시 선택 -->
                         <ul>
                             <li><a href="#none">시험 응시</a></li> <!-- active 클래스 추가 시 선택 -->
                             <li><a href="#none">과제 제출</a></li>
@@ -350,399 +350,72 @@
                 <ol>
                     <li class="home"><a href="../index.html">홈</a></li>
                     <li><a href="#none">나의 강의실</a></li>
-                    <li aria-current="page">수강중인 과정</li>
+                    <li aria-current="page">학습 공지사항</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header sub_header_main">
-                <h3>지역사회복지론</h3>
+            <header class="sub_header border">
+                <h3>학습 공지사항</h3>
             </header>
             <!-- //sub header -->
 
-            <!-- 나의 강의실 -->
-            <section class="classroom">
 
-                <section class="dashboard_summary">
+            <!-- 게시판 뷰 -->
+            <article class="board_view">
 
-                    <!-- 학사일정 / 학습설계 / 쪽지함 -->
-                    <article class="subject_info">
-                        <dl>
-                            <dt>년도 <span class="div_line">|</span> 학기 <span class="div_line">|</span> 기수</dt>
-                            <dd>2026년도 1학기 2기</dd>
-                        </dl>
-                        <dl>
-                            <dt>수강기간</dt>
-                            <dd>2026-01-07(수) ~ 2026-04-21(화)</dd>
-                        </dl>
-                        <dl>
-                            <dt>과목 이수 정보</dt>
-                            <dd>
-                                출석 15% <span class="div_line">|</span> 시험 50% <span class="div_line">|</span> 과제 20% <span class="div_line">|</span> 토론 10% <span class="div_line">|</span> 퀴즈 5%
-                                <span class="txt_info">※ 출석 이수 기준: 80% (60점)</span>
-                            </dd>
-                        </dl>
-                        <div class="subject_links">
-                            <a href="#none"><span class="material-symbols-rounded">file_copy</span>강의계획서</a>
-                            <a href="#none"><span class="material-symbols-rounded">fact_check</span>과목 공지사항</a>
-                            <a href="#none"><span class="material-symbols-rounded">search</span>과목 자료실</a>
-                            <a href="#none"><span class="material-symbols-rounded">comment</span>학습 Q&A</a>
-                        </div>
-                    </article>
-
-                    <!-- 학습 진행 -->
-                    <article class="progress_status">
-                        <div class="weeks">
-                            <p>학습진행 <strong>9~10주차</strong></p>
-                            <!-- 출석률, 진도 -->
-                            <div class="attendance_status">
-                                <div class="attendance_rate">
-                                    출석률 <strong>53<small>%</small></strong>
-                                </div>
-
-                                <div class="attendance_bar"> <!-- attended(출석), absent(결석), 아무 클래스 없는건 아직 진도 안나감 -->
-                                    <span class="attended"></span>
-                                    <span class="attended"></span>
-                                    <span class="attended"></span>
-                                    <span class="absent"></span>
-                                    <span class="absent"></span>
-                                    <span class="absent"></span>
-                                    <span class="absent"></span>
-
-                                    <!-- 중간 고사 -->
-                                    <span class="absent"></span>
-                                    <!-- //중간 고사 -->
-
-                                    <span class="attended"></span>
-                                    <span class="attended"></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-
-                                    <!-- 기말 고사 -->
-                                    <span></span>
-                                    <!-- //기말 고사 -->
-                                </div>
-
-                                <div class="attendance_info">
-
-                                    <!-- 주의 아이콘 -->
-                                    <span class="material-symbols-rounded">
-                                        sentiment_satisfied
-                                    </span>
-                                     <!-- //주의 아이콘 -->
-                                    <strong>양호</strong>
-                                    <span>(결석 <em>2</em>회)</span>
-                                </div>
-                            </div>
-                            <!-- //출석률, 진도 -->
-                            <div class="recommend">이번주 학습 권장량 <strong>3차시</strong></div>
-                        </div>
-
-                    </article>
-                    <!-- //학습 진행 -->
-
-                </section>
-
-                <!-- 공지 롤링 -->
-                <section class="notice_rolling swiper-container" aria-label="공지 롤링">
-                    <div class="notice_rolling_track swiper-wrapper">
-                        <article class="notice_rolling_item swiper-slide">
-                            <span class="label lightBlue">일반 공지</span>
-                            <a href="#none">2026년 1학기 학습 진행 안내</a>
-                            <em class="new_badge">N</em>
-                            <span class="date">2026-01-07</span>
-                        </article>
-                        <article class="notice_rolling_item swiper-slide">
-                            <span class="label lightBlue">학사 공지</span>
-                            <a href="#none">중간고사 응시 기간 및 유의사항 안내</a>
-                            <span class="date">2026-01-05</span>
-                        </article>
-                        <article class="notice_rolling_item swiper-slide">
-                            <span class="label lightBlue">개강 안내</span>
-                            <a href="#none">학습 자료실 신규 등록 자료 확인 안내</a>
-                            <span class="date">2026-01-03</span>
-                        </article>
-                    </div>
-                    
-                </section>
-                <!-- //공지 롤링 -->
-
-                <!-- sub header -->
-                <header class="sub_header">
-                    <h4>강의 수강</h4>
+                <header class="board_view_header">
+                    <span class="label lightBlue">일반 공지</span>
+                    <h4>2026년 1학기 학습 진행 안내</h4>
+                    <span class="date">2026-03-03</span>
                 </header>
-                <!-- //sub header -->
 
-                <div class="txt_guide">
-                    <strong>강의 수강 시 유의사항
-                        <a href="#none" class="btn btn_theory">유의사항 더보기</a>
-                    </strong>
-                    <ul>
-                        <li>각 주차의 학습기간 내에 학습 콘텐츠를 순차적으로 수강해야 하며, <em>해당 주차 외 학습은 출석으로 인정되지 않습니다.</em></li>
-                        <li><em>출석률이 기준에 미달할 경우 과목 이수 및 학점 인정이 불가</em>합니다.</li>
-                        <li>학습 콘텐츠는 1배속으로 수강을 권장하며, 빠른 배속으로 인해 학습 시간이 부족한 경우 출석으로 인정되지 않을 수 있습니다.</li>
-                        <li>동시 수강은 불가하며, <em>부정한 방법으로 동시 수강이 확인될 경우 해당 차시는 미수강 처리</em>됩니다.</li>
-                    </ul>
-                </div>
-
-                    <!-- 강의 수강 -->
-                <section class="lecture_view">
-                    <ul class="lecture_list">
-                        <!-- OT -->
-                        <li class="ot_card">
-                            <span class="title">OT</span>
-                            <span class="desc">지역사회복지론 오리엔테이션</span>
-                            <button type="button" class="btn">확인하기</button>
-                        </li>
-                        <!-- //OT -->
-
-                        <!-- 1주차 -->
-                        <li>
-                            <div class="card_header">
-                                <span class="title">1주차</span>
-                                <span class="period"><span>수강기간</span> 2026-01-07 ~ 2026-01-20</span>
-                            </div>
-                            <div class="row">
-                                <span class="num">1차시</span>
-                                <span class="status complete">수강완료</span>
-                                <span class="subject">공동사회와 지역사회</span>
-                                <a href="#none" class="btn_progress progress">진도율 100% <i class="material-symbols-rounded">keyboard_arrow_right</i></a>
-                                <button type="button" class="btn">복습하기</button>
-                            </div>
-                            <div class="row">
-                                <span class="num">2차시</span>
-                                <span class="status incomplete">미수강</span>
-                                <span class="subject">지방자치제와 지역사회복지</span>
-                                <a href="#none" class="progress">진도율 100% <i class="material-symbols-rounded">keyboard_arrow_right</i></a>
-                                <button type="button" class="btn">복습하기</button>
-                            </div>
-                        </li>
-
-                        <!-- 2주차 -->
-                        <li>
-                            <div class="card_header">
-                                <span class="title">2주차</span>
-                                <span class="period"><span>수강기간</span> 2026-01-14 ~ 2026-01-27</span>
-                            </div>
-                            <div class="row">
-                                <span class="num">1차시</span>
-                                <span class="status complete">수강완료</span>
-                                <span class="subject">공동사회와 지역사회</span>
-                                <a href="#none" class="progress">진도율 100% <i class="material-symbols-rounded">keyboard_arrow_right</i></a>
-                                <button type="button" class="btn">복습하기</button>
-                            </div>
-                            <div class="row">
-                                <span class="num">2차시</span>
-                                <span class="status incomplete">미수강</span>
-                                <span class="subject">지방자치제와 지역사회복지</span>
-                                <a href="#none" class="progress">진도율 -</a>
-                                <button type="button" class="btn">복습하기</button>
-                            </div>
-                        </li>
-                        <!-- //2주차 -->
-
-                        <!-- 8주차 중간고사 -->
-                        <li class="exam_card">
-                            <span class="title">8주차</span>
-                            <span class="desc">중간고사 응시 기간</span>
-                            <span class="exam_time">2026-03-01 00:00:00 ~ 2026-03-04 16:59:59</span>
-                            <button type="button" class="btn" disabled>시험종료</button>
-                        </li>
-                        <!-- //8주차 중간고사 -->
-
-                        <!-- 9주차 -->
-                        <li>
-                            <div class="card_header">
-                                <span class="title">9주차</span>
-                                <span class="period"><span>수강기간</span> 2026-01-14 ~ 2026-01-27</span>
-                            </div>
-                            <div class="row">
-                                <span class="num">1차시</span>
-                                <span class="status complete">수강중</span>
-                                <span class="subject">공공영역에서의 지역사회복지실천 공공영역에서의 지역사회복지실천</span>
-                                <a href="#none" class="progress">진도율 100% <i class="material-symbols-rounded">keyboard_arrow_right</i></a>
-                                <button type="button" class="btn primary">학습하기</button>
-                            </div>
-                            <div class="row">
-                                <span class="num">2차시</span>
-                                <span class="status">수강필요</span>
-                                <span class="subject">지방자치제와 지역사회복지</span>
-                                <a href="#none" class="progress">진도율 -</a>
-                                <button type="button" class="btn primary">학습하기</button>
-                            </div>
-                        </li>
-                        <!-- //9주차 -->
-
-                        <!-- 10주차 -->
-                        <li>
-                            <div class="card_header">
-                                <span class="title">10주차</span>
-                                <span class="period"><span>수강기간</span> 2026-01-14 ~ 2026-01-27</span>
-                            </div>
-                            <div class="row">
-                                <span class="num">1차시</span>
-                                <span class="status">수강예정</span>
-                                <span class="subject">공공영역에서의 지역사회복지실천 공공영역에서의 지역사회복지실천</span>
-                                <a href="#none" class="progress">진도율 100% <i class="material-symbols-rounded">keyboard_arrow_right</i></a>
-                                <button type="button" class="btn primary">학습하기</button>
-                            </div>
-                            <div class="row">
-                                <span class="num">2차시</span>
-                                <span class="status">수강예정</span>
-                                <span class="subject">지방자치제와 지역사회복지</span>
-                                <a href="#none" class="progress">진도율 -</a>
-                                <button type="button" class="btn primary" disabled>3/11 오픈</button>
-                            </div>
-                        </li>
-                        <!-- //10주차 -->
-
-                        <!-- 15주차 기말고사 -->
-                        <li class="exam_card">
-                            <span class="title">15주차</span>
-                            <span class="desc">기말고사 응시 기간</span>
-                            <span class="exam_time">2026-03-01 00:00:00 ~ 2026-03-04 16:59:59</span>
-                            <button type="button" class="btn primary" disabled>오픈예정</button>
-                        </li>
-                        <!-- //15주차 기말고사 -->
-
-                    </ul>
-                </section>
-                <!-- //강의 수강 -->
-
-            </section>
-            <!-- //나의 강의실 -->
-
-            <!-- 레이어 / 이론 과정 수강 시 유의사항 -->
-                <div class="layer_wrapper layer_theory"> <!-- active 추가 시 화면 노출 -->
-                    <div class="layer_basic">
-
-                        <header>
-                            <div>
-                                <h1>이론 과정 수강 시 유의사항</h1>
-                            </div>
-                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                        </header>
-
-                        <!-- layer 내용 -->
-                        <div class="layer_content">
-                            <ol class="layer_guide">
-                                <li>공동인증서 로그인 후 수강 가능하며, 주차별 수강기간(14일) 내 진도율 100% 달성 시 출석 인정됩니다.</li>
-                                <li>주차별 수강기간은 시작일 <strong>00:00:00부터 종료일 23:59:59까지 적용</strong>되며, 수강기간 종료 후에는 출석 인정이 불가합니다.</li>
-                                <li>1개 차시 결석 시 0.5점 감점되며 7차시 이상 결석 시 과락 처리됩니다.</li>
-                                <li>학습 콘텐츠 동시 수강 불가하며, <strong>부정한 방법으로 동시 수강 적발될 시 해당 차시는 미수강 처리</strong>됩니다.</li>
-                                <li><strong>영상 학습시간 충족 시 출석이 인정</strong>되며, 배속 시 실제 수강시간 기준으로 처리됩니다.</li>
-                                <li>출석률 미달 시 과목 F 처리되며, 과목 이수 및 학점 인정이 불가합니다.</li>
-                            </ol>
-
+                <!-- 첨부파일 영역 -->
+                <div class="attachment"> 
+                    <p>첨부파일</p>
+                    <div class="download_area">
+                        <div class="download">
+                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                            <a href="#none"><span class="material-symbols-rounded">download</span>다운로드</a>
                         </div>
-                        <!-- //layer 내용 -->
-                        
+                        <div class="download">
+                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                            <a href="#none"><span class="material-symbols-rounded">download</span>다운로드</a>
+                        </div>  
                     </div>
-                    
                 </div>
-                <!-- //레이어 / 이론 과정 수강 시 유의사항 -->
+                <!-- //첨부파일 영역 -->
 
-            <!-- 레이어 / 페이지별 진도율 -->
-                <div class="layer_wrapper layer_progress"> <!-- active 추가 시 화면 노출 -->
-                    <div class="layer_basic">
+                <!-- 에디터에서 작성한 내용 노출 -->
+                <div class="editor_content">
+                    <p>
+                        안녕하세요, 학습자 여러분.<br>
+                        2026년 1학기 2기 학습 진행 관련 안내드립니다.
+                    </p>
 
-                        <header>
-                            <div>
-                                <h1>페이지별 진도율</h1>
-                            </div>
-                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                        </header>
+                    <p>
+                        본 과정은 주차별 학습기간 내 강의 진도율 100% 달성 시 출석으로 인정되며,
+                        학습기간 종료 후에는 출석 인정이 불가합니다.<br>
+                        원활한 학습 진행을 위해 매주 학습 일정을 확인하시어 기간 내 반드시 수강을 완료해 주시기 바랍니다.
+                    </p>
 
-                        <!-- layer 내용 -->
-                        <div class="layer_content">
-                            <table>
-                                <caption>페이지별 진도율</caption>
-                                <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">페이지</th>
-                                        <th scope="col">수강 기간 내<small>*단위: 초</small></th>
-                                        <th scope="col">수강 기간 종료 후<small>*단위: 초</small></th>
-                                        <th scope="col">기준 시간<small>*단위: 초</small></th>
-                                        <th scope="col">진도율</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1 페이지</td>
-                                        <td>50</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2 페이지</td>
-                                        <td>65</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td><span class="status incomplete">100%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3 페이지</td>
-                                        <td>65</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4페이지</td>
-                                        <td>65</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5 페이지</td>
-                                        <td>65</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6 페이지</td>
-                                        <td>65</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7 페이지</td>
-                                        <td>65</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8 페이지</td>
-                                        <td>65</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                        <!-- //layer 내용 -->
-                        
-                    </div>
-                    
+                    <p>
+                        또한 중간고사, 기말고사, 과제 및 토론 일정은 과목공지사항 및 평가관리 메뉴를 통해
+                        확인 가능하오니 학습 전 반드시 확인 부탁드립니다.<br>
+                        감사합니다.
+                    </p>
                 </div>
-                <!-- //레이어 / 페이지별 진도율 -->
+                <!-- //에디터에서 작성한 내용 노출 -->
+
+
+                <!-- bottom -->
+                <div class="board_view_footer">
+                    <a href="#none" class="btn">목록</a>
+                </div>
+
+            </article>
+            <!-- //게시판 뷰 -->
 
         </section>
         <!--// 콘텐츠 영역 -->

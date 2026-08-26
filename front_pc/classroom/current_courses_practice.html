@@ -280,7 +280,7 @@
             <nav>
                 <ul>
                     <li>
-                        <strong class="active">이론 평가관리</strong>
+                        <strong>이론 평가관리</strong> <!-- active 클래스 추가 시 선택 -->
                         <ul>
                             <li><a href="#none">시험 응시</a></li> <!-- active 클래스 추가 시 선택 -->
                             <li><a href="#none">과제 제출</a></li>
@@ -356,8 +356,8 @@
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header sub_header_main">
-                <h3>지역사회복지론</h3>
+            <header class="sub_header">
+                <h3>사회복지현장실습(수도권)</h3>
             </header>
             <!-- //sub header -->
 
@@ -379,8 +379,8 @@
                         <dl>
                             <dt>과목 이수 정보</dt>
                             <dd>
-                                출석 15% <span class="div_line">|</span> 시험 50% <span class="div_line">|</span> 과제 20% <span class="div_line">|</span> 토론 10% <span class="div_line">|</span> 퀴즈 5%
-                                <span class="txt_info">※ 출석 이수 기준: 80% (60점)</span>
+                                출석 15% <span class="div_line">|</span> 온라인 과제 15% <span class="div_line">|</span> 오프라인 과제 70%
+                                <span class="txt_info">※ 출석 이수 기준: 100% (60점)</span>
                             </dd>
                         </dl>
                         <div class="subject_links">
@@ -398,7 +398,7 @@
                             <!-- 출석률, 진도 -->
                             <div class="attendance_status">
                                 <div class="attendance_rate">
-                                    출석률 <strong>53<small>%</small></strong>
+                                    출석률 <strong>21<small>%</small></strong>
                                 </div>
 
                                 <div class="attendance_bar"> <!-- attended(출석), absent(결석), 아무 클래스 없는건 아직 진도 안나감 -->
@@ -430,11 +430,11 @@
 
                                     <!-- 주의 아이콘 -->
                                     <span class="material-symbols-rounded">
-                                        sentiment_satisfied
+                                        sentiment_neutral
                                     </span>
                                      <!-- //주의 아이콘 -->
-                                    <strong>양호</strong>
-                                    <span>(결석 <em>2</em>회)</span>
+                                    <strong>주의</strong>
+                                    <span>(결석 <em>5</em>회)</span>
                                 </div>
                             </div>
                             <!-- //출석률, 진도 -->
@@ -478,7 +478,7 @@
 
                 <div class="txt_guide">
                     <strong>강의 수강 시 유의사항
-                        <a href="#none" class="btn btn_theory">유의사항 더보기</a>
+                        <a href="#none" class="btn btn_practice">유의사항 더보기</a>
                     </strong>
                     <ul>
                         <li>각 주차의 학습기간 내에 학습 콘텐츠를 순차적으로 수강해야 하며, <em>해당 주차 외 학습은 출석으로 인정되지 않습니다.</em></li>
@@ -503,21 +503,19 @@
                         <li>
                             <div class="card_header">
                                 <span class="title">1주차</span>
-                                <span class="period"><span>수강기간</span> 2026-01-07 ~ 2026-01-20</span>
+                                <span class="status">오프라인</span>
                             </div>
                             <div class="row">
                                 <span class="num">1차시</span>
-                                <span class="status complete">수강완료</span>
-                                <span class="subject">공동사회와 지역사회</span>
-                                <a href="#none" class="btn_progress progress">진도율 100% <i class="material-symbols-rounded">keyboard_arrow_right</i></a>
-                                <button type="button" class="btn">복습하기</button>
+                                <span class="status">출석 반영 대기</span>
+                                <span class="subject">1차 세미나</span>
+                                <span class="period">2026-01-08</span>
                             </div>
                             <div class="row">
                                 <span class="num">2차시</span>
-                                <span class="status incomplete">미수강</span>
-                                <span class="subject">지방자치제와 지역사회복지</span>
-                                <a href="#none" class="progress">진도율 100% <i class="material-symbols-rounded">keyboard_arrow_right</i></a>
-                                <button type="button" class="btn">복습하기</button>
+                                <span class="status incomplete">결석</span>
+                                <span class="subject">1차 세미나</span>
+                                <span class="period">2026-01-08</span>
                             </div>
                         </li>
 
@@ -544,14 +542,26 @@
                         </li>
                         <!-- //2주차 -->
 
-                        <!-- 8주차 중간고사 -->
-                        <li class="exam_card">
-                            <span class="title">8주차</span>
-                            <span class="desc">중간고사 응시 기간</span>
-                            <span class="exam_time">2026-03-01 00:00:00 ~ 2026-03-04 16:59:59</span>
-                            <button type="button" class="btn" disabled>시험종료</button>
+                        <!-- 8주차 오프라인 -->
+                        <li>
+                            <div class="card_header">
+                                <span class="title">8주차</span>
+                                <span class="status">오프라인</span>
+                            </div>
+                            <div class="row">
+                                <span class="num">1차시</span>
+                                <span class="status">오프라인 출석</span>
+                                <span class="subject">1차 세미나</span>
+                                <span class="period">2026-01-08</span>
+                            </div>
+                            <div class="row">
+                                <span class="num">2차시</span>
+                                <span class="status complete">출석 완료</span>
+                                <span class="subject">1차 세미나</span>
+                                <span class="period">2026-01-08</span>
+                            </div>
                         </li>
-                        <!-- //8주차 중간고사 -->
+                        <!-- //8주차 오프라인 -->
 
                         <!-- 9주차 -->
                         <li>
@@ -615,13 +625,13 @@
             </section>
             <!-- //나의 강의실 -->
 
-            <!-- 레이어 / 이론 과정 수강 시 유의사항 -->
-                <div class="layer_wrapper layer_theory"> <!-- active 추가 시 화면 노출 -->
+            <!-- 레이어 / 사회복지현장실습 과정 수강 시 유의사항 -->
+                <div class="layer_wrapper layer_practice"> <!-- active 추가 시 화면 노출 -->
                     <div class="layer_basic">
 
                         <header>
                             <div>
-                                <h1>이론 과정 수강 시 유의사항</h1>
+                                <h1>사회복지현장실습 과정 수강 시 유의사항</h1>
                             </div>
                             <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
                         </header>
@@ -630,11 +640,14 @@
                         <div class="layer_content">
                             <ol class="layer_guide">
                                 <li>공동인증서 로그인 후 수강 가능하며, 주차별 수강기간(14일) 내 진도율 100% 달성 시 출석 인정됩니다.</li>
-                                <li>주차별 수강기간은 시작일 <strong>00:00:00부터 종료일 23:59:59까지 적용</strong>되며, 수강기간 종료 후에는 출석 인정이 불가합니다.</li>
-                                <li>1개 차시 결석 시 0.5점 감점되며 7차시 이상 결석 시 과락 처리됩니다.</li>
+                                <li>주차별 수강기간은 <strong>시작일 00:00:00부터 종료일 23:59:59까지</strong> 적용되며, 수강기간 종료 후에는 출석 인정이 불가합니다.</li>
+                                <li>온라인 차시 1회 결석 시 0.5점, 오프라인 세미나 1회 결석 시 1점이 감점됩니다.</li>
+                                <li>온라인 차시 또는 오프라인 세미나 중 단 1회라도 결석한 경우 과락 처리되며, 과목 이수 및 학점 인정이 불가합니다.</li>
+                                <li><strong>오프라인 출석(세미나)은 총 3회 진행되며, 모든 세미나에 출석해야 수료할 수 있습니다.</strong></li>
                                 <li>학습 콘텐츠 동시 수강 불가하며, <strong>부정한 방법으로 동시 수강 적발될 시 해당 차시는 미수강 처리</strong>됩니다.</li>
                                 <li><strong>영상 학습시간 충족 시 출석이 인정</strong>되며, 배속 시 실제 수강시간 기준으로 처리됩니다.</li>
                                 <li>출석률 미달 시 과목 F 처리되며, 과목 이수 및 학점 인정이 불가합니다.</li>
+                                <li>사회복지현장실습 오프라인 출석은 관리자 확인 후 최종 성적 공개 전 일괄 반영되므로, 실제 참석 여부와 출석률 표시 시점에 차이가 있을 수 있습니다.</li>
                             </ol>
 
                         </div>
@@ -643,7 +656,7 @@
                     </div>
                     
                 </div>
-                <!-- //레이어 / 이론 과정 수강 시 유의사항 -->
+                <!-- //레이어 / 사회복지현장실습 과정 수강 시 유의사항 -->
 
             <!-- 레이어 / 페이지별 진도율 -->
                 <div class="layer_wrapper layer_progress"> <!-- active 추가 시 화면 노출 -->

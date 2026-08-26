@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMainVisualSwiper();
     initScholarshipPromotionSwipers();
     initCourseIntroSwiper();
+    initNoticeRollingSwiper();
 });
 
 // Swiper 버전에 따라 pauseOnMouseEnter 옵션이 동작하지 않는 경우를 대비해
@@ -358,4 +359,34 @@ function initCourseIntroSwiper() {
     });
 
     bindSwiperHoverPause(courseIntroSwiper, courseIntroEl);
+}
+
+// =========================================
+// SECTION: 공지 롤링 세로 Swiper
+// =========================================
+function initNoticeRollingSwiper() {
+    const noticeRollingEl = document.querySelector('.notice_rolling.swiper-container');
+
+    if (!noticeRollingEl) {
+        return;
+    }
+
+    const noticeRollingSwiper = new Swiper(noticeRollingEl, {
+        loop: true,
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 550,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 2800,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        observer: true,
+        observeParents: true,
+        autoHeight: false,
+    });
+
+    bindSwiperHoverPause(noticeRollingSwiper, noticeRollingEl);
 }

@@ -23,7 +23,7 @@
     padding:40px 0 120px 50px;
     margin-left:280px;
 }
-.link a { font-size:15px; font-weight:500; }
+.link a { font-size:15px; font-weight:400; line-height:1.6; }
 .styleGuide_wrapper .styleGuide_content > h2 { font-size:30px; font-weight:700; border-top:1px solid var(--Neutral-300); padding:32px 0 8px; margin-top:32px; }
 .styleGuide_wrapper .styleGuide_content > h2 a { font-size:30px; font-weight:700; }
 .styleGuide_wrapper .styleGuide_content > h2 + h3 { padding-top:10px; }
@@ -40,7 +40,7 @@
 .styleGuide_wrapper .flex { display:flex; gap:26px; flex-wrap:wrap; }
 .styleGuide_wrapper .guide dt,.styleGuide_wrapper h3 { font-size:21px; font-weight:700; padding-bottom:8px; padding-top:24px; }
 .styleGuide_wrapper .component_example { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
-.styleGuide_wrapper .component_example.icon .material-symbols-rounded { font-size:20px; }
+
 .styleGuide_content code,.styleGuide_content strong,.styleGuide_content em,.styleGuide_content u { color:var(--Primary-600); font-weight:600; background:var(--Neutral-100); padding:2px 0; border-radius:4px; }
 .styleGuide_content .flex code { color:#333; font-weight:500; }
 .styleGuide_content .btn_group { margin-bottom:8px; }

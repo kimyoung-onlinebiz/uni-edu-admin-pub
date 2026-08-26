@@ -287,6 +287,9 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_discussionSubmission', triggers: ['.btn_discussionSubmission'] }, //나의 강의실 토론 제출 레이어
             { layer: '.layer_wrapper.layer_messageBox', triggers: ['.btn_messageBox'] }, //나의 강의실 쪽지함 레이어
             { layer: '.layer_wrapper.layer_coursePlan', triggers: ['.btn_coursePlan'] }, //나의 강의실 강의계획서 레이어
+            { layer: '.layer_wrapper.layer_progress', triggers: ['.btn_progress'] }, //페이지별 진도율 레이어
+            { layer: '.layer_wrapper.layer_theory', triggers: ['.btn_theory'] }, //이론 유의사항 레이어
+            { layer: '.layer_wrapper.layer_practice', triggers: ['.btn_practice'] }, //사회복지현장실습 과정 수강 시 유의사항 레이어
         ]);
     }
 
