@@ -65,6 +65,7 @@ align-items:center; border-radius:4px; background: var(--Primary-100); font-weig
 .main_wrap .mainVisual_slide { width:954px; flex:0 0 954px; height:400px; }
 .main_wrap .mainEasy_consult { width:302px; flex:0 0 302px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); padding:24px; height:400px; }
 .mainEasy_consult .form_check { font-size:var(--Font-xsmall); color:var(--Neutral-600); font-weight:500; }
+.mainEasy_consult .form_group { gap:20px; flex-wrap:wrap; }
 
 
 /* main visual */
