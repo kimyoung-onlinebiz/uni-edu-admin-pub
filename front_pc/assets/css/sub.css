@@ -222,9 +222,9 @@
 .dashboard_summary .summary_card:first-child > ul > li { display:flex; align-items:center; justify-content:space-between; min-height:54px; }
 .dashboard_summary .summary_card:first-child > ul > li > span { font-size:var(--Font-medium); font-weight:600; }
 .summary_card:first-child > ul > li > a { font-size:var(--Font-small); }
-.summary_card:first-child > ul > li:last-child > a { color:var(--Primary-500); font-size:30px; font-weight:600; width:100px; border-radius:0; text-align:center; margin-top:-3px; text-decoration:underline; text-decoration-color:transparent; text-underline-offset:3px; transition:color .2s ease, text-decoration-color .2s ease; }
+.summary_card:first-child > ul > li:last-child > a { color:var(--Primary-500); font-size:var(--Font-2xlarge); font-weight:600; width:100px; border-radius:0; text-align:center; margin-top:-3px; text-decoration:underline; text-decoration-color:transparent; text-underline-offset:3px; transition:color .2s ease, text-decoration-color .2s ease; }
 .summary_card:first-child > ul > li:last-child > a:hover {  text-decoration-color:var(--Primary-500); }
-.summary_card:first-child > ul > li:last-child > a span { font-size:28px; font-weight:500; vertical-align:-4px; }
+.summary_card:first-child > ul > li:last-child > a span { font-size:var(--Font-2xlarge); font-weight:500; vertical-align:-4px; }
 
 /* 두 번째 카드: 학습 공지사항 */
 .dashboard_summary .summary_card:last-child { flex:0 0 411px; width:411px; }
