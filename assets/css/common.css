@@ -25,7 +25,7 @@ http://scripts.sil.org/OFL
   src: url("/assets/font/MaterialSymbolsRounded.woff2") format('woff2');
 }
 
-.material-symbols-rounded { font-family:'Material Symbols Rounded'; font-weight:normal; font-style: normal; font-size:18px; vertical-align:-4px; line-height:1.2;  text-transform:none; letter-spacing:normal; word-wrap:normal; white-space: nowrap; direction: ltr; /* WebKit 브라우저 렌더링 최적화 */  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Opera */
+.material-symbols-rounded { font-family:'Material Symbols Rounded'; font-weight:normal; font-style: normal; font-size:18px; vertical-align:-4px; line-height:1.2; text-transform:none; letter-spacing:normal; word-wrap:normal; white-space: nowrap; direction: ltr; /* WebKit 브라우저 렌더링 최적화 */  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Opera */
   text-rendering: optimizeLegibility; /* Firefox */  -moz-osx-font-smoothing: grayscale; }
 
 /* 디자인 시스템 (CSS Variables) */
@@ -256,3 +256,10 @@ color: var(--neutral_600) !important; }
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {  box-shadow: 0 0 0 1000px #fff inset !important; }
+
+/* 첫번째 탭 */
+.first_tab { display:flex; align-items:center; gap:8px; margin-bottom:20px; border-bottom:1px solid var(--neutral_300); }
+.first_tab li a { display:block; font-size:var(--font_medium); color:var(--neutral_600); padding:9px 40px; border-radius:var(--borderRadius) var(--borderRadius) 0 0; border:1px solid var(--neutral_300); background:var(--neutral_100); font-weight:500; margin-bottom:-1px; }
+.first_tab li a.active,.first_tab li a:hover { background:var(--primary_500); color:var(--neutral_0); border:1px solid var(--primary_500); }
+.tab_container .tab_content { display:none; }
+.tab_container .tab_content.active { display:block; }

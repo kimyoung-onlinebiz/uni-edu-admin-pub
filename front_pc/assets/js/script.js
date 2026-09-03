@@ -1,36 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
-    // 1) 공통 유틸
-    // - 이 파일 전역에서 반복되는 DOM 조회/이벤트 바인딩을 단순화한다.
-    // - q/qa는 querySelector/querySelectorAll 축약이며, qa는 배열로 반환한다.
-    // - on/onClick은 null-safe 바인딩이라 대상이 없어도 에러 없이 넘어간다.
+    // 공통 유틸
+    // - 자주 쓰는 DOM 선택/이벤트 바인딩을 짧게 정리
+    // - q/qa는 selector 단축 함수
+    // - on/onClick은 null-safe 처리로 안전하게 바인딩
     // ============================================================
     const q = (selector, root = document) => root.querySelector(selector);
     const qa = (selector, root = document) => Array.from(root.querySelectorAll(selector));
     const on = (el, event, handler) => el?.addEventListener(event, handler);
     const onClick = (el, handler) => on(el, 'click', handler);
-    // a, button 트리거는 기본 동작(이동, submit)을 막고 레이어 오픈만 수행한다.
+    // 링크/버튼 클릭 시 기본 동작을 막고 레이어만 열도록 통일
     const isActionTag = (el) => ['A', 'BUTTON'].includes(el?.tagName);
 
     // ============================================================
-    // 2) 레이어 등록 설정
-    // - 반복 추가되는 레이어를 코드 수정 최소화로 관리하기 위한 정적 설정.
-    // - 형식: { layer: '레이어 셀렉터', triggers: ['트리거 셀렉터들'], shouldLockScroll?: boolean }
-    // - shouldLockScroll 생략 시 true로 처리되어 body 스크롤 잠금이 동작한다.
+    // 레이어 등록 설정
+    // - 반복되는 레이어는 여기에서 설정만 추가하면 동작하도록 구성
+    // - 형식: { layer: '레이어 선택자', triggers: ['버튼 선택자들'], shouldLockScroll?: boolean }
     // ============================================================
     const STATIC_LAYER_BINDINGS = [
         { layer: '.layer_wrapper.banner_list', triggers: ['.mainVisual_slide .all_view'] },
     ];
 
     // ============================================================
-    // 3) 레이어 컨트롤러
-    // - 레이어 열기/닫기, body 스크롤 잠금, Esc/닫기 버튼 공통 규칙을 제공한다.
-    // - 외부에는 register 함수 하나만 노출해서 설정 기반으로 확장 가능하게 만든다.
+    // 레이어 컨트롤러
+    // - 레이어 열기/닫기, body 스크롤 잠금, Esc/닫기 버튼 처리 통합
+    // - 설정 기반으로 여러 레이어를 일관되게 등록/관리
     // ============================================================
     function createLayerRegistrar() {
         const LAYER_SELECTOR = '.layer_wrapper, .layer_agree';
-        // 열린 레이어 수를 카운트해 body 스크롤 잠금 해제를 안전하게 관리한다.
-        // (중첩 레이어가 있어도 마지막 레이어가 닫힐 때만 overflow를 복원)
+        // 여러 레이어가 겹쳐 열릴 수 있으므로 카운트를 두고 마지막 레이어가 닫힐 때만 body 잠금 해제
         let openedLayerCount = 0;
 
         // layer_agree는 소형 동의 안내 성격이므로 페이지 스크롤을 막지 않는다.
@@ -167,12 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ============================================================
-    // 4) 기능 초기화 함수들
-    // - 각 기능은 독립 init 함수로 구성해 필요 시 개별 제거/수정이 쉽다.
-    // - 페이지에 대상 DOM이 없으면 early return 한다.
+    // 기능 초기화
+    // - 각 기능은 독립 함수로 분리해서 필요 시 개별 수정 가능
+    // - DOM이 없으면 early return 처리
     // ============================================================
 
-    // 푸터 "관련 사이트" 셀렉트 오픈 및 이동 처리
+    // 푸터 "관련 사이트" 셀렉트 열기/이동 처리
     function initRelatedSite() {
         const button = q('.site_footer .footer_relatedsite_box');
         const select = q('.site_footer select');
@@ -290,6 +288,9 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_progress', triggers: ['.btn_progress'] }, //페이지별 진도율 레이어
             { layer: '.layer_wrapper.layer_theory', triggers: ['.btn_theory'] }, //이론 유의사항 레이어
             { layer: '.layer_wrapper.layer_practice', triggers: ['.btn_practice'] }, //사회복지현장실습 과정 수강 시 유의사항 레이어
+            { layer: '.layer_wrapper.layer_taskScore', triggers: ['.btn_taskScore'] }, //과제 성적 확인 레이어
+            { layer: '.layer_wrapper.layer_discussionScore', triggers: ['.btn_discussionScore'] }, //토론 성적 확인 레이어
+            { layer: '.layer_wrapper.layer_discussionTopic', triggers: ['.btn_discussionTopic'] }, //토론 주제 확인 레이어
         ]);
     }
 
@@ -605,9 +606,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ============================================================
-    // 5) 부트스트랩 실행
-    // - 위에서 정의한 초기화 함수를 실제 실행하는 구간.
-    // - 초기화 순서를 여기서만 관리하면 전체 흐름 파악이 쉽다.
+    // 초기 실행
+    // - 공통 초기화 → 레이어 등록 → 페이지별 기능 초기화 순서로 진행
     // ============================================================
     [initRelatedSite, initGnbToggle, initQuickTop, initSelectValueColor].forEach((initializer) => initializer());
     const registerLayers = createLayerRegistrar();
@@ -617,4 +617,48 @@ document.addEventListener('DOMContentLoaded', () => {
         initCustomSelect,
         initNoticeTabs,
     ].forEach((initializer) => initializer());
+    
+    // 탭 (HTML에서 초기 active 지정)
+    document.querySelectorAll('.tab_container').forEach(container => {
+        const links = container.querySelectorAll('[data-tab]');
+        const contents = container.querySelectorAll('.tab_content');
+        links.forEach(a => a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const id = a.dataset.tab || (a.getAttribute('href') || '').replace('#','');
+            if (!id) return;
+            links.forEach(l => l.classList.remove('active')); a.classList.add('active');
+            contents.forEach(c => c.classList.toggle('active', c.id === id));
+        }));
+    });
+
+    // 큰 탭 (각 .tabmenu 범위 안에서만 활성 상태를 전환)
+    qa('.tab_first').forEach((container) => {
+        const buttons = qa('.tabmenu_first button', container);
+        const contents = qa('.tabmenu_content', container);
+
+        buttons.forEach((button) => {
+            onClick(button, () => {
+                const activeContent = q(`#${button.dataset.tab}`, container);
+                if (!activeContent) {
+                    return;
+                }
+
+                buttons.forEach((tabButton) => tabButton.classList.remove('active'));
+                contents.forEach((content) => content.classList.remove('active'));
+                button.classList.add('active');
+                activeContent.classList.add('active');
+
+                qa('.calendar_rolling.swiper-container', container).forEach((element) => {
+                    const swiperInstance = element.swiper;
+                    if (swiperInstance) {
+                        swiperInstance.update();
+                        if (swiperInstance.autoplay?.running) {
+                            swiperInstance.autoplay.start();
+                        }
+                    }
+                });
+            });
+        });
+    });
+    
 });

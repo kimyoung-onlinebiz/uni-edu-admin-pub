@@ -327,4 +327,35 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .layer_mainEvent .swiper-pagination-bullet { background:var(--Neutral-600); opacity:1; margin:0 2px !important; }
 .layer_mainEvent label { position:absolute; bottom:50%; margin:0 0 -285px 290px; color:var(--Neutral-0); font-size:var(--Font-xsmall) }
 
+/* 개강 디데이 띠배너 */
+.openClass_banner { position:relative; display:flex; justify-content:center; width:100%; height:80px; background:var(--Neutral-900); }
+.openClass_banner .banner_content { display:flex; align-items:center; justify-content:space-between; width:1280px; height:100%; }
+.openClass_banner .info_group { position:relative; display:flex; align-items:center; gap:24px; margin-left:55px; }
+.openClass_banner .info_group:before { content:"event_note"; font-family:"Material Symbols Rounded"; position:absolute; top:-3px; left:-55px; font-size:var(--Font-2xlarge); color:var(--Secondary); border:1px solid var(--Secondary); border-radius:50%; width:40px; height:40px; display:flex; align-items:center; justify-content:center; }
+.openClass_banner .term_info { display:flex; gap:16px; align-items:center; font-size:var(--Font-small); color:var(--Neutral-300); }
+.openClass_banner .opening_badge {
+    background-color:var(--Neutral-800);
+    color: #fff;
+    padding: 2px 16px;
+    border-radius: 20px;
+    font-size:var(--Font-xsmall);
+    font-weight:500;}
+.openClass_banner .deadline_text { font-size:var(--Font-2xlarge); font-weight:500; color:var(--Neutral-0); }
+.openClass_banner .deadline_text strong { font-weight:700; color:var(--Warning); }
+.openClass_banner .banner_content a { display:inline-block; background-color:var(--Error); color:#000; width:140px; text-align:center; line-height:50px; height:50px; border-radius:var(--Border-radius); font-size:var(--Font-large); font-weight:700; }
+.openClass_banner .banner_content a:hover {  background-color:#fd5b5b;  }
+.openClass_banner .timer_group { display:flex; align-items:center; gap:32px; }
+.openClass_banner .timer_label { position:relative; color:var(--Neutral-300); font-size:var(--Font-small); }
+.openClass_banner .timer_label::before { content:"hourglass_empty"; font-family:"Material Symbols Rounded"; position:absolute; top:-10px; left:-55px; font-size:var(--Font-2xlarge); color:var(--Secondary); border:1px solid var(--Secondary); border-radius:50%; width:40px; height:40px; display:flex; align-items:center; justify-content:center; }
+.openClass_banner .countdown { display:flex; align-items:center; gap:32px; margin-right:24px; }
+.openClass_banner .countdown span { position:relative; width:60px; height:50px; text-align:center; background-color:#2e2e2e; color:var(--Neutral-0); font-size:var(--Font-3xlarge); font-weight:600; padding:6px 0 0 0; border-radius:var(--Border-radius); }
+.openClass_banner .countdown .days { margin-right:24px; }
+.openClass_banner .countdown .days:after { position:absolute; top:20px;  right:-20px;  content:" 일 "; font-size:var(--Font-small); color:var(--Neutral-500); }
+.openClass_banner .countdown .time:after { position:absolute; right:-20px;  content:" : "; color:var(--Neutral-500); }
+.openClass_banner .countdown .time:last-child:after { content:none; }
 
+/* 메인 어드민 연동 팝업 */
+.main_popup { z-index:999; }
+.main_popup .popup_close { position:absolute; top:0; right:0;  background:rgba(255,255,255,.5); color:#000; width:28px; height:28px; font-weight:300; line-height:28px; }
+.main_popup .main_popup_footer { background:var(--Neutral-100); padding:5px 24px; display:flex; align-items:center; border-top:1px solid var(--Neutral-300); justify-content:space-between; font-size:var(--Font-xsmall); font-weight:600; color:var(--Neutral-800); }
+.main_popup .popup_hide_checkbox { width:14px; height:14px; }

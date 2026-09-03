@@ -12,26 +12,32 @@
 .lnb_wrap nav > ul:last-child ul { margin-bottom:0; padding-bottom:16px; }
 .lnb_wrap nav strong.active { color:var(--Primary-500); }
 .lnb_wrap nav a { display:flex; width:100%; box-sizing:border-box; align-items:center; padding:8px 20px 8px 36px; transition:background .2s ease, color .2s ease, padding .2s ease; border-top:1px solid var(--Neutral-0); font-weight:500; }
-.lnb_wrap nav a:hover, .lnb_wrap nav a.active { background:#ECF2FE; color:var(--Primary-500);  }
+.lnb_wrap nav a:hover, .lnb_wrap nav a.active { background:#ECF2FE; color:var(--Primary-500); }
 .lnb_wrap nav a.active { padding-left:36px; }
 .lnb_wrap .current_courses, .lnb_wrap .classroom_shortcut { background:var(--Neutral-200); border-radius:var(--Border-2radius); padding:4px 8px; }
-.lnb_wrap h3 { font-size:var(--Font-large); font-weight:700; border-bottom:1px solid var(--Neutral-300); padding-bottom:10px; margin-bottom:13px; }
+.lnb_wrap h3 { font-size:var(--Font-large); font-weight:700; border-bottom:1px solid var(--Neutral-300); padding-bottom:10px; margin:0 20px 13px 20px; }
 .lnb_wrap h3 strong { font-size:var(--Font-medium); color:var(--Primary-500); font-weight:700; margin-left:4px; }
 .lnb_wrap .current_courses a { padding:6px 8px; display:block; }
 .lnb_wrap .current_courses a:hover { text-decoration:underline; text-decoration-color:var(--Primary-500); text-underline-offset:3px; }
-.lnb_wrap .current_courses,.lnb_wrap .classroom_shortcut { display:flex; flex-direction:column; padding:20px 15px 20px 20px; }
-.current_courses div { height:165px; overflow-y:auto; }
-.lnb_wrap .classroom_shortcut a { display:flex; align-items:center; gap:8px; padding:6px 8px 6px 0; font-weight:600; }
+.lnb_wrap .current_courses,.lnb_wrap .classroom_shortcut { display:flex; flex-direction:column; padding:20px 0; }
+.current_courses div { height:165px; overflow-y:auto; padding:0  0 0 20px; margin-right:15px; }
+.lnb_wrap .classroom_shortcut a { display:flex; align-items:center; gap:8px; padding:6px 8px 6px 20px; font-weight:600; }
 .lnb_wrap .classroom_shortcut a span { color:var(--Primary-500); padding-right:5px; }
 .lnb_wrap .classroom_shortcut a.active { color:var(--Primary-500); font-weight:700; }
-.subpage_content { position:relative; flex:0 0 960px; min-width:0; margin-top:56px; }
-.subpage_content .sub_header { width:100%; display:flex; align-items:center; justify-content:space-between; padding-bottom:21px; }
+.lnb_wrap .classroom_shortcut a:hover { background:#ECF2FE; }
+.lnb_wrap .classroom_shortcut a:after { content:"keyboard_arrow_right"; font-family:'Material Symbols Rounded'; font-size:var(--Font-3xlarge); color:var(--Neutral-600); font-variation-settings:'FILL' 1,'wght' 200; margin-left:auto; }
+.lnb_wrap .classroom_shortcut a:hover:after,.lnb_wrap .classroom_shortcut a.active:after { color:var(--Primary-500); font-variation-settings:'FILL' 1,'wght' 300; }
+.subpage_content { position:relative; flex:0 0 960px; min-width:0; margin-top:24px; }
+.subpage_content .sub_header { position:relative; width:100%; display:flex; align-items:center; justify-content:space-between; padding-bottom:19px; margin-top:35px; }
 .subpage_content .sub_header .sub_header_info { display:flex; align-items:center; gap:16px; }
-.subpage_content .sub_header h3 { font-size:var(--Font-2xlarge); font-weight:700; }
+.subpage_content .sub_header h3 { font-size:var(--Font-2xlarge); font-weight:700; line-height:1.2; }
 .subpage_content .sub_header h3 strong { color:var(--Primary-500); font-weight:700; }
-.sub_header .sub_header_info p { margin:0; color:var(--Neutral-600); }
-.subpage_content .sub_header h4 { width:100%; font-size:var(--Font-xlarge); font-weight:600; margin:32px 0 0; }
-.subpage_content .sub_header.border { border-bottom: 1px solid var(--Neutral-900);  margin-bottom:26px; }
+.sub_header .sub_header_info p { margin:0; color:var(--Neutral-600); padding-top:3px;}
+.subpage_content .sub_header h4 { font-size:var(--Font-xlarge); font-weight:600; margin:0 0 0 10px; }
+.sub_header .sub_header_info h4 { margin-top:0; }
+.subpage_content .sub_header.border { border-bottom: 1px solid var(--Neutral-900);  margin-bottom:24px; }
+.subpage_content .sub_header button,.subpage_content .sub_header a.btn { color:var(--Neutral-800); }
+.subpage_content .sub_header a.primary,.subpage_content .sub_header button.primary { color:var(--Neutral-0); }
 
 .sub_header .essential { font-size:var(--Font-2xsmall) !important; }
 
@@ -328,7 +334,7 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .layer_schoolSchedule .schedule li.past { border:1px solid var(--Neutral-300); background:var(--Neutral-100); }
 .layer_schoolSchedule .schedule li p { font-size:var(--Font-xsmall);  }
 .layer_schoolSchedule .schedule strong { display:flex; justify-content:space-between; align-items:center; margin-bottom:3px; }
-.layer_schoolSchedule .schedule strong span { width:58px;  text-align:center; margin-top:-4px;; display:inline-block; font-size:var(--Font-2xsmall); border:1px solid var(--Primary-500); border-radius:50px; padding:3px 0; background:var(--Primary-500); font-weight:500; color:var(--Neutral-0); line-height:1; }
+.layer_schoolSchedule .schedule strong span { width:58px;  text-align:center; margin-top:-4px; display:inline-block; font-size:var(--Font-2xsmall); border:1px solid var(--Primary-500); border-radius:50px; padding:3px 0; background:var(--Primary-500); font-weight:500; color:var(--Neutral-0); line-height:1; }
 .layer_schoolSchedule .schedule li.past p { color:var(--Placeholder); }
 .layer_schoolSchedule .schedule .past strong { color:var(--Placeholder); }
 .layer_schoolSchedule .schedule .past strong span { background:var(--Neutral-0); color:var(--Placeholder); border:1px solid var(--Neutral-300); }
@@ -341,17 +347,21 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .all_schedule dt { width:100px; font-weight:600; }
 
 /* 레이어 과제 제출 */
-.submission_info { display:flex;  gap:16px; padding:20px; background:var(--Neutral-100); border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); flex-direction:column; }
+.submission_info { display:flex;  gap:16px; padding:24px 32px; background:var(--Neutral-200); border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); flex-direction:column; }
 .submission_info dl { display:flex; align-items:center; gap:24px; }
-.submission_info dt { font-weight:700; width:60px; }
+.submission_info dt { font-weight:700; width:80px; }
 .submission_info dd { font-size:var(--Font-small); }
-.submission_info dd + dt { margin-left:60px; width:30px; }
+.submission_info dd + dt { margin-left:90px; width:30px; }
+.attachment { margin-bottom:16px; }
 .attachment .download_area { display:flex; flex-direction:column; gap:8px; width:100%; }
 .attachment .download { display:flex; align-items:center; gap:16px; justify-content:space-between; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:8px 20px; width:100%; }
 .attachment .download div { display:flex; gap:16px; }
 .attachment .download p span { color:var(--Neutral-600); padding-left:10px; }
-.attachment .download a,.attachment .download p { font-size:var(--Font-small); }
-.editor_content { margin-top:16px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:40px; }
+.attachment .download button,.attachment .download p { font-size:var(--Font-small); }
+.attachment .download button:hover { color:var(--Primary-500); }
+.attachment .download div button:last-child span { font-size:20px; vertical-align:-6px;}
+.editor_content { border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:40px; }
+.editor_content.title { padding:8px 40px; margin-bottom:16px; }
 .discussion_form { display:flex; flex-direction:column; gap:16px; }
 
 .discussion_form input,
@@ -384,7 +394,7 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .message_item_body .message_item_title:before { content:"Mail"; padding-right:6px; font-family:'Material Symbols Rounded'; font-size:24px; font-weight:400; display:inline-block;  color:var(--Primary-500); font-variation-settings:'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24; vertical-align:middle; }
 .message_item_body.read .message_item_title:before { content:"drafts"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; }
 .layer_messageBox .message_txt { padding-top:24px; width:530px; }
-.layer_messageBox .message_head { border-bottom:1px solid var(--Neutral-300); padding-bottom:20px; display:flex; flex-direction:column; }
+.layer_messageBox .message_head { border-bottom:1px solid var(--Neutral-300); padding-bottom:20px;  }
 .layer_messageBox .message_head p { font-size:var(--Font-large); font-weight:700; margin:12px 0 8px; }
 .layer_messageBox .message_head span:last-child { color:var(--Placeholder); font-size:var(--Font-xsmall); }
 .layer_messageBox .message_body { padding:40px 20px 60px; border-bottom:1px solid var(--Neutral-300); height:374px; overflow:auto; overflow-x:hidden; }
@@ -437,7 +447,7 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .classroom .lecture_view .lecture_list { display:flex; flex-direction:column; gap:24px; }
 .classroom .lecture_list li { display:flex; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); flex-direction:column; overflow:hidden; }
 .classroom .lecture_list li .btn { width:200px; border:1px solid var(--Primary-500); font-weight:600; height:40px; }
-.classroom .lecture_list li .btn.primary:disabled { color:var(--Primary-500) !important; }
+.classroom .lecture_list li .btn.primary:disabled { color:var(--Neutral-600) !important; }
 .classroom .lecture_list .ot_card,.classroom .lecture_list .exam_card { background:var(--Neutral-0); padding:24px 32px; display:flex; align-items:center; gap:32px; flex-direction:row; }
 .classroom .lecture_list .title { width:150px; }
 .classroom .lecture_list .exam_card .title { width:40px; }
@@ -466,9 +476,10 @@ ol.layer_guide li { list-style:decimal; margin-left:20px; }
 ol.layer_guide li strong { color:var(--Info); }
 
 /* 게시판 리스트 */
-.board_list { display:flex; flex-direction:column; gap:24px; }
+.board_list { display:flex; flex-direction:column; }
+
 .board_list .material-symbols-rounded { font-weight:300; }
-.board_search { display:flex; gap:16px; }
+.board_search { display:flex; gap:16px; margin-bottom:24px; }
 .board_search select,.board_search input,.board_search button,.board_search a { height:40px; }
 .board_search a { line-height:36px; }
 .board_search button { background:var(--Neutral-800); width:100px; color:var(--Neutral-0); font-weight:700; font-size:var(--Font-small); border-radius:var(--Border-radius); }
@@ -476,16 +487,97 @@ ol.layer_guide li strong { color:var(--Info); }
 .board_search.stacked { flex-direction:column; gap:8px; }
 .board_search.stacked .search_bottom a { margin-left:auto; }
 .board_view .board_view_header { padding:0 24px; margin-bottom:16px; }
-.board_view .board_view_header h4 { font-size:var(--Font-large); font-weight:700; margin:8px 0; }
+.board_view .board_view_header h4 { font-size:var(--Font-large); font-weight:700; margin:12px 0 8px; }
 .board_view .editor_content {  border:none; border-bottom:1px solid var(--Neutral-500); border-radius:0; padding:24px 20px 40px; margin-top:0;}
-.board_view .attachment { display:flex; flex-direction:row; margin-bottom:16px; }
+.board_view .editor_content.border { border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius);}
+.board_view .attachment { display:flex; flex-direction:row; }
 .board_view .attachment > p { font-weight:700; font-size:var(--Font-base); margin:14px 24px 0 24px; }
 .board_view .date { color:var(--Neutral-600); font-size:var(--Font-small); }
 .board_view .board_view_footer { display:flex; gap:16px; align-items:center; margin-top:56px;justify-content:center; }
-.board_view .board_view_footer a { width:200px; height:40px; text-align:center; line-height:36px; }
+.board_view .board_view_footer a { width:200px; height:40px; text-align:center; line-height:36px; border:1px solid var(--Primary-500); }
 .board_reple { margin-top:32px; }
 .board_reple h5 { color:var(--Primary-600); font-size:var(--Font-medium); font-weight:700; margin-bottom:11px; }
 .board_reple h5 span { padding-right:5px; font-size:24px; }
 .board_view .reple_content { display:flex; flex-direction:column; gap:16px; border-radius:var(--Border-2radius); border:1px solid var(--Neutral-500); padding:24px; margin-bottom:24px; }
 .board_view .board_reple_header .label { margin-right:16px; vertical-align:2px; }
 .board_view .board_reple .attachment > p { margin:14px 24px 0 0px; }
+
+/* 학사일정 캘린더 */
+.calendar_wrap { width:100%; }
+.calendar_wrap .calendar_header { height:70px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
+.calendar_wrap .calendar_nav { height:100%; display:flex; align-items:center; justify-content:center; gap:18px; }
+.calendar_wrap .btn_today { width:65px; height:32px; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); font-size:var(--Font-small); }
+.calendar_wrap .btn_month { width:40px; background:transparent; border-radius:var(--Border-radius); }
+.calendar_wrap .btn_month:hover,.calendar_wrap .btn_today:hover { background:var(--Primary-100); }
+.calendar_wrap .btn_month .material-symbols-rounded { font-size:32px; vertical-align:top; font-weight:300; }
+.calendar_wrap .current_month { text-align:center; font-size:var(--Font-2xlarge); font-weight:700; }
+
+.calendar_wrap .calendar_tab { margin-top:22px; }
+.tabmenu_first { display:flex; height:56px; padding:0; margin:0; border-bottom:1px solid #dfe3eb; list-style:none; margin-bottom:52px; }
+.tabmenu_first li { flex:1; }
+.tabmenu_first button { position:relative; width:100%; height:56px; padding:0; border:0; background:transparent; color:var(--Placeholder); font-size:var(--Font-large); font-weight:600; }
+.tabmenu_first button.active { color:var(--Primary-500); font-weight:700; }
+.tabmenu_first button.active::after { content:""; position:absolute; left:0; bottom:0; width:100%; height:4px; background:var(--Primary-500); }
+
+.tabmenu_content { display:none; }
+.tabmenu_content.active { display:block; }
+
+.calendar_wrap .calendar { border-top:1px solid var(--Neutral-300); }
+.calendar_wrap .calendar_week, .calendar_wrap .calendar_row { display:grid; grid-template-columns:repeat(7, 1fr); }
+.calendar_wrap .calendar_week { height:40px; border-bottom:1px solid var(--Neutral-300); }
+.calendar_wrap .calendar_week > div { display:flex; align-items:center; justify-content:center; font-size:var(--Font-medium); font-weight:600; }
+.calendar_wrap .calendar_week .sun { color:var(--Error); }
+.calendar_wrap .calendar_week .sat { color:var(--Info); }
+
+.calendar_wrap .calendar_row { height:122px; }
+.calendar_wrap .calendar_day { position:relative; display:flex; flex-direction:column; padding:12px 8px; border-right:1px solid var(--Neutral-300); border-bottom:1px solid var(--Neutral-300); }
+.calendar_wrap .calendar_day:first-child { border-left:1px solid var(--Neutral-300); }
+.calendar_wrap .day_num { display:block; margin-bottom:7px; font-size:var(--Font-medium); font-weight:600; text-align:left; }
+.calendar_wrap .calendar_day.sun .day_num { color:var(--Error); }
+.calendar_wrap .calendar_day.sat .day_num { color:var(--Info); }
+.calendar_wrap .calendar_day.other_month .day_num { color:var(--Placeholder); }
+.calendar_wrap .calendar_day.selected { outline:1px solid var(--Info); outline-offset:-1px; z-index:1; }
+
+.calendar_wrap .schedule_list { display:flex; flex-wrap:wrap; flex-direction:column; gap:4px; height:50px; overflow:hidden }
+.calendar_wrap .schedule_list span { width:120px; min-width:0; height:22px; padding:3px 8px 0; box-sizing:border-box; border-radius:var(--Border-radius); overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:var(--Font-2xsmall); font-weight:500; }
+.calendar_wrap .study { background:var(--Info-soft); color:var(--Info); border: 1px solid var(--Info-soft); } /* 공부 */
+.calendar_wrap .exam { border:1px solid var(--Error-soft); background:var(--Error-soft); color:var(--Error); } /* 시험 */
+.calendar_wrap .assignment { border:1px solid var(--Success-soft); background:var(--Success-soft); color:var(--Success); } /* 과제 제출 */
+.calendar_wrap .evaluation { border:1px solid var(--Neutral-300); background:var(--Neutral-300); color:var(--Neutral-600); } /* 성적 공개 */
+.calendar_wrap .practice { border:1px solid #efe6fd; background:#efe6fd; color:#7936D2; } /* 실습 */
+.calendar_wrap .discussion { border:1px solid #fff2ca; background:#fff2ca; color:#a77e02; } /* 토론 */
+.calendar_wrap .quiz { border:1px solid #eaf6ca; background:#eaf6ca; color:#658600; } /* 퀴즈 */
+.calendar_wrap .offline { border:1px solid #d9f5f5; background:#d9f5f5; color:#229b9b; } /* 오프라인 출석 */
+.calendar_wrap .calendar_day .more { display:block; margin-top:8px; padding-right:2px; color:var(--Neutral-600); text-align:right; font-size:var(--Font-2xsmall); }
+.calendar_wrap .learning_type { display:flex; gap:8px 20px; padding:24px; background:var(--Neutral-100); border-radius:var(--Border-2radius); margin-top:52px; flex-wrap:wrap; }
+.calendar_wrap .sub_header { margin-top:52px; }
+.calendar_wrap .calendar_schedule { display:flex; gap:20px; flex-wrap:wrap; }
+.calendar_wrap .calendar_schedule li { width:calc((100% - 20px) / 2); border: 1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:20px; }
+.calendar_wrap .calendar_schedule dl,.calendar_rolling .rolling_list dl { display:flex; align-items:center; margin:6px 0 0; }
+.calendar_wrap .calendar_schedule dl:first-of-type,.calendar_rolling .rolling_list dl:first-of-type { margin-top:16px; }
+.calendar_wrap .calendar_schedule dt,.calendar_rolling .rolling_list dt { width:62px; font-weight:600; }
+
+/* 이번주 주요 일정 롤링 */
+.calendar_rolling { display:flex; align-items:center; flex-direction:column; padding:16px 24px; }
+.calendar_rolling.swiper-container { box-sizing:border-box; overflow:hidden; }
+.calendar_rolling .swiper-wrapper { display:flex; width:100%; margin-left:0; }
+.calendar_rolling .swiper-button-prev, .calendar_rolling .swiper-button-next { position:static; width:18px; height:18px; margin:0;color: var(--Neutral-900); }
+
+.calendar_rolling .swiper-button-prev:after,
+.calendar_rolling .swiper-button-next:after { font-size:12px; font-weight:800; }
+.calendar_rolling .controls { width:80px; position:absolute; left:165px; top:4px; display:flex; align-items:center;justify-content:center; gap:2px; border-radius:100px; background:rgba(255, 255, 255, 0.60); z-index:1; }
+.calendar_rolling .fraction { width:32px; }
+.calendar_rolling .rolling_list { display:flex;  width:100%; justify-content:flex-start; }
+.calendar_rolling .rolling_list li { width:306px; border: 1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:20px; margin-right:21px; }
+.calendar_rolling.is-disabled .controls { display:none; }
+.calendar_rolling .rolling_list li div { display:flex; justify-content:space-between; align-items:center; }
+.calendar_rolling .rolling_list div strong { font-size:var(--Font-medium); }
+
+.list_table .btn { min-width:105px; color:var(--Neutral-800); white-space:nowrap; }
+.submit_form { display:flex; flex-direction:column; gap:16px; }
+.submit_form input[type="text"] { width:100%; height:50px; border:1px solid var(--Neutral-300); }
+.submit_form textarea { resize:vertical; height:200px; border:1px solid var(--Neutral-300); }
+.layer_discussionTopic .layer_content,.layer_taskScore .layer_content { width:800px; }
+
+/* 시험 응시 */
+.exam_list { margin-top:42px; }
