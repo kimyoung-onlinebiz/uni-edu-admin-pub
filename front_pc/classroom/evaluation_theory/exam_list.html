@@ -363,7 +363,7 @@
             <!-- //sub header -->
 
             <div class="txt_guide">
-                <strong>시험 응시 유의사항</strong>
+                <strong>유의사항</strong>
                 <ul>
                     <li> 반드시 정규 시험 기간 내 응시해주시기 바랍니다.</li>
                     <li>시험 응시 중에는 시험지 창 이외 화면으로 이동 및 클릭이 불가합니다.</li>
@@ -414,7 +414,7 @@
                         </select>
                     </div>
 
-                    <table class="list_table">
+                    <table class="list_table"> <!-- fixed 추가 시 사이즈 고정 -->
                         <caption>시험응시 리스트</caption>
                         <colgroup> 
                             <col style="width:60px;">
@@ -477,7 +477,7 @@
                                 <td>
                                     <button type="button" class="btn borderBlue">비정상종료</button>
                                 </td>
-                                <td><button type="button" class="btn primary">재응시</button></td> 
+                                <td><button type="button" class="btn primary btn_re_examGuide">재응시</button></td> 
                                 <td></td>
                                  <td>
                                     <button type="button" class="btn">성적 확인</button>
@@ -490,7 +490,7 @@
                                 <td>지역사회복지론</td>
                                 <td>2026-03-05 00:00:00 ~ 2026-03-31 23:59:00</td>
                                 <td>
-                                    <button type="button" class="btn primary">응시하기</button>
+                                    <button type="button" class="btn primary btn_examGuide">응시하기</button>
                                 </td>
                                 <td></td>
                                 <td></td>
@@ -620,7 +620,7 @@
                                 <td>
                                     <button type="button" class="btn borderBlue">비정상종료</button>
                                 </td>
-                                <td><button type="button" class="btn primary">재응시</button></td> 
+                                <td><button type="button" class="btn primary btn_re_examGuide">재응시</button></td> 
                                 <td></td>
                                  <td>
                                     <button type="button" class="btn">성적 확인</button>
@@ -664,7 +664,82 @@
                 <!-- //기말고사 리스트 -->
 
             </div>
+            
+            <!-- 레이어 / 시험 유의사항 -->
+            <div class="layer_wrapper layer_examGuide"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
 
+                    <header>
+                        <div>
+                            <h1>시험 유의사항</h1>
+                        </div>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </header>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="layer_guide">
+                            <ol>
+                                <li>시험 중에는 Ctrl, Tab, Shift, Print Screen 등의 특수키 사용이 제한됩니다.<br />해당 키 사용은 부정행위로 의심될 수 있으므로 주의해주세요. (키 입력이 되지 않을 경우 재부팅 후 재응시 바랍니다.)</li>
+                                <li><strong>응시시간은 60분이며, 종료 시 자동 제출됩니다.</strong></li>
+                                <li>시험 중 메신저, 문서, PDF 등 시험 응시 프로그램 외 다른 프로그램이 강제 종료될 수 있습니다.<br />저장이 필요한 내용은 반드시 저장하시기를 권장드립니다. 저장되지 않은 내용에 대해 본 교육원은 책임지지 않습니다.</li>
+                                <li>부정행위 방지를 위해 시험 시작 15분 후부터 시험지 제출이 가능합니다.</li>
+                                <li><strong>시험 부정행위가 의심되는 경우 0점 처리 될 수 있습니다.</strong></li>
+                            </ol>
+                            <div class="check">
+                                <label>
+                                    <input type="checkbox"> 시험 유의사항을 모두 확인하였고 동의합니다.
+                                </label>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary">시험 응시하기</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //레이어 / 시험 유의사항 -->
+
+            <!-- 레이어 / 재시험 유의사항 -->
+            <div class="layer_wrapper layer_re_examGuide"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <header>
+                        <div>
+                            <h1>재시험 유의사항</h1>
+                        </div>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </header>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="layer_guide">
+                            <ol>
+                                <li>시험 중 컴퓨터/인터넷 오류로 인해 비정상적으로 종료된 경우에만 재응시가 가능합니다.<br />(정상적으로 응시를 완료한 시험은 재응시가 불가합니다.)</li>
+                                <li><strong>재응시 시 기존 시험 결과는 초기화되며, 새로 응시한 결과만 최종 반영됩니다.<br />시험 문제 및 시간은 모두 새로 부여되며, 동일 문제가 출제되지 않을 수 있습니다.</strong></li>
+                                <li>컴퓨터 또는 인터넷 오류로 시험이 비정상 종료된 경우, 1회에 한해 재응시가 가능합니다.<br />재응시 후 동일 증상 반복시 오류화면 캡처 뒤 교육원으로 문의해주시기 바랍니다.</li>
+                            </ol>
+                            <div class="check">
+                                <label>
+                                    <input type="checkbox"> 시험 유의사항을 모두 확인하였고 동의합니다.
+                                </label>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection">
+                        <button class="btn primary btn_re_examGuide">시험 재응시하기</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //레이어 / 재시험 유의사항 -->
 
         </section>
         <!--// 콘텐츠 영역 -->

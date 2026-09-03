@@ -306,8 +306,10 @@ border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  backgr
 .evaluation_list a.evaluation_item.active { border:1px solid var(--Primary-500); background:var(--Primary-500); }
 .evaluation_list a.evaluation_item.active:hover { border:1px solid var(--Primary-700); background:var(--Primary-700); }
 .evaluation_list a.evaluation_item.active dt,.evaluation_list a.evaluation_item.active dd { color:var(--Neutral-0); }
-.subpage_content .txt_guide { position:relative; color:var(--Primary-500); font-size:var(--Font-xsmall); padding:24px 32px 24px 57px; background:var(--Info-soft); border-radius:var(--Border-radius); }
-.subpage_content .txt_guide:before { position:absolute; content:"info"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1,'wght' 700; font-size:20px; left:30px; top:19px; }
+.subpage_content .txt_guide,.login_guide { position:relative; color:var(--Primary-500); font-size:var(--Font-xsmall); padding:24px 32px 24px 57px; background:var(--Info-soft); border-radius:var(--Border-radius); }
+.subpage_content .txt_guide:before,.login_guide:before { position:absolute; content:"info"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1,'wght' 700; font-size:20px; left:30px; top:19px; }
+.login_guide { display:flex; flex-direction:column; gap:8px; margin-bottom:30px;}
+.login_guide a { width:120px; text-align:center; margin-left:80px;}
 .subpage_content .txt_guide strong { display:flex; justify-content:space-between; font-weight:700; font-size:var(--Font-base); }
 .subpage_content .txt_guide strong .btn { height:28px; line-height:26px; font-size:var(--Font-xsmall); padding:0 12px; }
 .subpage_content .txt_guide ul { display:flex; flex-direction:column; gap:3px; margin-top:6px; }
@@ -581,3 +583,7 @@ ol.layer_guide li strong { color:var(--Info); }
 
 /* 시험 응시 */
 .exam_list { margin-top:42px; }
+.layer_guide ol { padding-left: 20px; }
+.layer_guide ol li { list-style-type: decimal; margin-bottom:4px; }
+.layer_guide strong { color:var(--Error) }
+.layer_guide .check { border-top:1px solid var(--Neutral-300); padding:24px 0 0; margin-top:24px; }

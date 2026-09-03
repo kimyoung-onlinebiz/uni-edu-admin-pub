@@ -291,6 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_taskScore', triggers: ['.btn_taskScore'] }, //과제 성적 확인 레이어
             { layer: '.layer_wrapper.layer_discussionScore', triggers: ['.btn_discussionScore'] }, //토론 성적 확인 레이어
             { layer: '.layer_wrapper.layer_discussionTopic', triggers: ['.btn_discussionTopic'] }, //토론 주제 확인 레이어
+            { layer: '.layer_wrapper.layer_examGuide', triggers: ['.btn_examGuide'] }, //시험 유의사항 레이어
+            { layer: '.layer_wrapper.layer_re_examGuide', triggers: ['.btn_re_examGuide'] }, //재시험 유의사항 레이어
         ]);
     }
 

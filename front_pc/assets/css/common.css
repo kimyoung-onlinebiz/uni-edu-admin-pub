@@ -95,7 +95,7 @@ input[type="time"] { width:140px; padding:0 8px;}
 input:disabled,textarea:disabled,input:read-only, textarea:read-only { background-color:var(--Neutral-300); color:var(--Neutral-500); cursor:not-allowed; }
 button:disabled { cursor:not-allowed; }
 input[type=text]:focus,input[type=password]:focus,textarea:focus,input[type=tel]:focus,select:focus,input[type=number]:focus,input[type=email]:focus { border:1px solid var(--Primary-500) !important; outline:transparent; color:var(--Neutral-900); box-shadow: 0 0 1px 1px rgba(21, 197, 206, 0.16); transition:all .2s; }
-input[type="checkbox"],input[type="radio"] { width:16px; height:16px; margin-right:8px; vertical-align:middle; cursor:pointer; accent-color:var(--Primary-500); margin-top:-1px; }
+input[type="checkbox"],input[type="radio"] { width:16px; height:16px; margin-right:8px; vertical-align:-3px; cursor:pointer; accent-color:var(--Primary-500); margin-top:-1px; }
 td:has(> input[type="checkbox"]:only-child):not(:has(> label)) > input[type="checkbox"],td:has(> input[type="radio"]:only-child):not(:has(> label)) > input[type="radio"],th:has(> input[type="checkbox"]:only-child):not(:has(> label)) > input[type="checkbox"],th:has(> input[type="radio"]:only-child):not(:has(> label)) > input[type="radio"] { margin: 0 !important;}
 select { appearance:none; background:#fff url(../images/common/select_arrow.png) no-repeat calc(100% - 12px) center; padding-right:40px; cursor:pointer; color:var(--Neutral-500); width:auto; line-height:1.2; font-size:var(--Font-small); }
 select.is-selected { color:var(--Neutral-900); font-weight:500; }
@@ -104,8 +104,8 @@ select:disabled { background-color:var(--Neutral-300); cursor:not-allowed; font-
 select:focus { border:1px solid var(--Primary-500); outline:transparent; }
 label { cursor:pointer; }
 input:disabled,textarea:disabled,input:disabled+label,textarea:disabled+label { cursor:not-allowed; }
-table { position:relative; max-width:none;	width:auto; min-width:100%; width:100%;border-collapse:collapse; border:0; border-spacing:0; table-layout:fixed; }
-table.auto { table-layout:auto; }
+table { position:relative; max-width:none;	width:auto; min-width:100%; width:100%;border-collapse:collapse; border:0; border-spacing:0; }
+table.fixed { table-layout:fixed; }
 caption, legend { text-indent:-9999px; overflow:hidden; height:0; }
 address { font-style:normal; }
 textarea { resize:vertical; min-height:150px; padding-top:8px; padding-bottom:8px; text-align:left; }
@@ -160,7 +160,7 @@ em { text-decoration:none; font-style:normal; }
 
 
 /* 2-1 기본 */
-.btn { display:inline-block; border:1px solid var(--Neutral-500); padding:2px 8px 0; height:32px; border-radius:var(--Border-radius); background:var(--Neutral-0); color:var(--Primary-500); font-size:var(--Font-small); font-weight:500; }
+.btn { display:inline-block; border:1px solid var(--Neutral-500); padding:1px 8px 0; height:32px; border-radius:var(--Border-radius); background:var(--Neutral-0); color:var(--Primary-500); font-size:var(--Font-small); font-weight:500; }
 .btn span { margin-left:-4px; padding-right:6px;}
 a.btn { line-height:28px; font-weight:500; }
 .btn:hover { background:var(--Primary-100); }
@@ -209,7 +209,7 @@ label.btn { line-height:28px; transition:all .2s; }
 
 .layer_btnSection { display:flex; gap:16px; justify-content:center; width:100%; padding-top:32px; }
 .layer_btnSection.right { justify-content:flex-end; }
-.layer_btnSection .btn { min-width:120px; height:40px; }
+.layer_btnSection .btn { min-width:120px; height:40px; font-size:var(--Font-medium); padding:1px 24px 0 }
 
 /* 말줄임 */
 .ellipsis { display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -343,7 +343,7 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 .data_table th:last-child,.data_table td:last-child,.view_table th:last-child,.view_table td:last-child { border-right:none; /* 맨 오른쪽 보더 없음 */ }
 .data_table tbody tr:hover,.view_table tbody td:hover { background-color:var(--Neutral-100); /* 호버 효과 */}
 .data_table thead > tr:first-child > th { border-top:none; }
-
+.list_table { table-layout:fixed; }
 .list_table::before,.view_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-900); }
 .list_table th,.list_table td { padding:10px; text-align:center; vertical-align:middle; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); }
 .list_table th,.view_table th { background:var(--Neutral-100); font-weight:500; text-align:center; }
