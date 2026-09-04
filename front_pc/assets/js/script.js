@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 단일 레이어 바인딩
         // - triggers: 클릭 시 해당 레이어를 여는 요소 목록
         // - shouldLockScroll: 닫을 때 closeLayer(카운트 포함) 사용 여부
-        const bindLayer = ({ layer, triggers = [], shouldLockScroll = true }) => {
+        const bindLayer = ({ layer, triggers = [], shouldLockScroll = true, closeCurrentLayer = false }) => {
             if (!layer) {
                 return;
             }
@@ -96,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isActionTag(event?.currentTarget)) {
                     event.preventDefault();
                 }
+
+                if (closeCurrentLayer) {
+                    closeLayer(event.currentTarget.closest(LAYER_SELECTOR));
+                }
+
                 openLayer(layer);
             };
 
@@ -142,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // - register(bindings): 설정 배열 기반으로 여러 레이어를 한 번에 등록
         // - 문자열 셀렉터/DOM 엘리먼트 둘 다 지원
         return (bindings = []) => {
-            bindings.forEach(({ layer, triggers = [], shouldLockScroll = true }) => {
+            bindings.forEach(({ layer, triggers = [], shouldLockScroll = true, closeCurrentLayer = false }) => {
                 const layerElement = typeof layer === 'string' ? q(layer) : layer;
                 const triggerElements = triggers
                     // 같은 셀렉터의 트리거가 여러 개여도 모두 이벤트 바인딩 대상에 포함한다.
@@ -159,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     layer: layerElement,
                     triggers: triggerElements,
                     shouldLockScroll,
+                    closeCurrentLayer,
                 });
             });
         };
@@ -293,6 +299,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_discussionTopic', triggers: ['.btn_discussionTopic'] }, //토론 주제 확인 레이어
             { layer: '.layer_wrapper.layer_examGuide', triggers: ['.btn_examGuide'] }, //시험 유의사항 레이어
             { layer: '.layer_wrapper.layer_re_examGuide', triggers: ['.btn_re_examGuide'] }, //재시험 유의사항 레이어
+            { layer: '.layer_wrapper.layer_add_examApply', triggers: ['.btn_add_examApply'] }, //추가시험 신청 레이어
+            { layer: '.layer_wrapper.layer_add_examApply_write', triggers: ['.btn_add_examApply_write'], closeCurrentLayer: true }, //추가시험 신청 작성 레이어
         ]);
     }
 

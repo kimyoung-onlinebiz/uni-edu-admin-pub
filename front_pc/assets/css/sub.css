@@ -76,7 +76,7 @@
 .login_box .login_input .input_area.borderT {  border-top:1px solid var(--Neutral-300); margin-top:40px; }
 .login_box .login_input .input_area .timer { position:absolute; right:8px; top:24px; }
 .login_box .login_input .input_area .timer span { color: var(--Neutral-500); margin-right:5px;}
-.login_box .login_check { display:block;margin-top:16px; }
+.login_box .login_check { display:inline-block;margin-top:16px; }
 
 .login_box .login_input .btn_delete { position:absolute; right:20px; bottom:15px;  background:var(--Neutral-500); border-radius:30px; text-align:center; width:20px; height:20px; }
 .login_box .login_input .btn_delete span { display:flex;color:var(--Neutral-0); padding:0 0 0 1px; font-size:18px; line-height:18px; }
@@ -306,16 +306,16 @@ border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  backgr
 .evaluation_list a.evaluation_item.active { border:1px solid var(--Primary-500); background:var(--Primary-500); }
 .evaluation_list a.evaluation_item.active:hover { border:1px solid var(--Primary-700); background:var(--Primary-700); }
 .evaluation_list a.evaluation_item.active dt,.evaluation_list a.evaluation_item.active dd { color:var(--Neutral-0); }
-.subpage_content .txt_guide,.login_guide { position:relative; color:var(--Primary-500); font-size:var(--Font-xsmall); padding:24px 32px 24px 57px; background:var(--Info-soft); border-radius:var(--Border-radius); }
-.subpage_content .txt_guide:before,.login_guide:before { position:absolute; content:"info"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1,'wght' 700; font-size:20px; left:30px; top:19px; }
+.txt_guide,.login_guide { position:relative; color:var(--Primary-500); font-size:var(--Font-xsmall); padding:24px 32px 24px 57px; background:var(--Info-soft); border-radius:var(--Border-radius); }
+.txt_guide:before,.login_guide:before { position:absolute; content:"info"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1,'wght' 700; font-size:20px; left:30px; top:19px; }
 .login_guide { display:flex; flex-direction:column; gap:8px; margin-bottom:30px;}
 .login_guide a { width:120px; text-align:center; margin-left:80px;}
-.subpage_content .txt_guide strong { display:flex; justify-content:space-between; font-weight:700; font-size:var(--Font-base); }
-.subpage_content .txt_guide strong .btn { height:28px; line-height:26px; font-size:var(--Font-xsmall); padding:0 12px; }
-.subpage_content .txt_guide ul { display:flex; flex-direction:column; gap:3px; margin-top:6px; }
-.subpage_content .txt_guide ul li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
-.subpage_content .txt_guide ul li::before { content:"•"; flex:0 0 12px; }
-.subpage_content .txt_guide ul li em { color:var(--Info);  }
+.txt_guide strong { display:flex; justify-content:space-between; font-weight:700; font-size:var(--Font-base); }
+.txt_guide strong .btn { height:28px; line-height:26px; font-size:var(--Font-xsmall); padding:0 12px; }
+.txt_guide ul { display:flex; flex-direction:column; gap:3px; margin-top:6px; }
+.txt_guide ul li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
+.txt_guide ul li::before { content:"•"; flex:0 0 12px; }
+.txt_guide ul li em { color:var(--Info);  }
 
 .tooltip { display:none; position:absolute; top:84px; padding:4px 16px;
 border-radius:var(--Border-radius); background:var(--Neutral-900); color:#fff; font-size:var(--Font-xsmall); font-weight:500; }
@@ -362,7 +362,7 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .attachment .download button,.attachment .download p { font-size:var(--Font-small); }
 .attachment .download button:hover { color:var(--Primary-500); }
 .attachment .download div button:last-child span { font-size:20px; vertical-align:-6px;}
-.editor_content { border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:40px; }
+.editor_content { border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:20px; }
 .editor_content.title { padding:8px 40px; margin-bottom:16px; }
 .discussion_form { display:flex; flex-direction:column; gap:16px; }
 
@@ -583,7 +583,72 @@ ol.layer_guide li strong { color:var(--Info); }
 
 /* 시험 응시 */
 .exam_list { margin-top:42px; }
-.layer_guide ol { padding-left: 20px; }
-.layer_guide ol li { list-style-type: decimal; margin-bottom:4px; }
+.layer_guide.gray { background:var(--Neutral-200); padding:20px; }
+.layer_guide ol { padding-left:20px; }
+.layer_guide ol > li { list-style-type: decimal; margin-bottom:12px; }
 .layer_guide strong { color:var(--Error) }
 .layer_guide .check { border-top:1px solid var(--Neutral-300); padding:24px 0 0; margin-top:24px; }
+.layer_guide ul,.layer_guide dl { display:flex; flex-direction:column; gap:3px; margin-top:4px; }
+.layer_guide dt { font-weight:600; }
+.layer_guide ul li,.layer_guide dd { display:flex; align-items:flex-start; font-size:var(--Font-small); }
+.layer_guide ul li::before,.layer_guide dd:before { content:"•"; flex:0 0 12px; }
+.layer_guide ul li span { display:block; color:var(--Error); font-size:var(--Font-xsmall); }
+
+.exam.popup_wrapper { width:100%; max-width:1280px; padding:32px; }
+.exam h1 { display:flex; align-items:center; font-size:var(--Font-2xlarge); font-weight:700; gap:16px; padding:0 16px 12px 0; border-bottom:1px solid var(--Neutral-300); margin-bottom:32px; align-items:flex-start; align-items:normal; }
+
+.exam_container { display:flex; gap:20px; }
+.exam_container .submission_info { height:108px; }
+.exam_container .exam_question { display:flex; width:800px; flex-direction:column; gap:32px; }
+.exam_container .answer_input { flex:1; min-width:0; gap:32px; display:flex; flex-direction:column; }
+.exam_container .exam_question .exam_body { display:flex; flex-direction:column; gap:24px; overflow:scroll; overflow-x:hidden; height:550px; padding-right:8px; }
+.exam_container .exam_txt { width:100%; padding:28px 24px 30px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); background:var(--Neutral-0); }
+.exam_container .exam_txt audio {  width:450px; display:block; margin:16px 0 8px; }
+.answer_input .submission_info dl { justify-content:space-between;  }
+.answer_input .submission_info dd { font-size:var(--Font-medium); }
+.answer_input .submission_info dd strong { color:var(--Info); }
+
+/* 문제 제목 */
+.exam_container .question_title { display:flex; align-items:flex-start; gap:8px; margin-bottom:24px; font-weight:600; }
+.exam_container .question_number { flex:0 0 auto; font-weight:700; }
+.exam_container .question_title div { margin:0; font-weight:600; font-size:var(--Font-medium); }
+.exam_container .question_title div span { display:block; margin:8px 0; }
+.exam_container .question_title div span img { max-width:100%; }
+.exam_container .question_title textarea { max-width:100%; display:block; display:block; margin:8px 0; }
+
+/* 보기 */
+.exam_container .answer_list { display:flex; flex-direction:column; gap:16px; }
+.answer_item { display:flex; align-items:flex-start; gap:16px; }
+.answer_item input[type="radio"] { flex:0 0 16px; margin:3px 0 0; }
+.answer_number { display:block; font-size:var(--Font-2xlarge); font-weight:200; line-height:1; }
+.answer_text { display:block; min-width:0; margin-top:1px; }
+.answer_text img { margin-bottom:8px; }
+.exam_navigation { padding:28px 10px 30px 16px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); height:550px; }
+.exam_navigation.score_check { height:690px; }
+.exam_navigation .navigation_head { display:flex; justify-content:space-between; align-items:center; padding-bottom:16px; border-bottom:1px solid var(--Neutral-900); }
+.exam_navigation .list_table:before { border-top:none; }
+.exam_navigation .navigation_head strong { font-weight:700; }
+.exam_navigation .navigation_head span strong { color:var(--Primary-500); }
+.exam_navigation .question_numbers { overflow-y:auto; max-height:440px;  overflow-x:hidden; }
+.exam_navigation.score_check .question_numbers{ max-height:580px; }
+.exam_navigation .question_numbers td { padding:8px 4px; }
+.exam_navigation .question_numbers tr:last-child td { border:none; }
+.exam_navigation .question_numbers td span { display:block; font-size:var(--Font-base); line-height:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* 점수확인 팝업 */
+/* 상태 원 (기본: 테두리만 있는 빈 원) */
+.exam_container .status_dot { width:16px; height:16px; border:1px solid var(--Neutral-600);border-radius:50%; margin-top:3px; flex-shrink: 0; }
+
+/* 사용자가 선택한 항목 (회색 원) */
+.exam_container .answer_item.user_select .status_dot {background-color:var(--Neutral-500); border-color:var(--Neutral-500); }
+
+/* 사용자와 정답이 일치 할 경우 (회색 원) */
+.answer_item.correct_answer.user_select .status_dot { background-color:var(--Neutral-900); border-color:var(--Neutral-900); }
+
+/* 정답 항목 (파란색 원) */
+.answer_item.correct_answer .status_dot { background-color:var(--Info); border-color:var(--Info); }
+.exam_container .explanation { margin-top:24px; padding:20px; border-radius:var(--Border-2radius); background:var(--Info-soft); }
+.exam_container .explanation .explanation_header { display:flex; }
+.exam_container .explanation > p { font-size:var(--Font-small); margin-top:12px; }
+.exam_container .explanation strong { color:var(--Info); font-weight:600; }
+.exam_container .explanation strong:after { content:"|"; padding:0 10px; }

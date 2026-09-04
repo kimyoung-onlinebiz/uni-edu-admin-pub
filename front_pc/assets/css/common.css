@@ -78,9 +78,10 @@ http://scripts.sil.org/OFL
 }
 
 /* 1. 기본 스타일 초기화 및 폰트 설정 */
-* { box-sizing:border-box; margin:0; padding:0; }
-html, body { min-width:1280px; }
-body { color:var(--Neutral-900); background-color:var(--Neutral-0); font-size:var(--Font-base); margin:0; padding:0; overflow-x:auto; word-break: keep-all; }
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html, body { width: 100%; }
+html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+body { color:var(--Neutral-900); background-color:var(--Neutral-0); font-size:var(--Font-base); word-break:keep-all; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button,a { font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;  line-height:1.4; color:var(--Neutral-900); font-weight:400; font-size:var(--Font-base); }
 dl,ul,ol,menu,li { list-style:none; }
 img { border:0; height:auto; line-height:100%; vertical-align:top; outline:none; text-decoration:none; }
@@ -305,6 +306,14 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 .custom_select .options { display:none; position:absolute; background:#fff; border:1px solid #767676; border-top:none; max-height:180px; overflow-y:auto; width:calc(100% + 2px); z-index:1000; padding:12px 20px; margin:-1px 0 0 -1px; }
 
 .custom_select .options label { display:block; padding:8px; cursor:pointer; }
+
+/* 카운트 있는 textarea */
+.textarea_wrap { position:relative; width:100%; }
+.textarea_wrap textarea { display:block; width:100%; padding:25px 20px 40px; border:1px solid var(--Neutral-300); background:var(--Neutral-0); resize: none;
+outline:none; }
+
+.textarea_count { position:absolute; right:16px; bottom:8px; color:var(--Placeholder); font-size:var(--Font-2xsmall); font-weight:400; }
+.textarea_count em { font-style:normal; }
 
 /* 경고/가이드 텍스트 */
 .form_warning p,
