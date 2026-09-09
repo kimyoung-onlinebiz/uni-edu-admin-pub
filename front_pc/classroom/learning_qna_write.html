@@ -368,7 +368,7 @@
             <article class="board_view">
 
                 <table class="view_table">
-                    <caption>과목 공지사항</caption>
+                    <caption>학습 Q&A</caption>
                     <colgroup>
                         <col style="width:25%;">
                         <col>
@@ -377,7 +377,7 @@
                         <th scope="row"><span class="essential">*</span> 기수 및 과정 선택</th>
                         <td>
                             <div class="form_group">
-                                <select name="" id="" disabled aria-disabled="true">
+                                <select name="" id="">
                                     <option value="2026년도 1학년 2학기">2026년도 1학년 2학기</option>
                                     <option value="2026년도 1학년 2학기">2026년도 1학년 2학기</option>
                                 </select>
@@ -445,12 +445,41 @@
                     <tr>
                         <th scope="row">첨부파일</th>
                         <td>
-                            <div class="file_upload">
-                                <input type="text" class="upload_input" id="fileName" 
-                                placeholder="허용 파일 형식 (.pdf , .jpg , .jpeg , .png) 최대 업로드 용량 50MB" readonly />
-                                <label for="fileInput" class="btn">파일선택</label>
-                                <input type="file" id="fileInput" class="transparent" accept=".pdf, .jpg, .jpeg, .png" onchange="document.getElementById('fileName').value = this.files[0]?.name || ''" />
+                            <!-- 첨부파일 버튼형 -->
+                            <div class="file_search">
+                                <div class="file_search_top">
+                                    <label for="fileUpload" class="btn">
+                                        <span class="material-symbols-rounded">attach_file</span>파일 선택
+                                    </label>
+                                    <p>허용 파일 형식: PDF, PNG, JPG, JPEG / 최대 업로드 용량 50MB</p>
+                                </div>
+                               
+                                <input type="file" class="transparent" id="fileUpload" multiple>
+
+                                <!-- 첨부한 파일 영역 -->
+                                <div class="attachment"> 
+                                    <div class="download_area">
+                                        <!-- p class="no_attachment">첨부된 파일이 없습니다.</p -->
+                                        <div class="download">
+                                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                                            <div>
+                                                <button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
+                                            </div>
+                                        </div>
+
+                                        <div class="download">
+                                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                                            <div>
+                                                <button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- //첨부한 파일 영역 -->
                             </div>
+                            <!-- //첨부파일 버튼형 -->
+
                         </td>
                     </tr>
                 </table>

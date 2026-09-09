@@ -89,8 +89,8 @@ iframe { border:0; margin:0; padding:0; }
 .icon_fill { font-variation-settings:'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24 }
 
 button { border:none; cursor:pointer; font-weight:500; transition:all .2s; background:transparent}
-input::placeholder,textarea::placeholder { color:var(--Placeholder); font-size:var(--Font-base); }
-input[type="text"],input[type="tel"],input[type="password"],input[type="file"],input[type="number"],input[type="email"],input[type="date"],input[type="search"],input[type="time"],textarea,select { border:1px solid var(--Neutral-500); height:32px; vertical-align:middle; padding:0 16px; border-radius:var(--Border-radius); }
+input::placeholder,textarea::placeholder { color:var(--Placeholder); font-size:var(--Font-small); }
+input[type="text"],input[type="tel"],input[type="password"],input[type="file"],input[type="number"],input[type="email"],input[type="date"],input[type="search"],input[type="time"],textarea,select { border:1px solid var(--Neutral-500); height:32px; vertical-align:middle; padding:0 16px; border-radius:var(--Border-radius); font-size:var(--Font-small); }
 input[type="number"] { width:100px; padding:0 8px; }
 input[type="time"] { width:140px; padding:0 8px;}
 input:disabled,textarea:disabled,input:read-only, textarea:read-only { background-color:var(--Neutral-300); color:var(--Neutral-500); cursor:not-allowed; }
@@ -161,7 +161,7 @@ em { text-decoration:none; font-style:normal; }
 
 
 /* 2-1 기본 */
-.btn { display:inline-block; border:1px solid var(--Neutral-500); padding:1px 8px 0; height:32px; border-radius:var(--Border-radius); background:var(--Neutral-0); color:var(--Primary-500); font-size:var(--Font-small); font-weight:500; }
+.btn { display:inline-block; border:1px solid var(--Neutral-500); padding:1px 12px 0; height:32px; border-radius:var(--Border-radius); background:var(--Neutral-0); color:var(--Primary-500); font-size:var(--Font-small); font-weight:500; }
 .btn span { margin-left:-4px; padding-right:6px;}
 a.btn { line-height:28px; font-weight:500; }
 .btn:hover { background:var(--Primary-100); }
@@ -174,6 +174,7 @@ a.btn { line-height:28px; font-weight:500; }
 .btn.borderBlue { background:var(--Neutral-0); color:var(--Primary-500) !important; border:1px solid var(--Primary-500); } /* 제출확인 */
 .btn.borderBlue:hover { background:var(--Primary-100); }
 .btn.deepGray { color:var(--Neutral-600) !important; } /* 오픈 예정 */
+.btn.borderBlack { color:var(--Neutral-900) !important; border:1px solid var(--Neutral-800); } /* 오픈 예정 */
 
 /* 2-2 주요 버튼(파란면적 버튼) */
 .btn.primary { border:1px solid var(--Primary-500); background:var(--Primary-500); color:var(--Neutral-0) !important; }
@@ -228,8 +229,8 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 
 /* 5. 공통 컴포넌트: 입력 필드 */
 /* 기본 입력 그룹 레이아웃 */
-.form_group { display:flex; gap:16px; align-items:center; }
-.form_group.column { flex-direction:column; gap:8px; }
+.form_group { display:flex; gap:8px }
+.form_group.column { flex-direction:column; gap:8px; align-items: flex-start; }
 .alignC { align-items:center !important; }
 
 /* 테이블 내부 입력 그룹 정렬 */
@@ -244,7 +245,6 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
   display:flex;
   align-items:center;
   font-weight:400;
-  font-size:var(--Font-medium);
   color:var(--Neutral-600);
 }
 .form_check strong { color:var(--Error); font-weight:400; }
@@ -253,7 +253,7 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 .check_group { display:flex; flex-wrap:wrap; gap:20px; }
 
 /* 날짜 범위 선택 보조 요소 */
-.calendar_bullet { display:inline-block; color:var(--Neutral-600); margin:5px -8px 0; }
+.calendar_bullet { display:inline-block; color:var(--Neutral-600); }
 .form_group .btn_date_range { display:flex; align-items:start; }
 .form_group .btn_date_range li {
   color:var(--Neutral-800);
@@ -298,9 +298,11 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 /* 다중 선택 select */
 /* custom_select는 일반 select가 아니기 때문에 .custom_select:focus 로 포커스 스타일을 직접 제어해야 함 */
 .custom_select { width:100%; height:50px; border-radius:var(--Border-radius); border:1px solid var(--Neutral-500); cursor:pointer; position:relative; background: #fff url(../images/common/select_arrow.png) no-repeat calc(100% - 12px) center; padding-right: 40px; font-size:var(--Font-small); }
+td .custom_select { height:32px; width:500px; }
 .custom_select:focus { border:1px solid var(--Primary-500); outline:transparent; box-shadow:0 0 1px 1px rgba(21, 197, 206, 0.16); transition:all .2s; }
 .custom_select:focus .selected { color:var(--Neutral-900); font-weight:500; }
 .custom_select .selected { display:block; color:var(--Placeholder);  padding:14px 16px 16px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; height:50px;}
+td .custom_select .selected { height:32px; padding-top:6px; }
 .custom_select .selected.active { color:var(--Neutral-900); font-weight:500; }
 
 .custom_select .options { display:none; position:absolute; background:#fff; border:1px solid #767676; border-top:none; max-height:180px; overflow-y:auto; width:calc(100% + 2px); z-index:1000; padding:12px 20px; margin:-1px 0 0 -1px; }
@@ -336,12 +338,12 @@ outline:none; }
 .table_top .table_sort strong { color:var(--Primary-500); }
 .table_top p { color:var(--Neutral-600); font-size:12px; font-weight:700; }
 .table_top h4 { padding:0 0 0 16px; margin:0 0 -14px 0; border:none; }
-
+.table_sort div { display:flex; gap:24px; align-items:center; }
 .table_sort { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:24px; padding-left:20px;  }
 .table_sort span { font-size:var(--Font-small); color:var(--Neutral-800); vertical-align:bottom; }
 .table_sort strong { color:var(--Primary-500); }
 
-.data_table::before,.view_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-500); }
+.data_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-500); }
 .data_table th,.data_table td { padding:16px; text-align:center; vertical-align:middle; line-height:1.1; }
 .data_table th,.view_table th { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-bottom:none; font-weight:500; text-align:center; }
 .data_table tbody th { border-bottom:1px solid var(--Neutral-300); }
@@ -353,7 +355,8 @@ outline:none; }
 .data_table tbody tr:hover,.view_table tbody td:hover { background-color:var(--Neutral-100); /* 호버 효과 */}
 .data_table thead > tr:first-child > th { border-top:none; }
 .list_table { table-layout:fixed; }
-.list_table::before,.view_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-900); }
+.list_table::before,.view_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Primary-200); }
+.view_table.borderGray::before { border-top:1px solid var(--Neutral-300); }
 .list_table th,.list_table td { padding:10px; text-align:center; vertical-align:middle; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); }
 .list_table th,.view_table th { background:var(--Neutral-100); font-weight:500; text-align:center; }
 .list_table tbody th { border-bottom:1px solid var(--Neutral-300); }
@@ -406,6 +409,11 @@ padding:6px 12px; min-width:58px; background:var(--Neutral-0); font-weight:600; 
 .label.blue { border:1px solid var(--Primary-500); background:var(--Primary-500); color: var(--Neutral-0); }
 .label.lightBlue { border:1px solid var(--Info-soft); background:var(--Info-soft); color: var(--Primary-500); }
 .label.border { border:1px solid var(--Primary-500); color: var(--Primary-500); }
+.file_search .btn { border:1px solid var(--Neutral-800); color:var(--Neutral-800); }
+.file_search .btn span { font-weight:300; padding-right:2px; }
+.file_search .file_search_top { display:flex; align-items:center; gap:24px; border-bottom:1px solid var(--Neutral-300); padding-bottom:16px; margin-bottom:16px; }
+.file_search .file_search_top p { color: var(--Neutral-600); font-size:var(--Font-small); }
+.file_search .attachment { margin-bottom:0; }
 
 /* 구분선 */
 .div_line { margin: 0 4px; color: var(--Neutral-500); font-weight:400; }

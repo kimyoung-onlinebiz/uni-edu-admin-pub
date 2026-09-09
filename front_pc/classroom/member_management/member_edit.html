@@ -289,10 +289,10 @@
                         </ul>
                     </li>
                     <li>
-                        <strong class="active">사복실습 평가관리</strong>
+                        <strong>사복실습 평가관리</strong>
                         <ul>
                             <li><a href="#none">현장실습신청서</a></li>
-                            <li><a href="#none" class="active">온라인과제 제출</a></li>
+                            <li><a href="#none">온라인과제 제출</a></li>
                         </ul>
                     </li>
                     <li>
@@ -328,9 +328,9 @@
                         </ul>
                     </li>
                     <li>
-                        <strong>회원ㆍ학적관리</strong>
+                        <strong class="active">회원ㆍ학적관리</strong>
                         <ul>
-                            <li><a href="#none">회원정보 수정</a></li>
+                            <li><a href="#none" class="active">회원정보 수정</a></li>
                             <li><a href="#none">학적부 관리</a></li>
                             <li><a href="#none">증명서 발급</a></li>
                             <li><a href="#none">내 PC 등록하기</a></li>
@@ -348,221 +348,358 @@
             <!-- breadcrumb -->
             <nav class="breadcrumb" aria-label="현재 위치">
                 <ol>
-                    <li class="home"><a href='/front_pc/classroom/'>홈</a></li>
+                    <li class="home"><a href="../index.html">홈</a></li>
                     <li><a href="#none">나의 강의실</a></li>
-                    <li><a href="#none">사복실습 평가관리</a></li>
-                    <li aria-current="page">온라인과제 제출</li>
+                    <li><a href="#none">회원ㆍ학적관리</a></li>
+                    <li aria-current="page">회원정보 수정</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header">
-                <h3>온라인과제 제출</h3>
+            <header class="sub_header border">
+                <h3>회원정보 수정</h3>
+                <p>휴대전화 번호 또는 이메일 주소가 변경되었다면, 새로운 정보로 수정해 주세요.</p>
             </header>
             <!-- //sub header -->
 
-            <div class="txt_guide">
-                <strong>과제 제출 유의사항</strong>
-                <ul>
-                    <li>과제는 제출 기간 내 본 페이지를 통해 제출할 수 있으며, 제출 기간 종료 후에는 제출이 불가합니다.</li>
-                    <li>과제 제출 후 과목에 맞는 제출 파일 및 첨부파일의 이상 여부를 반드시 확인하시기 바랍니다.</li>
-                    <li>주제 불일치, 과목 오제출, 파일 오류 등의 사유로 인한 재제출/재채점은 불가합니다.</li>
-                    <li>제출 기간 내 파일 수정이 필요한 경우, 제출 기간 내 파일을 다시 업로드하여 수정 제출하시기 바랍니다.</li>
-                </ul>
-            </div>
+            <!-- 게시판 뷰 -->
+            <article class="board_view">
+                <header class="sub_header">
+                    <h4><strong>(필수)</strong>정보 입력</h4>
+                </header>
+            
 
-            <!-- 게시판 리스트 -->
-            <section class="board_list marginT24">
-
-                <!-- 검색 -->
-                <div class="board_search">
-                    <select name="" id="">
-                        <option value="">기수 선택</option>
-                        <option value="2026년 1학기 1기">2026년 1학기 1기</option>
-                    </select>
-
-                    <select name="" id="">
-                        <option value="">과정 선택</option>
-                        <option value="온라인사복실습">온라인사복실습</option>
-                    </select>
-
-                    <select name="" id="">
-                        <option value="">제출상태</option>
-                        <option value="전체">전체</option>
-                        <option value="미제출">미제출</option>
-                        <option value="제출필요">제출필요</option>
-                        <option value="제출완료">제출완료</option>
-                        <option value="오픈예정">오픈예정</option>
-                    </select>
-
-                    <button type="button" class="btn_search">검색</button>
-                </div>
-                <!-- //검색 -->
-
-                <div class="table_sort">
-                    <span>총 <strong>1,234</strong>건</span>
-                    <select name="" id="">
-                        <option value="마감 임박순">마감 임박순</option>
-                        <option value="최근 개강순">최근 개강순</option>
-                        <option value="과정명순">과정명순</option>
-                    </select>
-                </div>
-
-                <table class="list_table">
-                    <caption>과제 제출 리스트</caption>
+                <table class="view_table borderGray">
                     <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
+                        <col style="width:200px;">
                         <col>
                     </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col" colspan="4">온라인과제 제출 정보</th>
-                            <th scope="col">온라인과제 결과</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">년도/학기/기수</th>
-                            <th scope="col">과정 명</th>
-                            <th scope="col">제출 기간</th>
-                            <th scope="col">제출하기</th>
-                            <th scope="col">성적확인</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>사회복지현장실습(인천)</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
-                            <td>
-                                <button type="button" class="btn txtRed" disabled>미제출</button>
-                            </td>
-                            <td><button type="button" class="btn">성적 확인</button></td>
+                            <th scope="row">이름</th>
+                            <td>홍길동</td>
                         </tr>
                         <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>사회복지현장실습(광주)</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
-                            <td>
-                                <button type="button" class="btn lightGray" disabled>제출완료</button>
-                            </td>
-                             <td><button type="button" class="btn btn_taskScore">성적 확인</button></td>
+                            <th scope="row">아이디</th>
+                            <td>honggildong</td>
                         </tr>
                         <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>온라인사복실습</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <th scope="row"><span class="essential">*</span>비밀번호</th>
                             <td>
-                                <button type="button" class="btn primary">제출하기</button>
+                                <div class="form_group">
+                                    <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요." value="3434hfdg" class="width_50" disabled>
+                                    <button type="button" class="btn primary">변경</button>
+                                </div>
+                                
                             </td>
-                             <td><button type="button" class="btn">성적 확인</button></td>
                         </tr>
                         <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>온라인사복실습</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <th scope="row"><span class="essential">*</span>비밀번호</th>
                             <td>
-                                <button type="button" class="btn borderBlue">제출 확인</button>
+                                <div class="form_group column">
+                                    <strong>새 비밀번호 <button class="btn primary marginL24">변경 취소</button></strong>
+                                    <input type="password" name="password" id="password" placeholder="새 비밀번호를 입력해주세요." value="" class="width_50">
+                                    <p class="table_guide">8~20자 이내의 영문, 숫자, 특수문자 조합 (단, ‘ ; - &lt; ( ) / \ 사용 불가)</p>
+                                    <p class="error_message">사용 불가능한 비밀번호 입니다.</p>
+                                </div>
+                                
+                                <div class="form_group column marginT24">
+                                    <strong>새 비밀번호 확인</strong>
+                                    <input type="password" name="password_confirm" id="password_confirm" placeholder="새 비밀번호를 한번 더 입력해 주세요." value="" class="width_50">
+                                    <p class="error_message">비밀번호가 일치하지 않습니다. 다시 입력해 주세요.</p>
+                                </div>
+
                             </td>
-                             <td><button type="button" class="btn">성적 확인</button></td>
                         </tr>
                         <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>지역사회복지론</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <th scope="row"><span class="essential">*</span>변경 비밀번호 확인</th>
                             <td>
-                                <button type="button" class="btn deepGray" disabled>오픈 예정</button>
+                                <input type="password" name="password_confirm" id="password_confirm" placeholder="비밀번호를 입력해주세요." value="">
                             </td>
-                             <td><button type="button" class="btn">성적 확인</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="essential">*</span>휴대전화</th>
+                            <td>
+                                <input type="tel" name="" id="" placeholder="휴대전화 번호를 입력해주세요." value="010-1234-5678">
+                                <p class="error_message">휴대전화 번호를 입력해 주세요.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="essential">*</span>이메일</th>
+                            <td>
+                                <div class="multiple email">
+                                <input type="text" id="user_email" placeholder="이메일 주소를 입력해 주세요.">
+                                <span>@</span>
+                                <select name="" id="user_email_domain">
+                                    <option value="">도메인 선택</option>
+                                    <option value="naver.com">naver.com</option>
+                                </select>
+                            </div>
+                            <div class="multiple email">
+                                <input type="text" placeholder="이메일 주소를 입력해 주세요.">
+                                    <span>@</span>
+                                    <input type="text" id="user_email_custom" placeholder="직접 입력해 주세요.">
+                                    <button class="btn_delete" type="button" aria-label="이메일 입력값 삭제">
+                                        <span class="material-symbols-rounded">close</span>
+                                    </button>
+                                </div>
+                                <p class="error_message">이메일 주소를 다시 확인해 주세요.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="essential">*</span>SMS, 이메일 수신동의</th>
+                            <td>
+                                <dl class="flex_left">
+                                    <dt>SMS</dt>
+                                    <dd>
+                                        <div class="check_group">
+                                            <label class="form_check">
+                                                <input type="radio" name="sms_agree">동의
+                                            </label>
+                                            <label class="form_check">
+                                                <input type="radio" name="sms_agree">비동의
+                                            </label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="flex_left">
+                                    <dt>이메일</dt>
+                                    <dd>
+                                        <div class="check_group">
+                                            <label class="form_check">
+                                                <input type="radio" name="email_agree">동의
+                                            </label>
+                                            <label class="form_check">
+                                                <input type="radio" name="email_agree">비동의
+                                            </label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <ul class="table_guide">
+                                    <li>학습 안내, 출석 관리 등 주요 안내사항은 SMS 및 이메일을 통해 안내됩니다.</li>
+                                    <li class="txt_info">수신 미동의 시 개강 안내, 학사일정, 할인 정보 등 중요 공지사항이 누락될 수 있습니다.</li>
+                                </ul>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <!-- 페이징 -->
-                <div class="paging">
-                    <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
-                    <a href="#none">1</a>
-                    <a href="#none" class="active">2</a>
-                    <a href="#none">3</a>
-                    <a href="#none">4</a>
-                    <a href="#none">5</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
-                </div>
-                <!-- //페이징 -->
-
-            </section>
-            <!-- //게시판 리스트 -->
-
-            <!-- 레이어 / 과제 성적 확인 -->
-            <div class="layer_wrapper layer_taskScore"> <!-- active 추가 시 화면 노출 -->
-                <div class="layer_basic">
-
-                    <header>
-                        <div>
-                            <h1>과제 성적 확인</h1>
-                        </div>
-                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                <article class="board_view">
+                    <header class="sub_header">
+                        <h4><strong>(선택)</strong>추가 정보</h4>
                     </header>
+                </article>
 
-                    <!-- layer 내용 -->
-                    <div class="layer_content">
-                        <div class="submission_info">
-                            <dl>
-                                <dt>과정 명</dt>
-                                <dd>2026년도 1학기 2기 지역사회복지론</dd>
-                            </dl>
-                            <dl>
-                                <dt>제출 상태</dt>
-                                <dd>
-                                    <span class="txt_error">제출 필요</span>
-                                    <span class="txt_info">제출 완료 (제출 일자: 2026.03.06 23:00:00)</span>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>점수</dt>
-                                <dd><strong class="txt_info">18점</strong> / 20점</dd>
-                            </dl>
-                        </div>
-
-                        <!-- 첨부파일 영역 -->
-                        <div class="attachment"> <!-- 첨부 파일 없으면 영역 삭제 -->
-                            <div class="layer_contentTitle borderN">
-                                <h2>제출 온라인과제 확인</h2>
-                            </div>
-                            <div class="download_area">
-                                <div class="download">
-                                    <p>2026년도 1학기 2기 사회복지현장실습(수도권) 과제_오지현.docx <span>0.12MB</span></p>
-                                    <div>
-                                        <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
+                <table class="view_table borderGray">
+                    <colgroup>
+                        <col style="width:200px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">거주지역</th>
+                            <td>
+                                <select>
+                                    <option value="">거주지역을 선택해 주세요.</option>
+                                    <option value="서울">서울</option>
+                                    <option value="부산">부산</option>
+                                    <option value="대구">대구</option>
+                                    <option value="인천">인천</option>
+                                    <option value="광주">광주</option>
+                                    <option value="대전">대전</option>
+                                    <option value="울산">울산</option>
+                                    <option value="세종">세종</option>
+                                    <option value="경기">경기</option>
+                                    <option value="강원">강원</option>
+                                    <option value="충북">충북</option>
+                                    <option value="충남">충남</option>
+                                    <option value="전북">전북</option>
+                                    <option value="전남">전남</option>
+                                    <option value="경북">경북</option>
+                                    <option value="경남">경남</option>
+                                    <option value="제주">제주</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주소</th>
+                            <td>
+                                <div class="form_group">
+                                    <input type="text" name="" id="" placeholder="우편번호">
+                                    <button type="button" class="btn primary">주소 검색</button>
+                                </div>
+                                <div class="form_group column marginT8 align_left">
+                                    <input type="text" name="" id="" placeholder="주소를 입력해 주세요." class="width_50">
+                                    <input type="text" name="" id="" placeholder="상세 주소를 입력해 주세요." class="width_50">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최종학력</th>
+                            <td>
+                                <div class="multiple final_education">
+                                    <select name="" id="final_education_level">
+                                        <option value="">학력</option>
+                                        <option value="고등학교">고등학교</option>
+                                        <option value="대학교">대학교</option>
+                                        <option value="대학원">대학원</option>
+                                    </select>
+                                    <select name="" id="final_education_grade">
+                                        <option value="">학년</option>
+                                        <option value="1학년">1학년</option>
+                                        <option value="2학년">2학년</option>
+                                        <option value="3학년">3학년</option>
+                                        <option value="4학년">4학년</option>
+                                    </select>
+                                    <select name="" id="final_education_status">
+                                        <option value="">상태</option>
+                                        <option value="재학">재학</option>
+                                        <option value="졸업">졸업</option>
+                                    </select>
+                                    <input type="date" name="" id="final_education_date">
+                                </div>
+                                <input type="text" id="education_name" placeholder="대학, 고등학교 또는 기관명을 입력해 주세요." class="marginT8 width_50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">학점은행제 이용목적</th>
+                            <td>
+                                <div class="form_group column"> 
+                                    <select name="" id="education_purpose">
+                                        <option value="">이용목적을 선택해 주세요.</option>
+                                        <option value="포털검색">포털검색</option>
+                                        <option value="블로그,SNS">블로그,SNS</option>
+                                        <option value="친구추천">친구추천</option>
+                                        <option value="기타">기타</option>
+                                    </select>
+                                    <input id="education_purpose_other" type="text" placeholder="기타 내용을 입력해 주세요." class="width_50">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">목표 전공</th>
+                            <td>
+                                <div class="form_group column"> 
+                                    <select name="" id="target_major">
+                                        <option value="">목표 전공을 선택해 주세요.</option>
+                                        <option value="컴퓨터공학">컴퓨터공학</option>
+                                        <option value="경영학">경영학</option>
+                                        <option value="심리학">심리학</option>
+                                        <option value="기타">기타</option>
+                                    </select>
+                                    <input id="target_major_other" type="text" placeholder="기타 관심분야를 입력해 주세요." class="width_50">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">편입 수강 여부</th>
+                            <td>
+                                <select name="" id="transfer_course_status">
+                                    <option value="">편입 수강 여부를 선택해 주세요.</option>
+                                    <option value="인강 수강">인강 수강</option>
+                                    <option value="오프라인 캠퍼스 수강">오프라인 캠퍼스 수강</option>
+                                    <option value="타 편입학원 수강">타 편입학원 수강</option>
+                                    <option value="미수강">미수강</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">관심 캠퍼스<br />(캠퍼스 전용 할인쿠폰 발급)</th>
+                            <td>
+                                <!-- 다중 선택 드롭다운 -->
+                                <div class="custom_select" id="campus_interest" tabindex="0" role="button" aria-expanded="false">
+                                    <span class="selected">관심 캠퍼스를 선택해 주세요.</span>
+                                    <div class="options">
+                                        <label><input type="checkbox" class="multiple_checkbox" value="인강"> 인강</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="강남단과"> 강남단과</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="김영플러스 강남"> 김영플러스 강남</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="김영플러스 신촌"> 김영플러스 신촌</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="노량진"> 노량진</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="노원"> 노원</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="기타"> 기타</label>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- //첨부파일 영역 -->
+                                <!-- // 다중 선택 드롭다운 -->
+                                <input id="campus_interest_other" type="text" placeholder="기타 관심 캠퍼스를 입력해 주세요." class="marginT8">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">김영편입 ID</th>
+                            <td>
+                                <div class="check_group">
+                                    <div>
+                                        <label class="form_check">
+                                            <input type="radio" name="id_status">수강
+                                        </label>
+                                        <input type="text" id="kimyoung_id" placeholder="김영편입 ID를 입력해 주세요." disabled>
+                                    </div>
+                                    <label class="form_check">
+                                        <input type="radio" name="id_status">비수강
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">김영편입 소개 여부</th>
+                            <td>
+                                <dl class="flex_left">
+                                    <dt>캠퍼스명</dt>
+                                    <dd>
+                                        <input id="introduction_campus" type="text" placeholder="캠퍼스명을 입력해 주세요.">
+                                    </dd>
+                                </dl>
+                                <dl class="flex_left">
+                                    <dt>소개 직원</dt>
+                                    <dd>
+                                        <input id="introduction_staff" type="text" placeholder="소개 직원명을 입력해 주세요.">
+                                    </dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">마케팅 및 광고 활용 동의</th>
+                            <td>
+                                <div class="check_group marginT16">
+                                    <label class="form_check">
+                                        <input type="checkbox">SMS 수신 동의
+                                    </label>
+                                    <label class="form_check">
+                                        <input type="checkbox">이메일 수신 동의
+                                    </label>
+                                </div>
+                                <ul class="table_guide">
+                                    <li class="txt_info">미동의 시 신규 서비스 및 이벤트 등 광고성 정보에 대한 안내를 받으실 수 없습니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">김영편입<br />마케팅 및 광고 활용 동의</th>
+                            <td>
+                                <div class="check_group marginT16">
+                                    <label class="form_check">
+                                        <input type="checkbox">SMS 수신 동의
+                                    </label>
+                                    <label class="form_check">
+                                        <input type="checkbox">이메일 수신 동의
+                                    </label>
+                                </div>
+                                <ul class="table_guide">
+                                    <li class="txt_info">김영편입의 이벤트, 프로모션 및 다양한 혜택 정보를 SMS 또는 이메일로 수신하는 것에 동의합니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                        <div class="layer_contentTitle borderN">
-                            <h2>교수님 평가 의견</h2>
-                        </div>
-
-                        <!-- 에디터에서 작성한 내용 노출 -->
-                        <div class="editor_content">
-                            에디터에서 작성한 내용
-                        </div>
-                        <!-- //에디터에서 작성한 내용 노출 -->
-
-                    </div>
-                    <!-- //layer 내용 -->
-                    <div class="layer_btnSection right">
-                        <button class="btn primary">확인</button>
-                    </div>
+                <!-- bottom -->
+                <div class="board_view_footer">
+                    <a href="#none" class="btn">취소</a>
+                    <a href="#none" class="btn primary">저장</a>
                 </div>
-                
-            </div>
-            <!-- //레이어 / 과제 성적 확인 -->
+
+            </article>
+            <!-- //게시판 뷰 -->
 
 
         </section>

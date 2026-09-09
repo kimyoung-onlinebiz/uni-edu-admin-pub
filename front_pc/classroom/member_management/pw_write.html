@@ -289,10 +289,10 @@
                         </ul>
                     </li>
                     <li>
-                        <strong class="active">사복실습 평가관리</strong>
+                        <strong>사복실습 평가관리</strong>
                         <ul>
                             <li><a href="#none">현장실습신청서</a></li>
-                            <li><a href="#none" class="active">온라인과제 제출</a></li>
+                            <li><a href="#none">온라인과제 제출</a></li>
                         </ul>
                     </li>
                     <li>
@@ -328,9 +328,9 @@
                         </ul>
                     </li>
                     <li>
-                        <strong>회원ㆍ학적관리</strong>
+                        <strong class="active">회원ㆍ학적관리</strong>
                         <ul>
-                            <li><a href="#none">회원정보 수정</a></li>
+                            <li><a href="#none" class="active">회원정보 수정</a></li>
                             <li><a href="#none">학적부 관리</a></li>
                             <li><a href="#none">증명서 발급</a></li>
                             <li><a href="#none">내 PC 등록하기</a></li>
@@ -348,221 +348,45 @@
             <!-- breadcrumb -->
             <nav class="breadcrumb" aria-label="현재 위치">
                 <ol>
-                    <li class="home"><a href='/front_pc/classroom/'>홈</a></li>
+                    <li class="home"><a href="../index.html">홈</a></li>
                     <li><a href="#none">나의 강의실</a></li>
-                    <li><a href="#none">사복실습 평가관리</a></li>
-                    <li aria-current="page">온라인과제 제출</li>
+                    <li><a href="#none">회원ㆍ학적관리</a></li>
+                    <li aria-current="page">회원정보 수정</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header">
-                <h3>온라인과제 제출</h3>
+            <header class="sub_header border">
+                <h3>회원정보 수정 인증</h3>
             </header>
             <!-- //sub header -->
+            
+            <div class="member_edit">
+                <header>
+                    <span class="material-symbols-rounded">lock_person</span>
+                    <strong>회원정보 수정을 위해 비밀번호를 입력해 주세요</strong>
+                </header>
 
-            <div class="txt_guide">
-                <strong>과제 제출 유의사항</strong>
-                <ul>
-                    <li>과제는 제출 기간 내 본 페이지를 통해 제출할 수 있으며, 제출 기간 종료 후에는 제출이 불가합니다.</li>
-                    <li>과제 제출 후 과목에 맞는 제출 파일 및 첨부파일의 이상 여부를 반드시 확인하시기 바랍니다.</li>
-                    <li>주제 불일치, 과목 오제출, 파일 오류 등의 사유로 인한 재제출/재채점은 불가합니다.</li>
-                    <li>제출 기간 내 파일 수정이 필요한 경우, 제출 기간 내 파일을 다시 업로드하여 수정 제출하시기 바랍니다.</li>
-                </ul>
+                <div class="login_box">
+                    <form class="login_input" action="#none" method="post" novalidate="">
+                        <div class="input_area">
+                            <header>
+                                <h4><label for="loginId">비밀번호</label></h4>
+                            </header>
+                            <input id="loginId" name="loginId" type="password" placeholder=" 비밀번호를 입력해 주세요." autocomplete="password" class="error">
+                        </div>
+                        <p class="error_message">비밀번호가 일치하지 않습니다. 다시 입력해 주세요.</p>
+                        
+                        <ul class="btn_login">
+                            <li><button type="button" disabled="">확인</button></li>
+                            <li><button type="button">확인</button></li>
+                        </ul>
+
+                    </form>
+                </div>
             </div>
-
-            <!-- 게시판 리스트 -->
-            <section class="board_list marginT24">
-
-                <!-- 검색 -->
-                <div class="board_search">
-                    <select name="" id="">
-                        <option value="">기수 선택</option>
-                        <option value="2026년 1학기 1기">2026년 1학기 1기</option>
-                    </select>
-
-                    <select name="" id="">
-                        <option value="">과정 선택</option>
-                        <option value="온라인사복실습">온라인사복실습</option>
-                    </select>
-
-                    <select name="" id="">
-                        <option value="">제출상태</option>
-                        <option value="전체">전체</option>
-                        <option value="미제출">미제출</option>
-                        <option value="제출필요">제출필요</option>
-                        <option value="제출완료">제출완료</option>
-                        <option value="오픈예정">오픈예정</option>
-                    </select>
-
-                    <button type="button" class="btn_search">검색</button>
-                </div>
-                <!-- //검색 -->
-
-                <div class="table_sort">
-                    <span>총 <strong>1,234</strong>건</span>
-                    <select name="" id="">
-                        <option value="마감 임박순">마감 임박순</option>
-                        <option value="최근 개강순">최근 개강순</option>
-                        <option value="과정명순">과정명순</option>
-                    </select>
-                </div>
-
-                <table class="list_table">
-                    <caption>과제 제출 리스트</caption>
-                    <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col" colspan="4">온라인과제 제출 정보</th>
-                            <th scope="col">온라인과제 결과</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">년도/학기/기수</th>
-                            <th scope="col">과정 명</th>
-                            <th scope="col">제출 기간</th>
-                            <th scope="col">제출하기</th>
-                            <th scope="col">성적확인</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>사회복지현장실습(인천)</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
-                            <td>
-                                <button type="button" class="btn txtRed" disabled>미제출</button>
-                            </td>
-                            <td><button type="button" class="btn">성적 확인</button></td>
-                        </tr>
-                        <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>사회복지현장실습(광주)</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
-                            <td>
-                                <button type="button" class="btn lightGray" disabled>제출완료</button>
-                            </td>
-                             <td><button type="button" class="btn btn_taskScore">성적 확인</button></td>
-                        </tr>
-                        <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>온라인사복실습</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
-                            <td>
-                                <button type="button" class="btn primary">제출하기</button>
-                            </td>
-                             <td><button type="button" class="btn">성적 확인</button></td>
-                        </tr>
-                        <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>온라인사복실습</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
-                            <td>
-                                <button type="button" class="btn borderBlue">제출 확인</button>
-                            </td>
-                             <td><button type="button" class="btn">성적 확인</button></td>
-                        </tr>
-                        <tr>
-                            <td>2026년 1학기 1기</td>
-                            <td>지역사회복지론</td>
-                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
-                            <td>
-                                <button type="button" class="btn deepGray" disabled>오픈 예정</button>
-                            </td>
-                             <td><button type="button" class="btn">성적 확인</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!-- 페이징 -->
-                <div class="paging">
-                    <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
-                    <a href="#none">1</a>
-                    <a href="#none" class="active">2</a>
-                    <a href="#none">3</a>
-                    <a href="#none">4</a>
-                    <a href="#none">5</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
-                </div>
-                <!-- //페이징 -->
-
-            </section>
-            <!-- //게시판 리스트 -->
-
-            <!-- 레이어 / 과제 성적 확인 -->
-            <div class="layer_wrapper layer_taskScore"> <!-- active 추가 시 화면 노출 -->
-                <div class="layer_basic">
-
-                    <header>
-                        <div>
-                            <h1>과제 성적 확인</h1>
-                        </div>
-                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                    </header>
-
-                    <!-- layer 내용 -->
-                    <div class="layer_content">
-                        <div class="submission_info">
-                            <dl>
-                                <dt>과정 명</dt>
-                                <dd>2026년도 1학기 2기 지역사회복지론</dd>
-                            </dl>
-                            <dl>
-                                <dt>제출 상태</dt>
-                                <dd>
-                                    <span class="txt_error">제출 필요</span>
-                                    <span class="txt_info">제출 완료 (제출 일자: 2026.03.06 23:00:00)</span>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>점수</dt>
-                                <dd><strong class="txt_info">18점</strong> / 20점</dd>
-                            </dl>
-                        </div>
-
-                        <!-- 첨부파일 영역 -->
-                        <div class="attachment"> <!-- 첨부 파일 없으면 영역 삭제 -->
-                            <div class="layer_contentTitle borderN">
-                                <h2>제출 온라인과제 확인</h2>
-                            </div>
-                            <div class="download_area">
-                                <div class="download">
-                                    <p>2026년도 1학기 2기 사회복지현장실습(수도권) 과제_오지현.docx <span>0.12MB</span></p>
-                                    <div>
-                                        <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //첨부파일 영역 -->
-
-                        <div class="layer_contentTitle borderN">
-                            <h2>교수님 평가 의견</h2>
-                        </div>
-
-                        <!-- 에디터에서 작성한 내용 노출 -->
-                        <div class="editor_content">
-                            에디터에서 작성한 내용
-                        </div>
-                        <!-- //에디터에서 작성한 내용 노출 -->
-
-                    </div>
-                    <!-- //layer 내용 -->
-                    <div class="layer_btnSection right">
-                        <button class="btn primary">확인</button>
-                    </div>
-                </div>
-                
-            </div>
-            <!-- //레이어 / 과제 성적 확인 -->
+            
 
 
         </section>

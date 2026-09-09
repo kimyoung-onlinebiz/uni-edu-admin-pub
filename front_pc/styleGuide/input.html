@@ -58,6 +58,9 @@
             <button class="btn">
                 기본버튼
             </button>
+            <button class="btn small">
+                버튼
+            </button>
             <button class="btn" disabled>
                 disabled
             </button>
@@ -79,7 +82,11 @@
             <button class="btn"><span class="material-symbols-rounded">playlist_add</span>편성과정 추가</button>
             <button class="btn marginL24"><span class="material-symbols-rounded">credit_score</span>금액 자동 계산</button>
             <button class="btn"><span class="material-symbols-rounded">quick_reference</span>자동 일괄 출제</button>
-            <button class="btn btn_download_reason"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+            <button class="btn borderBlack">검정 라인 버튼</button>
+            <button class="btn borderBlue">파랑 라인 버튼</button>
+            <button class="btn lightGray">연한 회색 라인 버튼</button>
+            <button class="btn deepGray">더 옅은 회색 라인 버튼</button>
+            <button class="btn txtGray">연한 회색 라인 버튼</button>
 
             <!-- 레이어_ 엑셀 다운로드 -->
             <div class="layer_wrapper download_reason"> <!-- active 추가 시 화면 노출 -->
@@ -110,12 +117,12 @@
                                     <th>파기일</th>
                                     <td>
                                         <!-- 캘린더 -->
-                                        <div class="form_group calendar">
-                                            <div class="form_warning">
-                                                <input type="date" id="" placeholder="파기일 선택">
-                                                <p class="error_message">날짜가 올바르지 않습니다.</p>
-                                            </div>
+                                        <div class="form_group">
+                                            <input type="date" id="searchStartDate" placeholder="시작일">
+                                            <span class="calendar_bullet">~</span>
+                                            <input type="date" id="searchEndDate" placeholder="종료일">
                                         </div>
+                                        <p class="error_message">정규 시험 응시 종료일 기준 5일 이내로 선택해주세요.</p>
                                         <!-- //캘린더 -->
                                     </td>
                                 </tr>
@@ -138,6 +145,9 @@
             </button>
             <button class="btn primary">
                 기본버튼
+            </button>
+             <button class="btn primary small">
+                버튼
             </button>
             <button class="btn primary" disabled>
                 disabled
@@ -392,18 +402,18 @@
 
         <br />
         <h3>캘린더</h3>
+
+        <div class="form_group">
+            <input type="date" id="searchStartDate" placeholder="시작일">
+            <span class="calendar_bullet">~</span>
+            <input type="date" id="searchEndDate" placeholder="종료일">
+        </div>
+        <p class="error_message">정규 시험 응시 종료일 기준 5일 이내로 선택해주세요.</p>
+
+        <br />
+
         <!-- 캘린더 -->
         <div class="form_group calendar">
-            <div class="form_warning">
-                <input type="date" id="searchStartDate" placeholder="시작일">
-                <p class="error_message">날짜가 올바르지 않습니다.</p>
-            </div>
-            <span class="calendar_bullet">~</span>
-            <div class="form_warning">
-                <input type="date" id="searchEndDate" placeholder="종료일">
-                <p class="error_message">종료일은 시작일보다 
-같거나 늦어야 합니다.</p>
-            </div>
             <ul class="btn_date_range">
                 <li><button class="active">당일</button></li>
                 <li><button>당월</button></li>
@@ -553,29 +563,59 @@
             </span>
         </div>
 
+        <h3>다중선택 셀렉트박스</h3>
+        <!-- 다중 선택 드롭다운 -->
+        <div class="custom_select"id="campus_interest" tabindex="0" role="button" aria-expanded="false">
+            <span class="selected">관심 캠퍼스를 선택해 주세요.</span>
+            <div class="options">
+                <label><input type="checkbox" class="multiple_checkbox" value="인강"> 인강</label>
+                <label><input type="checkbox" class="multiple_checkbox" value="강남단과"> 강남단과</label>
+                <label><input type="checkbox" class="multiple_checkbox" value="김영플러스 강남"> 김영플러스 강남</label>
+                <label><input type="checkbox" class="multiple_checkbox" value="김영플러스 신촌"> 김영플러스 신촌</label>
+                <label><input type="checkbox" class="multiple_checkbox" value="노량진"> 노량진</label>
+                <label><input type="checkbox" class="multiple_checkbox" value="노원"> 노원</label>
+                <label><input type="checkbox" class="multiple_checkbox" value="기타"> 기타</label>
+            </div>
+        </div>
+        <!-- // 다중 선택 드롭다운 -->
+
         <h3>파일첨부</h3>
-        
-        <!-- 파일 첨부 -->
+
+        <!-- 첨부파일 버튼형 -->
         <div class="file_search">
+            <div class="file_search_top">
+                <label for="fileUpload" class="btn">
+                    <span class="material-symbols-rounded">attach_file</span>파일 선택
+                </label>
+                <p>허용 파일 형식: PDF, PNG, JPG, JPEG / 최대 업로드 용량 50MB</p>
+            </div>
+           
+            <input type="file" class="transparent" id="fileUpload" multiple>
 
-            <!-- 선택 이전 -->
-            <input type="file">
-            <!-- //선택 이전 -->
+            <!-- 첨부한 파일 영역 -->
+            <div class="attachment"> 
+                <div class="download_area">
+                    <!-- p class="no_attachment">첨부된 파일이 없습니다.</p -->
 
-            <!-- 선택 이후 -->
-            <div class="fileSearch_after">
-                <div>
-                    <a href="#none">file_01.excel</a>
-                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
-                </div>
-                <div>
-                    <a href="#none">file_01.excel</a>
-                    <button type="button" class="material-symbols-rounded" title="삭제">close</button>
+                    <div class="download">
+                        <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                        <div>
+                            <button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
+                        </div>
+                    </div>
+
+                    <div class="download">
+                        <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                        <div>
+                            <button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <!-- //선택 이후 -->
+            <!-- //첨부한 파일 영역 -->
         </div>
-        <!-- //파일 첨부 -->
+        <!-- //첨부파일 버튼형 -->
 
         <h4>파일첨부 - 드래그 앤 드롭</h4>
         <!-- 파일 업로드 드래그 앤 드롭 -->
@@ -675,6 +715,26 @@
                 <li>제출 기간 내 파일 수정이 필요한 경우, 제출 기간 내 파일을 다시 업로드하여 수정 제출하시기 바랍니다.</li>
             </ul>
         </div>
+
+        <div class="txt_guide">
+            <strong>강의 수강 시 유의사항
+                <a href="#none" class="btn btn_theory">유의사항 더보기</a>
+            </strong>
+            <ul>
+                <li>각 주차의 학습기간 내에 학습 콘텐츠를 순차적으로 수강해야 하며, <em>해당 주차 외 학습은 출석으로 인정되지 않습니다.</em></li>
+                <li><em>출석률이 기준에 미달할 경우 과목 이수 및 학점 인정이 불가</em>합니다.</li>
+                <li>학습 콘텐츠는 1배속으로 수강을 권장하며, 빠른 배속으로 인해 학습 시간이 부족한 경우 출석으로 인정되지 않을 수 있습니다.</li>
+                <li>동시 수강은 불가하며, <em>부정한 방법으로 동시 수강이 확인될 경우 해당 차시는 미수강 처리</em>됩니다.</li>
+            </ul>
+        </div>
+
+        <br />
+
+        <ul class="table_guide">
+            <li>학습 안내, 출석 관리 등 주요 안내사항은 SMS 및 이메일을 통해 안내됩니다.</li>
+            <li class="txt_info">수신 미동의 시 개강 안내, 학사일정, 할인 정보 등 중요 공지사항이 누락될 수 있습니다.</li>
+        </ul>
+
         <br /><br />
         <div class="layer_guide gray">
             시험 응시 중 <strong>시스템 오류 또는 접속 문제로 정상 응시가 불가</strong>한 경우 재시험을 신청하실 수 있습니다.<br />
@@ -1458,6 +1518,16 @@
                         <td><button type="button" class="btn">성적 확인</button></td>
                     </tr>
                     <tr>
+                        <td>1</td>
+                        <td>2026년 1학기 1기</td>
+                        <td>지역사회복지론</td>
+                        <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                        <td>
+                            <button type="button" class="btn small">제출</button>
+                        </td>
+                        <td><button type="button" class="btn">성적 확인</button></td>
+                    </tr>
+                    <tr>
                         <td>2</td>
                         <td>2026년 1학기 1기</td>
                         <td>지역사회복지론</td>
@@ -1686,7 +1756,18 @@
                     <th>휴대폰</th>
                     <td>010-1234-5678</td>
                     <th>이메일</th>
-                    <td>ky@example.com</td>
+                    <td>
+                        <div class="form_group column"> 
+                            <select name="" id="target_major">
+                                <option value="">목표 전공을 선택해 주세요.</option>
+                                <option value="컴퓨터공학">컴퓨터공학</option>
+                                <option value="경영학">경영학</option>
+                                <option value="심리학">심리학</option>
+                                <option value="기타">기타</option>
+                            </select>
+                            <input id="target_major_other" type="text" placeholder="기타 관심분야를 입력해 주세요." class="width_50">
+                        </div>
+                    </td>
                 </tr>
                <tr>
                     <th>주소</th>

@@ -299,8 +299,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_discussionTopic', triggers: ['.btn_discussionTopic'] }, //토론 주제 확인 레이어
             { layer: '.layer_wrapper.layer_examGuide', triggers: ['.btn_examGuide'] }, //시험 유의사항 레이어
             { layer: '.layer_wrapper.layer_re_examGuide', triggers: ['.btn_re_examGuide'] }, //재시험 유의사항 레이어
+            { layer: '.layer_wrapper.layer_reject_examApply', triggers: ['.btn_reject_examApply'] }, //재응시 반려 사유 확인 레이어
             { layer: '.layer_wrapper.layer_add_examApply', triggers: ['.btn_add_examApply'] }, //추가시험 신청 레이어
             { layer: '.layer_wrapper.layer_add_examApply_write', triggers: ['.btn_add_examApply_write'], closeCurrentLayer: true }, //추가시험 신청 작성 레이어
+            { layer: '.layer_wrapper.layer_practiceGuide', triggers: ['.btn_practiceGuide'], closeCurrentLayer: true }, //현장실습신청서 작성 유의사항
         ]);
     }
 
