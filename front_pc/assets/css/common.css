@@ -222,8 +222,10 @@ label.btn { line-height:28px; transition:all .2s; }
 s { color:var(--Neutral-600) }
 
 /* 에러메시지 */
-.error_message { color:var(--Error); font-weight:500; padding:8px 16px 0; font-size:var(--Font-small); }
-.success_message { color:var(--Success); font-weight:500; padding:8px 16px 0; font-size:var(--Font-small); }
+.error_message { color:var(--Error); font-weight:500; padding:8px 16px 0 0; font-size:var(--Font-small); }
+.success_message { color:var(--Success); font-weight:500; padding:8px 16px 0 0; font-size:var(--Font-small); }
+.info_message { font-size:var(--Font-small); color:var(--Neutral-600);
+    font-weight:500; margin-top:12px; }
 input.error,input.error:focus,textarea.error,textarea.error:focus,select.error,select.error:focus { border:1px solid var(--Error) !important; }
 input.success,input.success:focus,textarea.success,textarea.success:focus,select.success,select.success:focus { border:1px solid var(--Success) !important; }
 
@@ -298,10 +300,10 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 /* 다중 선택 select */
 /* custom_select는 일반 select가 아니기 때문에 .custom_select:focus 로 포커스 스타일을 직접 제어해야 함 */
 .custom_select { width:100%; height:50px; border-radius:var(--Border-radius); border:1px solid var(--Neutral-500); cursor:pointer; position:relative; background: #fff url(../images/common/select_arrow.png) no-repeat calc(100% - 12px) center; padding-right: 40px; font-size:var(--Font-small); }
-td .custom_select { height:32px; width:500px; }
 .custom_select:focus { border:1px solid var(--Primary-500); outline:transparent; box-shadow:0 0 1px 1px rgba(21, 197, 206, 0.16); transition:all .2s; }
 .custom_select:focus .selected { color:var(--Neutral-900); font-weight:500; }
-.custom_select .selected { display:block; color:var(--Placeholder);  padding:14px 16px 16px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; height:50px;}
+.custom_select .selected { display:block; color:var(--Neutral-500);  padding:14px 0 16px 16px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; height:50px;}
+td .custom_select { height:32px; width:233px; }
 td .custom_select .selected { height:32px; padding-top:6px; }
 .custom_select .selected.active { color:var(--Neutral-900); font-weight:500; }
 
@@ -328,7 +330,7 @@ outline:none; }
 .flex_left { display:flex; gap:16px; justify-content:flex-start; align-items:center; padding:4px 0 9px; }
 .flex_center { display:flex; gap:16px; align-items:center; }
 .inline_dl input { margin-right:4px; }
-.flex_left dt { font-weight:600; min-width:100px; flex-shrink: 0; }
+.flex_left dt { font-weight:600; min-width:60px; flex-shrink: 0; }
 .flex_left dd { flex-grow: 1; }
 
 /* 6. 테이블 스타일 */

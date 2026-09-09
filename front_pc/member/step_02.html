@@ -45,13 +45,14 @@
                             <label for="user_name" class="field_label">
                                 <h4><span class="essential">*</span>이름</h4>
                             </label>
-                            <p>실명이 아닌 경우 수강신청, 상담 등 제한이 있을 수 있습니다.</p>
                         </header>
                        
                         <input type="text" id="user_name" placeholder="이름을 입력해 주세요."> <!-- 인풋잘못작성 되었을때 error 클래스 추가 빨간 border -->
                     </div>
+                    <p class="info_message">실명이 아닌 경우 수강신청, 상담 등 제한이 있을 수 있습니다.</p>
                     <p class="success_message" hidden>사용 가능한 이름입니다.</p>
                     <p class="error_message" hidden>이름은 2자 이상 입력해 주세요.</p>
+                    
 
                     <div class="input_area">
                         <header>
@@ -60,13 +61,13 @@
                                     <span class="essential">*</span>아이디
                                 </h4>
                             </label>
-                            <p>6~10자의 영어 소문자, 숫자 조합</p>
                         </header>
                         <div class="multiple">
                             <input type="text" id="user_id" placeholder="아이디를 입력해 주세요."> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
                             <button type="button" class="btn primary">중복확인</button>
                         </div>
                     </div>
+                    <p class="info_message">6~10자의 영어 소문자, 숫자 조합</p>
                     <p class="success_message" hidden>사용 가능한 아이디입니다.</p>
                     <p class="error_message" hidden>중복 아이디입니다.</p>
 
@@ -75,11 +76,11 @@
                             <label for="user_password" class="field_label">
                                 <h4><span class="essential">*</span>비밀번호</h4>
                             </label>
-                            <p>8~20자 이내의 영문, 숫자, 특수문자 조합 (단, ‘ ; - &lt; ( ) / \ 사용 불가)</p>
                         </header>
                         
                         <input type="password" id="user_password" placeholder="비밀번호를 입력해 주세요." class="error"> <!-- 인풋 잘못작성 되었을때 error 클래스 추가 빨간 border -->
                     </div>
+                    <p class="info_message">8~20자 이내의 영문, 숫자, 특수문자 조합 (단, ‘ ; - &lt; ( ) / \ 사용 불가)</p>
                     <p class="error_message" hidden>비밀번호가 일치하지 않습니다. 다시 입력해 주세요.</p>
 
                     <div class="input_area">
@@ -129,14 +130,13 @@
                     <div class="input_area">
                         <header>
                             <h4><span class="essential">*</span>SMS / 이메일 수신 동의</h4>
-                            <p>학습 안내, 출석 관리 등 주요 안내사항은 SMS 및 이메일을 통해 안내됩니다.</p>
                         </header>
                         <div class="txt_guide">
                             
                             수신 미동의 시 개강 안내, 학사 일정, 할인 정보 등 중요 공지사항이 누락될 수 있습니다.
                         </div>
                         
-                        <dl class="flex_left">
+                        <dl class="flex_left long_txt">
                             <dt><span class="essential">*</span>SMS 수신 동의</dt>
                             <dd>
                                 <div class="check_group">
@@ -144,12 +144,12 @@
                                         <input type="radio" name="sms_agree">동의
                                     </label>
                                     <label class="form_check">
-                                        <input type="radio" name="sms_agree">비동의
+                                        <input type="radio" name="sms_agree">미동의
                                     </label>
                                 </div>
                             </dd>
                         </dl>
-                        <dl class="flex_left">
+                        <dl class="flex_left long_txt">
                             <dt><span class="essential">*</span>이메일 수신 동의</dt>
                             <dd>
                                 <div class="check_group">
@@ -157,11 +157,12 @@
                                         <input type="radio" name="email_agree">동의
                                     </label>
                                     <label class="form_check">
-                                        <input type="radio" name="email_agree">비동의
+                                        <input type="radio" name="email_agree">미동의
                                     </label>
                                 </div>
                             </dd>
                         </dl>
+                        <p class="info_message">학습 안내, 출석 관리 등 주요 안내사항은 SMS 및 이메일을 통해 안내됩니다.</p>
                         <p class="error_message" hidden>수신 동의 여부를 선택해 주세요.</p>
                     </div>
 
@@ -208,7 +209,15 @@
                                 <option value="재학">재학</option>
                                 <option value="졸업">졸업</option>
                             </select>
-                            <input type="date" name="" id="final_education_date">
+                            <div>
+                                <select name="" id="final_education_year">
+                                    <option value="">연도</option>
+                                </select>
+                                <select name="" id="final_education_month">
+                                    <option value="">월</option>
+                                </select>
+                            </div>
+                            
                         </div>
                         <input type="text" id="education_name" placeholder="대학, 고등학교 또는 기관명을 입력해 주세요." class="marginT16">
                     </div>
@@ -366,7 +375,7 @@
                             <label for="introduction_campus" class="field_label">
                                 <h4>김영편입 소개 여부</h4>
                             </label>
-                        </header>                        
+                        </header>
                         <dl class="flex_left">
                             <dt>캠퍼스명</dt>
                             <dd>
@@ -384,7 +393,6 @@
                     <div class="input_area">
                         <header>
                             <h4>김영편입 마케팅 및 광고 활용 동의</h4>
-                            <p>김영편입의 이벤트, 프로모션 및 다양한 혜택 정보를 SMS 또는 이메일로 수신하는 것에 동의합니다.</p>
                         </header>
                         <div class="check_group marginT16">
                             <label class="form_check">
@@ -394,6 +402,7 @@
                                 <input type="checkbox">이메일 수신 동의
                             </label>
                         </div>
+                        <p class="info_message">김영편입의 이벤트, 프로모션 및 다양한 혜택 정보를 SMS 또는 이메일로 수신하는 것에 동의합니다.</p>
                     </div>
                 
                     <ul class="btn_login">
