@@ -303,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_add_examApply', triggers: ['.btn_add_examApply'] }, //추가시험 신청 레이어
             { layer: '.layer_wrapper.layer_add_examApply_write', triggers: ['.btn_add_examApply_write'], closeCurrentLayer: true }, //추가시험 신청 작성 레이어
             { layer: '.layer_wrapper.layer_practiceGuide', triggers: ['.btn_practiceGuide'], closeCurrentLayer: true }, //현장실습신청서 작성 유의사항
+            { layer: '.layer_wrapper.layer_courseFeedback', triggers: ['.btn_courseFeedback'], closeCurrentLayer: true }, //강의평가 레이어
         ]);
     }
 

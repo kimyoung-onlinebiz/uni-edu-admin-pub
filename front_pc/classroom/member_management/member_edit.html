@@ -357,7 +357,7 @@
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header border">
+            <header class="sub_header borderGray">
                 <h3>회원정보 수정</h3>
                 <p>휴대전화 번호 또는 이메일 주소가 변경되었다면, 새로운 정보로 수정해 주세요.</p>
             </header>
@@ -370,7 +370,7 @@
                 </header>
             
 
-                <table class="view_table borderGray">
+                <table class="view_table">
                     <colgroup>
                         <col style="width:200px;">
                         <col>
@@ -485,7 +485,7 @@
                     </header>
                 </article>
 
-                <table class="view_table borderGray">
+                <table class="view_table">
                     <colgroup>
                         <col style="width:200px;">
                         <col>
@@ -602,8 +602,28 @@
                                         <option value="심리학">심리학</option>
                                         <option value="기타">기타</option>
                                     </select>
-                                    <input id="target_major_other" type="text" placeholder="기타 관심분야를 입력해 주세요." class="width_50">
+                                    <input id="target_major_other" type="text" placeholder="목표 전공을 입력해 주세요." class="width_50">
                                 </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">관심 분야</th>
+                            <td>
+                                <!-- 다중 선택 드롭다운 -->
+                                <div class="custom_select" id="interest_field" tabindex="0" role="button" aria-expanded="false">
+                                    <span class="selected">관심 분야를 선택해 주세요.</span>
+                                    <div class="options">
+                                        <label><input type="checkbox" class="multiple_checkbox" value="일반 편입"> 일반 편입</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="학사 편입"> 학사 편입</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="대학원 진학"> 대학원 진학</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="학위 취득"> 학위 취득</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="자격증 취득"> 자격증 취득</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="의학계열 선수과목"> 의학계열 선수과목</label>
+                                        <label><input type="checkbox" class="multiple_checkbox" value="기타"> 기타</label>
+                                    </div>
+                                </div>
+                                <!-- // 다중 선택 드롭다운 -->
+                                <input id="interest_field_other" type="text" placeholder="기타 관심분야를 입력해 주세요." class="marginT8 width_50">
                             </td>
                         </tr>
                         <tr>
@@ -635,7 +655,7 @@
                                     </div>
                                 </div>
                                 <!-- // 다중 선택 드롭다운 -->
-                                <input id="campus_interest_other" type="text" placeholder="목표 전공을 입력해 주세요." class="marginT8 width_50">
+                                <input id="campus_interest_other" type="text" placeholder="기타 관심 캠퍼스를 입력해 주세요." class="marginT8 width_50">
                             </td>
                         </tr>
                         <tr>

@@ -29,6 +29,8 @@
 .lnb_wrap .classroom_shortcut a:hover:after,.lnb_wrap .classroom_shortcut a.active:after { color:var(--Primary-500); font-variation-settings:'FILL' 1,'wght' 300; }
 .subpage_content { position:relative; flex:0 0 960px; min-width:0; margin-top:24px; }
 .subpage_content .sub_header { position:relative; width:100%; display:flex; align-items:center; justify-content:space-between; padding-bottom:19px; margin-top:35px; }
+.subpage_content .sub_header.start { justify-content:flex-start; }
+.subpage_content .sub_header.start .table_sort { margin-bottom:0; margin-top:3px; }
 .subpage_content .sub_header .sub_header_info { display:flex; align-items:center; gap:16px; }
 .subpage_content .sub_header h3 { font-size:var(--Font-2xlarge); font-weight:700; line-height:1.2; }
 .subpage_content .sub_header h3 strong { color:var(--Primary-500); font-weight:700; }
@@ -37,6 +39,7 @@
 .sub_header .sub_header_info h4 { margin-top:0; }
 .sub_header h4 strong { font-weight:600; color:var(--Error); }
 .subpage_content .sub_header.border { border-bottom: 1px solid var(--Neutral-900);  margin-bottom:24px; }
+.subpage_content .sub_header.borderGray { border-bottom: 1px solid var(--Neutral-300);  margin-bottom:24px; }
 .subpage_content .sub_header button,.subpage_content .sub_header a.btn { color:var(--Neutral-800); }
 .subpage_content .sub_header a.primary,.subpage_content .sub_header button.primary { color:var(--Neutral-0); }
 
@@ -122,7 +125,7 @@ td .multiple .btn_delete { right:12px; bottom:6px; }
 .join_progress li:last-child:after { content:none; }
 
 /* 페이지 타이틀 */
-.join_title { text-align:center; margin-bottom:60px; }
+.join_title { text-align:center; margin-bottom:36px; }
 .join_title h3 { font-size:var(--Font-2xlarge); font-weight:700; margin-bottom:8px; }
 .join_title h3 p { font-size:var(--Font-small); font-weight:500; color:var(--Neutral-600); }
 .join_title > p { font-size:var(--Font-large); font-weight:500; margin:12px 0 24px; }
@@ -207,9 +210,11 @@ td .multiple .btn_delete { right:12px; bottom:6px; }
 .txt_basicRed { color:var(--Error) !important; font-weight:500; }
 
 /* 스크롤 디자인 커스텀 */
-.scroll_design::-webkit-scrollbar { width:6px; }
-.scroll_design::-webkit-scrollbar-track { background:#fff; }
-.scroll_design::-webkit-scrollbar-thumb { background:#dfe2f2; border-radius:10px; }
+.scroll_design { scrollbar-width:thin; scrollbar-color:var(--Neutral-500) var(--Neutral-100); }
+.scroll_design::-webkit-scrollbar { width:10px; }
+.scroll_design::-webkit-scrollbar-track { background:var(--Neutral-100); border-radius:10px; }
+.scroll_design::-webkit-scrollbar-thumb { background:var(--Neutral-500); border:2px solid var(--Neutral-100); border-radius:10px; }
+.scroll_design::-webkit-scrollbar-thumb:hover { background:var(--Neutral-600); }
 .scroll_design::-webkit-scrollbar-button { display:none; }
 
 .lnb_wrap .classroom_shortcut { background:var(--Neutral-0); border:1px solid var(--Neutral-300); }
@@ -607,7 +612,9 @@ ol.layer_guide li strong { color:var(--Info); }
 .layer_guide ol { padding-left:20px; }
 .layer_guide ol > li { list-style-type: decimal; margin-bottom:12px; }
 .layer_guide strong { color:var(--Error) }
-.layer_guide .check { border-top:1px solid var(--Neutral-300); padding:24px 0 0; margin-top:24px; }
+.layer_guide .check,.layer_check { border-top:1px solid var(--Neutral-300); padding:24px 0 0; margin-top:24px; }
+.layer_check label { display:flex; align-items:flex-start; }
+.layer_check input[type="checkbox"] { flex:0 0 auto; margin-top:3px; }
 .layer_guide ul,.layer_guide dl { display:flex; flex-direction:column; gap:3px; margin-top:4px; }
 .layer_guide dt { font-weight:600; }
 .layer_guide ul li,.layer_guide dd { display:flex; align-items:flex-start; font-size:var(--Font-small); }
@@ -686,3 +693,28 @@ ol.layer_guide li strong { color:var(--Info); }
 .grade_schedule dt { font-weight:600; }
 .grade_schedule dt:after { content:" | "; font-weight:400; padding:0 6px 0 2px; }
 .grade_schedule dd { letter-spacing:-0.5px; }
+
+/* 기수별 성적확인 */
+.score_table tbody tr { position:relative; }
+.evaluation_dim { display: flex; align-items: center; justify-content: center; position: absolute; top:0; left:250px; width: calc(100% - 250px); height:calc(100% - 1px); background: rgba(0, 0, 0, 0.9); border-radius:6px; }
+.evaluation_dim p { color:var(--Neutral-0); }
+.btn_evaluation { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width:122px; height:32px; padding:0 12px;  border-radius:var(--Border-radius); background:var(--Neutral-0); font-size:var(--Font-small); font-weight:500; }
+.btn_evaluation:hover { background:var(--Primary-100); }
+.btn_evaluation .material-symbols-rounded { font-size: 17px; }
+.rating_box { display:flex; align-items:center; background:var(--Neutral-100); border: 1px solid var(--Neutral-300); border-radius:var(--Border-radius); padding:24px 40px; margin-top:16px; } 
+.rating_box > span { font-weight:700; margin:0 80px 0 20px; } 
+.rating_box > div { flex: 1; text-align: center; font-size:var(--Font-small); } 
+.rating_box b { display:block; margin-bottom:8px; }
+.layer_courseFeedback .layer_content { display:flex; width:1242px; gap:32px; }
+.star-rating, .star_rating { display: flex; flex-direction: row-reverse; justify-content: center; }
+.star-rating input, .star_rating input { display:none; }
+.star-rating label, .star_rating label { font-size:36px; color:var(--Neutral-300); padding:0 4px; }
+.star-rating label:hover, .star-rating label:hover ~ label, .star-rating input:checked ~ label, .star_rating label:hover, .star_rating label:hover ~ label, .star_rating input:checked ~ label { color:var(--Info); }
+.layer_courseFeedback .feedback_scroll { max-height:300px; overflow-y:auto; overflow-x:hidden; }
+.layer_courseFeedback .feedback { display:flex; flex-direction:column; }
+.layer_courseFeedback .feedback:first-child { flex:0 0 800px; }
+.layer_courseFeedback .feedback:not(:first-child) { flex:1; min-width:0; }
+.layer_courseFeedback .layer_contentTitle { margin-top:8px; margin-bottom:24px; }
+.layer_courseFeedback textarea { height:300px; }
+.layer_courseFeedback .scroll_design { max-height:295px; overflow-y: auto; overflow-x: hidden; margin-top:32px; padding-right:8px; }
+

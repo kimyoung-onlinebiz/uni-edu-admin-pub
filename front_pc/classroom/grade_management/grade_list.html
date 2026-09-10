@@ -354,7 +354,7 @@
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header border">
+            <header class="sub_header">
                 <h3>기수별 성적 확인</h3>
             </header>
             <!-- //sub header -->
@@ -407,89 +407,439 @@
                 </div>
                 <!-- //성적 관련 일정 안내 -->
 
-                <div class="table_sort">
-                    <span>총 <strong>7</strong>건</span>
-                    <div>
-                        <label>
-                            <input type="checkbox"> 답변 완료 보기
-                        </label>
-                        <select name="" id="" class="is-selected">
-                            <option value="마감 임박순">마감 임박순</option>
-                            <option value="최근 개강순">최근 개강순</option>
-                            <option value="과정명순">과정명순</option>
-                        </select>
+                <header class="sub_header start"> 
+                    <h4>이론</h4>
+                    <div class="table_sort">
+                        <span>총 <strong>7</strong>건</span>
                     </div>
-                </div>
+                </header>
 
-                <table class="list_table">
-                    <caption>이의신청</caption>
+                <table class="data_table score_table">
+                    <caption>이론 점수현황</caption>
                     <colgroup>
-                        <col style="width:8%;">
-                        <col style="width:10%;">
-                        <col style="width:15%;">
-                        <col style="width:15%;">
+                        <col style="width:250px;">
                         <col>
-                        <col style="width:10%;">
-                        <col style="width:10%;">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
                     </colgroup>
                     <thead>
                         <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">년도/학기/기수</th>
-                            <th scope="col">과정명</th>
-                            <th scope="col">이의신청 유형</th>
-                            <th scope="col">제목</th>
-                            <th scope="col">답변 상태</th>
-                            <th scope="col">등록일</th>
+                            <th scope="col" colspan="6">과정별 원 점수</th>
+                            <th scope="col" colspan="4">상대평가 반영 최종 결과</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">과정 명</th>
+                            <th scope="col">출석<br />(15%)</th>
+                            <th scope="col">시험<br />(50%)</th>
+                            <th scope="col">과제<br />(20%)</th>
+                            <th scope="col">토론<br />(10%)</th>
+                            <th scope="col">퀴즈<br />(5%)</th>
+                            <th scope="col">총점</th>
+                            <th scope="col">등수</th>
+                            <th scope="col">수료</th>
+                            <th scope="col">등급</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td>지역사회복지론</td>
                             <td>15</td>
-                            <td>2026년 1학기 1기</td>
-                            <td>외국어로서의한국어교육</td>
-                            <td>학습 질문 > 수업내용 </td>
-                            <td class="subject"><a href="#none">9주차 수업 내용 관련해서 문의드립니다.</a></td>
-                            <td><span class="status">답변 대기</span></td>
-                            <td>2026-01-07</td>
+                            <td>50</td>
+                            <td>20</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>100</td>
+                            <td>1/50</td>
+                            <td>수료</td>
+                            <td>
+                                A
+                                <!-- 강의 평가하기 버튼 -->
+                                <div class="evaluation_dim">
+
+                                    <button type="button" class="btn_evaluation btn_courseFeedback">
+                                        <span class="material-symbols-rounded icon_fill">lock</span>
+                                        <span>강의 평가 하기</span>
+                                    </button>
+
+                                    <!-- p>강의평가 완료! 최종 성적 확인 기간에 성적이 공개됩니다.</p -->
+                                </div>
+                                <!-- //강의 평가하기 버튼 -->
+                            </td>
                         </tr>
                         <tr>
-                            <td>14</td>
-                            <td>2026년 1학기 1기</td>
-                            <td>지역사회복지론</td>
-                            <td>콘텐츠 질문 > 영상</td>
-                            <td class="subject"><a href="#none">사회복지현장실습 과정 수강 시 유의사항 안내</a></td>
-                            <td><span class="status complete">답변 완료</span></td>
-                            <td>2026-01-07</td>
+                            <td>외국어로서의한국어교육실습</td>
+                            <td>15</td>
+                            <td>50</td>
+                            <td>20</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>100</td>
+                            <td>1/50</td>
+                            <td>수료</td>
+                            <td>
+                                A
+                                <!-- 강의 평가하기 버튼 -->
+                                <div class="evaluation_dim">
+
+                                    <button type="button" class="btn_evaluation">
+                                        <span class="material-symbols-rounded icon_fill">lock</span>
+                                        <span>강의 평가 하기</span>
+                                    </button>
+
+                                    <!-- p>강의평가 완료! 최종 성적 확인 기간에 성적이 공개됩니다.</p -->
+                                </div>
+                                <!-- //강의 평가하기 버튼 -->
+                            </td>
                         </tr>
-                         <tr>
-                            <td>13</td>
-                            <td>2026년 1학기 1기</td>
+                        <tr>
                             <td>지역사회복지론</td>
-                            <td>교수님께 질문 > 퀴즈</td>
-                            <td class="subject"><a href="#none">2026년 1학기 학습 진행 안내 <em class="new_badge">N</em></a></td>
-                            <td><span class="status">답변 진행중</span></td>
-                            <td>2026-01-07</td>
+                            <td>15</td>
+                            <td>50</td>
+                            <td>20</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>100</td>
+                            <td>1/50</td>
+                            <td>수료</td>
+                            <td>
+                                A
+                                <!-- 강의 평가하기 버튼 -->
+                                <div class="evaluation_dim">
+
+                                    <!-- button type="button" class="btn_evaluation">
+                                        <span class="material-symbols-rounded icon_fill">lock</span>
+                                        <span>강의 평가 하기</span>
+                                    </button -->
+
+                                    <p>강의평가 완료! 최종 성적 확인 기간에 성적이 공개됩니다.</p>
+                                </div>
+                                <!-- //강의 평가하기 버튼 -->
+                            </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <!-- 페이징 -->
-                <div class="paging">
-                    <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
-                    <a href="#none">1</a>
-                    <a href="#none" class="active">2</a>
-                    <a href="#none">3</a>
-                    <a href="#none">4</a>
-                    <a href="#none">5</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
-                    <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
-                </div>
-                <!-- //페이징 -->
+                <header class="sub_header start"> 
+                    <h4>사복실습</h4>
+                    <div class="table_sort">
+                        <span>총 <strong>7</strong>건</span>
+                    </div>
+                </header>
+
+                <table class="data_table score_table">
+                    <caption>사복실습 점수현황</caption>
+                    <colgroup>
+                        <col style="width:250px;">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="4">과정별 원 점수</th>
+                            <th scope="col" colspan="4">최종 결과</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">과정 명</th>
+                            <th scope="col">출석<br />(15%)</th>
+                            <th scope="col">온라인 과제<br />(25%)</th>
+                            <th scope="col">오프라인 과제<br />(70%)</th>
+                            <th scope="col">총점</th>
+                            <th scope="col">등수</th>
+                            <th scope="col">수료</th>
+                            <th scope="col">등급</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>사회복지현장실습</td>
+                            <td>15</td>
+                            <td>50</td>
+                            <td>20</td>
+                            <td>100</td>
+                            <td>1/50</td>
+                            <td>수료</td>
+                            <td>
+                                A
+                                <!-- 강의 평가하기 버튼 -->
+                                <div class="evaluation_dim">
+                                    <button type="button" class="btn_evaluation">
+                                        <span class="material-symbols-rounded icon_fill">lock</span>
+                                        <span>강의 평가 하기</span>
+                                    </button>
+                                    <!-- p>강의평가 완료! 최종 성적 확인 기간에 성적이 공개됩니다.</p -->
+                                </div>
+                                <!-- //강의 평가하기 버튼 -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <header class="sub_header start"> 
+                    <h4>한국어교원</h4>
+                    <div class="table_sort">
+                        <span>총 <strong>7</strong>건</span>
+                    </div>
+                </header>
+
+                <table class="data_table score_table">
+                    <caption>한국어교원 점수현황</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="6">과정별 원 점수</th>
+                            <th scope="col" colspan="4">최종 결과</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">과정 명</th>
+                            <th scope="col">출석<br />(15%)</th>
+                            <th scope="col">모의수업지도안<br />(20%)</th>
+                            <th scope="col">참관보고서<br />(5%)</th>
+                            <th scope="col">강의참관토론(20%)</th>
+                            <th scope="col">모의수업<br />(40%)</th>
+                            <th scope="col">총점</th>
+                            <th scope="col">등수</th>
+                            <th scope="col">수료</th>
+                            <th scope="col">등급</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>외국어로서의한국어교육실습</td>
+                            <td>15</td>
+                            <td>20</td>
+                            <td>5</td>
+                            <td>20</td>
+                            <td>40</td>
+                            <td>100</td>
+                            <td>1/50</td>
+                            <td>수료</td>
+                            <td>
+                                A
+                                <!-- 강의 평가하기 버튼 -->
+                                <div class="evaluation_dim">
+                                    <button type="button" class="btn_evaluation">
+                                        <span class="material-symbols-rounded icon_fill">lock</span>
+                                        <span>강의 평가 하기</span>
+                                    </button>
+                                    <!-- p>강의평가 완료! 최종 성적 확인 기간에 성적이 공개됩니다.</p -->
+                                </div>
+                                <!-- //강의 평가하기 버튼 -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </section>
             <!-- //게시판 리스트 -->
+
+            <!-- 레이어 / 강의평가 -->
+            <div class="layer_wrapper layer_courseFeedback"> <!-- active 추가 시 화면 노출 -->
+                <div class="layer_basic">
+
+                    <header>
+                        <div>
+                            <h1>강의평가</h1>
+                        </div>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </header>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+
+                        <div class="feedback">
+                            <div class="submission_info">
+                                <dl>
+                                    <dt>과정 명</dt>
+                                    <dd>2026년도 1학기 2기 지역사회복지론</dd>
+                                </dl>
+                                <dl>
+                                    <dt>문항</dt>
+                                    <dd>25문항</dd>
+                                </dl>
+                            </div>
+
+                            <div class="rating_box">
+                                <span>평가 기준</span>
+                                <div><b>1번</b>전혀 그렇지 않다</div>
+                                <div><b>2번</b>그렇지 않다</div>
+                                <div><b>3번</b>보통이다</div>
+                                <div><b>4번</b>그렇다</div>
+                                <div><b>5번</b>매우 그렇다</div>
+                            </div>
+
+                            <div class="scroll_design">
+                                <table class="list_table fixed"> <!-- fixe추가 시 사이즈 고정 -->
+                                    <caption>강의평가</caption>
+                                    <colgroup> 
+                                        <col style="width:80px;">
+                                        <col style="width:120px;">
+                                        <col>
+                                        <col style="width:50px;">
+                                        <col style="width:50px;">
+                                        <col style="width:50px;">
+                                        <col style="width:50px;">
+                                        <col style="width:50px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">문항</th>
+                                            <th scope="col">1번</th>
+                                            <th scope="col">2번</th>
+                                            <th scope="col">3번</th>
+                                            <th scope="col">4번</th>
+                                            <th scope="col">5번</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>수강</td>
+                                            <td>나는 학문적 열의를 가지고 강의에 임하였다. 가지고 강의에 임하였다.</td>
+                                            <td><input type="radio" name="q1" value="1"></td>
+                                            <td><input type="radio" name="q1" value="2"></td>
+                                            <td><input type="radio" name="q1" value="3"></td>
+                                            <td><input type="radio" name="q1" value="4"></td>
+                                            <td><input type="radio" name="q1" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>수강</td>
+                                            <td>나는 매주 강의 주차에 열심히 출석하였다.</td>
+                                            <td><input type="radio" name="q2" value="1"></td>
+                                            <td><input type="radio" name="q2" value="2"></td>
+                                            <td><input type="radio" name="q2" value="3"></td>
+                                            <td><input type="radio" name="q2" value="4"></td>
+                                            <td><input type="radio" name="q2" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>수강</td>
+                                            <td>나는 학문적 열의를 가지고 강의에 임하였다.</td>
+                                            <td><input type="radio" name="q3" value="1"></td>
+                                            <td><input type="radio" name="q3" value="2"></td>
+                                            <td><input type="radio" name="q3" value="3"></td>
+                                            <td><input type="radio" name="q3" value="4"></td>
+                                            <td><input type="radio" name="q3" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>수강</td>
+                                            <td>나는 매주 강의 주차에 열심히 출석하였다.</td>
+                                            <td><input type="radio" name="q4" value="1"></td>
+                                            <td><input type="radio" name="q4" value="2"></td>
+                                            <td><input type="radio" name="q4" value="3"></td>
+                                            <td><input type="radio" name="q4" value="4"></td>
+                                            <td><input type="radio" name="q4" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>수강</td>
+                                            <td>나는 매주 강의 주차에 열심히 출석하였다.</td>
+                                            <td><input type="radio" name="q5" value="1"></td>
+                                            <td><input type="radio" name="q5" value="2"></td>
+                                            <td><input type="radio" name="q5" value="3"></td>
+                                            <td><input type="radio" name="q5" value="4"></td>
+                                            <td><input type="radio" name="q5" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>수강</td>
+                                            <td>나는 매주 강의 주차에 열심히 출석하였다.</td>
+                                            <td><input type="radio" name="q6" value="1"></td>
+                                            <td><input type="radio" name="q6" value="2"></td>
+                                            <td><input type="radio" name="q6" value="3"></td>
+                                            <td><input type="radio" name="q6" value="4"></td>
+                                            <td><input type="radio" name="q6" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>수강</td>
+                                            <td>나는 매주 강의 주차에 열심히 출석하였다.</td>
+                                            <td><input type="radio" name="q7" value="1"></td>
+                                            <td><input type="radio" name="q7" value="2"></td>
+                                            <td><input type="radio" name="q7" value="3"></td>
+                                            <td><input type="radio" name="q7" value="4"></td>
+                                            <td><input type="radio" name="q7" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>수강</td>
+                                            <td>나는 매주 강의 주차에 열심히 출석하였다.</td>
+                                            <td><input type="radio" name="q8" value="1"></td>
+                                            <td><input type="radio" name="q8" value="2"></td>
+                                            <td><input type="radio" name="q8" value="3"></td>
+                                            <td><input type="radio" name="q8" value="4"></td>
+                                            <td><input type="radio" name="q8" value="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="feedback">
+                            <div class="layer_contentTitle">
+                                <h2>전반적인 강의 만족도 및 의견</h2>
+                            </div>
+
+                            <!-- 별점 평가 -->
+                            <div class="star_rating">
+                                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                            </div>
+                            <!-- //별점 평가 -->
+
+                            <div class="textarea_wrap marginT24">
+                                <textarea id="answer" maxlength="100" placeholder="(필수) 전반적인 강의에 대한 만족도 및 의견을 입력해주세요."></textarea>
+                                <span class="textarea_count">
+                                    <em>0</em>/100
+                                </span>
+                            </div>
+
+                            <div class="layer_check">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>강의평가는 제출 후 수정이 불가합니다. 위 내용을 확인하였으며,<br />이에 동의합니다.</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- //layer 내용 -->
+                    <div class="layer_btnSection right">
+                        <button class="btn primary">강의평가 제출</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //레이어 / 강의평가 -->
 
             
 
