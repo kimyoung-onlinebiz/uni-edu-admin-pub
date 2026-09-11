@@ -371,10 +371,16 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 
 /* 레이어 과제 제출 */
 .submission_info { display:flex;  gap:16px; padding:24px 32px; background:var(--Neutral-200); border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); flex-direction:column; }
-.submission_info dl { display:flex; align-items:center; gap:24px; }
+.submission_info dl { display:flex; gap:24px; }
 .submission_info dt { font-weight:700; width:80px; }
-.submission_info dd { font-size:var(--Font-small); }
+.submission_info dd,.submission_info dd ul li { font-size:var(--Font-small); }
 .submission_info dd + dt { margin-left:90px; width:30px; }
+.submission_info dd ul li::before { content:"• "; flex:0 0 12px; }
+.submission_info dd ul li { margin-top:2px; }
+.submission_info dd ul li a { border-radius: 4px;
+border: 1px solid var(--Neutral-800); padding:1px 8px;
+background: var(--Neutral-0); font-size:var(--Font-xsmall); margin-left:4px; }
+.submission_info dd ul li a:hover { background:var(--Primary-100); }
 .attachment { margin-bottom:16px; }
 .attachment .download_area { display:flex; flex-direction:column; gap:8px; width:100%; }
 .attachment .download_area .no_attachment { color:var(--Neutral-600); font-size:var(--Font-small); }
@@ -517,8 +523,8 @@ ol.layer_guide li strong { color:var(--Info); }
 .board_view .attachment { display:flex; flex-direction:row; }
 .board_view .attachment > p { font-weight:700; font-size:var(--Font-base); margin:8px 24px 0 24px; }
 .board_view .date { color:var(--Neutral-600); font-size:var(--Font-small); }
-.board_view .board_view_footer { display:flex; gap:16px; align-items:center; margin-top:56px;justify-content:center; }
-.board_view .board_view_footer a { width:200px; height:40px; text-align:center; line-height:36px; border:1px solid var(--Primary-500); }
+.board_view_footer { display:flex; gap:16px; align-items:center; margin-top:56px;justify-content:center; }
+.board_view_footer a,.board_view_footer button { width:200px; height:40px; text-align:center; line-height:36px; border:1px solid var(--Primary-500); font-size:var(--Font-medium); }
 .board_reple { margin-top:32px; }
 .board_reple h5 { color:var(--Primary-600); font-size:var(--Font-medium); font-weight:700; margin-bottom:11px; }
 .board_reple h5 span { padding-right:5px; font-size:24px; }
@@ -685,16 +691,20 @@ ol.layer_guide li strong { color:var(--Info); }
 .member_edit { background:var(--Neutral-0); border-radius:8px; width:400px; margin:60px auto 0; }
 .member_edit > header { display:flex; flex-direction:column; align-items:center; gap:16px; padding-bottom:40px; margin-bottom:40px; border-bottom:1px solid var(--Neutral-300); }
 .member_edit > header span { font-size:40px; display:block; background:var(--Primary-100); width:100px;height:100px; text-align:center; border-radius:50%; padding-top:20px; margin-bottom:16px; }
-.member_edit > header strong { font-size:var(--Font-xlarge); display:block; }
-.grade_schedule { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:24px 32px; margin-bottom:24px; }
-.grade_schedule > div { display:flex;  justify-content:space-between;  }
-.grade_schedule strong { display:block; font-weight:700; margin-bottom:12px; border-bottom:1px solid var(--Neutral-500); padding-bottom:8px; }
+.member_edit > header strong { font-size:var(--Font-xlarge); display:block; font-weight:600; }
+.grade_schedule,.txt_guide_gray { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:24px 32px; margin-bottom:24px; }
+.grade_schedule > div,.txt_guide_gray > div { display:flex;  justify-content:space-between;  }
+.grade_schedule strong,.txt_guide_gray strong { display:block; font-weight:700; margin-bottom:12px; border-bottom:1px solid var(--Neutral-500); padding-bottom:8px; }
+.txt_guide_gray ul { display:flex; flex-direction:column; gap:3px; margin-top:6px; }
+.txt_guide_gray li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
+.txt_guide_gray li::before { content: "•"; flex: 0 0 12px; }
 .grade_schedule dl { display:flex; margin-bottom:8px;}
 .grade_schedule dt { font-weight:600; }
 .grade_schedule dt:after { content:" | "; font-weight:400; padding:0 6px 0 2px; }
 .grade_schedule dd { letter-spacing:-0.5px; }
 
 /* 기수별 성적확인 */
+.score_table { table-layout:fixed; }
 .score_table tbody tr { position:relative; }
 .evaluation_dim { display: flex; align-items: center; justify-content: center; position: absolute; top:0; left:250px; width: calc(100% - 250px); height:calc(100% - 1px); background: rgba(0, 0, 0, 0.9); border-radius:6px; }
 .evaluation_dim p { color:var(--Neutral-0); }
@@ -717,4 +727,34 @@ ol.layer_guide li strong { color:var(--Info); }
 .layer_courseFeedback .layer_contentTitle { margin-top:8px; margin-bottom:24px; }
 .layer_courseFeedback textarea { height:300px; }
 .layer_courseFeedback .scroll_design { max-height:295px; overflow-y: auto; overflow-x: hidden; margin-top:32px; padding-right:8px; }
+
+/* 증명서 출력 */
+.certificate .layer_content { width:900px; }
+.certificate .btn_print { display: inline-flex; align-items: center; justify-content: center; height:32px; width:32px; border-radius:50%; background:var(--Neutral-0); padding-top:2px; }
+.certificate .btn_print:hover { background:var(--Primary-100); color:var(--Primary-700); }
+.certificate_footer {text-align:center; }
+.certificate_footer dt small { margin-left:2px; }
+.certificate .certificate_num { display:flex; justify-content:space-between; padding:0 20px; }
+.certificate .certificate_num img { width:146px; }
+.certificate .certificate_num p { font-size:var(--Font-small); }
+.certificate .layer_content > h2 { font-size:var(--Font-3xlarge); margin:32px 0; text-align:center; font-weight:700; }
+.certificate_footer dd img { position:absolute; right:-45px; top:-25px; width:75px; }
+.certificate_footer strong { display:block; font-size:var(--Font-large); font-weight:500; margin:55px 0 8px; }
+.certificate_footer span { display:block; font-size:var(--Font-small); }
+.certificate_footer dl dt { font-size:var(--Font-large); letter-spacing:8px; }
+.certificate_footer dl { display:inline-block; margin:40px 0; position:relative; }
+ .certificate table:before { border-top:1px solid var(--Neutral-500); }
+
+/* 핵심: 인쇄 시 적용되는 CSS 스타일 */
+@media print {
+  body * { visibility:hidden; height:0; overflow: hidden; }
+  @page {
+    margin: 0;
+  }
+.certificate .layer_content { width:auto; overflow:visible; max-height:100%; }
+.certificate .layer_basic, .certificate .layer_basic * { visibility: visible; height:auto; overflow:visible; }
+.certificate .layer_basic { position: absolute; left: 0; top: 0; transform: none; width:calc(100% - 4cm); border: none; padding: 0; box-shadow:none; margin:2cm; }
+.certificate .layer_basic header { display: none !important; }
+ 
+}
 

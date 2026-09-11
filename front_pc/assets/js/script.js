@@ -304,6 +304,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_add_examApply_write', triggers: ['.btn_add_examApply_write'], closeCurrentLayer: true }, //추가시험 신청 작성 레이어
             { layer: '.layer_wrapper.layer_practiceGuide', triggers: ['.btn_practiceGuide'], closeCurrentLayer: true }, //현장실습신청서 작성 유의사항
             { layer: '.layer_wrapper.layer_courseFeedback', triggers: ['.btn_courseFeedback'], closeCurrentLayer: true }, //강의평가 레이어
+            { layer: '.layer_wrapper.layer_certificate', triggers: ['.btn_certificate'], closeCurrentLayer: true }, //교육비 납입 증명서 레이어
+            { layer: '.layer_wrapper.layer_scoreTranscript', triggers: ['.btn_scoreTranscript'], closeCurrentLayer: true }, //성적 증명서 레이어
+            { layer: '.layer_wrapper.layer_courseCertificate', triggers: ['.btn_courseCertificate'], closeCurrentLayer: true }, //수강 증명서 레이어
+            { layer: '.layer_wrapper.layer_pcRegister', triggers: ['.btn_pcRegister'], closeCurrentLayer: true }, //PC 등록 레이어
         ]);
     }
 

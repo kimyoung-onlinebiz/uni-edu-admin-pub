@@ -26,6 +26,7 @@ http://scripts.sil.org/OFL
 }
 
 .material-symbols-rounded { font-family:'Material Symbols Rounded'; font-weight:normal; font-style: normal; font-size:22px; vertical-align:-7px; text-transform:none; letter-spacing:normal; word-wrap:normal; white-space: nowrap; direction: ltr; /* WebKit 브라우저 렌더링 최적화 */  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Opera */ text-rendering: optimizeLegibility; /* Firefox */  -moz-osx-font-smoothing: grayscale; }
+button.material-symbols-rounded { font-weight:normal; }
 
 /* 디자인 시스템 (CSS Variables) */
 :root {
@@ -109,7 +110,7 @@ table { position:relative; max-width:none;	width:auto; min-width:100%; width:100
 table.fixed { table-layout:fixed; }
 caption, legend { text-indent:-9999px; overflow:hidden; height:0; }
 address { font-style:normal; }
-textarea { resize:vertical; min-height:150px; padding-top:8px; padding-bottom:8px; text-align:left; }
+textarea { resize:vertical; min-height:150px; padding-top:8px; padding-bottom:8px; text-align:left; width:100%; }
 a { text-decoration:none; transition:all .2s; }
 a:hover { color:var(--Primary-500); }
 input[type="file"] { padding:2px; width:320px; }
@@ -137,6 +138,7 @@ em { text-decoration:none; font-style:normal; }
 .txt_success { color:var(--Success) !important; }
 .txt_warning { color:var(--Warning) !important; }
 .txt_info { color:var(--Info) !important; }
+.txt_brand { color:var(--Primary-500) !important; }
 
 /* 상태 텍스트 */
 .status { text-align:center; min-width:80px; color:var(--Neutral-600); }
@@ -168,8 +170,8 @@ a.btn { line-height:28px; font-weight:500; }
 .btn:disabled,.btn.inactive { background:var(--Neutral-100) !important; border:1px solid var(--Neutral-300) !important; cursor:not-allowed; color:var(--Placeholder) !important;  }
 .btn.material-symbols-rounded,.btn.primary.material-symbols-rounded { font-size:21px; height:32px; text-align:center; padding:0 8px; }
 .btn.material-symbols-rounded.medium,.btn.primary.material-symbols-rounded.medium { font-size:22px; height:40px; text-align:center; padding:0 8px; }
-.btn.txtGray { color:var(--Neutral-800) !important; }
-.btn.txtRed { color:var(--Error) !important; } /* 미제출 */
+.txtGray { color:var(--Neutral-800) !important; }
+.txtRed { color:var(--Error) !important; } /* 미제출 */
 .btn.lightGray { color:var(--Neutral-800); } /* 제출완료 */
 .btn.borderBlue { background:var(--Neutral-0); color:var(--Primary-500) !important; border:1px solid var(--Primary-500); } /* 제출확인 */
 .btn.borderBlue:hover { background:var(--Primary-100); }
@@ -193,6 +195,7 @@ label.btn { line-height:28px; transition:all .2s; }
 .layer_wrapper header p { font-weight:500; margin-top:8px; }
 .layer_basic { position:relative; background:var(--Neutral-0); border-radius:8px; padding:32px 16px 32px 32px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); text-align:center; min-width:400px; }
 .layer_content { overflow:auto; overflow-x:hidden; max-height:580px; min-height:150px; text-align:left; padding-right:8px; scrollbar-width:thin; scrollbar-color:var(--Neutral-500) var(--Neutral-100); }
+.layer_basic header > div { display:flex; gap:8px; }
 .layer_content.noScroll { overflow:hidden; }
 .layer_contentTitle { display:flex; border-bottom:1px solid var(--Neutral-500); margin:32px 0; padding-bottom:16px; align-items:center; }
 .layer_contentTitle.borderN { border-bottom:none; margin:32px 0 0;  }
@@ -228,6 +231,7 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 /* 5. 공통 컴포넌트: 입력 필드 */
 /* 기본 입력 그룹 레이아웃 */
 .form_group { display:flex; gap:8px }
+.form_group.gap24 { gap:24px }
 .form_group.column { flex-direction:column; gap:8px; align-items: flex-start; }
 .alignC { align-items:center !important; }
 
@@ -309,7 +313,7 @@ td .custom_select .selected { height:32px; padding-top:6px; }
 
 /* 카운트 있는 textarea */
 .textarea_wrap { position:relative; width:100%; }
-.textarea_wrap textarea { display:block; width:100%; padding:25px 20px 40px; border:1px solid var(--Neutral-300); background:var(--Neutral-0); resize: none;
+.textarea_wrap textarea { display:block; width:100%; padding:25px 20px 40px; background:var(--Neutral-0); resize: none;
 outline:none; }
 
 .textarea_count { position:absolute; right:16px; bottom:8px; color:var(--Placeholder); font-size:var(--Font-2xsmall); font-weight:400; }
@@ -341,9 +345,10 @@ outline:none; }
 .table_sort span { font-size:var(--Font-small); color:var(--Neutral-800); vertical-align:bottom; }
 .table_sort strong { color:var(--Primary-500); }
 
+table th { font-weight:600; }
 .data_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-900); }
 .data_table th,.data_table td { padding:16px; text-align:center; vertical-align:middle; line-height:1.1; }
-.data_table th,.view_table th { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-bottom:none; font-weight:500; text-align:center; }
+.data_table th,.view_table th { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-bottom:none; text-align:center; }
 .data_table tbody th { border-bottom:1px solid var(--Neutral-300); }
 .data_table td { border:1px solid #dfe8ec; text-align:center; background:var(--Neutral-0); }
 .data_table.align_left td { text-align:left; }
@@ -356,9 +361,9 @@ outline:none; }
 .list_table::before,.view_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-900); }
 .view_table.borderGray::before { border-top:1px solid var(--Neutral-300); }
 .list_table th,.list_table td { padding:12px 10px 10px; text-align:center; vertical-align:middle; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); }
-.layer_wrapper .list_table th,
-.layer_wrapper .list_table td { padding:10px 10px 8px; }
-.list_table th,.view_table th { background:var(--Neutral-100); font-weight:500; text-align:center; }
+.layer_wrapper table th,
+.layer_wrapper table td { padding:10px 10px 8px; }
+.list_table th,.view_table th { background:var(--Neutral-100); text-align:center; }
 .list_table tbody th { border-bottom:1px solid var(--Neutral-300); }
 .list_table td { border-bottom:1px solid var(--Neutral-300); text-align:center; background:var(--Neutral-0); padding:19px 10px; color:var(--Neutral-800); }
 .list_table td.subject { text-align:left; font-weight:500; }
