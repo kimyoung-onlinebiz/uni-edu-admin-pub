@@ -308,6 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_scoreTranscript', triggers: ['.btn_scoreTranscript'], closeCurrentLayer: true }, //성적 증명서 레이어
             { layer: '.layer_wrapper.layer_courseCertificate', triggers: ['.btn_courseCertificate'], closeCurrentLayer: true }, //수강 증명서 레이어
             { layer: '.layer_wrapper.layer_pcRegister', triggers: ['.btn_pcRegister'], closeCurrentLayer: true }, //PC 등록 레이어
+            { layer: '.layer_wrapper.layer_faq', triggers: ['.btn_faq'], closeCurrentLayer: true }, //자주 찾는 질문
+            { layer: '.layer_wrapper.layer_formLibrary', triggers: ['.btn_formLibrary'], closeCurrentLayer: true }, //서식 자료실
         ]);
     }
 

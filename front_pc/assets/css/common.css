@@ -194,7 +194,7 @@ label.btn { line-height:28px; transition:all .2s; }
 .layer_wrapper header h1 { display:flex; align-items:center; font-size:var(--Font-2xlarge); font-weight:700; gap:16px }
 .layer_wrapper header p { font-weight:500; margin-top:8px; }
 .layer_basic { position:relative; background:var(--Neutral-0); border-radius:8px; padding:32px 16px 32px 32px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); text-align:center; min-width:400px; }
-.layer_content { overflow:auto; overflow-x:hidden; max-height:580px; min-height:150px; text-align:left; padding-right:8px; scrollbar-width:thin; scrollbar-color:var(--Neutral-500) var(--Neutral-100); }
+.layer_content { overflow:auto; overflow-x:hidden; max-height:580px; min-height:100px; text-align:left; padding-right:8px; scrollbar-width:thin; scrollbar-color:var(--Neutral-500) var(--Neutral-100); }
 .layer_basic header > div { display:flex; gap:8px; }
 .layer_content.noScroll { overflow:hidden; }
 .layer_contentTitle { display:flex; border-bottom:1px solid var(--Neutral-500); margin:32px 0; padding-bottom:16px; align-items:center; }
