@@ -36,6 +36,7 @@
 .header_wrapper .gnb .gnb_menu a { position:relative; font-size:var(--Font-large);
  font-weight:600; padding:0 8px; height:60px; display:flex; align-items:center; justify-content:center; }
 .header_wrapper .gnb .gnb_menu a:after { position:absolute; bottom:0; left:0; right:0; content:""; display:block; border-bottom:3px solid var(--Primary-500); transform:scaleX(0); transform-origin:center center; transition:transform .2s ease; }
+.header_wrapper .gnb .gnb_menu a.current { color:var(--Primary-500); font-weight:700; }
 .header_wrapper .gnb .gnb_menu a:hover:after,
 .header_wrapper .gnb .gnb_menu a:focus-visible:after { transform:scaleX(1); }
 .header_wrapper .menu_hamburger { position:relative; display:inline-block; width:46px; height:46px; text-indent: -9999px;overflow:hidden; }
@@ -305,12 +306,13 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .site_footer .footer_bottom .inner { height:48px; display:flex; align-items:flex-end; justify-content:center; padding-bottom:16px; }
 .site_footer .footer_bottom p { color:var(--Neutral-600); font-size:var(--Font-xsmall); }
 
-.quick_floating { position:fixed; right:24px; top:70%; z-index:100; display:flex; flex-direction:column; gap:12px; }
+.quick_floating { position:fixed; right:24px; bottom:80px; z-index:100; display:flex; flex-direction:column; gap:12px; }
 .quick_floating a { border-radius:var(--Border-2radius); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; font-size:var(--Font-xsmall); line-height:1.1; transition:all 0.3s; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 .quick_floating .quick_consult,
 .quick_floating .quick_kakao { width:76px; height:76px; gap:4px; }
 .quick_floating .quick_consult { background:#2235b0; color:var(--Neutral-0); }
 .quick_floating .quick_kakao { background:#ffeb3b; color:var(--Neutral-900); border:1px solid #e2d132; }
+.quick_floating strong { font-weight:600; }
 
 .quick_floating .quick_top { width:30px; height:30px; margin:0 auto; background:#fff; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); color:var(--Neutral-600); box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 .quick_floating .quick_top span { font-size:16px; font-weight:500; }
