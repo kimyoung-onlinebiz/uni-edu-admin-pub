@@ -5,15 +5,17 @@
 .subpage_layout { display:flex; gap:64px; width:1280px; margin:0 auto; padding:60px 0 120px; align-items:flex-start; background:var(--Neutral-0); }
 .lnb_wrap { flex:0 0 256px; gap:24px; display:flex; flex-direction:column; align-items:stretch; }
 .lnb_wrap h2 { font-size:var(--Font-3xlarge); font-weight:700; line-height:1.2; padding:0 20px 0 20px; }
-.lnb_wrap nav > ul { display:flex; flex-direction:column; align-items:stretch; align-self:stretch; border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); padding-top:8px; }
-.lnb_wrap nav strong { position:relative; font-size:var(--Font-medium); font-weight:700; padding:16px 20px 8px 36px; display:block; }
-.lnb_wrap nav strong:before { content:""; position:absolute; left:19px; top:23px; width:6px; height:6px; background:currentColor; border-radius:50%; }
+.lnb_wrap nav > ul { display:flex; flex-direction:column; align-items:stretch; align-self:stretch; border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); padding-top:16px; }
+.lnb_wrap nav strong { position:relative; font-size:var(--Font-medium); font-weight:700; padding:12px 20px 4px 36px; display:block; }
+.lnb_wrap nav strong:before { content:""; position:absolute; left:19px; top:19px; width:6px; height:6px; background:currentColor; border-radius:50%; }
 .lnb_wrap nav > ul ul { width:100%; }
-.lnb_wrap nav > ul > li:last-child { margin-bottom:0; padding-bottom:16px; }
+.lnb_wrap nav > ul > li:last-child { margin-bottom:0; padding-bottom:20px; }
 .lnb_wrap nav strong.active { color:var(--Primary-500); }
 .lnb_wrap nav li li a { display:flex; width:100%; box-sizing:border-box; align-items:center; padding:6px 20px 6px 36px; transition:background .2s ease, color .2s ease, padding .2s ease; border-top:1px solid var(--Neutral-0); font-weight:500; }
-.lnb_wrap nav a:hover, .lnb_wrap nav a.active { background:#ECF2FE; color:var(--Primary-500); }
-.lnb_wrap nav a.active { padding-left:36px; }
+.lnb_wrap nav li li:last-child a { margin-bottom:10px; }
+.lnb_wrap nav a:hover, .lnb_wrap nav a.active { color:var(--Primary-500); }
+.lnb_wrap nav ul ul a.active { background:#ECF2FE; padding-left:36px; }
+.lnb_wrap nav ul ul a:hover { background:#ECF2FE; }
 .lnb_wrap .current_courses, .lnb_wrap .classroom_shortcut { background:var(--Neutral-200); border-radius:var(--Border-2radius); padding:4px 8px; }
 .lnb_wrap h3 { font-size:var(--Font-large); font-weight:700; border-bottom:1px solid var(--Neutral-300); padding-bottom:10px; margin:0 20px 13px 20px; }
 .lnb_wrap h3 strong { font-size:var(--Font-medium); color:var(--Primary-500); font-weight:700; margin-left:4px; }
@@ -377,6 +379,7 @@ width:0; height:0; border-top:8px solid var(--Neutral-900); border-left:6px soli
 .submission_info dd + dt { margin-left:90px; width:30px; }
 .submission_info dd ul li::before { content:"• "; flex:0 0 12px; }
 .submission_info dd ul li { margin-top:2px; }
+.submission_info dd ul.contact_list li { margin-top:6px; }
 .submission_info dd ul li a { border-radius: 4px;
 border: 1px solid var(--Neutral-800); padding:1px 8px;
 background: var(--Neutral-0); font-size:var(--Font-xsmall); margin-left:4px; }
@@ -732,6 +735,7 @@ ol.layer_guide li strong { color:var(--Info); }
 
 /* 증명서 출력 */
 .certificate .layer_content { width:900px; }
+.layer_pcRegister .layer_content { width:750px; }
 .certificate .btn_print { display: inline-flex; align-items: center; justify-content: center; height:32px; width:32px; border-radius:50%; background:var(--Neutral-0); padding-top:2px; }
 .certificate .btn_print:hover { background:var(--Primary-100); color:var(--Primary-700); }
 .certificate_footer {text-align:center; }
@@ -745,14 +749,12 @@ ol.layer_guide li strong { color:var(--Info); }
 .certificate_footer span { display:block; font-size:var(--Font-small); }
 .certificate_footer dl dt { font-size:var(--Font-large); letter-spacing:8px; }
 .certificate_footer dl { display:inline-block; margin:40px 0; position:relative; }
- .certificate table:before { border-top:1px solid var(--Neutral-500); }
+.certificate table:before { border-top:1px solid var(--Neutral-500); }
 
-/* 핵심: 인쇄 시 적용되는 CSS 스타일 */
+/* 인쇄 시 적용되는 CSS 스타일 */
 @media print {
   body * { visibility:hidden; height:0; overflow: hidden; }
-  @page {
-    margin: 0;
-  }
+  @page { margin: 0; }
 .certificate .layer_content { width:auto; overflow:visible; max-height:100%; }
 .certificate .layer_basic, .certificate .layer_basic * { visibility: visible; height:auto; overflow:visible; }
 .certificate .layer_basic { position: absolute; left: 0; top: 0; transform: none; width:calc(100% - 4cm); border: none; padding: 0; box-shadow:none; margin:2cm; }
