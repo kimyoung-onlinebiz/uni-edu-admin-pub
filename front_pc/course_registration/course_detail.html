@@ -239,10 +239,10 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#none"><strong class="active">패키지 강좌</strong></a>
+                        <a href="#none"><strong>패키지 강좌</strong></a>
                          <!-- active 클래스 추가 시 선택 -->
                         <ul>
-                            <li><a href="#none" class="active">전체</a></li> <!-- active 클래스 추가 시 선택 -->
+                            <li><a href="#none">전체</a></li> <!-- active 클래스 추가 시 선택 -->
                             <li><a href="#none">경영학</a></li>
                             <li><a href="#none">영어영문학</a></li>
                             <li><a href="#none">IT공학</a></li>
@@ -253,11 +253,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#none"><strong>단과 강좌</strong></a>
+                        <a href="#none"><strong class="active">단과 강좌</strong></a>
                         <ul>
                             <li><a href="#none">전체</a></li>
                             <li><a href="#none">경영학</a></li>
-                            <li><a href="#none">영문학</a></li>
+                            <li><a href="#none" class="active">영문학</a></li>
                             <li><a href="#none">컴퓨터공학</a></li>
                             <li><a href="#none">정보통신공학</a></li>
                             <li><a href="#none">생명과학</a></li>
@@ -297,282 +297,197 @@
                 <ol>
                     <li class="home"><a href="../index.html">홈</a></li>
                     <li><a href="#none">수강신청</a></li>
-                    <li aria-current="page">패키지 강좌</li>
+                    <li aria-current="page">강좌 상세보기</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
             <header class="sub_header borderGray">
-                <h3>패키지 강좌</h3>
+                <h3>강좌 상세보기</h3>
             </header>
             <!-- //sub header -->
 
-            <!-- 패키지 리스트 -->
-            <div class="package_list">
+            <!-- 강좌 상세보기 -->
+            <div class="course_list">
 
-                <header class="sub_header start"> 
-                    <h4>전체</h4>
-                    <div class="table_sort">
-                        <span>총 <strong>3</strong>건</span>
+                <div class="course_card">
+                    <!-- 썸네일 & 플레이 버튼 -->
+                    <div class="thumb_area">
+                        <button type="button" aria-label="재생"></button>
+                        <img src="https://www.kystudy.co.kr/Files/Banner/2026-05-18/mainLayer_20260518[0].png" alt="미국문학개론">
                     </div>
+
+                    <!-- 정보 영역 -->
+                    <div class="info_area">
+                        <header>
+                            <h3>미국문학개론</h3>
+                            <p>심우기 교수님 <a href="#" class="btn txtGray btn_profile">교수님 소개</a></p>
+                        </header>
+
+                        <dl>
+                            <dt>학점</dt>
+                            <dd>3학점</dd>
+                            <dt>모집상태</dt>
+                            <dd><span class="deadline">마감임박</span></dd>
+                            <dt>수강신청</dt>
+                            <dd>2025-08-06(수)~2026-06-10(화)</dd>
+                            <dt>학습 기간</dt>
+                            <dd>2026-06-10(수)~2026-09-22(화)</dd>
+                            <dt>수강료</dt>
+                            <dd class="price">
+                                <del>210,000원</del> &rarr; <strong>85,000원</strong>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+                <div class="board_view_footer">
+                    <button type="button" class="btn">장바구니 담기</button>
+                    <button type="button" class="btn primary">수강신청</button>
+                </div>
+                
+
+                <header class="sub_header"> 
+                    <h4>전공 상세 정보</h4>
                 </header>
 
-                <ul class="package_title">
-                    <li>선택</li>
-                    <li>패키지 강좌</li>
-                    <li>패키지 명</li>
-                    <li>수강료</li>
-                </ul>
+                <table class="data_table">
+                    <caption>전공 상세 정보</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">전공</th>
+                            <th scope="col">학사 구분</th>
+                            <th scope="col">이수 구분</th>
+                        </tr>
+                    </thead>
 
-                <!-- 패키지 1 -->
-                <div class="package_item">
+                    <tbody>
+                        <tr> 
+                            <td>영문학</td>
+                            <td>학사</td>
+                            <td>전공 필수</td>
+                        </tr>
+                        <tr> 
+                            <td>영문학</td>
+                            <td>학사</td>
+                            <td>전공 필수</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                    <div class="package_info">
-                        <div class="package_check">
-                            <input type="checkbox" id="package01" checked>
-                            <label for="package01"></label>
-                        </div>
+                <header class="sub_header"> 
+                    <h4>강좌 소개</h4>
+                    <a href="#none" class="btn">강의 계획서</a>
+                </header>
 
-                        <div class="package_type">
-                            사회복지사
-                        </div>
-
-                        <div class="package_name">
-                            <span class="label red">마감임박</span>
-                            <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
-                            <span>80학점</span>
-                        </div>
-
-                        <div class="course_price">
-                            <del>3,700,000원</del>
-                            <strong><em>65%</em> 1,310,000원</strong>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn_course_toggle" aria-expanded="false">
-                        <span class="text_open">수강 과정 선택</span>
-                        <span class="text_close">수강 과정 닫기</span>
-                        <span class="material-symbols-rounded">expand_more</span>
-                    </button>
-
-                    <div class="course_accordion_wrap">
-                        <div class="course_inner">
-
-                            <!-- 과정선택 테이블 -->
-                            <div class="course_detail">
-                                <div class="course_header">
-                                    <strong>2026년 2학기 5기</strong>
-                                    <span>필수 신청 과정: <em>8건</em> / 8건</span>
-                                </div>
-
-                                <table class="list_table">
-                                    <caption>수강 과정 목록</caption>
-                                    <colgroup>
-                                        <col style="width:200px;">
-                                        <col style="width:100px;">
-                                        <col>
-                                        <col style="width:100px;">
-                                        <col style="width:100px;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>구분</th>
-                                            <th>모집 현황</th>
-                                            <th>과정 명</th>
-                                            <th>학점</th>
-                                            <th>과정 선택</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="badge green">전선</span></td>
-                                            <td><span class="deadline">마감임박</span></td>
-                                            <td>외국어로서의한국어교육</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <span class="badge green">전선</span>
-                                                <span class="badge blue">전필</span>
-                                                <span class="badge yellow">교양</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- //과정선택 테이블-->
-                            
-                        </div>
-                    </div>
-
+                <div class="editor_area">
+                    에디터에서 나오는 내용
                 </div>
-                <!-- //패키지 1 -->
-
-                <!-- 패키지 2 -->
-                <div class="package_item">
-
-                    <div class="package_info">
-                        <div class="package_check">
-                            <input type="checkbox" id="package01" checked>
-                            <label for="package01"></label>
-                        </div>
-
-                        <div class="package_type">
-                            사회복지사
-                        </div>
-
-                        <div class="package_name">
-                            <span class="label gray">마감</span>
-                            <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
-                            <span>80학점</span>
-                        </div>
-
-                        <div class="course_price">
-                            <del>3,700,000원</del>
-                            <strong><em>65%</em> 1,310,000원</strong>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn_course_toggle" aria-expanded="false">
-                        <span class="text_open">수강 과정 선택</span>
-                        <span class="text_close">수강 과정 닫기</span>
-                        <span class="material-symbols-rounded">expand_more</span>
-                    </button>
-
-                    <div class="course_accordion_wrap">
-                        <div class="course_inner">
-
-                            <!-- 과정선택 테이블 -->
-                            <div class="course_detail">
-                                <div class="course_header">
-                                    <strong>2026년 2학기 5기</strong>
-                                    <span>필수 신청 과정: <em>8건</em> / 8건</span>
-                                </div>
-
-                                <header class="sub_header"> 
-                                    <h5>1. 실습 과정 선택 <strong>(택1)</strong></h5>
-                                </header>
-
-                                <table class="list_table">
-                                    <caption>수강 과정 목록</caption>
-                                    <colgroup>
-                                        <col style="width:200px;">
-                                        <col style="width:100px;">
-                                        <col>
-                                        <col style="width:100px;">
-                                        <col style="width:100px;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>구분</th>
-                                            <th>모집 현황</th>
-                                            <th>과정 명</th>
-                                            <th>학점</th>
-                                            <th>과정 선택</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="badge green">전선</span></td>
-                                            <td><span class="deadline">마감임박</span></td>
-                                            <td>사회복지현장실습(수도권)</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <span class="badge blue">전필</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- //과정선택 테이블-->
-
-                            <!-- 과정선택 테이블 -->
-                            <div class="course_detail">
-                                <div class="course_header">
-                                    <strong>2026년 2학기 5기</strong>
-                                    <span>필수 신청 과정: <em>8건</em> / 8건</span>
-                                </div>
-
-                                <header class="sub_header"> 
-                                    <h5>2. 이론 과정</h5>
-                                </header>
-
-                                <table class="list_table">
-                                    <caption>수강 과정 목록</caption>
-                                    <colgroup>
-                                        <col style="width:200px;">
-                                        <col style="width:100px;">
-                                        <col>
-                                        <col style="width:100px;">
-                                        <col style="width:100px;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>구분</th>
-                                            <th>모집 현황</th>
-                                            <th>과정 명</th>
-                                            <th>학점</th>
-                                            <th>과정 선택</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="badge green">전선</span></td>
-                                            <td><span class="deadline">마감임박</span></td>
-                                            <td>사회복지현장실습(수도권)</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <span class="badge blue">전필</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge blue">전필</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- //과정선택 테이블-->
-                            
-                        </div>
-                    </div>
-
-                </div>
-                <!-- //패키지 2 -->
-
+                    
+                
             </div>
-            <!-- //패키지 리스트 -->
+            <!-- //강좌 상세보기 -->
+
+            <!-- 레이어 교수님 소개 -->
+            <div class="layer_wrapper layer_profile"> <!-- active 추가 시 화면노출 -->
+                <div class="layer_basic">
+
+                    <header>
+                        <div>
+                            <h1>교수님 소개</h1>
+                        </div>
+                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                    </header>
+
+                    <!-- layer 내용 -->
+                    <div class="layer_content">
+                        <div class="profile_swiper swiper-container" aria-label="교수 소개 슬라이더">
+                            <div class="swiper-wrapper">
+                                <article class="swiper-slide">
+                                    <!-- 교수님 사진 영역 -->
+                                    <div class="profile_thumb">
+                                       <img src="../assets/images/sub/prof_sample.png" alt="교수님 사진이 없습니다.">
+                                    </div>
+                                    <!-- //교수님 사진 영역 -->
+
+                                    <div class="profile_text scroll_design">
+                                        <h2>백지연 교수님</h2>
+                                        <table class="data_table">
+                                            <colgroup>
+                                                <col style="width:25%;">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">학력</th>
+                                                    <td>서울대학교 심리학과<br />서울대학교 의학과</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">경력</th>
+                                                    <td>
+                                                        ㆍ상담심리학 박사(가족상담 및 가족치료 전공)<br>
+                                                        ㆍ서울대학교 가족상담 및 가족치료 과목 강의<br>
+                                                        ㆍ가족·부부 상담 임상 경험 보유<br>
+                                                        ㆍ가족치료 관련 연구 및 학술 활동 수행
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
+                                <article class="swiper-slide">
+                                    <!-- 교수님 사진 영역 -->
+                                    <div class="profile_thumb">
+                                       <img src="../assets/images/sub/prof_sample.png" alt="교수님 사진이 없습니다.">
+                                    </div>
+                                    <!-- //교수님 사진 영역 -->
+
+                                    <div class="profile_text scroll_design">
+                                        <h2>김영이 교수님</h2>
+                                        <table class="data_table">
+                                            <colgroup>
+                                                <col style="width:25%;">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">학력</th>
+                                                    <td>서울대학교 심리학과<br />서울대학교 의학과</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">경력</th>
+                                                    <td>
+                                                        ㆍ상담심리학 박사(가족상담 및 가족치료 전공)<br>
+                                                        ㆍ서울대학교 가족상담 및 가족치료 과목 강의<br>
+                                                        ㆍ가족·부부 상담 임상 경험 보유<br>
+                                                        ㆍ가족치료 관련 연구 및 학술 활동 수행
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                            <div class="profile_controls">
+                                <button type="button" class="swiper-button-prev" aria-label="이전 교수 소개"></button>
+                                <div class="swiper-pagination" aria-label="교수 소개 페이지"></div>
+                                <button type="button" class="swiper-button-next" aria-label="다음 교수 소개"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //layer 내용 -->
+                   
+                </div>
+            </div>
+            <!-- //레이어 교수님 소개 -->
 
         </section>
         <!--// 콘텐츠 영역 -->
@@ -746,14 +661,5 @@
         </button>
     </aside>
 
-    <script>
-        document.querySelectorAll('.btn_course_toggle').forEach(function(button) {
-            button.addEventListener('click', function() {
-                const packageItem = this.closest('.package_item');
-                const isOpen = packageItem.classList.toggle('is-open');
-                this.setAttribute('aria-expanded', isOpen);
-            });
-        });
-    </script>
 </body>
 </html>

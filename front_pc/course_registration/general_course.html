@@ -239,10 +239,10 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#none"><strong class="active">패키지 강좌</strong></a>
+                        <a href="#none"><strong>패키지 강좌</strong></a>
                          <!-- active 클래스 추가 시 선택 -->
                         <ul>
-                            <li><a href="#none" class="active">전체</a></li> <!-- active 클래스 추가 시 선택 -->
+                            <li><a href="#none">전체</a></li> <!-- active 클래스 추가 시 선택 -->
                             <li><a href="#none">경영학</a></li>
                             <li><a href="#none">영어영문학</a></li>
                             <li><a href="#none">IT공학</a></li>
@@ -269,9 +269,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#none"><strong>일반 강좌</strong></a>
+                        <a href="#none"><strong class="active">일반 강좌</strong></a>
                         <ul>
-                            <li><a href="#none">전체</a></li>
+                            <li><a href="#none" class="active">전체</a></li>
                             <li><a href="#none">경영학</a></li>
                             <li><a href="#none">영문학</a></li>
                             <li><a href="#none">컴퓨터공학</a></li>
@@ -297,282 +297,143 @@
                 <ol>
                     <li class="home"><a href="../index.html">홈</a></li>
                     <li><a href="#none">수강신청</a></li>
-                    <li aria-current="page">패키지 강좌</li>
+                    <li aria-current="page">일반 강좌</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
             <header class="sub_header borderGray">
-                <h3>패키지 강좌</h3>
+                <h3>일반 강좌</h3>
             </header>
             <!-- //sub header -->
 
-            <!-- 패키지 리스트 -->
-            <div class="package_list">
+            <!-- 강좌 리스트 -->
+            <div class="course_list">
 
                 <header class="sub_header start"> 
                     <h4>전체</h4>
                     <div class="table_sort">
                         <span>총 <strong>3</strong>건</span>
                     </div>
+                    <select name="" id="">
+                        <option value="구분순">구분순</option>
+                        <option value="과정명순">과정명순</option>
+                    </select>
                 </header>
 
-                <ul class="package_title">
-                    <li>선택</li>
-                    <li>패키지 강좌</li>
-                    <li>패키지 명</li>
-                    <li>수강료</li>
-                </ul>
+                <table class="list_table">
+                    <caption>수강 과정 목록</caption>
+                    <colgroup>
+                        <col style="width:60px;">
+                        <col style="width:120px;">
+                        <col>
+                        <col style="width:160px;">
+                        <col style="width:330px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>선택</th>
+                            <th>전공</th>
+                            <th colspan="2">강좌 명</th>
+                            <th>수강료</th>
+                        </tr>
+                    </thead>
 
-                <!-- 패키지 1 -->
-                <div class="package_item">
+                    <tbody>
+                        <tr> 
+                            <td><input type="checkbox"></td>
+                            <td>독학사</td>
+                            <td>
 
-                    <div class="package_info">
-                        <div class="package_check">
-                            <input type="checkbox" id="package01" checked>
-                            <label for="package01"></label>
-                        </div>
-
-                        <div class="package_type">
-                            사회복지사
-                        </div>
-
-                        <div class="package_name">
-                            <span class="label red">마감임박</span>
-                            <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
-                            <span>80학점</span>
-                        </div>
-
-                        <div class="course_price">
-                            <del>3,700,000원</del>
-                            <strong><em>65%</em> 1,310,000원</strong>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn_course_toggle" aria-expanded="false">
-                        <span class="text_open">수강 과정 선택</span>
-                        <span class="text_close">수강 과정 닫기</span>
-                        <span class="material-symbols-rounded">expand_more</span>
-                    </button>
-
-                    <div class="course_accordion_wrap">
-                        <div class="course_inner">
-
-                            <!-- 과정선택 테이블 -->
-                            <div class="course_detail">
-                                <div class="course_header">
-                                    <strong>2026년 2학기 5기</strong>
-                                    <span>필수 신청 과정: <em>8건</em> / 8건</span>
+                                <div class="subject_name">
+                                    <a href="#none"><strong>독학사 3단계_가정자원관리</strong></a>
+                                    <p>수강기간 90일</p>
+                                    <dl>
+                                        <dt>교재</dt>
+                                        <dd>독학사 3단계_가정자원관리 교재</dd>
+                                    </dl>
                                 </div>
+                                
+                            </td>
+                            <td>
+                                <a href="#none" class="btn">샘플 강의</a>
+                            </td>
+                            <td>
+                                <!-- 가격 -->
+                                <div class="general_price">
+                                    <dl>
+                                        <dt>강좌</dt>
+                                        <dd>
+                                        <del>3,700,000원</del>
+                                        <strong><em>65%</em> 1,310,000원</strong>
+                                        </dd>
+                                    </dl>
 
-                                <table class="list_table">
-                                    <caption>수강 과정 목록</caption>
-                                    <colgroup>
-                                        <col style="width:200px;">
-                                        <col style="width:100px;">
-                                        <col>
-                                        <col style="width:100px;">
-                                        <col style="width:100px;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>구분</th>
-                                            <th>모집 현황</th>
-                                            <th>과정 명</th>
-                                            <th>학점</th>
-                                            <th>과정 선택</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="badge green">전선</span></td>
-                                            <td><span class="deadline">마감임박</span></td>
-                                            <td>외국어로서의한국어교육</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <span class="badge green">전선</span>
-                                                <span class="badge blue">전필</span>
-                                                <span class="badge yellow">교양</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- //과정선택 테이블-->
-                            
-                        </div>
-                    </div>
-
-                </div>
-                <!-- //패키지 1 -->
-
-                <!-- 패키지 2 -->
-                <div class="package_item">
-
-                    <div class="package_info">
-                        <div class="package_check">
-                            <input type="checkbox" id="package01" checked>
-                            <label for="package01"></label>
-                        </div>
-
-                        <div class="package_type">
-                            사회복지사
-                        </div>
-
-                        <div class="package_name">
-                            <span class="label gray">마감</span>
-                            <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
-                            <span>80학점</span>
-                        </div>
-
-                        <div class="course_price">
-                            <del>3,700,000원</del>
-                            <strong><em>65%</em> 1,310,000원</strong>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn_course_toggle" aria-expanded="false">
-                        <span class="text_open">수강 과정 선택</span>
-                        <span class="text_close">수강 과정 닫기</span>
-                        <span class="material-symbols-rounded">expand_more</span>
-                    </button>
-
-                    <div class="course_accordion_wrap">
-                        <div class="course_inner">
-
-                            <!-- 과정선택 테이블 -->
-                            <div class="course_detail">
-                                <div class="course_header">
-                                    <strong>2026년 2학기 5기</strong>
-                                    <span>필수 신청 과정: <em>8건</em> / 8건</span>
+                                    <dl>
+                                        <dt>교재(<span class="count">1</span>)</dt>
+                                        <dd>
+                                        <del>25,000원</del>
+                                        <strong><em>10%</em> 22,500원</strong>
+                                        </dd>
+                                    </dl>
                                 </div>
+                                <!-- //가격 -->
+                            </td>
+                        </tr>
 
-                                <header class="sub_header"> 
-                                    <h5>1. 실습 과정 선택 <strong>(택1)</strong></h5>
-                                </header>
+                        <tr> 
+                            <td><input type="checkbox"></td>
+                            <td>독학사</td>
+                            <td>
 
-                                <table class="list_table">
-                                    <caption>수강 과정 목록</caption>
-                                    <colgroup>
-                                        <col style="width:200px;">
-                                        <col style="width:100px;">
-                                        <col>
-                                        <col style="width:100px;">
-                                        <col style="width:100px;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>구분</th>
-                                            <th>모집 현황</th>
-                                            <th>과정 명</th>
-                                            <th>학점</th>
-                                            <th>과정 선택</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="badge green">전선</span></td>
-                                            <td><span class="deadline">마감임박</span></td>
-                                            <td>사회복지현장실습(수도권)</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <span class="badge blue">전필</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- //과정선택 테이블-->
-
-                            <!-- 과정선택 테이블 -->
-                            <div class="course_detail">
-                                <div class="course_header">
-                                    <strong>2026년 2학기 5기</strong>
-                                    <span>필수 신청 과정: <em>8건</em> / 8건</span>
+                                <div class="subject_name">
+                                    <a href="#none"><strong>독학사 3단계_가정자원관리</strong></a>
+                                    <p>수강기간 90일</p>
+                                    <dl>
+                                        <dt>교재</dt>
+                                        <dd>독학사 3단계_가정자원관리 교재</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>교재</dt>
+                                        <dd>독학사 3단계_가정자원관리 교재</dd>
+                                    </dl>
                                 </div>
+                                
+                            </td>
+                            <td>
+                                <a href="#none" class="btn">샘플 강의</a>
+                            </td>
+                            <td>
+                                <!-- 가격 -->
+                                <div class="general_price">
+                                    <dl>
+                                        <dt>강좌</dt>
+                                        <dd>
+                                        <del>3,700,000원</del>
+                                        <strong><em>65%</em> 1,310,000원</strong>
+                                        </dd>
+                                    </dl>
 
-                                <header class="sub_header"> 
-                                    <h5>2. 이론 과정</h5>
-                                </header>
+                                    <dl>
+                                        <dt>교재(<span class="count">2</span>)</dt>
+                                        <dd>
+                                        <del>25,000원</del>
+                                        <strong><em>10%</em> 22,500원</strong>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- //가격 -->
+                            </td>
+                        </tr>
 
-                                <table class="list_table">
-                                    <caption>수강 과정 목록</caption>
-                                    <colgroup>
-                                        <col style="width:200px;">
-                                        <col style="width:100px;">
-                                        <col>
-                                        <col style="width:100px;">
-                                        <col style="width:100px;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>구분</th>
-                                            <th>모집 현황</th>
-                                            <th>과정 명</th>
-                                            <th>학점</th>
-                                            <th>과정 선택</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="badge green">전선</span></td>
-                                            <td><span class="deadline">마감임박</span></td>
-                                            <td>사회복지현장실습(수도권)</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <span class="badge blue">전필</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge blue">전필</span>
-                                            </td>
-                                            <td><span>모집중</span></td>
-                                            <td>건강가정론</td>
-                                            <td>3학점</td>
-                                            <td><input type="checkbox" checked></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- //과정선택 테이블-->
-                            
-                        </div>
-                    </div>
-
-                </div>
-                <!-- //패키지 2 -->
+                    </tbody>
+                </table>
+                
 
             </div>
-            <!-- //패키지 리스트 -->
+            <!-- //강좌 리스트 -->
+
 
         </section>
         <!--// 콘텐츠 영역 -->
@@ -746,14 +607,5 @@
         </button>
     </aside>
 
-    <script>
-        document.querySelectorAll('.btn_course_toggle').forEach(function(button) {
-            button.addEventListener('click', function() {
-                const packageItem = this.closest('.package_item');
-                const isOpen = packageItem.classList.toggle('is-open');
-                this.setAttribute('aria-expanded', isOpen);
-            });
-        });
-    </script>
 </body>
 </html>

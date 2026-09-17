@@ -199,6 +199,7 @@ label.btn { line-height:28px; transition:all .2s; }
 .layer_basic header > div { display:flex; gap:8px; }
 .layer_content.noScroll { overflow:hidden; }
 .layer_contentTitle { display:flex; border-bottom:1px solid var(--Neutral-500); margin:32px 0; padding-bottom:16px; align-items:center; }
+.layer_contentTitle:first-child { margin-top:0 !important; }
 .layer_contentTitle.borderN { border-bottom:none; margin:32px 0 0;  }
 .layer_contentTitle h2 { font-size:var(--Font-large); font-weight:700; }
 .layer_contentTitle h2 + dl:before { content:"|"; color:var(--Neutral-600); margin:0 8px 0 12px; }
@@ -342,7 +343,7 @@ outline:none; }
 .table_top p { color:var(--Neutral-600); font-size:12px; font-weight:700; }
 .table_top h4 { padding:0 0 0 16px; margin:0 0 -14px 0; border:none; }
 .table_sort div { display:flex; gap:24px; align-items:center; }
-.table_sort { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:24px; padding-left:20px;  }
+.table_sort { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:24px; padding-left:16px;  }
 .table_sort span { font-size:var(--Font-small); color:var(--Neutral-800); vertical-align:bottom; }
 .table_sort strong { color:var(--Primary-500); }
 
@@ -416,6 +417,7 @@ padding:5px 12px; min-width:58px; background:var(--Neutral-0); font-weight:600; 
 .label.lightBlue { border:1px solid var(--Info-soft); background:var(--Info-soft); color: var(--Primary-500); }
 .label.border { border:1px solid var(--Primary-500); color: var(--Primary-500); }
 .label.red { background:#FDEFEC; border:1px solid #FDEFEC; color: var(--Error); }
+.label.gray { background:var(--Neutral-300); border:1px solid var(--Neutral-300); color: var(--Neutral-600); }
 .file_search .btn { border:1px solid var(--Neutral-800); color:var(--Neutral-800); }
 .file_search .btn span { font-weight:300; padding-right:2px; }
 .file_search .file_search_top { display:flex; align-items:center; gap:24px; border-bottom:1px solid var(--Neutral-300); padding-bottom:12px; margin-bottom:12px; margin-top:2px; }

@@ -142,7 +142,7 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 
 .mainEasy_consult.login_after .mypage_notice_wrap { background:var(--Neutral-200); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:12px; }
 .mainEasy_consult.login_after .mypage_notice { display:flex; flex-direction:column; gap:7px; }
-.mainEasy_consult.login_after .mypage_notice span { width:max-content; height:23px; padding:0 10px; border:1px solid #2235b0; border-radius:100px; color:#2235b0; font-size:12px; font-weight:600; display:inline-flex; align-items:center; line-height:1; }
+.mainEasy_consult.login_after .mypage_notice span { width:max-content; height:23px; padding:0 10px; border:1px solid var(--Primary-500); border-radius:100px; color:var(--Primary-500); font-size:12px; font-weight:600; display:inline-flex; align-items:center; line-height:1; }
 .mainEasy_consult.login_after .mypage_notice p { font-size:14px; line-height:1.4; letter-spacing:-0.01em; font-weight:600; letter-spacing:-0.02em; }
 .mainEasy_consult.login_after .mypage_notice p strong { font-weight:600; padding-right:2px;  }
 
@@ -309,9 +309,11 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .quick_floating { position:fixed; right:24px; bottom:80px; z-index:100; display:flex; flex-direction:column; gap:12px; }
 .quick_floating a { border-radius:var(--Border-2radius); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; font-size:var(--Font-xsmall); line-height:1.1; transition:all 0.3s; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 .quick_floating .quick_consult,
-.quick_floating .quick_kakao { width:76px; height:76px; gap:4px; }
-.quick_floating .quick_consult { background:#2235b0; color:var(--Neutral-0); }
+.quick_floating .quick_kakao { width:76px; height:80px; gap:6px; }
+.quick_floating .quick_consult { background:var(--Primary-500); color:var(--Neutral-0); }
+.quick_floating .quick_consult:hover { background:var(--Primary-600); }
 .quick_floating .quick_kakao { background:#ffeb3b; color:var(--Neutral-900); border:1px solid #e2d132; }
+.quick_floating .quick_kakao:hover { background:#ffd83b; }
 .quick_floating strong { font-weight:600; }
 
 .quick_floating .quick_top { width:30px; height:30px; margin:0 auto; background:#fff; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); color:var(--Neutral-600); box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }

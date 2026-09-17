@@ -143,6 +143,37 @@ document.addEventListener('DOMContentLoaded', () => {
             closeLayer(closeButton.closest(LAYER_SELECTOR));
         });
 
+        // 인쇄 시점에 활성 레이어만 남겨 브라우저가 빈 페이지/숨김 페이지를 렌더링하지 않도록 처리
+        let printOriginalBodyHtml = '';
+        const preparePrintLayer = () => {
+            const activeLayer = q('.layer_wrapper.active');
+            if (!activeLayer) {
+                return;
+            }
+
+            printOriginalBodyHtml = document.body.innerHTML;
+            const printRoot = document.createElement('div');
+            printRoot.className = 'print_layer_root';
+            const printClone = activeLayer.cloneNode(true);
+            printClone.classList.add('print-ready');
+            printRoot.appendChild(printClone);
+
+            document.body.innerHTML = '';
+            document.body.appendChild(printRoot);
+        };
+
+        const restoreAfterPrint = () => {
+            if (!printOriginalBodyHtml) {
+                return;
+            }
+
+            document.body.innerHTML = printOriginalBodyHtml;
+            printOriginalBodyHtml = '';
+        };
+
+        window.addEventListener('beforeprint', preparePrintLayer);
+        window.addEventListener('afterprint', restoreAfterPrint);
+
         // 외부 노출 API
         // - register(bindings): 설정 배열 기반으로 여러 레이어를 한 번에 등록
         // - 문자열 셀렉터/DOM 엘리먼트 둘 다 지원
@@ -310,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_pcRegister', triggers: ['.btn_pcRegister'], closeCurrentLayer: true }, //PC 등록 레이어
             { layer: '.layer_wrapper.layer_faq', triggers: ['.btn_faq'], closeCurrentLayer: true }, //자주 찾는 질문
             { layer: '.layer_wrapper.layer_formLibrary', triggers: ['.btn_formLibrary'], closeCurrentLayer: true }, //서식 자료실
+            { layer: '.layer_wrapper.layer_profile', triggers: ['.btn_profile'], closeCurrentLayer: true }, //교수님 프로필
         ]);
     }
 

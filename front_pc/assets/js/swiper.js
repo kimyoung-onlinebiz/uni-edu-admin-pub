@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCourseIntroSwiper();
     initNoticeRollingSwiper();
     initCalendarRollingSwiper();
+    initProfileSwiper();
 });
 
 // Swiper 버전에 따라 pauseOnMouseEnter 옵션이 동작하지 않는 경우를 대비해
@@ -390,6 +391,51 @@ function initNoticeRollingSwiper() {
     });
 
     bindSwiperHoverPause(noticeRollingSwiper, noticeRollingEl);
+}
+
+// =========================================
+// SECTION: 교수 소개 프로필 슬라이더
+// =========================================
+function initProfileSwiper() {
+    const profileSwiperEl = document.querySelector('.profile_swiper');
+
+    if (!profileSwiperEl) {
+        return;
+    }
+
+    const profileControlsEl = profileSwiperEl.querySelector('.profile_controls');
+    const totalSlides = Array.from(profileSwiperEl.querySelectorAll('.swiper-slide')).filter(
+        (slide) => !slide.classList.contains('swiper-slide-duplicate')
+    ).length;
+
+    if (profileControlsEl && totalSlides <= 1) {
+        profileControlsEl.style.display = 'none';
+    }
+
+    const profileSwiper = new Swiper(profileSwiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: totalSlides > 1,
+        autoplay: totalSlides > 1 ? {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        } : false,
+        navigation: {
+            nextEl: profileSwiperEl.querySelector('.swiper-button-next'),
+            prevEl: profileSwiperEl.querySelector('.swiper-button-prev'),
+        },
+        pagination: {
+            el: profileSwiperEl.querySelector('.swiper-pagination'),
+            type: 'fraction',
+        },
+        observer: true,
+        observeParents: true,
+    });
+
+    if (totalSlides > 1) {
+        bindSwiperHoverPause(profileSwiper, profileSwiperEl);
+    }
 }
 
 // =========================================
