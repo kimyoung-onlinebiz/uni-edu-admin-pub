@@ -255,9 +255,9 @@
                     <li>
                         <a href="#none"><strong class="active">단과 강좌</strong></a>
                         <ul>
-                            <li><a href="#none" class="active">전체</a></li>
+                            <li><a href="#none">전체</a></li>
                             <li><a href="#none">경영학</a></li>
-                            <li><a href="#none">영문학</a></li>
+                            <li><a href="#none" class="active">영문학</a></li>
                             <li><a href="#none">컴퓨터공학</a></li>
                             <li><a href="#none">정보통신공학</a></li>
                             <li><a href="#none">생명과학</a></li>
@@ -297,151 +297,92 @@
                 <ol>
                     <li class="home"><a href="../index.html">홈</a></li>
                     <li><a href="#none">수강신청</a></li>
-                    <li aria-current="page">단과 강좌</li>
+                    <li aria-current="page">강좌 상세보기</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header border">
-                <h3>단과 강좌</h3>
+            <header class="sub_header borderGray">
+                <h3>강좌 상세보기</h3>
             </header>
             <!-- //sub header -->
 
-            <ul class="tab_list">
-                <li class="active">
-                    <button type="button">
-                        <span>2026년 2학기 1기</span>
-                        <strong>6월 10일 개강</strong>
-                    </button>
-                </li>
-                <li>
-                    <button type="button">
-                        <span>2026년 2학기 1기</span>
-                        <strong>7월 8일 개강</strong>
-                    </button>
-                </li>
-                <li>
-                    <button type="button">
-                        <span>2026년 2학기 1기</span>
-                        <strong>8월 12일 개강</strong>
-                    </button>
-                </li>
-                <li>
-                    <button type="button">
-                        <span>2026년 2학기 1기</span>
-                        <strong>9월 2일 개강</strong>
-                    </button>
-                </li>
-            </ul>
-
-            <!-- 강좌 리스트 -->
+            <!-- 강좌 상세보기 -->
             <div class="course_list">
 
-                <div class="course_day">
-                    <dl>
-                        <dt>수강신청</dt>
-                        <dd>2025-08-06(수)~2026-06-10(화)</dd>
-                    </dl>
-                    <dl>
-                        <dt>학습 기간</dt>
-                        <dd>2026-06-10(수)~2026-09-22(화)</dd>
-                    </dl>
-                    <dl>
-                        <dt>학점 인정 신청</dt>
-                        <dd>2026-10-01(목)~2026-10-30(금)</dd>
-                    </dl>
-                    <dl>
-                        <dt>학위 취득</dt>
-                        <dd>2026-12-15(화)~2027-01-15(금)</dd>
-                    </dl>
-                </div>
-
-                <header class="sub_header start"> 
-                    <h4>전체</h4>
-                    <div class="table_sort">
-                        <span>총 <strong>3</strong>건</span>
+                <div class="course_card">
+                    <!-- 썸네일 & 플레이 버튼 -->
+                    <div class="thumb_area">
+                        <button type="button" aria-label="재생"></button>
+                        <img src="https://www.kystudy.co.kr/Files/Banner/2026-05-18/mainLayer_20260518[0].png" alt="미국문학개론">
                     </div>
-                    <select name="" id="">
-                        <option value="전공순">전공순</option>
-                        <option value="과정명순">과정명순</option>
-                    </select>
+
+                    <!-- 정보 영역 -->
+                    <div class="info_area">
+                        <header>
+                            <h3>SMAT 1급</h3>
+                            <p>심우기 교수님, 백지연 교수님 <a href="#" class="btn txtGray btn_profile">교수님 소개</a></p>
+                        </header>
+
+                        <dl>
+                            <dt>학점</dt>
+                            <dd>3학점</dd>
+                            <dt>모집상태</dt>
+                            <dd><span class="deadline">마감임박</span></dd>
+                            <dt>수강신청</dt>
+                            <dd>2025-08-06(수)~2026-06-10(화)</dd>
+                            <dt>학습 기간</dt>
+                            <dd>2026-06-10(수)~2026-09-22(화)</dd>
+                            <dt>수강료</dt>
+                            <dd class="price">
+                                <del>210,000원</del> &rarr; <strong>85,000원</strong>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+                <div class="board_view_footer">
+                    <button type="button" class="btn">장바구니 담기</button>
+                    <button type="button" class="btn primary">수강신청</button>
+                </div>
+                
+
+                <header class="sub_header"> 
+                    <h4>교재 소개</h4>
                 </header>
 
-                <table class="list_table">
-                    <caption>수강 과정 목록</caption>
+                <table class="data_table textbook_table">
+                    <caption>교재 소개</caption>
                     <colgroup>
-                        <col style="width:80px;">
-                        <col style="width:150px;">
                         <col>
-                        <col style="width:80px;">
-                        <col style="width:300px;">
+                        <col>
+                        <col>
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>선택</th>
-                            <th>전공</th>
-                            <th colspan="2">강좌 명</th>
-                            <th>수강료</th>
+                            <th scope="col">교재 이미지</th>
+                            <th scope="col">교재 명</th>
+                            <th scope="col">수강료</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr> 
-                            <td><input type="checkbox"></td>
-                            <td>경영학</td>
                             <td>
-
-                                <div class="subject_name">
-                                    <div class="info">
-                                        <span class="label red">마감임박</span>
-                                        <span class="badge green">전선</span>
-                                        <span class="badge blue">전필</span>
-                                        <span class="badge yellow">교양</span>
-                                    </div>
-                                    <a href="#none"><strong>경영학개론</strong></a>
-                                    <p>3학점 | 김평원 교수</p>
-                                </div>
-                                
+                                <span class="book_thumb">
+                                    <img src="../assets/images/sub/book_sample.jpg" alt="교재 이미지">
+                                </span>
                             </td>
                             <td>
-                                <a href="#none" class="btn btn_coursePlan">강의계획서</a>
-                                <a href="#none" class="btn">샘플 강의</a>
+                                <dl class="book_info">
+                                    <dt>SMAT 1급 B모듈 교재</dt>
+                                    <dd>김영출판사 (김영)</dd>
+                                </dl>
                             </td>
                             <td>
                                 <!-- 가격 -->
-                                <div class="course_price">
-                                    <del>3,700,000원</del>
-                                    <strong><em>65%</em> 1,310,000원</strong>
-                                </div>
-                                <!-- //가격 -->
-                            </td>
-                        </tr>
-
-                        <tr> 
-                            <td><input type="checkbox"></td>
-                            <td>경영학</td>
-                            <td>
-
-                                <div class="subject_name">
-                                    <div class="info">
-                                        <span class="label red">마감임박</span>
-                                        <span class="badge green">전선</span>
-                                        <span class="badge blue">전필</span>
-                                        <span class="badge yellow">교양</span>
-                                    </div>
-                                    <a href="#none"><strong>경영학개론</strong></a>
-                                    <p>3학점 | 김평원 교수</p>
-                                </div>
-                                
-                            </td>
-                            <td>
-                                <a href="#none" class="btn">강의계획서</a>
-                                <a href="#none" class="btn">샘플 강의</a>
-                            </td>
-                            <td>
-                                <!-- 가격 -->
-                                <div class="course_price">
+                                <div class="general_price row">
                                     <del>3,700,000원</del>
                                     <strong><em>65%</em> 1,310,000원</strong>
                                 </div>
@@ -449,235 +390,135 @@
                             </td>
                         </tr>
                         <tr> 
-                            <td><input type="checkbox"></td>
-                            <td>경영학</td>
                             <td>
-
-                                <div class="subject_name">
-                                    <div class="info">
-                                        <span class="label red">마감임박</span>
-                                        <span class="badge green">전선</span>
-                                        <span class="badge blue">전필</span>
-                                        <span class="badge yellow">교양</span>
-                                    </div>
-                                    <a href="#none"><strong>경영학개론</strong></a>
-                                    <p>3학점 | 김평원 교수</p>
-                                </div>
-                                
+                                <span class="book_thumb">
+                                    
+                                </span>
                             </td>
                             <td>
-                                <a href="#none" class="btn">강의계획서</a>
-                                <a href="#none" class="btn">샘플 강의</a>
+                                <dl class="book_info">
+                                    <dt>SMAT 1급 B모듈 교재</dt>
+                                    <dd>김영출판사 (김영)</dd>
+                                </dl>
                             </td>
                             <td>
                                 <!-- 가격 -->
-                                <div class="course_price">
+                                <div class="general_price row">
                                     <del>3,700,000원</del>
                                     <strong><em>65%</em> 1,310,000원</strong>
                                 </div>
                                 <!-- //가격 -->
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
+
+                <header class="sub_header"> 
+                    <h4>강좌 소개</h4>
+                </header>
+
+                <div class="editor_area">
+                    에디터에서 나오는 내용
+                </div>
+                    
                 
-
             </div>
-            <!-- //강좌 리스트 -->
+            <!-- //강좌 상세보기 -->
 
-            <!-- 레이어 강의계획서 -->
-            <div class="layer_wrapper layer_coursePlan"> <!-- active 추가 시 화면노출 -->
+            <!-- 레이어 교수님 소개 -->
+            <div class="layer_wrapper layer_profile"> <!-- active 추가 시 화면노출 -->
                 <div class="layer_basic">
 
                     <header>
                         <div>
-                            <h1>강의계획서</h1>
-                            <button type="button" class="btn_print material-symbols-rounded" onclick="window.print()">print</button>
+                            <h1>교수님 소개</h1>
                         </div>
                         <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
                     </header>
 
                     <!-- layer 내용 -->
                     <div class="layer_content">
-                        <div class="layer_contentTitle borderN">
-                            <h2>1. 기본정보</h2>
-                        </div>
-                        <table class="data_table">
-                            <caption>과목 기본 정보</caption>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <tr>
-                                <th>과정명</th>
-                                <th>교수</th>
-                                <th>기준학기</th>
-                                <th>학점</th>
-                            </tr>
-                            <tr>
-                                <td>사회복지실천론</td>
-                                <td>테스트</td>
-                                <td>2025년 2학기 1기</td>
-                                <td>3학점</td>
-                            </tr>
-                        </table>
+                        <div class="profile_swiper swiper-container" aria-label="교수 소개 슬라이더">
+                            <div class="swiper-wrapper">
+                                <article class="swiper-slide">
+                                    <!-- 교수님 사진 영역 -->
+                                    <div class="profile_thumb">
+                                       <img src="../assets/images/sub/prof_sample.png" alt="교수님 사진이 없습니다.">
+                                    </div>
+                                    <!-- //교수님 사진 영역 -->
 
-                        <div class="layer_contentTitle">
-                            <h2>2. 과목 개요</h2>
-                        </div>
-                        <div class="layer_txt">현대사회의 급속한 변화에 따른 가족의 역할 및 의미에 대한 인식을기초로 가족복지의 대상과 내용을 파악하고, 다양한 가족문제를 해결하기위한 실천지식과 역량을 함양하는 데 목적이 있다. 이를 위해 가족의역할과 기능, 가족복지정책과 서비스 현황, 가족복지 실천분야별 서비스내용, 가족복지의 과제와 전망에 대한 전반적인 내용을 학습한다.</div>
+                                    <div class="profile_text scroll_design">
+                                        <h2>백지연 교수님</h2>
+                                        <table class="data_table">
+                                            <colgroup>
+                                                <col style="width:25%;">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">학력</th>
+                                                    <td>서울대학교 심리학과<br />서울대학교 의학과</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">경력</th>
+                                                    <td>
+                                                        ㆍ상담심리학 박사(가족상담 및 가족치료 전공)<br>
+                                                        ㆍ서울대학교 가족상담 및 가족치료 과목 강의<br>
+                                                        ㆍ가족·부부 상담 임상 경험 보유<br>
+                                                        ㆍ가족치료 관련 연구 및 학술 활동 수행
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
+                                <article class="swiper-slide">
+                                    <!-- 교수님 사진 영역 -->
+                                    <div class="profile_thumb">
+                                       <img src="../assets/images/sub/prof_sample.png" alt="교수님 사진이 없습니다.">
+                                    </div>
+                                    <!-- //교수님 사진 영역 -->
 
-                        <div class="layer_contentTitle">
-                            <h2>3. 학습 목표</h2>
-                        </div>
-                        <div class="layer_txt">
-                            <p>현대사회의 급속한 변화에 따른 가족의 역할 및 의미에 대한 인식을 기초로 가족복지의 대상과 내용을 파악하고, 다양한 가족문제를 해결하기 위한 실천지식과 역량을 함양하는 데 목적이 있다. 이를 위해 가족의 역할과 기능, 가족복지정책과 서비스 현황, 가족복지 실천분야별 서비스 내용, 가족복지의 과제와 전망에 대한 전반적인 내용을 학습한다.</p><br />
+                                    <div class="profile_text scroll_design">
+                                        <h2>김영이 교수님</h2>
+                                        <table class="data_table">
+                                            <colgroup>
+                                                <col style="width:25%;">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">학력</th>
+                                                    <td>서울대학교 심리학과<br />서울대학교 의학과</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">경력</th>
+                                                    <td>
+                                                        ㆍ상담심리학 박사(가족상담 및 가족치료 전공)<br>
+                                                        ㆍ서울대학교 가족상담 및 가족치료 과목 강의<br>
+                                                        ㆍ가족·부부 상담 임상 경험 보유<br>
+                                                        ㆍ가족치료 관련 연구 및 학술 활동 수행
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
 
-                            <p>이를 위해 가족의 역할과 기능, 가족복지정책과 서비스 현황, 가족복지 실천분야별 서비스 내용, 가족복지의 과제와 전망에 대한 전반적인 내용을 학습한다.</p>
-                        </div>
+                            </div>
 
-                        <div class="layer_contentTitle borderN">
-                            <h2>4. 평가 기준</h2>
+                            <div class="profile_controls">
+                                <button type="button" class="swiper-button-prev" aria-label="이전 교수 소개"></button>
+                                <div class="swiper-pagination" aria-label="교수 소개 페이지"></div>
+                                <button type="button" class="swiper-button-next" aria-label="다음 교수 소개"></button>
+                            </div>
                         </div>
-                        <table class="data_table">
-                            <caption>평가 기준</caption>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <tr>
-                                <th>구분</th>
-                                <th>반영률</th>
-                                <th>평가 기간</th>
-                            </tr>
-                            <tr>
-                                <td>출석</td>
-                                <td>20%</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>중간고사</td>
-                                <td>25%</td>
-                                <td>2026-01-02 00:00 ~ 2026-01-05 18:00</td>
-                            </tr>
-                            <tr>
-                                <td>기말고사</td>
-                                <td>25%</td>
-                                <td>2026-01-06 00:00 ~ 2026-01-10 18:00</td>
-                            </tr>
-                            <tr>
-                                <td>과제</td>
-                                <td>10%</td>
-                                <td>2026-01-06 00:00 ~ 2026-01-10 18:00</td>
-                            </tr>
-                            <tr>
-                                <td>토론</td>
-                                <td>10%</td>
-                                <td>2026-01-06 ~ 2026-01-10</td>
-                            </tr>
-                            <tr>
-                                <td>OT</td>
-                                <td>5%</td>
-                                <td>2026-01-06 ~ 2026-01-10</td>
-                            </tr>
-                            <tr>
-                                <td>커뮤니티</td>
-                                <td>5%</td>
-                                <td>-</td>
-                            </tr>
-                        </table>
-
-                        <div class="layer_contentTitle borderN">
-                            <h2>5. 강의 계획</h2>
-                        </div>
-
-                        <table class="data_table">
-                            <caption>강의계획</caption>
-                            <colgroup>
-                                <col style="width:30%;">
-                                <col>
-                                <col>
-                            </colgroup>
-                            <tr>
-                                <th>강의 기간</th>
-                                <th>차시</th>
-                                <th>차시별 강의내용</th>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">
-                                    <p>1주</p>
-                                    <p>2026-01-06 ~ 2026-01-10</p>
-                                </td>
-                                <td>1차시</td>
-                                <td class="align_left">
-                                    <strong>강의명</strong>
-                                    <div>조직심리학의 개념</div>
-                                    <strong>학습목표</strong>
-                                    <div>경영전략이란 무엇인가?</div>
-                                    <strong class="marginT16">학습내용</strong>
-                                    <div>
-                                    - 경영전략의 정의를 설명할 수 있다.<br />
-                                    - 경영전략의 발전과정에 대해 설명할 수 있다.<br />
-                                    - 경영전략의 실행체계에 대해 설명할 수 있다.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2차시</td>
-                                <td class="align_left">
-                                    <strong>강의명</strong>
-                                    <div>조직심리학의 개념</div>
-                                    <strong>학습목표</strong>
-                                    <div>경영전략이란 무엇인가?</div>
-                                    <strong class="marginT16">학습내용</strong>
-                                    <div>
-                                    - 경영전략의 정의를 설명할 수 있다.<br />
-                                    - 경영전략의 발전과정에 대해 설명할 수 있다.<br />
-                                    - 경영전략의 실행체계에 대해 설명할 수 있다.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">
-                                    <p>2주</p>
-                                    <p>2026-01-06 ~ 2026-01-10</p>
-                                </td>
-                                <td>1차시</td>
-                                <td class="align_left">
-                                    <strong>강의명</strong>
-                                <div>조직심리학의 개념</div>
-                                    <strong>학습목표</strong>
-                                    <div>경영전략이란 무엇인가?</div>
-                                    <strong class="marginT16">학습내용</strong>
-                                    <div>
-                                    - 경영전략의 정의를 설명할 수 있다.<br />
-                                    - 경영전략의 발전과정에 대해 설명할 수 있다.<br />
-                                    - 경영전략의 실행체계에 대해 설명할 수 있다.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2차시</td>
-                                    <strong>강의명</strong>
-                                    <div>조직심리학의 개념</div>
-                                    <strong>학습목표</strong>
-                                    <div>경영전략이란 무엇인가?</div>
-                                    <strong class="marginT16">학습내용</strong>
-                                    <div>
-                                    - 경영전략의 정의를 설명할 수 있다.<br />
-                                    - 경영전략의 발전과정에 대해 설명할 수 있다.<br />
-                                    - 경영전략의 실행체계에 대해 설명할 수 있다.</div>
-                                </td>
-                            </tr>
-                        </table>
-                        
                     </div>
                     <!-- //layer 내용 -->
                    
                 </div>
             </div>
-            <!-- //레이어 강의계획서 -->
+            <!-- //레이어 교수님 소개 -->
 
         </section>
         <!--// 콘텐츠 영역 -->

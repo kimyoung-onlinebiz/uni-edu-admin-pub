@@ -895,11 +895,11 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .subject_name .info { display:flex; gap:8px; justify-content:flex-start; width:100%; }
 .subject_name .info .label { font-size:var(--Font-2xsmall); height:20px; padding:3px 8px 0; }
 .subject_name strong,
-.subject_name p { width:100%; text-align:left; }
+.subject_name p { width:100%; text-align:left; margin-bottom:4px; }
 .subject_name strong { font-size:var(--Font-medium); font-weight:600; margin-top:3px; }
 .subject_name p { color:var(--Neutral-600); font-size:var(--Font-xsmall); }
-.course_list .btn { margin-top:8px; }
-.course_list .btn:first-child { margin-top: 0; }
+.course_list td .btn { margin-top:5px; }
+.course_list td .btn:first-child { margin-top: 0; }
 
 
 /* 강의 계획서 전용 인쇄 스타일 */
@@ -916,20 +916,26 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
   .layer_coursePlan .layer_basic header,.layer_btnSection {  display: none !important;  }
 }
 
-.general_price { display: flex; flex-direction: column; gap: 16px; }
+.general_price { display:flex; flex-direction: column; gap: 16px; }
+.general_price.row { flex-direction:row; justify-content:center; align-items: center;  width:100%; }
 .general_price dl { display: flex; justify-content: space-between; align-items: center; }
 .general_price dt { font-weight: 600; width:50px; text-align:left; }
 .general_price dt .count { color:var(--Info); }
 .general_price dd { width:230px; display: flex; align-items:center; gap:10px; }
-.general_price del { min-width:80px; text-align:left; color:var(--Neutral-600); font-size:var(--Font-small); }
+.general_price del { min-width:80px; text-align:left; color:var(--Neutral-600); font-size:var(--Font-small); margin-right: 0; }
 .general_price strong { font-size:var(--Font-medium); font-weight: 700; }
 .general_price strong em { width:40px; display:inline-block; text-align:left; color:var(--Error);  }
 .subject_name dl { display:flex; gap:8px; align-items:center; }
 .subject_name dd { font-size:var(--Font-small); }
 .subject_name dt { padding:1px 8px 0; color:var(--Neutral-0); background:var(--Neutral-500); border-radius:var(--Border-radius); font-size:var(--Font-xsmall); }
+.textbook_table .book_thumb { position:relative; display:inline-block; width:100px; min-height:135px; background:var(--Neutral-300); z-index: 0; }
+.textbook_table .book_thumb:after { position:absolute; left:0; top:0; content:"이미지가 없습니다."; font-size:var(--Font-small); color:var(--Neutral-600); display:block; text-align:center; padding-top:50px; z-index:1; }
+.textbook_table .book_thumb img { position:relative; z-index:2; display:block; width:100%; }
+.textbook_table .book_info { display:flex; flex-direction:column; gap:6px; }
+.textbook_table .book_info dd { color:var(--Neutral-600); font-size:var(--Font-small); }
 
 .course_card { display: flex; gap: 24px;  }
-.thumb_area { position: relative; width:480px; height:280px; flex-shrink: 0; background:var(--Neutral-100); border-radius:var(--Border-radius); overflow: hidden; }
+.thumb_area { position: relative; width:480px; height:280px; flex-shrink: 0; background:var(--Neutral-100); border-radius:var(--Border-2radius); overflow: hidden; }
 .thumb_area img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.2s ease; transform-origin: center center; }
 .thumb_area button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width:480px; height:280px; background: rgba(0,0,0,0.4); border-radius:var(--Border-radius); display:flex; align-items:center; justify-content:center; color:#fff; font-family:"Material Symbols Rounded"; font-size:65px; font-variation-settings:"FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48; z-index:1; }
 .thumb_area button:hover + img { transform: scale(1.05); transform-origin: center center; }
