@@ -391,7 +391,7 @@ background: var(--Neutral-0); font-size:var(--Font-xsmall); margin-left:4px; }
 .attachment { margin-bottom:16px; }
 .attachment .download_area { display:flex; flex-direction:column; gap:8px; width:100%; }
 .attachment .download_area .no_attachment { color:var(--Neutral-600); font-size:var(--Font-small); }
-.attachment .download { display:flex; align-items:center; gap:16px; justify-content:space-between; border:1px solid var(--Neutral-300); border-radius:var(--Border-radius); padding:6px 20px 4px; width:100%; background:var(--Neutral-0); height:38px; }
+.attachment .download { display:flex; align-items:center; gap:16px; justify-content:space-between; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); padding:6px 20px 4px; width:100%; background:var(--Neutral-0); height:38px; }
 .attachment .download div { display:flex; gap:16px; }
 .attachment .download p span { color:var(--Neutral-600); padding-left:10px; }
 .attachment .download button,.attachment .download p { font-size:var(--Font-small); }
@@ -509,16 +509,15 @@ background: var(--Neutral-0); font-size:var(--Font-xsmall); margin-left:4px; }
 .layer_progress table th small { display:block; margin-top:2px; font-size:var(--Font-2xsmall); font-weight:400; color:var(--Neutral-600); }
 .layer_progress table td { height:50px; padding:0 10px; border-bottom:var(--Neutral-300) 1px solid; text-align:center; vertical-align:middle; font-weight: 400; }
 .layer_progress .layer_basic { width:600px; }
-ol.layer_guide li { list-style:decimal; margin-left:20px; margin-bottom:12px }
+ol.layer_guide > li { list-style:decimal; margin-left:20px; margin-bottom:12px }
 ol.layer_guide li strong { color:var(--Info); }
 .layer_theory .layer_basic { width:550px; }
 
 /* 게시판 리스트 */
 .board_list { display:flex; flex-direction:column; }
-
 .board_list .material-symbols-rounded { font-weight:300; }
 .board_search { display:flex; gap:16px; margin-bottom:32px; }
-.board_search select,.board_search input,.board_search button,.board_search a { height:40px; }
+.board_search select,.board_search input,.board_search button,.board_search a,.board_search label { height:40px; vertical-align:middle; }
 .board_search a { line-height:36px; min-width:110px; text-align:center; margin-left:auto; }
 .board_search button { background:var(--Neutral-800); width:100px; color:var(--Neutral-0); font-weight:700; font-size:var(--Font-small); border-radius:var(--Border-radius); }
 .board_search button:hover { background:var(--Neutral-900); }
@@ -542,6 +541,18 @@ ol.layer_guide li strong { color:var(--Info); }
 .board_view .view_info { display:flex; gap:8px; margin-bottom:8px; align-items:center; padding:16px 0; border-top:1px solid var(--Neutral-300); }
 .board_view .view_info dt { font-weight:700; font-size:var(--Font-base);margin:0 24px 0 24px; }
 
+/* 민간자격증 발급 신청 - 사진 등록 */
+.board_view .photo_upload { display:flex; flex-direction:column; align-items:center; gap:12px; width:140px; margin:0 auto; }
+.board_view .photo_preview { display:flex; flex-direction:column; justify-content:center; align-items:center; width:140px; height:187px; padding:12px 8px; text-align:center; background:var(--Neutral-200); color:var(--Neutral-600); overflow:hidden; }
+.board_view .photo_preview p { font-size:var(--Font-small); color:var(--Neutral-600); }
+.board_view .photo_preview p:last-child { font-size:var(--Font-2xsmall);padding-top:3px; }
+.board_view .photo_preview img { display:none; width:100%; height:100%; object-fit:cover; }
+.board_view .photo_preview.has_image { padding:0; background:var(--Neutral-100); }
+.board_view .photo_preview.has_image p { display:none; }
+.board_view .photo_preview.has_image img { display:block; }
+.board_view .photo_upload .btn { min-width:84px; height:34px; padding:0 14px; border:1px solid var(--Neutral-600); border-radius:var(--Border-radius); color:var(--Neutral-800); font-size:var(--Font-small); line-height:32px; text-align:center; }
+.board_view .photo_upload .btn:hover { background:var(--Primary-100); border-color:var(--Primary-500); color:var(--Primary-700); }
+
 /* 학사일정 캘린더 */
 .calendar_wrap { width:100%; }
 .calendar_wrap .calendar_header { height:70px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
@@ -561,6 +572,7 @@ ol.layer_guide li strong { color:var(--Info); }
 
 .tabmenu_content { display:none; }
 .tabmenu_content.active { display:block; }
+.tabmenu_content > .sub_header:first-child { margin-top:-20px; }
 
 .calendar_wrap .calendar { border-top:1px solid var(--Neutral-300); }
 .calendar_wrap .calendar_week, .calendar_wrap .calendar_row { display:grid; grid-template-columns:repeat(7, 1fr); }
@@ -628,6 +640,7 @@ ol.layer_guide li strong { color:var(--Info); }
 .layer_guide ol { padding-left:20px; }
 .layer_guide ol > li { list-style-type: decimal; margin-bottom:12px; }
 .layer_guide strong { color:var(--Error) }
+.layer_guide em { font-weight:700; }
 .layer_guide .check,.layer_check { border-top:1px solid var(--Neutral-300); padding:24px 0 0; margin-top:24px; }
 .layer_check label { display:flex; align-items:flex-start; }
 .layer_check input[type="checkbox"] { flex:0 0 auto; margin-top:3px; }
@@ -705,9 +718,13 @@ ol.layer_guide li strong { color:var(--Info); }
 .grade_schedule,.txt_guide_gray { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:24px 32px; margin-bottom:24px; }
 .grade_schedule > div,.txt_guide_gray > div { display:flex;  justify-content:space-between;  }
 .grade_schedule strong,.txt_guide_gray strong { display:block; font-weight:700; margin-bottom:12px; border-bottom:1px solid var(--Neutral-500); padding-bottom:8px; }
+.grade_schedule strong { display:flex; justify-content:space-between; align-items:center; }
+.grade_schedule strong.borderN { border-bottom:none; padding-bottom:0; margin-bottom:0; }
+.grade_schedule strong .btn { color:var(--Neutral-800); margin-bottom:4px; }
 .txt_guide_gray ul { display:flex; flex-direction:column; gap:3px; margin-top:6px; }
-.txt_guide_gray ul > li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
-.txt_guide_gray ul > li::before { content: "•"; flex: 0 0 12px; }
+.txt_guide_gray ul > li,.grade_schedule ul> li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
+.txt_guide_gray ul > li::before,.grade_schedule ul> li:before { content: "•"; flex: 0 0 12px; }
+.grade_schedule ul > li a { color:var(--Info); font-weight:500; font-size:var(--Font-small); }
 .grade_schedule dl { display:flex; margin-bottom:8px;}
 .grade_schedule dt { font-weight:600; }
 .grade_schedule dd + dt { margin-left:24px; }
@@ -885,12 +902,13 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .quick_course_group .quick_apply .material-symbols-rounded { font-size:23px; }
 
 /* 단강좌 수강신청 리스트 */
-.course_day { display:flex; gap:12px 32px; padding:24px 0 24px 150px;; background:var(--Neutral-200); border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); flex-wrap:wrap; }
+.course_day { display:flex; gap:12px 32px; padding:24px 0 24px 150px; background:var(--Neutral-200); border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); flex-wrap:wrap; }
 .course_day dl { display:flex; gap:8px; }
 .course_day dt { position:relative; font-weight:700; width:72px; }
 .course_day dd { font-size:var(--Font-small); width:210px; }
+.course_day dl:first-child dd { width:240px; }
 .course_day dt:after { position:absolute; right: 0;content:"|"; margin:0 2px 0 4px; font-weight:400; }
-.course_day dl:last-child dt { width:102px; }
+.course_day dl:nth-child(3) dt { width:102px; }
 .subject_name { display:flex; justify-content:flex-start; flex-direction:column; align-items:flex-start; text-align:left; width:100%; gap:6px }
 .subject_name .info { display:flex; gap:8px; justify-content:flex-start; width:100%; }
 .subject_name .info .label { font-size:var(--Font-2xsmall); height:20px; padding:3px 8px 0; }
@@ -923,8 +941,10 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .general_price dt .count { color:var(--Info); }
 .general_price dd { width:230px; display: flex; align-items:center; gap:10px; }
 .general_price del { min-width:80px; text-align:left; color:var(--Neutral-600); font-size:var(--Font-small); margin-right: 0; }
-.general_price strong { font-size:var(--Font-medium); font-weight: 700; }
-.general_price strong em { width:40px; display:inline-block; text-align:left; color:var(--Error);  }
+.general_price strong,.arrow_price strong { font-size:var(--Font-medium); font-weight: 700; }
+.general_price strong em,.arrow_price strong em { width:40px; display:inline-block; text-align:left; color:var(--Error); }
+.arrow_price { display:flex; justify-content:center; align-items: center; gap:4px; }
+.arrow_price del { color:var(--Neutral-600); font-size:var(--Font-small); margin-right: 0; }
 .subject_name dl { display:flex; gap:8px; align-items:center; }
 .subject_name dd { font-size:var(--Font-small); }
 .subject_name dt { padding:1px 8px 0; color:var(--Neutral-0); background:var(--Neutral-500); border-radius:var(--Border-radius); font-size:var(--Font-xsmall); }
@@ -950,7 +970,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .info_area .price del { color:var(--Neutral-600);  }
 .info_area .price strong { color: var(--Error); margin-left: 4px; }
 .course_list .editor_area { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); padding:24px 32px; }
-.layer_profile .layer_content { width:600px; }
+.layer_profile .layer_content,.layer_licenseNotice .layer_content { width:600px; }
 .profile_swiper { width:100%; }
 .profile_swiper .swiper-slide { display:grid; grid-template-columns:190px 1fr; gap:24px; align-items:center; min-height:220px; }
 .profile_thumb { width:100%; height:250px; display:flex; align-items:flex-end;
@@ -968,3 +988,6 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .profile_swiper .swiper-button-next:after { font-size:18px; font-weight:700; }
 .profile_swiper .swiper-pagination { position:static; width:auto; min-width:48px; color:var(--Neutral-800); font-size:var(--Font-small); font-weight:600; }
 .profile_swiper .swiper-button-disabled { opacity:0.35; cursor:default; }
+.layer_delivery .layer_content,.layer_licenseInfo .layer_content { width:500px; }
+.layer_privacy .layer_content { width:700px; }
+.layer_privacy .layer_content p { font-size:var(--Font-small);  }

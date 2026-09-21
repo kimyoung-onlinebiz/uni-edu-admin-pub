@@ -342,6 +342,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_faq', triggers: ['.btn_faq'], closeCurrentLayer: true }, //자주 찾는 질문
             { layer: '.layer_wrapper.layer_formLibrary', triggers: ['.btn_formLibrary'], closeCurrentLayer: true }, //서식 자료실
             { layer: '.layer_wrapper.layer_profile', triggers: ['.btn_profile'], closeCurrentLayer: true }, //교수님 프로필
+            { layer: '.layer_wrapper.layer_delivery', triggers: ['.btn_delivery'], closeCurrentLayer: true }, //민간자격증 발급/배송 안내
+            { layer: '.layer_wrapper.layer_licenseInfo', triggers: ['.btn_licenseInfo'], closeCurrentLayer: true }, //자격증 정보 확인 레이어
+            { layer: '.layer_wrapper.layer_privacy', triggers: ['.btn_privacy'], closeCurrentLayer: true }, //개인정보 수집 동의 레이어
+            { layer: '.layer_wrapper.layer_licenseNotice', triggers: ['.btn_licenseNotice'], closeCurrentLayer: true }, //자격관리기관 및 소비자 알림사항 레이어
         ]);
     }
 
