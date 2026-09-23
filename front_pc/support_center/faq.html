@@ -590,26 +590,5 @@
             <span class="material-symbols-rounded" aria-hidden="true">north</span>
         </button>
     </aside>
-<script>
-    // 아코디언 버튼 클릭 이벤트 처리 //
-    document.querySelectorAll('.btn_accordion').forEach(button => {
-        button.addEventListener('click', () => {
-            const currentItem = button.parentElement;
-            const isActive = currentItem.classList.contains('active');
-
-            // (선택) 하나를 열 때 다른 항목은 닫고 싶다면 아래 2줄 유지
-            document.querySelectorAll('.accordion_item').forEach(item => {
-            item.classList.remove('active');
-            item.querySelector('.btn_accordion').setAttribute('aria-expanded', 'false');
-            });
-
-            // 클릭한 항목 토글
-            if (!isActive) {
-            currentItem.classList.add('active');
-            button.setAttribute('aria-expanded', 'true');
-            }
-        });
-    });
-</script>
 </body>
 </html>

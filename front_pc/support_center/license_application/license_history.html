@@ -213,7 +213,7 @@
                                 <li><a href="#none">환불제도</a></li>
                                 <li><a href="#none">서식자료실</a></li>
                                 <li><a href="#none">수강가이드</a></li>
-                                <li><a href="#none">민간자격증 발급</a></li>
+                                <li><a href="#none">자격증 발급</a></li>
                                 <li><a href="#none">증명서 발급</a></li>
                                 <li><a href="#none">다운로드 센터</a></li>
                                 <li><a href="#none">1:1 원격지원</a></li>
@@ -264,9 +264,9 @@
                         <a href="#none"><strong>수강가이드</strong></a>
                     </li>
                     <li>
-                        <a href="#none"><strong class="active">민간자격증 발급</strong></a>
+                        <a href="#none"><strong class="active">자격증 발급</strong></a>
                         <ul>
-                            <li><a href="#none">발급ㆍ재발급 신청</a></li>
+                            <li><a href="#none">민간자격증 발급 신청</a></li>
                             <li><a href="#none">민간자격증 상세정보</a></li>
                             <li><a href="#none" class="active">내 발급 이력</a></li>
                         </ul>
@@ -351,7 +351,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">번호</th>
-                                <th scope="col">문의 유형</th>
+                                <th scope="col">신청 구분</th>
                                 <th scope="col">상태</th>
                                 <th scope="col">자격증 명</th>
                                 <th scope="col">발급 수수료</th>
@@ -471,15 +471,98 @@
         </div>
    </footer>
 
-    <aside class="quick_floating quick_classroom" aria-label="빠른 메뉴">
-        <a href="#none">
-            <span><img src="../../assets/images/sub/icon_myclass_guide.png" alt=""></span>
-            <strong>나의 강의실<br />가이드</strong>
+    <aside class="quick_floating" aria-label="빠른 메뉴">
+
+        <!-- 발급신청 / 내 발급이력 -->
+        <div class="quick_course_group">
+            <span class="cart_badge">1</span>
+            <a href="#" class="quick_cart">
+                <i class="material-symbols-rounded icon_fill">assignment_add</i>
+                <span>발급신청</span>
+            </a>
+            <a href="#" class="quick_apply">
+                <i class="material-symbols-rounded">Fact_check</i>
+                <span>내 발급<br />이력</span>
+            </a>
+        </div>
+
+        <!-- // 발급신청 / 내 발급이력 -->
+        <a href="#none" class="quick_consult">
+            <span><img src="../../assets/images/common/icon_aside01.png" alt=""></span>
+            <strong>간편상담</strong>
         </a>
 
-        <a href="#none">
-            <span><img src="../../assets/images/sub/icon_myclass_faq.png" alt=""></span>
-            <strong>자주 묻는<br />질문</strong>
+        <!-- 레이어 간편상담 -->
+        <div class="layer_wrapper layer_consult"> <!-- active 추가 시 화면 노출 -->
+            <div class="layer_basic">
+
+                <section class="mainEasy_consult">
+                    <h2>간편상담</h2>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+
+                    <!-- 간편상담 내용(메인 최상단과 동일) -->
+                    <form action="#none" method="post">
+                        <div class="form_group">
+                            <input type="text" id="consultName" name="consultName" placeholder="이름을 입력해 주세요." class="width_100">
+                            <input type="tel" id="consultPhone" name="consultPhone" placeholder="연락처를 입력해 주세요." class="width_100">
+                            <select id="consultType" name="consultType" class="width_100">
+                                <option value="">상담 유형을 선택해주세요.</option>
+                                <option value="transfer">편입 학위과정</option>
+                                <option value="social">사회복지사</option>
+                                <option value="korean">한국어교원</option>
+                                <option value="certificate">TESAT&자격증</option>
+                            </select>
+
+                            <select id="consultDetail" name="consultDetail" class="width_100">
+                                <option value="">상세 내용을 선택해주세요.</option>
+                                <option value="transfer">편입 학위과정</option>
+                                <option value="social">사회복지사</option>
+                                <option value="korean">한국어교원</option>
+                                <option value="certificate">TESAT&자격증</option>
+                            </select>
+                        </div>
+
+                        <div class="form_check">
+                            <input type="checkbox" id="consultAgree_aside" name="consultAgree_aside">
+                            <label for="consultAgree_aside">개인정보 수집 및 제공 이용 동의 <strong>(필수)</strong></label>
+                        </div>
+
+                        <div class="layer_agree">
+                            <div class="agree_header">
+                                <h3>개인정보 수집 및 제공 이용 동의</h3>
+                                <button type="button" class="btn_layerClose" aria-label="레이어 닫기"><span class="material-symbols-rounded">close</span></button>
+                            </div>
+                            <div class="agree_content">
+                                <p><strong>1. 수집하는 개인정보의 항목</strong></p>
+                                    <p>김영평생교육원은 상담 및 학습설계서 제공을
+    위해 필요한 최소한의 개인정보만을 수집합니다.학점은행제 상담 및 학습설계 수립을 이용하기
+    위해서는 상담 신청 시 성명, 연락처를 필수적으로 입력하셔야 합니다.</p>
+                                    <br>
+                                    <p><strong>2. 개인정보의 수집목적 및 이용목적</strong></p>
+                                    <p>수집하는 개인정보 항목에 따른 구체적인 수집 목적 및 이용 목적은 다음과 같습니다.</p>
+                                    <p>성명, 연락처: 학점은행제 제도 안내 및 학습
+    설계서 제공을 위해 유선연락 또는 문자 안내를 드릴 수 있습니다.</p>
+                                    <br>
+                                    <p><strong>3. 개인정보의 보유기간 및 이용기간</strong></p>
+                                    <p>수집된 개인정보는 상담 자료로 이용된 이후 즉시 파기합니다. 다만, 상담 이후 추가 상담, 수강신청을 진행하는 경우 귀하의 개인정보를 이용목적 달성시 또는 법령이 정하는 규정에 따라
+    추가 보관할 수 있습니다.</p>
+                                    <p>* 동의를 거부할 수 있으며 거부 시 상담 신청이 불가합니다.</p>
+                            </div>
+                            
+                        </div>
+
+                        <button type="submit" class="mainEasy_apply">상담 신청</button>
+                    </form>
+                    <!-- //간편상담 내용(메인 최상단과 동일) -->
+                </section>
+
+            </div>
+        </div>
+        <!-- //레이어 간편상담 -->
+
+        <a href="#none" class="quick_kakao">
+            <span><img src="../../assets/images/common/icon_aside02.png" alt=""></span>
+            <strong>카카오톡<br>간편상담</strong>
         </a>
         <button type="button" class="quick_top" aria-label="상단으로 이동">
             <span class="material-symbols-rounded" aria-hidden="true">north</span>

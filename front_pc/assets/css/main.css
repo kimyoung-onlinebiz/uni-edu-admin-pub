@@ -317,7 +317,8 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .quick_floating strong { font-weight:600; }
 
 .quick_floating .quick_top { width:30px; height:30px; margin:0 auto; background:#fff; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); color:var(--Neutral-600); box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-.quick_floating .quick_top span { font-size:16px; font-weight:500; }
+.quick_floating .quick_top:hover { background:var(--Primary-100); }
+.quick_floating .quick_top span { font-size:16px; font-weight:500; padding:3px 0; display:block; }
 .mainEasy_consult .btn_layerClose { position:absolute; right:10px; top:6px; font-size:24px; }
 .layer_consult .layer_basic { width:400px; padding:24px 0 32px; }
 .layer_consult .mainEasy_consult { padding:0 25px; }

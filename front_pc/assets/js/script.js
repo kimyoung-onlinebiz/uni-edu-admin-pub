@@ -346,6 +346,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_licenseInfo', triggers: ['.btn_licenseInfo'], closeCurrentLayer: true }, //자격증 정보 확인 레이어
             { layer: '.layer_wrapper.layer_privacy', triggers: ['.btn_privacy'], closeCurrentLayer: true }, //개인정보 수집 동의 레이어
             { layer: '.layer_wrapper.layer_licenseNotice', triggers: ['.btn_licenseNotice'], closeCurrentLayer: true }, //자격관리기관 및 소비자 알림사항 레이어
+            { layer: '.layer_wrapper.layer_coupon', triggers: ['.btn_coupon'], closeCurrentLayer: true }, //쿠폰등록 레이어
+            { layer: '.layer_wrapper.layer_composition', triggers: ['.btn_composition'], closeCurrentLayer: true }, //구성과정 레이어
         ]);
     }
 
@@ -661,6 +663,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ============================================================
+    // 아코디언 (FAQ, 결제 내역 등에서 공용으로 사용)
+    // - 같은 목록(ul) 안에서는 한 번에 한 항목만 열리도록 처리
+    // - .accordion_item 구조와 .lecture_list > li 구조를 모두 지원
+    // - .lecture_list는 별도 active 표시가 없으면 첫 항목을 기본으로 열어둔다
+    // ============================================================
+    function initAccordion() {
+        qa('.lecture_list').forEach((list) => {
+            const items = qa(':scope > li', list);
+            if (items.length && !items.some((item) => item.classList.contains('active'))) {
+                items[0].classList.add('active');
+                q('.btn_accordion', items[0])?.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        qa('.btn_accordion').forEach((button) => {
+            onClick(button, () => {
+                // 버튼이 속한 항목(li) 탐색
+                const currentItem = button.closest('.accordion_item, .lecture_list > li');
+                if (!currentItem?.parentElement) {
+                    return;
+                }
+
+                const isActive = currentItem.classList.contains('active');
+
+                // 같은 그룹의 다른 항목은 모두 닫는다
+                qa(':scope > .accordion_item, :scope > li', currentItem.parentElement).forEach((item) => {
+                    item.classList.remove('active');
+                    q('.btn_accordion', item)?.setAttribute('aria-expanded', 'false');
+                });
+
+                // 클릭한 항목만 토글하여 연다
+                if (!isActive) {
+                    currentItem.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    }
+
+    // ============================================================
     // 초기 실행
     // - 공통 초기화 → 레이어 등록 → 페이지별 기능 초기화 순서로 진행
     // ============================================================
@@ -671,6 +713,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initJoinAgreement,
         initCustomSelect,
         initNoticeTabs,
+        initAccordion,
     ].forEach((initializer) => initializer());
     
     // 탭 (HTML에서 초기 active 지정)
