@@ -669,12 +669,81 @@ document.addEventListener('DOMContentLoaded', () => {
     // - .lecture_list는 별도 active 표시가 없으면 첫 항목을 기본으로 열어둔다
     // ============================================================
     function initAccordion() {
+        const setAccordionPanelHeight = (item, isOpen, animate = true) => {
+            const panel = q(':scope > .course_detail, :scope > .refund_package_panel, :scope > .course_period_detail', item);
+            if (!panel) {
+                return;
+            }
+
+            if (!animate) {
+                panel.style.height = isOpen ? 'auto' : '0px';
+                return;
+            }
+
+            if (isOpen) {
+                panel.style.height = '0px';
+                void panel.offsetHeight;
+                panel.style.height = `${panel.scrollHeight}px`;
+                panel.ontransitionend = (event) => {
+                    if (event.target === panel && event.propertyName === 'height' && item.classList.contains('active')) {
+                        panel.style.height = 'auto';
+                    }
+                };
+                return;
+            }
+
+            panel.style.height = `${panel.scrollHeight}px`;
+            void panel.offsetHeight;
+            panel.style.height = '0px';
+        };
+
         qa('.lecture_list').forEach((list) => {
             const items = qa(':scope > li', list);
+            if (!items.some((item) => q('.btn_accordion', item))) {
+                return;
+            }
+
             if (items.length && !items.some((item) => item.classList.contains('active'))) {
                 items[0].classList.add('active');
-                q('.btn_accordion', items[0])?.setAttribute('aria-expanded', 'true');
             }
+
+            items.forEach((item) => {
+                const isActive = item.classList.contains('active');
+                q('.btn_accordion', item)?.setAttribute('aria-expanded', String(isActive));
+                setAccordionPanelHeight(item, isActive, false);
+            });
+        });
+
+        qa('.refund_order_list').forEach((list) => {
+            qa(':scope > li', list).forEach((item, index) => {
+                const isActive = index === 0;
+                item.classList.toggle('active', isActive);
+                q('.btn_accordion', item)?.setAttribute('aria-expanded', String(isActive));
+
+                qa('.refund_package_list > li', item).forEach((packageItem, packageIndex) => {
+                    const isPackageActive = packageIndex === 0;
+                    packageItem.classList.toggle('active', isPackageActive);
+                    q('.btn_accordion', packageItem)?.setAttribute('aria-expanded', String(isPackageActive));
+                    setAccordionPanelHeight(packageItem, isPackageActive, false);
+                });
+            });
+        });
+
+        qa('.refund_single_panel').forEach((panel) => {
+            const items = qa(':scope > .accordion_item', panel);
+            if (!items.length) {
+                return;
+            }
+
+            if (!items.some((item) => item.classList.contains('active'))) {
+                items[0].classList.add('active');
+            }
+
+            items.forEach((item) => {
+                const isActive = item.classList.contains('active');
+                q('.btn_accordion', item)?.setAttribute('aria-expanded', String(isActive));
+                setAccordionPanelHeight(item, isActive, false);
+            });
         });
 
         qa('.btn_accordion').forEach((button) => {
@@ -687,8 +756,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const isActive = currentItem.classList.contains('active');
 
+                // 서로 다른 하위 목록에 있는 같은 깊이의 항목도 함께 닫는다
+                const parentItem = currentItem.parentElement.closest('.accordion_item, .lecture_list > li');
+                if (parentItem) {
+                    qa('.btn_accordion', parentItem).forEach((nestedButton) => {
+                        const nestedItem = nestedButton.closest('.accordion_item, .lecture_list > li');
+                        if (!nestedItem || nestedItem === currentItem) {
+                            return;
+                        }
+
+                        const nestedParentItem = nestedItem.parentElement.closest('.accordion_item, .lecture_list > li');
+                        if (nestedParentItem !== parentItem) {
+                            return;
+                        }
+
+                        setAccordionPanelHeight(nestedItem, false);
+                        nestedItem.classList.remove('active');
+                        nestedButton.setAttribute('aria-expanded', 'false');
+                    });
+                }
+
+                if (isActive) {
+                    qa('.btn_accordion', currentItem).forEach((nestedButton) => {
+                        if (nestedButton === button) {
+                            return;
+                        }
+
+                        const nestedItem = nestedButton.closest('.accordion_item, .lecture_list > li');
+                        if (nestedItem && nestedItem !== currentItem) {
+                            setAccordionPanelHeight(nestedItem, false);
+                            nestedItem.classList.remove('active');
+                            nestedButton.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                }
+
                 // 같은 그룹의 다른 항목은 모두 닫는다
                 qa(':scope > .accordion_item, :scope > li', currentItem.parentElement).forEach((item) => {
+                    if (item.classList.contains('active')) {
+                        setAccordionPanelHeight(item, false);
+                    }
                     item.classList.remove('active');
                     q('.btn_accordion', item)?.setAttribute('aria-expanded', 'false');
                 });
@@ -697,6 +804,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!isActive) {
                     currentItem.classList.add('active');
                     button.setAttribute('aria-expanded', 'true');
+                    setAccordionPanelHeight(currentItem, true);
                 }
             });
         });
@@ -728,6 +836,20 @@ document.addEventListener('DOMContentLoaded', () => {
             contents.forEach(c => c.classList.toggle('active', c.id === id));
         }));
     });
+
+    // 안내사항보기-간단 툴팁 토글 (외부 클릭 시 닫기, 하나만 열림)
+    document.querySelectorAll('.icon_tooltip').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // 다른 열려있는 툴팁 닫기
+            document.querySelectorAll('.icon_tooltip.open').forEach(o => { if (o !== icon) o.classList.remove('open'); });
+            icon.classList.toggle('open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.icon_tooltip.open').forEach(o => o.classList.remove('open'));
+    });
+    
 
     // 큰 탭 (각 .tabmenu 범위 안에서만 활성 상태를 전환)
     qa('.tab_first').forEach((container) => {

@@ -382,16 +382,16 @@
                 </ul>
 
                 <!-- 결제 대기 내역 -->
-                <section class="tabmenu_content active pay_history" id="waiting_payment">
+                <section class="tabmenu_content active pay_history waiting_payment" id="waiting_payment">
 
                     <!-- 검색 -->
                     <div class="board_search">
                         <dl>
                             <dt>기간별 신청 내역</dt>
                             <dd>
-                                <input type="date" id="user-date">
+                                <input type="date">
                                 <span>~</span>
-                                <input type="date" id="user-date-end">
+                                <input type="date">
                             </dd>
                         </dl>
                         <dl>
@@ -420,82 +420,29 @@
                                 전체 선택
                             </label>
 
-                            <a href="#none" class="order_item">
-                                <input type="checkbox" checked>
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
-                            </a>
+                            <ul class="lecture_list">
+                                <li>
+                                    <div class="order_item">
+                                        <input type="checkbox">
+                                        <div class="order_num">
+                                            <span>주문 번호</span>
+                                            <strong>20260608115948-00004</strong>
+                                        </div>
+                                        <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="order_item">
+                                        <input type="checkbox">
+                                        <div class="order_num">
+                                            <span>주문 번호</span>
+                                            <strong>20260608115948-00004</strong>
+                                        </div>
+                                        <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
+                                    </div>
+                                </li>
+                            </ul>
 
-                            <a href="#none" class="order_item active">
-                                <input type="checkbox" checked>
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
-                            </a>
-
-                            <a href="#none" class="order_item">
-                                <input type="checkbox" checked>
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray">구성 과정 확인</button>
-                            </a>
-
-                            <a href="#none" class="order_item">
-                                <input type="checkbox">
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray">구성 과정 확인</button>
-                            </a>
-                            <a href="#none" class="order_item">
-                                <input type="checkbox">
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray">구성 과정 확인</button>
-                            </a>
-                            <a href="#none" class="order_item">
-                                <input type="checkbox">
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray">구성 과정 확인</button>
-                            </a>
-                            <a href="#none" class="order_item">
-                                <input type="checkbox">
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray">구성 과정 확인</button>
-                            </a>
-                            <a href="#none" class="order_item">
-                                <input type="checkbox">
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray">구성 과정 확인</button>
-                            </a>
-
-                            <a href="#none" class="order_item">
-                                <input type="checkbox">
-                                <div class="order_num">
-                                    <span>주문 번호</span>
-                                    <strong>20260608115948-00004</strong>
-                                </div>
-                                <button type="button" class="btn txtGray">구성 과정 확인</button>
-                            </a>
                         </div>
 
                         <!-- 결제 정보 -->
@@ -521,7 +468,7 @@
                                 </div>
                                 <div>
                                     <dt>예금주</dt>
-                                    <dd>주식회사 아이비비영</dd>
+                                    <dd>주식회사 아이비김영</dd>
                                 </div>
                                 <div>
                                     <dt>입금 기한</dt>
@@ -540,7 +487,7 @@
 
                             <button type="button" class="btn primary btn_cancel">선택한 주문 취소 (3건)</button>
 
-                            <p>가상 계좌 주문은 입금 기한 내 미입금 시 자동 취소되며, 입금 기한 만료로부터 7일 후 삭제됩니다.</p>
+                            <p>가상 계좌 주문은 입금 기한 내 미입금 시 자동 취소되며, 입금 기한 만료일로부터 7일 후 삭제됩니다.</p>
                         </div>
                         <!-- //결제 정보 -->
 
@@ -550,7 +497,7 @@
 
                             <span class="no_data">주문 번호를 선택해 주세요.</span>
 
-                            <p>가상 계좌 주문은 입금 기한 내 미입금 시 자동 취소되며, 입금 기한 만료로부터 7일 후 삭제됩니다.</p>
+                            <p>가상 계좌 주문은 입금 기한 내 미입금 시 자동 취소되며, 입금 기한 만료일로부터 7일 후 삭제됩니다.</p>
                         </div -->
                         <!-- //결제 정보 없을때 -->
 
@@ -560,16 +507,16 @@
                 <!-- //결제 대기 내역 -->
 
                 <!-- 결제 완료 내역 -->
-                <section class="tabmenu_content pay_history" id="completed_payment">
+                <section class="tabmenu_content pay_history waiting_payment" id="completed_payment">
 
                     <!-- 검색 -->
                     <div class="board_search">
                         <dl>
                             <dt>기간별 신청 내역</dt>
                             <dd>
-                                <input type="date" id="user-date">
+                                <input type="date">
                                 <span>~</span>
-                                <input type="date" id="user-date-end">
+                                <input type="date">
                             </dd>
                         </dl>
                         <dl>
@@ -587,7 +534,90 @@
                     </div>
                     <!-- //검색 -->
 
-                    <span class="no_data">결제 완료 내역이 없습니다.</span>
+                    <!-- <span class="no_data">결제 완료 내역이 없습니다.</span> -->
+
+                    <!-- 내용 -->
+                    <div class="payment_list">
+                        
+                        <div class="order">
+                            <label class="check">
+                                <input type="checkbox">
+                                전체 선택
+                            </label>
+
+                            <ul class="lecture_list">
+                                <li>
+                                    <div class="order_item">
+                                        <input type="checkbox">
+                                        <div class="order_num">
+                                            <span>주문 번호</span>
+                                            <strong>20260608115948-00004</strong>
+                                        </div>
+                                        <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="order_item">
+                                        <input type="checkbox">
+                                        <div class="order_num">
+                                            <span>주문 번호</span>
+                                            <strong>20260608115948-00004</strong>
+                                        </div>
+                                        <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <!-- 결제 정보 -->
+                        <div class="payment_info">
+                            <h2>결제 정보 <small><em>2</em> / 3</small></h2>
+
+                            <dl>
+                                <div class="border">
+                                    <dt>주문 번호</dt>
+                                    <dd>20260608115948-00004</dd>
+                                </div>
+                                <div class="border">
+                                    <dt>결제 수단</dt>
+                                    <dd>가상 계좌</dd>
+                                </div>
+                                <div>
+                                    <dt>결제 은행</dt>
+                                    <dd>국민은행</dd>
+                                </div>
+                                <div>
+                                    <dt>결제일</dt>
+                                    <dd>2026-02-21</dd>
+                                </div>
+                                <div>
+                                    <dt>결제 금액</dt>
+                                    <dd>690,000원</dd>
+                                </div>
+                            </dl>
+
+                            <div class="payment_paging">
+                                <button type="button" class="btn"><span class="material-symbols-rounded">keyboard_arrow_left</span>이전</button>
+                                <button type="button" class="btn" disabled>다음 <span class="material-symbols-rounded">keyboard_arrow_right</span></button>
+                            </div>
+
+                            <button type="button" class="btn primary btn_cancel">영수증 보기</button>
+                        </div>
+                        <!-- //결제 정보 -->
+
+                        <!-- 결제 정보 없을때 -->
+                        <!-- div class="payment_info">
+                            <h2>결제 정보</h2>
+
+                            <span class="no_data">주문 번호를 선택해 주세요.</span>
+
+                            <p>가상 계좌 주문은 입금 기한 내 미입금 시 자동 취소되며, 입금 기한 만료일로부터 7일 후 삭제됩니다.</p>
+                        </div -->
+                        <!-- //결제 정보 없을때 -->
+
+                    </div>
+                    <!-- 내용 -->
                     
 
                 </section>
