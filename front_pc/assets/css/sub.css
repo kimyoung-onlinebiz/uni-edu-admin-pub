@@ -2,8 +2,11 @@
 .wrap { max-width:1200px; margin:0 auto; }
 
 /* 서브 공통 레이아웃 */
-.subpage_layout { display:flex; gap:64px; width:1280px; margin:0 auto; padding:60px 0 120px; align-items:flex-start; background:var(--Neutral-0); }
-.lnb_wrap { flex:0 0 256px; gap:24px; display:flex; flex-direction:column; align-items:stretch; }
+.subpage_layout { display:grid; grid-template-columns:256px minmax(0, 960px); column-gap:64px; width:1280px; margin:0 auto; padding:60px 0 120px; align-items:start; background:var(--Neutral-0); }
+.subpage_layout.two_column_layout { grid-template-columns:1280px minmax(0, 320px); column-gap:32px; width:1280px; margin:0 auto; }
+.subpage_layout.two_column_layout .two_column_content { display:flex; gap:32px; }
+.subpage_layout.two_column_layout .two_column_left { width:928px; }
+.lnb_wrap { min-width:0; gap:24px; display:flex; flex-direction:column; align-items:stretch; }
 .lnb_wrap h2 { font-size:var(--Font-3xlarge); font-weight:700; line-height:1.2; padding:0 20px 0 20px; }
 .lnb_wrap nav > ul { display:flex; flex-direction:column; align-items:stretch; align-self:stretch; border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); padding-top:16px; }
 .lnb_wrap nav strong { position:relative; font-size:var(--Font-medium); font-weight:600; padding:12px 20px 6px 36px; display:block; }
@@ -29,7 +32,9 @@
 .lnb_wrap .classroom_shortcut a:hover { background:#ECF2FE; }
 .lnb_wrap .classroom_shortcut a:after { content:"keyboard_arrow_right"; font-family:'Material Symbols Rounded'; font-size:var(--Font-3xlarge); color:var(--Neutral-600); font-variation-settings:'FILL' 1,'wght' 200; margin-left:auto; }
 .lnb_wrap .classroom_shortcut a:hover:after,.lnb_wrap .classroom_shortcut a.active:after { color:var(--Primary-500); font-variation-settings:'FILL' 1,'wght' 300; }
-.subpage_content { position:relative; flex:0 0 960px; min-width:0; margin-top:24px; }
+.subpage_content { position:relative; min-width:0; margin-top:24px; }
+.two_column_header { position:relative; width:1280px; display:flex; align-items:center; justify-content:space-between; padding-bottom:19px; margin:35px auto 24px; border-bottom: 1px solid var(--Neutral-300); }
+.two_column_header h2 { font-size:var(--Font-2xlarge); font-weight:700; line-height:1.2; }
 .subpage_content .sub_header { position:relative; width:100%; display:flex; align-items:center; justify-content:space-between; padding-bottom:19px; margin-top:35px; }
 .subpage_content .sub_header.column { flex-direction:column; align-items:flex-start; gap:8px; }
 .subpage_content .sub_header.start { justify-content:flex-start; }
@@ -48,17 +53,18 @@
 .subpage_content .sub_header a.primary,.subpage_content .sub_header button.primary { color:var(--Neutral-0); }
 
 .sub_header .essential { font-size:var(--Font-2xsmall) !important; }
-.sub_header h5 { font-size:var(--Font-base) !important; font-weight:500; }
-.sub_header.column h5 { font-size:var(--Font-medium) !important; font-weight:500; }
+.sub_header h5 { font-weight:500; }
+.sub_header.column h5 { font-size:var(--Font-medium) !important; font-weight:500; margin-bottom:4px; }
 .sub_header.column h5 small { font-size:var(--Font-medium) !important; color:var(--Neutral-600); }
 .sub_header h5 strong { color:var(--Info); }
 
 .breadcrumb { position:absolute; right:0; top:-56px; }
 .breadcrumb .home { position:relative; }
 .breadcrumb ol { display:flex; align-items:center; gap:2px; }
-.breadcrumb ol li { font-size:var(--Font-small); }
+.breadcrumb ol li { font-size:var(--Font-small); font-size:var(--Font-small); color:var(--Neutral-600); }
 .breadcrumb ol li a { font-size:var(--Font-small); color:var(--Neutral-600); }
 .breadcrumb ol li a:hover { color:var(--Neutral-900); }
+.breadcrumb ol li[aria-current="page"] { color:var(--Neutral-900); font-weight:500; }
 .breadcrumb ol li:after { content:"keyboard_arrow_right"; font-family:'Material Symbols Rounded'; padding-left:2px; color:var(--Neutral-600); font-variation-settings:'FILL' 1,'wght' 400; font-size:20px; vertical-align:-5px; }
 .breadcrumb ol li:last-child:after { content:""; }
 .breadcrumb .home:before { content:"home"; font-family:'Material Symbols Rounded'; position:absolute; left:-22px; top:50%; transform:translateY(-50%); font-size:18px; color:var(--Neutral-600); font-variation-settings:'FILL' 1,'wght' 700; }
@@ -342,8 +348,8 @@ border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  backgr
 .txt_guide ol > li { list-style-type: decimal; margin-bottom:12px; font-weight:600;}
 .txt_guide .txt_error { font-size:var(--Font-small); }
 .table_guide { margin-top:5px; }
-p.table_guide { font-size:var(--Font-small); color:var(--Neutral-600); font-weight:500; }
-.table_guide li {  color: var(--Neutral-800); font-size: var(--Font-small); }
+p.table_guide { font-size:var(--Font-xsmall); color:var(--Neutral-600); font-weight:500; }
+.table_guide li {  color: var(--Neutral-600); font-size: var(--Font-xsmall); }
 .table_guide li:before { content:"* "; }
 
 .icon_tooltip { position:relative; display:inline-block; margin-left:4px; color:var(--Neutral-600); font-size:18px; cursor:pointer; }
@@ -898,6 +904,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .badge.green { border-color: var(--Success); color: var(--Success); }
 .badge.blue { border-color: var(--Info); color: var(--Info); }
 .badge.yellow { border-color: var(--Warning); color: var(--Warning); }
+.badge.red { border-color: var(--Error); color: var(--Error); }
 .deadline { color:var(--Error); animation:FadeIn 1s infinite; }
 .closed { color:var(--Neutral-500); }
 .course_accordion_wrap .sub_header { margin-top:16px; padding-bottom:16px; }
@@ -1033,7 +1040,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .pay_history.active { display:grid; grid-template-columns:minmax(0, 1fr) 320px; column-gap:32px; }
 .pay_history.refund_request > .sub_header { grid-column:1 / -1; }
 .pay_history > .board_search { grid-column:1 / -1; }
-.pay_history > .no_data { display:block; grid-column:1 / -1; width:100%; height:300px; line-height:220px; border-bottom:1px solid var(--Neutral-300); }
+.pay_history > .no_data,.two_column_layout .no_data { display:flex; justify-content:center; align-items:center; width:100%; height:300px; border-bottom:1px solid var(--Neutral-300); flex-direction:column; gap:16px;  }
 .pay_history > .payment_list { display:contents; }
 .payment_list .order { grid-column:1; }
 .payment_list .check { display:flex; align-items:center; gap:8px; margin:14px 0 30px; font-size:14px; cursor:pointer; }
@@ -1056,9 +1063,9 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .pay_history.refund_request .course_period_head { display:flex; align-items:center; min-height:56px; padding:0 24px; background:var(--Neutral-0); border-bottom:1px solid var(--Neutral-500); border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius) var(--Border-2radius) 0 0; }
 .pay_history.refund_request .course_period_head > label { display:flex; align-items:center; flex:0 0 36px; }
 .pay_history.refund_request .course_period_head > strong { font-size:var(--Font-medium); font-weight:600; }
-.pay_history.refund_request .course_period_detail .list_table { width:100%; table-layout:fixed; }
+.refund_package_panel .data_table { margin:0 20px 20px; width:calc(100% - 40px); table-layout:fixed; }
 .pay_history.refund_request .course_period_detail .list_table th,
-.pay_history.refund_request .course_period_detail .list_table td { word-break:break-all; overflow-wrap:anywhere; }
+.pay_history.refund_request .course_period_detail .list_table td,.refund_package_panel .data_table td,.refund_package_panel .data_table th { word-break:break-all; overflow-wrap:anywhere; }
 .pay_history.refund_request .refund_package_panel { height:0; overflow:hidden; visibility:hidden; transition:height 0.4s ease, visibility 0s linear 0.4s; }
 .pay_history.refund_request .refund_package_list > li.active > .refund_package_panel { height:auto; visibility:visible; transition:height 0.4s ease, visibility 0s; }
 .refund_single_panel { display:flex; gap:16px; flex-direction:column; }
@@ -1081,27 +1088,32 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .order_item .order_num { display:flex; align-items:center; flex:1; gap:24px; margin-left:24px; }
 .order_item .order_num span { color:var(--Neutral-600); font-size:var(--Font-xsmall); }
 .order_num strong { font-weight:500; }
-.payment_list .payment_info { position:sticky; top:24px; grid-column:2; align-self:start; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); padding:0 20px 20px; }
-.payment_list .payment_info h2 { position:relative; display:flex; justify-content:space-between; align-items:center; padding:22px 0 17px; font-weight:600; border-bottom:1px solid var(--Neutral-900); }
-.payment_list .payment_info h2 small { font-size:var(--Font-xsmall); font-weight:400; color:#444; }
-.payment_list .payment_info h2 em { color:var(--Primary-500); font-weight:800; }
-.payment_list .payment_info dl { padding:8px 0 14px; }
-.payment_list .payment_info .no_data { margin:20px; text-align:center; display:block; }
-.payment_list .payment_info dl > div { display:flex; align-items:center; justify-content:space-between; height:36px; gap:15px; }
-.payment_list .payment_info dt { color:var(--Neutral-600); font-size:var(--Font-xsmall); }
-.payment_list .payment_info .total_pay { border-top:1px solid var(--Neutral-900); }
-.payment_list .payment_info .total_pay dt { color:var(--Neutral-900); font-size:var(--Font-small); font-weight:600; }
-.payment_list .payment_info dd { font-size:var(--Font-xsmall); font-weight:500; text-align:right; }
-.payment_list .payment_info .total_pay dd { font-size:var(--Font-large); font-weight:700; text-align:right; }
-.payment_list .payment_info dl div.border { border-bottom:1px solid var(--Neutral-300); height:50px; }
-.payment_list .payment_info .date { color:var(--Error); }
+.payment_info { position:sticky; top:24px; grid-column:2; align-self:start; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); padding:0 20px 20px; width:320px; }
+.payment_info h2 { position:relative; display:flex; justify-content:space-between; align-items:center; padding:22px 0 17px; font-weight:600; border-bottom:1px solid var(--Neutral-900); }
+.payment_info h2 small { font-size:var(--Font-xsmall); font-weight:400; color:#444; }
+.payment_info h2 em { color:var(--Primary-500); font-weight:800; }
+.payment_info dl { padding:8px 0 14px; }
+.payment_info .no_data { position:relative; text-align:center; display:block; }
+.payment_info .no_data:after { position:absolute; left:0; bottom:0; display:block; content:""; width:100%; height:1px; background:var(--Neutral-300); }
+.payment_info dl > div { display:flex; align-items:center; justify-content:space-between; height:36px; gap:15px; }
+.payment_info dt { color:var(--Neutral-600); font-size:var(--Font-xsmall); }
+.payment_info .total_pay { border-top:1px solid var(--Neutral-900); }
+.payment_info .total_pay dt { color:var(--Neutral-900); font-size:var(--Font-small); font-weight:600; }
+.payment_info dd { font-size:var(--Font-xsmall); font-weight:500; text-align:right; }
+.payment_info .total_pay dd { font-size:var(--Font-large); font-weight:700; text-align:right; }
+.payment_info dl div.border { border-bottom:1px solid var(--Neutral-300); height:50px; }
+.payment_info .date { color:var(--Error); }
+.payment_info .sale_detail { position:relative; padding-top:8px; }
+.payment_info .sale_detail:before { content:""; position:absolute; left:0; top:0; width:100%; height:1px; background:var(--Neutral-300); }
 .payment_paging { position:relative; display:flex; padding:24px 0; justify-content:space-between; border-top:1px solid var(--Neutral-300); }
 .payment_paging button span { padding-right:0; vertical-align:-6px; }
 .payment_paging button { width:100px; border:1px solid var(--Primary-500); line-height:28px; }
 .payment_paging button:first-child { padding-left:3px; }
 .payment_paging button:last-child { padding-right:3px; }
-.payment_list .payment_info .btn_cancel { width:100%; height:40px; }
-.payment_list .payment_info > p { margin:12px 8px 0; color:var(--Neutral-800); font-size:var(--Font-2xsmall); line-height:1.55; }
+.payment_info button { width:100%; height:40px; }
+.payment_info > p { margin:12px 8px 0; color:var(--Neutral-800); font-size:var(--Font-2xsmall); line-height:1.55; }
+.payment_info .check_agree { margin:12px 0 0;font-size:var(--Font-2xsmall); display:block; color:var(--Neutral-800); }
+
 
 /* 레이어 / 구성 과정 */
 .layer_composition .layer_basic { width:900px; height:720px; }
@@ -1109,12 +1121,22 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .layer_composition .lecture_list > li > .course_detail { padding:0 24px; transition:height 0.4s ease; }
 .layer_composition .lecture_list > li > .course_detail > :first-child { margin-top:24px; }
 .layer_composition .lecture_list > li > .course_detail > :last-child { margin-bottom:24px; }
-.composition .course_header { flex-direction:column; align-items:flex-start; justify-content:flex-start; gap:0; }
+.composition .course_header, .layer_content .course_header { flex-direction:column; align-items:flex-start; justify-content:flex-start; gap:0; }
 .composition .course_header:first-child span { margin-top:8px; }
-.composition .course_header span { color:var(--Neutral-900); font-weight:600; font-size:var(--Font-base); margin-top:24px; }
+.composition .course_header span,.layer_content .course_header span { color:var(--Neutral-900); font-weight:600; font-size:var(--Font-base); margin-top:24px; }
 .lecture_detail.refund_detail { background:var(--Neutral-0) !important; }
 .lecture_detail.refund_detail dl { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
 .lecture_detail.refund_detail dl dt { font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
 .lecture_detail.refund_detail dl dd { font-size:var(--Font-small); margin-right:12px; }
 .lecture_detail.refund_detail dl dd:last-child {  margin-right:0; }
-
+.refund_info { padding:24px; background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:8px; margin-bottom:24px; display:flex; margin-bottom:16px; justify-content:space-between; }
+.refund_info dl { position:relative; }
+.refund_info dt { font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
+.refund_info dd { font-size:var(--Font-small); margin-right:12px; font-weight:500; }
+.refund_info dd:last-child { margin-right:0; }
+.refund_info dl:after { content:"|"; position:absolute; left:calc(100% + 25px); top:8px; display:block; color:var(--Neutral-500); }
+.refund_info dl:last-child:after { content:""; }
+.payment .all_checkbox { display:flex; justify-content:space-between; align-items:center; padding: 12px 16px; border: 1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
+.payment .resident_number_split { display:flex; align-items:center; gap:8px; }
+.payment .resident_number_split input { width:150px; }
+.payment .resident_number_split .hyphen { flex:none; color:var(--Neutral-500); }
