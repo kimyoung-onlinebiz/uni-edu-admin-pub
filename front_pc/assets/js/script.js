@@ -348,6 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_licenseNotice', triggers: ['.btn_licenseNotice'], closeCurrentLayer: true }, //자격관리기관 및 소비자 알림사항 레이어
             { layer: '.layer_wrapper.layer_coupon', triggers: ['.btn_coupon'], closeCurrentLayer: true }, //쿠폰등록 레이어
             { layer: '.layer_wrapper.layer_composition', triggers: ['.btn_composition'], closeCurrentLayer: true }, //구성과정 레이어
+            { layer: '.layer_wrapper.layer_composition_complete', triggers: ['.btn_composition_complete'], closeCurrentLayer: true }, //구성과정 레이어(결제 완료 내역)
         ]);
     }
 

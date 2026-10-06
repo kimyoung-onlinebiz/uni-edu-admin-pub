@@ -1124,7 +1124,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 
 
 /* 레이어 / 구성 과정 */
-.layer_composition .layer_basic { width:900px; height:720px; }
+.layer_composition .layer_basic,.layer_composition_complete .layer_basic { width:900px; height:720px; }
 .composition .course_detail { margin:0; }
 .layer_composition .lecture_list > li > .course_detail { padding:0 24px; transition:height 0.4s ease; }
 .layer_composition .lecture_list > li > .course_detail > :first-child { margin-top:24px; }
