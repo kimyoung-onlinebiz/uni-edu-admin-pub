@@ -453,7 +453,7 @@ padding:5px 12px; min-width:58px; background:var(--Neutral-0); font-weight:600; 
 /* 첫번째 탭 */
 .first_tab { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:32px;  }
 .first_tab li { flex:1 1 0; }
-.first_tab li a { display:block; width:100%; text-align:center; font-size:var(--Font-medium); color:var(--Neutral-600); padding:8px 0; border-radius:20px; border:1px solid var(--Neutral-300); background:var(--Neutral-100); font-weight:500; margin-bottom:-1px; }
+.first_tab li a { display:block; width:100%; text-align:center; color:var(--Neutral-600); padding:8px 0; border-radius:20px; border:1px solid var(--Neutral-300); background:var(--Neutral-100); font-weight:500; margin-bottom:-1px; }
 .first_tab li a.active,.first_tab li a:hover { background:var(--Primary-500); color:var(--Neutral-0); border:1px solid var(--Primary-500); }
 .tab_container .tab_content { display:none; }
 .tab_container .tab_content.active { display:block; }

@@ -238,8 +238,7 @@
             <!-- breadcrumb -->
             <nav class="breadcrumb" aria-label="현재 위치">
                 <ol>
-                    <li class="home"><a href="../index.html">홈</a></li>
-                    <li><a href="#none">장바구니</a></li>
+                    <li>장바구니</li>
                     <li>강의계획서 확인</li>
                     <li aria-current="page">결제</li>
                     <li>신청 완료</li>
@@ -249,7 +248,7 @@
 
             <!-- sub header -->
             <header class="sub_header borderGray marginT0 marginB50">
-                <h3>강의계획서 확인</h3>
+                <h3>결제</h3>
             </header>
             <!-- //sub header -->
 
@@ -264,14 +263,14 @@
                         <h4>본인 인증 정보</h4>
                     </header>
 
-                    <table class="view_table">
+                    <table class="data_table">
                         <caption>본인 인증 정보</caption>
                         <colgroup>
                             <col style="width:180px;">
                             <col>
                         </colgroup>
                         <tr>
-                            <th scope="row">내/외국인</th>
+                            <th scope="row">구분</th>
                             <td>
                                 <div class="form_group">
                                     <label>
@@ -295,9 +294,17 @@
                             <th scope="row">주민등록번호</th>
                             <td>
                                 <div class="form_group resident_number_split">
-                                    <input type="text" name="resident_registration_number1" value="" placeholder="앞 6자리" maxlength="6" inputmode="numeric">
+                                    <input type="text" name="resident_registration_number1" value="" placeholder="******" maxlength="6" inputmode="numeric">
                                     <span class="hyphen" aria-hidden="true">-</span>
-                                    <input type="password" name="resident_registration_number2" value="" placeholder="뒷 7자리" maxlength="7" inputmode="numeric">
+                                    <input type="password" name="resident_registration_number2" value="" placeholder="*******" maxlength="7" inputmode="numeric">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">외국인 등록번호</th>
+                            <td>
+                                <div class="form_group resident_number_split">
+                                    <input type="text" name="foreigner_registration_number" value="" placeholder="*************" maxlength="13" inputmode="numeric">
                                 </div>
                             </td>
                         </tr>
@@ -313,7 +320,7 @@
                     <div class="txt_guide marginT32">
                         <strong>유의사항 <button class="btn txtGray">관련 법령 확인</button></strong>
                         <ul>
-                            <li>학점은행제 강좌를 수강하기 위해서는 아래 법령에 의거하여 주민번호 등록 및 실명인증이 필요합니다.</li>
+                            <li><strong>학점은행제 강좌를 수강하기 위해서는 아래 법령에 의거하여 주민번호 등록 및 실명인증이 필요합니다.</strong></li>
                             <li>학점인정 등에 관한 법률 시행령 제19조2 1,2항</li>
                             <li>개인정보 보호법 제 15조 2항</li>
                             <li>평가인정 학습과정 운영에 관한 규정 제6조</li>
@@ -337,7 +344,7 @@
                         <colgroup>
                             <col style="width:180px;">
                             <col>
-                            <col>
+                            <col style="width:180px;">
                             <col style="width:220px;">
                         </colgroup>
                         <thead>
@@ -354,13 +361,7 @@
                                 <td>
 
                                     <div class="subject_name">
-                                        <div class="info">
-                                            <span class="label red">마감임박</span>
-                                            <span class="badge green">전선</span>
-                                            <span class="badge blue">전필</span>
-                                            <span class="badge yellow">교양</span>
-                                        </div>
-                                        <a href="#none"><strong>학점은행제 16과목+한경TESAT+SMAT1급</strong></a>
+                                        <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
                                         <p>50학점</p>
                                     </div>
                                     
@@ -382,13 +383,7 @@
                                 <td>
 
                                     <div class="subject_name">
-                                        <div class="info">
-                                            <span class="label red">마감임박</span>
-                                            <span class="badge green">전선</span>
-                                            <span class="badge blue">전필</span>
-                                            <span class="badge yellow">교양</span>
-                                        </div>
-                                        <a href="#none"><strong>학점은행제 16과목+한경TESAT+SMAT1급</strong></a>
+                                        <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
                                         <p>50학점</p>
                                     </div>
                                     
@@ -445,7 +440,7 @@
                                             <span class="badge blue">전필</span>
                                             <span class="badge yellow">교양</span>
                                         </div>
-                                        <a href="#none"><strong>경영학개론</strong></a>
+                                        <strong>경영학개론</strong>
                                         <p>3학점 | 한용수 교수</p>
                                     </div>
                                     
@@ -471,7 +466,7 @@
                                             <span class="badge blue">전필</span>
                                             <span class="badge yellow">교양</span>
                                         </div>
-                                        <a href="#none"><strong>경영학개론</strong></a>
+                                        <strong>경영학개론</strong>
                                         <p>3학점 | 한용수 교수</p>
                                     </div>
                                     
@@ -524,7 +519,7 @@
                                 <td>
 
                                     <div class="subject_name">
-                                        <a href="#none"><strong>내일은 컴퓨터 활용능력 2급 실기</strong></a>
+                                        <strong>내일은 컴퓨터 활용능력 2급 실기</strong>
                                         <p>수강기간 90일</p>
                                         <dl>
                                             <dt>교재</dt>
@@ -595,8 +590,8 @@
                                 <td>
 
                                     <div class="subject_name">
-                                        <span class="badge red">교양</span>
-                                        <a href="#none"><strong>경영정책전문가</strong></a>
+                                        <span class="badge red">발급</span> <span class="badge red">미발급</span>
+                                        <strong>경영정책전문가</strong>
                                         <p>등록번호 : 2025-000446 | 검증과목 : 경영학개론 | 주무부처 : 산업통산자원부</p>
                                     </div>
                                     
@@ -667,7 +662,7 @@
                                 <td>
                                     <div class="form_group">
                                         <input type="text" name="" id="" placeholder="우편번호">
-                                        <button type="button" class="btn primary">주소 검색</button>
+                                        <button type="button" class="btn primary">검색</button>
                                     </div>
                                     <div class="form_group column marginT8 align_left">
                                         <input type="text" name="" id="" placeholder="주소를 입력해 주세요." class="width_50">
@@ -803,20 +798,6 @@
 
     <aside class="quick_floating" aria-label="빠른 메뉴">
 
-        <!-- 추가된 상단 수강/장바구니 그룹 -->
-        <div class="quick_course_group">
-            <span class="cart_badge">1</span>
-            <a href="#" class="quick_cart">
-                <i class="material-symbols-rounded icon_fill">shopping_cart</i>
-                <span>장바구니<br>담기</span>
-            </a>
-            <a href="#" class="quick_apply">
-                <i class="material-symbols-rounded icon_fill">play_lesson</i>
-                <span>수강신청</span>
-            </a>
-        </div>
-
-        <!-- // 추가된 상단 수강/장바구니 그룹 -->
         <a href="#none" class="quick_consult">
             <span><img src="../assets/images/common/icon_aside01.png" alt=""></span>
             <strong>간편상담</strong>

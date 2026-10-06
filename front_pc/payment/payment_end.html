@@ -238,24 +238,19 @@
             <!-- breadcrumb -->
             <nav class="breadcrumb" aria-label="현재 위치">
                 <ol>
-                    <li aria-current="page">장바구니</li>
+                    <li>장바구니</li>
                     <li>강의계획서 확인</li>
                     <li>결제</li>
-                    <li>신청 완료</li>
+                    <li aria-current="page">신청 완료</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
-            <header class="sub_header borderGray marginT0">
-                <h3>장바구니</h3>
+            <header class="sub_header borderGray marginT0 marginB50">
+                <h3>신청 완료</h3>
             </header>
             <!-- //sub header -->
-
-            <!-- <div class="no_data">
-                <span>장바구니에 담긴 과정이 없습니다.</span>
-                <a href="#none" class="btn borderBlue">수강신청 하기</a>
-            </div> -->
 
             <!-- 2컬럼 내용 -->
             <div class="two_column_content payment">
@@ -263,12 +258,12 @@
 
                 <div class="two_column_left">
 
-                    <div class="all_checkbox">
-                        <label><input type="checkbox"> 전체 선택</label>
-                        <button type="button" class="btn txtGray">선택 삭제</button>
+                    <div class="payment_complete">
+                        <p><strong >테스트</strong>님의 수강신청이 정상적으로 완료되었습니다.</p>
+                        <a href="#none" class="btn borderBlue">나의 강의실 바로가기</a>
                     </div>
 
-                    <!-- 패키지 -->
+                    
                     <header class="sub_header start"> 
                         <h4>패키지</h4>
                         <div class="table_sort">
@@ -279,87 +274,51 @@
                     <table class="list_table">
                         <caption>담은 과정 목록</caption>
                         <colgroup>
-                            <col style="width:80px;">
-                            <col style="width:120px;">
+                            <col style="width:180px;">
                             <col>
-                            <col style="width:120px;">
-                            <col style="width:220px;">
-                            <col style="width:80px;">
+                            <col style="width:180px;">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th scope="col">선택</th>
                                 <th scope="col">패키지 강좌</th>
                                 <th scope="col" colspan="2">패키지 명</th>
-                                <th scope="col">수강료</th>
-                                <th scope="col">삭제</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr> 
-                                <td><input type="checkbox"></td>
                                 <td>경영학</td>
                                 <td>
-
                                     <div class="subject_name">
                                         <div class="info">
                                             <span class="label red">마감임박</span>
                                         </div>
-                                        <strong>사회복지사 2급_학위과정 패키지</strong>
+                                        <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
                                         <p>50학점</p>
                                     </div>
                                     
                                 </td>
                                 <td><a href="#none" class="btn btn_composition">구성 과정 확인</a></td>
-                                
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="course_price">
-                                        <del>3,700,000원</del>
-                                        <strong><em>65%</em> 1,310,000원</strong>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
-                                </td>
                             </tr>
 
                             <tr> 
-                                <td><input type="checkbox"></td>
                                 <td>경영학</td>
                                 <td>
-
                                     <div class="subject_name">
                                         <div class="info">
                                             <span class="label red">마감임박</span>
                                         </div>
-                                        <strong>사회복지사 2급_학위과정 패키지</strong>
+                                        <strong>학점은행제 16과목+한경TESAT+SMAT1급</strong>
                                         <p>50학점</p>
                                     </div>
                                     
                                 </td>
                                 <td><a href="#none" class="btn btn_composition">구성 과정 확인</a></td>
-                                
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="course_price">
-                                        <del>3,700,000원</del>
-                                        <strong><em>65%</em> 1,310,000원</strong>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
-                                </td>
                             </tr>
 
                         </tbody>
                     </table>
-                    <!-- //패키지 -->
-                    
-                    <!-- 단과 -->
+
                     <header class="sub_header start"> 
                         <h4>단과</h4>
                         <div class="table_sort">
@@ -374,31 +333,23 @@
                     <table class="list_table">
                         <caption>담은 과정 목록</caption>
                         <colgroup>
-                            <col style="width:80px;">
-                            <col style="width:120px;">
+                            <col style="width:180px;">
                             <col>
-                            <col style="width:220px;">
-                            <col style="width:80px;">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th scope="col">선택</th>
                                 <th scope="col">전공</th>
                                 <th scope="col">강좌 명</th>
-                                <th scope="col">수강료</th>
-                                <th scope="col">삭제</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr> 
-                                <td><input type="checkbox"></td>
                                 <td>경영학</td>
                                 <td>
 
                                     <div class="subject_name">
                                         <div class="info">
-                                            <span class="label red">마감임박</span>
                                             <span class="badge green">전선</span>
                                             <span class="badge blue">전필</span>
                                             <span class="badge yellow">교양</span>
@@ -409,27 +360,14 @@
                                     
                                 </td>
                                 
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="course_price">
-                                        <del>3,700,000원</del>
-                                        <strong><em>65%</em> 1,310,000원</strong>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
-                                </td>
                             </tr>
 
                             <tr> 
-                                <td><input type="checkbox"></td>
                                 <td>경영학</td>
                                 <td>
 
                                     <div class="subject_name">
                                         <div class="info">
-                                            <span class="label red">마감임박</span>
                                             <span class="badge green">전선</span>
                                             <span class="badge blue">전필</span>
                                             <span class="badge yellow">교양</span>
@@ -440,106 +378,6 @@
                                     
                                 </td>
                                 
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="course_price">
-                                        <del>3,700,000원</del>
-                                        <strong><em>65%</em> 1,310,000원</strong>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <header class="sub_header"> 
-                        <h5>2025년 2학기 6기 (10월 22일 개강)</h5>
-                    </header>
-
-                    <table class="list_table">
-                        <caption>담은 과정 목록</caption>
-                        <colgroup>
-                            <col style="width:80px;">
-                            <col style="width:120px;">
-                            <col>
-                            <col style="width:220px;">
-                            <col style="width:80px;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">선택</th>
-                                <th scope="col">전공</th>
-                                <th scope="col">강좌 명</th>
-                                <th scope="col">수강료</th>
-                                <th scope="col">삭제</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr> 
-                                <td><input type="checkbox"></td>
-                                <td>경영학</td>
-                                <td>
-
-                                    <div class="subject_name">
-                                        <div class="info">
-                                            <span class="label red">마감임박</span>
-                                            <span class="badge green">전선</span>
-                                            <span class="badge blue">전필</span>
-                                            <span class="badge yellow">교양</span>
-                                        </div>
-                                        <strong>경영학개론</strong>
-                                        <p>3학점 | 한용수 교수</p>
-                                    </div>
-                                    
-                                </td>
-                                
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="course_price">
-                                        <del>3,700,000원</del>
-                                        <strong><em>65%</em> 1,310,000원</strong>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
-                                </td>
-                            </tr>
-
-                            <tr> 
-                                <td><input type="checkbox"></td>
-                                <td>경영학</td>
-                                <td>
-
-                                    <div class="subject_name">
-                                        <div class="info">
-                                            <span class="label red">마감임박</span>
-                                            <span class="badge green">전선</span>
-                                            <span class="badge blue">전필</span>
-                                            <span class="badge yellow">교양</span>
-                                        </div>
-                                        <strong>경영학개론</strong>
-                                        <p>3학점 | 한용수 교수</p>
-                                    </div>
-                                    
-                                </td>
-                                
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="course_price">
-                                        <del>3,700,000원</del>
-                                        <strong><em>65%</em> 1,310,000원</strong>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
-                                </td>
                             </tr>
 
                         </tbody>
@@ -560,25 +398,19 @@
                     <table class="list_table">
                         <caption>담은 과정 목록</caption>
                         <colgroup>
-                            <col style="width:80px;">
-                            <col style="width:100px;">
+                            <col style="width:180px;">
                             <col>
-                            <col style="width:320px;">
-                            <col style="width:80px;">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th scope="col">선택</th>
+
                                 <th scope="col">전공</th>
                                 <th scope="col">강좌 명</th>
-                                <th scope="col">수강료</th>
-                                <th scope="col">삭제</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr> 
-                                <td><input type="checkbox"></td>
                                 <td>자격증</td>
                                 <td>
 
@@ -595,77 +427,6 @@
                                         </dl>
                                     </div>
                                     
-                                </td>
-                                
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="general_price">
-                                        <dl>
-                                            <dt>강좌</dt>
-                                            <dd>
-                                            <del>3,700,000원</del>
-                                            <strong><em>65%</em> 1,310,000원</strong>
-                                            </dd>
-                                        </dl>
-
-                                        <dl>
-                                            <dt>교재(<span class="count">1</span>)</dt>
-                                            <dd>
-                                            <del>25,000원</del>
-                                            <strong><em>10%</em> 22,500원</strong>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
-                                </td>
-                            </tr>
-
-                            <tr> 
-                                <td><input type="checkbox"></td>
-                                <td>자격증</td>
-                                <td>
-
-                                    <div class="subject_name">
-                                        <strong>내일은 컴퓨터 활용능력 2급 실기</strong>
-                                        <p>수강기간 90일</p>
-                                        <dl>
-                                            <dt>교재</dt>
-                                            <dd>독학사 3단계_가정자원관리 교재</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>교재</dt>
-                                            <dd>독학사 3단계_가정자원관리 교재</dd>
-                                        </dl>
-                                    </div>
-                                    
-                                </td>
-                                
-                                <td>
-                                    <!-- 가격 -->
-                                    <div class="general_price">
-                                        <dl>
-                                            <dt>강좌</dt>
-                                            <dd>
-                                            <del>3,700,000원</del>
-                                            <strong><em>65%</em> 1,310,000원</strong>
-                                            </dd>
-                                        </dl>
-
-                                        <dl>
-                                            <dt>교재(<span class="count">1</span>)</dt>
-                                            <dd>
-                                            <del>25,000원</del>
-                                            <strong><em>10%</em> 22,500원</strong>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                    <!-- //가격 -->
-                                </td>
-                                <td>
-                                    <button class="material-symbols-rounded">delete</button>
                                 </td>
                             </tr>
 
@@ -673,67 +434,235 @@
                     </table>
                     <!-- //일반 과정 -->
 
+                    <!-- 민간 자격증 과정 -->
+                    <header class="sub_header start"> 
+                        <h4>민간 자격증</h4>
+                        <div class="table_sort">
+                            <span>총 <strong>2</strong>건</span>
+                        </div>
+                    </header>
 
-                    <!-- 유의사항 -->
-                    <div class="txt_guide marginT50">
-                        <strong>유의사항</strong>
-                        <ul>
-                            <li>장바구니에 담긴 과정은 결제 완료 시 수강이 확정됩니다.</li>
-                            <li>장바구니에 담을 당시 정원이 남아있더라도, 선착순 결제에 따라 조기 마감될 수 있습니다.</li>
-                            <li>장바구니에 담긴 과정은 30일동안 보관되며, 이후 자동 삭제됩니다.</li>
-                            <li>수강신청 및 결제가 완료되면 장바구니에 담긴 강좌는 자동으로 삭제됩니다.</li>
-                            <li>신청 기간이 종료된 과정은 장바구니에서 자동 삭제됩니다.</li>
-                            <li>쿠폰은 결제 단계에서 적용 가능합니다.</li>
-                        </ul>
-                    </div>
-                    <!-- //유의사항 -->
+                    <table class="list_table">
+                        <caption>담은 과정 목록</caption>
+                        <colgroup>
+                            <col style="width:180px;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+
+                                <th scope="col">구분</th>
+                                <th scope="col">자격증 명</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr> 
+                                <td>민간 자격증</td>
+                                <td>
+
+                                    <div class="subject_name">
+                                        <span class="badge red">발급</span> <span class="badge red">미발급</span>
+                                        <strong>경영정책전문가</strong>
+                                        <p>등록번호 : 2025-000446 | 검증과목 : 경영학개론 | 주무부처 : 산업통산자원부</p>
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- //민간 자격증 과정 -->
 
                 </div>
                 
 
-                <!-- 결제 정보 -->
-                <div class="payment_info">
-                    <h2>장바구니 상세 내역 <small>총 <em>4</em>건</small></h2>
+                <!-- 결제 정보(퀵 계좌이체) -->
+                <!-- <div class="payment_info">
+                    <h2>결제 정보</h2>
 
                     <dl>
-                        <div>
-                            <dt>상품 금액</dt>
-                            <dd>5,302,000원</dd>
+                        <div class="border">
+                            <dt>주문번호 </dt>
+                            <dd>20260608115948-00004</dd>
+                        </div>
+                        <div class="border">
+                            <dt>결제 수단</dt>
+                            <dd>퀵 계좌이체</dd>
                         </div>
                         <div>
-                            <dt>할인</dt>
-                            <dd class="date">- 3,254,500원</dd>
+                            <dt>결제 은행</dt>
+                            <dd>국민은행</dd>
+                        </div>
+                        <div>
+                            <dt>결제 승인번호</dt>
+                            <dd>1234567890</dd>
+                        </div>
+                        <div class="border">
+                            <dt>결제일</dt>
+                            <dd>2026-06-11</dd>
+                        </div>
+                        <div class="pay">
+                            <dt>총 상품 금액</dt>
+                            <dd>2,047,500원</dd>
+                        </div>
+                        <div class="pay">
+                            <dt>총 할인 금액</dt>
+                            <dd>47,500원</dd>
                         </div>
                     </dl>
 
                     <dl class="total_pay">
                         <div>
-                            <dt>총 결제 예정 금액</dt>
+                            <dt>총 결제 금액</dt>
+                            <dd>2,047,500원</dd>
+                        </div>
+                    </dl>
+                </div> -->
+                <!-- //결제 정보 -->
+
+                <!-- 결제 정보(신용카드) -->
+                <!-- <div class="payment_info">
+                    <h2>결제 정보</h2>
+
+                    <dl>
+                        <div class="border">
+                            <dt>주문번호 </dt>
+                            <dd>20260608115948-00004</dd>
+                        </div>
+                        <div class="border">
+                            <dt>결제 수단</dt>
+                            <dd>신용카드</dd>
+                        </div>
+                        <div>
+                            <dt>결제 카드사</dt>
+                            <dd>국민</dd>
+                        </div>
+                        <div>
+                            <dt>결제 승인번호</dt>
+                            <dd>1234567890</dd>
+                        </div>
+                        <div class="border">
+                            <dt>결제일</dt>
+                            <dd>2026-06-11</dd>
+                        </div>
+                        <div class="pay">
+                            <dt>총 상품 금액</dt>
+                            <dd>2,047,500원</dd>
+                        </div>
+                        <div class="pay">
+                            <dt>총 할인 금액</dt>
+                            <dd>47,500원</dd>
+                        </div>
+                    </dl>
+
+                    <dl class="total_pay">
+                        <div>
+                            <dt>총 결제 금액</dt>
+                            <dd>2,047,500원</dd>
+                        </div>
+                    </dl>
+                </div> --> 
+                <!-- //결제 정보 -->
+
+                <!-- 결제 정보(가상계좌) -->
+                <div class="payment_info">
+                    <h2>결제 정보</h2>
+
+                    <dl>
+                        <div class="border">
+                            <dt>주문번호 </dt>
+                            <dd>20260608115948-00004</dd>
+                        </div>
+                        <div>
+                            <dt>결제 수단</dt>
+                            <dd>가상계좌</dd>
+                        </div>
+                        <div class="border">
+                            <dt>결제 승인번호</dt>
+                            <dd>1234567890</dd>
+                        </div>
+                        <div>
+                            <dt>입금 은행</dt>
+                            <dd>국민은행</dd>
+                        </div>
+                        <div>
+                            <dt>입금 계좌 번호</dt>
+                            <dd>1234567890</dd>
+                        </div>
+                        <div>
+                            <dt>예금주</dt>
+                            <dd>주식회사 아이비김영</dd>
+                        </div>
+                        <div>
+                            <dt>입금 기한</dt>
+                            <dd class="txtRed">2026-06-18</dd>
+                        </div>
+                        <div class="border">
+                            <dt>결제일</dt>
+                            <dd>2026-06-11</dd>
+                        </div>
+                        <div class="pay">
+                            <dt>총 상품 금액</dt>
+                            <dd>2,047,500원</dd>
+                        </div>
+                        <div class="pay">
+                            <dt>총 할인 금액</dt>
+                            <dd>47,500원</dd>
+                        </div>
+                    </dl>
+
+                    <dl class="total_pay">
+                        <div>
+                            <dt>총 결제 금액</dt>
+                            <dd>2,047,500원</dd>
+                        </div>
+                    </dl>
+                </div>
+                <!-- //결제 정보 -->
+
+                <!-- 결제 정보(가상계좌) -->
+                <div class="payment_info">
+                    <h2>결제 정보</h2>
+
+                    <dl>
+                        <div class="border">
+                            <dt>주문번호 </dt>
+                            <dd>20260608115948-00004</dd>
+                        </div>
+                        <div class="border">
+                            <dt>결제 수단</dt>
+                            <dd>수기 결제</dd>
+                        </div>
+                        
+                        <div class="pay">
+                            <dt>총 상품 금액</dt>
+                            <dd>2,047,500원</dd>
+                        </div>
+                        <div class="pay">
+                            <dt>총 할인 금액</dt>
+                            <dd>47,500원</dd>
+                        </div>
+                    </dl>
+
+                    <dl class="total_pay">
+                        <div>
+                            <dt>총 결제 금액</dt>
                             <dd>2,047,500원</dd>
                         </div>
                     </dl>
 
-                    <button type="button" class="btn primary">신청하기</button>
-
-                    <p>* 유의 사항을 꼭 확인해 주세요.</p>
+                    <div class="pay_guide">
+                        담당 컨설턴트와의 통화 후 결제 진행 필요
+                    </div>    
                 </div>
                 <!-- //결제 정보 -->
 
-                <!-- 결제 정보 없을때 -->
-                <!-- div class="payment_info">
-                    <h2>결제 정보</h2>
-
-                    <span class="no_data">주문 번호를 선택해 주세요.</span>
-
-                    <p>가상 계좌 주문은 입금 기한 내 미입금 시 자동 취소되며, 입금 기한 만료일로부터 7일 후 삭제됩니다.</p>
-                </div -->
-                <!-- //결제 정보 없을때 -->  
 
             </div>
             <!-- //2컬럼 내용 -->
 
         </section>
-        <!--// 콘텐츠 영역 -->
 
         <!-- 레이어 / 구성 과정 -->
         <div class="layer_wrapper layer_composition"> <!-- active 추가 시 화면노출-->
@@ -930,6 +859,8 @@
             
         </div>
         <!-- //레이어 / 구성 과정 확인 -->
+
+        <!--// 콘텐츠 영역 -->
 
    </main>
 
