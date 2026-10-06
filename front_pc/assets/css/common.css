@@ -13,8 +13,8 @@ http://scripts.sil.org/OFL
 	font-family: 'Pretendard Variable';
 	font-weight: 45 920;
 	font-style: normal;
-  font-display: optional;
-	src:url("/assets/font/PretendardVariable.woff2") format('woff2-variations');
+	font-display: swap;
+	src:url("../font/PretendardVariable.woff2") format('woff2-variations');
 }
 
 /* Material icon */
@@ -22,7 +22,7 @@ http://scripts.sil.org/OFL
   font-family: 'Material Symbols Rounded';
   font-style: normal;
   font-weight: 100 700; /* 지원하는 최소-최대 굵기 */
-  src: url("/assets/font/MaterialSymbolsRounded.woff2") format('woff2');
+  src: url("../font/MaterialSymbolsRounded.woff2") format('woff2');
 }
 
 .material-symbols-rounded { font-family:'Material Symbols Rounded'; font-weight:normal; font-style: normal; font-size:22px; vertical-align:-7px; text-transform:none; letter-spacing:normal; word-wrap:normal; white-space: nowrap; direction: ltr; /* WebKit 브라우저 렌더링 최적화 */  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Opera */ text-rendering: optimizeLegibility; /* Firefox */  -moz-osx-font-smoothing: grayscale; }

@@ -317,16 +317,21 @@ td .multiple .btn_delete { right:12px; bottom:6px; }
 .attendance_info .material-symbols-rounded { display:inline-block; width:24px; }
 .attendance_info em { color:var(--Error); font-style:normal; font-weight:700; animation:FadeIn 1s infinite; }
 .attendance_info strong + span { color:var(--Neutral-600);  }
-.evaluation_status { display:flex; align-items:center; gap:36px; width:100%; }
-.evaluation_title { flex-shrink:0; color:var(--Neutral-600); font-weight:500; padding-left:30px; }
-.evaluation_list { flex:1; min-width:0; display:flex; align-items:center; gap:16px; }
-.evaluation_list .evaluation_item { flex:1; min-width:0; display:flex; align-items:center; justify-content:center; height:32px; box-sizing:border-box;
-border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  background:var(--Neutral-100); }
+.evaluation_status { display:grid; grid-template-columns:max-content minmax(0, 1fr); column-gap:36px; row-gap:8px; align-items:start; width:100%; }
+.evaluation_title { grid-column:1; grid-row:1 / -1; align-self:center; flex-shrink:0; color:var(--Neutral-600); font-weight:500; padding-left:30px; }
+.evaluation_list { grid-column:2; min-width:0; display:flex; align-items:center; gap:16px; }
+.evaluation_list .evaluation_item { flex:1 1 0; min-width:0; display:flex; align-items:center; justify-content:center; height:32px; box-sizing:border-box; border:1px solid var(--Primary-100); border-radius:var(--Border-radius);  background:var(--Neutral-100); }
+
+/* 버튼이 1~2개일 때도 3개 기준 너비를 유지 */
+.evaluation_list > .evaluation_item:first-child:nth-last-child(1),
+.evaluation_list > .evaluation_item:first-child:nth-last-child(1) ~ .evaluation_item,
+.evaluation_list > .evaluation_item:first-child:nth-last-child(2),
+.evaluation_list > .evaluation_item:first-child:nth-last-child(2) ~ .evaluation_item {
+  flex:0 0 calc((100% - 32px) / 3);
+}
 .evaluation_list .evaluation_item dl { width:100%; display:flex; align-items:center; justify-content:center; gap:6px; }
 .evaluation_list .evaluation_item dt:after { content:"|"; padding-left:6px; }
 .evaluation_item dt,.evaluation_item dd { color:var(--Placeholder); font-size:var(--Font-small); font-weight:500; }
-.evaluation_list .evaluation_item.open_comingSoon dd { color:var(--Primary-500); }
-.evaluation_item.non_submission dd { color:var(--Error); }
 .evaluation_list a.evaluation_item { border:1px solid var(--Primary-500); background:var(--Neutral-0); }
 .evaluation_list a.evaluation_item:hover { background:var(--Neutral-100); }
 .evaluation_list a.evaluation_item dt,.evaluation_list a.evaluation_item dd { color:var(--Primary-500); }
