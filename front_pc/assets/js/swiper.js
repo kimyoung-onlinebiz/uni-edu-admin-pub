@@ -444,8 +444,8 @@ function initProfileSwiper() {
 // =========================================
 // 동작 요약
 // 1. 여러 탭 안에 같은 슬라이더가 있어도 각각 독립적으로 동작
-// 2. 카드가 4개 미만이면 자동 롤링과 컨트롤 비활성화
-// 3. 카드가 4개 이상이면 오른쪽에서 왼쪽으로 이동
+// 2. 항목 수가 보여지는 카드 수 이하이면 자동 롤링과 컨트롤 비활성화
+// 3. 항목 수가 보여지는 카드 수보다 많으면 오른쪽에서 왼쪽으로 이동
 // 4. 첫 카드가 잘리지 않도록 왼쪽 기준 정렬 유지
 function initCalendarRollingSwiper() {
     const calendarRollingEls = document.querySelectorAll('.calendar_rolling.swiper-container');
@@ -462,20 +462,24 @@ function initCalendarRollingSwiper() {
         const totalSlides = Array.from(calendarRollingEl.querySelectorAll('.swiper-slide')).filter(
             (slide) => !slide.classList.contains('swiper-slide-duplicate')
         ).length;
+        const rollingSlidesPerView = Math.min(3, Math.max(totalSlides, 1));
+        const canSlide = totalSlides > rollingSlidesPerView;
 
-        // 카드가 4개 미만이면 롤링과 이동 버튼 숨김
-        if (totalSlides < 4) {
+        // 항목 수가 보여지는 카드 수 이하이면 롤링과 이동 버튼 숨김
+        if (!canSlide) {
             calendarRollingEl.classList.add('is-disabled');
             if (controlsEl) {
-                controlsEl.style.display = 'none';
+                controlsEl.style.visibility = 'hidden';
+                controlsEl.style.pointerEvents = 'none';
             }
             return;
         }
 
-        // 카드가 4개 이상일 때만 롤링/컨트롤 활성화
+        // 항목 수가 보여지는 카드 수보다 많을 때만 롤링/컨트롤 활성화
         calendarRollingEl.classList.remove('is-disabled');
         if (controlsEl) {
-            controlsEl.style.display = '';
+            controlsEl.style.visibility = 'visible';
+            controlsEl.style.pointerEvents = 'auto';
         }
 
         const fractionEl = calendarRollingEl.querySelector('.fraction');
@@ -503,9 +507,9 @@ function initCalendarRollingSwiper() {
         // - reverseDirection: false => 오른쪽에서 왼쪽으로 이동
         // - allowTouchMove: false => 의도된 자동 롤링만 유지
         const calendarRollingSwiper = new Swiper(calendarRollingEl, {
-            loop: true,
+            loop: canSlide,
             direction: 'horizontal',
-            slidesPerView: 3,
+            slidesPerView: rollingSlidesPerView,
             slidesPerGroup: 1,
             spaceBetween: 21,
             speed: 700,
@@ -516,12 +520,14 @@ function initCalendarRollingSwiper() {
             allowTouchMove: false,
             allowSlidePrev: true,
             allowSlideNext: true,
-            autoplay: {
-                delay: 3000,
-                reverseDirection: false,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
+            autoplay: canSlide
+                ? {
+                    delay: 3000,
+                    reverseDirection: false,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                }
+                : false,
             navigation: {
                 nextEl: nextButtonEl,
                 prevEl: prevButtonEl,
@@ -537,23 +543,6 @@ function initCalendarRollingSwiper() {
                 },
             },
         });
-
-        // 버튼 클릭은 직접 slideTo로 제어해 자동 롤링과 같은 동선 유지
-        if (prevButtonEl) {
-            prevButtonEl.addEventListener('click', (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                calendarRollingSwiper.slideTo(Math.max(0, calendarRollingSwiper.activeIndex - 1), 700);
-            });
-        }
-
-        if (nextButtonEl) {
-            nextButtonEl.addEventListener('click', (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                calendarRollingSwiper.slideTo(Math.min(calendarRollingSwiper.slides.length - 1, calendarRollingSwiper.activeIndex + 1), 700);
-            });
-        }
 
         // 마우스 오버 시 autoplay 정지, 마우스 아웃 시 재개
         bindSwiperHoverPause(calendarRollingSwiper, calendarRollingEl);
@@ -577,8 +566,12 @@ function initCalendarScheduleSwiper() {
         scheduleItems.forEach((item) => item.classList.add('swiper-slide'));
 
         const totalSlides = scheduleItems.length;
-        if (totalSlides <= 2 && controlsEl) {
-            controlsEl.style.display = 'none';
+        const scheduleSlidesPerView = Math.min(2, Math.max(totalSlides, 1));
+        const canSlide = totalSlides > scheduleSlidesPerView;
+
+        if (controlsEl) {
+            controlsEl.style.visibility = canSlide ? 'visible' : 'hidden';
+            controlsEl.style.pointerEvents = canSlide ? 'auto' : 'none';
         }
 
         const fractionEl = calendarScheduleEl.querySelector('.fraction');
@@ -594,9 +587,9 @@ function initCalendarScheduleSwiper() {
         };
 
         const calendarScheduleSwiper = new Swiper(calendarScheduleEl, {
-            loop: totalSlides > 2,
+            loop: canSlide,
             direction: 'horizontal',
-            slidesPerView: 2,
+            slidesPerView: scheduleSlidesPerView,
             slidesPerGroup: 1,
             spaceBetween: 20,
             speed: 700,
@@ -604,7 +597,7 @@ function initCalendarScheduleSwiper() {
             slidesOffsetBefore: 0,
             slidesOffsetAfter: 0,
             allowTouchMove: false,
-            autoplay: totalSlides > 2
+            autoplay: canSlide
                 ? {
                     delay: 3000,
                     disableOnInteraction: false,
@@ -626,22 +619,6 @@ function initCalendarScheduleSwiper() {
                 },
             },
         });
-
-        if (prevButtonEl) {
-            prevButtonEl.addEventListener('click', (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                calendarScheduleSwiper.slideTo(Math.max(0, calendarScheduleSwiper.activeIndex - 1), 700);
-            });
-        }
-
-        if (nextButtonEl) {
-            nextButtonEl.addEventListener('click', (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                calendarScheduleSwiper.slideTo(Math.min(calendarScheduleSwiper.slides.length - 1, calendarScheduleSwiper.activeIndex + 1), 700);
-            });
-        }
 
         bindSwiperHoverPause(calendarScheduleSwiper, calendarScheduleEl);
     });
