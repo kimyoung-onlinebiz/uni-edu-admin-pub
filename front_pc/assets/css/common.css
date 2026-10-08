@@ -198,10 +198,10 @@ label.btn { line-height:28px; transition:all .2s; }
 .layer_wrapper header { position:relative; display:flex; flex-flow:column; text-align:left; padding:0 16px 12px 0; border-bottom:1px solid var(--Neutral-300); margin-bottom:24px; align-items:flex-start; align-items:normal; }
 .layer_wrapper header .btn_layerClose { position:absolute; right:0; top:-5px; font-size:28px; }
 .layer_wrapper header h1 { display:flex; align-items:center; font-size:var(--Font-2xlarge); font-weight:700; gap:16px }
-.layer_wrapper header p { font-weight:500; margin-top:8px; }
+.layer_wrapper header p { font-weight:500; }
 .layer_basic { position:relative; background:var(--Neutral-0); border-radius:8px; padding:32px 16px 32px 32px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); text-align:center; min-width:400px; }
 .layer_content { overflow:auto; overflow-x:hidden; max-height:580px; min-height:100px; text-align:left; padding-right:8px; scrollbar-width:thin; scrollbar-color:var(--Neutral-500) var(--Neutral-100); }
-.layer_basic header > div { display:flex; gap:8px; }
+.layer_basic header > div { display:flex; gap:8px; flex-direction:column; }
 .layer_content.noScroll { overflow:hidden; }
 .layer_contentTitle { display:flex; border-bottom:1px solid var(--Neutral-500); margin:32px 0; padding-bottom:16px; align-items:center; }
 .layer_content > .layer_contentTitle:first-child { margin-top:0 !important; }
@@ -381,6 +381,7 @@ table th { font-weight:600; }
 .list_table th:first-child,.list_table td:first-child,.view_table th:first-child,.view_table td:first-child { border-left:none; /* 맨 왼쪽 보더 없음 */ }
 .list_table th:last-child,.list_table td:last-child,.view_table th:last-child,.view_table td:last-child { border-right:none; /* 맨 오른쪽 보더 없음 */ }
 .list_table th:last-child,.list_table td:last-child,.view_table th:last-child,.view_table td,.view_table th { font-size:var(--Font-small); }
+.view_table tr:last-child th { border-bottom:1px solid var(--Neutral-300); }
 
 .list_table thead > tr:first-child > th { border-top:none; }
 tr.important td,tr.important td a { background:var(--Neutral-200); font-weight:500; }

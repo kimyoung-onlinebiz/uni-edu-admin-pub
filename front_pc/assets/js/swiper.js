@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCourseIntroSwiper();
     initNoticeRollingSwiper();
     initCalendarRollingSwiper();
+    initCalendarScheduleSwiper();
     initProfileSwiper();
 });
 
@@ -505,6 +506,7 @@ function initCalendarRollingSwiper() {
             loop: true,
             direction: 'horizontal',
             slidesPerView: 3,
+            slidesPerGroup: 1,
             spaceBetween: 21,
             speed: 700,
             centeredSlides: false,
@@ -555,5 +557,92 @@ function initCalendarRollingSwiper() {
 
         // 마우스 오버 시 autoplay 정지, 마우스 아웃 시 재개
         bindSwiperHoverPause(calendarRollingSwiper, calendarRollingEl);
+    });
+}
+
+// =========================================
+// SECTION: 선택한 날짜의 학사일정 롤링
+// =========================================
+function initCalendarScheduleSwiper() {
+    const calendarScheduleEls = document.querySelectorAll('.calendar_schedule.swiper-container');
+
+    if (!calendarScheduleEls.length) {
+        return;
+    }
+
+    calendarScheduleEls.forEach((calendarScheduleEl) => {
+        const controlsEl = calendarScheduleEl.querySelector('.controls');
+        const scheduleItems = calendarScheduleEl.querySelectorAll('ul > li');
+
+        scheduleItems.forEach((item) => item.classList.add('swiper-slide'));
+
+        const totalSlides = scheduleItems.length;
+        if (totalSlides <= 2 && controlsEl) {
+            controlsEl.style.display = 'none';
+        }
+
+        const fractionEl = calendarScheduleEl.querySelector('.fraction');
+        const prevButtonEl = calendarScheduleEl.querySelector('.swiper-button-prev');
+        const nextButtonEl = calendarScheduleEl.querySelector('.swiper-button-next');
+
+        const syncCalendarScheduleFraction = (swiperInstance) => {
+            if (!fractionEl) {
+                return;
+            }
+
+            fractionEl.textContent = `${swiperInstance.realIndex + 1} / ${totalSlides}`;
+        };
+
+        const calendarScheduleSwiper = new Swiper(calendarScheduleEl, {
+            loop: totalSlides > 2,
+            direction: 'horizontal',
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+            speed: 700,
+            centeredSlides: false,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+            allowTouchMove: false,
+            autoplay: totalSlides > 2
+                ? {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                }
+                : false,
+            navigation: {
+                nextEl: nextButtonEl,
+                prevEl: prevButtonEl,
+            },
+            observer: true,
+            observeParents: true,
+            on: {
+                init: function () {
+                    syncCalendarScheduleFraction(this);
+                },
+                slideChange: function () {
+                    syncCalendarScheduleFraction(this);
+                },
+            },
+        });
+
+        if (prevButtonEl) {
+            prevButtonEl.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                calendarScheduleSwiper.slideTo(Math.max(0, calendarScheduleSwiper.activeIndex - 1), 700);
+            });
+        }
+
+        if (nextButtonEl) {
+            nextButtonEl.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                calendarScheduleSwiper.slideTo(Math.min(calendarScheduleSwiper.slides.length - 1, calendarScheduleSwiper.activeIndex + 1), 700);
+            });
+        }
+
+        bindSwiperHoverPause(calendarScheduleSwiper, calendarScheduleEl);
     });
 }
