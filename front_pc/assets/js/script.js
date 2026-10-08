@@ -351,6 +351,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_composition_complete', triggers: ['.btn_composition_complete'], closeCurrentLayer: true }, //구성과정 레이어(결제 완료 내역)
             { layer: '.layer_wrapper.layer_mockPlanSubmit', triggers: ['.btn_mockPlanSubmit'], closeCurrentLayer: true }, //모의수업지도안 레이어
             { layer: '.layer_wrapper.layer_observeDiscussSubmit', triggers: ['.btn_observeDiscussSubmit'], closeCurrentLayer: true }, //강의참관토론 레이어
+            { layer: '.layer_wrapper.layer_other_subject', triggers: ['.btn_other_subject'], closeCurrentLayer: true }, //타교육원 선수과목 등록 레이어
+            { layer: '.layer_wrapper.layer_profile_guide', triggers: ['.btn_profile_guide'], closeCurrentLayer: true }, //실습생 프로파일 작성안내 레이어
         ]);
     }
 

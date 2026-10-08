@@ -283,8 +283,8 @@
                         <strong class="active">이론 평가관리</strong> <!-- active 클래스 추가 시 선택 -->
                         <ul>
                             <li><a href="#none">시험 응시</a></li> <!-- active 클래스 추가 시 선택 -->
-                            <li><a href="#none" class="active">과제 제출</a></li>
-                            <li><a href="#none">토론 참여</a></li>
+                            <li><a href="#none">과제 제출</a></li>
+                            <li><a href="#none" class="active">토론 참여</a></li>
                             <li><a href="#none">퀴즈 응시</a></li>
                         </ul>
                     </li>
@@ -351,122 +351,216 @@
                     <li class="home"><a href="../index.html">홈</a></li>
                     <li><a href="#none">나의 강의실</a></li>
                     <li><a href="#none">이론 평가관리</a></li>
-                    <li aria-current="page">과제 제출</li>
+                    <li aria-current="page">토론 참여</li>
                 </ol>
             </nav>
             <!-- //breadcrumb -->
 
             <!-- sub header -->
             <header class="sub_header">
-                <h3>과제 제출</h3>
+                <h3>토론 참여</h3>
             </header>
             <!-- //sub header -->
 
             <div class="txt_guide">
-                <strong>과제 제출 유의사항</strong>
+                <strong>토론 참여 유의사항</strong>
                 <ul>
-                    <li>과제는 제출 기간 내 본 페이지를 통해 제출할 수 있으며, 제출 기간 종료 후에는 제출이 불가합니다.</li>
-                    <li>과제 제출 후 과목에 맞는 제출 파일 및 첨부파일의 이상 여부를 반드시 확인하시기 바랍니다.</li>
-                    <li>주제 불일치, 과목 오제출, 파일 오류 등의 사유로 인한 재제출/재채점은 불가합니다.</li>
-                    <li>제출 기간 내 파일 수정이 필요한 경우, 제출 기간 내 파일을 다시 업로드하여 수정 제출하시기 바랍니다.</li>
+                    <li>토론은 제출 기간 내 본 페이지를 통해 제출할 수 있으며, 제출 기간 종료 후에는 제출이 불가합니다.</li>
+                    <li>타 학습자의 의견과 유사할 경우 모사 제출로 간주하여 0점 처리됩니다.</li>
+                    <li>해당 페이지에 장시간 접속 시 입력 화면이 종료될 수 있으니, 토론 내용을 메모장 등에 먼저 내용 작성 후, 복사/붙여 넣기 하는 것을 권장드립니다.<br />
+      단축키: Ctrl+C(복사), Ctrl+V(붙여넣기)</li>
                 </ul>
             </div>
 
-            <div class="submission_info marginT32">
-                <dl>
-                    <dt>과정 명</dt>
-                    <dd>2026년도 1학기 2기 지역사회복지론</dd>
-                    <dt>배점</dt>
-                    <dd>20점</dd>
-                </dl>
-                <dl>
-                    <dt>제출 기간</dt>
-                    <dd>2026.01.01 12:00:00 ~ 2026.04.30 23:59:59</dd>
-                </dl>
-                <dl>
-                    <dt>제출 상태</dt>
-                    <dd>
-                        <span class="txt_error">제출 필요</span>
-                        <span class="txt_info">제출 완료 (제출 일자: 2026.03.06 23:00:00)</span>
-                    </dd>
-                </dl>
-            </div>
+            <!-- 게시판 리스트 -->
+            <section class="board_list marginT24">
 
-            <!-- 게시판 뷰 -->
-            <article class="board_view marginT32">
+                <!-- 검색 -->
+                <div class="board_search">
+                    <select name="" id="">
+                        <option value="">기수 선택</option>
+                        <option value="2026년 1학기 1기">2026년 1학기 1기</option>
+                    </select>
 
-                <!-- sub header -->
-                <header class="sub_header">
-                    <h4>첨부 파일</h4>
-                </header>
-                <!-- //sub header -->
+                    <select name="" id="">
+                        <option value="">과정선택</option>
+                        <option value="지역사회복지론">지역사회복지론</option>
+                        <option value="정신건강론">정신건강론</option>
+                    </select>
 
-                <!-- 첨부파일 영역 -->
-                <div class="attachment"> 
-                    <div class="download_area">
-                        <div class="download">
-                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                    <select name="" id="">
+                        <option value="">전체</option>
+                        <option value="미제출">미제출</option>
+                        <option value="제출필요">제출필요</option>
+                        <option value="제출완료">제출완료</option>
+                        <option value="오픈예정">오픈예정</option>
+                    </select>
+
+                    <button type="button" class="btn_search">검색</button>
+
+                </div>
+                <!-- //검색 -->
+
+                <div class="table_sort">
+                    <span>총 <strong>1,234</strong>건</span>
+                    <select name="" id="">
+                        <option value="최근 개강순">최근 개강순</option>
+                        <option value="과정명순">과정명순</option>
+                    </select>
+                </div>
+
+                <table class="list_table">
+                    <caption>토론 참여 리스트</caption>
+                    <colgroup> 
+                        <col>
+                        <col>
+                        <col>
+                        <col style="width:180px;">
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">년도/학기/기수</th>
+                            <th scope="col">과정 명</th>
+                            <th scope="col">제출 기간</th>
+                            <th scope="col">제출하기</th>
+                            <th scope="col">수강생 토론글</th>
+                            <th scope="col">성적확인</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2026년 1학기 1기</td>
+                            <td>지역사회복지론</td>
+                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <td>
+                                <button type="button" class="btn txtRed" disabled>미제출</button>
+                            </td>
+                            <td><button type="button" class="btn">확인하기</button></td>
+                            <td><button type="button" class="btn">성적 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2026년 1학기 1기</td>
+                            <td>지역사회복지론</td>
+                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <td>
+                                <button type="button" class="btn lightGray" disabled>제출완료</button>
+                            </td>
+                            <td><button type="button" class="btn">확인하기</button></td>
+                             <td><button type="button" class="btn btn_discussionScore">성적 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2026년 1학기 1기</td>
+                            <td>지역사회복지론</td>
+                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <td>
+                                <button type="button" class="btn primary">제출하기</button>
+                            </td>
+                            <td><button type="button" class="btn">확인하기</button></td>
+                             <td><button type="button" class="btn">성적 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2026년 1학기 1기</td>
+                            <td>지역사회복지론</td>
+                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <td>
+                                <button type="button" class="btn borderBlue">제출 확인</button>
+                            </td>
+                            <td><button type="button" class="btn">확인하기</button></td>
+                             <td><button type="button" class="btn">성적 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2026년 1학기 1기</td>
+                            <td>지역사회복지론</td>
+                            <td>2026-03-05 00:00 ~ 2026-03-31 23:59</td>
+                            <td>
+                                <button type="button" class="btn deepGray" disabled>오픈 예정</button>
+                            </td>
+                            <td><button type="button" class="btn">확인하기</button></td>
+                             <td><button type="button" class="btn">성적 확인</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </section>
+            <!-- //게시판 리스트 -->
+
+            <!-- 레이어 / 토론 성적 확인 -->
+                <div class="layer_wrapper layer_discussionScore"> <!-- active 추가 시 화면 노출 -->
+                    <div class="layer_basic">
+
+                        <header>
                             <div>
-                                <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
+                                <h1>토론 성적 확인</h1>
                             </div>
+                            <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                        </header>
+
+                        <!-- layer 내용 -->
+                        <div class="layer_content">
+                            <div class="submission_info">
+                                <dl>
+                                    <dt>과정 명</dt>
+                                    <dd>2026년도 1학기 2기 지역사회복지론</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제출 상태</dt>
+                                    <dd>
+                                        <span class="txt_error">제출 필요</span>
+                                        <span class="txt_info">제출 완료 (제출 일자: 2026.03.06 23:00:00)</span>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>점수</dt>
+                                    <dd><strong class="txt_info">18점</strong> / 20점</dd>
+                                </dl>
+                            </div>
+
+                            <div class="layer_contentTitle borderN">
+                                <h2>제출 토론 확인</h2>
+                            </div>
+
+                            <!-- 에디터에서 작성한 내용 노출 -->
+                            <div class="editor_content title">
+                                에디터에서 작성한 제목
+                            </div>
+                            <!-- //에디터에서 작성한 내용 노출 -->
+
+                            <!-- 에디터에서 작성한 내용 노출 -->
+                            <div class="editor_content">
+                                에디터에서 작성한 내용
+                            </div>
+                            <!-- //에디터에서 작성한 내용 노출 -->
+
+                             <div class="layer_contentTitle borderN">
+                                <h2>교수님 평가 의견</h2>
+                            </div>
+
+                            <!-- 에디터에서 작성한 내용 노출 -->
+                            <div class="editor_content">
+                                에디터에서 작성한 내용
+                            </div>
+                            <!-- //에디터에서 작성한 내용 노출 -->
+
+                        </div>
+                        <!-- //layer 내용 -->
+                        <div class="layer_btnSection right">
+                            <button class="btn primary">확인</button>
                         </div>
                     </div>
+                    
                 </div>
-                <!-- //첨부파일 영역 -->
+                <!-- //레이어 / 과제 성적 확인 -->
 
-                <!-- 에디터에서 작성한 내용 노출 -->
-                <div class="editor_content border">
-                    에디터에서 작성한 내용
-                </div>
-                <!-- //에디터에서 작성한 내용 노출 -->
-
-                <!-- sub header -->
-                <header class="sub_header">
-                    <h4>과제 제출</h4>
-                </header>
-                <!-- //sub header -->
-
-                <!-- 파일 업로드 드래그 앤 드롭 -->
-                <div class="file_dragUpload">
-                    <div class="drag_area">
-                        <input type="file" class="transparent" id="fileUpload" multiple>
-                        파일을 여기에 끌어다 놓거나, '파일 선택' 버튼을 클릭해 첨부해주세요.
-                        <span>허용 파일 형식: .hwp/ .hwt/ .hwpx / .doc  / .docx (최대 50MB)</span>
-                        <label for="fileUpload" class="btn primary">파일 선택</label>
-                    </div>
-                </div>
-                <!-- 파일 업로드 드래그 앤 드롭 -->
-
-                <!-- sub header -->
-                <header class="sub_header">
-                    <h4>첨부한 과제</h4>
-                </header>
-                <!-- //sub header -->
-
-                <!-- 첨부파일 영역 -->
-                <div class="attachment"> 
-                    <div class="download_area">
-                        <div class="download">
-                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
-                            <div>
-                                <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
-                                <button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //첨부파일 영역 -->
-
-                <!-- bottom -->
-                <div class="board_view_footer">
-                    <a href="#none" class="btn">목록</a>
-                    <a href="#none" class="btn primary">과제 제출 </a>
-                </div>
-
-            </article>
-            <!-- //게시판 뷰 -->
-
-            
 
         </section>
         <!--// 콘텐츠 영역 -->

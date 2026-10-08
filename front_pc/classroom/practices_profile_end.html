@@ -359,31 +359,29 @@
             <!-- 나의 강의실 -->
             <section class="classroom">
 
-                <div class="txt_guide">
-                    <strong>실습생 프로파일 작성 안내</strong>
-                    <ol>
-                        <li>
-                            프로파일 작성
-                            <ul>
-                                <li>실습생 프로파일은 선이수과목 이수 현황 확인 및 원활한 실습 운영을 위한 기초 자료이므로 반드시 작성하여 주시기 바랍니다.</li>
-                                <li>인적사항은 자동으로 입력되므로 표시된 내용을 확인하고, 나머지 항목을 빠짐없이 입력하여 주시기 바랍니다.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            선이수과목 확인
-                            <ul>
-                                <li>선이수과목 확인 대상은 1영역(한국어학) 및 3영역(외국어로서의한국어교육론) 과목이며, 그 외 영역의 과목은 입력하지 않습니다.</li>
-                                <li>본원에서 이수 완료 또는 현재 수강중인 1영역, 3영역 과목은 자동으로 입력되므로 표시된 내용을 확인하여 주시기 바랍니다.</li>
-                                <li>타 교육기관에서 수강한 1영역, 3영역 과목은 ‘이수 완료’ 또는 ‘현재 수강중’으로 구분하여 입력하고, 관련 증빙 서류를 반드시 제출하여 주시기 바랍니다.<br />→ 이수 완료: 성적 증명서 / 현재 수강중: 수강증명서 제출 후 이수 완료 시 성적 증명서 추가 제출</li>
-                            </ul>
-                        </li>
-                        <li>제출 내용 확인
-                            <ul>
-                                <li>제출 후 입력 내용과 증빙서류 제출 여부를 확인하여 주시기 바랍니다.</li>
-                                <li>직접 입력한 내용은 수정할 수 있으며, 자동 입력된 정보가 실제 내용과 다른 경우 담당자에게 문의하여 주시기 바랍니다.</li>
-                            </ul>
-                        </li>
-                    </ol>
+                <div class="submission_info">
+                    <dl>
+                        <dt>실습생 프로파일 제출 여부</dt>
+                        <dd>제출 완료</dd>
+                        <dt>관리자 확인 여부</dt>
+                        <dd>검토중</dd>
+                    </dl>
+                    <dl>
+                        <dt>최종 제출 일시</dt>
+                        <dd>2026.01.01 12:00:00</dd>
+                        <dt>도움말</dt>
+                        <dd>
+                            <button type="button" class="btn txtGray btn_profile_guide">확인하기</button>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="txt_guide marginT24">
+                    <strong>추가 증빙 서류 제출이 필요합니다.</strong>
+                    <ul>
+                        <li>현재 수강 중인 타 교육기관 수강 과목이 있습니다.</li>
+                        <li>해당 수강 과목을 이수 완료 후 성적증명서를 담당자 이메일로 제출하여 주시기 바랍니다. (이메일 주소: <a href="mailto:help@kystudy.com">help@kystudy.com</a>)</li>
+                    </ul>
                 </div>
 
                 <!-- sub header -->
@@ -437,7 +435,6 @@
 
                 <div class="profile_comment">
                     <span><strong class="txt_info">파란색</strong>은 김영평생교육원 과정, <strong class="txt_success">초록색</strong>은 타교육원 과정입니다.</span>
-                    <button type="button" class="btn primary btn_other_subject">타교육원 선이수과목 등록하기</button>
                 </div>
 
                 <!-- 선이수과목 등록 -->
@@ -451,14 +448,12 @@
                                     <col style="width:70px;">
                                     <col>
                                     <col style="width:95px;">
-                                    <col style="width:50px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
                                         <th scope="col">번호</th>
                                         <th scope="col">과목 명</th>
                                         <th scope="col">이수여부</th>
-                                        <th scope="col">삭제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -466,37 +461,31 @@
                                         <td>1</td>
                                         <td>외국어로서의한국어학개론</td>
                                         <td class="our">이수완료</td>
-                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>한국어음운론</td>
                                         <td class="our">현재수강중</td>
-                                        <td>-</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>한국어음운론</td>
                                         <td class="other">현재수강중</td>
-                                        <td><button type="button" class="material-symbols-rounded" title="삭제">close</button></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>한국어음운론</td>
                                         <td class="other">현재수강중</td>
-                                        <td><button type="button" class="material-symbols-rounded" title="삭제">close</button></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>한국어음운론</td>
                                         <td class="our">현재수강중</td>
-                                        <td>-</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>한국어음운론</td>
                                         <td class="our">현재수강중</td>
-                                        <td>-</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -512,14 +501,12 @@
                                     <col style="width:70px;">
                                     <col>
                                     <col style="width:95px;">
-                                    <col style="width:50px;">
                                 </colgroup>
                                 <thead>
                                     <tr>
                                         <th scope="col">번호</th>
                                         <th scope="col">과목 명</th>
                                         <th scope="col">이수여부</th>
-                                        <th scope="col">삭제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -527,13 +514,11 @@
                                         <td>1</td>
                                         <td>외국어로서의언어교수이론</td>
                                         <td class="our">이수완료</td>
-                                        <td>-</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>외국어로서의한국어문법교육론</td>
                                         <td class="other">현재수강중</td>
-                                        <td><button type="button" class="material-symbols-rounded" title="삭제">close</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -542,6 +527,41 @@
                 </div>
 
                 <!-- //선이수과목 등록 -->
+
+                <table class="view_table marginT24 borderGray">
+                    <caption>타교육원 증빙서류</caption>
+                    <colgroup>
+                        <col style="width:180px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">타 교육원 증빙 서류</th>
+                            <td>
+                                <div class="attachment"> 
+                                    <div class="download_area">
+                                        <div class="download">
+                                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                                            <div>
+                                                <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attachment"> 
+                                    <div class="download_area">
+                                        <div class="download">
+                                            <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+                                            <div>
+                                                <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <!-- sub header -->
                 <header class="sub_header">
@@ -565,224 +585,71 @@
                         <tr>
                             <th scope="row">본 수업을 수강하게 된 동기</th>
                             <td>
-                                <textarea name="" id="" placeholder="내용을 작성해주세요." class="width_100"></textarea>
+                                한국어 교원 자격 취득을 위해 이론 과목을 수강하면서 실제 수업이 어떻게 진행되는지 궁금해졌습니다.그동안 배운 한국어 교육 이론을 실제 수업 상황에 적용해 보고 싶어 본 수업을 수강하게 되었습니다.특히 학습자의 수준에 따라 수업을 구성하고 설명하는 방법을 직접 익히고 싶었습니다.강의 참관과 모의수업을 통해 실제 한국어 수업의 진행 과정을 경험해 보고자 합니다.이번 실습을 통해 한국어 교원으로서 필요한 기본적인 수업 역량을 갖추고 싶습니다.
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">실습을 통해 달성하고자 하는 목표</th>
                             <td>
-                                <textarea name="" id="" placeholder="내용을 작성해주세요." class="width_100"></textarea>
+                                실제 한국어 수업을 관찰하여 교사의 수업 진행 방식과 학습자와의 상호작용 방법을 익히고 싶습니다.수업지도안을 직접 작성하면서 학습 목표에 적합한 수업을 설계하는 능력을 기르고자 합니다.모의수업을 통해 학습자에게 내용을 쉽고 정확하게 전달하는 방법을 연습하고 싶습니다.또한 실습 과정에서 받은 피드백을 바탕으로 부족한 점을 확인하고 개선하고자 합니다.최종적으로 실제 교육 현장에서 한국어 수업을 운영할 수 있는 기본적인 교수 역량을 갖추는 것이 목표입니다.
                             </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <label class="marginT24 inline_block">
-                    <input type="checkbox"> <strong>(필수)</strong> 위 실습생 프로파일 작성 안내를 확인하였으며, 작성 내용 및 제출 서류가 사실과 다름 없음을 확인합니다.
-                </label>
 
                 <!-- //수강 동기 및 실습 목표 -->
                 <div class="board_view_footer">
-                    <a href="#none" class="btn">임시저장</a>
-                    <a href="#none" class="btn primary">제출하기</a>
+                    <a href="#none" class="btn primary">내용수정</a>
                 </div>
+
+                
 
             </section>
 
-            <!-- 레이어 타 교육원 선수과목 등록 -->
-            <div class="layer_wrapper layer_other_subject"> <!-- active 추가 시 화면노출 -->
+            <!-- 레이어 레이어 실습생 프로파일 작성 안내 -->
+            <div class="layer_wrapper layer_profile_guide"> <!-- active 추가 시 화면노출 -->
                 <div class="layer_basic">
 
                     <header>
                         <div>
-                            <h1>타 교육원 선수과목 등록</h1>
+                            <h1>실습생 프로파일 작성 안내</h1>
                         </div>
                         <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
                     </header>
 
                     <!-- layer 내용 -->
                     <div class="layer_content">
-                        <div class="profile_subject_grid">
-                            <section class="profile_subject_card">
-                                <h5>김영평생교육원 선이수과목 이수 현황</h5>
-                                <div class="profile_subject_scroll scroll_design">
-                                    <table class="list_table">
-                                        <caption>김영평생교육원 선이수과목 이수 현황</caption>
-                                        <colgroup>
-                                            <col style="width:70px;">
-                                            <col>
-                                            <col style="width:95px;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">번호</th>
-                                                <th scope="col">과목 명</th>
-                                                <th scope="col">이수여부</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>외국어로서의한국어학개론</td>
-                                                <td class="our">이수완료</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>한국어음운론</td>
-                                                <td class="our">현재수강중</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>한국어음운론</td>
-                                                <td class="our">현재수강중</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>한국어음운론</td>
-                                                <td class="our">현재수강중</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>한국어음운론</td>
-                                                <td class="our">현재수강중</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>한국어음운론</td>
-                                                <td class="our">현재수강중</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </section>
-
-                            <section class="profile_subject_card">
-                                <h5>타 교육원 선이수과목 선택</h5>
-                                <div class="profile_subject_scroll scroll_design">
-                                    <table class="list_table">
-                                        <caption>타 교육원 선이수과목 선택</caption>
-                                        <colgroup>
-                                            <col style="width:70px;">
-                                            <col>
-                                            <col style="width:200px;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">번호</th>
-                                                <th scope="col">과목 명</th>
-                                                <th scope="col">이수여부</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>외국어로서의언어교수이론</td>
-                                                <td>
-                                                    <div class="form_group">
-                                                        <label>
-                                                            <input type="radio" name="" value=""> 이수완료
-                                                        </label>
-                                                        <label>
-                                                            <input type="radio" name="" value=""> 현재 수강중
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>외국어로서의한국어문법교육론</td>
-                                                <td>
-                                                    <div class="form_group">
-                                                        <label>
-                                                            <input type="radio" name="" value=""> 이수완료
-                                                        </label>
-                                                        <label>
-                                                            <input type="radio" name="" value=""> 현재 수강중
-                                                        </label>
-                                                    </div>
-
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </section>
+                        <div class="layer_guide">
+                            <ol>
+                                <li>
+                                    프로파일 작성
+                                    <ul>
+                                        <li>실습생 프로파일은 선이수과목 이수 현황 확인 및 원활한 실습 운영을 위한 기초 자료이므로 반드시 작성하여 주시기 바랍니다.</li>
+                                        <li>인적사항은 자동으로 입력되므로 표시된 내용을 확인하고, 나머지 항목을 빠짐없이 입력하여 주시기 바랍니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    선이수과목 확인
+                                    <ul>
+                                        <li>선이수과목 확인 대상은 1영역(한국어학) 및 3영역(외국어로서의한국어교육론) 과목이며, 그 외 영역의 과목은 입력하지 않습니다.</li>
+                                        <li>본원에서 이수 완료 또는 현재 수강중인 1영역, 3영역 과목은 자동으로 입력되므로 표시된 내용을 확인하여 주시기 바랍니다.</li>
+                                        <li>타 교육기관에서 수강한 1영역, 3영역 과목은 ‘이수 완료’ 또는 ‘현재 수강중’으로 구분하여 입력하고, 관련 증빙 서류를 반드시 제출하여 주시기 바랍니다.<br />→ 이수 완료: 성적 증명서 / 현재 수강중: 수강증명서 제출 후 이수 완료 시 성적 증명서 추가 제출</li>
+                                    </ul>
+                                </li>
+                                <li>제출 내용 확인
+                                    <ul>
+                                        <li>제출 후 입력 내용과 증빙서류 제출 여부를 확인하여 주시기 바랍니다.</li>
+                                        <li>직접 입력한 내용은 수정할 수 있으며, 자동 입력된 정보가 실제 내용과 다른 경우 담당자에게 문의하여 주시기 바랍니다.</li>
+                                    </ul>
+                                </li>
+                            </ol>
                         </div>
-                        <div class="table_guide">
-                            ※ 김영평생교육원에서 이수 완료했거나 현재 수강중, 수강 예정인 과목은 선택할 수 없습니다.
-                        </div>
-
-                        <div class="layer_contentTitle borderN">
-                            <h2>타 교육원 이수 과목 성적증명서 첨부</h2>
-                        </div>
-
-                        <div class="layer_guide gray">
-                            <ul>
-                                <li>타 교육원에서 이수했거나 현재 수강 중인 선수과목을 선택한 후 증빙서류를 첨부해주세요. (이수완료: 성적증명서 첨부 / 현재 수강중: 수강증명서 첨부)</li>
-                                <li>현재 수강중인 과목은 이수 완료 후 성적증명서를 담당자 이메일로 추가 제출해주세요. (담당자 이메일: <a href="mailto:help@kystudy.co.kr">help@kystudy.co.kr</a>)</li>
-                            </ul>
-                        </div>
-
-                        <table class="view_table marginT24">
-                            <colgroup>
-                                <col style="width:200px;">
-                                <col>
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                     <th scope="row">첨부파일</th>
-                                     <td>
-                                        <!-- 첨부파일 버튼형 -->
-                                        <div class="file_search">
-                                            <div class="file_search_top">
-                                                <label for="fileUpload" class="btn">
-                                                    <span class="material-symbols-rounded">attach_file</span>파일 선택
-                                                </label>
-                                                <p>※ 첨부 가능 형식: hwp, hwpx, doc, docx, pdf, jpg, png</p>
-                                            </div>
-                                        
-                                            <input type="file" class="transparent" id="fileUpload" multiple>
-
-                                            <!-- 첨부한 파일 영역 -->
-                                            <div class="attachment"> 
-                                                <div class="download_area">
-                                                    <!-- p class="no_attachment">첨부된 파일이 없습니다.</p -->
-
-                                                    <div class="download">
-                                                        <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
-                                                        <div>
-                                                            <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
-                                                            <button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="download">
-                                                        <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
-                                                        <div>
-                                                            <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
-                                                            <button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <!-- //첨부한 파일 영역 -->
-                                        </div>
-                                        <!-- //첨부파일 버튼형 -->
-                                     </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    <!-- //layer 내용 -->
                    
-                </div>
-
-                <div class="layer_btnSection">
-                    <button class="btn primary">저장하기</button>
-                </div>
+                    </div>
+                    <!-- //layer 내용 -->
             </div>
-            <!-- //레이어 타 교육원 선수과목 등록 소개 -->
+            <!-- //레이어 실습생 프로파일 작성 안내 -->
 
         </section>
         <!--// 콘텐츠 영역 -->

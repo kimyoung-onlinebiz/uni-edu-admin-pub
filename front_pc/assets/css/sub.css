@@ -32,6 +32,9 @@
 .lnb_wrap .classroom_shortcut a:hover { background:#ECF2FE; }
 .lnb_wrap .classroom_shortcut a:after { content:"keyboard_arrow_right"; font-family:'Material Symbols Rounded'; font-size:var(--Font-3xlarge); color:var(--Neutral-600); font-variation-settings:'FILL' 1,'wght' 200; margin-left:auto; }
 .lnb_wrap .classroom_shortcut a:hover:after,.lnb_wrap .classroom_shortcut a.active:after { color:var(--Primary-500); font-variation-settings:'FILL' 1,'wght' 300; }
+.classroom .submission_info dt { width:100px; }
+.classroom .submission_info dl:nth-child(1) dt:first-child,.classroom .submission_info dl:nth-child(2) dt:first-child { width:160px; }
+.classroom .submission_info dd { width:160px; }
 .subpage_content { position:relative; min-width:0; margin-top:24px; }
 .two_column_header { position:relative; width:1280px; display:flex; align-items:center; justify-content:space-between; padding-bottom:19px; margin:35px auto 24px; border-bottom: 1px solid var(--Neutral-300); }
 .two_column_header h2 { font-size:var(--Font-2xlarge); font-weight:700; line-height:1.2; }
@@ -359,7 +362,7 @@ p.table_guide,div.table_guide { font-size:var(--Font-xsmall); color:var(--Neutra
 div.table_guide { display:flex; align-items:center; }
 .table_guide li {  color: var(--Neutral-600); font-size: var(--Font-xsmall); }
 .table_guide li:before { content:"* "; }
-.table_guide a { height:28px; line-height:22px; font-size:var(--Font-2xsmall); padding:2px 8px; border-radius:var(--Border-radius); border:1px solid var(--Neutral-800); margin-left:8px; }
+.table_guide a { height:28px; line-height:23px; font-size:var(--Font-2xsmall); padding:1px 8px; border-radius:var(--Border-radius); border:1px solid var(--Neutral-800); margin-left:8px; }
 
 .icon_tooltip { position:relative; display:inline-block; margin-left:4px; color:var(--Neutral-600); font-size:18px; cursor:pointer; }
 .icon_tooltip button { color:var(--Neutral-600); font-size:21px; vertical-align:-5px; }
@@ -398,7 +401,7 @@ div.table_guide { display:flex; align-items:center; }
 
 /* 레이어 과제 제출 */
 .submission_info { display:flex;  gap:16px; padding:24px 32px; background:var(--Neutral-200); border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); flex-direction:column; }
-.submission_info dl { display:flex; gap:24px; }
+.submission_info dl { display:flex; gap:24px; align-items:center; }
 .submission_info dt { font-weight:700; width:80px; }
 .submission_info dd,.submission_info dd ul li { font-size:var(--Font-small); }
 .submission_info dd + dt { margin-left:90px; width:30px; }
@@ -411,6 +414,8 @@ background: var(--Neutral-0); font-size:var(--Font-xsmall); margin-left:4px; }
 .submission_info dd ul li a:hover { background:var(--Primary-100); }
 
 .attachment { margin-bottom:16px; }
+td > .attachment { margin-bottom:8px; }
+td > .attachment:only-child,td > .attachment:last-child { margin-bottom:0; }
 .attachment .download_area { display:flex; flex-direction:column; gap:8px; width:100%; }
 .attachment .download_area .no_attachment { color:var(--Neutral-600); font-size:var(--Font-small); }
 .attachment .download { display:flex; align-items:center; gap:16px; justify-content:space-between; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); padding:6px 20px 4px; width:100%; background:var(--Neutral-0); height:38px; }
@@ -581,18 +586,22 @@ ol.layer_guide li strong { color:var(--Info); }
 .board_view .photo_upload .btn:hover { background:var(--Primary-100); border-color:var(--Primary-500); color:var(--Primary-700); }
 
 /* 실습생 프로파일 */
-.profile_comment { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-top:20px; }
-.profile_comment > span { color:var(--Neutral-700); font-size:var(--Font-small); }
+.profile_comment { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-top:-10px; }
+.profile_comment > span { color:var(--Neutral-600); font-size:var(--Font-small); }
+.profile_comment > span strong { font-weight:normal; }
 .profile_comment .btn { min-width:220px; }
-.profile_subject_grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; margin-top:16px; }
-.profile_subject_card { border:1px solid var(--Primary-200); border-radius:var(--Border-2radius); background:var(--Neutral-0); padding:18px 18px 10px; min-height:390px; }
-.profile_subject_card h5 { margin:0 0 14px; font-size:var(--Font-xlarge); font-weight:700; }
+.profile_subject_grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; margin-top:24px; }
+.profile_subject_card { border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); background:var(--Neutral-0); padding:18px 18px 10px; min-height:390px; }
+.profile_subject_card h5 { margin:0 0 14px; font-weight:700; }
 .profile_subject_scroll { height:320px; overflow-y:auto; overflow-x:hidden; padding-right:8px; }
-.profile_subject_table { width:100%; table-layout:fixed; border-collapse:collapse; }
-.profile_subject_table th,.profile_subject_table td { height:40px; padding:0 8px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); text-align:center; }
-.profile_subject_table thead th { border-top:1px solid var(--Neutral-900); background:var(--Neutral-100); font-weight:700; }
-.profile_subject_table tbody td:nth-child(2) { text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.profile_subject_table td.result { font-weight:500; }
+.profile_subject_card .our { color: var(--Info) !important; }
+.profile_subject_card .other { color: var(--Success) !important; }
+.profile_subject_card .material-symbols-rounded { font-size:20px; color:var(--Neutral-600); vertical-align:middle; }
+.profile_subject_card .material-symbols-rounded:hover { color:var(--Neutral-900); font-weight:400; }
+
+.layer_content .profile_subject_grid { margin-top:0; }
+.layer_profile_guide .layer_content { width:500px; }
+
 
 /* 학사일정 캘린더 */
 .calendar_wrap { width:100%; }
@@ -772,6 +781,9 @@ ol.layer_guide li strong { color:var(--Info); }
 .txt_guide_gray ul > li,.grade_schedule ul> li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
 .txt_guide_gray ul > li::before,.grade_schedule ul> li:before { content: "•"; flex: 0 0 12px; }
 .grade_schedule ul > li a { color:var(--Info); font-weight:500; font-size:var(--Font-small); }
+.txt_guide ul > li a,.layer_guide ul > li a { font-size:var(--Font-small); color:var(--Info); }
+.layer_guide ul > li a:hover { font-size:var(--Font-small); color:var(--Info); }
+.layer_guide ul > li a:hover { color:var(--Primary-500); }
 .grade_schedule dl { display:flex; margin-bottom:8px;}
 .grade_schedule dt { font-weight:600; }
 .grade_schedule dd + dt { margin-left:24px; }
