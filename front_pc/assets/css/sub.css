@@ -485,6 +485,7 @@ td > .attachment:only-child,td > .attachment:last-child { margin-bottom:0; }
 .classroom .subject_info dt { font-size:var(--Font-medium); font-weight:700; width:140px; }
 .classroom .subject_info dd { flex:1; min-width:0; text-align:left; }
 .classroom .subject_info dd .txt_info { display:block; font-size:var(--Font-small);padding-top:8px; }
+.classroom .subject_info button { margin-top:-4px; }
 .classroom .subject_info .subject_links { display:flex; gap:12px; font-size:var(--Font-small); border-top:1px solid var(--Neutral-300); margin-top:16px; padding-top:24px; }
 .subject_links a { display:flex; color:var(--Primary-500); font-weight:500; font-size:var(--Font-small); border:1px solid var(--Primary-500); border-radius:var(--Border-radius); height:37px; flex:1; text-align:center; align-items:center; justify-content:center; line-height:1;}
 .subject_links a:hover { background:var(--Primary-100); }
@@ -500,6 +501,10 @@ td > .attachment:only-child,td > .attachment:last-child { margin-bottom:0; }
 .progress_status .attendance_info { margin-top:5px; }
 .progress_status .recommend { display:flex; padding:8px 16px; justify-content:center; align-items:center; gap:8px; align-self:stretch; border-radius:var(--Border-radius); background:var(--Neutral-300); margin-top:14px; }
 .progress_status .recommend strong { color:var(--Primary-500); }
+.classroom .general_course.lecture_list .row { background:var(--Neutral-0); }
+.classroom .general_course.lecture_list dl { display:flex; align-items:center; gap:10px; }
+.classroom .general_course.lecture_list dt { font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
+.classroom .general_course.lecture_list dd { font-size:var(--Font-medium); font-weight:500; }
 
 .classroom .dashboard_summary { flex-wrap:wrap; }
 .notice_rolling { overflow:hidden; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); background:var(--Neutral-0); height:52px; margin-top:32px;}
