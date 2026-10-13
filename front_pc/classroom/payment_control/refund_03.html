@@ -403,430 +403,275 @@
                                 </dl>
                             </div>
                             
-                            <ul class="lecture_list refund_order_list">
+                            <ul class="lecture_list">
                                 <li>
-                                    <div class="order_item">
-                                        <button type="button" class="order_toggle btn_accordion" aria-expanded="false">
-                                            <span class="order_num">
-                                                <span>주문 번호</span>
-                                                <strong>20260608115948-00004</strong>
-                                            </span>
-                                            <span class="arrow"></span>
-                                        </button>
-                                    </div>
-                                    <div class="lecture_detail refund_detail">
-                                        <div class="order_detail_inner">
-                                        
-                                            <dl>
-                                                <dt>결제 수단</dt>
-                                                <dd>신용카드</dd>
-                                                <dt>결제 금액</dt>
-                                                <dd>100,000원</dd>
-                                                <dt>결제일</dt>
-                                                <dd>2026-06-08</dd>
-                                                <dt>환불 예정 금액</dt>
-                                                <dd class="txtRed">100,000원</dd>
-                                            </dl>
-
-                                            <div class="tab_container">
-                                                <ul class="first_tab">
-                                                    <li><a href="#none" class="active" data-tab="package">패키지 (6)</a></li>
-                                                    <li><a href="#none" data-tab="single">단과 (6)</a></li>
-                                                    <li><a href="#none" data-tab="general">일반 과정 (6)</a></li>
-                                                    <li><a href="#none" data-tab="certificate">민간자격증 (6)</a></li>
-                                                </ul>
-                                                
-                                                <!-- 패키지 탭 내용 -->
-                                                <div class="tab_content composition active" id="package">
-
-                                                    <ul class="lecture_list refund_package_list">
-                                                        <li>
-                                                            <div class="order_item">
-                                                                <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                                                    <strong>경영학 패키지</strong>
-                                                                    <span class="arrow"></span>
-                                                                </button>
-                                                            </div>
-                                                            
-                                                            <!-- 주문 상세 선택 -->
-                                                            <div class="refund_package_panel">
-                                                               
-                                                                <table class="data_table">
-                                                                    <caption>결제내역</caption>
-                                                                    <colgroup>
-                                                                        <col style="width:100px">
-                                                                        <col style="width:60px">
-                                                                        <col style="width:80px">
-                                                                        <col>
-                                                                        <col style="width:80px">
-                                                                        <col style="width:100px;">
-                                                                    </colgroup>
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th>학기 및 기수</th>
-                                                                            <th>구분</th>
-                                                                            <th>전공</th>
-                                                                            <th>과정명</th>
-                                                                            <th>수강<br />현황</th>
-                                                                            <th>결제금액</th>
-                                                                        </tr>
-                                                                    </thead>
-
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>
-                                                                                2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                            </td>
-                                                                            <td>이론</td>
-                                                                            <td>사회복지학</td>
-                                                                            <td>외국어로서의한국어교육</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                            </td>
-                                                                            <td>실습</td>
-                                                                            <td>사회복지학</td>
-                                                                            <td>사회복지현장실습</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                            </td>
-                                                                            <td>실습</td>
-                                                                            <td>사회복지학</td>
-                                                                            <td>사회복지현장실습</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>자격증</td>
-                                                                            <td>-</td>
-                                                                            <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>독학사</td>
-                                                                            <td>-</td>
-                                                                            <td>독학사 1단계</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>기타</td>
-                                                                            <td>-</td>
-                                                                            <td>영문법 기초 강좌</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>교재</td>
-                                                                            <td>-</td>
-                                                                            <td>SMAT 1급 A모듈 교재(2024)</td>
-                                                                            <td>-</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-
-                                                                    </tbody>
-                                                                </table>
-
-                                                                
-                                                            </div>
-                                                            <!-- //주문 상세 선택-->
-                                                        </li>
-                                    
-                                                    </ul>
-
-                                                    <ul class="lecture_list refund_package_list">
-                                                        <li>
-                                                            <div class="order_item">
-                                                                <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                                                    <strong>경영학 패키지</strong>
-                                                                    <span class="arrow"></span>
-                                                                </button>
-                                                            </div>
-                                                            
-                                                            <!-- 주문 상세 선택 -->
-                                                            <div class="refund_package_panel">
-                                                               
-                                                                <table class="data_table">
-                                                                    <caption>결제내역</caption>
-                                                                    <colgroup>
-                                                                        <col style="width:100px">
-                                                                        <col style="width:60px">
-                                                                        <col style="width:80px">
-                                                                        <col>
-                                                                        <col style="width:80px">
-                                                                        <col style="width:100px;">
-                                                                    </colgroup>
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th>학기 및 기수</th>
-                                                                            <th>구분</th>
-                                                                            <th>전공</th>
-                                                                            <th>과정명</th>
-                                                                            <th>수강<br />현황</th>
-                                                                            <th>결제금액</th>
-                                                                        </tr>
-                                                                    </thead>
-
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>
-                                                                                2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                            </td>
-                                                                            <td>이론</td>
-                                                                            <td>사회복지학</td>
-                                                                            <td>외국어로서의한국어교육</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                            </td>
-                                                                            <td>실습</td>
-                                                                            <td>사회복지학</td>
-                                                                            <td>사회복지현장실습</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                            </td>
-                                                                            <td>실습</td>
-                                                                            <td>사회복지학</td>
-                                                                            <td>사회복지현장실습</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>자격증</td>
-                                                                            <td>-</td>
-                                                                            <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>독학사</td>
-                                                                            <td>-</td>
-                                                                            <td>독학사 1단계</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>기타</td>
-                                                                            <td>-</td>
-                                                                            <td>영문법 기초 강좌</td>
-                                                                            <td>수강중</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                -
-                                                                            </td>
-                                                                            <td>교재</td>
-                                                                            <td>-</td>
-                                                                            <td>SMAT 1급 A모듈 교재(2024)</td>
-                                                                            <td>-</td>
-                                                                            <td>100,000원</td>
-                                                                        </tr>
-
-                                                                    </tbody>
-                                                                </table>
-
-                                                            </div>
-                                                            <!-- //주문 상세 선택-->
-                                                        </li>
-                                    
-                                                    </ul>
-
-                                                    
-                                                </div>
-                                                <!-- //패키지 탭 내용 -->
-
-                                                <!-- 단과 탭 내용 -->
-                                                <div class="tab_content composition" id="single">
-                                                    
-                                                    <table class="data_table">
-                                                        <caption>구성 과정 목록</caption>
-                                                        <colgroup>
-                                                            <col style="width:100px">
-                                                            <col style="width:60px">
-                                                            <col style="width:80px">
-                                                            <col>
-                                                            <col style="width:80px">
-                                                            <col style="width:100px;">
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th>학기 및 기수</th>
-                                                                <th>구분</th>
-                                                                <th>전공</th>
-                                                                <th>과정 명</th>
-                                                                <th>수강현황</th>
-                                                                <th>결제금액</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                 <td>
-                                                                    2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                 </td>
-                                                                <td>이론</td>
-                                                                <td>사회복지학</td>
-                                                                <td>외국어로서의한국어교육</td>
-                                                                <td>수강중</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                 <td>
-                                                                    2026년 2학기 2기<br />(26.04.01 ~ 26.05.15)
-                                                                 </td>
-                                                                <td>실습</td>
-                                                                <td>사회복지학</td>
-                                                                <td>외국어로서의한국어교육</td>
-                                                                <td>수강중</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                       
-                                                </div>
-                                                <!-- //단과 탭 내용 -->
-
-                                                <!-- 일반과정 탭 내용 -->
-                                                <div class="tab_content composition" id="general">
-                                                    
-                                                    <table class="data_table">
-                                                        <caption>구성 과정 목록</caption>
-                                                        <colgroup>
-                                                            <col style="width:170px;">
-                                                            <col>
-                                                            <col>
-                                                            <col>
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th>구분</th>
-                                                                <th>과정 명</th>
-                                                                <th>수강현황</th>
-                                                                <th>결제금액</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                 <td>
-                                                                    자격증
-                                                                 </td>
-                                                                <td>외국어로서의한국어교육</td>
-                                                                <td>수강중</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                 <td>
-                                                                    독학사
-                                                                 </td>
-                                                                <td>독학사 1단계</td>
-                                                                <td>수강중</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-                                                            <tr>
-                                                                 <td>
-                                                                    기타
-                                                                 </td>
-                                                                <td>영문법 기초 강좌</td>
-                                                                <td>수강중</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-                                                            <tr>
-                                                                 <td>
-                                                                    교재
-                                                                 </td>
-                                                                <td>SMAT 1급 A모듈 교재(2024)</td>
-                                                                <td>-</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-
-                                                </div>
-                                                <!-- //일반과정 탭 내용 -->
-
-                                                <!-- 민간자격증 탭 내용 -->
-                                                <div class="tab_content composition" id="certificate">
-                                                    <table class="data_table">
-                                                        <caption>구성 과정 목록</caption>
-                                                        <colgroup>
-                                                            <col>
-                                                            <col>
-                                                            <col>
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th>구분</th>
-                                                                <th>과정 명</th>
-                                                                <th>결제금액</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                 <td>발급</td>
-                                                                <td>경영정책전문가</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                 <td>발급</td>
-                                                                <td>경영정책전문가</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-                                                            <tr>
-                                                                 <td>발급</td>
-                                                                <td>경영정책전문가</td>
-                                                                <td>100,000원</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <!-- //민간자격증 탭 내용 -->
-
-                                            </div>
-
+                                    <label class="order_item">
+                                        <div class="order_num">
+                                            <span>주문 번호</span>
+                                            <strong>20230608115948-00694124</strong>
                                         </div>
+                                    </label>
+
+                                    <dl class="refund_detail">
+                                        <dt>결제 수단</dt>
+                                        <dd>신용카드</dd>
+                                        <dt>결제 금액</dt>
+                                        <dd>100,000원</dd>
+                                        <dt>결제일</dt>
+                                        <dd>2026-06-08</dd>
+                                        <dt>환불 예정 금액</dt>
+                                        <dd class="txtRed">100,000원</dd>
+                                    </dl>
+
+                                    <!-- 패키지 결제내역 -->
+                                    <div class="detail">
+                                        <h4>패키지 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>패키지 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="5" class="package_title">1경영학 패키지</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>실습</td>
+                                                    <td>사회복지현장실습(수도권)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>교재</td>
+                                                    <td>SMAT 1급 A모듈 교재(2024)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="data_table">
+                                            <caption>패키지 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="5" class="package_title">2경영학 패키지</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>실습</td>
+                                                    <td>사회복지현장실습(수도권)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>교재</td>
+                                                    <td>SMAT 1급 A모듈 교재(2024)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
                                     </div>
+
+                                    
+                                    <!-- //패키지 결제내역 -->
+
+                                    <!-- 단과 결제내역 -->
+                                    <div class="detail">
+                                        <h4>단과 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>단과 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //단과 결제내역 -->
+
+                                    <!-- 일반 과정 결제내역 -->
+                                    <div class="detail">
+                                        <h4>일반 과정 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>일반 과정 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //일반 과정 결제내역 -->
+
+                                    <!-- 민간자격증 결제내역 -->
+                                    <div class="detail">
+                                        <h4>민간자격증 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>민간자격증 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>발급</td>
+                                                    <td>글로벌경영전문가</td>
+                                                    <td>-</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>재발급</td>
+                                                    <td>글로벌경영전문가</td>
+                                                    <td>-</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //민간자격증 결제내역 -->
+
                                 </li>
                             </ul>
 
@@ -838,12 +683,12 @@
                                 </header>
                                 <table class="view_table">
                                     <colgroup>
-                                        <col style="width:80px;">
+                                        <col style="width:120px;">
                                         <col>
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row">구분</th>
+                                            <th scope="row">환불 사유 선택</th>
                                             <td>
                                                 <div class="form_group">
                                                     <label>
@@ -887,7 +732,7 @@
                                 </header>
                                 <table class="view_table">
                                     <colgroup>
-                                        <col style="width:80px;">
+                                        <col style="width:120px;">
                                         <col>
                                     </colgroup>
                                     <tbody>
@@ -927,7 +772,7 @@
                                 </header>
                                 <table class="view_table">
                                     <colgroup>
-                                        <col style="width:80px;">
+                                        <col style="width:120px;">
                                         <col>
                                     </colgroup>
                                     <tbody>
@@ -1124,24 +969,288 @@
 
                             <ul class="lecture_list">
                                 <li>
-                                    <div class="order_item">
+                                    <label class="order_item">
                                         <input type="checkbox">
                                         <div class="order_num">
                                             <span>주문 번호</span>
-                                            <strong>20260608115948-00004</strong>
+                                            <strong>20230608115948-00694124</strong>
                                         </div>
-                                        <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
+                                    </label>
+                                    <p class="refund_date">환불 신청일시: 2026-06-15 22:57</p>
+                                    <!-- 패키지 결제내역 -->
+                                    <div class="detail">
+                                        <h4>패키지 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>패키지 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:50px">
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="6" class="package_title">1경영학 패키지</th>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>실습</td>
+                                                    <td>사회복지현장실습(수도권)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>교재</td>
+                                                    <td>SMAT 1급 A모듈 교재(2024)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="data_table">
+                                            <caption>패키지 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:50px">
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="6" class="package_title">2경영학 패키지</th>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>실습</td>
+                                                    <td>사회복지현장실습(수도권)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>교재</td>
+                                                    <td>SMAT 1급 A모듈 교재(2024)</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="order_item">
-                                        <input type="checkbox">
-                                        <div class="order_num">
-                                            <span>주문 번호</span>
-                                            <strong>20260608115948-00004</strong>
-                                        </div>
-                                        <button type="button" class="btn txtGray btn_composition">구성 과정 확인</button>
+
+                                    
+                                    <!-- //패키지 결제내역 -->
+
+                                    <!-- 단과 결제내역 -->
+                                    <div class="detail">
+                                        <h4>단과 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>단과 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:50px">
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>2026년 2학기 2기 (9월 13일)</td>
+                                                    <td>이론</td>
+                                                    <td>외국어로서의한국어교육</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
+                                    <!-- //단과 결제내역 -->
+
+                                    <!-- 일반 과정 결제내역 -->
+                                    <div class="detail">
+                                        <h4>일반 과정 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>일반 과정 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:50px">
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>자격증</td>
+                                                    <td>내일은 컴퓨터 활용능력 2급 실기</td>
+                                                    <td>수강중</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //일반 과정 결제내역 -->
+
+                                    <!-- 민간자격증 결제내역 -->
+                                    <div class="detail">
+                                        <h4>민간자격증 (1)</h4>
+                                        <table class="data_table">
+                                            <caption>민간자격증 결제내역</caption>
+                                            <colgroup>
+                                                <col style="width:50px">
+                                                <col style="width:130px">
+                                                <col style="width:60px">
+                                                <col>
+                                                <col style="width:70px">
+                                                <col style="width:85px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>학기 및 기수</th>
+                                                    <th>구분</th>
+                                                    <th>과정 명</th>
+                                                    <th>수강 현황</th>
+                                                    <th>결제 금액</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>발급</td>
+                                                    <td>글로벌경영전문가</td>
+                                                    <td>-</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>-</td>
+                                                    <td>재발급</td>
+                                                    <td>글로벌경영전문가</td>
+                                                    <td>-</td>
+                                                    <td>30,000원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //민간자격증 결제내역 -->
+
                                 </li>
                             </ul>
 
@@ -1165,16 +1274,20 @@
                                     <dd>690,000원</dd>
                                 </div>
                                 <div>
+                                    <dt>환불 신청일</dt>
+                                    <dd>2026-06-11 22:57</dd>
+                                </div>
+                                <div>
                                     <dt>환불 처리 상태</dt>
                                     <dd>환불 신청중</dd>
                                 </div>
-                                <div>
+                                <div class="border">
                                     <dt>환불 처리일</dt>
                                     <dd>-</dd>
                                 </div>
                                 <div>
                                     <dt>환불 예정 금액</dt>
-                                    <dd class="date">879,000원</dd>
+                                    <dd class="date flash_ani">879,000원</dd>
                                 </div>
                                 <div>
                                     <dt>환불 수단</dt>
@@ -1187,7 +1300,7 @@
                                 <button type="button" class="btn" disabled>다음 <span class="material-symbols-rounded">keyboard_arrow_right</span></button>
                             </div>
 
-                            <button type="button" class="btn primary">선택한 주문 취소 (3건)</button>
+                            <button type="button" class="btn primary">환불 신청 취소 취소 (3건)</button>
 
                             <p>'환불 처리중' , '환불 완료' 상태의 환불 신청건은 취소가 불가합니다.</p>
                         </div>
@@ -1212,529 +1325,6 @@
 
             </section>
             <!-- //환불규정 -->
-
-            <!-- 레이어 / 구성 과정 -->
-            <div class="layer_wrapper layer_composition"> <!-- active 추가 시 화면노출 -->
-                <div class="layer_basic">
-
-                    <header>
-                        <div>
-                            <h1>구성 과정</h1>
-                        </div>
-                        <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
-                    </header>
-
-                    <!-- layer 내용 -->
-                    <div class="layer_content">
-
-                        <div class="tab_container">
-                            <ul class="first_tab">
-                                <li><a href="#none" class="active" data-tab="package">패키지 (6)</a></li>
-                                <li><a href="#none" data-tab="single">단과 (6)</a></li>
-                                <li><a href="#none" data-tab="general">일반 과정 (6)</a></li>
-                                <li><a href="#none" data-tab="certificate">민간자격증 (6)</a></li>
-                            </ul>
-                            
-                            <!-- 패키지 탭 내용 -->
-                            <div class="tab_content composition active" id="package">
-                                <ul class="lecture_list">
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>경영학 패키지</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-                                            <div class="course_header">
-                                                <strong>2026년 2학기 5기 (9월 23일 개강)</strong>
-                                                <span>이론</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>외국어로서의한국어교육</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <div class="course_header">
-                                                <span>실습</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>사회복지현장실습</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>경영학 패키지</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-                                            <div class="course_header">
-                                                <strong>2026년 2학기 5기 (9월 23일 개강)</strong>
-                                                <span>이론</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>외국어로서의한국어교육</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <div class="course_header">
-                                                <span>실습</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>사회복지현장실습</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- //패키지 탭 내용 -->
-
-                            <!-- 단과 탭 내용 -->
-                            <div class="tab_content composition" id="single">
-                                <ul class="lecture_list">
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>2026년 2학기 5기 (9월 23일 개강)</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-                                            <div class="course_header">
-                                                <span>실습 과정</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>외국어로서의한국어교육</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            외국어로서의한국어교육
-                                                        </td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>2026년 2학기 5기 (9월 23일 개강)</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-                                            <div class="course_header">
-                                                <span>실습 과정</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>외국어로서의한국어교육</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>외국어로서의한국어교육</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <div class="course_header">
-                                                <span>이론 과정</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>외국어로서의한국어교육</td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            외국어로서의한국어교육
-                                                        </td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            외국어로서의한국어교육
-                                                        </td>
-                                                        <td>100,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- //단과 탭 내용 -->
-
-                            <!-- 일반과정 탭 내용 -->
-                            <div class="tab_content composition" id="general">
-                                <ul class="lecture_list">
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>자격증 · 독학사</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-                                            <div class="course_header">
-                                                <span>자격증</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <div class="course_header">
-                                                <span>독학사</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>독학사 2단계</td>
-                                                        <td>50,000원</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>독학사 2단계</td>
-                                                        <td>50,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>기타</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-
-                                                   <tr>
-                                                        <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>내일은 컴퓨터 활용능력 2급 실기</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>교재</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>교재 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>SMAT 1급 A모듈 교재(2024)</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-
-                                                   <tr>
-                                                        <td>SMAT 1급 A모듈 교재(2024)</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <!-- //일반과정 탭 내용 -->
-
-                            <!-- 민간자격증 탭 내용 -->
-                            <div class="tab_content composition" id="certificate">
-                                <ul class="lecture_list">
-                                    <li>
-                                        <button type="button" class="schedule_group btn_accordion" aria-expanded="false">
-                                            <strong>발급 · 재발급</strong>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <!-- 과정선택 테이블 -->
-                                        <div class="course_detail">
-                                            <div class="course_header">
-                                                <span>발급</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>경영정책전문가</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>경영정책전문가</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <div class="course_header">
-                                                <span>재발급</span>
-                                            </div>
-
-                                            <table class="list_table">
-                                                <caption>구성 과정 목록</caption>
-                                                <colgroup>
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>과정 명</th>
-                                                        <th>결제금액</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>독학사 2단계</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>독학사 2단계</td>
-                                                        <td>30,000원</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- //과정 테이블-->
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- //민간자격증 탭 내용 -->
-
-                        </div>   
-
-                    </div>
-                    <!-- //layer 내용 -->
-                    
-                </div>
-                
-            </div>
-            <!-- //레이어 / 구성과정 -->
-
 
 
         </section>

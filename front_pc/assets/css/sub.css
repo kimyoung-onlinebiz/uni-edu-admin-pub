@@ -57,7 +57,7 @@
 
 .sub_header .essential { font-size:var(--Font-2xsmall) !important; }
 .sub_header h5 { font-weight:500; }
-.sub_header.column h5 { font-size:var(--Font-medium) !important; font-weight:500; margin-bottom:4px; }
+.sub_header.column h5 { width:100%; font-size:var(--Font-medium) !important; font-weight:500; margin-bottom:4px; }
 .sub_header.column h5 small { font-size:var(--Font-medium) !important; color:var(--Neutral-600); }
 .sub_header h5 strong { color:var(--Info); }
 
@@ -366,6 +366,7 @@ div.table_guide { display:flex; align-items:center; }
 
 .icon_tooltip { position:relative; display:inline-block; margin-left:4px; color:var(--Neutral-600); font-size:18px; cursor:pointer; }
 .icon_tooltip button { color:var(--Neutral-600); font-size:21px; vertical-align:-5px; }
+.icon_tooltip button:hover { color:var(--Primary-900); }
 .tooltip { opacity:0; visibility:hidden; transition:opacity .18s ease, transform .18s ease, visibility .18s; position:absolute; top:35px; left:-16px; display:block; width:max-content; max-width:min(280px, calc(100vw - 40px)); box-sizing:border-box; overflow-wrap:break-word; border-radius:var(--Border-radius); background:var(--Neutral-900); color:#fff; font-size:12px; padding:8px 15px; text-align:left;  z-index:100; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 .icon_tooltip.open .tooltip { opacity:1; visibility:visible; }
 .tooltip ul { margin:8px 0; }
@@ -1062,17 +1063,13 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 
 /* 학사일정 */
 .lecture_list { display:flex; flex-direction:column; gap:16px; }
-.lecture_list > li { overflow:hidden; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); background:var(--Neutral-0); }
+.lecture_list > li { overflow:hidden;border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); background:var(--Neutral-0); }
 .schedule_group { min-height:67px; padding:0 24px 0 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--Neutral-500); width:100%; }
 .schedule_group > strong { display:flex; align-items:center; gap:14px; font-size:var(--Font-large); font-weight:600; }
 .schedule_group .btn { width:120px; height:40px; }
-.lecture_list > li:not(.active) > .schedule_group.btn_accordion,
-.lecture_list > li:not(.active) > .order_item > .schedule_group.btn_accordion,
-.lecture_list > li:not(.active) > .course_period_head > .schedule_group.btn_accordion { border-bottom-color:transparent; }
+.lecture_list > li:not(.active) > .schedule_group.btn_accordion { border-bottom-color:transparent; }
 .schedule_group.btn_accordion .arrow { width:9px; height:9px; border-right:2px solid var(--Neutral-900); border-bottom:2px solid var(--Neutral-900); transform:rotate(45deg); transition:transform 0.4s ease; }
-.lecture_list > li.active > .schedule_group.btn_accordion .arrow,
-.lecture_list > li.active > .order_item > .schedule_group.btn_accordion .arrow,
-.lecture_list > li.active > .course_period_head > .schedule_group.btn_accordion .arrow { transform:rotate(-135deg); }
+.lecture_list > li.active > .schedule_group.btn_accordion .arrow { transform:rotate(-135deg); }
 .lecture_list > li > .course_detail { height:0; padding:0 24px; overflow:hidden; transition:height 0.4s ease, padding 0.4s ease; }
 .lecture_list > li.active > .course_detail { padding:24px; }
 .schedule_detail { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); background:var(--Neutral-0); margin-bottom:8px; }
@@ -1087,57 +1084,27 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .coupon_name span { font-size:var(--Font-xsmall); color:var(--Neutral-600); padding-top:8px; }
 
 .pay_history.active { display:grid; grid-template-columns:minmax(0, 1fr) 320px; column-gap:32px; }
-.pay_history.refund_request > .sub_header { grid-column:1 / -1; }
+.pay_history > .sub_header { grid-column:1 / -1; }
 .pay_history > .board_search { grid-column:1 / -1; }
 .pay_history > .no_data,.two_column_layout .no_data,.tabmenu_content .no_data { display:flex; justify-content:center; align-items:center; width:100%; height:300px; border-bottom:1px solid var(--Neutral-300); flex-direction:column; gap:16px; }
 .pay_history > .no_data { padding-left:250px; }
 .pay_history > .payment_list { display:contents; }
 .payment_list .order { grid-column:1; }
-.payment_list .check { display:inline-block; margin:14px 0 30px; font-size:14px; }
-.payment_list .order_item { display:flex; align-items:center; height:80px; padding:0 22px 0 24px; margin-bottom:16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
-.pay_history.refund_request .refund_order_list { gap:0; margin-bottom:16px; }
-.pay_history.refund_request .refund_order_list > li { margin-bottom:16px; }
-.pay_history.refund_request .refund_order_list > li.active,.pay_history.refund_request .refund_package_list > li.active { border-color:var(--Primary-500); }
-.refund_package_list { margin-bottom:16px; }
-.pay_history.refund_request .refund_order_list .order_item { height:60px; margin:0; padding:0 22px 0 24px; border:0; border-radius:0; }
-.pay_history.refund_request .refund_order_list .schedule_group { border:0; }
-.pay_history.refund_request .payment_list .order_toggle { display:flex; flex:1; align-items:center; justify-content:space-between; height:100%; text-align:left; }
-.pay_history.refund_request .payment_list .order_toggle .arrow { width:9px; height:9px; flex:0 0 9px; border-right:2px solid var(--Neutral-900); border-bottom:2px solid var(--Neutral-900); transform:rotate(45deg); transition:transform 0.4s ease; }
-.pay_history.refund_request .refund_order_list > li.active .order_toggle .arrow { transform:rotate(-135deg); }
-.pay_history.refund_request .refund_order_list > li > .lecture_detail { display:grid; grid-template-rows:0fr; max-height:none; padding:0; overflow:hidden; background:var(--Neutral-100); transition:grid-template-rows 0.4s ease; }
-.pay_history.refund_request .refund_order_list > li.active > .lecture_detail { grid-template-rows:1fr; border-top:1px solid var(--Neutral-500); }
-.pay_history.refund_request .order_detail_inner { min-height:0; overflow:hidden; padding:0 24px; transition:padding 0.4s ease; }
-.pay_history.refund_request .refund_order_list > li.active > .lecture_detail > .order_detail_inner { padding:24px; }
-.pay_history.refund_request .refund_package_list > li { overflow:hidden; background:transparent; }
-.pay_history.refund_request .course_period_detail { padding:24px; border:1px solid var(--Neutral-500); border-top:0; border-radius:0 0 var(--Border-2radius) var(--Border-2radius); background: var(--Neutral-200); }
-.pay_history.refund_request .course_period_head { display:flex; align-items:center; min-height:56px; padding:0 24px; background:var(--Neutral-0); border-bottom:1px solid var(--Neutral-500); border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius) var(--Border-2radius) 0 0; }
-.pay_history.refund_request .course_period_head > label { display:flex; align-items:center; flex:0 0 36px; }
-.pay_history.refund_request .course_period_head > strong { font-size:var(--Font-medium); font-weight:600; }
-.refund_package_panel .data_table { margin:0 20px 20px; width:calc(100% - 40px); table-layout:fixed; }
-.pay_history.refund_request .course_period_detail .list_table th,
-.pay_history.refund_request .course_period_detail .list_table td,.refund_package_panel .data_table td,.refund_package_panel .data_table th { word-break:break-all; overflow-wrap:anywhere; }
-.pay_history.refund_request .refund_package_panel { height:0; overflow:hidden; visibility:hidden; transition:height 0.4s ease, visibility 0s linear 0.4s; }
-.pay_history.refund_request .refund_package_list > li.active > .refund_package_panel { height:auto; visibility:visible; transition:height 0.4s ease, visibility 0s; }
-.refund_single_panel { display:flex; gap:16px; flex-direction:column; }
-.refund_single_panel .course_period { overflow:hidden; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
-.refund_single_panel .course_period_head { border:0 !important; }
-.refund_single_panel .course_period_head .course_period_toggle { display:flex; flex:1; align-items:center; justify-content:space-between; min-width:0; padding:0; border:0; background:transparent; text-align:left; cursor:pointer; }
-.refund_single_panel .course_period_head .course_period_toggle > strong { font-size:var(--Font-medium); font-weight:600; }
-.refund_single_panel .course_period_head .course_period_toggle .arrow { width:9px; height:9px; flex:0 0 9px; margin-left:16px; border-right:2px solid var(--Neutral-900); border-bottom:2px solid var(--Neutral-900); transform:rotate(45deg); transition:transform 0.4s ease; }
-.refund_single_panel .course_period.active .course_period_toggle .arrow { transform:rotate(-135deg); }
-.refund_single_panel .course_period_detail { box-sizing:border-box; height:0; padding:0 !important; overflow:hidden; border:0 !important;  transition:height 0.4s ease; }
-.refund_single_panel .course_period_detail_inner { padding:24px; border-top:1px solid var(--Neutral-500) !important;}
-.pay_history.refund_request .refund_package_panel > .course_period { min-height:0; overflow:hidden; padding:0 24px; transition:padding 0.4s ease; }
-.pay_history.refund_request .refund_package_list > li.active > .refund_package_panel > .course_period { padding:24px 24px 0; }
-.pay_history.refund_request .refund_package_list > li.active > .refund_package_panel > .course_period:first-child { border-top:1px solid var(--Neutral-500); }
-.pay_history.refund_request .refund_package_list > li.active > .refund_package_panel > .course_period:last-child { padding-bottom:24px; }
-
-.pay_history.waiting_payment .payment_list .order > .lecture_list > li {overflow:visible; border:0; border-radius:0; background:transparent; }
-.lecture_list > li.active { border:1px solid var(--Primary-500); }
-.pay_history.waiting_payment .payment_list .order > .lecture_list .order_item { margin:0; }
-.order_item .order_num { display:flex; align-items:center; flex:1; gap:24px; margin-left:24px; }
+.payment_list .check { display:inline-block; margin:14px 0 28px; font-size:14px; }
+.payment_list .order_item { display:flex; align-items:center; height:80px; padding:0 22px 0 24px;  }
+.payment_list .detail { background:var(--Neutral-200); padding:24px 32px; border-bottom:1px solid var(--Neutral-300); }
+.payment_list .detail:first-of-type { border-top:1px solid var(--Neutral-500); }
+.payment_list .detail h4 { font-size:var(--Font-medium); font-weight:600; margin-bottom:12px; }
+.payment_list .detail .package_title { background:var(--Neutral-300); }
+#refund_request .detail .data_table { table-layout:fixed; }
+#refund_request .detail .data_table th,#refund_request .detail .data_table td { padding:16px 8px; overflow-wrap:anywhere; }
+.payment_list .detail table { margin-bottom:24px; }
+.payment_list .detail table:last-of-type { margin-bottom:0; }
+.lecture_list li { position:relative; }
+.refund_date { position:absolute; right:24px; top:24px; font-size:var(--Font-2xsmall); color:var(--Neutral-600); margin:8px 0; }
+.order_item .order_num { display:flex; align-items:center; flex:1; gap:24px; margin-left:16px; }
 .order_item .order_num span { color:var(--Neutral-600); font-size:var(--Font-xsmall); }
-.order_num strong { font-weight:500; }
+.order_num strong { font-weight:500; color:var(--Neutral-900); }
 .payment_info { position:sticky; top:24px; grid-column:2; align-self:start; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); padding:0 20px 20px; width:320px; }
 .payment_info h2 { position:relative; display:flex; justify-content:space-between; align-items:center; padding:22px 0 17px; font-weight:600; border-bottom:1px solid var(--Neutral-900); }
 .payment_info h2 small { font-size:var(--Font-xsmall); font-weight:400; color:#444; }
@@ -1176,11 +1143,11 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .composition .course_header, .layer_content .course_header { flex-direction:column; align-items:flex-start; justify-content:flex-start; gap:0; }
 .composition .course_header:first-child span { margin-top:8px; }
 .composition .course_header span,.layer_content .course_header span { color:var(--Neutral-900); font-weight:600; font-size:var(--Font-base); margin-top:24px; }
-.lecture_detail.refund_detail { background:var(--Neutral-0) !important; }
-.lecture_detail.refund_detail dl { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
-.lecture_detail.refund_detail dl dt { font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
-.lecture_detail.refund_detail dl dd { font-size:var(--Font-small); margin-right:12px; }
-.lecture_detail.refund_detail dl dd:last-child {  margin-right:0; }
+
+.lecture_list .refund_detail { display:flex; justify-content:space-between; align-items:center; margin:0 24px 16px; padding-top:16px; border-top:1px solid var(--Neutral-300); }
+.lecture_list .refund_detail dt { font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
+.lecture_list .refund_detail dd { font-size:var(--Font-small); margin-right:12px; }
+.lecture_list .refund_detail dd:last-child {  margin-right:0; }
 .refund_info { padding:24px; background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:8px; margin-bottom:24px; display:flex; margin-bottom:16px; justify-content:space-between; }
 .refund_info dl { position:relative; }
 .refund_info dt { font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
@@ -1196,3 +1163,14 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .payment_complete p { font-size:var(--Font-medium); font-weight:600; }
 .payment_complete strong { color:var(--Primary-500); font-weight:600; }
 .payment_complete a { width:220px; height:40px; font-size:var(--Font-medium); line-height:38px; text-align:center; }
+
+/* 환불제도 */
+.refund_system .txt_guide_gray span { color:var(--Neutral-600); padding-bottom:8px; display:block; }
+.refund_system .txt_guide_gray p { margin-bottom:8px; }
+.refund_system ul > li { position:relative; padding-left:12px; margin-bottom:8px; }
+.refund_system ul > li:before { content:"- "; color:var(--Neutral-600); position:absolute; left:0; top:0; }
+.refund_system table { margin:12px 0 24px 0; }
+.refund_system ul ol > li { font-size:var(--Font-medium); }
+.refund_system ol > li { margin-bottom:8px; }
+.refund_system ol { margin-top:8px; }
+.refund_system .sub_header + table { margin-top:0; }

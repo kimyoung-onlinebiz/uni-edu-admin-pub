@@ -104,7 +104,7 @@ select.is-selected { color:var(--Neutral-900); font-weight:500; }
 input[type="date"] { color:var(--Neutral-500); width:140px; }
 select:disabled { background-color:var(--Neutral-300); cursor:not-allowed; font-weight:400 !important; color:var(--Neutral-600); }
 select:focus { border:1px solid var(--Primary-500); outline:transparent; }
-label { cursor:pointer; color:var(--Neutral-600); font-size:var(--Font-small); }
+label { cursor:pointer; font-size:var(--Font-small); }
 input:disabled,textarea:disabled,input:disabled+label,textarea:disabled+label { cursor:not-allowed; }
 label strong { color:var(--Info); }
 label a.btn { font-size:var(--Font-2xsmall); color:var(--Neutral-800); font-weight:500; margin-left:8px; height:24px; line-height:20px; }
@@ -238,7 +238,8 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 
 /* 5. 공통 컴포넌트: 입력 필드 */
 /* 기본 입력 그룹 레이아웃 */
-.form_group { display:flex; gap:16px }
+.form_group { display:flex; gap:16px; flex-wrap:wrap; }
+.form_group > label { white-space:nowrap; }
 .form_group.gap24 { gap:24px }
 .form_group.column { flex-direction:column; gap:8px; align-items: flex-start; }
 .alignC { align-items:center !important; }
@@ -370,7 +371,7 @@ table th { font-weight:600; }
 .list_table.auto { table-layout:auto; }
 .list_table::before,.view_table::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-900); }
 .view_table.borderGray::before { border-top:1px solid var(--Neutral-500); }
-.list_table th,.list_table td { padding:12px 10px 10px; text-align:center; vertical-align:middle; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); }
+.list_table th,.list_table td { padding:12px 10px 10px; text-align:center; vertical-align:middle; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); overflow-wrap:anywhere; }
 .layer_wrapper table th,
 .layer_wrapper table td { padding:10px 10px 8px; }
 .list_table th,.view_table th { background:var(--Neutral-100); text-align:center; }

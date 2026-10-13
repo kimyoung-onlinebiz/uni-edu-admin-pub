@@ -353,6 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_observeDiscussSubmit', triggers: ['.btn_observeDiscussSubmit'], closeCurrentLayer: true }, //강의참관토론 레이어
             { layer: '.layer_wrapper.layer_other_subject', triggers: ['.btn_other_subject'], closeCurrentLayer: true }, //타교육원 선수과목 등록 레이어
             { layer: '.layer_wrapper.layer_profile_guide', triggers: ['.btn_profile_guide'], closeCurrentLayer: true }, //실습생 프로파일 작성안내 레이어
+            { layer: '.layer_wrapper.layer_practiceGuide', triggers: ['.btn_practiceGuide'], closeCurrentLayer: true }, //현장실습신청서 작성 유의사항 동의 체크
         ]);
     }
 
@@ -675,7 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
     function initAccordion() {
         const setAccordionPanelHeight = (item, isOpen, animate = true) => {
-            const panel = q(':scope > .course_detail, :scope > .refund_package_panel, :scope > .course_period_detail', item);
+            const panel = q(':scope > .course_detail', item);
             if (!panel) {
                 return;
             }
@@ -709,38 +710,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (items.length && !items.some((item) => item.classList.contains('active'))) {
-                items[0].classList.add('active');
-            }
-
-            items.forEach((item) => {
-                const isActive = item.classList.contains('active');
-                q('.btn_accordion', item)?.setAttribute('aria-expanded', String(isActive));
-                setAccordionPanelHeight(item, isActive, false);
-            });
-        });
-
-        qa('.refund_order_list').forEach((list) => {
-            qa(':scope > li', list).forEach((item, index) => {
-                const isActive = index === 0;
-                item.classList.toggle('active', isActive);
-                q('.btn_accordion', item)?.setAttribute('aria-expanded', String(isActive));
-
-                qa('.refund_package_list > li', item).forEach((packageItem, packageIndex) => {
-                    const isPackageActive = packageIndex === 0;
-                    packageItem.classList.toggle('active', isPackageActive);
-                    q('.btn_accordion', packageItem)?.setAttribute('aria-expanded', String(isPackageActive));
-                    setAccordionPanelHeight(packageItem, isPackageActive, false);
-                });
-            });
-        });
-
-        qa('.refund_single_panel').forEach((panel) => {
-            const items = qa(':scope > .accordion_item', panel);
-            if (!items.length) {
-                return;
-            }
-
-            if (!items.some((item) => item.classList.contains('active'))) {
                 items[0].classList.add('active');
             }
 
