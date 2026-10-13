@@ -1,0 +1,376 @@
+﻿@charset "UTF-8";
+
+/* 현장실습온라인 */
+.onlinePractice { width:1280px; height:800px; position:relative; overflow:hidden; text-align:center; background:#efefef; }
+.onlinePractice .main { width:100%; height:100%; background:url(images/index_bg.jpg) no-repeat center center; animation:bgScale 2s ease-out both }
+.onlinePractice a,.onlinePractice button { transition:all .2s; }
+
+.onlinePractice input[type="text"],.onlinePractice input[type="tel"],.onlinePractice input[type="text"],.onlinePractice input[type="email"],.onlinePractice input[type="date"],.onlinePractice input[type="time"],.onlinePractice select { border:1px solid #aaa; border-radius:3px; height:30px; padding:0 16px; color:#777; font-size:13px; margin:0; }
+.onlinePractice textarea { padding:16px; }
+.onlinePractice select { padding:0 32px 0 16px; }
+.onlinePractice input::placeholder,.onlinePractice textarea::placeholder { color:#777; }
+.onlinePractice input[type=text]:focus,.onlinePractice input[type=password]:focus, .onlinePractice textarea:focus,.onlinePractice input[type=tel]:focus,.onlinePractice input[type=email]:focus,.onlinePractice input[type="date"]:focus { outline:2px solid #01b865; border:1px solid #01b865; }
+.onlinePractice input[type="text"]:disabled,.onlinePractice input[type="tel"]:disabled,.onlinePractice input[type="email"]:disabled,.onlinePractice input[readonly] { background:#efefef; }
+
+.onlinePractice .main h1 { font-size:44px; font-weight:300; margin:0 auto 28px; color:#fff; padding-top:80px; animation:blur 1s ease both; } 
+.onlinePractice .main h1 strong { font-size:52px; font-weight:900; color:#00dc78; } 
+.onlinePractice .main h2 { font-size:28px; font-weight:500; color:#fff;animation:blur .6s .6s ease both; } 
+.onlinePractice .main h2:before { content:""; display:block; margin:0 auto 5px;height:4px; background:#01b865; width:30px; } 
+.onlinePractice .main ul { margin:32px auto 60px; display:flex; gap:24px; justify-content:center; } 
+.onlinePractice .main ul li { width:280px; height:260px; background:#fff; border-radius:10px; }
+.onlinePractice .main ul li:first-child { animation:fadeIn_up .8s .7s ease both; }
+.onlinePractice .main ul li:nth-child(2) { animation:fadeIn_up .8s .9s ease both; }
+.onlinePractice .main ul li:nth-child(3) { animation:fadeIn_up .8s 1.1s ease both; }
+.onlinePractice .main ul li dl { padding-top:130px; }
+.onlinePractice .main ul li dt { font-weight:500; font-size:16px; padding-bottom:3px; }
+.onlinePractice .main ul li dd { font-weight:700; font-size:24px; color:#01b865; }
+.onlinePractice .main ul li a { display:block; width:240px; height:35px; line-height:35px; border-radius:3px; background:#00DC78 url(images/bullet_rightBlack.png) no-repeat calc( 50% + 31px ) center; padding-right:17px; margin:20px auto 0; font-weight:600; }
+.onlinePractice .main ul li a:hover { color:#111; background:#00ef83 url(images/bullet_rightBlack.png) no-repeat calc( 50% + 26px ) center; }
+.onlinePractice .main ul li:nth-child(1) dl { background:url(images/index_icon01.png) no-repeat center 26px; }
+.onlinePractice .main ul li:nth-child(2) dl { background:url(images/index_icon02.png) no-repeat center 26px; }
+.onlinePractice .main ul li:nth-child(3) dl { background:url(images/index_icon03.png) no-repeat center 26px; }
+.onlinePractice .main > a { display:block; width:320px; height:48px; line-height:44px; border-radius:30px; border:2px solid #fff; font-weight:700; color:#fff; font-size:24px; background:url(images/bullet_rightWhite.png) no-repeat calc( 65% + 32px ) center; padding-right:24px; margin:0 auto; animation:fadeIn_up .6s 1.3s ease both;  }
+
+.table_basic::before { display:block; position:absolute; top:0; content:"";width:100%; border-top:1px solid var(--Neutral-900); }
+.table_basic th,.table_basic td { padding:16px 8px; text-align:center; vertical-align:middle; line-height:1.1; font-size:var(--Font-small); }
+.table_basic th,.view_table th { background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-bottom:none; text-align:center; }
+.table_basic tbody th { border-bottom:1px solid var(--Neutral-300); }
+.table_basic td { border:1px solid #dfe8ec; text-align:center; background:var(--Neutral-0); }
+.table_basic.align_left td { text-align:left; }
+.table_basic.align_left .form_check { justify-content:start; }
+
+
+.onlinePractice .main > a:hover { border:2px solid #00dc78; color:#00dc78; background:url(images/bullet_rightGreen.png) no-repeat calc( 65% + 32px ) center; }
+.onlinePractice .header { height:60px; background:#020040; display:flex; justify-content:space-between; align-items:center; padding:0 50px; }
+.onlinePractice .header h1 { position:relative; font-size:23px; color:#fff; font-weight:700; padding:3px 0 0 53px; }
+.onlinePractice .header h1:before { position:absolute; left:0; top:-5px; content:""; display:inline-block; background:url(images/icon_header.png) no-repeat; width:40px; height:41px; }
+.onlinePractice .header ul { display:flex; gap:24px; }
+.onlinePractice .header ul a { position:relative; display:block; color:#aaa; font-weight:700; font-size:18px; height:60px; padding-top:18px; }
+.onlinePractice .header ul a.current { color:#fff; }
+.onlinePractice .header ul a.current:after { display:block; content:""; position:absolute; bottom:0; left:50%; margin-left:-33px; height:4px; width:66px; background:#00dc78; }
+.onlinePractice .onlinePractice_content { margin:40px; }
+.onlinePractice .onlinePractice_content > ol { height:50px; display:flex; gap:1px; border-radius:5px; overflow:hidden; margin-bottom:24px; }
+.onlinePractice_content > ol li { width:25%; }
+.onlinePractice_content > ol li a { display:block; width:100%; height:50px; background:#b7b7b7; font-size:16px; color:#fff; text-align:center; padding-top:16px; }
+.onlinePractice_content > ol li a.current { background:#01b865; font-weight:700; }
+.onlinePractice_content > ol li a.end:after { content:""; width:17px; height:14px; display:inline-block; background:url(images/icon_end.png) no-repeat; margin-left:8px; }
+.onlinePractice_content .content {  background:#fff; border-radius:5px; height:520px; padding:28px 22px 18px; overflow:auto; overflow-x:hidden }
+.onlinePractice_content .content.step2 { height:544px; }
+.onlinePractice_content .content::-webkit-scrollbar,.onlinePractice_content .modalLayer_content::-webkit-scrollbar { width:12px; }
+.onlinePractice_content .content::-webkit-scrollbar-track-piece,.onlinePractice_content .modalLayer_content::-webkit-scrollbar-track-piece { background:#fff; }
+.onlinePractice_content .content::-webkit-scrollbar-thumb,.onlinePractice_content .modalLayer_content::-webkit-scrollbar-thumb {border-radius:8px; background:#777; background-clip:padding-box; border:3px solid transparent; }
+.onlinePractice_content .content > h2 { font-size:20px; font-weight:700; border-bottom:1px solid #111; text-align:left; padding-bottom:14px; }
+.onlinePractice_content .writeInput { display:flex; text-align:left; flex-wrap:wrap; border-bottom:1px solid #eee; }
+.onlinePractice_content .writeInput p { color:#04007C; margin-top:3px; }
+.onlinePractice_content .writeInput p:first-of-type { margin-top:15px; }
+.onlinePractice_content .writeInput dt { width:110px; font-weight:700; padding-left:16px;  height:51px; line-height:51px;}
+.onlinePractice_content .writeInput dd { width:calc(100% - 114px); padding:10px 16px 10px 0; }
+.onlinePractice_content .writeInput dd input:not([type="radio"]) { width:40%; }
+.onlinePractice_content .writeInput dd input.width_100 { width:100%; }
+.onlinePractice_content .writeInput.halfSharing dd { width:38%; }
+.onlinePractice_content .writeInput .width_386 { width:386.8px !important; margin-right:80px; }
+.onlinePractice_content .writeInput.halfSharing .inputButton input { width:68%; }
+.onlinePractice_content .writeInput.halfSharing dd input { width:100%; }
+.onlinePractice_content .writeInput.halfSharing dd input[type=date] { width:181px; margin:0; }
+.onlinePractice_content .writeInput dd span { display:inline-block; text-align:center; width:25px; }
+.onlinePractice_content .writeGuide { display:flex; justify-content:space-between; padding:16px; align-items:center; }
+.writeGuide_list li { color:#777; font-size:13px; }
+.onlinePractice_content .writeGuide p:before,.writeGuide_list ul li:before { content:"※ " }
+.onlinePractice_content .writeGuide a,.onlinePractice_content h3 a { font-size:13px; color:#fff; background:#111; border-radius:30px; padding:5px 20px 4px; }
+.onlinePractice_content h3 { position:relative; }
+.onlinePractice_content h3 ul { position:absolute; right:0; display:flex; gap:12px; }
+.onlinePractice_content .writeGuide a:hover { background:#04007C; }
+.onlinePractice_content .writeCheck { text-align:left; border-top:1px solid #111; padding-top:26px; }
+.onlinePractice_content .writeCheck li { margin-bottom:3px; }
+.onlinePractice_content .writeCheck li a:not(.btn_modalClose),.writeGuide_list .btn_pdf:hover { background:#fff; border:1px solid #999; font-size:12px; padding:3px 12px 2px 15px; border-radius:3px; margin-left:5px; color:#2d2960; height:24px; }
+.onlinePractice_content .writeCheck li span { background:#eee;font-size:12px; padding:3px 12px 2px 15px; border-radius:3px; margin-left:5px; color:#2d2960; height:24px; }
+.onlinePractice_content .writeCheck a,.onlinePractice_content .writeCheck span { display:inline-block; }
+.onlinePractice_content .writeCheck a:after,.writeGuide_list .btn_pdf:after { content:" >"; }
+.onlinePractice_content .writeCheck p { font-size:13px; color:#777; margin:0 0 0 20px; display:inline-block; }
+.onlinePractice_content .writeCheck a:hover,.writeGuide_list li .btn_pdf:hover { background:#d9d8ec; }
+.onlinePractice_content label { cursor:pointer; font-size:13px; color:#777; }
+.onlinePractice_content input[type=checkbox] { background:url(images/checkBox_off.png) no-repeat center; appearance:none; width:18px; height:19px; border:none; border-radius:3px; transition:all .1s ease-in-out; cursor:pointer; margin-right:5px; vertical-align:-5px; }
+input[type=checkbox]:checked { background:url(images/checkBox_on.png) no-repeat center; }
+.onlinePractice_content .moveButton { display:flex; justify-content:space-between; margin-top:26px; height:40px; border-radius:5px; }
+.onlinePractice_content .moveButton a,.onlinePractice_content .moveButton span { display:block; height:40px; border-radius:5px; width:140px; border:1px solid #D9D9D9; line-height:39px; background:#fff; }
+.onlinePractice_content .moveButton .btnPrev { background:#fff url(images/icon_prev.png) no-repeat calc(50% - 34px) center; padding-left:27px; }
+.onlinePractice_content .moveButton .btnPrev:hover { background:#fff url(images/icon_prevHover.png) no-repeat calc(50% - 40px) center; color:#00723f; border:1px solid #01B865; }
+.onlinePractice_content .moveButton .btnSave_draft { position:absolute; right:246px; background:#fff; }
+.onlinePractice_content .moveButton .btnSave_draft:hover { color:#00723f; border:1px solid #01B865; }
+.onlinePractice_content .moveButton .btnNext { width:198px; background:#04007C url(images/icon_next.png) no-repeat calc(100% - 25px) center; padding-right:27px; color:#fff; border:1px solid #04007C;}
+.onlinePractice_content .moveButton .btnNext:hover { background:#0600c9 url(images/icon_next.png) no-repeat calc(100% - 19px) center; border:1px solid #0600c9; }
+.onlinePractice_content .moveButton p strong { color:#ED2424; animation:flash_ani .8s ease infinite; }
+.onlinePractice_content .moveButton p { color:#777; background:url(images/icon_adminCheck.png) no-repeat 0 5px; padding:12px 0 0 40px; margin-left:30px; }
+.onlinePractice_content .modalLayer { display:none; position:absolute; top:50%; left:50%; margin:-330px 0 0 -380px; z-index:1001; background:#fff; border-radius:10px; overflow:hidden; width:760px; height:660px; }
+.onlinePractice_content .modalLayer_content { background:#fff; height:610px; padding:24px; overflow:auto; overflow-x:hidden;}
+.onlinePractice_content .btn_modalClose { position:absolute; right:15px; top:8px; background:none !important; padding:0 !important; }
+.onlinePractice_content .modal_layerBg { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.8); z-index:-1; }
+.onlinePractice_content .btn_modalClose:after { content:"" !important; }
+.onlinePractice_content .modalLayer h2 { width:100%; height:50px; font-size:18px; font-weight:700; background:#01B865; text-align:center; color:#fff; padding-top:14px; }
+.onlinePractice_content .modalLayer_content p,.onlinePractice_content .modalLayer_content table { margin-bottom:24px; }
+.onlinePractice_content .modalLayer_content h3 { font-weight:700; padding-bottom:8px; }
+.onlinePractice_content .inputButton > button { background:#04007C; border-radius:3px; color:#fff; font-size:13px; height:30px; padding:0 15px; margin-left:6px; }
+.onlinePractice_content .inputButton > button:hover { background:#0600c9; }
+.onlinePractice_content .halfSharing dt:nth-child(3) { padding-left:65px; width:144px }
+.onlinePractice_content input[type=radio] { background:url(images/radio_off.png) no-repeat center; appearance:none; width:21px; height:21px; border:none; border-radius:3px; transition:all .1s ease-in-out; cursor:pointer; margin-right:5px; vertical-align:-6px; margin-top:5px; }
+input[type=radio]:checked { background:url(images/radio_on.png) no-repeat center; }
+.writeInput label { margin-right:10px; }
+.onlinePractice_content .search_section { display:flex; gap:8px;margin-bottom:15px; }
+.onlinePractice_content .modalLayer.layer_socialWelfare { width:880px; margin-left:-440px; }
+.layer_socialWelfare .search_section select,.search_section .btn_search { height:30px; font-size:14px; }
+.search_section .btn_search { background:#04007C url(https://www.kystudy.co.kr/Content/images/common/icon_search.png) no-repeat 20px center; border-radius:3px; text-indent:-9999px; overflow:hidden; width:60px;}
+.layer_socialWelfare .search_section input { width:300px !important; vertical-align:middle; }
+.layer_socialWelfare td button,.layer_socialWelfare td .selectEnd { font-size:13px; background:#111; color:#fff; border-radius:30px; height:30px; padding:0 15px; }
+.layer_socialWelfare td button:hover { background:#0600c9; }
+.layer_socialWelfare td { font-size:14px; }
+.layer_socialWelfare td span.selectEnd { background:#01B865; width:auto; padding-top:8px;}
+.onlinePractice_content .writePicture { position:relative; display:flex; border-bottom:1px solid #eee; }
+.writePicture .writeInput:not(.halfSharing) dt { width:106px; }
+.writePicture .writeInput:not(.halfSharing) dd { padding-right:12px; }
+.writePicture dl:last-child dt,.writePicture dl:last-child dd { border-bottom:0; }
+.onlinePractice_content .writePicture .writeInput { flex-wrap:nowrap }
+.onlinePractice_content .writePicture .picture { position:relative; width:105px; height:135px; border:1px solid #aaa; border-radius:3px; font-size:12px; color:#777; padding-top:20px; margin:10px 0 0 16px; overflow:hidden; }
+.onlinePractice_content .picture img { position:absolute; left:0; top:0; }
+.onlinePractice_content .picture button { position:relative; z-index:100; display:block; color:#fff; background:#04007C; font-size:13px; border-radius:3px; width:87px; height:26px; margin:13px 0 0 8px; padding-top:2px; }
+.onlinePractice_content .picture span { position:relative; z-index:100; }
+.onlinePractice_content .picture button:before {  content:""; display:inline-block;margin-right:6px; width:10px; height:10px; background:url(images/icon_plus.png) no-repeat; background-size:10px auto; vertical-align:0px; }
+.onlinePractice_content .picture button:hover:before { animation:spin .3s ease-out both; }
+.layer_selectPicture { display:none; position:absolute; width:400px !important; top:40px; right:8px; z-index:100; width:300px; background:#fff; box-shadow:2px 2px 5px rgba(0,0,0,.3); padding:0 0 85px; border-radius:5px; border:1px solid #aaa; }
+.layer_selectPicture .layer_blackHeader { height:35px; background:#111; color:#fff; padding-top:8px; margin-bottom:12px; }
+.layer_selectPicture ul { text-align:left; padding-left:24px; }
+.layer_selectPicture .layer_blackHeader button { position:absolute; right:10px; top:10px; }
+.onlinePractice .layer_selectPicture .file_search_area { border-bottom:1px solid #777; }
+.onlinePractice .layer_selectPicture .btn_save { height:35px; }
+.onlinePractice_content h3 { display:flex; font-size:16px; font-weight:700; color:#04007C; text-align:left; padding:32px 0 16px; margin-bottom:8px; border-bottom:1px solid #d9d9d9; }
+.onlinePractice_content h3 div { font-size:15px; color:#777; margin-top:3px; }
+.onlinePractice_content h3 div:before { content:"|"; color:#777; padding:0 2px 0 11px; }
+.onlinePractice_content h3 div span { margin-right:3px; }
+.onlinePractice_content .writePicture > div { width:calc(100% - 141px); }
+.subjectSelection .selectHeader { position:relative; display:flex; margin:24px 0 8px 0; align-items:center; }
+.subjectSelection .selectHeader > a { position:absolute; right:0; top:-7px; display:block; color:#fff; background:#111; font-size:13px; border-radius:30px; width:95px; height:26px;padding-top:5px; }
+.subjectSelection .selectHeader > a:before,.btn_add:before { content:""; display:inline-block;margin-right:6px; width:10px; height:10px; background:url(images/icon_plus.png) no-repeat; background-size:10px auto; vertical-align:0px; }
+.btn_delete:before { content:""; display:inline-block;margin-right:6px; width:10px; height:10px; background:url(images/icon_minus.png) no-repeat; background-size:10px auto; vertical-align:0px; }
+.subjectSelection .selectHeader > a:hover:before,.btn_add:hover:before { animation:spin .3s ease-out both; }
+.btn_delete:hover:before { animation:spin .2s ease-out both; }
+.subjectSelection .selectHeader h4 { font-weight:700; }
+.subjectSelection .selectHeader h4:after { content:" | "; color:#777; padding:0 8px 0 6px; font-weight:normal; }
+.subjectSelection .selectHeader p,.subjectSelection .selectHeader p a { color:#777; font-size:13px; }
+.selectHeader button { vertical-align:3px; }
+.subjectSelection .subjectList { border-radius:5px; border:1px solid #aaa; padding:16px; text-align:left; color:#777; font-size:13px;}
+.subjectSelection .subjectList ul { display:flex; flex-wrap:wrap; gap:8px 12px; }
+.subjectSelection .subjectList ul li:after { content:" | "; color:#777; padding-left:4px; }
+.subjectSelection .subjectList ul li:last-child:after { content:""; }
+.subjectSelection .subjectList ul li { font-size:14px; color:#777; }
+.icon_status { background:#abc4af; color:#fff; font-size:12px; padding:2px 10px; border-radius:10px; margin-left:5px; vertical-align:2px; }
+.icon_status.kystudy { background:#a2a9c4; }
+.icon_status.kystudy.ing { background:#3356d2; }
+.icon_status.ing { background:#01B865; }
+.subjectSelection .subjectList button { vertical-align:5px; }
+.onlinePractice_content .textarea { padding-top:16px;; }
+.onlinePractice_content .textarea p { text-align:left; font-size:14px; color:#777; margin-bottom:16px; }
+.onlinePractice_content .textarea textarea { width:100%; height:180px; border-radius:5px; border:1px solid #aaa; }
+.onlinePractice_content .textarea strong { display:block; font-size:15px; }
+.onlinePractice_content .textarea strong:last-child { margin-top:16px; }
+.onlinePractice_content .gray { color:#777; }
+.modalLayer.layer_coursesTaken { width:880px; margin-left:-440px; }
+.layer_coursesTaken .division > div h3 { display:block; width:100%; height:35px; background:#111; color:#fff; font-size:16px;  text-align:center; padding:8px 0 0; border:none; border-radius:3px; margin-bottom:16px; }
+.layer_coursesTaken .division > div:first-child { margin-right:24px; }
+.layer_coursesTaken .division > div { float:left; width:404px; }
+.layer_coursesTaken .division > div:first-child .scroll { height:440px; border-bottom:1px solid #D9D9D9;}
+.layer_coursesTaken .division .scroll { height:317px; overflow:auto; overflow-x:hidden; }
+.layer_coursesTaken .division .scroll table { margin-bottom:0; height:100%; }
+.layer_coursesTaken .division .scroll table th { height:41px; }
+.layer_coursesTaken .division .scroll table th p { font-size:12px; color:#ED2424; margin-bottom:0; }
+.layer_coursesTaken .division .scroll table tr:last-child td { border-bottom:none; }
+.layer_coursesTaken .fileUp { position:absolute; bottom:94px; width:404px; background:#EBEAF8; border:1px solid #D9D9D9; height:125px; border-radius:0 0 5px 5px; overflow:auto; overflow-x:hidden; text-align:left; padding:16px; }
+.layer_coursesTaken .fileUp h5 {  font-weight:700; font-size:15px; margin-bottom:8px; }
+.layer_coursesTaken .fileUp p { margin-bottom:-3px; }
+.layer_coursesTaken .fileUp .help { position:absolute; top:13px; left:150px; display:block; background:#fff; color:#111; border:1px solid #ccc; line-height:22px; font-size:18px; text-align:center; font-weight:500; width:22px; height:22px; border-radius:30px; }
+.layer_coursesTaken .fileUp .help:hover { background:#01B865; color:#fff; border:1px solid #01B865 }
+.fileUp .helpTxt { display:none; position:absolute; top:12px; z-index:100; width:300px; background:#fff; box-shadow:2px 2px 5px rgba(0,0,0,.3); padding:16px 16px 16px; border-radius:5px; border:1px solid #aaa; }
+.fileUp .helpTxt button { position:absolute; right:5px; top:5px; z-index:100; }
+.fileUp .helpTxt li,.layer_selectPicture li,.writeCheck.bullet li { position:relative; color:#ED2424; font-size:13px; padding-left:10px; }
+.fileUp .helpTxt li:before,.layer_selectPicture li:before,.writeCheck.bullet li:before { position:absolute; left:0; top:2px; content:"*"; }
+.layer_coursesTaken .fileUp p a { font-size:13px; }
+.layer_coursesTaken .fileUp .btn_txt { background:url(images/btn_close.png) no-repeat; min-width:25px; border:none; text-indent:-9999px;overflow:hidden; vertical-align:middle; margin-left:-5px;  }
+.layer_coursesTaken .fileUp p button { vertical-align:3px; }
+.layer_coursesTaken .fileUp input[type=text],.layer_selectPicture input[type=text] { width:232px; border-radius:3px 0 0 3px; border:1px solid #aaa; border-right:0; }
+.onlinePractice .btn_save { position:absolute; bottom:24px; left:50%; margin-left:-100px; display:block; width:200px; height:40px; background:#04007C; color:#fff; border-radius:5px; }
+.onlinePractice .file_search_area { margin-top:10px; }
+.onlinePractice .btn_save:hover { background:#0600c9; }
+.onlinePractice .btn_file_search { background:#04007C; height:30px; border-radius:0 3px 3px 0; margin-left:-4px; font-size:13px; padding-top:7px; }
+.onlinePractice .file_input_opacity,.layer_selectPicture .file_input_opacity { width:350px; }
+.onlinePractice .practiceTime input { width:150px !important; }
+.onlinePractice .daySelection { display:flex; margin-top:2px; }
+.onlinePractice .daySelection label { position:relative; display:block; width:28px; }
+.onlinePractice .daySelection input[type=checkbox] { display:block; background:#fff; color:#111; border:1px solid #ccc; text-align:center; font-weight:500; width:28px !important; height:28px; border-radius:30px; font-size:13px; }
+.onlinePractice .daySelection input[type=checkbox]:checked { background:#01b865; color:#fff; font-weight:700; border:1px solid #01b865; }
+.onlinePractice .daySelection input[type=checkbox]:checked + span { color:#fff; }
+.onlinePractice .daySelection span { position:absolute; left:4px; top:6px; }
+.onlinePractice .totalTime { position:relative; }
+.onlinePractice .btn_move { display:flex; justify-content:center; }
+.onlinePractice .btn_move li:first-child:after { content:" | "; color:#777; padding:0 8px 0 3px; font-weight:300; }
+.onlinePractice .totalTime strong { position:absolute; right:0; top:21px; color:#ED2424; }
+.onlinePractice .totalTime .writeInput dd { width:12%; border-bottom:none; }
+.onlinePractice .totalTime .writeInput dt { border-bottom:none; }
+.onlinePractice .selected { background:#EBEAF8; cursor:pointer; }
+.onlinePractice .alarm { position:absolute; right:60px; width:580px; height:32px; top:195px; background:#111; border-radius:5px; color:#fff; text-align:left; padding:8px 0 0 15px; z-index:101; }
+.onlinePractice .alarm p { color:#fff; font-size:13px; width:425px; overflow:hidden; }
+.onlinePractice .alarm .js-marquee { color:#fff; font-size:13px; }
+.onlinePractice .alarm:before { position:absolute; top:6px; left:-10px; content:""; width:0; height:0;border-top:10px solid transparent; border-right:20px solid #111; border-bottom:10px solid transparent; }
+.onlinePractice .alarm label { position:absolute; right:15px; top:6px; color:#fff; line-height:1.6; }
+.onlinePractice .alarm span { position:absolute; left:-55px; top:0; animation:flash_ani .8s ease infinite; }
+.onlinePractice .alarm .allText { display:none; position:absolute; right:140px; top:-10px; width:440px; background:#fff; color:#000; font-size:13px; padding:15px 20px; border-radius:5px; border:1px solid #111; box-shadow:3px 3px 5px rgba(0,0,0,.3); }
+.onlinePractice .alarm:hover .allText { display:block; }
+
+.onlinePractice .step2 .paperList { margin:32px auto 40px; display:flex; gap:24px; justify-content:center; } 
+.onlinePractice .step2 .paperList li { width:237px; height:260px; background:#fff; border-radius:10px; border:1px solid #d9d9d9; }
+.onlinePractice .step2 .paperList li dl { padding-top:130px; }
+.onlinePractice .step2 .paperList li dt { font-weight:500; font-size:16px; padding-bottom:3px; }
+.onlinePractice .step2 .paperList li dd { font-weight:700; font-size:22px; color:#01b865; }
+.onlinePractice .step2 .paperList li dd small { font-weight:400; font-size:15px; color:#777; vertical-align:2px; margin-left:3px;}
+.onlinePractice .step2 .paperList li a { display:block; width:196px; height:35px; line-height:35px; border-radius:3px; background:#00DC78 url(images/bullet_rightBlack.png) no-repeat calc( 50% + 31px ) center; padding-right:17px; margin:20px auto 0; }
+.onlinePractice .step2 .paperList li a:hover { color:#111; background:#00ef83 url(images/bullet_rightBlack.png) no-repeat calc( 50% + 26px ) center; }
+.onlinePractice .step2 .paperList li:nth-child(1) dl { background:url(images/step02_icon01.png) no-repeat center 26px; }
+.onlinePractice .step2 .paperList li:nth-child(2) dl { background:url(images/step02_icon02.png) no-repeat center 26px; }
+.onlinePractice .step2 .paperList li:nth-child(3) dl { background:url(images/step02_icon03.png) no-repeat center 26px; }
+.onlinePractice .step2 .paperList li:nth-child(4) dl { background:url(images/step02_icon04.png) no-repeat center 26px; }
+.onlinePractice_content .writeGuide_list { text-align:left; padding:0 16px 11px; }
+.onlinePractice_content .writeGuide_list li { margin-bottom:5px; }
+.onlinePractice_content .writeGuide_list > li:before { content:"※ " }
+.onlinePractice_content .writeGuide_list li strong { color:#ED2424; }
+.onlinePractice_content .writeGuide_list ol { margin:16px 16px; }
+.onlinePractice_content .writeGuide_list ol li { list-style:decimal; font-size:16px; color:#333; margin-left:5px; margin-bottom:40px; }
+.onlinePractice_content .writeGuide_list ol li p { margin-bottom:0; }
+.onlinePractice_content .writeGuide_list ol li span { color:#777; font-size:15px;padding:5px 0 0 0; }
+.onlinePractice_content .writeGuide_list ol li img { margin-top:20px; }
+.onlinePractice_content .layerPdf span { display:block; padding-bottom:8px; }
+.onlinePractice_content .layerPdf h3:first-child { padding-top:0; }
+.onlinePractice_content .layerPdf p { margin-bottom:32px; }
+.onlinePractice_content .custom_section { margin:32px 0 24px; text-align:left; }
+.onlinePractice_content .faq_list { margin-top:16px; }
+.onlinePractice_content .faq_search { border-radius:5px; }
+.onlinePractice_content .faq_list dt { background:url(https://www.kystudy.co.kr/Content/images/common/btn_open.gif) no-repeat calc(100% - 16px) 17px; }
+.onlinePractice_content .faq_list dd { background:#efefef; color:#777; }
+.onlinePractice_content .faq_list dt.visible { background:url(https://www.kystudy.co.kr/Content/images/common/btn_close.gif) no-repeat calc(100% - 16px) 17px; }
+.onlinePractice_content .faq_list dt:before,.onlinePractice_content .faq_list dd:before { font-weight:700; left:16px }
+.txt_gray { color:#777; }
+
+@keyframes spin
+	{ 
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(180deg); } 
+	}
+
+
+@keyframes fadeIn_up {
+	0% {
+		transform: translateY(10%);
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@keyframes bgScale {
+	0% {
+		background-size:110% 110%;
+	}
+	100% {
+		background-size:100% 100%;
+	}
+}
+
+@keyframes blur {
+	0% {
+		filter: blur(5px);
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+        filter: blur(0);
+	}
+}
+
+/* 사회복지현장실습 의뢰공문 출력 */
+.officialLetter * { font-family:Pretendard,'Spoqa Han Sans','맑은 고딕','Malgun Gothic','돋움',dotum,AppleGothic,sans-serif;  box-sizing:border-box; letter-spacing:0; font-size:16px; }
+.officialLetter { width:210mm; min-height:297mm; padding:20mm; margin:10mm auto; border:1px #ddd solid; }
+.officialLetter h1 { text-align:center; margin-bottom:50px; font-size:50px; font-weight:700; }
+.officialLetter h1 small { font-size:42px; }
+.officialLetter .header dt { display:inline-block; padding-right:10px; font-size:18px; }
+.officialLetter .header dl { display:flex; margin-bottom:10px; }
+.officialLetter .header dd { font-weight:700; font-size:18px; }
+.officialLetter .officialLetter_content { border-top:1px solid #000;  padding:30px 0; margin-top:20px; }
+.officialLetter .officialLetter_content > ol { margin-left:55px; }
+.officialLetter .officialLetter_content ol li { list-style:decimal; margin-bottom:20px; }
+.officialLetter .officialLetter_content table { margin:10px 0; }
+.officialLetter .officialLetter_content p { margin-top:8px; }
+.officialLetter .officialLetter_content dl { display:flex; margin-top:30px;}
+.officialLetter .officialLetter_content dd ol { margin-left:28px; }
+.officialLetter .officialLetter_footer { padding:0 30px; }
+.officialLetter .stamped { text-align:center; padding:30px 0 50px;border-bottom:3px solid #ccc; }
+.officialLetter .officialLetter_footer dl { display:flex; justify-content:space-between; }
+.officialLetter .officialLetter_footer h2 { margin:30px 0 0 0; font-size:15px; font-weight:400; } 
+.officialLetter .officialLetter_footer h2 + dl { margin-top:10px; }
+.officialLetter h2 { font-size:26px; font-weight:700; margin:45px 0 20px; }
+.officialLetter .comment { margin:30px 0;}
+.officialLetter .comment em { color:#ED2424;}
+.officialLetter .border { margin:100px 0 0; border-top:1px solid #000; padding-top:50px; }
+.officialLetter .name { display:flex; justify-content:flex-end; }
+.officialLetter .name dt { font-size:20px; font-weight:700; }
+.officialLetter .name dd { font-size:20px; width:200px; text-align:right; }
+.officialLetter td, .officialLetter th { padding:16px; }
+
+/* 실습생 서약서 레이어 */
+.layer_pledge .modalLayer_content { text-align:left; }
+.layer_pledge .modalLayer_content p:nth-child(2) { margin-bottom:0 !important; }
+.layer_pledge .modalLayer_content > ol { margin:16px 0 24px 32px; }
+.layer_pledge .modalLayer_content > ol > li { list-style:decimal; font-weight:600; }
+.layer_pledge .modalLayer_content > ol > li ol { margin:8px 20px 12px }
+.layer_pledge .modalLayer_content > ol > li li { list-style-type:hangul; }
+.layer_pledge .modalLayer_content .name { display:flex; justify-content:flex-end; margin-top:5px; }
+.layer_pledge .modalLayer_content .name dt,.layer_pledge .modalLayer_content .name dd { font-size:18px; }
+.layer_pledge .modalLayer_content .name dd { width:120px; text-align:right; }
+.layer_pledge .modalLayer_content .day { text-align:right; margin-top:60px; margin-bottom:30px; }
+.layer_pledge .modalLayer_content .dear { display:block; text-align:center; margin:50px auto 0; font-size:24px; }
+
+/* 실습생 서약서 출력 팝업 */
+.officialLetter .pledge * { font-size:18px; }
+.officialLetter .pledge p:first-child { margin-bottom:20px; }
+.officialLetter .pledge h2 { font-size:26px; margin-top:55px;}
+.officialLetter .pledge > ol { margin:50px 0 50px 48px; }
+.officialLetter .pledge > ol > li { list-style:decimal; font-weight:600; font-size:20px; }
+.officialLetter .pledge > ol > li ol { margin:16px 25px 30px }
+.officialLetter .pledge > ol > li li { list-style-type:hangul; }
+.officialLetter .pledge .day { text-align:right; margin-top:450px; font-size:20px; margin-bottom:30px; }
+.officialLetter .dear { display:block; text-align:center; margin:100px auto 0; font-size:30px; }
+.officialLetter.profile { padding:20mm 10mm; }
+.officialLetter.profile h2 { font-size:18px; }
+.officialLetter.profile p { background:#f1f1f1; padding:16px; }
+.officialLetter.profile h3 { font-size:18px; font-weight:600; margin-bottom:8px; }
+.officialLetter.rollBook .table_inside { margin-top:20px; }
+.officialLetter.rollBook .table_inside td { padding:9px; }
+.officialLetter.profile .table_inside td,.officialLetter.profile .table_inside th { padding:15px 5px; }
+.officialLetter .rollBook_guide dt { font-weight:600; }
+.officialLetter .rollBook_guide dd { margin:0 0 15px 15px; }
+.officialLetter.profile .table_inside:nth-of-type(2) { height:880px; }
+
+.paper_allPrint { position:absolute; right:92px; display:block; width:180px; height:35px; line-height:35px; border-radius:3px; color:#fff; font-size:14px; background:#333 url(images/bullet_rightWhite.png) no-repeat calc( 50% + 68px ) center; background-size:16px auto; padding-right:10px; }
+
+.onlinePractice_content .modalLayer.layer_reasonInput { width:400px; height:380px; margin:-180px 0 0 -200px }
+.onlinePractice_content .modalLayer.layer_reasonInput .modalLayer_content { height:340px; }
+.layer_reasonInput textarea { width:100%; height:200px; border-radius:5px; border:1px solid #aaa; }
+.btn_area { display:flex; justify-content:center; gap:12px; margin-top:24px; }
+.modalLayer > .btn_area { position:absolute; left:0; bottom:0; width:100%; height:68px; margin:0; align-items:center; background:#fff; border-top:1px solid #ddd; z-index:5; }
+.onlinePractice_content .modalLayer:has(> .btn_area) .modalLayer_content { height:calc(100% - 118px); }
+.btn_area button { display:block; width:120px; height:36px; background:#04007C; color:#fff; border-radius:5px; transition:all .2s; }
+.btn_area button:hover { background:#020040; }
+.btn_area button:first-child { background:#fff; color:#04007C; border:1px solid #04007C; }
+.btn_area button:first-child:hover { background:#f1f1f1; }
+
+.table_basic.sticky tr:first-child th { border-top:2px solid #111; }
+.table_basic.sticky thead { position: sticky; top: 0;  z-index: 10; }
+.table_basic.sticky { border-top:none; border-collapse: separate }
+.table_basic.sticky td,.table_basic.sticky th {  border-top: none; border-right:none; }
+.table_basic.sticky { border-right:1px solid #cfcfda; }

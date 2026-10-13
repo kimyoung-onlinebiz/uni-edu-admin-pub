@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>김영평생교육원</title>
+    <link rel="stylesheet" href="../../../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../../../assets/css/main.css?v=1.0">
+    <link rel="stylesheet" href="../../../assets/css/sub.css?v=1.0">
+    <link rel="stylesheet" href="../../../assets/css/swiper-bundle.min.css">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="../../../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../../../assets/js/swiper-bundle.min.js"></script>
+    <script src="../../../assets/js/script.js"></script>
+    <script src="../../../assets/js/swiper.js"></script>
+	
+</head>
+<body>
+
+<link rel="stylesheet" href="style.css">
+<div class="onlinePractice">
+
+	<div class="header">
+		<h1>온라인 현장실습</h1>
+		<ul>
+			<li><a href="#none" class="current">STEP 1</a></li>
+			<li><a href="#none">STEP 2</a></li>
+			<li><a href="#none">STEP 3</a></li>
+		</ul>
+	</div>
+
+	<!-- 내용 -->
+	 <div class="onlinePractice_content">
+		<ol>
+			<li><a href="#none" class="current">1) 개인정보 입력</a></li>
+			<li><a href="#none">2) 실습 기관 정보 입력</a></li>
+			<li><a href="#none">3) 실습생 프로파일 입력</a></li>
+			<li><a href="#none">4) 실습일정표 작성</a></li>
+		 </ol>
+
+		 <div class="content">
+			<h2>1) 개인정보 입력</h2>
+
+			<!-- 알람 메시지 -->
+			<div class="alarm">
+				<span><img src="images/icon_alarm.png" alt="알림"></span>
+				<p class="marquee">현주소가 잘못 작성되었습니다. 현주소가 잘못 작성되었습니다. 현주소가 잘못 작성되었습니다. 개인정보 수정하기에서 수정부탁드립니다.</p>
+				<label>
+					<input type="checkbox"> 수정완료 후 체크
+				</label>
+			</div>
+			<!-- //알람 메시지 -->
+			 
+			<dl class="writeInput">
+				<dt>이름</dt>
+				<dd><input type="text" value="장소정" disabled></dd>
+				<dt>생년월일</dt>
+				<dd><input type="text" value="2010. 05. 10" disabled></dd>
+				<dt>현주소</dt>
+				<dd><input type="text" class="width_100" value="서울특별시 강남구 서초대로78길 48 송림빌딩 12층" disabled></dd>
+				<dt>전화번호</dt>
+				<dd><input type="tel" value="010-3372-2222" disabled></dd>
+				<dt>E-mail</dt>
+				<dd><input type="email" value="asdf@kimyoung.co.kr" disabled></dd>
+			</dl>
+
+			<div class="writeGuide">
+				<p>위 정보는 마이페이지에 등록된 개인정보를 기준으로 표시됩니다. 개인정보 수정이 필요한 경우 우측 [개인정보 수정] 버튼을 통해 변경해주시기 바랍니다.</p>
+				<a href="#none">개인정보 수정</a>
+			</div>
+
+			<ul class="writeCheck">
+				<li>
+					<p>본인은 사회복지현장실습 협조 공문 발송을 위한 개인정보 수집 이용 제3자 제공에 동의합니다.</p>
+					<a href="#none">내용 확인 및 동의</a>
+					<span>동의 완료</span>
+					<a href="#none">다시보기</a>
+					
+					
+					
+					<!-- 레이어_제3자 제공 동의서 -->
+					<div class="modalLayer layer_3rdPartyConsent">
+						<a href="#닫기" class="btn_modalClose"><img src="images/btn_layerClose.png" alt="닫기"></a>
+						<h2>[사회복지현장실습 수강을 위한 개인정보 수집∙이용∙제 3자 제공 동의서]</h2>
+
+						<div class="modalLayer_content">
+							<p>본 교육원에서는 실습생 관리를 위하여 「개인정보보호법」에 따라 개인정보 수집·이용, 제3자 제공에 대한 내용을 다음과 같이 알려드리오니, 내용을 확인시기 바랍니다.</p>
+							<h3>[개인정보 및 초상권 수집 및 이용 동의]</h3>
+							<p>「개인정보보호법」 제15조 ‘개인정보의 수집·이용’ 및 같은 법 제 22조 ‘동의를 받는 방법’에 관한 법률에 근거하여 실습생 관리를 위한 목적으로 다음과 같이 수집 및 이용되며, 수집한 개인정보는 다른 목적으로 사용되지 않습니다.</p>
+							<table class="table_basic alignC">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<tr>
+									<th scope="col">수집·이용 항목</th>
+									<th scope="col">수집·이용 목적</th>
+									<th scope="col">이용 및 보유기간</th>
+								</tr>
+								<tr>
+									<td>이름, 생년월일,	연락처, 이메일, 주소</td>
+									<td>실습 의뢰 공문 발송<br />실습확인서 우편발송</td>
+									<td>준 영구보관</td>
+								</tr>
+							</table>
+							<h3>[개인정보 제3자 제공 동의서]</h3>
+							<p>사회복지현장실습을 운영함에 있어 실습기관에 실습의뢰공문 발송과 관련하여 개인정보제3자제공에 대한 내용을 다음과 같이 알려드리오니, 내용을 확인하시기 바랍니다.</p>
+							<table class="table_basic alignC">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<tr>
+									<th scope="col">개인정보를 제공받는 자</th>
+									<th scope="col">제공하는 개인정보의 항목</th>
+									<th scope="col">개인정보를 제공받는 자의 개인정보 이용목적</th>
+									<th scope="col">개인정보를 제공받는 자의 개인정보 이용기간 및 보유기간</th>
+								</tr>
+								<tr>
+									<td>사회복지실습기관</td>
+									<td>이름, <u>생년월일</u>, 연락처, 주소</td>
+									<td>실습 의뢰 확인</td>
+									<td><u>준영구 보관</u></td>
+								</tr>
+								<tr>
+									<td>실습지도교수</td>
+									<td>이름, 연락처, 이메일</td>
+									<td>실습지도에 필요한 연락진행</td>
+									<td><u>학기가 종료되는 시점</u></td>
+								</tr>
+							</table>
+							<h3>[동의거부 및 불이익]</h3>
+							<p>개인정보 제공 및 활용에 거부할 권리가 있으나, 상기 개인정보 수집·이용에 관한 내용에 동의하지 않는 경우에는 실습진행이 불가함을 							알려드립니다.</p>
+							</div>
+
+							<div class="btn_area">
+								<button type="button">취소</button>
+								<button type="button">동의하기</button>
+							</div>
+
+						<div class="modal_layerBg"></div>
+					</div>
+					<!-- //레이어_제3자 제공 동의서 -->
+
+				</li>
+				<li>
+					<p>
+						사회복지현장실습 유의사항 체크리스트를 확인하였고 이에 동의합니다.
+						<a href="#none">내용 확인 및 동의</a>
+						<span>동의 완료</span>
+						<a href="#none">다시보기</a>
+					</p>
+					
+					
+
+					<!-- 레이어_제3자 제공 동의서 -->
+					<div class="modalLayer">
+						<a href="#닫기" class="btn_modalClose"><img src="images/btn_layerClose.png" alt="닫기"></a>
+						<h2>사회복지현장실습 유의사항 체크리스트</h2>
+
+						<div class="modalLayer_content">
+							<table class="table_basic alignC">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<tr>
+									<th scope="col" colspan="3">내용</th>
+								</tr>
+								<tr>
+									<th scope="col">학습자</th>
+									<td colspan="2" class="alignL">현장실습 과목은 사회복지사 자격증 취득 과목 중[필수 4과목]이상,[선택 2과목] 이상 이수 완료 후 수강하셔야 합니다.</td>
+								</tr>
+								<tr>
+									<th rowspan="4">실습시간</th>
+									<td>1</td>
+									<td class="alignL">
+										실습 시간은 구법은 120시간 이상, 신법(개정법)은 160시간 이상 진행해야 하며,
+하루 최소 4시간 이상 ~ 최대 8시간 이하만 인정되며, 실습 일정은 주 40시간을 초과하지 않아야 합니다.
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="alignL">
+										「근로기준법」제54조 의거 실습지도자의 법정 근로시간에 준수해야 합니다.<br />
+<strong>예) 8시간 인정받고자 할 경우, 휴게시간(1시간) 포함 9시간 근무</strong><br />
+10:00 ~ 18:00 = 8시간 X<br />
+10:00 ~ 19:00 = 8시간 O
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td class="alignL">실습 중 일정을 변경하는 경우 사전에 지도교수님과 교육원에 연락하셔서 변경일정을 고지하셔야 합니다.</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td class="alignL">실습 가능 시간은 08:00 ~ 22:00이며, 야간 실습은 원칙적으로 금지되어 있습니다.</td>
+								</tr>
+								<tr>
+									<th rowspan="5" scope="row">유의사항</th>
+									<td>1</td>
+									<td class="alignL">
+										<span class="txt_red">
+											실습 지도교수는 실습일정에 따라 기관에 방문하며, 실습생이 부재일 경우 실습 이수가 안 될 수 있습니다.
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="alignL">실습기간 중 외부행사 등 부득이한 사정으로 <strong class="txt_red">실습생이 외출할 경우 지도교수 또는 교육원에 사전에 고지</strong>하셔야 합니다.</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td class="alignL">원칙적으로 <strong>근무지에서는 실습이 불가</strong>합니다.(동일 법인 내 실습 불가)</td>
+								</tr>
+								<tr>
+									<td rowspan="2">4</td>
+									<td class="alignL">신법(개정법) 대상자인 경우 오프라인 강의(3회) 참석은 필수이며, <strong class="txt_red">결석하시는 경우 실습을 완료하셨다 하시더라도 이수처리가 거부</strong>될 수 있습니다.</td>
+								</tr>
+								<tr>
+									<td class="alignL">사회복지현장실습의 경우 30시간의 세미나 수업 참석은 필수이며, 그 중 24시간은 온라인 강의로 진행됩니다.<br />
+										따라서 <strong class="txt_red">1차시 이상 결석 시 과목 이수는 불가</strong>합니다.<br />
+										또한, 실습시간 내 온라인 수업 참석은 불가하며, <strong class="txt_red">실습시간 내 강의 수강이 확인되는 경우 결석처리</strong> 될 수 있습니다.
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">실습기관</th>
+									<td colspan="2" class="alignL">사회복지현장실습기관은 한국사회복지사협회 현장실습센터에서 반드시 확인 후 진행해주시기 바랍니다.</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="btn_area">
+							<button type="button">취소</button>
+							<button type="button">동의하기</button>
+						</div>
+
+						<div class="modal_layerBg"></div>
+					</div>
+					<!-- //레이어_제3자 제공 동의서 -->
+
+				</li>
+			</ul>
+
+		</div>
+
+		<!-- 이동 버튼영역 -->
+		<div class="moveButton">
+			<a href="index.html" class="btnPrev">이전 단계</a>
+			<a href="#none" class="btnSave_draft">임시저장</a>
+			<a href="step1_2.html" class="btnNext">저장하고 다음 단계</a>
+		</div>
+		<!-- //이동 버튼영역 -->
+
+	</div>
+	 
+	<!-- //내용 -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.1/jquery.marquee.min.js" type="text/javascript"></script> <!-- 마퀴.JS -->
+
+<script>
+	$(function(){
+		$(".writeCheck li a:not(.btn_modalClose)").click (function () {
+			$(this).closest("li").find(".modalLayer").fadeIn("fast");
+		}); // 동의 레이어 열기 //
+
+		$(".btn_modalClose").click (function () {
+			$(this).closest(".modalLayer").fadeOut("fast");
+		}); // 레이어 닫기 //
+
+		$('.marquee').marquee({
+			//speed in milliseconds of the marquee
+			duration:12000,
+			//gap in pixels between the tickers
+			gap: 50,
+			//time in milliseconds before the marquee will start animating
+			delayBeforeStart: 0,
+			//'left' or 'right'
+			direction: 'left',
+			//true or false - should the marquee be duplicated to show an effect of continues flow
+			duplicated: true,
+			pauseOnHover: true
+		}); // 알람 메시지 //
+	});
+</script>
+
+</body>
+</html>

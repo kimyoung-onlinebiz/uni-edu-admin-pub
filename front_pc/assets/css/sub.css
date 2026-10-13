@@ -1119,7 +1119,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .payment_info .pay dt { color:var(--Neutral-900); font-weight:600; }
 .payment_info dd { font-size:var(--Font-small); font-weight:500; text-align:right; }
 .payment_info .total_pay dd { font-size:var(--Font-large); font-weight:700; text-align:right; }
-.payment_info dl div.border { border-bottom:1px solid var(--Neutral-300); height:52px; margin-bottom:8px; }
+.payment_info dl div.border { border-bottom:1px solid var(--Neutral-300); margin-bottom:8px; padding-bottom:8px; }
 .payment_info .date { color:var(--Error); }
 .payment_info .sale_detail { position:relative; height:24px; }
 .payment_info .sale_detail:before { content:""; position:absolute; left:0; top:0; width:2px; height:100%; background:var(--Neutral-300); }
