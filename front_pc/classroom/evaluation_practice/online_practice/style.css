@@ -147,13 +147,13 @@ input[type=radio]:checked { background:url(images/radio_on.png) no-repeat center
 .onlinePractice_content h3 div span { margin-right:3px; }
 .onlinePractice_content .writePicture > div { width:calc(100% - 141px); }
 .subjectSelection .selectHeader { position:relative; display:flex; margin:24px 0 8px 0; align-items:center; }
-.subjectSelection .selectHeader > a { position:absolute; right:0; top:-7px; display:block; color:#fff; background:#111; font-size:13px; border-radius:30px; width:95px; height:26px;padding-top:5px; }
+.subjectSelection .selectHeader > a { position:absolute; right:0; top:-7px; display:block; color:#fff; background:#111; font-size:13px; border-radius:30px; height:26px;padding:4px 20px 0; }
 .subjectSelection .selectHeader > a:before,.btn_add:before { content:""; display:inline-block;margin-right:6px; width:10px; height:10px; background:url(images/icon_plus.png) no-repeat; background-size:10px auto; vertical-align:0px; }
 .btn_delete:before { content:""; display:inline-block;margin-right:6px; width:10px; height:10px; background:url(images/icon_minus.png) no-repeat; background-size:10px auto; vertical-align:0px; }
 .subjectSelection .selectHeader > a:hover:before,.btn_add:hover:before { animation:spin .3s ease-out both; }
 .btn_delete:hover:before { animation:spin .2s ease-out both; }
 .subjectSelection .selectHeader h4 { font-weight:700; }
-.subjectSelection .selectHeader h4:after { content:" | "; color:#777; padding:0 8px 0 6px; font-weight:normal; }
+
 .subjectSelection .selectHeader p,.subjectSelection .selectHeader p a { color:#777; font-size:13px; }
 .selectHeader button { vertical-align:3px; }
 .subjectSelection .subjectList { border-radius:5px; border:1px solid #aaa; padding:16px; text-align:left; color:#777; font-size:13px;}
