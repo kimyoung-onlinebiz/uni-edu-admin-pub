@@ -409,7 +409,7 @@ tr.important td span { color:var(--Primary-500); }
 .paging a.active, .paging a:hover { background:var(--Primary-100); color:var(--Primary-500); }
 
 /* 파일 업로드 */
-.file_dragUpload { position:relative; background:var(--Neutral-300); border-radius:var(--Border-2radius); padding:40px 0; text-align:center; }
+.file_dragUpload { position:relative; background:var(--Neutral-300); border-radius:var(--Border-2radius); padding:24px 0; text-align:center; }
 .file_dragUpload .btn { display:block; width:108px; margin:16px auto 0; padding-top:5px; transition:all .2s; line-height:20px; }
 .file_dragUpload .fileSearch_after { display:flex; color:var(--Neutral-800); justify-content:center; align-items:center; gap:16px; margin-top:8px; }
 .file_dragUpload .drag_area { font-size:var(--Font-small); }

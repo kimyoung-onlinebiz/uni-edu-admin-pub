@@ -22,7 +22,7 @@
 <div class="onlinePractice">
 
 	<div class="header">
-		<h1>온라인 현장실습</h1>
+		<h1>온라인 현장실습 신청</h1>
 		<ul>
 			<li><a href="#none" class="current">STEP 1</a></li>
 			<li><a href="#none">STEP 2</a></li>
@@ -41,16 +41,6 @@
 
 		 <div class="content">
 			<h2>3) 실습생 프로파일 입력</h2>
-
-			<!-- 알람 메시지 -->
-			<div class="alarm">
-				<span><img src="images/icon_alarm.png" alt="알림"></span>
-				<p class="marquee">현주소가 잘못 작성되었습니다. 현주소가 잘못 작성되었습니다. 현주소가 잘못 작성되었습니다. 개인정보 수정하기에서 수정부탁드립니다.</p>
-				<label>
-					<input type="checkbox"> 수정완료 후 체크
-				</label>
-			</div>
-			<!-- //알람 메시지 -->
 
 			<h3>1. 인적사항</h3>
 
@@ -76,23 +66,8 @@
 				<div class="picture">
 					<span>*증명사진<br />3.5cm x 4.5cm<br />(413px-531px)<br />권장</span>
 					<button type="button">사진등록</button>
+					<input type="file" id="pictureUpload" accept=".jpg,.jpeg,.png,.gif,image/jpeg,image/png,image/gif" hidden />
 					<img src="images/img_picture.png" alt="증명사진" />
-				</div>
-
-				<div class="layer_selectPicture">
-					<div class="layer_blackHeader">
-						사진등록 <button><img src="images/btn_blackLayerClose.png" alt="닫기"></button>
-					</div>
-					<ul>
-						<li>증명사진 3.5cm x 4.5cm(413px-531px) 권장</li>
-						<li>.jpg, .png, .gif 파일 형식(최대 5MB)</li>
-					</ul>
-					<div class="file_search_area">
-						<input type="text" id="viewFile_picture" class="file_input_textbox" placeholder="최대 업로드 가능한 파일은 5MB입니다." readonly />
-						<a href="#none" class="btn_file_search">첨부파일 찾기</a>
-						<input type="file" class="file_input_opacity" onchange="document.getElementById('viewFile_picture').value=this.value;" />
-					</div>
-					<button type="button" class="btn_save">저장하기</button>
 				</div>
 				
 			</div>
@@ -100,378 +75,722 @@
 			<h3>
 				2. 이수 전공 과목
 				<div>
-					<span class="icon_status kystudy ing">파란색</span>은 김영평생교육원 과정, <span class="icon_status ing">초록색</span>은 타 교육원 이수 과목을 의미합니다.
+					<span class="icon_status">파란색</span>은 김영평생교육원 과정, <span class="icon_status green">초록색</span>은 타 교육원 이수 과목을 의미합니다.
 				</div>
 			</h3>
 			<div class="subjectSelection">
-				
-				<div class="selectHeader">
-					<h4>전공 필수</h4>
-					<a href="#none">이수과목 추가</a>
+
+				<div class="subject_div">
+					<div class="selectHeader">
+						<h4>전공 필수</h4>
+						<a href="#none">이수과목 추가</a>
+					</div>
+
+					<div class="list scrollbar_design">
+						<table class="table_basic">
+							<caption>전공 필수 과목 리스트</caption>
+							<colgroup>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">과목 명</th>
+									<th scope="col">상태</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status">현재이수</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status">이수완료</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status green">이수완료</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status green">현재이수</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 
-				<!-- 레이어_필수 이수과목 입력 -->
-				<div class="modalLayer layer_coursesTaken">
-					<a href="#닫기" class="btn_modalClose"><img src="images/btn_layerClose.png" alt="닫기"></a>
-					<h2>필수 이수과목 입력</h2>
+				<div class="subject_div">
+					<div class="selectHeader">
+						<h4>전공 선택</h4>
+						<a href="#none">이수과목 추가</a>
+					</div>
 
-					<div class="modalLayer_content">
+					<div class="list">
+						<table class="table_basic">
+							<caption>전공 선택 과목 리스트</caption>
+							<colgroup>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">과목 명</th>
+									<th scope="col">상태</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status">현재이수</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status">현재이수</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status">현재이수</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status">현재이수</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status">이수완료</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status green">이수완료</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>사회복지법제와실천</td>
+									<td><span class="icon_status green">현재이수</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				
+
+				<!-- 레이어_필수 이수과목 입력 -->
+				<div class="modalLayer layer_coursesTaken required">
+					<a href="#닫기" class="btn_modalClose"><img src="images/btn_layerClose.png" alt="닫기"></a>
+					<h2>전공 필수 이수과목 등록</h2>
+
+					<div class="modalLayer_content scrollbar_design">
 						<div class="division">
 
-							<div>
-								<h3>교육원 수강 과목</h3>
-
-								<div class="scroll">
-									<table class="table_basic alignC">
-										<caption>교육원 수강 과목 테이블</caption>
-										<colgroup>
-											<col>
-											<col>
-										</colgroup>
+							<div class="scroll scrollbar_design">
+								<table class="table_basic alignC sticky">
+									<caption>교육원 수강 과목 테이블</caption>
+									<colgroup>
+										<col style="width:50px">
+										<col>
+										<col>
+									</colgroup>
+									<thead>
 										<tr>
-											<th scope="col">과목명</th>
+											<th scope="col" colspan="3" class="title">교육원 수강 과목</th>
+										</tr>
+										<tr>
+											<th scope="col">번호</th>
+											<th scope="col">과목 명</th>
 											<th scope="col">이수여부</th>
 										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status kystudy">이수완료</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status">이수완료</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status">이수완료</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status ing kystudy">현재이수</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status ing">현재이수</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status ing">현재이수</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status ing">현재이수</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status ing">현재이수</span></td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td><span class="icon_status ing">현재이수</span></td>
-										</tr>
-										<tr>
-											<td colspan="2">수강과목이 없습니다.</td>
-										</tr>
-									</table>
-								</div>
+									</thead>
+									
+									<tr>
+										<td>1</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status kystudy">이수완료</span></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status">이수완료</span></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status">이수완료</span></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing kystudy">현재이수</span></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing">현재이수</span></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing">현재이수</span></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing">현재이수</span></td>
+									</tr>
+								</table>
 							</div>
 
-							<div>
-								<h3>외부 수강 과목</h3>
 
-								<div class="scroll">
-									<table class="table_basic alignC sticky">
-										<caption>외부 수강 과목 테이블</caption>
-										<colgroup>
-											<col>
-											<col>
-											<col>
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col" rowspan="2">
-													과목명
-													<p>*표시 과목은 구법대상 과목입니다.</p>
-												</th>
-												<th scope="col" colspan="2">이수여부</th>
-											</tr>
-											<tr>
-												<th scope="col">이수완료</th>
-												<th scope="col">현재이수</th>
-											</tr>
-										</thead>
+
+							<div class="scroll scrollbar_design">
+								<table class="table_basic alignC sticky">
+									<caption>외부 수강 과목 테이블</caption>
+									<colgroup>
+										<col style="width:50px;">
+										<col>
+										<col style="width:180px;">
+									</colgroup>
+									<thead>
 										<tr>
-											<td class="gray">사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01" checked>
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01">
-												</label>
-											</td>
+											<th scope="col" colspan="3" class="title">타 교육원 수강 과목</th>
 										</tr>
 										<tr>
-											<td class="gray">사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01" checked>
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01">
-												</label>
-											</td>
+											<th scope="col">번호</th>
+											<th scope="col">과목 명</th>
+											<th scope="col">이수여부</th>
 										</tr>
-										<tr>
-											<td class="gray">사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01" checked>
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01">
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td class="gray">사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01" checked>
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_01">
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_02">
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_02" checked>
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_03">
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_03" checked>
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_04">
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_04" checked>
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_05">
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_05" checked>
-												</label>
-											</td>
-										</tr>
-										<tr>
-											<td>사회복지학개론(사회복지개론)</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_06">
-												</label>
-											</td>
-											<td>
-												<label>
-													<input type="radio" name="completionCheck_06" checked>
-												</label>
-											</td>
-										</tr>
-									</table>
+									</thead>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+								</table>
 	
-								</div>
 
-								<!-- 첨부파일 -->
-								<div class="fileUp">
-									<h5>성적증명서 첨부하기</h5>
-									<a href="#none" class="help">?</a>
-									<div class="helpTxt">
-										<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-										<ul>
-											<li>성적증명서의 경우 PDF, jpg, PNG, gif, hwp, docx 파일로 업로드 하실 수 있습니다.</li>
-											<li>외부 수강 과목을 선택하실 경우 성적증명서 첨부는 필수입니다.</li>
-										</ul>
-									</div>
-									
-									<p>
-										<a href="#none">첨부파일 : 11122345436534.pdf</a>
-										<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-									</p>
-
-									<div class="file_search_area">
-										<input type="text" id="viewFile" class="file_input_textbox" placeholder="최대 업로드 가능한 파일은 5MB입니다." readonly />
-										<a href="#none" class="btn_file_search">첨부파일 찾기</a>
-										<input type="file" class="file_input_opacity" onchange="document.getElementById('viewFile').value=this.value;" />
-									</div>
-								</div>
-								<!-- //첨부파일 -->
 							</div>
 						</div>
 
-						<button type="button" class="btn_save">저장하기</button>
+						<h3>타 교육원 이수 과목 성적증명서 첨부</h3>
+
+						<!-- 파일 업로드 드래그 앤 드롭 -->
+						<div class="file_dragUpload">
+							<div class="drag_area">
+								<input type="file" class="transparent" id="fileUpload" multiple>
+								파일을 여기에 끌어다 놓거나, '파일 선택' 버튼을 클릭해 첨부해주세요.
+								<span>허용 파일 형식: .hwp/ .hwt/ .hwpx / .doc  / .docx (최대 50MB)</span>
+								<label for="fileUpload" class="btn primary">파일 선택</label>
+							</div>
+						</div>
+						<!-- 파일 업로드 드래그 앤 드롭 -->
+
+						<!-- 첨부파일 영역 -->
+						<div class="attachment"> 
+							<div class="download_area">
+								<div class="download">
+									<p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+									<div>
+										<button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
+										<button type="button">파일변경 <span class="material-symbols-rounded">edit_square</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //첨부파일 영역 -->
+
+					</div>
+
+					<div class="btn_area">
+						<button type="button">취소</button>
+						<button type="button">저장</button>
 					</div>
 
 					<div class="modal_layerBg"></div>
 				</div>
 				<!-- //레이어_필수 이수과목 입력 -->
 
-				<div class="subjectList">
-					<ul>
-						<li>
-							사회복지학개론 
-							<span class="icon_status kystudy">이수완료</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							사회복지실천론 
-							<span class="icon_status">이수완료</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							사회복지행정론 
-							<span class="icon_status ing kystudy">현재이수</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							노인복지론 
-							<span  class="icon_status ing">현재이수</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							사회복지행정론 
-							<span  class="icon_status ing">현재이수</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							사회복지실천기술론 
-							<span  class="icon_status ing">현재이수</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							장애인복지론 
-							<span  class="icon_status ing">현재이수</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							인간행동과사회환경 
-							<span class="icon_status">이수완료</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-						<li>
-							사회복지법제와실천 
-							<span class="icon_status">이수완료</span>
-							<button type="button"><img src="images/btn_close.png" alt="닫기"></button>
-						</li>
-					</ul>
+				<!-- 레이어_선택 이수과목 입력 -->
+				<div class="modalLayer layer_coursesTaken elective">
+					<a href="#닫기" class="btn_modalClose"><img src="images/btn_layerClose.png" alt="닫기"></a>
+					<h2>전공 선택 이수과목 등록</h2>
+
+					<div class="modalLayer_content scrollbar_design">
+						<div class="division">
+
+							<div class="scroll scrollbar_design">
+								<table class="table_basic alignC sticky">
+									<caption>교육원 수강 과목 테이블</caption>
+									<colgroup>
+										<col style="width:50px">
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="3" class="title">교육원 수강 과목</th>
+										</tr>
+										<tr>
+											<th scope="col">번호</th>
+											<th scope="col">과목 명</th>
+											<th scope="col">이수여부</th>
+										</tr>
+									</thead>
+									
+									<tr>
+										<td>1</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status kystudy">이수완료</span></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status">이수완료</span></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status">이수완료</span></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing kystudy">현재이수</span></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing">현재이수</span></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing">현재이수</span></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>사회복지학개론(사회복지개론)</td>
+										<td><span class="icon_status ing">현재이수</span></td>
+									</tr>
+								</table>
+							</div>
+
+
+
+							<div class="scroll scrollbar_design">
+								<table class="table_basic alignC sticky">
+									<caption>외부 수강 과목 테이블</caption>
+									<colgroup>
+										<col style="width:50px;">
+										<col>
+										<col style="width:180px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="3" class="title">타 교육원 수강 과목</th>
+										</tr>
+										<tr>
+											<th scope="col">번호</th>
+											<th scope="col">과목 명</th>
+											<th scope="col">이수여부</th>
+										</tr>
+									</thead>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="gray">사회복지학개론(사회복지개론)</td>
+										<td>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												이수완료
+											</label>
+											<label>
+												<input type="radio" name="completionCheck_01">
+												현재이수
+											</label>
+										</td>
+									</tr>
+								</table>
+	
+
+							</div>
+						</div>
+
+						<h3>타 교육원 이수 과목 성적증명서 첨부</h3>
+
+						<!-- 파일 업로드 드래그 앤 드롭 -->
+						<div class="file_dragUpload">
+							<div class="drag_area">
+								<input type="file" class="transparent" id="fileUpload" multiple>
+								파일을 여기에 끌어다 놓거나, '파일 선택' 버튼을 클릭해 첨부해주세요.
+								<span>허용 파일 형식: .hwp/ .hwt/ .hwpx / .doc  / .docx (최대 50MB)</span>
+								<label for="fileUpload" class="btn primary">파일 선택</label>
+							</div>
+						</div>
+						<!-- 파일 업로드 드래그 앤 드롭 -->
+
+						<!-- 첨부파일 영역 -->
+						<div class="attachment"> 
+							<div class="download_area">
+								<div class="download">
+									<p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
+									<div>
+										<button type="button">삭제 <span class="material-symbols-rounded">close</span></button>
+										<button type="button">파일변경 <span class="material-symbols-rounded">edit_square</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //첨부파일 영역 -->
+
+					</div>
+
+					<div class="btn_area">
+						<button type="button">취소</button>
+						<button type="button">저장</button>
+					</div>
+
+					<div class="modal_layerBg"></div>
 				</div>
+				<!-- //레이어_선택 이수과목 입력 -->
 				
 			</div>
 
-			<div class="subjectSelection">
-				
-				<div class="selectHeader">
-					<h4>선택과목</h4>
-					<p>
-						첨부파일이 없습니다.
-					</p>
-					<a href="#none">입력하기</a>
-				</div>
 
-				<div class="subjectList">
-					입력한 과목이 없습니다.
-				</div>
-			</div>
-
-
-			<h3>3. 사회복지를 전공하게 된 동기는 무엇인가요?</h3>
+			<h3>3. 실습 신청 인터뷰</h3>
 			<div class="textarea">
+				<h4>3-1. 사회복지를 전공하게 된 동기는 무엇인가요?</h4>
 				<p>작성 예시) 사회복지를 전공하게 된 동기는 개인적 경험에서 비롯되었습니다. 어려움을 겪는 사람들을 돕고, 그들의 삶을 향상시키는 데 기여하고 싶어서 선택했습니다.</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
 			</div>
 
-			<h3>4. 실습 기관을 선택한 이유는 무엇인가요?</h3>
 			<div class="textarea">
-				<p>작성 예시) 실습기관을 선택한 이유는 아동의 권리와 복지를 증진시키고 싶기 때문입니다. 특히 취약한 환경에 있는 아이들을 돕고, 그들의 성장과 발달을 지원하며, 더 나은 미래를 위한 기반을 마련해주고자 합니다. 아이들이 건강하고 행복하게 자랄 수 있도록 돕는 것이 제 목표입니다.</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
+				<h4>3-2. 실습 기관을 선택한 이유는 무엇인가요?</h4>
+				<p>작성예시) 실습기관을 선택한 이유는 아동의 권리와 복지를 증진시키고 싶기 때문입니다. 특히 취약한 환경에 있는 아이들을 돕고, 그들의 성장과 발달을 지원하며, 더 나은 미래를 위한 기반을 마련해주고자 합니다. 아이들이 건강하고 행복하게 자랄 수 있도록 돕는 것이 제 목표입니다.</p>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
 			</div>
 
-
-			<h3>5. 실습을 통해서 성취하고자 하는 목표는 무엇인가요?</h3>
 			<div class="textarea">
-				<p>작성 예시) 실습을 통해 아동복지 현장에서의 실무 경험을 쌓고, 전문적인 지식과 기술을 습득하여 아동들에게 더 나은 복지 서비스를 제공하고자 합니다. 또한, 다양한 사례를 통해 문제 해결 능력을 향상시키고, 아동의 권리와 복지를 보호하는 데 기여할 수 있는 역량을 키우는 것을 목표로 합니다.</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
+				<h4>3-3. 실습을 통해서 성취하고자 하는 목표가 무엇인가요?</h4>
+				<p>작성예시) 실습을 통해 아동복지 현장에서의 실무 경험을 쌓고, 전문적인 지식과 기술을 습득하여 아동들에게 더 나은 복지 서비스를 제공하고자 합니다. 또한, 다양한 사례를 통해 문제 해결 능력을 향상시키고, 아동의 권리와 복지를 보호하는 데 기여할 수 있는 역량을 키우는 것을 목표로 합니다.</p>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
 			</div>
 
-			<h3>6. 실습을 마친 후 목표달성 정도를 파악할 수 있는 기준은 무엇일까요?</h3>
 			<div class="textarea">
-				<p>작성 예시) 목표 달성 정도를 파악할 수 있는 기준은 실습 동안 습득한 실무 능력의 향상 정도, 문제 해결 능력의 증진 여부, 실습 평가 점수, 그리고 슈퍼바이저 및 동료들로부터 받은 피드백입니다. 또한, 아동들과의 상호작용에서 얻은 긍정적인 변화와 그들의 복지 향상에 기여한 사례들을 통해 목표 달성 여부를 평가할 수 있습니다.</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
+				<h4>3-4. 실습을 마친 후 목표달성 정도를 파악할 수 있는 기준은 무엇인가요?</h4>
+				<p>작성예시) 목표 달성 정도를 파악할 수 있는 기준은 실습 동안 습득한 실무 능력의 향상 정도, 문제 해결 능력의 증진 여부, 실습 평가 점수, 그리고 슈퍼바이저 및 동료들로부터 받은 피드백입니다. 또한, 아동들과의 상호작용에서 얻은 긍정적인 변화와 그들의 복지 향상에 기여한 사례들을 통해 목표 달성 여부를 평가할 수 있습니다.</p>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
 			</div>
 
-			<h3>7. 사회복지를 실천하는데 있어 자신의 강점과 약점은 무엇인가요?</h3>
 			<div class="textarea">
-				<p>
-					<strong>강점</strong>
-					작성 예시) 제 강점은 공감 능력과 소통 능력입니다. 사람들의 어려움을 이해하고, 그들과 효과적으로 소통하여 신뢰를 구축하며 문제 해결에 기여할 수 있습니다.
-				</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
-
-				<p>
-					<strong>약점</strong>
-					작성 예시) 제 약점은 경험 부족으로 인한 실무 능력의 미숙함입니다. 그러나 이를 극복하기 위해 지속적으로 배우고 성장하려는 의지가 강합니다.
-				</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
+				<h4>3-5. 사회복지를 실천하는데 있어 자신의 강점은 무엇인가요?</h4>
+				<p>작성예시) 제 강점은 공감 능력과 소통 능력입니다. 사람들의 어려움을 이해하고, 그들과 효과적으로 소통하여 신뢰를 구축하며 문제 해결에 기여할 수 있습니다.</p>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
 			</div>
 
-			<h3>8. 취미 및 특기는 무엇이 있나요?</h3>
 			<div class="textarea">
-				<p>작성 예시) 저의 취미는 읽기와 여행입니다. 새로운 지식을 습득하고 다양한 문화를 경험하는 것을 즐깁니다. 또한, 특기로는 글쓰기와 문제 해결능력을 강조할 수 있습니다.</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
+				<h4>3-6. 사회복지를 실천하는데 있어 자신의 약점은 무엇인가요?</h4>
+				<p>작성예시) 제 약점은 경험 부족으로 인한 실무 능력의 미숙함입니다. 그러나 이를 극복하기 위해 지속적으로 배우고 성장하려는 의지가 강합니다.</p>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
 			</div>
 
-			<h3>9. 실습기관,  실습지도자 및 실습지도교수에게 바라는 점을 작성해주세요.</h3>
 			<div class="textarea">
-				<p>작성 예시) 제 실습기관과 실습지도자에게는 학습과 발전을 위한 지원과 피드백을 바랍니다. 전문적인 지도와 실무 경험을 통해 실력을 향상시키고 싶습니다. 또한, 열린 소통과 협력을 통해 실습 동안의 목표를 달성할 수 있기를 기대합니다.</p>
-				<textarea name="" id="" placeholder="내용을 입력하세요."></textarea>
+				<h4>3-7. 취미 및 특기는 무엇이 있나요?</h4>
+				<p>작성예시) 저의 취미는 읽기와 여행입니다. 새로운 지식을 습득하고 다양한 문화를 경험하는 것을 즐깁니다. 또한, 특기로는 글쓰기와 문제 해결능력을 강조할 수 있습니다.</p>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
+			</div>
+
+			<div class="textarea">
+				<h4>3-8. 실습기관, 실습지도자 및 실습지도교수에게 바라는 점을 작성해주세요.</h4>
+				<p>작성예시) 제 실습기관과 실습지도자에게는 학습과 발전을 위한 지원과 피드백을 바랍니다. 전문적인 지도와 실무 경험을 통해 실력을 향상시키고 싶습니다. 또한, 열린 소통과 협력을 통해 실습 동안의 목표를 달성할 수 있기를 기대합니다.</p>
+				<div class="textarea_wrap">
+                    <textarea id="answer" maxlength="50" placeholder="내용을 입력해 주세요."></textarea>
+                    <span class="textarea_count">
+                        <em>0</em>/1000
+                    </span>
+                </div>
 			</div>
 
 		</div>
@@ -489,42 +808,42 @@
 	<!-- //내용 -->
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.1/jquery.marquee.min.js" type="text/javascript"></script> <!-- 마퀴.JS -->
 <script>
 	$(function(){
-		$(".help").click (function () {
-			$(this).next().fadeIn("fast");
-		}); // 첨부 안내 레이어 열기 //
 
 		$(".picture button").click (function () {
-			$(".layer_selectPicture").fadeIn("fast");
-		}); // 사진첨부 레이어 열기 //
+			$("#pictureUpload").trigger("click");
+		}); // 사진 파일 선택 열기 //
 
-		$(".layer_blackHeader button").click (function () {
-			$(this).closest(".layer_selectPicture").fadeOut("fast");
-		}); // 사진첨부 레이어 닫기 //
+		$("#pictureUpload").change(function () {
+			var file = this.files[0];
+			if (!file) {
+				return;
+			}
+			if (!/^image\/(jpeg|png|gif)$/.test(file.type) || file.size > 5 * 1024 * 1024) {
+				alert("jpg, png, gif 형식의 5MB 이하 파일을 선택해 주세요.");
+				this.value = "";
+				return;
+			}
+			$(".picture img").attr("src", URL.createObjectURL(file));
+			$(".picture button").text("사진수정");
+			$(".onlinePractice_content .picture span").css("display", "none");
+		}); // 사진 바로 첨부 및 미리보기 //
 
-		$(".helpTxt button").click (function () {
-			$(this).closest(".helpTxt").fadeOut("fast");
-		}); // 첨부 안내 레이어 닫기 //
+		$(".subjectSelection .subject_div").first().find(".selectHeader a").click(function (event) {
+			event.preventDefault();
+			$(".layer_coursesTaken.required").fadeIn("fast");
+		}); // 전공 필수 이수과목 레이어 열기 //
+
+		$(".subjectSelection .subject_div").last().find(".selectHeader a").click(function (event) {
+			event.preventDefault();
+			$(".layer_coursesTaken.elective").fadeIn("fast");
+		}); // 전공 선택 이수과목 레이어 열기 //
 
 		$(".btn_modalClose").click (function () {
 			$(this).closest(".modalLayer").fadeOut("fast");
 		}); // 레이어 닫기 //
 
-		$('.marquee').marquee({
-			//speed in milliseconds of the marquee
-			duration:12000,
-			//gap in pixels between the tickers
-			gap: 50,
-			//time in milliseconds before the marquee will start animating
-			delayBeforeStart: 0,
-			//'left' or 'right'
-			direction: 'left',
-			//true or false - should the marquee be duplicated to show an effect of continues flow
-			duplicated: true,
-			pauseOnHover: true
-		}); // 알람 메시지 //
 	});
 </script>
 </body>
