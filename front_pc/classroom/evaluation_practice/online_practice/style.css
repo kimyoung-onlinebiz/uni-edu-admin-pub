@@ -39,7 +39,7 @@ html,body { margin:0; padding:0; overflow:hidden; background:#efefef; }
 .table_basic td { border:1px solid #dfe8ec; text-align:center; background:var(--Neutral-0); }
 .table_basic.align_left td { text-align:left; }
 .table_basic.align_left .form_check { justify-content:start; }
-
+.txt_red { color:#ED2424; }
 
 .onlinePractice .main > a:hover { border:2px solid #00dc78; color:#00dc78; background:url(images/bullet_rightGreen.png) no-repeat calc( 65% + 32px ) center; }
 .onlinePractice .header { height:60px; background:#020040; display:flex; justify-content:space-between; align-items:center; padding:0 50px; }
@@ -61,6 +61,7 @@ html,body { margin:0; padding:0; overflow:hidden; background:#efefef; }
 .scrollbar_design::-webkit-scrollbar-thumb { border-radius:8px; background:#999; background-clip:padding-box; border:3px solid transparent; }
 .onlinePractice_content .content > h2 { font-size:20px; font-weight:700; border-bottom:1px solid #111; text-align:left; padding-bottom:14px; }
 .onlinePractice_content .content > h2.borderN { border-bottom:none; padding-bottom:24px; }
+.onlinePractice_content .content > h2.borderN .writeGuide_list { padding:12px 0 0; }
 .onlinePractice_content .writeInput { display:flex; text-align:left; flex-wrap:wrap; border-bottom:1px solid #eee; align-items:center; }
 .onlinePractice_content .writeInput p { color:#04007C; margin-top:3px; }
 .onlinePractice_content .writeInput p:first-of-type { margin-top:15px; }
@@ -106,10 +107,10 @@ input[type=checkbox]:checked { background:url(images/checkBox_on.png) no-repeat 
 .onlinePractice_content .moveButton .btnNext:hover { background:#0600c9 url(images/icon_next.png) no-repeat calc(100% - 19px) center; border:1px solid #0600c9; }
 .onlinePractice_content .moveButton p strong { color:#ED2424; animation:flash_ani .8s ease infinite; }
 .onlinePractice_content .moveButton p { color:#777; background:url(images/icon_adminCheck.png) no-repeat 0 5px; padding:12px 0 0 40px; margin-left:30px; }
-.onlinePractice_content .modalLayer { display:none; position:absolute; top:50%; left:50%; margin:-330px 0 0 -380px; z-index:1001; background:#fff; border-radius:10px; overflow:hidden; width:760px; height:700px; }
-.onlinePractice_content .modalLayer_content { background:#fff; height:650px; padding:24px; overflow:auto; overflow-x:hidden;}
+.onlinePractice_content .modalLayer { display:none; position:fixed; top:50%; left:50%; transform:translateY(-50%); margin:0 0 0 -380px; z-index:1001; background:#fff; border-radius:10px; overflow:hidden; width:760px; height:700px; max-height:calc(100vh - 40px); box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.8); }
+.onlinePractice_content .modalLayer_content { background:#fff; height:calc(100% - 50px); padding:24px; overflow:auto; overflow-x:hidden;}
 .onlinePractice_content .btn_modalClose { position:absolute; right:15px; top:8px; background:none !important; padding:0 !important; }
-.onlinePractice_content .modal_layerBg { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.8); z-index:-1; }
+.onlinePractice_content .modal_layerBg { display:none; }
 .onlinePractice_content .btn_modalClose:after { content:"" !important; }
 .onlinePractice_content .modalLayer h2 { width:100%; height:50px; font-size:18px; font-weight:700; background:#01B865; text-align:center; color:#fff; padding-top:14px; }
 .onlinePractice_content .modalLayer_content > p,.onlinePractice_content .modalLayer_content table { margin-bottom:24px; }
@@ -244,7 +245,9 @@ outline:none; }
 .onlinePractice_content .writeGuide_list > li:before { content:"※ " }
 .onlinePractice_content .writeGuide_list li strong { color:#ED2424; }
 .onlinePractice_content .writeGuide_list ol { margin:16px 16px; }
-.onlinePractice_content .writeGuide_list ol li { list-style:decimal; margin-left:5px; }
+.onlinePractice_content .writeGuide_list ol li { list-style:decimal; margin-left:5px; margin-top:40px; }
+.onlinePractice_content .writeGuide_list .marginT8 li { margin-top:0px; }
+.onlinePractice_content .writeGuide_list ol li:first-of-type {  margin-top:0px; }
 .onlinePractice_content .writeGuide_list ol li p { margin-bottom:0; }
 .onlinePractice_content .writeGuide_list ol li span { color:#777; font-size:15px;padding:5px 0 0 0; }
 .onlinePractice_content .writeGuide_list ol li img { margin-top:20px; }
@@ -363,7 +366,7 @@ outline:none; }
 .onlinePractice_content .paper_allPrint { display:block; min-width:180px; height:35px;  border-radius:3px; color:#fff; font-size:14px; background:#04007C  url(images/bullet_rightWhite.png) no-repeat calc( 100% - 15px ) 10px; background-size:16px auto; padding:0 35px 0 20px; margin:0 auto 30px; }
 .onlinePractice_content .paper_allPrint:hover { background:#0600c9  url(images/bullet_rightWhite.png) no-repeat calc( 100% - 15px ) 10px; background-size:16px auto;  }
 
-.onlinePractice_content .modalLayer.layer_reasonInput { width:400px; height:380px; margin:-180px 0 0 -200px }
+.onlinePractice_content .modalLayer.layer_reasonInput { width:400px; height:380px; margin:0 0 0 -200px }
 .onlinePractice_content .modalLayer.layer_reasonInput .modalLayer_content { height:340px; }
 .layer_reasonInput textarea { width:100%; height:200px; border-radius:5px; border:1px solid #aaa; }
 .btn_area { display:flex; justify-content:center; gap:12px; margin-top:24px; }
@@ -384,10 +387,9 @@ outline:none; }
 .onlinePractice_content .icon_tooltip { margin-top:-9px; }
 .onlinePractice_content .icon_tooltip button { font-size:28px; }
 .onlinePractice_content .icon_tooltip .tooltip { left:calc(100% + 12px); top:-40px; max-width: min(380px, calc(100vw - 40px)); padding:15px; }
-.onlinePractice_content .icon_tooltip .tooltip li { position:relative; margin-bottom:3px; font-size:13px; }
+.onlinePractice_content .icon_tooltip .tooltip li { margin-left:15px; margin-bottom:3px; font-size:13px; list-style:decimal; }
 .onlinePractice_content .icon_tooltip .tooltip li:last-child { margin-bottom:0; }
 .onlinePractice_content .icon_tooltip .tooltip:before { left:-10px; top:50px; width:0; height:0; background:none; border-top:7px solid transparent; border-bottom:7px solid transparent; border-right:10px solid var(--Neutral-900); transform:none; }
-.onlinePractice_content .icon_tooltip .tooltip li:before { content:"ㆍ"; position:absolute; left:0; }
 .onlinePractice_content .btn_allSave { display:block; width:180px; height:35px; line-height:35px; border-radius:3px; color:#fff; font-size:14px; background:#04007C url(images/bullet_rightWhite.png) no-repeat calc(50% + 68px) center; background-size:16px auto; padding-right: 10px; margin:30px auto 0; }
 .onlinePractice_content .btn_allSave:hover { background:#0600c9 url(images/bullet_rightWhite.png) no-repeat calc(50% + 68px) center; background-size:16px auto;}
 .onlinePractice_content .practice_schedule { display:flex; gap:20px; margin-top:20px; justify-content:space-between; }
