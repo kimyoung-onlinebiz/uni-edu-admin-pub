@@ -2,7 +2,7 @@
 .wrap { max-width:1200px; margin:0 auto; }
 
 /* 서브 공통 레이아웃 */
-.subpage_layout { display:grid; grid-template-columns:256px minmax(0, 960px); column-gap:64px; width:1280px; margin:0 auto; padding:60px 0 120px; align-items:start; background:var(--Neutral-0); }
+.subpage_layout { display:grid; grid-template-columns:256px minmax(0, 960px); column-gap:64px; width:1280px; margin:0 auto; padding:60px 0 60px; align-items:start; background:var(--Neutral-0); }
 .subpage_layout.two_column_layout { grid-template-columns:1280px minmax(0, 320px); column-gap:32px; width:1280px; margin:0 auto; }
 .subpage_layout.two_column_layout .two_column_content { display:flex; gap:32px; }
 .subpage_layout.two_column_layout .two_column_left { width:928px; }
@@ -1012,7 +1012,9 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .general_price dd { width:230px; display: flex; align-items:center; gap:10px; }
 .general_price del { min-width:80px; text-align:left; color:var(--Neutral-600); font-size:var(--Font-small); margin-right: 0; }
 .general_price strong,.arrow_price strong { font-size:var(--Font-medium); font-weight: 700; }
-.general_price strong em,.arrow_price strong em { width:40px; display:inline-block; text-align:left; color:var(--Error); }
+.general_price strong em { width:40px; display:inline-block; text-align:left; color:var(--Error); }
+.arrow_price { display:flex; justify-content:center; align-items: center; gap:4px; }
+.arrow_price strong em { display:inline-block; text-align:left; color:var(--Error); }
 .arrow_price { display:flex; justify-content:center; align-items: center; gap:4px; }
 .arrow_price del { color:var(--Neutral-600); font-size:var(--Font-small); margin-right: 0; }
 .subject_name dl { display:flex; gap:8px; align-items:center; }
@@ -1221,4 +1223,6 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .review_list a:hover .material-symbols-rounded { transform:rotate(180deg); }
 .scholarship_student table { margin-top:40px; }
 
-/* 김영평생교육원 tv */
+.ScholarShip_content dl { display:flex; flex-direction:column; margin:32px 24px 0px; }
+.ScholarShip_content dt { font-weight:600; color:var(--Neutral-900); margin-bottom:8px; font-size:var(--Font-medium); }
+.ScholarShip_content dd { color:var(--Neutral-800); line-height:1.5; }
