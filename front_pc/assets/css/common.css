@@ -250,6 +250,7 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
 .list_table.align_left th .form_group { justify-content:left; }
 .align_left { text-align:left !important; }
 .align_right { text-align:right !important; }
+.align_center { text-align:center !important; }
 
 /* 체크/라디오 라벨 */
 .form_check {
@@ -384,7 +385,7 @@ table th { font-weight:600; }
 .list_table th:first-child,.list_table td:first-child,.view_table th:first-child,.view_table td:first-child { border-left:none; /* 맨 왼쪽 보더 없음 */ }
 .list_table th:last-child,.list_table td:last-child,.view_table th:last-child,.view_table td:last-child { border-right:none; /* 맨 오른쪽 보더 없음 */ }
 .list_table th:last-child,.list_table td:last-child,.view_table th:last-child,.view_table td,.view_table th { font-size:var(--Font-small); }
-.view_table tr:last-child th { border-bottom:1px solid var(--Neutral-300); }
+.view_table tbody tr:last-child th { border-bottom:1px solid var(--Neutral-300); }
 
 .list_table thead > tr:first-child > th { border-top:none; }
 tr.important td,tr.important td a { background:var(--Neutral-200); font-weight:500; }

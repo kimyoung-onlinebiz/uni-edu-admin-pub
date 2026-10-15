@@ -41,6 +41,7 @@
 .subpage_content .sub_header { position:relative; width:100%; display:flex; align-items:center; justify-content:space-between; padding-bottom:19px; margin-top:35px; }
 .subpage_content .sub_header.column { flex-direction:column; align-items:flex-start; gap:8px; }
 .subpage_content .sub_header.start { justify-content:flex-start; }
+.subpage_content .sub_header.start p { margin-left:16px; }
 .subpage_content .sub_header.start .table_sort { margin-bottom:0; margin-top:3px; }
 .subpage_content .sub_header.start select { margin-left:auto; }
 .subpage_content .sub_header .sub_header_info { display:flex; align-items:center; gap:16px; }
@@ -1174,3 +1175,50 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .refund_system ol > li { margin-bottom:8px; }
 .refund_system ol { margin-top:8px; }
 .refund_system .sub_header + table { margin-top:0; }
+
+/* 샘플강의, 이벤트 장학금 */
+.sample_list { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:4px; }
+.sample_list li { overflow:hidden; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); background:var(--Neutral-0); }
+.sample_list a { display:block; overflow:hidden; }
+.sample_list img { display:block; width:100%; transition:transform 0.3s ease; }
+.sample_list a:hover img { transform:scale(1.05); }
+.sample_list h5 { overflow:hidden; padding:24px 24px 0; white-space:nowrap; text-overflow:ellipsis; font-size:var(--Font-large); font-weight:600;  }
+.sample_list p { padding:16px 24px 24px; font-size:var(--Font-small); color:var(--Neutral-600); }
+.sample_list span { display:block; padding:8px 24px 0; }
+.sample_list.tv span { display:inline-block; margin:24px 0 0 24px; padding:4px 12px; border-radius:16px; background:#e8efff; color:var(--Primary-500); font-size:var(--Font-small); font-weight:500; }
+.sample_list.tv span.info { background:#ffe8e8; color:#e03131; }
+.sample_list.tv h5 { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; white-space:normal; padding-top:16px; line-height:1.5; }
+.sample_list.tv p { padding-top:20px; }
+.dot_list li:before { content:"• "; color:var(--Neutral-600); position:absolute; left:0; top:0; }
+.dot_list li { position:relative; padding-left:12px; margin-bottom:8px; }
+
+/* 장학제도 조항 번호 */
+.scholarship_program > ol { counter-reset:article; }
+.scholarship_program > ol > li { counter-increment:article; padding-bottom:40px; }
+.scholarship_program > ol > li > strong { display:block; margin-bottom:8px; font-size:var(--Font-xlarge); }
+.scholarship_program > ol > li > strong:before { content:"제 " counter(article) "조 "; }
+.scholarship_program > ol > li ol { margin-left:20px; }
+.scholarship_program > ol > li ol > li { list-style-type: decimal; margin:0 0 8px 20px; }
+.scholarship_program li:last-child {  margin-bottom:0; }
+.scholarship_program .guide { margin-top:8px; }
+.scholarship_program .guide li { color:var(--Neutral-600); font-size:var(--Font-small); }
+.scholarship_program .guide li:before { content:"* "; color:var(--Neutral-600);  }
+.scholarship_program table { margin-top:40px; }
+
+/* 장학생 후기 */
+.review_list { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:24px; }
+.review_list li { display:flex; flex-direction:column; padding-bottom:24px; overflow:hidden; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); background:var(--Neutral-0); }
+.review_list li .review_img { height:172px; background:var(--Neutral-100); text-align:center; }
+
+
+.review_list li > span { padding:24px 20px 0; font-size:var(--Font-small); color:var(--Neutral-600); }
+.review_list strong { padding:4px 20px 0; font-size:var(--Font-large); font-weight:600; color:var(--Neutral-900); }
+.review_list em { font-style:normal; color:var(--Primary-500); }
+.review_list p:not(.review_img) { display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; min-height:96px; padding:8px 20px 0; font-size:var(--Font-small); line-height:1.5; color:var(--Neutral-800); }
+.review_list a { margin-top:auto; padding:16px 20px 0; text-align:right; font-size:var(--Font-small); color:var(--Neutral-600); }
+.review_list a:hover { color:var(--Neutral-900); }
+.review_list a .material-symbols-rounded { display:inline-flex; align-items:center; justify-content:center; width:1em; height:1em; vertical-align:-2px; font-size:var(--Font-small); font-weight:600; transform-origin:center center; transition:transform .4s ease; padding-top:1px; }
+.review_list a:hover .material-symbols-rounded { transform:rotate(180deg); }
+.scholarship_student table { margin-top:40px; }
+
+/* 김영평생교육원 tv */
