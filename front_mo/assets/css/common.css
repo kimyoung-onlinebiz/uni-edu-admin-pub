@@ -237,7 +237,7 @@ em { text-decoration:none; font-style:normal; }
 .footer_simple .copyright { padding:12px 0 0; border:0; }
 
 /* 14. 레이어 팝업 공통 */
-.layer_popup { position:fixed; left:50%; top:50%; z-index:300; width:320px; max-width:calc(100% - 40px); background:var(--Neutral-0); box-shadow:0 0 0 100vmax rgba(0,0,0,.8); transform:translate(-50%, -50%); border-radius:var(--Border-2radius); }
+.layer_popup { position:fixed; left:50%; top:50%; z-index:300; width:320px; max-width:calc(100% - 40px); background:var(--Neutral-0); box-shadow:0 0 0 100vmax rgba(0,0,0,.8); transform:translate(-50%, -50%); border-radius:var(--Border-2radius); overflow:hidden; }
 .layer_popup[hidden] { display:none; }
 .layer_popup h2 { border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-large); font-weight:700; }
 .layer_popup .btn_x { position:absolute; right:var(--Gutter); top:24px; z-index:2; }
