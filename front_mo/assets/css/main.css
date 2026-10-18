@@ -115,7 +115,6 @@
 /* 메인 레이어 팝업 (진입 시 노출) */
 .main_layer { display:grid; grid-template-columns:1fr 1fr; }
 .main_layer .swiper-container { grid-column:1 / -1; width:100%; }
-.main_layer .swiper-slide { padding-bottom:20px; }
 .main_layer .swiper-slide img { display:block; width:100%; }
 .main_layer .swiper-pagination { position:absolute; left:0; right:0; bottom:16px; margin:0; }
 .main_layer .btn_x { right:7px; top:7px; }
