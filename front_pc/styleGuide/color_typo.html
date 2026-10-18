@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>김영평생교육원</title>
+    <title>Color, Typography | STYLE GUIDE PC</title>
     <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
     <link rel="stylesheet" href="styleGuide.css?v=1.0">
     <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -25,65 +25,71 @@
             <ul>
                 <li><a href="link.html">프론트 PC html 링크</a></li>
                 <li><a href="color_typo.html" class="on">Color Palette, Typography</a></li>
-                <li><a href="input.html">Input, Form, Table, Button</a></li>
+                <li><a href="input.html">Input, Button, Component</a></li>
             </ul>
         </nav>
     </section>
     <!-- //lnb -->
-
     <section class="styleGuide_content">
         <div class="styleGuide_quickNav" aria-label="Color Typography 페이지 빠른 이동">
             <a href="#sg-color">색상 팔레트</a>
-            <a href="#sg-typo">폰트 및 텍스트 스타일</a>
+            <a href="#sg-typo">폰트 · 글자 크기</a>
+            <a href="#sg-util">공통 클래스</a>
             <a href="#sg-icon">아이콘</a>
         </div>
-       
-        <div class="styleGuide_note">
-            <strong>기준:</strong> 이 페이지는 common.css에 정의된 실제 CSS 변수와 공통 유틸리티 기준으로 정리한 스타일 가이드입니다.
-        </div>
+
+        <div class="styleGuide_note"><strong>기준:</strong> front_pc/assets/css/common.css 의 :root 변수와 공통 클래스 기준입니다. 색상·크기는 값 대신 변수(<code>var(--이름)</code>)로 사용합니다.</div>
 
         <h2 id="sg-color">색상 팔레트</h2>
         <h3>Neutral</h3>
         <div class="color">
             <dl>
-                <dt style="background:var(--Neutral-0); border:1px solid #ddd;"></dt>
+                <dt style="background:var(--Neutral-0);"></dt>
                 <dd>--Neutral-0</dd>
-                <dd>#fff</dd>
+                <dd>#FFFFFF</dd>
+                <dd>배경</dd>
             </dl>
             <dl>
-                <dt style="background:var(--Neutral-100); border:1px solid #ddd;"></dt>
+                <dt style="background:var(--Neutral-100);"></dt>
                 <dd>--Neutral-100</dd>
                 <dd>#F7F8FA</dd>
+                <dd>연한 배경</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Neutral-200);"></dt>
                 <dd>--Neutral-200</dd>
-                <dd>#f2f4fc</dd>
+                <dd>#F2F4FC</dd>
+                <dd>박스 배경</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Neutral-300);"></dt>
                 <dd>--Neutral-300</dd>
                 <dd>#E4E7F1</dd>
+                <dd>구분선, 테두리</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Neutral-500);"></dt>
                 <dd>--Neutral-500</dd>
                 <dd>#B1B9CF</dd>
+                <dd>입력칸 테두리</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Neutral-600);"></dt>
                 <dd>--Neutral-600</dd>
-                <dd>#888</dd>
+                <dd>#888888</dd>
+                <dd>보조 텍스트</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Neutral-800);"></dt>
                 <dd>--Neutral-800</dd>
                 <dd>#414656</dd>
+                <dd>본문 텍스트</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Neutral-900);"></dt>
                 <dd>--Neutral-900</dd>
-                <dd>#111</dd>
+                <dd>#111111</dd>
+                <dd>제목 텍스트</dd>
             </dl>
         </div>
         <h3>Primary</h3>
@@ -92,6 +98,7 @@
                 <dt style="background:var(--Primary-100);"></dt>
                 <dd>--Primary-100</dd>
                 <dd>#E9EBF7</dd>
+                <dd>선택 배경</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Primary-200);"></dt>
@@ -102,16 +109,19 @@
                 <dt style="background:var(--Primary-300);"></dt>
                 <dd>--Primary-300</dd>
                 <dd>#BAC0E7</dd>
+                <dd>선택 테두리</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Primary-500);"></dt>
                 <dd>--Primary-500</dd>
                 <dd>#2235B0</dd>
+                <dd>메인 컬러, 강조 버튼</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Primary-600);"></dt>
                 <dd>--Primary-600</dd>
                 <dd>#1B2A8D</dd>
+                <dd>링크, 강조 텍스트</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Primary-700);"></dt>
@@ -123,340 +133,220 @@
                 <dd>--Primary-800</dd>
                 <dd>#0F184F</dd>
             </dl>
+            <dl>
+                <dt style="background:var(--Primary-900);"></dt>
+                <dd>--Primary-900</dd>
+                <dd>#0F184F</dd>
+                <dd>800 과 같은 값</dd>
+            </dl>
         </div>
         <h3>System</h3>
         <div class="color">
             <dl>
-                <dt style="background:var(--Error-soft);"></dt>
-                <dd>--Error-soft</dd>
-                <dd>#FFEBEB</dd>
-            </dl>
-            <dl>
                 <dt style="background:var(--Error);"></dt>
                 <dd>--Error</dd>
                 <dd>#EF4444</dd>
-            </dl>
-            <dl>
-                <dt style="background:var(--Warning-soft);"></dt>
-                <dd>--Warning-soft</dd>
-                <dd>#FEF3E2</dd>
+                <dd>오류, 필수</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Warning);"></dt>
                 <dd>--Warning</dd>
                 <dd>#EAB308</dd>
-            </dl>
-            <dl>
-                <dt style="background:var(--Success-soft);"></dt>
-                <dd>--Success-soft</dd>
-                <dd>#E7F8F0</dd>
+                <dd>주의</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Success);"></dt>
                 <dd>--Success</dd>
                 <dd>#16A34A</dd>
-            </dl>
-            <dl>
-                <dt style="background:var(--Info-soft);"></dt>
-                <dd>--Info-soft</dd>
-                <dd>#EBF1FE</dd>
+                <dd>성공</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Info);"></dt>
                 <dd>--Info</dd>
                 <dd>#256EF4</dd>
+                <dd>안내</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Error-soft);"></dt>
+                <dd>--Error-soft</dd>
+                <dd>#FFEBEB</dd>
+                <dd>오류 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Warning-soft);"></dt>
+                <dd>--Warning-soft</dd>
+                <dd>#FEF3E2</dd>
+                <dd>주의 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Success-soft);"></dt>
+                <dd>--Success-soft</dd>
+                <dd>#E7F8F0</dd>
+                <dd>성공 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Info-soft);"></dt>
+                <dd>--Info-soft</dd>
+                <dd>#EBF1FE</dd>
+                <dd>안내 배경</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Secondary);"></dt>
                 <dd>--Secondary</dd>
                 <dd>#414656</dd>
+                <dd>보조 버튼</dd>
             </dl>
             <dl>
                 <dt style="background:var(--Placeholder);"></dt>
                 <dd>--Placeholder</dd>
                 <dd>#C2C8CC</dd>
+                <dd>placeholder</dd>
             </dl>
         </div>
-        
-        <!-- 폰트 및 텍스트 스타일 -->
-        <h2 id="sg-typo">폰트 및 텍스트 스타일</h2>
-        <div class="guide">
-            <dl>
-                <dt>폰트</dt>
-                <dd>Pretendard(프리텐다드) 
-                    <a href="https://cactus.tistory.com/306" class="btn_icon" target="_blank"><span class="icon_material material-icons">download</span> 다운로드</a>
-                </dd>
-            </dl>
-            <dl>
-                <dt>본문 텍스트</dt>
-                <dd>
-                    <p style="font-size:var(--Font-2xsmall); font-weight:400;">font-size:12px, font-weight:400; <code>var(--Font-2xsmall)</code></p>
-                    <p style="font-size:var(--Font-xsmall); font-weight:400;">font-size:13px, font-weight:400; <code>var(--Font-xsmall)</code></p>
-                    <p style="font-size:var(--Font-small); font-weight:400;">font-size:14px, font-weight:400; <code>var(--Font-small)</code></p>
-                    <p style="font-size:var(--Font-base); font-weight:400;">font-size:15px, font-weight:400; <code>var(--Font-base)</code></p>
-                    <p style="font-size:var(--Font-medium); font-weight:500;">font-size:16px, font-weight:500; <code>var(--Font-medium)</code></p>
-                    <p style="font-size:var(--Font-large); font-weight:600;">font-size:18px, font-weight:600; <code>var(--Font-large)</code></p>
-                    <p style="font-size:var(--Font-xlarge); font-weight:700;">font-size:20px, font-weight:700; <code>var(--Font-xlarge)</code></p>
-                    <p style="font-size:var(--Font-2xlarge); font-weight:700;">font-size:24px, font-weight:700; <code>var(--Font-2xlarge)</code></p>
-                    <p style="font-size:var(--Font-3xlarge); font-weight:700;">font-size:28px, font-weight:700; <code>var(--Font-3xlarge)</code></p>
-                </dd>
-            </dl>
-            <dl>
-                <dt>강조 텍스트</dt>
-                <dd>
-                    <p><strong>굵은 텍스트</strong>는 중요 내용을 강조할 때 사용합니다.</p>
-                    <p><em>기울임 텍스트</em>는 약간의 강조가 필요할 때 사용합니다.</p>
-                    <p><u>밑줄 텍스트</u>는 링크나 중요한 부분에 밑줄을 추가할 때 사용합니다.</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt>텍스트 두께</dt>
-                <dd>
-                   <ul>
-						<li style="font-weight:100;">font-weight:100</li>
-						<li style="font-weight:200;">font-weight:200</li>
-						<li style="font-weight:300;">font-weight:300</li>
-						<li style="font-weight:400;">font-weight:400</li>
-						<li style="font-weight:500;">font-weight:500</li>
-						<li style="font-weight:600;">font-weight:600</li>
-						<li style="font-weight:700;">font-weight:700</li>
-						<li style="font-weight:800;">font-weight:800</li>
-						<li style="font-weight:900;">font-weight:900</li>
-					</ul>
-                </dd>
-            </dl>
-             <dl>
-                <dt>텍스트 정렬</dt>
-                <dd class="flex">
-                    <div>
-                        <h4><code>class="align_left"</code></h4>
-                        <p class="align_left" style="width:120px; border:1px solid #ddd; padding:5px; margin-top:10px;">왼쪽 정렬</p>
-                    </div>
-                    <div>
-                        <h4><code>class="align_right"</code></h4>
-                        <p class="align_right" style="width:120px; border:1px solid #ddd; padding:5px; margin-top:10px;">오른쪽 정렬</p>
-                    </div>
-                    <div>
-                        <h4><code>class="align_center"</code></h4>
-                        <p class="align_center" style="width:120px; border:1px solid #ddd; padding:5px; margin-top:10px;">가운데 정렬</p>
-                    </div>
-                </dd>
-            </dl>
-            <dl>
-                <dt>텍스트 색상</dt>
-                <dd class="flex">
-                    <div>
-                        <p style="color:var(--Neutral-0); background:#111;">var(--Neutral-0)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Neutral-100); background:#111;">var(--Neutral-100)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Neutral-300);">var(--Neutral-300)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Neutral-600);">var(--Neutral-600)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Neutral-800);">var(--Neutral-800)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Neutral-900);">var(--Neutral-900)</p>
-                    </div>
-                </dd>
-                <dd class="flex">
-                    <div>
-                        <p style="color:var(--Primary-100);">var(--Primary-100)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Primary-300);">var(--Primary-300)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Primary-500);">var(--Primary-500)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Primary-700);">var(--Primary-700)</p>
-                    </div>
-                </dd>
-                
-                <dd class="flex">
-                    <div>
-                        <p style="color:var(--Error);">var(--Error)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Warning);">var(--Warning)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Success);">var(--Success)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Info);">var(--Info)</p>
-                    </div>
-                    <div>
-                        <p style="color:var(--Secondary);">var(--Secondary)</p>
-                    </div>
-                </dd>
-            </dl>
-            <dl>
-                <dt>텍스트 말줄임</dt>
-                <dd>
-                    말줄임 한줄인 경우 ellipsis 클래스 사용<br />
-                    <code>&lt;p class="ellipsis" style="width:200px;"&gt;긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장&lt;/p&gt;</code>
-                    <p class="ellipsis" style="width:200px; border:1px solid #ddd; padding:5px; margin-top:10px;">긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장</p>
-                </dd>
-                <dd class="marginT24">
-                    말줄임 두줄인 경우 ellipsis_multiline 클래스 사용<br />
-                    <code>&lt;p class="ellipsis_multiline" style="width:200px;"&gt;긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장&lt;/p&gt;</code>
-                    <p class="ellipsis_multiline" style="width:200px; border:1px solid #ddd; padding:5px 5px 0; margin-top:10px;">두줄긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt>마진 클래스</dt>
-                <dd  class="flex">
-                    <div>
-                        <h4><code>class="marginT0"</code></h4>
-                        <p class="marginT0">margin-top:0px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginT8"</code></h4>
-                        <p class="marginT8">margin-top:8px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginT16"</code></h4>
-                        <p class="marginT16">margin-top:16px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginT24"</code></h4>
-                        <p class="marginT24">margin-top:24px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginT32"</code></h4>
-                        <p class="marginT24">margin-top:32px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginT40"</code></h4>
-                        <p class="marginT40">margin-top:40px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginB0"</code></h4>
-                        <p class="marginB0">margin-bottom:0</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginL4"</code></h4>
-                        <p class="marginL8">margin-left:4px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginL8"</code></h4>
-                        <p class="marginL8">margin-left:8px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginL10"</code></h4>
-                        <p class="marginL10">margin-left:10px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginL24"</code></h4>
-                        <p class="marginL24">margin-left:24px</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginR0"</code></h4>
-                        <p class="marginR0">margin-right:0</p>
-                    </div>
-                    <div>
-                        <h4><code>class="marginR10"</code></h4>
-                        <p class="marginR10">margin-right:10px</p>
-                    </div>
-                </dd>
-            </dl>
-        </div>
-        
-        <!-- //폰트 및 텍스트 스타일 -->
-        <!-- 아이콘 -->
-        <h2 id="sg-icon">아이콘</h2>
-        <div class="guide">
-            <h3>Material Icons (Google)</h3>
-            <p style="margin-top:8px;">Google Material Icons를 사용합니다.
-            <a href="https://fonts.google.com/icons" class="btn_icon" target="_blank"><span class="material-symbols-rounded">open_in_new</span> 아이콘 검색</a>
-            </p>
-            <p style="margin-top:8px;">아이콘은 텍스트와 동일하게 취급되므로, 텍스트 크기와 색상을 조절하여 사용할 수 있습니다.</p>
-            <dl>
-                <dt>사용 방법</dt>
-                <dd>
-                    <p>라운드 된 라인으로 이루어진 디자인</p>
-                    <code>&lt;span class="material-symbols-rounded"&gt;home&lt;/span&gt;</code>
-                </dd>
-                <dd style="margin-top:8px;">
-                    <p>색이 채워진 디자인</p>
-                    <code>&lt;span class="material-symbols-rounded icon_fill"&gt;home&lt;/span&gt;</code>
-                </dd>
-                <p>태그에 material-symbols-rounded 클래스를 추가한 후 아이콘 이름을 영문으로 적는다.<br />면적이 채워진 디자인은 icon_fill 클래스도 추가</p>
-            </dl>
-            <h3>아이콘 예시</h3>
-            <div class="component_example icon">
-                <span class="material-symbols-rounded">keyboard_arrow_down</span>
-                <span class="material-symbols-rounded">keyboard_arrow_up</span>
-                <span class="material-symbols-rounded">keyboard_arrow_left</span>
-                <span class="material-symbols-rounded">keyboard_arrow_right</span>
-                <span class="material-symbols-rounded">keyboard_double_arrow_left</span>
-                <span class="material-symbols-rounded">keyboard_double_arrow_right</span>
-                <span class="material-symbols-rounded">logout</span>
-                <span class="material-symbols-rounded">login</span>
-                <span class="material-symbols-rounded">download</span>
-                <span class="material-symbols-rounded">upload</span>
-                <span class="material-symbols-rounded">search</span>
-                <span class="material-symbols-rounded">book</span>
-                <span class="material-symbols-rounded">dvr</span>
-                <span class="material-symbols-rounded">lightbulb_circle</span>
-                <span class="material-symbols-rounded">wifi_1_bar</span> 
-            </div>
-            <div class="component_example icon">
-                <span class="material-symbols-rounded">clarify</span>
-                <span class="material-symbols-rounded">desktop_windows</span>
-                <span class="material-symbols-rounded">domain_verification</span>
-                <span class="material-symbols-rounded icon_fill">incomplete_circle</span>
-                <span class="material-symbols-rounded">local_library</span>
-                <span class="material-symbols-rounded">display_settings</span>
-                <span class="material-symbols-rounded">content_paste_search</span>
-                <span class="material-symbols-rounded">fact_check</span>
-                <span class="material-symbols-rounded">leaderboard</span>
-                <span class="material-symbols-rounded">comment</span>
-                <span class="material-symbols-rounded">assignment_ind</span>
-                <span class="material-symbols-rounded">handshake</span>
-                <span class="material-symbols-rounded">developer_board</span>
-                <span class="material-symbols-rounded">calendar_today</span>
-                <span class="material-symbols-rounded">delete</span>
-                <span class="material-symbols-rounded">menu</span>
-                <span class="material-symbols-rounded">file_copy</span>
-                <span class="material-symbols-rounded">save</span>
-                <span class="material-symbols-rounded">arrow_drop_down</span>
-                <span class="material-symbols-rounded">arrow_drop_up</span>
-                <span class="material-symbols-rounded">arrow_left</span>
-                <span class="material-symbols-rounded">arrow_right</span>
-                <span class="material-symbols-rounded">arrow_right_alt</span>
-                <span class="material-symbols-rounded">arrow_left_alt</span>
-            </div>
-            <div class="component_example icon">
-                <span class="material-symbols-rounded icon_fill">settings</span>
-                <span class="material-symbols-rounded">border_color</span>
-                <span class="material-symbols-rounded">gpp_maybe</span>
-                <span class="material-symbols-rounded">close</span>
-                <span class="material-symbols-rounded">sound_detection_loud_sound</span>
-                <span class="material-symbols-rounded">add_circle</span>
-                <span class="material-symbols-rounded">attach_file</span>
-                <span class="material-symbols-rounded">horizontal_rule</span>
-                <span class="material-symbols-rounded">add</span>
-                <span class="material-symbols-rounded">add_photo_alternate</span>
-                <span class="material-symbols-rounded">timer</span>
-                <span class="material-symbols-rounded">Refresh</span>
-                <span class="material-symbols-rounded">menu_book</span>
-                <span class="material-symbols-rounded">Autorenew</span>
-                <span class="material-symbols-rounded">playlist_add</span>
-                <span class="icon_new">N</span>
-                <span class="material-symbols-rounded">graphic_eq</span>
-            </div>
-        </div>
-    </section>
 
-    
+        <h2 id="sg-typo">폰트 · 글자 크기</h2>
+        <h3>폰트</h3>
+        <div class="sg_item">
+            <ul class="sg_info">
+                <li>Pretendard Variable (common.css @font-face, 웹폰트 내장) <a href="https://cactus.tistory.com/306" class="btn_icon" target="_blank"><span class="material-symbols-rounded">download</span> 다운로드</a></li>
+                <li>굵기는 <code>font-weight</code> 100 ~ 900 사용 가능, 주로 400 / 500 / 600 / 700 사용</li>
+            </ul>
+            <div class="sg_preview">
+                <ul class="sg_weight">
+                    <li style="font-weight:400;">400<span>가나다라 Aa</span></li>
+                    <li style="font-weight:500;">500<span>가나다라 Aa</span></li>
+                    <li style="font-weight:600;">600<span>가나다라 Aa</span></li>
+                    <li style="font-weight:700;">700<span>가나다라 Aa</span></li>
+                    <li style="font-weight:900;">900<span>가나다라 Aa</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>글자 크기</h3>
+        <table class="sg_table">
+            <colgroup><col style="width:220px;"><col style="width:90px;"><col style="width:420px;"><col></colgroup>
+            <thead><tr><th>변수</th><th>크기</th><th>예시 (권장 굵기)</th><th>용도</th></tr></thead>
+            <tbody>
+                <tr><td><code>--Font-3xlarge</code></td><td>28px</td><td style="font-size:var(--Font-3xlarge); font-weight:700;">가나다라 ABC 123</td><td>메인 비주얼 타이틀</td></tr>
+                <tr><td><code>--Font-2xlarge</code></td><td>24px</td><td style="font-size:var(--Font-2xlarge); font-weight:700;">가나다라 ABC 123</td><td>페이지 타이틀, 강조 숫자</td></tr>
+                <tr><td><code>--Font-xlarge</code></td><td>20px</td><td style="font-size:var(--Font-xlarge); font-weight:700;">가나다라 ABC 123</td><td>섹션 타이틀</td></tr>
+                <tr><td><code>--Font-large</code></td><td>18px</td><td style="font-size:var(--Font-large); font-weight:600;">가나다라 ABC 123</td><td>카드·레이어 제목</td></tr>
+                <tr><td><code>--Font-medium</code></td><td>16px</td><td style="font-size:var(--Font-medium); font-weight:500;">가나다라 ABC 123</td><td>버튼, 탭, 라벨</td></tr>
+                <tr><td><code>--Font-base</code></td><td>15px</td><td style="font-size:var(--Font-base); font-weight:400;">가나다라 ABC 123</td><td>본문 기본 (body)</td></tr>
+                <tr><td><code>--Font-small</code></td><td>14px</td><td style="font-size:var(--Font-small); font-weight:400;">가나다라 ABC 123</td><td>표 내용, 안내 문구</td></tr>
+                <tr><td><code>--Font-xsmall</code></td><td>13px</td><td style="font-size:var(--Font-xsmall); font-weight:400;">가나다라 ABC 123</td><td>배지, 날짜, 메타 정보</td></tr>
+                <tr><td><code>--Font-2xsmall</code></td><td>12px</td><td style="font-size:var(--Font-2xsmall); font-weight:400;">가나다라 ABC 123</td><td>푸터, 보조 안내</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="sg-util">공통 클래스</h2>
+        <h3>텍스트</h3>
+        <table class="sg_table">
+            <colgroup><col style="width:220px;"><col style="width:420px;"><col></colgroup>
+            <thead><tr><th>클래스</th><th>설명</th><th>예시</th></tr></thead>
+            <tbody>
+                <tr><td><code>.align_left</code></td><td>왼쪽 정렬</td><td><p class="align_left sg_box">왼쪽 정렬</p></td></tr>
+                <tr><td><code>.align_center</code></td><td>가운데 정렬</td><td><p class="align_center sg_box">가운데 정렬</p></td></tr>
+                <tr><td><code>.align_right</code></td><td>오른쪽 정렬</td><td><p class="align_right sg_box">오른쪽 정렬</p></td></tr>
+                <tr><td><code>.ellipsis</code></td><td>한 줄 말줄임 (너비 지정 필요, inline-block)</td><td><p class="ellipsis sg_box">긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장</p></td></tr>
+                <tr><td><code>.ellipsis_multiline</code></td><td>두 줄 말줄임 (너비 지정 필요)</td><td><p class="ellipsis_multiline sg_box">긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장 긴 문장</p></td></tr>
+            </tbody>
+        </table>
+
+        <h3>여백</h3>
+        <p class="sg_desc">모두 <code>!important</code> 적용. 아래 목록 외 값은 없으니 필요한 경우 common.css 에 추가해 주세요.</p>
+        <table class="sg_table sg_margin">
+            <colgroup><col style="width:220px;"><col></colgroup>
+            <thead><tr><th>클래스</th><th>속성</th></tr></thead>
+            <tbody>
+                <tr><td><code>.marginT0</code></td><td>margin-top:0</td></tr>
+                <tr><td><code>.marginT8</code></td><td>margin-top:8px</td></tr>
+                <tr><td><code>.marginT16</code></td><td>margin-top:16px</td></tr>
+                <tr><td><code>.marginT24</code></td><td>margin-top:24px</td></tr>
+                <tr><td><code>.marginT32</code></td><td>margin-top:32px</td></tr>
+                <tr><td><code>.marginT40</code></td><td>margin-top:40px</td></tr>
+                <tr><td><code>.marginT50</code></td><td>margin-top:50px</td></tr>
+                <tr><td><code>.marginB0</code></td><td>margin-bottom:0</td></tr>
+                <tr><td><code>.marginB50</code></td><td>margin-bottom:50px</td></tr>
+                <tr><td><code>.marginL4</code></td><td>margin-left:4px</td></tr>
+                <tr><td><code>.marginL8</code></td><td>margin-left:8px</td></tr>
+                <tr><td><code>.marginL10</code></td><td>margin-left:10px</td></tr>
+                <tr><td><code>.marginL16</code></td><td>margin-left:16px</td></tr>
+                <tr><td><code>.marginL24</code></td><td>margin-left:24px</td></tr>
+                <tr><td><code>.marginR0</code></td><td>margin-right:0</td></tr>
+                <tr><td><code>.marginR10</code></td><td>margin-right:10px</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="sg-icon">아이콘</h2>
+        <h3>Material Symbols (Google)</h3>
+        <div class="sg_item">
+            <ul class="sg_info">
+                <li>태그에 <code>.material-symbols-rounded</code> 추가 후 아이콘 이름을 영문으로 입력 : <code>&lt;span class="material-symbols-rounded"&gt;home&lt;/span&gt;</code></li>
+                <li>면이 채워진 디자인은 <code>.icon_fill</code> 추가 : <code>&lt;span class="material-symbols-rounded icon_fill"&gt;home&lt;/span&gt;</code></li>
+                <li>글자처럼 <code>font-size</code>, <code>color</code> 로 크기·색 조절 (기본 22px)</li>
+                <li>아이콘 이름 검색 <a href="https://fonts.google.com/icons" class="btn_icon" target="_blank"><span class="material-symbols-rounded">open_in_new</span> 아이콘 검색</a></li>
+            </ul>
+        </div>
+        <h3>사용 중인 아이콘</h3>
+            <ul class="sg_icons">
+                <li><span class="material-symbols-rounded">keyboard_arrow_down</span>keyboard_arrow_down</li>
+                <li><span class="material-symbols-rounded">keyboard_arrow_up</span>keyboard_arrow_up</li>
+                <li><span class="material-symbols-rounded">keyboard_arrow_left</span>keyboard_arrow_left</li>
+                <li><span class="material-symbols-rounded">keyboard_arrow_right</span>keyboard_arrow_right</li>
+                <li><span class="material-symbols-rounded">keyboard_double_arrow_left</span>keyboard_double_arrow_left</li>
+                <li><span class="material-symbols-rounded">keyboard_double_arrow_right</span>keyboard_double_arrow_right</li>
+                <li><span class="material-symbols-rounded">arrow_drop_down</span>arrow_drop_down</li>
+                <li><span class="material-symbols-rounded">arrow_drop_up</span>arrow_drop_up</li>
+                <li><span class="material-symbols-rounded">arrow_left</span>arrow_left</li>
+                <li><span class="material-symbols-rounded">arrow_right</span>arrow_right</li>
+                <li><span class="material-symbols-rounded">arrow_right_alt</span>arrow_right_alt</li>
+                <li><span class="material-symbols-rounded">arrow_left_alt</span>arrow_left_alt</li>
+                <li><span class="material-symbols-rounded">close</span>close</li>
+                <li><span class="material-symbols-rounded">add</span>add</li>
+                <li><span class="material-symbols-rounded">add_circle</span>add_circle</li>
+                <li><span class="material-symbols-rounded">horizontal_rule</span>horizontal_rule</li>
+                <li><span class="material-symbols-rounded">search</span>search</li>
+                <li><span class="material-symbols-rounded">menu</span>menu</li>
+                <li><span class="material-symbols-rounded">refresh</span>refresh</li>
+                <li><span class="material-symbols-rounded">autorenew</span>autorenew</li>
+                <li><span class="material-symbols-rounded">delete</span>delete</li>
+                <li><span class="material-symbols-rounded">save</span>save</li>
+                <li><span class="material-symbols-rounded">file_copy</span>file_copy</li>
+                <li><span class="material-symbols-rounded">border_color</span>border_color</li>
+                <li><span class="material-symbols-rounded">attach_file</span>attach_file</li>
+                <li><span class="material-symbols-rounded">download</span>download</li>
+                <li><span class="material-symbols-rounded">upload</span>upload</li>
+                <li><span class="material-symbols-rounded">add_photo_alternate</span>add_photo_alternate</li>
+                <li><span class="material-symbols-rounded">playlist_add</span>playlist_add</li>
+                <li><span class="material-symbols-rounded">login</span>login</li>
+                <li><span class="material-symbols-rounded">logout</span>logout</li>
+                <li><span class="material-symbols-rounded">calendar_today</span>calendar_today</li>
+                <li><span class="material-symbols-rounded">timer</span>timer</li>
+                <li><span class="material-symbols-rounded">book</span>book</li>
+                <li><span class="material-symbols-rounded">menu_book</span>menu_book</li>
+                <li><span class="material-symbols-rounded">local_library</span>local_library</li>
+                <li><span class="material-symbols-rounded">dvr</span>dvr</li>
+                <li><span class="material-symbols-rounded">desktop_windows</span>desktop_windows</li>
+                <li><span class="material-symbols-rounded">developer_board</span>developer_board</li>
+                <li><span class="material-symbols-rounded">display_settings</span>display_settings</li>
+                <li><span class="material-symbols-rounded">domain_verification</span>domain_verification</li>
+                <li><span class="material-symbols-rounded">content_paste_search</span>content_paste_search</li>
+                <li><span class="material-symbols-rounded">fact_check</span>fact_check</li>
+                <li><span class="material-symbols-rounded">leaderboard</span>leaderboard</li>
+                <li><span class="material-symbols-rounded">comment</span>comment</li>
+                <li><span class="material-symbols-rounded">assignment_ind</span>assignment_ind</li>
+                <li><span class="material-symbols-rounded">handshake</span>handshake</li>
+                <li><span class="material-symbols-rounded">lightbulb_circle</span>lightbulb_circle</li>
+                <li><span class="material-symbols-rounded">wifi_1_bar</span>wifi_1_bar</li>
+                <li><span class="material-symbols-rounded">clarify</span>clarify</li>
+                <li><span class="material-symbols-rounded">gpp_maybe</span>gpp_maybe</li>
+                <li><span class="material-symbols-rounded">graphic_eq</span>graphic_eq</li>
+                <li><span class="material-symbols-rounded">sound_detection_loud_sound</span>sound_detection_loud_sound</li>
+                <li><span class="material-symbols-rounded icon_fill">incomplete_circle</span>incomplete_circle <em>fill</em></li>
+                <li><span class="material-symbols-rounded icon_fill">settings</span>settings <em>fill</em></li>
+            </ul>
+    </section>
 
 </body>
 </html>

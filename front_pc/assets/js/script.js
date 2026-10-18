@@ -285,6 +285,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 김영평생교육원 TV 유튜브 영상
+    // - 카드(.btn_tvPlay) 클릭 시 data-youtube(영상 ID)로 iframe 생성 (레이어 열기는 레이어 등록에서 처리)
+    // - 레이어가 닫히면(닫기 버튼, 배경 클릭, Esc 모두) iframe 을 제거해 재생을 멈춘다.
+    function initTvVideo() {
+        const layer = q('.layer_wrapper.layer_video');
+        const frame = q('.video_frame', layer || undefined);
+
+        if (!layer || !frame) {
+            return;
+        }
+
+        qa('.btn_tvPlay').forEach((card) => {
+            onClick(card, () => {
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://www.youtube.com/embed/${card.dataset.youtube}?autoplay=1&rel=0`;
+                iframe.title = q('h5', card.parentElement)?.textContent || '영상';
+                iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+                iframe.allowFullscreen = true;
+                frame.replaceChildren(iframe);
+            });
+        });
+
+        new MutationObserver(() => {
+            if (!layer.classList.contains('active')) {
+                frame.replaceChildren();
+            }
+        }).observe(layer, { attributes: true, attributeFilter: ['class'] });
+    }
+
     // 레이어 설정 배열을 실제 레이어 바인딩으로 변환
     function initLayerBindings(registerLayers) {
         const setConsultAgreeState = (layer, isOpen) => {
@@ -317,6 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 아래 한 줄 추가만으로 신규 레이어를 붙일 수 있다.
             // 예시: { layer: '.layer_wrapper.sample', triggers: ['.btn_sample_open'] },
             { layer: '.layer_wrapper.layer_consult', triggers: ['.quick_consult'] }, //상담 신청 레이어
+            { layer: '.layer_wrapper.layer_video', triggers: ['.btn_tvPlay'] }, //김영평생교육원 TV 유튜브 영상 레이어
             { layer: '.layer_wrapper.layer_schoolSchedule', triggers: ['.btn_schoolSchedule'] }, //나의 강의실 주요 학사일정 레이어
             { layer: '.layer_wrapper.layer_taskSubmission', triggers: ['.btn_taskSubmission'] }, //나의 강의실 과제 제출 레이어
             { layer: '.layer_wrapper.layer_discussionSubmission', triggers: ['.btn_discussionSubmission'] }, //나의 강의실 토론 제출 레이어
@@ -792,6 +822,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerLayers = createLayerRegistrar();
     [
         () => initLayerBindings(registerLayers),
+        initTvVideo,
         initJoinAgreement,
         initCustomSelect,
         initNoticeTabs,

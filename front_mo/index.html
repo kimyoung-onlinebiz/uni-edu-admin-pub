@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="김영평생교육원">
+    <title>김영평생교육원</title>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.0">
+    <link rel="stylesheet" href="assets/css/sub.css?v=1.0">
+    <link rel="preload" href="assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/swiper.js"></script>
+</head>
+<body>
+
+    <!-- header_wrap : 스크롤 내리면 숨김, 올리면 노출 -->
+    <div class="header_wrap">
+        <!-- header -->
+        <header class="header">
+            <button type="button" class="btn_menu" aria-label="전체메뉴 열기"><img src="assets/images/common/ico_menu.svg" alt=""></button>
+            <h1><a href="index.html"><img src="assets/images/common/logo.png" alt="메가스터디교육그룹 김영평생교육원"></a></h1>
+            <a href="#none"><img src="assets/images/common/ico_cart.svg" alt="장바구니"><span class="count">10</span></a>
+            <a href="#none"><img src="assets/images/common/ico_ticket.svg" alt="쿠폰"><span class="count">8</span></a>
+        </header>
+        <!-- //header -->
+
+        <!-- gnb : 로그인 후 노출 -->
+        <nav class="gnb">
+            <a href="classroom/index.html">강의실</a>
+            <a href="#none">수강중인 과정<em>12</em></a>
+            <a href="#none">학사일정</a>
+            <a href="classroom/message.html">쪽지<em>99+</em></a>
+        </nav>
+        <!-- //gnb -->
+    </div>
+    <!-- //header_wrap -->
+
+    <!-- 전체메뉴 -->
+    <nav class="all_menu" aria-label="전체메뉴">
+        <div class="menu_head">
+            <a href="index.html"><img src="assets/images/common/logo.png" alt="메가스터디교육그룹 김영평생교육원"></a>
+            <button type="button" class="btn_close" aria-label="전체메뉴 닫기"><img src="assets/images/common/ico_close.svg" alt=""></button>
+        </div>
+        <!-- 로그인 전 : 로그인 / 회원가입 버튼 -->
+        <div class="member">
+            <a href="member/login.html" class="btn_line">로그인</a>
+            <a href="member/step_01.html" class="btn_fill">회원가입</a>
+        </div>
+        <!-- //로그인 전 -->
+
+        <!-- 로그인 후 : 회원 정보 + 학사일정 (개발 시 로그인 전/후 중 하나만 노출) -->
+        <div class="member_info">
+            <div class="user">
+                <p class="name"><strong>테스트</strong> 님</p>
+                <a href="#none" class="btn_logout">로그아웃</a>
+                <a href="classroom/member_management/pw_write.html" class="btn_setting" aria-label="회원정보 수정"></a>
+                <p class="greeting">오늘도 즐거운 학습 되세요!</p>
+            </div>
+            <div class="schedule">
+                <span class="badge">중간 응시 마감</span>
+                <p><strong>26.06.10</strong> 00:00 ~ <strong>26.06.15</strong> 17:00</p>
+                <a href="#none" class="btn_schedule">전체 일정 보기</a>
+            </div>
+        </div>
+        <!-- //로그인 후 -->
+        <ul class="depth1">
+            <li><a href="#none">학사일정</a></li>
+            <li>
+                <button type="button">수강신청</button>
+                <ul>
+                    <li><a href="#none">패키지 강좌</a></li>
+                    <li><a href="#none">단과 강좌</a></li>
+                    <li><a href="#none">일반 강좌</a></li>
+                </ul>
+            </li>
+            <li class="on">
+                <button type="button">편입 학위과정</button>
+                <ul>
+                    <li><a href="#none">편입 학위과정</a></li>
+                    <li><a href="#none">경영학</a></li>
+                    <li><a href="#none">영문학</a></li>
+                    <li><a href="#none">IT공학</a></li>
+                    <li><a href="#none">사회복지학</a></li>
+                    <li><a href="#none">지식재산학</a></li>
+                    <li><a href="#none">의약대편입</a></li>
+                    <li><a href="#none">편입정보</a></li>
+                </ul>
+            </li>
+            <li>
+                <button type="button">사회복지사</button>
+                <ul>
+                    <li><a href="#none">사회복지사 자격증</a></li>
+                    <li><a href="#none">ALL NEW 사회복지사</a></li>
+                    <li><a href="#none">이수과목 안내</a></li>
+                    <li><a href="#none">현장실습 안내</a></li>
+                    <li><a href="#none">현장실습신청서</a></li>
+                    <li><a href="#none">실습기관 검색</a></li>
+                    <li><a href="#none">건강가정사</a></li>
+                    <li><a href="#none">보조공학사</a></li>
+                </ul>
+            </li>
+            <li>
+                <button type="button">한국어교원</button>
+                <ul>
+                    <li><a href="#none">한국어교원 자격증</a></li>
+                    <li><a href="#none">교육실습 안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <button type="button">도서관정사서</button>
+                <ul>
+                    <li><a href="#none">도서관정사서 자격증</a></li>
+                </ul>
+            </li>
+            <li><a href="#none">일반과정</a></li>
+            <li><a href="#none">결제내역</a></li>
+            <li><a href="#none">환불내역</a></li>
+            <li>
+                <button type="button">학습지원센터</button>
+                <ul>
+                    <li><a href="support_center/notice_list.html">공지사항</a></li>
+                    <li><a href="#none">1:1 문의</a></li>
+                    <li><a href="#none">환불제도</a></li>
+                    <li><a href="support_center/form_library.html">서식자료실</a></li>
+                    <li><a href="#none">수강가이드</a></li>
+                    <li><a href="#none">민간자격증 발급</a></li>
+                    <li><a href="#none">증명서 발급</a></li>
+                    <li><a href="#none">다운로드 센터</a></li>
+                    <li><a href="#none">1:1 원격지원</a></li>
+                    <li><a href="#none">무료 학습설계</a></li>
+                </ul>
+            </li>
+            <li><a href="#none">커뮤니티</a></li>
+            <li><a href="support_center/faq.html">FAQ</a></li>
+        </ul>
+        <div class="contact">
+            <a href="tel:1899-7566"><strong>수강신청/학습설계</strong><em>1899-7566</em><p>평일 09:00~18:30<br>(점심 12:30~13:30)</p></a>
+            <a href="tel:1899-5662"><strong>수업장애/행정문의</strong><em>1899-5662</em><p>평일 09:00~18:00<br>(점심 12:30~13:30)</p></a>
+        </div>
+        <ul class="sns">
+            <li><a href="#none"><img src="assets/images/common/sns_instagram.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="assets/images/common/sns_facebook.svg" alt="페이스북"></a></li>
+            <li><a href="#none"><img src="assets/images/common/sns_youtube.svg" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="assets/images/common/sns_blog.svg" alt="블로그"></a></li>
+            <li><a href="#none"><img src="assets/images/common/sns_kakao.svg" alt="카카오톡"></a></li>
+        </ul>
+    </nav>
+    <!-- //전체메뉴 -->
+
+    <main class="main_wrap">
+
+        <!-- 메인 비주얼 -->
+        <section class="main_visual swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="#none">
+                        <img src="assets/images/main/visual01.png" alt="">
+                        <p>체계적인 커리큘럼으로 완성하는 학위</p>
+                        <strong>편입부터 자격증까지,<br>전 과정 ALL 개강<br><em>4월 8일(수) 개강</em></strong>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#none">
+                        <img src="assets/images/main/visual01.png" alt="">
+                        <p>체계적인 커리큘럼으로 완성하는 학위</p>
+                        <strong>편입부터 자격증까지,<br>전 과정 ALL 개강<br><em>4월 8일(수) 개강</em></strong>
+                    </a>
+                </li>
+            </ul>
+            <div class="visual_nav">
+                <span class="swiper-pagination"></span>
+                <button type="button" class="btn_all" aria-label="배너 모아보기"><img src="assets/images/common/ico_plus.svg" alt=""></button>
+            </div>
+        </section>
+        <!-- //메인 비주얼 -->
+
+        <!-- 시험 응시 마감 : 로그인 후 노출 -->
+        <ul class="exam_deadline">
+            <li><span class="badge">중간 응시 마감</span><p><strong>26.06.10</strong> 00:00 ~ <strong>26.06.15</strong> 17:00</p></li>
+            <li><span class="badge">기말 응시 마감</span><p><strong>26.06.10</strong> 00:00 ~ <strong>26.06.15</strong> 17:00</p></li>
+        </ul>
+        <!-- //시험 응시 마감 -->
+
+        <!-- 학위과정 -->
+        <ul class="quick_menu">
+            <li><a href="#none"><img src="assets/images/main/quick01.png" alt="">편입<br>학위과정</a></li>
+            <li><a href="#none"><img src="assets/images/main/quick02.png" alt="">사회복지사<br>자격증</a></li>
+            <li><a href="#none"><img src="assets/images/main/quick03.png" alt="">의약대<br>선수과목</a></li>
+            <li><a href="#none"><img src="assets/images/main/quick04.png" alt="">학점<br>자격증</a></li>
+        </ul>
+        <!-- //학위과정 -->
+
+        <!-- 개강안내 -->
+        <section class="open_class">
+            <h2 class="blind">개강안내</h2>
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <span class="d_day">D-12</span>
+                        <p>2026년 1학기 7기</p>
+                        <h3>4월 8일(수) <em>이론 개강</em></h3>
+                        <p class="period">신청기간 | 26.02.18(수) ~ 26.03.03(화)<br>학습기간 | 26.03.04(수) ~ 26.06.02(화)</p>
+                        <a href="#none" class="btn_apply">수강신청</a>
+                    </li>
+                    <li class="swiper-slide">
+                        <span class="d_day">D-32</span>
+                        <p>2026년 1학기 8기</p>
+                        <h3>5월 12일(화) <em>이론 개강</em></h3>
+                        <p class="period">신청기간 | 26.02.18(수) ~ 26.03.03(화)<br>학습기간 | 26.03.04(수) ~ 26.06.02(화)</p>
+                        <a href="#none" class="btn_apply">수강신청</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        <!-- //개강안내 -->
+
+        <!-- 이벤트 배너 -->
+        <section class="event_banner">
+            <h2 class="blind">이벤트</h2>
+            <div class="swiper-container" style="background:#403232;">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="#none"><img src="assets/images/main/ev_bg01.png" alt=""><p>신뢰와 원칙으로 다시 한번 입증하다</p><strong>2026 교육부장관상 수상</strong></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="assets/images/main/ev_bg01.png" alt=""><p>신뢰와 원칙으로 다시 한번 입증하다</p><strong>2026 교육부장관상 수상</strong></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="assets/images/main/ev_bg01.png" alt=""><p>신뢰와 원칙으로 다시 한번 입증하다</p><strong>2026 교육부장관상 수상</strong></a></li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-container" style="background:#570eb1;">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="#none"><p>50% 파격 할인으로 강좌 수강</p><strong>김영평생교육원 타임 핫딜</strong></a></li>
+                    <li class="swiper-slide"><a href="#none"><p>50% 파격 할인으로 강좌 수강</p><strong>김영평생교육원 타임 핫딜</strong></a></li>
+                    <li class="swiper-slide"><a href="#none"><p>50% 파격 할인으로 강좌 수강</p><strong>김영평생교육원 타임 핫딜</strong></a></li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- //이벤트 배너 -->
+
+        <!-- 장학생 후기 -->
+        <section class="scholarship">
+            <div class="tit_area">
+                <h2>결과로 증명한 장학생들</h2>
+                <a href="#none">더보기 +</a>
+            </div>
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#none">
+                            <p class="name"><em>최우수상</em> 김은*</p>
+                            <p class="txt">학점은행제를 통해 편입을 준비하며 처음에는 낯선 과정에 어려움을 겪었지만 학점은</p>
+                            <img src="assets/images/main/scholar02.png" alt="">
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#none">
+                            <p class="name"><em>최우수상</em> 김고*</p>
+                            <p class="txt">학점은행제를 통해 편입을 준비하며 처음에는 낯선 과정에 어려움을 겪었지만 학점은</p>
+                            <img src="assets/images/main/scholar01.png" alt="">
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#none">
+                            <p class="name"><em>최우수상</em> 김고*</p>
+                            <p class="txt">학점은행제를 통해 편입을 준비하며 처음에는 낯선 과정에 어려움을 겪었지만 학점은</p>
+                            <img src="assets/images/main/scholar01.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        <!-- //장학생 후기 -->
+
+        <!-- 중간 배너 -->
+        <a href="#none" class="middle_banner">
+            <img src="assets/images/main/mid_bnr.png" alt="">
+            <p>이제는 변화하고 행동할 차례!</p>
+            <strong>대한민국 <em>편입학</em> <em>박람회</em></strong>
+        </a>
+        <!-- //중간 배너 -->
+
+        <!-- 공지사항 -->
+        <section class="notice">
+            <div class="tit_area">
+                <h2>공지사항</h2>
+                <a href="support_center/notice_list.html">더보기 +</a>
+            </div>
+            <ul>
+                <li class="important"><a href="support_center/notice_view.html"><span class="badge">교육원</span><span class="subject">교육원 증명서 PDF 저장 방법</span><span class="new">N</span><span class="date">10-08</span></a></li>
+                <li><a href="support_center/notice_view.html"><span class="badge">학점은행제</span><span class="subject">26년 3분기 학습자 등록</span><span class="date">08-24</span></a></li>
+                <li><a href="support_center/notice_view.html"><span class="badge">사복실습</span><span class="subject">개강반 사회복지 현장실습</span><span class="date">06-10</span></a></li>
+                <li><a href="support_center/notice_view.html"><span class="badge">한국어교원</span><span class="subject">외한어 실습(개정법)</span><span class="date">06-10</span></a></li>
+            </ul>
+        </section>
+        <!-- //공지사항 -->
+
+        <!-- 자주 하는 질문 -->
+        <section class="faq">
+            <div class="tit_area">
+                <h2>자주 하는 질문</h2>
+                <a href="support_center/faq.html">더보기 +</a>
+            </div>
+            <ul>
+                <li><a href="support_center/faq.html"><img src="assets/images/main/faq01.svg" alt="">지원 불가<br>환경</a></li>
+                <li><a href="support_center/faq.html"><img src="assets/images/main/faq02.svg" alt="">모바일 기기<br>수강</a></li>
+                <li><a href="support_center/faq.html"><img src="assets/images/main/faq03.svg" alt="">MAC 수강<br>전 필독</a></li>
+                <li><a href="support_center/faq.html"><img src="assets/images/main/faq04.svg" alt="">시험 프로그램<br> 설치 오류</a></li>
+                <li><a href="support_center/faq.html"><img src="assets/images/main/faq05.svg" alt="">공동인증서<br> 설치 오류</a></li>
+                <li><a href="support_center/faq.html"><img src="assets/images/main/faq06.svg" alt="">MAC 주소<br> 반복 설치 오류</a></li>
+                <li><a href="support_center/faq.html"><img src="assets/images/main/faq07.svg" alt="">재생 시간<br> 초과</a></li>
+            </ul>
+        </section>
+        <!-- //자주 하는 질문 -->
+
+        <!-- 샘플강의/교육원TV -->
+        <ul class="service">
+            <li><a href="#none"><img src="assets/images/main/sample.png" alt=""><strong>샘플 강의</strong><p>강의 내용을 미리 체험해보세요.</p></a></li>
+            <li><a href="event/tv.html"><img src="assets/images/main/tv.png" alt=""><strong>교육원 TV</strong><p>다양한 교육 콘텐츠를 만나 보세요.</p></a></li>
+        </ul>
+        <!-- //샘플강의/교육원TV -->
+
+        <!-- 학습설계/행정문의 -->
+        <div class="contact">
+            <a href="tel:1899-7566"><strong>수강신청/학습설계</strong><em>1899-7566</em><p>평일 09:00~18:30<br>(점심 12:30~13:30)</p></a>
+            <a href="tel:1899-5662"><strong>수업장애/행정문의</strong><em>1899-5662</em><p>평일 09:00~18:00<br>(점심 12:30~13:30)</p></a>
+        </div>
+        <!-- //학습설계/행정문의 -->
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <ul class="quick_bar">
+            <li><a href="tel:1899-7566"><img src="assets/images/common/ico_phone.svg" alt="">전화상담</a></li>
+            <li><a href="#none"><img src="assets/images/common/ico_kakao.png" alt="">카톡상담</a></li>
+            <li><a href="#none" class="btn_consult"><img src="assets/images/common/ico_consult.svg" alt="">간편상담</a></li>
+        </ul>
+        <address>
+            (주)아이비김영 김영평생교육원<br>
+            대표이사 : 김석철 &nbsp;I&nbsp; 사업자등록번호 : 120-88-27562<br>
+            통신판매업신고번호 : 제 2020-서울서초-3437호<br>
+            신고기관명 : 서울시 서초구<br>
+            교육원 주소 : 서울시 서초구 서초대로 78길 48, 송림빌딩 12층<br>
+            호스팅제공자 : (주)아이네트호스팅 &nbsp;I&nbsp; e-mail : help@kystudy.co.kr 개인정보 보호책임자 : 오창훈
+        </address>
+        <ul class="footer_link">
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">PC버전</a></li>
+        </ul>
+        <p class="copyright">Copyright (c) 2026 김영평생교육원 All Rights Reserved</p>
+        <img src="assets/images/common/isms.png" alt="ISMS 정보보호 관리체계 인증" class="isms">
+    </footer>
+    <!-- //footer -->
+
+    <a href="#none" class="btn_top" aria-label="맨 위로"><img src="assets/images/common/ico_top.svg" alt=""></a>
+
+    <!-- 메인 레이어 팝업 -->
+    <div class="layer_popup main_layer" role="dialog" aria-modal="true" aria-label="알림 팝업" hidden>
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><a href="#none"><img src="assets/images/banner/layer_250624.png" alt="사회복지현장실습 온라인 신청 OPEN"></a></li>
+                <li class="swiper-slide"><a href="#none"><img src="assets/images/banner/layer_250624.png" alt="사회복지현장실습 온라인 신청 OPEN"></a></li>
+                <li class="swiper-slide"><a href="#none"><img src="assets/images/banner/layer_250624.png" alt="사회복지현장실습 온라인 신청 OPEN"></a></li>
+                <li class="swiper-slide"><a href="#none"><img src="assets/images/banner/layer_250624.png" alt="사회복지현장실습 온라인 신청 OPEN"></a></li>
+                <li class="swiper-slide"><a href="#none"><img src="assets/images/banner/layer_250624.png" alt="사회복지현장실습 온라인 신청 OPEN"></a></li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+        <button type="button" class="btn_x" aria-label="팝업 닫기"><img src="assets/images/common/ico_close.svg" alt=""></button>
+        <button type="button" class="btn_today">오늘 하루 보지 않기</button>
+        <button type="button" class="btn_close">닫기</button>
+    </div>
+    <!-- //메인 레이어 팝업 -->
+
+    <!-- 배너 모아보기 팝업 : 메인 비주얼 + 버튼으로 열림 -->
+    <div class="layer_popup banner_layer" role="dialog" aria-modal="true" aria-label="배너 모아보기" hidden>
+        <ul class="layer_scroll">
+            <li><a href="#none"><img src="assets/images/banner/main/view_AllBanner_20261018_01.png" alt=""></a></li>
+            <li><a href="#none"><img src="assets/images/banner/main/view_AllBanner_20261018_02.png" alt=""></a></li>
+            <li><a href="#none"><img src="assets/images/banner/main/view_AllBanner_20261018_03.png" alt=""></a></li>
+            <li><a href="#none"><img src="assets/images/banner/main/view_AllBanner_20261018_04.png" alt=""></a></li>
+        </ul>
+        <button type="button" class="btn_close btn_full">닫기</button>
+    </div>
+    <!-- //배너 모아보기 팝업 -->
+
+    <!-- 간편상담 신청 팝업 : 하단 퀵바 간편상담으로 열림 -->
+    <form class="layer_popup consult_layer" action="#none" role="dialog" aria-modal="true" aria-labelledby="consultTitle" hidden>
+        <h2 id="consultTitle">간편상담 신청</h2>
+        <button type="button" class="btn_x" aria-label="팝업 닫기"><img src="assets/images/common/ico_close.svg" alt=""></button>
+        <input type="text" name="name" placeholder="이름을 입력해 주세요." title="이름">
+        <input type="tel" name="phone" placeholder="연락처를 입력해 주세요. (- 제외)" title="연락처" inputmode="numeric">
+        <select name="type" title="상담 유형">
+            <option value="">상담 유형을 선택해 주세요.</option>
+            <option value="1">편입 학위과정</option>
+            <option value="2">사회복지사</option>
+            <option value="3">한국어교원</option>
+            <option value="4">도서관정사서</option>
+            <option value="5">기타</option>
+        </select>
+        <select name="detail" title="상세 내용">
+            <option value="">상세 내용을 선택해 주세요.</option>
+            <option value="1">수강신청 문의</option>
+            <option value="2">학습설계 상담</option>
+            <option value="3">기타 문의</option>
+        </select>
+        <label class="agree"><input type="checkbox" name="agree">개인정보 수집·이용 및 제공 동의<em>(필수)</em></label>
+        <button type="submit" class="btn_submit">상담 신청</button>
+    </form>
+    <!-- //간편상담 신청 팝업 -->
+
+    <!-- 개인정보 수집·이용 동의 팝업 : 간편상담 동의 체크 시 열림 -->
+    <div class="layer_popup agree_layer" role="dialog" aria-modal="true" aria-labelledby="agreeTitle" hidden>
+        <h2 id="agreeTitle">개인정보 수집 · 이용 및 제공 동의</h2>
+        <button type="button" class="btn_x" aria-label="팝업 닫기"><img src="assets/images/common/ico_close.svg" alt=""></button>
+        <div class="terms layer_scroll">
+            <h3>1. 수집하는 개인정보의 항목</h3>
+            <p>김영평생교육원은 상담 및 학습설계서 제공을 위해 필요한 최소한의 개인정보만을 수집합니다. 학점은행제 상담 및 학습설계 수립을 이용하기 위해서는 상담 신청 시 성명, 연락처를 필수적으로 입력하셔야 합니다.</p>
+            <h3>2. 개인정보의 수집목적 및 이용목적</h3>
+            <p>수집하는 개인정보 항목에 따른 구체적인 수집 목적 및 이용 목적은 다음과 같습니다.</p>
+            <p>성명, 연락처: 학점은행제 제도 안내 및 학습 설계서 제공을 위해 유선연락 또는 문자 안내를 드릴 수 있습니다.</p>
+            <h3>3. 개인정보의 보유기간 및 이용기간</h3>
+            <p>수집된 개인정보는 상담 자료로 이용된 이후 즉시 파기합니다. 다만, 상담 이후 추가 상담, 수강신청을 진행하는 경우 귀하의 개인정보를 이용목적 달성시 또는 법령이 정하는 규정에 따라 추가 보관할 수 있습니다.</p>
+            <p class="caution">* 동의를 거부할 수 있으며 거부 시 상담 신청이 불가합니다.</p>
+        </div>
+        <button type="button" class="btn_close btn_full">닫기</button>
+    </div>
+    <!-- //개인정보 수집·이용 동의 팝업 -->
+
+</body>
+</html>

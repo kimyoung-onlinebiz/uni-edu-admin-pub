@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Color, Typography | STYLE GUIDE MO</title>
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
+    <link rel="stylesheet" href="styleGuide.css">
+    <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <script src="../assets/js/script.js"></script>
+</head>
+
+<body class="styleGuide_wrapper styleGuide_color">
+    <header class="adminHeader">
+        <h1>STYLE GUIDE</h1>
+        <p>이 페이지는 프론트 모바일 페이지에 사용되는 주요 UI 컴포넌트와 스타일을 보여줍니다.</p>
+    </header>
+
+    <!-- lnb -->
+    <section class="styleGuide_lnb">
+        <h1><img src="../assets/images/common/logo.png" alt=""></h1>
+        <nav>
+            <ul>
+                <li><a href="link.html">프론트 MO html 링크</a></li>
+                <li><a href="color_typo.html" class="on">Color Palette, Typography</a></li>
+                <li><a href="input.html">Input, Button, Component</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- //lnb -->
+
+    <section class="styleGuide_content">
+        <div class="styleGuide_quickNav" aria-label="Color Typography 페이지 빠른 이동">
+            <a href="#sg-color">색상 팔레트</a>
+            <a href="#sg-typo">폰트 · 글자 크기</a>
+            <a href="#sg-layout">레이아웃 변수</a>
+            <a href="#sg-util">공통 클래스</a>
+            <a href="#sg-icon">아이콘</a>
+        </div>
+
+        <div class="styleGuide_note"><strong>기준:</strong> front_mo/assets/css/common.css 의 :root 변수와 공통 클래스 기준입니다. 색상·크기는 값 대신 변수(<code>var(--이름)</code>)로 사용합니다.</div>
+
+        <h2 id="sg-color">색상 팔레트</h2>
+        <h3>Neutral</h3>
+        <div class="color">
+            <dl>
+                <dt style="background:var(--Neutral-0);"></dt>
+                <dd>--Neutral-0</dd>
+                <dd>#FFFFFF</dd>
+                <dd>배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-100);"></dt>
+                <dd>--Neutral-100</dd>
+                <dd>#F7F8FA</dd>
+                <dd>연한 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-200);"></dt>
+                <dd>--Neutral-200</dd>
+                <dd>#F2F4FC</dd>
+                <dd>박스 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-300);"></dt>
+                <dd>--Neutral-300</dd>
+                <dd>#E4E7F1</dd>
+                <dd>구분선, 테두리</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-500);"></dt>
+                <dd>--Neutral-500</dd>
+                <dd>#B1B9CF</dd>
+                <dd>입력칸 테두리</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-600);"></dt>
+                <dd>--Neutral-600</dd>
+                <dd>#888888</dd>
+                <dd>보조 텍스트</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-800);"></dt>
+                <dd>--Neutral-800</dd>
+                <dd>#414656</dd>
+                <dd>본문 텍스트</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Neutral-900);"></dt>
+                <dd>--Neutral-900</dd>
+                <dd>#111111</dd>
+                <dd>제목 텍스트</dd>
+            </dl>
+        </div>
+        <h3>Primary</h3>
+        <div class="color">
+            <dl>
+                <dt style="background:var(--Primary-100);"></dt>
+                <dd>--Primary-100</dd>
+                <dd>#E9EBF7</dd>
+                <dd>선택 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Primary-200);"></dt>
+                <dd>--Primary-200</dd>
+                <dd>#DEE1F3</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Primary-300);"></dt>
+                <dd>--Primary-300</dd>
+                <dd>#BAC0E7</dd>
+                <dd>선택 테두리</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Primary-500);"></dt>
+                <dd>--Primary-500</dd>
+                <dd>#2235B0</dd>
+                <dd>메인 컬러, 강조 버튼</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Primary-600);"></dt>
+                <dd>--Primary-600</dd>
+                <dd>#1B2A8D</dd>
+                <dd>링크, 강조 텍스트</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Primary-700);"></dt>
+                <dd>--Primary-700</dd>
+                <dd>#14206A</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Primary-800);"></dt>
+                <dd>--Primary-800</dd>
+                <dd>#0F184F</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Primary-900);"></dt>
+                <dd>--Primary-900</dd>
+                <dd>#0F184F</dd>
+                <dd>800 과 같은 값</dd>
+            </dl>
+        </div>
+        <h3>System</h3>
+        <div class="color">
+            <dl>
+                <dt style="background:var(--Error);"></dt>
+                <dd>--Error</dd>
+                <dd>#EF4444</dd>
+                <dd>오류, 필수</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Warning);"></dt>
+                <dd>--Warning</dd>
+                <dd>#EAB308</dd>
+                <dd>주의</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Success);"></dt>
+                <dd>--Success</dd>
+                <dd>#16A34A</dd>
+                <dd>성공</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Info);"></dt>
+                <dd>--Info</dd>
+                <dd>#256EF4</dd>
+                <dd>안내</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Error-soft);"></dt>
+                <dd>--Error-soft</dd>
+                <dd>#FFEBEB</dd>
+                <dd>오류 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Warning-soft);"></dt>
+                <dd>--Warning-soft</dd>
+                <dd>#FEF3E2</dd>
+                <dd>주의 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Success-soft);"></dt>
+                <dd>--Success-soft</dd>
+                <dd>#E7F8F0</dd>
+                <dd>성공 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Info-soft);"></dt>
+                <dd>--Info-soft</dd>
+                <dd>#EBF1FE</dd>
+                <dd>안내 배경</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Secondary);"></dt>
+                <dd>--Secondary</dd>
+                <dd>#414656</dd>
+                <dd>보조 버튼</dd>
+            </dl>
+            <dl>
+                <dt style="background:var(--Placeholder);"></dt>
+                <dd>--Placeholder</dd>
+                <dd>#C2C8CC</dd>
+                <dd>placeholder</dd>
+            </dl>
+        </div>
+
+        <h2 id="sg-typo">폰트 · 글자 크기</h2>
+        <h3>폰트</h3>
+        <div class="sg_item">
+            <ul class="sg_info">
+                <li>Pretendard Variable (common.css @font-face, 웹폰트 내장)</li>
+                <li>굵기는 <code>font-weight</code> 100 ~ 900 사용 가능, 주로 400 / 500 / 600 / 700 사용</li>
+                <li>입력칸 글자는 16px 이상 (iOS 입력 시 화면 자동 확대 방지)</li>
+            </ul>
+        </div>
+        <div class="sg_weight">
+            <p style="font-weight:400;">400<span>가나다라 Aa</span></p>
+            <p style="font-weight:500;">500<span>가나다라 Aa</span></p>
+            <p style="font-weight:600;">600<span>가나다라 Aa</span></p>
+            <p style="font-weight:700;">700<span>가나다라 Aa</span></p>
+            <p style="font-weight:900;">900<span>가나다라 Aa</span></p>
+        </div>
+
+        <h3>글자 크기</h3>
+        <table class="sg_table">
+            <colgroup><col style="width:220px;"><col style="width:90px;"><col style="width:420px;"><col></colgroup>
+            <thead><tr><th>변수</th><th>크기</th><th>예시 (권장 굵기)</th><th>용도</th></tr></thead>
+            <tbody>
+                <tr><td><code>--Font-3xlarge</code></td><td>28px</td><td style="font-size:var(--Font-3xlarge); font-weight:700;">가나다라 ABC 123</td><td>메인 비주얼 타이틀</td></tr>
+                <tr><td><code>--Font-2xlarge</code></td><td>24px</td><td style="font-size:var(--Font-2xlarge); font-weight:700;">가나다라 ABC 123</td><td>전화번호, 강조 숫자</td></tr>
+                <tr><td><code>--Font-xlarge</code></td><td>20px</td><td style="font-size:var(--Font-xlarge); font-weight:700;">가나다라 ABC 123</td><td>섹션 타이틀, 단계 제목</td></tr>
+                <tr><td><code>--Font-large</code></td><td>18px</td><td style="font-size:var(--Font-large); font-weight:600;">가나다라 ABC 123</td><td>페이지 타이틀, 카드·팝업 제목</td></tr>
+                <tr><td><code>--Font-medium</code></td><td>16px</td><td style="font-size:var(--Font-medium); font-weight:500;">가나다라 ABC 123</td><td>입력칸, 버튼, 라벨</td></tr>
+                <tr><td><code>--Font-base</code></td><td>15px</td><td style="font-size:var(--Font-base); font-weight:400;">가나다라 ABC 123</td><td>본문 기본 (body)</td></tr>
+                <tr><td><code>--Font-small</code></td><td>14px</td><td style="font-size:var(--Font-small); font-weight:400;">가나다라 ABC 123</td><td>안내 문구, 날짜, 메타 정보</td></tr>
+                <tr><td><code>--Font-xsmall</code></td><td>13px</td><td style="font-size:var(--Font-xsmall); font-weight:400;">가나다라 ABC 123</td><td>배지, 페이지 번호 표시</td></tr>
+                <tr><td><code>--Font-2xsmall</code></td><td>12px</td><td style="font-size:var(--Font-2xsmall); font-weight:400;">가나다라 ABC 123</td><td>푸터, 보조 안내</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="sg-layout">레이아웃 변수</h2>
+        <table class="sg_table">
+            <colgroup><col style="width:220px;"><col style="width:90px;"><col></colgroup>
+            <thead><tr><th>변수</th><th>값</th><th>용도</th></tr></thead>
+            <tbody>
+                <tr><td><code>--Gutter</code></td><td>16px</td><td>화면 좌우 여백</td></tr>
+                <tr><td><code>--Header-height</code></td><td>60px</td><td>헤더 높이</td></tr>
+                <tr><td><code>--Input-height</code></td><td>44px</td><td>입력칸 높이</td></tr>
+                <tr><td><code>--Border-radius</code></td><td>4px</td><td>버튼, 입력칸</td></tr>
+                <tr><td><code>--Border-2radius</code></td><td>8px</td><td>카드, 팝업</td></tr>
+                <tr><td><code>--Shadow-light</code></td><td>-</td><td>2px 2px 4px rgba(0,0,0,.2)</td></tr>
+                <tr><td><code>--Safe-top / --Safe-bottom</code></td><td>env()</td><td>아이폰 노치·홈바 영역 (헤더, 하단 퀵바)</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="sg-util">공통 클래스</h2>
+        <p class="sg_desc">모바일은 여백·정렬 유틸 클래스(marginT8 등) 없이 각 컴포넌트 CSS 에서 간격을 지정합니다. 버튼 간격도 버튼이 아닌 감싸는 영역에서 지정합니다.</p>
+        <table class="sg_table">
+            <colgroup><col style="width:220px;"><col></colgroup>
+            <thead><tr><th>클래스 / 속성</th><th>설명</th></tr></thead>
+            <tbody>
+                <tr><td><code>.blind</code></td><td>화면에서는 숨기고 스크린리더로만 읽는 텍스트 (아이콘 버튼의 이름 등)</td></tr>
+                <tr><td><code>hidden</code> 속성</td><td>요소 숨김 (<code>display:none !important</code>) : 레이어 팝업 닫힘 상태, 로그인 전·후 영역 등</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="sg-icon">아이콘</h2>
+        <div class="sg_item">
+            <ul class="sg_info">
+                <li>아이콘은 <code>assets/images/common/</code> 의 이미지 파일을 CSS 배경으로 사용 (<code>background:url(../images/common/ico_이름.svg) no-repeat center / 24px</code>)</li>
+                <li>새 아이콘은 피그마에서 SVG 로 받아 <code>ico_이름.svg</code> 형식으로 추가</li>
+            </ul>
+        </div>
+        <h3>공통 아이콘</h3>
+            <ul class="sg_icons">
+                <li><img src="../assets/images/common/ico_arrow_down.svg" alt="">ico_arrow_down.svg</li>
+                <li><img src="../assets/images/common/ico_arrow_right.svg" alt="">ico_arrow_right.svg</li>
+                <li><img src="../assets/images/common/ico_back.svg" alt="">ico_back.svg</li>
+                <li><img src="../assets/images/common/ico_page_first.svg" alt="">ico_page_first.svg</li>
+                <li><img src="../assets/images/common/ico_page_prev.svg" alt="">ico_page_prev.svg</li>
+                <li><img src="../assets/images/common/ico_select_arrow.svg" alt="">ico_select_arrow.svg</li>
+                <li><img src="../assets/images/common/ico_top.svg" alt="">ico_top.svg</li>
+                <li><img src="../assets/images/common/ico_close.svg" alt="">ico_close.svg</li>
+                <li class="dark"><img src="../assets/images/common/ico_close_white.svg" alt="">ico_close_white.svg</li>
+                <li class="dark"><img src="../assets/images/common/ico_clear.svg" alt="">ico_clear.svg</li>
+                <li class="dark"><img src="../assets/images/common/ico_plus.svg" alt="">ico_plus.svg</li>
+                <li><img src="../assets/images/common/ico_menu.svg" alt="">ico_menu.svg</li>
+                <li><img src="../assets/images/common/ico_setting.svg" alt="">ico_setting.svg</li>
+                <li><img src="../assets/images/common/ico_info.svg" alt="">ico_info.svg</li>
+                <li><img src="../assets/images/common/ico_check_off.svg" alt="">ico_check_off.svg</li>
+                <li><img src="../assets/images/common/ico_check_on.svg" alt="">ico_check_on.svg</li>
+                <li><img src="../assets/images/common/ico_radio_off.svg" alt="">ico_radio_off.svg</li>
+                <li><img src="../assets/images/common/ico_radio_on.svg" alt="">ico_radio_on.svg</li>
+                <li><img src="../assets/images/common/ico_step_done.svg" alt="">ico_step_done.svg</li>
+                <li><img src="../assets/images/common/ico_attach.svg" alt="">ico_attach.svg</li>
+                <li><img src="../assets/images/common/ico_download.svg" alt="">ico_download.svg</li>
+                <li><img src="../assets/images/common/ico_reply.svg" alt="">ico_reply.svg</li>
+                <li><img src="../assets/images/common/ico_mail.svg" alt="">ico_mail.svg</li>
+                <li><img src="../assets/images/common/ico_mail_open.svg" alt="">ico_mail_open.svg</li>
+                <li><img src="../assets/images/common/ico_alarm.png" alt="">ico_alarm.png</li>
+                <li><img src="../assets/images/common/ico_cart.svg" alt="">ico_cart.svg</li>
+                <li><img src="../assets/images/common/ico_ticket.svg" alt="">ico_ticket.svg</li>
+                <li class="dark"><img src="../assets/images/common/ico_consult.svg" alt="">ico_consult.svg</li>
+                <li class="dark"><img src="../assets/images/common/ico_phone.svg" alt="">ico_phone.svg</li>
+                <li><img src="../assets/images/common/ico_kakao.png" alt="">ico_kakao.png</li>
+                <li><img src="../assets/images/common/ico_lock_person.svg" alt="">ico_lock_person.svg</li>
+                <li><img src="../assets/images/common/ico_timer.svg" alt="">ico_timer.svg</li>
+            </ul>
+        <h3>SNS</h3>
+            <ul class="sg_icons">
+                <li class="dark"><img src="../assets/images/common/sns_blog.svg" alt="">sns_blog.svg</li>
+                <li class="dark"><img src="../assets/images/common/sns_facebook.svg" alt="">sns_facebook.svg</li>
+                <li class="dark"><img src="../assets/images/common/sns_instagram.svg" alt="">sns_instagram.svg</li>
+                <li class="dark"><img src="../assets/images/common/sns_kakao.svg" alt="">sns_kakao.svg</li>
+                <li class="dark"><img src="../assets/images/common/sns_youtube.svg" alt="">sns_youtube.svg</li>
+            </ul>
+    </section>
+
+</body>
+</html>

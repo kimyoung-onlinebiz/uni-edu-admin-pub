@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta name="theme-color" content="#ffffff">
+    <title>회원가입 | 김영평생교육원</title>
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
+    <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body class="page_member">
+
+    <!-- header_wrap : 스크롤 내리면 숨김, 올리면 노출 -->
+    <div class="header_wrap">
+        <!-- header -->
+        <header class="header">
+            <button type="button" class="btn_menu" aria-label="전체메뉴 열기"><img src="../assets/images/common/ico_menu.svg" alt=""></button>
+            <h1><a href="../index.html"><img src="../assets/images/common/logo.png" alt="메가스터디교육그룹 김영평생교육원"></a></h1>
+            <a href="#none"><img src="../assets/images/common/ico_cart.svg" alt="장바구니"></a>
+            <a href="#none"><img src="../assets/images/common/ico_ticket.svg" alt="쿠폰"></a>
+        </header>
+        <!-- //header -->
+    </div>
+    <!-- //header_wrap -->
+
+    <!-- 전체메뉴 -->
+    <nav class="all_menu" aria-label="전체메뉴">
+        <div class="menu_head">
+            <a href="../index.html"><img src="../assets/images/common/logo.png" alt="메가스터디교육그룹 김영평생교육원"></a>
+            <button type="button" class="btn_close" aria-label="전체메뉴 닫기"><img src="../assets/images/common/ico_close.svg" alt=""></button>
+        </div>
+        <div class="member">
+            <a href="login.html" class="btn_line">로그인</a>
+            <a href="step_01.html" class="btn_fill">회원가입</a>
+        </div>
+        <ul class="depth1">
+            <li><a href="#none">학사일정</a></li>
+            <li>
+                <button type="button">수강신청</button>
+                <ul>
+                    <li><a href="#none">패키지 강좌</a></li>
+                    <li><a href="#none">단과 강좌</a></li>
+                    <li><a href="#none">일반 강좌</a></li>
+                </ul>
+            </li>
+            <li class="on">
+                <button type="button">편입 학위과정</button>
+                <ul>
+                    <li><a href="#none">편입 학위과정</a></li>
+                    <li><a href="#none">경영학</a></li>
+                    <li><a href="#none">영문학</a></li>
+                    <li><a href="#none">IT공학</a></li>
+                    <li><a href="#none">사회복지학</a></li>
+                    <li><a href="#none">지식재산학</a></li>
+                    <li><a href="#none">의약대편입</a></li>
+                    <li><a href="#none">편입정보</a></li>
+                </ul>
+            </li>
+            <li>
+                <button type="button">사회복지사</button>
+                <ul>
+                    <li><a href="#none">사회복지사 자격증</a></li>
+                    <li><a href="#none">ALL NEW 사회복지사</a></li>
+                    <li><a href="#none">이수과목 안내</a></li>
+                    <li><a href="#none">현장실습 안내</a></li>
+                    <li><a href="#none">현장실습신청서</a></li>
+                    <li><a href="#none">실습기관 검색</a></li>
+                    <li><a href="#none">건강가정사</a></li>
+                    <li><a href="#none">보조공학사</a></li>
+                </ul>
+            </li>
+            <li>
+                <button type="button">한국어교원</button>
+                <ul>
+                    <li><a href="#none">한국어교원 자격증</a></li>
+                    <li><a href="#none">교육실습 안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <button type="button">도서관정사서</button>
+                <ul>
+                    <li><a href="#none">도서관정사서 자격증</a></li>
+                </ul>
+            </li>
+            <li><a href="#none">일반과정</a></li>
+            <li><a href="#none">결제내역</a></li>
+            <li><a href="#none">환불내역</a></li>
+            <li>
+                <button type="button">학습지원센터</button>
+                <ul>
+                    <li><a href="#none">공지사항</a></li>
+                    <li><a href="#none">1:1 문의</a></li>
+                    <li><a href="#none">환불제도</a></li>
+                    <li><a href="#none">서식자료실</a></li>
+                    <li><a href="#none">수강가이드</a></li>
+                    <li><a href="#none">민간자격증 발급</a></li>
+                    <li><a href="#none">증명서 발급</a></li>
+                    <li><a href="#none">다운로드 센터</a></li>
+                    <li><a href="#none">1:1 원격지원</a></li>
+                    <li><a href="#none">무료 학습설계</a></li>
+                </ul>
+            </li>
+            <li><a href="#none">커뮤니티</a></li>
+            <li><a href="#none">FAQ</a></li>
+        </ul>
+        <div class="contact">
+            <a href="tel:1899-7566"><strong>수강신청/학습설계</strong><em>1899-7566</em><p>평일 09:00~18:30<br>(점심 12:30~13:30)</p></a>
+            <a href="tel:1899-5662"><strong>수업장애/행정문의</strong><em>1899-5662</em><p>평일 09:00~18:00<br>(점심 12:30~13:30)</p></a>
+        </div>
+        <ul class="sns">
+            <li><a href="#none"><img src="../assets/images/common/sns_instagram.svg" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../assets/images/common/sns_facebook.svg" alt="페이스북"></a></li>
+            <li><a href="#none"><img src="../assets/images/common/sns_youtube.svg" alt="유튜브"></a></li>
+            <li><a href="#none"><img src="../assets/images/common/sns_blog.svg" alt="블로그"></a></li>
+            <li><a href="#none"><img src="../assets/images/common/sns_kakao.svg" alt="카카오톡"></a></li>
+        </ul>
+    </nav>
+    <!-- //전체메뉴 -->
+
+    <main class="member_wrap">
+
+        <!-- 페이지 타이틀 -->
+        <div class="page_title">
+            <a href="javascript:history.back();" class="btn_back" aria-label="뒤로가기"><img src="../assets/images/common/ico_back.svg" alt=""></a>
+            <h2>회원가입</h2>
+        </div>
+        <!-- //페이지 타이틀 -->
+
+        <ol class="join_progress" aria-label="회원가입 단계">
+            <li class="end">1</li>
+            <li class="active" aria-current="step">2</li>
+            <li>3</li>
+        </ol>
+
+        <div class="join_title">
+            <h3>기본정보 입력</h3>
+            <p>김영평생교육원에 오신 걸 환영합니다.</p>
+        </div>
+
+        <!--
+            입력 상태 표시
+            - input에 error 클래스 : 빨간 테두리 / success 클래스 : 성공 상태
+            - 메시지 : .info_message(안내) / .success_message(성공) / .error_message(오류), 해당 메시지의 hidden 해제
+        -->
+
+        <!-- (필수) 정보 입력 -->
+        <section class="join_form">
+            <h3 class="form_title"><em class="required">(필수)</em> 정보 입력</h3>
+
+            <div class="input_area">
+                <label for="user_name" class="field_label essential">이름</label>
+                <p class="info_message">실명이 아닌 경우 수강신청, 상담 등 제한이 있을 수 있습니다.</p>
+                <div class="input_clear">
+                    <input type="text" id="user_name" placeholder="이름을 입력해 주세요.">
+                    <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                </div>
+                <p class="success_message" hidden>사용 가능한 이름입니다.</p>
+                <p class="error_message" hidden>이름은 2자 이상 입력해 주세요.</p>
+            </div>
+
+            <div class="input_area">
+                <label for="user_id" class="field_label essential">아이디</label>
+                <p class="info_message">6~10자의 영어 소문자, 숫자 조합</p>
+                <div class="multiple">
+                    <div class="input_clear">
+                        <input type="text" id="user_id" placeholder="아이디를 입력해 주세요.">
+                        <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                    </div>
+                    <button type="button" class="btn_check">중복 확인</button>
+                </div>
+                <p class="success_message" hidden>사용 가능한 아이디 입니다.</p>
+                <p class="error_message" hidden>중복 아이디입니다.</p>
+            </div>
+
+            <div class="input_area">
+                <label for="user_password" class="field_label essential">비밀번호</label>
+                <p class="info_message">8~20자 이내의 영문, 숫자, 특수문자 조합<br>(단, ‘ ; - &lt; ( ) / \ 사용 불가)</p>
+                <input type="password" id="user_password" placeholder="비밀번호를 입력해 주세요.">
+                <p class="error_message" hidden>비밀번호가 일치하지 않습니다. 다시 입력해 주세요.</p>
+            </div>
+
+            <div class="input_area">
+                <label for="user_password_confirm" class="field_label essential">비밀번호 확인</label>
+                <input type="password" id="user_password_confirm" placeholder="비밀번호를 한번 더 입력해 주세요.">
+                <p class="success_message" hidden>사용 가능한 비밀번호 입니다.</p>
+            </div>
+
+            <div class="input_area">
+                <label for="user_phone" class="field_label essential">휴대전화</label>
+                <input type="tel" id="user_phone" placeholder="휴대전화 번호를 입력해 주세요." inputmode="numeric">
+                <p class="error_message" hidden>휴대전화 번호를 다시 확인해 주세요.(숫자만)</p>
+            </div>
+
+            <div class="input_area">
+                <label for="user_email" class="field_label essential">이메일</label>
+                <!-- 도메인 선택 -->
+                <div class="multiple email">
+                    <input type="text" id="user_email" placeholder="**********" title="이메일 아이디">
+                    <span>@</span>
+                    <select id="user_email_domain" title="이메일 도메인">
+                        <option value="">도메인 선택</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="direct">직접 입력</option>
+                    </select>
+                </div>
+                <!-- 직접 입력 -->
+                <div class="multiple email">
+                    <input type="text" placeholder="**********" title="이메일 아이디">
+                    <span>@</span>
+                    <input type="text" id="user_email_custom" placeholder="직접 입력" title="이메일 도메인 직접 입력">
+                </div>
+            </div>
+
+            <div class="input_area">
+                <p class="field_label essential">SMS, 이메일 수신 동의</p>
+                <dl class="agree_row">
+                    <dt>SMS 수신 동의</dt>
+                    <dd>
+                        <label class="form_check"><input type="radio" name="sms_agree">동의</label>
+                        <label class="form_check"><input type="radio" name="sms_agree" checked>미동의</label>
+                    </dd>
+                </dl>
+                <dl class="agree_row">
+                    <dt>이메일 수신 동의</dt>
+                    <dd>
+                        <label class="form_check"><input type="radio" name="email_agree">동의</label>
+                        <label class="form_check"><input type="radio" name="email_agree" checked>미동의</label>
+                    </dd>
+                </dl>
+                <p class="info_message">학습 안내, 출석 관리 등 주요 안내사항은 SMS 및 이메일을 통해 안내됩니다.</p>
+                <p class="error_message" hidden>수신 동의 여부를 선택해 주세요.</p>
+                <p class="txt_guide">수신 미동의 시 개강 안내, 학사 일정, 할인 정보 등 중요 공지사항이 누락될 수 있습니다.</p>
+            </div>
+        </section>
+        <!-- //(필수) 정보 입력 -->
+
+        <hr class="divider">
+
+        <!-- (선택) 추가 정보 -->
+        <section class="join_form">
+            <h3 class="form_title"><em>(선택)</em> 추가 정보</h3>
+
+            <div class="input_area">
+                <label for="resident_region" class="field_label">거주지역</label>
+                <select id="resident_region">
+                    <option value="">거주지역을 선택해 주세요.</option>
+                    <option value="서울">서울</option>
+                    <option value="경기">경기</option>
+                    <option value="인천">인천</option>
+                    <option value="강원">강원</option>
+                    <option value="충북">충북</option>
+                </select>
+            </div>
+
+            <div class="input_area">
+                <label for="final_education_level" class="field_label">최종학력</label>
+                <div class="final_education">
+                    <select id="final_education_level" title="학력">
+                        <option value="">학력</option>
+                        <option value="고등학교">고등학교</option>
+                        <option value="대학교">대학교</option>
+                        <option value="대학원">대학원</option>
+                    </select>
+                    <select id="final_education_grade" title="학년">
+                        <option value="">학년</option>
+                        <option value="1학년">1학년</option>
+                        <option value="2학년">2학년</option>
+                        <option value="3학년">3학년</option>
+                        <option value="4학년">4학년</option>
+                    </select>
+                    <select id="final_education_status" title="상태">
+                        <option value="">상태</option>
+                        <option value="재학">재학</option>
+                        <option value="졸업">졸업</option>
+                    </select>
+                    <select id="final_education_year" title="연도">
+                        <option value="">연도</option>
+                    </select>
+                    <select id="final_education_month" title="월">
+                        <option value="">월</option>
+                    </select>
+                </div>
+                <input type="text" id="education_name" placeholder="대학, 고등학교 또는 기관명을 입력해 주세요." title="학교 또는 기관명">
+            </div>
+
+            <div class="input_area">
+                <label for="inflow_path" class="field_label">유입경로</label>
+                <select id="inflow_path">
+                    <option value="">유입경로를 선택해 주세요.</option>
+                    <option value="포털검색">포털검색</option>
+                    <option value="김영편입 사이트">김영편입 사이트</option>
+                    <option value="김영편입 학원">김영편입 학원</option>
+                    <option value="전단지">전단지</option>
+                    <option value="블로그, SNS">블로그, SNS</option>
+                    <option value="뉴스 기사">뉴스 기사</option>
+                    <option value="친구 추천">친구 추천</option>
+                    <option value="기타">기타</option>
+                </select>
+                <input type="text" id="inflow_friend_id" placeholder="친구 ID를 입력해 주세요." title="친구 ID">
+            </div>
+
+            <div class="input_area">
+                <label for="education_purpose" class="field_label">학점은행제 이용 목적</label>
+                <select id="education_purpose">
+                    <option value="">이용 목적을 선택해 주세요.</option>
+                    <option value="포털검색">포털검색</option>
+                    <option value="블로그,SNS">블로그,SNS</option>
+                    <option value="친구추천">친구추천</option>
+                    <option value="기타">기타</option>
+                </select>
+                <input type="text" id="education_purpose_other" placeholder="이용 목적을 입력해 주세요." title="기타 이용 목적">
+            </div>
+
+            <div class="input_area">
+                <label for="interest_field" class="field_label">관심분야</label>
+                <!-- 다중 선택 드롭다운 -->
+                <div class="custom_select" id="interest_field" tabindex="0" role="button" aria-expanded="false">
+                    <span class="selected">관심분야를 선택해 주세요.</span>
+                    <div class="options">
+                        <label><input type="checkbox" class="multiple_checkbox" value="일반 편입">일반 편입</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="학사 편입">학사 편입</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="대학원 진학">대학원 진학</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="학위 취득">학위 취득</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="자격증 취득">자격증 취득</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="의약계열 선수과목">의약계열 선수과목</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="기타">기타</label>
+                    </div>
+                </div>
+                <!-- //다중 선택 드롭다운 -->
+                <input type="text" id="interest_field_other" placeholder="기타 관심분야를 입력해 주세요." title="기타 관심분야">
+            </div>
+
+            <div class="input_area">
+                <label for="transfer_course_status" class="field_label">편입 수강 여부</label>
+                <select id="transfer_course_status">
+                    <option value="">편입 수강 여부를 선택해 주세요.</option>
+                    <option value="인강 수강">인강 수강</option>
+                    <option value="오프라인 캠퍼스 수강">오프라인 캠퍼스 수강</option>
+                    <option value="타 편입학원 수강">타 편입학원 수강</option>
+                    <option value="미수강">미수강</option>
+                </select>
+            </div>
+
+            <div class="input_area">
+                <label for="campus_interest" class="field_label">관심 캠퍼스 (캠퍼스 전용 할인쿠폰 발급)</label>
+                <!-- 다중 선택 드롭다운 -->
+                <div class="custom_select" id="campus_interest" tabindex="0" role="button" aria-expanded="false">
+                    <span class="selected">관심 캠퍼스를 선택해 주세요.</span>
+                    <div class="options">
+                        <label><input type="checkbox" class="multiple_checkbox" value="인강">인강</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="강남단과">강남단과</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="김영플러스 강남">김영플러스 강남</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="김영플러스 신촌">김영플러스 신촌</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="노량진">노량진</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="노원">노원</label>
+                        <label><input type="checkbox" class="multiple_checkbox" value="기타">기타</label>
+                    </div>
+                </div>
+                <!-- //다중 선택 드롭다운 -->
+                <input type="text" id="campus_interest_other" placeholder="기타 관심 캠퍼스를 입력해 주세요." title="기타 관심 캠퍼스">
+            </div>
+
+            <div class="input_area">
+                <label for="consultant" class="field_label">담당 컨설턴트</label>
+                <select id="consultant">
+                    <option value="">담당 컨설턴트를 선택해 주세요.</option>
+                    <option value="홍길동">홍길동</option>
+                    <option value="김철수">김철수</option>
+                    <option value="이영희">이영희</option>
+                    <option value="기타">기타</option>
+                </select>
+            </div>
+
+            <div class="input_area">
+                <label for="inquiry_type" class="field_label">문의사항</label>
+                <select id="inquiry_type">
+                    <option value="">문의사항을 선택해 주세요.</option>
+                    <option value="전체">전체</option>
+                    <option value="과정(취득)문의">과정(취득)문의</option>
+                    <option value="수강료 문의">수강료 문의</option>
+                    <option value="실습과정">실습과정</option>
+                    <option value="기타">기타</option>
+                </select>
+            </div>
+
+            <div class="input_area">
+                <p class="field_label">김영편입 ID</p>
+                <div class="id_status">
+                    <label class="form_check"><input type="radio" name="id_status">수강</label>
+                    <input type="text" id="kimyoung_id" placeholder="김영편입 ID를 입력해 주세요." title="김영편입 ID" disabled>
+                    <label class="form_check"><input type="radio" name="id_status" checked>비수강</label>
+                </div>
+            </div>
+
+            <div class="input_area">
+                <p class="field_label">김영편입 소개 여부</p>
+                <dl class="label_row">
+                    <dt><label for="introduction_campus">캠퍼스명</label></dt>
+                    <dd><input type="text" id="introduction_campus" placeholder="캠퍼스명을 입력해 주세요."></dd>
+                </dl>
+                <dl class="label_row">
+                    <dt><label for="introduction_staff">소개 직원</label></dt>
+                    <dd><input type="text" id="introduction_staff" placeholder="소개 직원명을 입력해 주세요."></dd>
+                </dl>
+            </div>
+
+            <div class="input_area">
+                <p class="field_label">김영편입 마케팅 및 광고 활용 동의</p>
+                <div class="check_group">
+                    <label class="form_check"><input type="checkbox" checked>SMS 수신 동의</label>
+                    <label class="form_check"><input type="checkbox" checked>이메일 수신 동의</label>
+                </div>
+                <p class="txt_guide">김영편입의 이벤트, 프로모션 및 다양한 혜택 정보를 SMS 또는 이메일로 수신하는 것에 동의합니다.</p>
+            </div>
+        </section>
+        <!-- //(선택) 추가 정보 -->
+
+        <button type="button" class="btn_primary js-join-next" data-href="step_03.html">회원가입</button>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer footer_simple">
+        <ul class="footer_link">
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">PC버전</a></li>
+        </ul>
+        <p class="copyright">Copyright (c) 2026 김영평생교육원 All Rights Reserved</p>
+    </footer>
+    <!-- //footer -->
+
+</body>
+</html>

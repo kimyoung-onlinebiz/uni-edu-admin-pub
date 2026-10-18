@@ -29,10 +29,6 @@
 .styleGuide_wrapper .styleGuide_content > h2 + h3,.styleGuide_wrapper .styleGuide_content > h3 + h4 { padding-top:10px; margin-top:0; }
 
 .styleGuide_wrapper h2:first-child { padding:0; margin:0; border:none; }
-.styleGuide_wrapper .color { display:flex; gap:24px; }
-.styleGuide_wrapper .color dt { width:80px; height:80px; border-radius:var(--Border-radius); text-align:center; line-height:80px; margin-right:10px; }
-.styleGuide_wrapper .color dd { font-size:14px; color:var(--Neutral-600); }
-.styleGuide_wrapper .color dd:nth-child(2) { margin-top:16px; color:var(--Neutral-900); font-weight:600; }
 
 .styleGuide_wrapper footer { margin-top:66px; }
 .styleGuide_wrapper .btn_icon { border:1px solid #ccc; padding:8px 24px 8px 16px; border-radius:5px; margin-left:24px; }
@@ -47,7 +43,7 @@
 .styleGuide_wrapper h4 { margin:20px 0 8px 0; font-weight:600; font-size:20px;}
 .styleGuide_wrapper .flex h4 { margin:0px 0 8px 0; }
 
-.styleGuide_color .styleGuide_note {
+.styleGuide_wrapper .styleGuide_note {
     margin-bottom:24px;
     padding:14px 16px;
     border:1px solid var(--Neutral-300);
@@ -55,7 +51,7 @@
     background:var(--Neutral-100);
     color:var(--Neutral-800);
 }
-.styleGuide_color .styleGuide_note strong {
+.styleGuide_wrapper .styleGuide_note strong {
     margin-right:4px;
 }
 .styleGuide_color .styleGuide_content { max-width:1400px; }
@@ -140,3 +136,35 @@
 .styleGuide_input .styleGuide_content > h3 {
     margin-top:4px;
 }
+/* 항목 : 설명(위) + 미리보기(아래) */
+.sg_item { margin-top:12px; }
+.sg_info { font-size:15px; line-height:1.7; color:var(--Neutral-800); }
+.sg_info li { list-style:disc; margin-left:20px; }
+.sg_preview { margin-top:12px; padding:24px; border:1px dashed var(--Neutral-500); border-radius:8px; }
+.sg_preview > h4:first-child { margin-top:0; }
+
+/* 색상 카드 */
+.styleGuide_wrapper .color { display:grid; grid-template-columns:repeat(8, 1fr); max-width:1400px; gap:16px; margin-top:12px; }
+.styleGuide_wrapper .color dl { border:1px solid var(--Neutral-300); border-radius:8px; overflow:hidden; }
+.styleGuide_wrapper .color dt { height:72px; border-bottom:1px solid var(--Neutral-300); }
+.styleGuide_wrapper .color dd { padding:0 12px; font-size:13px; color:var(--Neutral-600); }
+.styleGuide_wrapper .color dd:nth-of-type(1) { padding-top:10px; font-size:14px; font-weight:700; color:var(--Neutral-900); }
+.styleGuide_wrapper .color dd:last-child { padding-bottom:10px; }
+
+/* 표 · 설명 */
+.sg_desc { margin-top:4px; font-size:14px; color:var(--Neutral-600); }
+.sg_table { width:100%; max-width:1200px; margin-top:12px; border-top:1px solid var(--Neutral-900); }
+.sg_table th,
+.sg_table td { padding:12px 16px; border-bottom:1px solid var(--Neutral-300); text-align:left; vertical-align:middle; }
+.sg_table th { background:var(--Neutral-100); font-weight:600; }
+.sg_margin { max-width:640px; }
+.sg_box { width:240px; outline:1px dashed var(--Neutral-500); }
+
+/* 굵기 · 아이콘 */
+.sg_weight { display:flex; gap:40px; }
+.sg_weight li { font-size:13px; color:var(--Neutral-600); }
+.sg_weight span { display:block; font-size:24px; color:var(--Neutral-900); }
+.sg_icons { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; margin-top:12px; }
+.sg_icons li { display:flex; flex-direction:column; align-items:center; gap:6px; padding:16px 8px 12px; border:1px solid var(--Neutral-300); border-radius:8px; font-size:12px; color:var(--Neutral-600); word-break:break-all; text-align:center; }
+.sg_icons .material-symbols-rounded { font-size:28px; color:var(--Neutral-900); vertical-align:0; }
+.sg_icons em { color:var(--Primary-500); }
