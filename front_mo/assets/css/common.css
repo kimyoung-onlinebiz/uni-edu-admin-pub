@@ -277,7 +277,16 @@ body:has(.layer_popup:not([hidden])) { pointer-events:none; }
 /* 17. 알림 팝업 (제목 + 문구 + 확인 버튼) */
 .alert_layer { width:280px; padding:16px; border-radius:var(--Border-2radius); text-align:center; }
 .alert_layer h2 { display:flex; align-items:center; justify-content:center; gap:4px; padding-bottom:16px; font-weight:600; }
-.alert_layer h2:before { content:""; flex:none; width:24px; height:24px; background:url(../images/common/ico_alarm.png) no-repeat center / 24px auto; }
+.alert_layer h2:before { content:""; flex:none; width:24px; height:24px; background:url(../images/common/ico_alarm.svg) no-repeat center / 24px auto; transform-origin:50% 10%; animation:bellRing 3s ease-in-out infinite; }
+/* 종 흔들림 : 위쪽 꼭지를 축으로 1초 흔들고 2초 멈춤 반복 */
+@keyframes bellRing {
+    0%, 33.33%, 100% { transform:rotate(0); }
+    6.67% { transform:rotate(16deg); }
+    13.33% { transform:rotate(-14deg); }
+    20% { transform:rotate(10deg); }
+    26.67% { transform:rotate(-6deg); }
+}
+@media (prefers-reduced-motion:reduce) { .alert_layer h2:before { animation:none; } }
 .alert_layer p { margin:16px 0 24px; font-size:var(--Font-base); line-height:1.5; }
 
 /* 18. 에디터 내용 (관리자 에디터로 작성한 본문) : 초기화로 지워진 기본 서식을 되살려 에디터 화면 그대로 표시 */
@@ -302,9 +311,9 @@ body:has(.layer_popup:not([hidden])) { pointer-events:none; }
 
 /* 19. 대표 테이블 (목록형) : thead 제목 + tbody 내용, 기본 가운데 정렬 / 왼쪽 정렬 칸은 td 에 .align_left
    - 열이 많아 넘치면 div.table-scroll 로 감싸 가로 스크롤 */
-.data_table { border-collapse:separate; border-top:1px solid var(--Neutral-900); font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.data_table { border-collapse:separate; border-top:1px solid var(--Neutral-900); }
 .data_table th,
-.data_table td { padding:8px; border-bottom:1px solid var(--Neutral-300); text-align:center; vertical-align:middle; overflow-wrap:break-word; }
+.data_table td { padding:8px; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; border-bottom:1px solid var(--Neutral-300); text-align:center; vertical-align:middle; overflow-wrap:break-word; }
 .data_table th { height:40px; background:var(--Neutral-100); font-weight:600; color:var(--Neutral-900); }
 .data_table td { color:var(--Neutral-800); }
 .data_table :is(th, td) + :is(th, td) { border-left:1px solid var(--Neutral-300); }

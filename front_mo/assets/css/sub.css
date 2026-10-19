@@ -520,7 +520,8 @@
 .calendar_schedule li { width:260px; }
 .calendar_schedule li,
 .calendar_week_list li { display:flex; flex-direction:column; align-items:flex-start; gap:12px; padding:16px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
-.calendar_wrap dl { display:grid; grid-template-columns:auto 1fr; gap:8px 18px; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.calendar_wrap dl { display:grid; grid-template-columns:auto 1fr; gap:8px 18px; }
+.calendar_wrap :is(dt, dd) { font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
 .calendar_wrap dt { font-weight:600; }
 .calendar_wrap dd span { white-space:nowrap; } /* 기간 : 날짜·시간은 끊지 않고 ~ 뒤에서 줄바꿈 */
 
@@ -569,10 +570,124 @@
 .state.end { border-color:var(--Neutral-300); color:var(--Placeholder); }
 
 /* 일정표 : 항목(120px) + 기간 */
-.schedule_detail { display:grid; grid-template-columns:120px 1fr; border:1px solid var(--Neutral-500); border-top:0; border-radius:0 0 var(--Border-2radius) var(--Border-2radius); overflow:hidden; font-size:var(--Font-small); line-height:1.5; }
+.schedule_detail { display:grid; grid-template-columns:120px 1fr; border:1px solid var(--Neutral-500); border-top:0; border-radius:0 0 var(--Border-2radius) var(--Border-2radius); overflow:hidden; }
 .schedule_detail dt,
-.schedule_detail dd { padding:12px 0; }
+.schedule_detail dd { padding:12px 0; font-size:var(--Font-small); line-height:1.5; }
 .schedule_detail dt { font-weight:600; text-align:center; }
 .schedule_detail dd { padding-right:8px; letter-spacing:-0.14px; }
 .schedule_detail .tit { padding-block:16px; background:var(--Primary-100); font-weight:600; }
 .schedule_detail dt.tit { font-weight:700; }
+
+/* ==============================
+   수강중인 강좌 (classroom/current_courses)
+   ============================== */
+/* 과목 정보 : 회색 배경 위 학습 진행 카드 + 수강 정보 카드 */
+.subject_info { display:flex; flex-direction:column; gap:16px; padding:24px var(--Gutter) 32px; background:var(--Neutral-200); }
+.subject_info h3 { padding:0 8px; font-size:var(--Font-large); font-weight:700; }
+.progress_status,
+.subject_detail { background:var(--Neutral-0); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
+.progress_status { display:flex; flex-direction:column; align-items:center; gap:16px; padding:24px; }
+.progress_status .week { display:flex; gap:8px; padding:4px 16px; border:1px solid var(--Primary-500); border-radius:100px; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.progress_status .week strong { font-weight:700; color:var(--Primary-500); }
+.progress_status .attend { display:flex; align-items:center; justify-content:space-between; align-self:stretch; margin-bottom:-8px; }
+.progress_status .rate { display:flex; align-items:center; gap:10px; font-size:var(--Font-small); color:var(--Neutral-800); }
+.progress_status .rate strong { font-size:var(--Font-3xlarge); font-weight:700; color:var(--Primary-500); }
+.progress_status .rate small { font-size:var(--Font-medium); }
+.attend_state { display:flex; align-items:center; gap:4px; font-size:var(--Font-small); font-weight:500; line-height:1.5; letter-spacing:-0.14px; }
+/* 출석 상태 아이콘 : .good 양호 / .warning 주의 / .fail 과락 */
+.attend_state:before { content:""; width:20px; height:20px; background:url(../images/common/ico_smile.svg) no-repeat center / 20px; }
+.attend_state.warning:before { background-image:url(../images/common/ico_warning.svg); }
+.attend_state.fail:before { background-image:url(../images/common/ico_failingGrade.svg); }
+.attend_state span { color:var(--Neutral-600); }
+.attend_state em { font-weight:700; color:var(--Error); }
+/* 주차별 출석 막대 : 칸 수만큼 균등 분할 */
+.attend_bar { display:flex; gap:2px; align-self:stretch; height:10px; border-radius:100px; overflow:hidden; }
+.attend_bar li { flex:1; background:var(--Neutral-300); }
+.attend_bar .attended { background:var(--Info); }
+.attend_bar .absent { background:var(--Error); }
+.progress_status .recommend { display:flex; justify-content:center; gap:8px; align-self:stretch; padding:8px 16px; background:var(--Info-soft); border-radius:var(--Border-radius); font-size:var(--Font-small); font-weight:500; line-height:1.5; letter-spacing:-0.14px; }
+.progress_status .recommend strong { font-weight:700; color:var(--Primary-500); }
+.subject_detail { padding:16px; }
+.subject_detail dl { display:grid; grid-template-columns:auto 1fr; gap:8px 18px; padding-bottom:16px; border-bottom:1px solid var(--Neutral-300); }
+.subject_detail :is(dt, dd) { font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.subject_detail dt { font-weight:600; }
+.subject_links { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:12px; }
+.subject_links .btn_primary { height:32px; font-size:var(--Font-small); }
+
+/* 강의 수강 시 유의사항 */
+.lecture_wrap { display:flex; flex-direction:column; gap:24px; padding:32px var(--Gutter) 40px; }
+.lecture_notice { display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px; padding:16px; background:var(--Info-soft); border-radius:var(--Border-2radius); }
+.lecture_notice h3 { display:flex; align-items:center; gap:4px; font-size:var(--Font-small); font-weight:700; color:var(--Info); }
+.lecture_notice h3:before { content:""; flex:none; width:20px; height:20px; background:url(../images/common/ico_notice.svg) no-repeat center / 20px; }
+.lecture_notice .btn_small { font-size:var(--Font-2xsmall); }
+.lecture_notice ul { grid-column:1 / -1; padding-left:18px; font-size:var(--Font-2xsmall); color:var(--Neutral-800); line-height:16px; }
+.lecture_notice li { list-style:disc; font-size:inherit; line-height:inherit; color:inherit; }
+.lecture_notice em,
+.notice_layer em { font-style:normal; color:var(--Info); }
+
+/* 주차별 강의 목록 */
+.lecture_list { display:flex; flex-direction:column; gap:16px; }
+.lecture_list > li { border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); overflow:hidden; }
+.lecture_list > li.current { border-color:var(--Primary-500); }
+.ot_card { display:flex; flex-direction:column; gap:16px; padding:16px; }
+.ot_card p { display:flex; gap:24px; font-size:var(--Font-base); font-weight:500; }
+.ot_card strong,
+.week_head strong { flex:none; font-size:var(--Font-base); font-weight:700; }
+.week_head { display:flex; align-items:center; gap:24px; padding:16px; }
+.week_head .period { display:flex; align-items:center; gap:16px; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.week_head .period span { font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
+.exam_card .period { flex-direction:column; align-items:flex-start; gap:4px; font-weight:600; }
+.exam_card .period span { font-weight:400; }
+
+/* 차시 : 번호 + (제목 / 상태 · 진도율) → 버튼 */
+.lecture_list ol li { display:grid; grid-template-columns:auto 1fr; align-items:center; gap:16px 24px; padding:16px; background:var(--Neutral-100); border-top:1px solid var(--Neutral-300); }
+.lecture_list ol strong { font-size:var(--Font-base); font-weight:500; }
+.lecture_list ol div { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; }
+.lecture_list ol p { font-size:var(--Font-small); line-height:1.5; }
+.lecture_list ol .title { flex-basis:100%; font-weight:600; }
+.lecture_list ol .btn_primary { grid-column:1 / -1; font-size:var(--Font-small); }
+.status { font-weight:600; color:var(--Neutral-600); }
+.status:is(.done, .ing) { color:var(--Primary-500); }
+.status.absent { color:var(--Error); }
+.btn_progress { display:flex; align-items:center; gap:2px; padding:6px 4px 6px 6px; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); font-size:var(--Font-2xsmall); font-weight:500; }
+.btn_progress:after { content:""; width:16px; height:16px; background:url(../images/common/ico_arrow_right.svg) no-repeat center / 16px; }
+.btn_progress:disabled { border-color:var(--Neutral-300); color:var(--Placeholder); }
+.btn_progress:disabled:after { background-image:url(../images/common/ico_arrow_right_off.svg); }
+
+/* 실습 과정 (current_courses_practice) : 출석 반영 대기, 오프라인 수업 주차 */
+.attend_bar .wait { background:var(--Warning); }
+.offline .week_head { justify-content:space-between; }
+.badge_offline { display:inline-flex; align-items:center; height:32px; padding:0 8px; background:var(--Info-soft); border-radius:var(--Border-radius); font-size:var(--Font-2xsmall); font-weight:500; color:var(--Primary-500); }
+.offline ol div { flex-wrap:nowrap; }
+.offline ol .title { flex-basis:auto; }
+.offline ol :is(.status, .date) { font-weight:400; letter-spacing:-0.14px; }
+.offline ol .date { color:var(--Neutral-600); }
+
+/* 이론 과정 수강 시 유의사항 팝업 (알림 팝업 응용 : 번호 목록) */
+.notice_layer ol { margin:16px 0 24px; padding-left:22px; font-size:var(--Font-base); line-height:1.5; text-align:left; }
+.notice_layer li { list-style:decimal; line-height:inherit; }
+
+/* 페이지별 진도율 팝업 (알림 팝업 응용 : 표) */
+.progress_layer .layer_scroll { max-height:60vh; margin:0 0 24px; border-bottom:0; }
+.progress_layer th,
+.progress_layer td { height:46px; padding:4px 2px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); line-height:16px; text-align:center; }
+.progress_layer th { background:var(--Neutral-100); font-weight:600; }
+.progress_layer th small { display:block; font-size:9px; font-weight:400; color:var(--Placeholder); line-height:normal; }
+.progress_layer td.done { color:var(--Error); }
+
+/* ==============================
+   강의계획서 (classroom/course_plan)
+   ============================== */
+.syllabus { padding:24px var(--Gutter) 40px; }
+.syllabus h3 { padding:16px 0; border-bottom:1px solid var(--Neutral-500); font-size:var(--Font-medium); font-weight:700; }
+.syllabus h3:first-child { padding-top:0; }
+.syllabus .data_table { border-top:0; } /* 제목 아래 선이 표의 위 선 역할 */
+.syllabus th { font-weight:700; }
+.syllabus td { color:var(--Neutral-900); }
+.syllabus td span { white-space:nowrap; } /* 기간 : 날짜는 끊지 않고 ~ 뒤에서 줄바꿈 */
+.syllabus tr:has(td[rowspan]) + tr td:first-child { border-left:1px solid var(--Neutral-300); } /* rowspan 다음 줄 첫 칸 세로선 */
+.syllabus .editor_content { padding:16px 0; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; color:var(--Neutral-900); }
+/* 차시별 강의 내용 : 강의명 / 학습목표 / 학습내용 사이 한 줄 띄움 */
+.plan_detail dt { font-weight:600; }
+.plan_detail dd + dt { margin-top:21px; }
+.plan_detail :is(dt, dd) { font-size:inherit; line-height:inherit; color:inherit; }

@@ -84,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ['.quick_bar .btn_consult', '.consult_layer'], // 간편상담 신청
         ['.js-form-download', '.download_layer'],      // 서식자료실 다운로드
         ['.js-faq-pop', '.faq_layer'],                 // FAQ 자주 찾는 질문 TOP5
+        ['.js-notice-pop', '.notice_layer'],           // 수강중인 강좌 이론 과정 유의사항
+        ['.btn_progress', '.progress_layer'],          // 수강중인 강좌 페이지별 진도율 (비활성 버튼은 열리지 않음)
     ];
 
     // 진입 시 바로 여는 팝업 (data-auto-open) : 알림 팝업 등
