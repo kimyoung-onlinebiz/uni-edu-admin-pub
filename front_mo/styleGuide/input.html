@@ -45,7 +45,7 @@
 
         <!-- 버튼 -->
         <h2 id="sg-button">버튼</h2>
-        <h3>기본 버튼 (52px)</h3>
+        <h3>기본 버튼 (40px)</h3>
         <div class="sg_item">
             <div class="sg_preview">
                 <button type="button" class="btn_primary">기본</button>
@@ -57,18 +57,16 @@
                 <li><code>.btn_primary</code> : 파란 배경 버튼, <code>disabled</code> 시 회색</li>
                 <li><code>.btn_primary.line</code> : 회색 테두리 (로그인, 회원가입 화면)</li>
                 <li><code>.btn_primary.outline</code> : 파란 테두리 (나의 강의실, 게시판 목록 버튼)</li>
-                <li><code>button</code>, <code>a</code> 모두 사용 가능</li>
+                <li><code>button</code>, <code>a</code> 모두 사용 가능, 높이는 모두 40px 로 통일 (팝업 닫기 <code>.btn_full</code>, 간편상담 신청 버튼도 40px)</li>
             </ul>
         </div>
 
-        <h3>작은 버튼</h3>
+        <h3>작은 보조 버튼 (32px)</h3>
         <div class="sg_item">
             <div class="sg_preview">
-                <button type="button" class="btn_primary small">40px 버튼</button>
                 <button type="button" class="btn_small">32px 보조 버튼</button>
             </div>
             <ul class="sg_info">
-                <li><code>.btn_primary.small</code> : 높이 40px (과정 카드, 강의실 정보)</li>
                 <li><code>.btn_small</code> : 높이 32px 흰 바탕 보조 버튼 (쪽지함, 전체 읽음 처리)</li>
             </ul>
         </div>
@@ -257,25 +255,19 @@
 
         <!-- 목록 -->
         <h2 id="sg-list">리스트</h2>
-        <h3>게시판 목록 / 페이징</h3>
+        <h3>게시판 목록 / 더보기</h3>
         <div class="sg_item">
             <div class="sg_preview">
                 <ul class="board_list" style="margin:0;">
                     <li class="important"><a href="#none"><p class="meta"><em>중요</em> | 일반공지</p><p class="tit"><span>중요 공지 제목</span><i class="ico_new">N</i></p><p class="date">2026-03-03</p></a></li>
                     <li><a href="#none"><p class="meta">일반공지</p><p class="tit"><span>일반 공지 제목</span></p><p class="date">2026-03-03</p></a></li>
                 </ul>
-                <nav class="paging" aria-label="페이지 이동">
-                    <a href="#none" class="first" aria-label="처음 페이지"></a>
-                    <a href="#none" class="prev" aria-label="이전 페이지"></a>
-                    <a href="#none" class="active">1</a><a href="#none">2</a><a href="#none">3</a><a href="#none">4</a><a href="#none">5</a>
-                    <a href="#none" class="next" aria-label="다음 페이지"></a>
-                    <a href="#none" class="last" aria-label="마지막 페이지"></a>
-                </nav>
+                <button type="button" class="btn_primary outline btn_more">더보기(5/26)</button>
             </div>
             <ul class="sg_info">
                 <li><code>.board_list</code> &gt; li &gt; a : 메타 / 제목 / 날짜, 중요 공지는 li 에 <code>.important</code></li>
                 <li>검색 <code>.board_search</code>, 건수 <code>.board_info</code>, 정렬 <code>.board_sort</code></li>
-                <li><code>.paging</code> : 페이지 번호 최대 5개, 현재 페이지 <code>.active</code></li>
+                <li>목록 아래 <code>.btn_primary.outline.btn_more</code> : 더보기(현재 노출 개수 / 전체 개수), 페이징은 사용하지 않음</li>
                 <li>상세 : <code>.board_view</code> (학습공지사항 상세 참고)</li>
             </ul>
         </div>

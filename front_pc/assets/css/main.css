@@ -233,9 +233,56 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .faq_card { display:flex; gap:52px;}
 .faq_card li { display:flex; justify-content:center; }
 .faq_card a { width:100%; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:16px; text-align:center; }
-.faq_card span { width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--Info-soft); }
+.faq_card span { width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--Info-soft); transition: background 0.2s ease; }
+.faq_card a:hover span { background:#e4e9f4; }
 .faq_card strong { font-size:var(--Font-medium); font-weight:600; line-height:1.25; }
 .faq_card a:hover strong { color:var(--Primary-500); }
+/* 자주하는 질문 아이콘 : 오버 시 아이콘 일부(g)만 움직임 */
+.faq_card svg { overflow:visible; } /* 움직일 때 svg 영역 밖으로 나가도 잘리지 않게 */
+.faq_card g { transform-box:fill-box; transform-origin:center; }
+.faq_card .ico_alert,
+.faq_card .ico_swing,
+.faq_card .ico_jump { transform-origin:center bottom; }
+.faq_card a:hover .ico_alert { animation:faqShake 1s ease-in-out infinite; } /* 느낌표·경고 : 커지며 좌우 흔들림 */
+.faq_card a:hover .ico_swing { animation:faqSwing 1s ease-in-out infinite; } /* 말풍선 : 좌우 흔들림 (크기 변화 없음) */
+.faq_card a:hover .ico_tap { animation:faqTap .6s ease-in-out infinite; } /* 손 : 화면 터치 */
+.faq_card a:hover .ico_down { animation:faqDown 1s ease-in-out infinite; } /* 화살표 : 다운로드 */
+.faq_card a:hover .ico_jump { animation:faqJump 1s ease-in-out infinite; } /* 경고 : 통통 점프 */
+.faq_card a:hover .ico_spin { animation:faqSpin 1.2s linear infinite; } /* 원 : 회전 */
+@keyframes faqShake {
+    0%, 100% { transform:translateY(0) rotate(0); }
+    15% { transform:translateY(-2px) scale(1.15); }
+    30% { transform:rotate(-14deg) scale(1.15); }
+    45% { transform:rotate(12deg) scale(1.15); }
+    60% { transform:rotate(-8deg) scale(1.1); }
+    75% { transform:rotate(0) scale(1); }
+}
+@keyframes faqSwing {
+    0%, 75%, 100% { transform:translateY(0) rotate(0); }
+    15% { transform:translateY(-2px); }
+    30% { transform:rotate(-14deg); }
+    45% { transform:rotate(12deg); }
+    60% { transform:rotate(-8deg); }
+}
+@keyframes faqTap {
+    0%, 100% { transform:translate(0, 0); }
+    50% { transform:translate(-3px, -3px); }
+}
+@keyframes faqDown {
+    0% { transform:translateY(-4px); opacity:0; }
+    30%, 70% { transform:translateY(0); opacity:1; }
+    100% { transform:translateY(3px); opacity:0; }
+}
+@keyframes faqJump {
+    0%, 60%, 100% { transform:translateY(0) scale(1, 1); }
+    20% { transform:translateY(-5px) scale(.95, 1.08); }
+    40% { transform:translateY(0) scale(1.12, .85); }
+    50% { transform:translateY(-1px) scale(.98, 1.03); }
+}
+@keyframes faqSpin {
+    to { transform:rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) { .faq_card a:hover g { animation:none; } }
 
 .guide_area { display:flex; gap:24px; }
 .target_guide { flex:1; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }

@@ -135,11 +135,11 @@
         <section class="faq_top">
             <h3>자주 찾는 질문 TOP5</h3>
             <ol>
-                <li><button type="button" class="js-faq-pop">지원 불가 환경</button></li>
-                <li><button type="button" class="js-faq-pop">모바일 기기 수강</button></li>
-                <li><button type="button" class="js-faq-pop">MAC 수강 전 필독</button></li>
-                <li><button type="button" class="js-faq-pop">시험 프로그램 설치</button></li>
-                <li><button type="button" class="js-faq-pop">재생 시간 초과</button></li>
+                <li><button type="button" class="js-faq-pop">지원 불가 환경 <span class="state ing">확인하기</span></button></li>
+                <li><button type="button" class="js-faq-pop">모바일 기기 수강 <span class="state ing">확인하기</span></button></li>
+                <li><button type="button" class="js-faq-pop">MAC 수강 전 필독 <span class="state ing">확인하기</span></button></li>
+                <li><button type="button" class="js-faq-pop">시험 프로그램 설치 <span class="state ing">확인하기</span></button></li>
+                <li><button type="button" class="js-faq-pop">재생 시간 초과 <span class="state ing">확인하기</span></button></li>
             </ol>
         </section>
         <!-- //자주 찾는 질문 TOP5 -->
@@ -201,19 +201,8 @@
                 </li>
             </ul>
 
-            <!-- 페이징 : 페이지 번호는 최대 5개 노출, 현재 페이지 .active -->
-            <nav class="paging" aria-label="페이지 이동">
-                <a href="#none" class="first" aria-label="처음 페이지"></a>
-                <a href="#none" class="prev" aria-label="이전 페이지"></a>
-                <a href="#none" class="active" aria-current="page">1</a>
-                <a href="#none">2</a>
-                <a href="#none">3</a>
-                <a href="#none">4</a>
-                <a href="#none">5</a>
-                <a href="#none" class="next" aria-label="다음 페이지"></a>
-                <a href="#none" class="last" aria-label="마지막 페이지"></a>
-            </nav>
-            <!-- //페이징 -->
+            <!-- 더보기 : (현재 노출 개수 / 전체 개수) -->
+            <button type="button" class="btn_primary outline btn_more">더보기(5/26)</button>
         </section>
 
         <!-- FAQ 답변 팝업 : 선택한 TOP5 질문의 제목/답변 (개발에서 채움) -->

@@ -204,8 +204,8 @@
 .class_info .info_head { display:flex; align-items:center; justify-content:space-between; }
 .class_info .info_head h2 { font-size:var(--Font-large); font-weight:600; }
 .class_info .info_box { margin-top:16px; padding:24px 16px; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
-.class_info .credit { display:flex; align-items:center; justify-content:space-between; padding-bottom:16px; border-bottom:1px solid var(--Neutral-300); }
-.class_info .credit_bar { width:160px; height:10px; background:linear-gradient(90deg, var(--Info) var(--rate), var(--Neutral-500) var(--rate)); border-radius:100px; }
+.class_info .credit { display:flex; align-items:center; gap:16px; padding-bottom:16px; border-bottom:1px solid var(--Neutral-300); }
+.class_info .credit_bar { flex:1; height:10px; background:linear-gradient(90deg, var(--Info) var(--rate), var(--Neutral-500) var(--rate)); border-radius:100px; }
 .class_info .credit p { font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); }
 .class_info .credit strong { font-weight:700; color:var(--Primary-500); }
 .class_info .info_btns { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px; }
@@ -308,7 +308,7 @@
 .board_view .meta { font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .board_list .meta em,
 .board_view .meta em { color:var(--Primary-500); }
-.board_list .tit { display:flex; align-items:center; gap:4px; font-weight:600; }
+.board_list .tit { display:flex; align-items:center; gap:8px; font-weight:600; }
 .board_list .tit span { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .board_list .date,
 .board_view .date { font-size:var(--Font-small); color:var(--Neutral-600); line-height:1.5; letter-spacing:-0.14px; }
@@ -364,19 +364,13 @@
 .reply_item { display:flex; flex-direction:column; gap:20px; padding:24px 20px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
 .reply_item + .reply_item { margin-top:8px; }
 .reply_head { display:flex; align-items:center; justify-content:space-between; }
-.reply_head .state { display:inline-flex; align-items:center; height:24px; padding:0 12px; border:1px solid var(--Primary-500); border-radius:100px; font-size:var(--Font-xsmall); font-weight:600; color:var(--Primary-500); }
-.reply_head .state.done { background:var(--Primary-500); color:var(--Neutral-0); }
+.state { display:inline-flex; align-items:center; height:24px; padding:0 12px; border:1px solid var(--Primary-500); border-radius:100px; font-size:var(--Font-xsmall); font-weight:600; color:var(--Primary-500); }
+.state.done { background:var(--Primary-500); color:var(--Neutral-0); }
 .reply_head .date { font-size:var(--Font-small); color:var(--Neutral-600); letter-spacing:-0.14px; }
 .reply_item .editor_content { font-size:var(--Font-base); line-height:1.5; }
 
-/* 게시판 페이징 : 페이지 번호 최대 5개 (버튼 9개 × 36px = 324px, 화면 폭 안에 맞춤) */
-.paging { display:flex; justify-content:center; align-items:center; margin-top:32px; }
-.paging a { display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:var(--Border-radius); font-size:var(--Font-base); color:var(--Neutral-600); }
-/* 처음/이전/다음/마지막 : 다음·마지막은 이전·처음 아이콘을 뒤집어 사용 */
-.paging :is(.first, .prev, .next, .last) { background:url(../images/common/ico_page_prev.svg) no-repeat center / 20px; }
-.paging :is(.first, .last) { background-image:url(../images/common/ico_page_first.svg); }
-.paging :is(.next, .last) { transform:scaleX(-1); }
-.paging a.active { background:var(--Primary-100); font-weight:600; color:var(--Primary-500); }
+/* 게시판 더보기 버튼 (페이징 대신 사용) */
+.board_wrap > .btn_more { margin-top:32px; }
 
 /* ==============================
    서식자료실 (support_center/form_library)
@@ -387,13 +381,13 @@
 .form_list button { display:flex; flex-direction:column; gap:4px; width:100%; padding:20px 48px 20px 20px; background:var(--Neutral-0) url(../images/common/ico_arrow_right.svg) no-repeat right 20px center / 20px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); font-size:var(--Font-small); font-weight:400; color:var(--Neutral-600); text-align:left; line-height:1.5; letter-spacing:-0.14px; }
 .form_list strong { font-size:var(--Font-medium); font-weight:600; color:var(--Neutral-900); letter-spacing:0; }
 
-/* 서식 다운로드 팝업 */
-.download_layer { width:280px; padding:16px; border-radius:var(--Border-2radius); }
-.download_layer h2 { padding-bottom:16px; font-weight:600; text-align:center; }
-.download_layer ul { display:flex; flex-direction:column; gap:8px; margin:16px 0; }
-.download_layer ul a { display:block; padding:12px 40px 12px 20px; background:url(../images/common/ico_download.svg) no-repeat right 12px center / 20px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
-/* 파일명 2줄 말줄임 */
-.download_layer ul span { display:-webkit-box; word-break:break-all; -webkit-line-clamp:2; line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+/* 서식 다운로드 팝업 : 제목 → 파일 테이블(다운로드 체크 / 파일명) → 취소·다운로드 */
+.download_layer { padding:24px 16px 20px; border-radius:var(--Border-2radius); }
+.download_layer h2 { padding-bottom:16px; }
+.download_layer table { width:100%; margin:0px 0 20px; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.download_layer th { height:40px; font-weight:600; border-bottom:1px solid var(--Neutral-300); }
+.download_layer td { padding:8px 12px; border-bottom:1px solid var(--Neutral-300); overflow-wrap:anywhere; color:var(--Neutral-800); }
+.download_layer td:first-child,.download_layer th:first-child { border-right:1px solid var(--Neutral-300); text-align:center; }
 
 /* ==============================
    FAQ (support_center/faq)
@@ -403,7 +397,8 @@
 .faq_top h3 { padding:0 8px 16px; font-size:var(--Font-medium); font-weight:700; }
 .faq_top ol { border-top:1px solid var(--Neutral-500); counter-reset:faq; }
 .faq_top li:not(:last-child) { counter-increment:faq; border-bottom:1px solid var(--Neutral-300); }
-.faq_top button { display:flex; align-items:center; gap:8px; width:100%; padding:12px 40px 12px 12px; background:url(../images/common/ico_arrow_right.svg) no-repeat right 12px center / 20px; font-size:var(--Font-base); font-weight:500; text-align:left; }
+.faq_top button { display:flex; align-items:center; gap:8px; width:100%; padding:12px; font-weight:500; text-align:left; }
+.faq_top button span { margin-left:auto; font-size:12px; }
 .faq_top button:before { content:counter(faq); flex:none; width:20px; font-weight:400; color:var(--Neutral-800); text-align:center; }
 
 /* 분류 선택 */
@@ -437,7 +432,6 @@
 .event_list strong { margin:20px 20px 0; font-size:var(--Font-large); font-weight:600; }
 .event_list .desc { margin:8px 20px 0; line-height:1.5; }
 .event_list .date { margin:16px 20px 20px; font-size:var(--Font-small); color:var(--Neutral-600); line-height:1.5; letter-spacing:-0.14px; }
-.event_wrap > .btn_more { margin-top:32px; }
 
 /* ==============================
    김영평생교육원 TV (event/tv)
@@ -464,3 +458,41 @@
 .video_layer .btn_x img { width:36px; }
 .video_layer .video_frame { aspect-ratio:16 / 9; background:#000; }
 .video_layer iframe { display:block; width:100%; height:100%; border:0; }
+
+/* ==============================
+   장학생 후기 (event/scholarship_student, scholarship_student_view)
+   ============================== */
+.scholarship_top img { width:100%; border-radius:var(--Border-2radius); }
+
+/* 후기 카드 : 화면 끝까지 가로 스크롤 */
+.review_card { display:flex; gap:8px; margin:24px calc(var(--Gutter) * -1) 0; padding:0 var(--Gutter); overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 var(--Gutter); scrollbar-width:none; }
+.review_card::-webkit-scrollbar { display:none; }
+.review_card li { flex:none; width:250px; scroll-snap-align:start; }
+.review_card a { display:flex; flex-direction:column; height:100%; padding:0 20px 20px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); overflow:hidden; }
+.review_card .photo,
+.review_profile .photo { display:flex; justify-content:center; align-items:flex-end; height:172px; background:var(--Neutral-100); }
+.review_card .photo { margin:0 -20px 20px; }
+.review_card .term { font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; }
+.review_card strong { margin-top:4px; font-size:var(--Font-large); font-weight:600; }
+.review_card em { color:var(--Primary-500); }
+.review_card p { display:-webkit-box; flex:1; margin-top:8px; -webkit-line-clamp:3; line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; }
+.review_card .more { margin-top:20px; text-align:right; font-size:var(--Font-small); color:var(--Neutral-600); }
+
+/* 목록 : 제목 줄바꿈 */
+.review_board { margin-top:56px; }
+.review_board .tit { font-size:var(--Font-small); font-weight:500; letter-spacing:-0.14px; display:flex; align-items:flex-start; }
+.review_board .tit span { white-space:normal; }
+.review_board .date { padding-top:16px; }
+.review_board + .btn_more { margin-top:40px; }
+
+/* 상세 : 장학생 정보 → (24) 질문/답변 */
+.review_view { padding:0 0 56px; }
+.review_profile { padding:16px 20px; background:var(--Neutral-100); border-radius:var(--Border-2radius); }
+.review_profile .photo { align-items:flex-start; height:160px; background:var(--Neutral-0); border-radius:var(--Border-2radius); overflow:hidden; }
+.review_profile .term { margin-top:16px; font-size:var(--Font-medium); font-weight:600; color:var(--Primary-500); }
+.review_profile strong { display:block; margin-top:4px; font-size:var(--Font-xlarge); font-weight:600; }
+.review_profile p:last-child { margin-top:8px; color:var(--Neutral-800); }
+.review_view .editor_content { padding:0 8px; }
+.review_view dl { margin-top:24px; }
+.review_view dt { font-size:var(--Font-medium); font-weight:600; }
+.review_view dd { margin-top:8px; }

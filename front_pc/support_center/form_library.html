@@ -360,38 +360,42 @@
                         <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
                     </header>
 
-                    <!-- layer 내용 -->
+                    <!-- layer 내용 : 선택한 서식의 파일 목록 (개발에서 채움), 체크한 파일만 다운로드 -->
                     <div class="layer_content">
-
-                        <!-- 첨부한 파일 영역 -->
-                        <div class="attachment"> 
-                            <div class="download_area">
-                                <!-- p class="no_attachment">첨부된 파일이 없습니다.</p -->
-
-                                <div class="download">
-                                    <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
-                                    <div>
-                                        <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
-                                    </div>
-                                </div>
-
-                                <div class="download">
-                                    <p>지역사회복지론 과제 모범답안.pdf <span>0.12MB</span></p>
-                                    <div>
-                                        <button type="button">다운로드 <span class="material-symbols-rounded">download</span></button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- //첨부한 파일 영역 -->
-
+                        <table class="data_table">
+                            <caption>서식 파일 목록</caption>
+                            <colgroup>
+                                <col style="width:100px;">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox"></th>
+                                    <th scope="col">파일명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="file" checked title="김영평생교육원_정규평가연장신청사유서(참고용샘플).pdf 선택"></td>
+                                    <td class="align_left">김영평생교육원_정규평가연장신청사유서(참고용샘플).pdf</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="file" checked title="김영평생교육원_정규평가연장신청사유서(인쇄 후 자필작성).pdf 선택"></td>
+                                    <td class="align_left">김영평생교육원_정규평가연장신청사유서(인쇄 후 자필작성).pdf</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <!-- //layer 내용 -->
+
+                    <div class="layer_btnSection">
+                        <button type="button" class="btn btn_layerClose">취소</button>
+                        <button type="button" class="btn primary">다운로드</button>
+                    </div>
                 </div>
                 
             </div>
-            <!-- //레이어 / 자주 찾는 질문 -->
+            <!-- //레이어 / 서식다운로드 -->
 
 
         </section>
