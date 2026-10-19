@@ -156,20 +156,20 @@
         <!-- 서식 다운로드 팝업 : 선택한 서식의 파일 목록 (개발에서 채움), 체크한 파일만 다운로드 -->
         <div class="layer_popup download_layer" role="dialog" aria-modal="true" aria-labelledby="downloadTitle" hidden>
             <h2 id="downloadTitle">서식 다운로드</h2>
-            <table>
+            <table class="data_table">
                 <caption class="blind">서식 파일 목록</caption>
                 <colgroup><col style="width:80px;"><col></colgroup>
                 <thead>
-                    <tr><th scope="col"><input type="checkbox"></th><th scope="col">파일명</th></tr>
+                    <tr><th scope="col"><input type="checkbox" checked title="전체 선택"></th><th scope="col">파일명</th></tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><input type="checkbox" name="file" checked title="김영평생교육원_정규평가연장신청사유서(참고용샘플).pdf 선택"></td>
-                        <td>김영평생교육원_정규평가연장신청사유서(참고용샘플).pdf</td>
+                        <td class="align_left">김영평생교육원_정규평가연장신청사유서(참고용샘플).pdf</td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" name="file" checked title="김영평생교육원_정규평가연장신청사유서(인쇄 후 자필작성).pdf 선택"></td>
-                        <td>김영평생교육원_정규평가연장신청사유서(인쇄 후 자필작성).pdf</td>
+                        <td class="align_left">김영평생교육원_정규평가연장신청사유서(인쇄 후 자필작성).pdf</td>
                     </tr>
                 </tbody>
             </table>

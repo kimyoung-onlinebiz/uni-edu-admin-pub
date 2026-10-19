@@ -384,10 +384,7 @@
 /* 서식 다운로드 팝업 : 제목 → 파일 테이블(다운로드 체크 / 파일명) → 취소·다운로드 */
 .download_layer { padding:24px 16px 20px; border-radius:var(--Border-2radius); }
 .download_layer h2 { padding-bottom:16px; }
-.download_layer table { width:100%; margin:0px 0 20px; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
-.download_layer th { height:40px; font-weight:600; border-bottom:1px solid var(--Neutral-300); }
-.download_layer td { padding:8px 12px; border-bottom:1px solid var(--Neutral-300); overflow-wrap:anywhere; color:var(--Neutral-800); }
-.download_layer td:first-child,.download_layer th:first-child { border-right:1px solid var(--Neutral-300); text-align:center; }
+.download_layer table { margin-bottom:20px; }
 
 /* ==============================
    FAQ (support_center/faq)
@@ -396,7 +393,8 @@
 .faq_top { padding:24px var(--Gutter) 0; background:var(--Neutral-100); }
 .faq_top h3 { padding:0 8px 16px; font-size:var(--Font-medium); font-weight:700; }
 .faq_top ol { border-top:1px solid var(--Neutral-500); counter-reset:faq; }
-.faq_top li:not(:last-child) { counter-increment:faq; border-bottom:1px solid var(--Neutral-300); }
+.faq_top li { counter-increment:faq; }
+.faq_top li:not(:last-child) { border-bottom:1px solid var(--Neutral-300); }
 .faq_top button { display:flex; align-items:center; gap:8px; width:100%; padding:12px; font-weight:500; text-align:left; }
 .faq_top button span { margin-left:auto; font-size:12px; }
 .faq_top button:before { content:counter(faq); flex:none; width:20px; font-weight:400; color:var(--Neutral-800); text-align:center; }
@@ -439,7 +437,7 @@
 /* 라인 탭 (3등분) */
 .line_tab { display:flex; }
 .line_tab button { flex:1; height:60px; padding:0 8px; border-bottom:2px solid var(--Neutral-300); font-size:var(--Font-medium); font-weight:700; color:var(--Placeholder); line-height:normal; }
-.line_tab button.on { border-bottom:4px solid var(--Primary-500); color:var(--Primary-500); }
+.line_tab button.on { border-bottom-color:var(--Primary-500); box-shadow:inset 0 -2px 0 var(--Primary-500); color:var(--Primary-500); } /* 선 두께는 그대로 두고 그림자로 4px 표현 : 글자 위치 고정 */
 
 /* 영상 카드 */
 .tv_panel { padding:24px var(--Gutter) 40px; }
@@ -464,10 +462,15 @@
    ============================== */
 .scholarship_top img { width:100%; border-radius:var(--Border-2radius); }
 
-/* 후기 카드 : 화면 끝까지 가로 스크롤 */
-.review_card { display:flex; gap:8px; margin:24px calc(var(--Gutter) * -1) 0; padding:0 var(--Gutter); overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 var(--Gutter); scrollbar-width:none; }
-.review_card::-webkit-scrollbar { display:none; }
-.review_card li { flex:none; width:250px; scroll-snap-align:start; }
+/* 가로 스크롤 카드 공통 (장학생 후기, 나의 학사일정) : 화면 끝까지 스크롤, 카드 단위로 멈춤 */
+.review_card,
+.calendar_schedule { display:flex; margin:0 calc(var(--Gutter) * -1); padding:0 var(--Gutter); overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 var(--Gutter); scrollbar-width:none; }
+.review_card::-webkit-scrollbar,
+.calendar_schedule::-webkit-scrollbar { display:none; }
+.review_card li,
+.calendar_schedule li { flex:none; scroll-snap-align:start; }
+.review_card { gap:8px; margin-top:24px; }
+.review_card li { width:250px; }
 .review_card a { display:flex; flex-direction:column; height:100%; padding:0 20px 20px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); overflow:hidden; }
 .review_card .photo,
 .review_profile .photo { display:flex; justify-content:center; align-items:flex-end; height:172px; background:var(--Neutral-100); }
@@ -496,3 +499,80 @@
 .review_view dl { margin-top:24px; }
 .review_view dt { font-size:var(--Font-medium); font-weight:600; }
 .review_view dd { margin-top:8px; }
+
+/* ==============================
+   나의 학사일정 (classroom/academic_calendar)
+   ============================== */
+.calendar_wrap { padding:0 var(--Gutter) 40px; }
+/* 일정 종류별 색 : 라벨 배경·글자, 달력 점 */
+.calendar_wrap .exam { --type:var(--Error); --type-soft:var(--Error-soft); }
+.calendar_wrap .study { --type:var(--Info); --type-soft:var(--Info-soft); }
+.calendar_wrap .assignment { --type:var(--Success); --type-soft:var(--Success-soft); }
+.calendar_wrap .label { display:inline-flex; align-items:center; height:28px; padding:0 12px; background:var(--type-soft); border-radius:100px; font-size:var(--Font-xsmall); font-weight:600; color:var(--type); }
+
+/* 선택한 날짜 + 일정 카드 */
+.calendar_head { display:flex; flex-wrap:wrap; align-items:center; gap:4px 16px; padding:24px 0 16px; }
+.calendar_head h3,
+.calendar_title { font-size:var(--Font-medium); font-weight:700; }
+.calendar_head p { font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
+.calendar_head em { font-weight:600; color:var(--Primary-500); }
+.calendar_schedule { gap:14px; }
+.calendar_schedule li { width:260px; }
+.calendar_schedule li,
+.calendar_week_list li { display:flex; flex-direction:column; align-items:flex-start; gap:12px; padding:16px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
+.calendar_wrap dl { display:grid; grid-template-columns:auto 1fr; gap:8px 18px; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.calendar_wrap dt { font-weight:600; }
+.calendar_wrap dd span { white-space:nowrap; } /* 기간 : 날짜·시간은 끊지 않고 ~ 뒤에서 줄바꿈 */
+
+/* 달력 : 7칸 그리드 (요일 + 날짜) */
+.calendar { display:grid; grid-template-columns:repeat(7, 1fr); margin-top:24px; border-bottom:1px solid var(--Neutral-300); }
+.calendar_week { display:contents; }
+.calendar_week span { padding:6px 0; background:var(--Neutral-100); border-top:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); font-weight:600; text-align:center; opacity:.6; }
+.calendar button { position:relative; height:60px; padding-top:2px; background:var(--Neutral-0); border-top:1px solid var(--Neutral-300); border-right:1px solid var(--Neutral-300); font-size:10px; line-height:14px; color:var(--Neutral-900); text-align:center; vertical-align:top; }
+/* 일·토 : 요일은 첫째·마지막 칸, 날짜는 7칸 중 첫째·일곱째 버튼 */
+.calendar_week span:first-child,
+.calendar button:nth-of-type(7n+1) { color:var(--Error); }
+.calendar_week span:last-child,
+.calendar button:nth-of-type(7n) { color:var(--Info); }
+.calendar button:nth-of-type(7n) { border-right:0; }
+.calendar .other_month { opacity:.4; }
+.calendar .selected { box-shadow:inset 0 0 0 1px var(--Primary-500); }
+.day_num { display:inline-block; min-width:14px; border-radius:7px; }
+.today .day_num { background:var(--Primary-500); color:var(--Neutral-0); }
+.calendar .dots { position:absolute; left:0; right:0; top:40px; display:flex; justify-content:center; align-items:center; gap:2px; height:16px; }
+.dots i { width:8px; height:8px; background:var(--type); border-radius:50%; }
+.dots em { font-size:9px; font-weight:500; font-style:normal; color:var(--Neutral-900); }
+
+/* 이번 주 주요 일정 */
+.calendar_title { margin-top:24px; padding:24px 0 16px; }
+.calendar_week_list { display:flex; flex-direction:column; gap:16px; }
+.calendar_week_list .date { display:flex; align-items:center; justify-content:space-between; align-self:stretch; font-size:var(--Font-small); font-weight:600; }
+
+/* ==============================
+   학사일정 (support_center/school_schedule)
+   ============================== */
+.schedule_wrap { padding-bottom:40px; }
+.schedule_filter,
+.schedule_panel { margin:0 var(--Gutter); }
+
+/* 검색 조건 : 과정 유형 → (24) 체크박스 → (16) 목록 */
+.schedule_filter { display:flex; flex-direction:column; align-items:flex-start; padding-top:24px; }
+.schedule_filter > label:first-child { padding:0 8px; font-size:var(--Font-base); font-weight:500; color:var(--Neutral-800); }
+.schedule_filter select { width:100%; height:40px; margin:8px 0 24px; font-size:var(--Font-base); }
+.schedule_filter .form_check { font-size:var(--Font-base); }
+
+/* 기수 카드 : 기수명 + 상태 (+ 수강신청) → 일정표 */
+.schedule_list { display:flex; flex-direction:column; gap:24px; margin-top:16px; }
+.schedule_group { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:16px 24px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius) var(--Border-2radius) 0 0; }
+.schedule_group strong { font-size:var(--Font-medium); font-weight:700; line-height:40px; }
+.schedule_group .btn_primary { flex-basis:100%; }
+.state.end { border-color:var(--Neutral-300); color:var(--Placeholder); }
+
+/* 일정표 : 항목(120px) + 기간 */
+.schedule_detail { display:grid; grid-template-columns:120px 1fr; border:1px solid var(--Neutral-500); border-top:0; border-radius:0 0 var(--Border-2radius) var(--Border-2radius); overflow:hidden; font-size:var(--Font-small); line-height:1.5; }
+.schedule_detail dt,
+.schedule_detail dd { padding:12px 0; }
+.schedule_detail dt { font-weight:600; text-align:center; }
+.schedule_detail dd { padding-right:8px; letter-spacing:-0.14px; }
+.schedule_detail .tit { padding-block:16px; background:var(--Primary-100); font-weight:600; }
+.schedule_detail dt.tit { font-weight:700; }

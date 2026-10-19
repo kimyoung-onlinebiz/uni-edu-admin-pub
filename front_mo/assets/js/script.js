@@ -177,6 +177,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 나의 학사일정 달력 : 날짜 클릭 시 선택(.selected) 이동 (일정 데이터 갱신은 개발에서 처리)
+    document.querySelectorAll('.calendar').forEach((calendar) => {
+        const days = calendar.querySelectorAll('button');
+
+        days.forEach((day) => {
+            day.addEventListener('click', () => {
+                days.forEach((item) => {
+                    item.classList.toggle('selected', item === day);
+                    item.setAttribute('aria-pressed', item === day);
+                });
+            });
+        });
+    });
+
     // ============================================================
     // 아코디언 공통 (쪽지함, FAQ)
     // - 구조 : ul.accordion > li > button(제목) + div(내용)

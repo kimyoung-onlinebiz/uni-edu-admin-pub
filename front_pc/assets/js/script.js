@@ -285,6 +285,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 나의 학사일정 달력
+    // - 날짜(.calendar_day) 클릭 시 같은 달력 안에서 선택(.selected) 이동 (탭마다 달력이 따로 있음)
+    // - 일정 데이터 갱신은 개발에서 처리
+    function initCalendarSelect() {
+        qa('.calendar').forEach((calendar) => {
+            const days = qa('.calendar_day', calendar);
+
+            days.forEach((day) => {
+                onClick(day, () => {
+                    days.forEach((item) => {
+                        item.classList.toggle('selected', item === day);
+                        item.setAttribute('aria-pressed', item === day);
+                    });
+                });
+            });
+        });
+    }
+
     // 김영평생교육원 TV 유튜브 영상
     // - 카드(.btn_tvPlay) 클릭 시 data-youtube(영상 ID)로 iframe 생성 (레이어 열기는 레이어 등록에서 처리)
     // - 레이어가 닫히면(닫기 버튼, 배경 클릭, Esc 모두) iframe 을 제거해 재생을 멈춘다.
@@ -823,6 +841,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [
         () => initLayerBindings(registerLayers),
         initTvVideo,
+        initCalendarSelect,
         initJoinAgreement,
         initCustomSelect,
         initNoticeTabs,

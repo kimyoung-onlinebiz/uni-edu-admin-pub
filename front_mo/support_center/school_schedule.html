@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no, address=no, email=no">
     <meta name="theme-color" content="#ffffff">
-    <title>학습 자료실 | 김영평생교육원</title>
+    <title>학사일정 | 김영평생교육원</title>
     <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
     <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
     <link rel="preload" href="../assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -127,80 +127,177 @@
         <!-- 페이지 타이틀 -->
         <div class="page_title">
             <a href="javascript:history.back();" class="btn_back" aria-label="뒤로가기"><img src="../assets/images/common/ico_back.svg" alt=""></a>
-            <h2>학습 자료실</h2>
+            <h2>학사일정</h2>
         </div>
         <!-- //페이지 타이틀 -->
 
-        <section class="board_wrap">
-            <!-- 검색 : 기수/과정, 분류, 검색조건 + 검색어 -->
-            <form class="board_search" action="#none">
-                <select title="기수 선택">
-                    <option value="">기수 선택</option>
-                    <option value="2026-1-2">2026년도 1학기 2기</option>
-                    <option value="2025-2-1">2025년도 2학기 1기</option>
-                </select>
-                <select title="과정 선택">
-                    <option value="">과정 선택</option>
-                    <option value="지역사회복지론">지역사회복지론</option>
-                    <option value="사회복지행정론">사회복지행정론</option>
-                </select>
-                <select class="full" title="분류 선택">
-                    <option value="">분류 선택</option>
-                    <option value="강의안">강의안</option>
-                    <option value="보충자료">보충자료</option>
-                </select>
-                <select class="search_type" title="검색 조건">
-                    <option value="title">제목</option>
-                    <option value="content">내용</option>
-                    <option value="all">제목+내용</option>
-                </select>
-                <input type="search" placeholder="검색어를 입력해 주세요." title="검색어">
-            </form>
-            <!-- //검색 -->
-
-            <div class="board_info">
-                <p>총 <strong>16</strong>건</p>
+        <section class="schedule_wrap">
+            <!-- 탭 : 버튼 data-panel 과 같은 패널만 노출 (공통 탭 스크립트) -->
+            <div class="line_tab" role="tablist">
+                <button type="button" role="tab" class="on" aria-selected="true" data-panel="all_schedule">2026년<br>전체</button>
+                <button type="button" role="tab" aria-selected="false" data-panel="first_semester">2026년<br>1학기</button>
+                <button type="button" role="tab" aria-selected="false" data-panel="second_semester">2026년<br>2학기</button>
             </div>
 
-            <!-- 목록 : 중요 자료는 li에 important 클래스, 첨부파일 .ico_file / 새 글 .ico_new -->
-            <ul class="board_list">
-                <li class="important">
-                    <a href="learning_dataRoom_view.html">
-                        <p class="meta"><em>중요</em> | 2026년 1학기 2기 | 지역사회복지론</p>
-                        <p class="meta">강의안</p>
-                        <p class="tit"><span>사회복지현장실습 과정 수강 시 유의사항 안내</span><i class="ico_file">첨부파일</i></p>
-                        <p class="date">2026-01-07</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="learning_dataRoom_view.html">
-                        <p class="meta">2026년 1학기 2기 | 지역사회복지론</p>
-                        <p class="meta">강의안</p>
-                        <p class="tit"><span>2026년 1학기 학습 진행 안내</span><i class="ico_file">첨부파일</i><i class="ico_new">N</i></p>
-                        <p class="date">2026-01-07</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="learning_dataRoom_view.html">
-                        <p class="meta">2026년 1학기 2기 | 지역사회복지론</p>
-                        <p class="meta">보충자료</p>
-                        <p class="tit"><span>사회복지현장실습 과정 수강 시 유의사항 안내</span><i class="ico_file">첨부파일</i></p>
-                        <p class="date">2026-01-07</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="learning_dataRoom_view.html">
-                        <p class="meta">2026년 1학기 2기 | 지역사회복지론</p>
-                        <p class="meta">보충자료</p>
-                        <p class="tit"><span>사회복지현장실습 과정 수강 시 유의사항 안내</span><i class="ico_file">첨부파일</i></p>
-                        <p class="date">2026-01-07</p>
-                    </a>
-                </li>
-            </ul>
-            <!-- //목록 -->
+            <!-- 검색 조건 -->
+            <div class="schedule_filter">
+                <label for="courseType">과정 유형</label>
+                <select id="courseType" class="is-selected">
+                    <option value="학점은행제 이론">학점은행제 이론</option>
+                    <option value="사회복지현장실습">사회복지현장실습</option>
+                    <option value="외국어로서의한국어교육실습">외국어로서의한국어교육실습</option>
+                </select>
+                <label class="form_check"><input type="checkbox" name="openOnly">수강 신청 가능한 기수만 보기</label>
+            </div>
 
-            <!-- 더보기 : (현재 노출 개수 / 전체 개수) -->
-            <button type="button" class="btn_primary outline btn_more">더보기(5/26)</button>
+            <!-- 기수별 학사일정
+                 [기수] 모집 중 : span.state + 수강신청 버튼 / 모집 종료 : span.state.end (버튼 없음)
+                 [일정표] dt(항목) + dd(기간) 2열, 구분 제목 행(학습 기간, 성적 확인)은 dt·dd 에 .tit -->
+            <div class="schedule_panel" role="tabpanel" data-panel="all_schedule">
+                <ul class="schedule_list">
+                    <li>
+                        <div class="schedule_group">
+                            <strong>2026년 1학기 1기</strong><span class="state end">수강신청 종료</span>
+                        </div>
+                        <dl class="schedule_detail">
+                            <dt class="tit">학습 기간</dt><dd class="tit">2026-01-02 ~ 2026-06-28</dd>
+                            <dt>중간고사</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>기말고사</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>토론</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>과제</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>퀴즈</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt class="tit">성적 확인</dt><dd class="tit">2026-03-02 ~ 2026-06-28</dd>
+                            <dt>이의신청 1차</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>이의신청 2차</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학점인정신청</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학위 취득</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="schedule_group">
+                            <strong>2026년 1학기 2기</strong><span class="state">모집중</span>
+                            <a href="#none" class="btn_primary">수강신청</a>
+                        </div>
+                        <dl class="schedule_detail">
+                            <dt class="tit">학습 기간</dt><dd class="tit">2026-01-02 ~ 2026-06-28</dd>
+                            <dt>중간고사</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>기말고사</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>토론</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>과제</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>퀴즈</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt class="tit">성적 확인</dt><dd class="tit">2026-03-02 ~ 2026-06-28</dd>
+                            <dt>이의신청 1차</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>이의신청 2차</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학점인정신청</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학위 취득</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="schedule_group">
+                            <strong>2026년 1학기 3기</strong><span class="state">모집중</span>
+                            <a href="#none" class="btn_primary">수강신청</a>
+                        </div>
+                        <dl class="schedule_detail">
+                            <dt class="tit">학습 기간</dt><dd class="tit">2026-01-02 ~ 2026-06-28</dd>
+                            <dt>중간고사</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>기말고사</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>토론</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>과제</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>퀴즈</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt class="tit">성적 확인</dt><dd class="tit">2026-03-02 ~ 2026-06-28</dd>
+                            <dt>이의신청 1차</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>이의신청 2차</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학점인정신청</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학위 취득</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="schedule_panel" role="tabpanel" data-panel="first_semester" hidden>
+                <ul class="schedule_list">
+                    <li>
+                        <div class="schedule_group">
+                            <strong>2026년 1학기 1기</strong><span class="state end">수강신청 종료</span>
+                        </div>
+                        <dl class="schedule_detail">
+                            <dt class="tit">학습 기간</dt><dd class="tit">2026-01-02 ~ 2026-06-28</dd>
+                            <dt>중간고사</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>기말고사</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>토론</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>과제</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>퀴즈</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt class="tit">성적 확인</dt><dd class="tit">2026-03-02 ~ 2026-06-28</dd>
+                            <dt>이의신청 1차</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>이의신청 2차</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학점인정신청</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학위 취득</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="schedule_group">
+                            <strong>2026년 1학기 2기</strong><span class="state">모집중</span>
+                            <a href="#none" class="btn_primary">수강신청</a>
+                        </div>
+                        <dl class="schedule_detail">
+                            <dt class="tit">학습 기간</dt><dd class="tit">2026-01-02 ~ 2026-06-28</dd>
+                            <dt>중간고사</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>기말고사</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>토론</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>과제</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>퀴즈</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt class="tit">성적 확인</dt><dd class="tit">2026-03-02 ~ 2026-06-28</dd>
+                            <dt>이의신청 1차</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>이의신청 2차</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학점인정신청</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학위 취득</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="schedule_panel" role="tabpanel" data-panel="second_semester" hidden>
+                <ul class="schedule_list">
+                    <li>
+                        <div class="schedule_group">
+                            <strong>2026년 2학기 1기</strong><span class="state">모집중</span>
+                            <a href="#none" class="btn_primary">수강신청</a>
+                        </div>
+                        <dl class="schedule_detail">
+                            <dt class="tit">학습 기간</dt><dd class="tit">2026-01-02 ~ 2026-06-28</dd>
+                            <dt>중간고사</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>기말고사</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>토론</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>과제</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>퀴즈</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt class="tit">성적 확인</dt><dd class="tit">2026-03-02 ~ 2026-06-28</dd>
+                            <dt>이의신청 1차</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>이의신청 2차</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학점인정신청</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학위 취득</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="schedule_group">
+                            <strong>2026년 2학기 2기</strong><span class="state">모집중</span>
+                            <a href="#none" class="btn_primary">수강신청</a>
+                        </div>
+                        <dl class="schedule_detail">
+                            <dt class="tit">학습 기간</dt><dd class="tit">2026-01-02 ~ 2026-06-28</dd>
+                            <dt>중간고사</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>기말고사</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>토론</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>과제</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>퀴즈</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt class="tit">성적 확인</dt><dd class="tit">2026-03-02 ~ 2026-06-28</dd>
+                            <dt>이의신청 1차</dt><dd>2026-02-01 ~ 2026-02-04</dd>
+                            <dt>이의신청 2차</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학점인정신청</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                            <dt>학위 취득</dt><dd>2026-06-21 ~ 2026-06-28</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
         </section>
 
     </main>
