@@ -136,25 +136,20 @@
             <li><a href="unlock_email.html" class="on" aria-current="page">이메일 인증</a></li>
         </ul>
 
-        <!-- 오류 시 .error_message hidden 해제 -->
-        <form class="login_form" action="#none">
+        <!-- 1단계 : 아이디 입력 → 다음
+             - 아이디 미입력 : 다음 버튼 비활성 / 입력 : 활성
+             - 아이디 오기재 : input 에 error 클래스 + .error_message hidden 해제
+             - 정상 : 이메일 확인 화면(unlock_email_02)으로 이동 -->
+        <form class="login_form" action="unlock_email_02.html">
             <div class="input_area">
-                <label for="user_email" class="field_label">이메일 주소</label>
-                <input type="email" id="user_email" value="yoo@gmail.com" placeholder="이메일 주소를 입력해 주세요." autocomplete="email">
-            </div>
-            <!-- 재발송 대기(60초) 중 비활성 : 입력과 무관하게 유지 -->
-            <button type="button" class="btn_primary js-static" disabled>인증번호 재발송</button>
-            <p class="error_message">인증번호는 60초 후 재발송할 수 있습니다.</p>
-            <hr>
-            <div class="input_area">
-                <div class="field_label">
-                    <label for="auth_code">인증번호</label>
-                    <span class="timer" role="timer">2:49</span>
+                <label for="user_id" class="field_label">아이디</label>
+                <div class="input_clear">
+                    <input type="text" id="user_id" placeholder="아이디를 입력해 주세요." autocomplete="username">
+                    <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
                 </div>
-                <input type="text" id="auth_code" placeholder="인증번호를 입력해 주세요." inputmode="numeric" autocomplete="one-time-code">
-                <p class="error_message">인증번호가 일치하지 않습니다. 확인 후 다시 입력해 주세요.</p>
+                <p class="error_message" hidden>등록된 회원정보가 없습니다. 아이디가 없는 경우, 회원가입을 진행하시거나 탈퇴 회원인 경우 재가입 또는 고객센터로 문의해 주세요.</p>
             </div>
-            <button type="submit" class="btn_primary" disabled>인증하기</button>
+            <button type="submit" class="btn_primary" disabled>다음</button>
             <ul class="login_link">
                 <li><a href="login.html">로그인</a></li>
                 <li><a href="step_01.html">회원가입</a></li>

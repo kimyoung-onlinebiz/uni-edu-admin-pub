@@ -200,7 +200,10 @@
                 <label for="user_email" class="field_label essential">이메일</label>
                 <!-- 도메인 선택 -->
                 <div class="multiple email">
-                    <input type="text" id="user_email" placeholder="**********" title="이메일 아이디">
+                    <div class="input_clear">
+                        <input type="text" id="user_email" placeholder="**********" title="이메일 아이디">
+                        <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                    </div>
                     <span>@</span>
                     <select id="user_email_domain" title="이메일 도메인">
                         <option value="">도메인 선택</option>
@@ -212,7 +215,10 @@
                 <div class="multiple email">
                     <input type="text" placeholder="**********" title="이메일 아이디">
                     <span>@</span>
-                    <input type="text" id="user_email_custom" placeholder="직접 입력" title="이메일 도메인 직접 입력">
+                    <div class="input_clear">
+                        <input type="text" id="user_email_custom" placeholder="직접 입력" title="이메일 도메인 직접 입력">
+                        <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                    </div>
                 </div>
             </div>
 

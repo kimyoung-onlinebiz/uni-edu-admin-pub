@@ -407,6 +407,11 @@
                 </div>
                 <!-- //성적 관련 일정 안내 -->
 
+                <!-- 성적 가림(.evaluation_dim) 상태 : 마지막 칸(등급) td 안에 넣음, 성적 공개 시에는 evaluation_dim 없음
+                     - 평가 전   : <button type="button" class="btn_evaluation btn_courseFeedback"><span class="material-symbols-rounded icon_fill">lock</span><span>강의 평가 하기</span></button>
+                     - 평가 완료 : <p>강의평가 완료! 최종 성적 확인 기간에 성적이 공개됩니다.</p>
+                     - 미완료   : <p>강의평가 미완료로 성적 확인이 불가합니다.</p>
+                     - 기간 전   : <p>강의 평가 기간 전입니다.</p> -->
                 <header class="sub_header start"> 
                     <h4>이론</h4>
                     <div class="table_sort">
@@ -491,7 +496,7 @@
                                 <!-- 강의 평가하기 버튼 -->
                                 <div class="evaluation_dim">
 
-                                    <button type="button" class="btn_evaluation">
+                                    <button type="button" class="btn_evaluation btn_courseFeedback">
                                         <span class="material-symbols-rounded icon_fill">lock</span>
                                         <span>강의 평가 하기</span>
                                     </button>
@@ -517,7 +522,7 @@
                                 <!-- 강의 평가하기 버튼 -->
                                 <div class="evaluation_dim">
 
-                                    <!-- button type="button" class="btn_evaluation">
+                                    <!-- button type="button" class="btn_evaluation btn_courseFeedback">
                                         <span class="material-symbols-rounded icon_fill">lock</span>
                                         <span>강의 평가 하기</span>
                                     </button -->
@@ -578,7 +583,7 @@
                                 A
                                 <!-- 강의 평가하기 버튼 -->
                                 <div class="evaluation_dim">
-                                    <button type="button" class="btn_evaluation">
+                                    <button type="button" class="btn_evaluation btn_courseFeedback">
                                         <span class="material-symbols-rounded icon_fill">lock</span>
                                         <span>강의 평가 하기</span>
                                     </button>
@@ -644,7 +649,7 @@
                                 A
                                 <!-- 강의 평가하기 버튼 -->
                                 <div class="evaluation_dim">
-                                    <button type="button" class="btn_evaluation">
+                                    <button type="button" class="btn_evaluation btn_courseFeedback">
                                         <span class="material-symbols-rounded icon_fill">lock</span>
                                         <span>강의 평가 하기</span>
                                     </button>
@@ -695,7 +700,7 @@
                             </div>
 
                             <div class="scroll_design">
-                                <table class="list_table fixed"> <!-- fixe추가 시 사이즈 고정 -->
+                                <table class="list_table fixed"> <!-- fixed 추가 시 사이즈 고정 -->
                                     <caption>강의평가</caption>
                                     <colgroup> 
                                         <col style="width:80px;">

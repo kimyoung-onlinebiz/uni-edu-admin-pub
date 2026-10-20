@@ -134,7 +134,7 @@
         <!-- 로그인 방식 탭 -->
         <ul class="login_tab">
             <li><a href="login.html">일반 로그인</a></li>
-            <li><a href="login_sms.html">SMS인증</a></li>
+            <li><a href="login_sms.html">SMS 인증</a></li>
             <li><a href="login_certificate.html" class="on" aria-current="page">공동 인증서</a></li>
         </ul>
         <!-- //로그인 방식 탭 -->
@@ -148,11 +148,17 @@
         <form class="login_form" action="#none">
             <div class="input_area">
                 <label for="login_id" class="field_label">아이디</label>
-                <input type="text" id="login_id" placeholder="아이디를 입력해 주세요." autocomplete="username">
+                <div class="input_clear">
+                    <input type="text" id="login_id" placeholder="아이디를 입력해 주세요." autocomplete="username">
+                    <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                </div>
             </div>
             <div class="input_area">
                 <label for="login_pw" class="field_label">비밀번호</label>
-                <input type="password" id="login_pw" placeholder="비밀번호를 입력해 주세요." autocomplete="current-password">
+                <div class="input_clear">
+                    <input type="password" id="login_pw" placeholder="비밀번호를 입력해 주세요." autocomplete="current-password">
+                    <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                </div>
             </div>
             <label class="form_check save_id"><input type="checkbox">아이디 저장</label>
             <p class="error_message">아이디 또는 비밀번호가 일치하지 않습니다.</p>

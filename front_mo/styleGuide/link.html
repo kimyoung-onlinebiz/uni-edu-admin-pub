@@ -43,7 +43,7 @@
         <h2>로그인 및 회원가입</h2>
         <h3>로그인</h3>
         <ul class="link">
-            <li><a href="../member/login.html" target="_blank">일반 로그인</a></li>
+            <li><a href="../member/login.html" target="_blank">일반 로그인</a><span class="desc">비밀번호 5회 오류(잠금) 상태 : 오류 문구·잠금 해제 버튼 hidden 해제 (주석 참고)</span></li>
             <li><a href="../member/login_sms.html" target="_blank">SMS 인증</a><span class="desc">오류 상태 예시</span></li>
             <li><a href="../member/login_sms_02.html" target="_blank">SMS 인증_인증번호 발송 후</a></li>
             <li><a href="../member/login_certificate.html" target="_blank">공동 인증서</a></li>
@@ -65,7 +65,9 @@
             <li><a href="../member/pw_search_email_02.html" target="_blank">비밀번호 찾기_이메일 인증번호 발송 후</a></li>
             <li><a href="../member/password_reset.html" target="_blank">비밀번호 재설정</a><span class="desc">오류 상태 예시</span></li>
             <li><a href="../member/unlock.html" target="_blank">비밀번호 잠금 해제 (SMS 인증)</a><span class="desc">오류 상태 예시</span></li>
-            <li><a href="../member/unlock_email.html" target="_blank">비밀번호 잠금 해제 (이메일 인증)</a><span class="desc">오류 상태 예시</span></li>
+            <li><a href="../member/unlock_email.html" target="_blank">비밀번호 잠금 해제 (이메일 인증) 1단계</a><span class="desc">아이디 입력 → 다음, 오류 문구 hidden</span></li>
+            <li><a href="../member/unlock_email_02.html" target="_blank">비밀번호 잠금 해제 (이메일 인증) 2단계</a><span class="desc">이메일 확인 → 인증번호 발송 클릭 시 발송 안내 팝업 → 확인 시 3단계</span></li>
+            <li><a href="../member/unlock_email_03.html" target="_blank">비밀번호 잠금 해제 (이메일 인증) 3단계</a><span class="desc">발송 후 재발송 대기 + 인증번호 입력, 오류 상태 예시</span></li>
         </ul>
 
         <h2>나의 강의실</h2>
@@ -76,6 +78,8 @@
             <li><a href="../classroom/current_courses.html" target="_blank">수강중인 강좌 (이론)</a><span class="desc">유의사항 더보기 클릭 시 유의사항 팝업 · 차시 상태별 버튼(복습 / 학습 / 오픈 전)</span></li>
             <li><a href="../classroom/current_courses_practice.html" target="_blank">수강중인 강좌 (실습)</a><span class="desc">이론 페이지 기반 · 오프라인 수업 주차(배지, 출석 상태) · 출석 막대 노랑 = 출석 반영 대기</span></li>
             <li><a href="../classroom/course_plan.html" target="_blank">강의계획서</a><span class="desc">PC는 레이어, 모바일은 페이지 · 대표 테이블 재사용 · 강의 계획 주차 칸 rowspan</span></li>
+            <li><a href="../classroom/grade_management/grade_list.html" target="_blank">성적관리</a><span class="desc">성적 가림(.evaluation_dim) 상태 4가지 : 평가 전 버튼 / 평가 완료 / 미완료 / 기간 전</span></li>
+            <li><a href="../classroom/grade_management/course_feedback.html" target="_blank">강의평가</a><span class="desc">PC는 레이어, 모바일은 페이지 · 문항 라디오 · 별점(radio)</span></li>
             <li><a href="../classroom/learning_notice_list.html" target="_blank">학습공지사항 목록</a></li>
             <li><a href="../classroom/learning_notice_view.html" target="_blank">학습공지사항 상세</a><span class="desc">본문은 관리자 에디터 내용(editor_content)</span></li>
             <li><a href="../classroom/learning_qna_list.html" target="_blank">학습 Q&amp;A 목록</a></li>

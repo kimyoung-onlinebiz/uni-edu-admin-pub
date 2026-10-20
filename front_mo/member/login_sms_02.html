@@ -134,7 +134,7 @@
         <!-- 로그인 방식 탭 -->
         <ul class="login_tab">
             <li><a href="login.html">일반 로그인</a></li>
-            <li><a href="login_sms.html" class="on" aria-current="page">SMS인증</a></li>
+            <li><a href="login_sms.html" class="on" aria-current="page">SMS 인증</a></li>
             <li><a href="login_certificate.html">공동 인증서</a></li>
         </ul>
         <!-- //로그인 방식 탭 -->
@@ -162,7 +162,10 @@
                     <label for="sms_code">인증번호</label>
                     <span class="timer" role="timer">2:20</span>
                 </div>
-                <input type="text" id="sms_code" placeholder="인증번호를 입력해 주세요." inputmode="numeric" autocomplete="one-time-code">
+                <div class="input_clear">
+                    <input type="text" id="sms_code" placeholder="인증번호를 입력해 주세요." inputmode="numeric" autocomplete="one-time-code">
+                    <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                </div>
             </div>
             <button type="submit" class="btn_primary" disabled>로그인</button>
             <ul class="login_link">

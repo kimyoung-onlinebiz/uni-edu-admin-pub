@@ -361,7 +361,13 @@
             <li><a href="#none">PC버전</a></li>
         </ul>
         <p class="copyright">Copyright (c) 2026 김영평생교육원 All Rights Reserved</p>
-        <img src="assets/images/common/isms.png" alt="ISMS 정보보호 관리체계 인증" class="isms">
+        <!-- 인증 마크 : ISMS / 교육부 로고 페이드 전환(swiper), ISMS 클릭 시 인증서 팝업 -->
+        <div class="cert_mark swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><button type="button" class="btn_isms"><img src="assets/images/common/isms.png" alt="ISMS 정보보호 관리체계 인증 (인증서 보기)"></button></div>
+                <div class="swiper-slide"><img src="assets/images/common/moe_logo.png" alt="교육부 평가인정 학점은행제 원격교육기관"></div>
+            </div>
+        </div>
     </footer>
     <!-- //footer -->
 
@@ -437,6 +443,13 @@
         <button type="button" class="btn_close btn_full">닫기</button>
     </div>
     <!-- //개인정보 수집·이용 동의 팝업 -->
+
+    <!-- ISMS 인증서 팝업 : 푸터 ISMS 클릭 시 열림, 인증서 이미지를 누르면 닫힘 -->
+    <div class="layer_popup isms_layer" role="dialog" aria-modal="true" aria-label="정보보호 관리체계 인증서" hidden>
+        <button type="button" class="btn_x" aria-label="인증서 닫기"><img src="assets/images/common/ico_close_white.svg" alt=""></button>
+        <button type="button" class="btn_close"><img src="assets/images/common/pop_ismsDetail.png" alt="정보보호 관리체계 인증서 : 인증번호 ISMS-KISA-2025-177, 업체명 주식회사 아이비김영, 인증범위 온라인 교육 서비스 운영, 유효기간 2025.12.17 ~ 2028.12.16 (누르면 닫힘)"></button>
+    </div>
+    <!-- //ISMS 인증서 팝업 -->
 
 </body>
 </html>

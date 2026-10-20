@@ -165,7 +165,18 @@ em { text-decoration:none; font-style:normal; }
 .footer_link li + li:before { content:"|"; display:inline-block; width:24px; font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
 .footer_link a { font-size:var(--Font-small); color:var(--Neutral-600); }
 .footer .copyright { padding:12px 0 20px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); font-weight:300; color:var(--Neutral-600); }
-.footer .isms { width:calc(100% - 180px); margin:16px 0; }
+/* 인증 마크 : ISMS / 교육부 로고 페이드 전환 */
+.footer .cert_mark { width:calc(100% - 120px); margin:16px auto; }
+.cert_mark .swiper-slide { display:flex; align-items:center; justify-content:center; height:44px; background:var(--Neutral-0); }
+.cert_mark img { display:block; max-width:100%; max-height:35px; }
+.btn_isms { display:block; }
+.btn_isms img { max-height:44px; }
+/* ISMS 인증서 팝업 : 이미지만 노출, 이미지 누르면 닫힘 */
+.layer_popup.isms_layer { width:auto; background:transparent; border-radius:0; overflow:visible; }
+.layer_popup.isms_layer .btn_x { right:0; top:auto; bottom:calc(100% + 8px); } /* 이미지 오른쪽 위 바깥 */
+.isms_layer .btn_x img { width:36px; }
+.isms_layer .btn_close { display:block; }
+.isms_layer img { display:block; width:300px; max-width:calc(100vw - 40px); height:auto; }
 
 /* 8. top 버튼 */
 .btn_top { position:fixed; right:18px; bottom:calc(64px + var(--Safe-bottom)); z-index:89; display:flex; align-items:center; justify-content:center; width:42px; height:42px; background:var(--Neutral-0); border:1px solid #cdd1d5; border-radius:var(--Border-2radius); box-shadow:0 0 1px rgba(0,0,0,.05), 0 4px 4px rgba(0,0,0,.08); opacity:0; visibility:hidden; transition:opacity .2s; }

@@ -70,6 +70,9 @@
 .field_label { display:flex; align-items:center; min-height:32px; padding-left:8px; font-size:var(--Font-medium); font-weight:500; line-height:1.5; }
 .field_label label { font-size:inherit; }
 .field_label.essential { padding-left:0; }
+/* 라벨 + 오른쪽 작은 버튼 (회원정보 수정 > 새 비밀번호 변경 취소) */
+.field_head { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.field_head .btn_primary { width:auto; height:32px; padding:0 24px; font-size:var(--Font-small); }
 .field_label.essential:before { content:"*"; width:8px; font-size:var(--Font-2xsmall); color:var(--Error); }
 .info_message,
 .success_message,
@@ -91,6 +94,10 @@
 .multiple.email input:first-child { flex:none; width:150px; }
 .multiple.email span { flex:none; font-weight:500; }
 .multiple.email > :last-child { flex:1; min-width:0; }
+/* 이메일 칸 X 버튼 : 감싼 틀(input_clear)을 칸 크기로, 좁은 칸이라 X 여백 축소 */
+.multiple.email .input_clear:first-child { flex:none; width:150px; }
+.multiple.email .input_clear input[type] { width:100%; padding-right:40px; }
+.multiple.email .btn_clear { right:12px; }
 
 /* 라디오, 체크박스 묶음 */
 .form_check { display:inline-flex; align-items:center; gap:8px; height:32px; font-size:var(--Font-medium); color:var(--Neutral-600); letter-spacing:-0.16px; }
@@ -157,7 +164,7 @@
 
 /* 로그인 폼 : 항목 간격 16px, 아이디 저장은 입력칸과 8px */
 .login_form { display:flex; flex-direction:column; gap:16px; margin-top:24px; }
-.login_form .save_id { margin-top:-8px; }
+.login_form .save_id { align-self:flex-start; margin-top:-8px; } /* 체크박스 + 글자 영역만 클릭되게 (줄 전체 늘어남 방지) */
 .login_form .field_label .timer { margin-left:auto; padding-left:30px; background:url(../images/common/ico_timer.svg) no-repeat left center / 24px; font-weight:400; }
 .login_form hr { height:1px; margin:16px 0; background:var(--Neutral-300); border:0; }
 /* 버튼 위 간격 32px (폼 간격 16 + 16) : 구분선/찾기 방법 뒤는 해당 요소가 간격을 가지므로 제외 */
@@ -422,8 +429,7 @@
    이벤트 (event/event_list)
    ============================== */
 .event_wrap { padding-bottom:40px; }
-.board_sort { display:flex; justify-content:flex-end; margin-top:32px; }
-.board_sort select { height:32px; padding:0 36px 0 16px; font-size:var(--Font-small); font-weight:500; color:var(--Neutral-900); letter-spacing:-0.14px; background-position:right 12px center; }
+.board_info select { height:32px; padding:0 36px 0 16px; font-size:var(--Font-small); font-weight:500; color:var(--Neutral-900); letter-spacing:-0.14px; background-position:right 12px center; }
 .event_list { display:flex; flex-direction:column; gap:20px; margin-top:20px; }
 .event_list a { display:flex; flex-direction:column; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); overflow:hidden; }
 .event_list img { width:100%; aspect-ratio:660 / 410; object-fit:cover; }
@@ -451,10 +457,10 @@
 .tv_panel .btn_more { margin-top:32px; }
 
 /* 영상 팝업 : 16:9 영상 + 우측 상단 닫기 */
-.video_layer { width:calc(100% - 20px); max-width:600px; background:transparent; }
+.video_layer { width:calc(100% - 20px); max-width:600px; background:transparent; overflow:visible; } /* 위쪽 바깥 X 버튼이 잘리지 않게 */
 .video_layer .btn_x { right:0; top:auto; bottom:calc(100% + 8px); }
 .video_layer .btn_x img { width:36px; }
-.video_layer .video_frame { aspect-ratio:16 / 9; background:#000; }
+.video_layer .video_frame { aspect-ratio:16 / 9; background:#000; border-radius:var(--Border-2radius); overflow:hidden; }
 .video_layer iframe { display:block; width:100%; height:100%; border:0; }
 
 /* ==============================
@@ -498,7 +504,7 @@
 .review_view .editor_content { padding:0 8px; }
 .review_view dl { margin-top:24px; }
 .review_view dt { font-size:var(--Font-medium); font-weight:600; }
-.review_view dd { margin-top:8px; }
+.review_view dd { margin-top:8px; color:var(--Neutral-800); }
 
 /* ==============================
    나의 학사일정 (classroom/academic_calendar)
@@ -691,3 +697,67 @@
 .plan_detail dt { font-weight:600; }
 .plan_detail dd + dt { margin-top:21px; }
 .plan_detail :is(dt, dd) { font-size:inherit; line-height:inherit; color:inherit; }
+
+/* ==============================
+   성적관리 (classroom/grade_management/grade_list)
+   ============================== */
+.grade_wrap { display:flex; flex-direction:column; gap:24px; padding:24px var(--Gutter) 40px; }
+.grade_title { margin-bottom:-8px; font-size:var(--Font-large); font-weight:700; }
+.grade_wrap .lecture_notice { grid-template-columns:1fr; } /* 수강중인 강좌 유의사항 박스 재사용 (버튼 없음) */
+
+/* 검색 : 라벨 + 셀렉트 2개 */
+.grade_filter { display:flex; flex-direction:column; gap:4px; }
+.grade_filter label { display:flex; align-items:center; height:32px; padding-left:8px; font-size:var(--Font-medium); font-weight:500; line-height:1.5; }
+.grade_filter select { width:100%; height:40px; font-size:var(--Font-small); }
+
+/* 성적 관련 일정 : 3칸 */
+.grade_schedule { display:grid; grid-template-columns:repeat(3, 1fr); padding:16px 12px; background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); text-align:center; }
+.grade_schedule dt { font-size:var(--Font-small); font-weight:700; }
+.grade_schedule dd { margin-top:8px; font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; }
+
+/* 과정별 성적표 */
+.grade_head { display:flex; align-items:center; gap:12px; margin-bottom:-16px; padding-left:8px; }
+.grade_head h3 { font-size:var(--Font-medium); font-weight:600; line-height:1.5; }
+.grade_head p { font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); }
+.grade_head strong { font-weight:700; color:var(--Primary-500); }
+.score_table { table-layout:fixed; }
+.score_table th { font-weight:700; }
+.score_table td { color:var(--Neutral-900); }
+/* 성적 가림 : 마지막 칸 기준으로 원점수 칸(92px)까지 덮음 */
+.score_table td:last-child { position:relative; }
+.evaluation_dim { position:absolute; top:3px; bottom:3px; left:calc(3px - 92px); right:4px; display:flex; align-items:center; justify-content:center; padding:0 16px; background:var(--Neutral-900); border-radius:6px; }
+.evaluation_dim p { font-size:var(--Font-small); color:var(--Neutral-0); line-height:1.5; letter-spacing:-0.14px; }
+.btn_evaluation { display:inline-flex; align-items:center; gap:4px; height:32px; padding:0 12px; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); font-size:var(--Font-small); font-weight:500; letter-spacing:-0.14px; white-space:nowrap; }
+.btn_evaluation:before { content:""; width:16px; height:16px; background:url(../images/common/ico_lock.svg) no-repeat center / 16px; }
+
+/* ==============================
+   강의평가 (classroom/grade_management/course_feedback)
+   ============================== */
+.feedback_wrap { padding:24px var(--Gutter) 40px; }
+.feedback_info { display:grid; grid-template-columns:70px 1fr; padding:16px; background:var(--Neutral-200); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
+.feedback_info :is(dt, dd) { display:flex; align-items:center; min-height:30px; }
+.feedback_info dt { font-weight:700; }
+.feedback_info dd { padding-left:10px; }
+
+/* 문항 : 구분 → 번호 문항 → 보기 5개 */
+.feedback_list { counter-reset:question; }
+.feedback_list li { margin-top:16px; counter-increment:question; }
+.feedback_list li:first-child { margin-top:24px; }
+.feedback_list .type { font-size:var(--Font-small); color:var(--Neutral-600); line-height:1.5; letter-spacing:-0.14px; }
+.feedback_list .question { display:flex; margin-top:4px; font-weight:500; line-height:normal; } /* 2줄 이상 : 번호는 왼쪽 고정, 글자만 첫 줄에 맞춤 */
+.feedback_list .question:before { content:counter(question) "."; flex:none; margin-right:4px; }
+.feedback_list .answer { display:flex; flex-direction:column; gap:4px; padding:10px 0; margin-left:12px; }
+.feedback_list label { display:flex; align-items:center; gap:8px; height:32px; line-height:1.5; }
+.feedback_list input[type="radio"] { width:20px; height:20px; background-size:20px; }
+
+/* 만족도 : 별점 + 의견 */
+.feedback_title { margin-top:16px; padding:10px 0 16px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-medium); font-weight:600; line-height:1.5; }
+.star_rating { display:flex; flex-direction:row-reverse; justify-content:center; padding:10px; margin-top:12px; }
+.star_rating input { position:absolute; opacity:0; pointer-events:none; }
+.star_rating label { width:40px; height:40px; background:url(../images/common/ico_star_off.svg) no-repeat center / 40px; cursor:pointer; }
+.star_rating input:checked ~ label { background-image:url(../images/common/ico_star_on.svg); } /* 선택한 별과 그 왼쪽 별 채움 */
+.star_rating input:focus-visible + label { outline:2px solid var(--Primary-500); }
+.feedback_opinion { display:block; width:100%; height:228px; margin-top:16px; padding:20px; resize:none; }
+.feedback_agree { display:flex; align-items:flex-start; gap:6px; margin:16px calc(var(--Gutter) * -1) 0; padding:12px var(--Gutter) 0; border-top:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); line-height:16px; }
+.feedback_agree input { width:20px; height:20px; background-size:20px; }
+.feedback_wrap > .btn_primary { margin-top:56px; }

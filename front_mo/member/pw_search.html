@@ -144,7 +144,10 @@
             </div>
             <div class="input_area">
                 <label for="user_id" class="field_label">아이디</label>
-                <input type="text" id="user_id" placeholder="아이디를 입력해 주세요." autocomplete="username">
+                <div class="input_clear">
+                    <input type="text" id="user_id" placeholder="아이디를 입력해 주세요." autocomplete="username">
+                    <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                </div>
             </div>
             <!-- 아이디 입력 후 휴대전화 본인인증 (외부 인증창) -->
             <button type="button" class="btn_primary" disabled>인증하기</button>

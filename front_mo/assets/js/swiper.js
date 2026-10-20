@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initOpenClassSwiper();
     initEventBannerSwipers();
     initScholarshipSwiper();
+    initCertMarkSwiper();
 });
 
 // ==============================
@@ -91,9 +92,35 @@ function initScholarshipSwiper() {
         return;
     }
 
-    new Swiper(root.querySelector('.swiper-container'), {
+    const container = root.querySelector('.swiper-container');
+
+    new Swiper(container, {
         slidesPerView: 'auto',
         spaceBetween: 16,
+        centeredSlides: true, // 현재 슬라이드를 가운데 정렬
+        loop: true, // 1 → 2 → 3 → 1 … 끊김 없이 반복
+        loopedSlides: container.querySelectorAll('.swiper-slide').length, // 너비 auto 라 복제 수를 슬라이드 수만큼 지정
         pagination: { el: root.querySelector('.swiper-pagination'), clickable: true },
+    });
+}
+
+// ==============================
+// SECTION: 푸터 인증 마크 (ISMS / 교육부 로고)
+// - 두 이미지를 페이드로 번갈아 노출
+// ==============================
+function initCertMarkSwiper() {
+    const container = document.querySelector('.cert_mark');
+
+    if (!container) {
+        return;
+    }
+
+    new Swiper(container, {
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        loop: true,
+        speed: 800,
+        allowTouchMove: false,
+        autoplay: { delay: 3000, disableOnInteraction: false },
     });
 }

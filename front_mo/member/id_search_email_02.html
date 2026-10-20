@@ -156,7 +156,10 @@
                     <label for="auth_code">인증번호</label>
                     <span class="timer" role="timer">2:49</span>
                 </div>
-                <input type="text" id="auth_code" placeholder="인증번호를 입력해 주세요." inputmode="numeric" autocomplete="one-time-code">
+                <div class="input_clear">
+                    <input type="text" id="auth_code" placeholder="인증번호를 입력해 주세요." inputmode="numeric" autocomplete="one-time-code">
+                    <button type="button" class="btn_clear" aria-label="입력값 삭제"></button>
+                </div>
             </div>
             <button type="submit" class="btn_primary" disabled>인증하기</button>
             <ul class="login_link">

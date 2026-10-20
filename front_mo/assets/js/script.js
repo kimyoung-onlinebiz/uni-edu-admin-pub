@@ -86,21 +86,22 @@ document.addEventListener('DOMContentLoaded', () => {
         ['.js-faq-pop', '.faq_layer'],                 // FAQ 자주 찾는 질문 TOP5
         ['.js-notice-pop', '.notice_layer'],           // 수강중인 강좌 이론 과정 유의사항
         ['.btn_progress', '.progress_layer'],          // 수강중인 강좌 페이지별 진도율 (비활성 버튼은 열리지 않음)
+        ['.btn_isms', '.isms_layer'],                  // 푸터 ISMS 인증서 (이미지 누르면 닫힘)
+        ['.js-send-code', '.send_layer'],              // 비밀번호 잠금 해제(이메일) 인증번호 발송 안내
     ];
 
     // 진입 시 바로 여는 팝업 (data-auto-open) : 알림 팝업 등
     document.querySelectorAll('.layer_popup[data-auto-open]').forEach(openLayer);
 
-    LAYER_TRIGGERS.forEach(([triggerSelector, layerSelector]) => {
-        const layer = document.querySelector(layerSelector);
+    // 문서에서 한 번에 받아 처리 : 스와이퍼 loop 로 복제된 버튼(푸터 ISMS 등)도 동작
+    document.addEventListener('click', (e) => {
+        LAYER_TRIGGERS.forEach(([triggerSelector, layerSelector]) => {
+            const layer = document.querySelector(layerSelector);
 
-        document.querySelectorAll(triggerSelector).forEach((trigger) => {
-            trigger.addEventListener('click', (e) => {
+            if (layer && e.target.closest(triggerSelector)) {
                 e.preventDefault();
-                if (layer) {
-                    openLayer(layer);
-                }
-            });
+                openLayer(layer);
+            }
         });
     });
 
