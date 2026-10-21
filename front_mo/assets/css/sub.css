@@ -716,10 +716,21 @@
 .grade_schedule dd { margin-top:8px; font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; }
 
 /* 과정별 성적표 */
-.grade_head { display:flex; align-items:center; gap:12px; margin-bottom:-16px; padding-left:8px; }
+.grade_head { position:relative; display:flex; align-items:center; gap:12px; margin-bottom:-16px; padding-left:8px; }
 .grade_head h3 { font-size:var(--Font-medium); font-weight:600; line-height:1.5; }
-.grade_head p { font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); }
+.grade_head p { font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); line-height:1; }
 .grade_head strong { font-weight:700; color:var(--Primary-500); }
+/* 평가 기준 툴팁 : 제목줄 아래로 펼침 */
+.btn_tooltip { flex:none; width:20px; height:20px; margin-left:-8px; background:url(../images/common/ico_help.svg) no-repeat center / 20px; }
+.grade_head .tooltip { position:absolute; left:-2px; top:calc(100% + 6px); z-index:10; width:min(100%, 300px); padding:16px 16px 24px; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); box-shadow:0 4px 12px rgba(17, 17, 17, .12); }
+/* 위쪽 삼각형 화살표 : 버튼 가운데를 가리킴 (--arrow-x 는 스크립트가 열 때 지정) */
+.grade_head .tooltip:before { content:""; position:absolute; left:calc(var(--arrow-x, 20px) - 6px); top:-7px; width:12px; height:12px; background:var(--Neutral-0); border:solid var(--Neutral-500); border-width:1px 0 0 1px; transform:rotate(45deg); }
+.grade_head .tooltip > strong { display:block; padding-bottom:12px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-base); font-weight:700; color:var(--Neutral-900); }
+.tooltip table { width:100%; }
+.tooltip :is(th, td) { height:30px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); text-align:center; }
+.tooltip th { font-weight:600; }
+.tooltip td { color:var(--Neutral-800); }
+.tooltip td:first-child { border-right:1px solid var(--Neutral-300); }
 .score_table { table-layout:fixed; }
 .score_table th { font-weight:700; }
 .score_table td { color:var(--Neutral-900); }
@@ -761,3 +772,23 @@
 .feedback_agree { display:flex; align-items:flex-start; gap:6px; margin:16px calc(var(--Gutter) * -1) 0; padding:12px var(--Gutter) 0; border-top:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); line-height:16px; }
 .feedback_agree input { width:20px; height:20px; background-size:20px; }
 .feedback_wrap > .btn_primary { margin-top:56px; }
+
+/* ==============================
+   쿠폰 관리 / 쿠폰 등록 (classroom/payment_control/coupon, coupon_write)
+   ============================== */
+.coupon_wrap { display:flex; flex-direction:column; gap:16px; padding:24px var(--Gutter) 40px; }
+.coupon_wrap > .lecture_notice + :is(.coupon_list, .no_data) { margin-top:16px; } /* 목록 : 유의사항과 32px */
+.coupon_wrap > .btn_primary { margin-top:24px; } /* 목록 아래 쿠폰 등록 버튼 : 40px */
+
+/* 쿠폰 카드 : 할인 / 적용 대상 → 쿠폰명 / 설명 / 발급일·사용 기간 */
+.coupon_list { display:flex; flex-direction:column; gap:16px; }
+.coupon_list li { border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); overflow:hidden; }
+.coupon_head { display:flex; align-items:center; gap:8px; padding:20px; border-bottom:1px solid var(--Neutral-500); font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; }
+.coupon_head strong { font-size:var(--Font-large); font-weight:600; color:var(--Info); line-height:normal; letter-spacing:0; }
+.coupon_body { display:flex; flex-direction:column; gap:4px; padding:20px; background:var(--Neutral-100); }
+.coupon_body .name { font-weight:500; line-height:normal; }
+.coupon_body .desc { font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
+.coupon_body .date { padding-top:12px; font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; }
+
+/* 쿠폰 등록 : 유의사항 → (16) 코드 입력 → (56) 등록하기 / 목록 */
+.coupon_form .btn_pair { margin-top:56px; }

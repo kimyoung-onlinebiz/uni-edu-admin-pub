@@ -180,6 +180,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 툴팁 (성적관리 평가 기준) : 버튼으로 열고 닫기, 바깥·툴팁 내용을 누르면 닫힘, 한 번에 하나만 열림, 화살표는 버튼 위치에 맞춤
+    const tooltipButtons = document.querySelectorAll('.btn_tooltip');
+    const closeTooltips = (except) => {
+        tooltipButtons.forEach((button) => {
+            if (button === except) {
+                return;
+            }
+            button.setAttribute('aria-expanded', 'false');
+            document.getElementById(button.getAttribute('aria-controls')).hidden = true;
+        });
+    };
+    tooltipButtons.forEach((button) => {
+        const tooltip = document.getElementById(button.getAttribute('aria-controls'));
+        button.addEventListener('click', () => {
+            closeTooltips(button);
+            tooltip.style.setProperty('--arrow-x', `${button.offsetLeft + button.offsetWidth / 2}px`); // 화살표를 버튼 가운데로
+            tooltip.hidden = !tooltip.hidden;
+            button.setAttribute('aria-expanded', String(!tooltip.hidden));
+        });
+    });
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.btn_tooltip')) {
+            closeTooltips(); // 바깥이나 툴팁 내용을 누르면 닫힘
+        }
+    });
+
     // 나의 학사일정 달력 : 날짜 클릭 시 선택(.selected) 이동 (일정 데이터 갱신은 개발에서 처리)
     document.querySelectorAll('.calendar').forEach((calendar) => {
         const days = calendar.querySelectorAll('button');

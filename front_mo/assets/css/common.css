@@ -157,8 +157,8 @@ em { text-decoration:none; font-style:normal; }
 
 /* 7. footer */
 .footer { margin-top:40px; padding-bottom:calc(48px + var(--Safe-bottom)); text-align:center; }
-.footer .quick_bar { position:fixed; left:0; right:0; bottom:0; z-index:90; display:flex; justify-content:space-between; align-items:center; height:calc(48px + var(--Safe-bottom)); padding:0 24px var(--Safe-bottom); background:var(--Primary-500); border-radius:15px 15px 0 0; }
-.footer .quick_bar a { display:flex; align-items:center; gap:6px; font-weight:600; color:var(--Neutral-0); }
+.footer .quick_bar { position:fixed; left:0; right:0; bottom:0; z-index:90; display:flex; justify-content:space-between; align-items:center; height:calc(48px + var(--Safe-bottom)); padding:0 24px var(--Safe-bottom); background:var(--Neutral-0); border:1px solid var(--Neutral-300); border-bottom:0; border-radius:15px 15px 0 0; box-shadow:0 -4px 12px rgba(17, 17, 17, .06); }
+.footer .quick_bar a { display:flex; align-items:center; gap:6px; font-weight:600; color:var(--Primary-700); }
 .footer .quick_bar img { width:20px; height:20px; object-fit:contain; }
 .footer address { padding:16px; background:var(--Neutral-200); border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; letter-spacing:-0.14px; }
 .footer_link { display:flex; justify-content:center; padding-top:20px; }
@@ -329,3 +329,6 @@ body:has(.layer_popup:not([hidden])) { pointer-events:none; }
 .data_table td { color:var(--Neutral-800); }
 .data_table :is(th, td) + :is(th, td) { border-left:1px solid var(--Neutral-300); }
 .data_table .align_left { text-align:left; }
+
+/* 20. 데이터 없음 (목록이 비었을 때 공통) : <p class="no_data">사용 가능한 쿠폰이 없습니다.</p> */
+.no_data { display:flex; align-items:center; justify-content:center; min-height:300px; font-size:var(--Font-small); color:var(--Neutral-600); line-height:1.5; letter-spacing:-0.14px; text-align:center; }

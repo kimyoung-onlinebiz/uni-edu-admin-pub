@@ -224,7 +224,7 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .new_badge { width:16px; height:17px; border-radius:var(--Border-radius); display:inline-flex; align-items:center; justify-content:center; background:var(--Primary-500); color:var(--Neutral-0); font-size:10px; font-style:normal; font-weight:600; padding-bottom:1px; margin-left:8px; vertical-align:text-top; }
 
 .notice_link .service_card li { border-radius:var(--Border-2radius); display:flex; justify-content:center; }
-.notice_link .service_card span { display:block; margin-bottom:3px; height:38px; }
+.notice_link .service_card span { display:block; margin-bottom:6px; height:38px; }
 .notice_link .service_card a { display:flex; width:100%; flex-direction:column; align-items:center; justify-content:center; }
 .notice_link .service_card li strong { font-size:var(--Font-medium); font-weight:600; }
 
@@ -283,6 +283,47 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
     to { transform:rotate(360deg); }
 }
 @media (prefers-reduced-motion: reduce) { .faq_card a:hover g { animation:none; } }
+
+/* 자주쓰는 링크 아이콘 : 오버 시 아이콘 일부만 움직임 */
+.service_card svg { overflow:visible; vertical-align:top; } /* 움직일 때 잘리지 않게 */
+.service_card li:last-child svg { position:relative; top:-4px; } /* 자격증 발급 : 세로가 길어 위로 4px 올림 */
+.service_card [class^="ico_"] { transform-box:fill-box; transform-origin:center; }
+.service_card a:hover .ico_stamp { animation:stampBounce .5s ease-in-out infinite; } /* 증명서 발급 : 체크 배지 위아래 통통 */
+.service_card a:hover .ico_eye { animation:eyeBlink 1.4s ease-in-out infinite; } /* 원격지원 : 눈 깜빡임 */
+.service_card a:hover .ico_mic { animation:micBounce .7s ease-in-out infinite; } /* 원격지원 : 마이크 통통 */
+.service_card a:hover .ico_dot { animation:dotTyping .8s ease-in-out infinite; } /* 자주하는 질문 : 점 3개 차례로 통통 (입력 중) */
+.service_card a:hover .ico_dot:nth-of-type(3) { animation-delay:.1s; }
+.service_card a:hover .ico_dot:nth-of-type(4) { animation-delay:.2s; }
+.service_card a:hover .ico_check { animation:checkPop .85s ease-in-out infinite; } /* 공동인증서 : 체크 커졌다 자리잡음 */
+.service_card a:hover .ico_down { animation:faqDown .85s ease-in-out infinite; } /* 프로그램 설치 : 화살표 내려감 (자주하는 질문 모션 재사용) */
+.service_card a:hover .ico_star { animation:starTwinkle 1s ease-in-out infinite; } /* 자격증 발급 : 별 반짝 회전 */
+@keyframes stampBounce {
+    0%, 100% { transform:translateY(0); }
+    50% { transform:translateY(-3px); }
+}
+@keyframes eyeBlink {
+    0%, 40%, 100% { transform:scaleY(1); }
+    10%, 30% { transform:scaleY(.1); }
+    20% { transform:scaleY(1); }
+}
+@keyframes micBounce {
+    0%, 100% { transform:translateY(0) scale(1); }
+    50% { transform:translateY(-1px) scale(1.2); }
+}
+@keyframes dotTyping {
+    0%, 50%, 100% { transform:translateY(0); }
+    25% { transform:translateY(-2.5px); }
+}
+@keyframes checkPop {
+    0%, 60%, 100% { transform:scale(1); }
+    25% { transform:scale(1.3); }
+    45% { transform:scale(.9); }
+}
+@keyframes starTwinkle {
+    0%, 100% { transform:rotate(0) scale(1); }
+    50% { transform:rotate(72deg) scale(1.35); }
+}
+@media (prefers-reduced-motion: reduce) { .service_card a:hover [class^="ico_"] { animation:none; } }
 
 .guide_area { display:flex; gap:24px; }
 .target_guide { flex:1; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
