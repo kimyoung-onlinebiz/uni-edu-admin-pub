@@ -88,6 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ['.btn_progress', '.progress_layer'],          // 수강중인 강좌 페이지별 진도율 (비활성 버튼은 열리지 않음)
         ['.btn_isms', '.isms_layer'],                  // 푸터 ISMS 인증서 (이미지 누르면 닫힘)
         ['.js-send-code', '.send_layer'],              // 비밀번호 잠금 해제(이메일) 인증번호 발송 안내
+        ['.btn_profile', '.profile_layer'],            // 강좌 상세 교수님 소개
+        ['.js-pay-info', '.payinfo_layer[data-type="wait"]'], // 결제 내역 결제 정보 확인 : 결제 대기 (하단 시트)
+        ['.js-pay-done', '.payinfo_layer[data-type="done"]'], // 결제 내역 결제 정보 확인 : 결제 완료 (하단 시트)
+        ['.js-refund-info', '.payinfo_layer[data-type="refund"]'], // 환불 내역 환불 정보 확인 (하단 시트)
     ];
 
     // 진입 시 바로 여는 팝업 (data-auto-open) : 알림 팝업 등
@@ -163,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 탭 공통 (나의 강의실 과정 탭, TV 라인 탭) : data-panel 이 같은 패널만 노출, 선택 탭을 가운데로 스크롤
     document.querySelectorAll('[role="tablist"]').forEach((tabList) => {
         const tabs = tabList.querySelectorAll('[data-panel]');
-        const panels = tabList.parentElement.querySelectorAll(':scope > [role="tabpanel"]');
+        const panels = tabList.parentElement.querySelectorAll(':scope > [data-panel]'); // 패널 + 탭에 따라 바뀌는 영역(결제 내역 유의사항 등)
 
         tabs.forEach((tab) => {
             tab.addEventListener('click', () => {
@@ -178,6 +182,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             });
         });
+    });
+
+    // 결제 정보 하단 시트 : 이전 / 다음으로 주문(.pay_page) 하나씩 노출, 제목 옆 현재 번호 갱신
+    // - 처음이면 이전, 마지막이면 다음 비활성 / 주문이 1건이면 이전·다음 영역 숨김
+    document.querySelectorAll('.payinfo_layer').forEach((layer) => {
+        const pages = layer.querySelectorAll('.pay_page');
+        const current = layer.querySelector('h2 em');
+        const nav = layer.querySelector('.pay_nav');
+        const prev = nav.querySelector('.prev');
+        const next = nav.querySelector('.next');
+        let index = 0;
+        const show = (target) => {
+            index = Math.min(Math.max(target, 0), pages.length - 1);
+            pages.forEach((page, i) => {
+                page.hidden = i !== index;
+            });
+            current.textContent = index + 1;
+            prev.disabled = index === 0;
+            next.disabled = index === pages.length - 1;
+        };
+        nav.hidden = pages.length <= 1;
+        prev.addEventListener('click', () => show(index - 1));
+        next.addEventListener('click', () => show(index + 1));
+        show(0);
     });
 
     // 툴팁 (성적관리 평가 기준) : 버튼으로 열고 닫기, 바깥·툴팁 내용을 누르면 닫힘, 한 번에 하나만 열림, 화살표는 버튼 위치에 맞춤

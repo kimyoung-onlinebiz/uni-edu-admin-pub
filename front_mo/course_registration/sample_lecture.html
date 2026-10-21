@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no, address=no, email=no">
     <meta name="theme-color" content="#ffffff">
-    <title>장학생 후기 | 김영평생교육원</title>
+    <title>샘플 강의 | 김영평생교육원</title>
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
     <link rel="stylesheet" href="../assets/css/sub.css?v=1.0">
@@ -130,81 +130,68 @@
         <!-- 페이지 타이틀 -->
         <div class="page_title">
             <a href="javascript:history.back();" class="btn_back" aria-label="뒤로가기"><img src="../assets/images/common/ico_back.svg" alt=""></a>
-            <h2>장학생 후기</h2>
+            <h2>샘플 강의</h2>
         </div>
         <!-- //페이지 타이틀 -->
 
-        <section class="board_wrap event_wrap">
-            <p class="scholarship_top"><img src="../assets/images/sub/epilogue_topImg.png" alt="2026년 1학기 김영평생교육원 성적우수 장학생 - 노력으로 만들어낸 값진 결과, 김영평생교육원 장학생들의 이야기를 만나보세요."></p>
+        <!-- 분류 탭 : 탭 클릭 시 data-panel 이 같은 패널 노출 -->
+        <!-- 샘플 강의 : 커뮤니티 김영평생교육원 TV 카드(.tv_list) 재사용, 카드 링크는 개발에서 연결 -->
+        <section class="board_wrap">
+            <!-- 검색 : 게시판 검색(.board_search) 재사용 -->
+            <form class="board_search" action="#none">
+                <select class="search_type" title="검색 구분">
+                    <option value="title">제목</option>
+                    <option value="prof">교수명</option>
+                </select>
+                <input type="search" title="검색어" placeholder="검색어를 입력해 주세요.">
+            </form>
 
-            <!-- 후기 카드 : 가로 스크롤 -->
-            <ul class="review_card">
+            <!-- 전체 건수 + 정렬 : 이벤트 목록(.board_info) 재사용 -->
+            <div class="board_info">
+                <p>전체 총 <strong>7</strong>건</p>
+                <select title="정렬">
+                    <option value="name">과정명 순</option>
+                    <option value="recent">최근 등록순</option>
+                </select>
+            </div>
+
+            <ul class="tv_list sample_list">
                 <li>
-                    <a href="scholarship_student_view.html">
-                        <span class="photo"><img src="../assets/images/sub/scholarship_student/student_20261015_01.png" alt=""></span>
-                        <span class="term">2026년 1학기</span>
-                        <strong><em>최우수상</em> 이준*</strong>
-                        <p>대학교 입시를 준비하며 학업과 개인 일정을 병행하는 것이 쉽지는 않았지만, 강의와 교안을 충실히 활용하고 과제와 시험을 미루지 않으려 노력했습니다. 특히 체계적으로 정리된 교안을 반복해서 읽으며 학습한 것이 좋은 성적을 받는 데 큰 도움이 되었습니다.</p>
-                        <span class="more">더보기 +</span>
+                    <a href="#none">
+                        <img src="../assets/images/banner/sub/sample_lecture_01.png" alt="">
+                        <strong>영어청취연습 II</strong>
+                        <span class="prof">마선일 교수님</span>
                     </a>
                 </li>
                 <li>
-                    <a href="scholarship_student_view.html">
-                        <span class="photo"><img src="../assets/images/sub/scholarship_student/student_20261015_02.png" alt=""></span>
-                        <span class="term">2026년 1학기</span>
-                        <strong><em>우수상</em> 이은*</strong>
-                        <p>처음에는 학점은행제라는 제도가 생소했지만, 김영평생교육원의 친절하고 자세한 상담 덕분에 경영 전문학사 과정을 편리하게 수강할 수 있었습니다. 강의 중 이해하기 어려웠던 부분은 AI를 활용해 복습하고, 수업 후에는 OX 문제를 풀며 학습 내용을 점검했습니다.</p>
-                        <span class="more">더보기 +</span>
+                    <a href="#none">
+                        <img src="../assets/images/banner/sub/sample_lecture_02.png" alt="">
+                        <strong>소비자심리학</strong>
+                        <span class="prof">노진경 교수님</span>
                     </a>
                 </li>
                 <li>
-                    <a href="scholarship_student_view.html">
-                        <span class="photo"><img src="../assets/images/sub/scholarship_student/student_20261015_03.png" alt=""></span>
-                        <span class="term">2026년 1학기</span>
-                        <strong><em>장려상</em> 박지*</strong>
-                        <p>처음 사회복지학 공부를 다시 시작했을 때는 생소한 용어와 많은 과목 때문에 걱정이 앞섰지만, 매일 주어진 학습을 차근차근 이어가며 자신감을 얻었습니다. 강의와 교안을 함께 보며 중요한 내용과 실제 사례를 메모하고, 시험과 과제 준비에도 적극 활용했습니다.</p>
-                        <span class="more">더보기 +</span>
+                    <a href="#none">
+                        <img src="../assets/images/banner/sub/sample_lecture_03.png" alt="">
+                        <strong>가족상담및가족치료</strong>
+                        <span class="prof">원영재 교수님</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="../assets/images/banner/sub/sample_lecture_01.png" alt="">
+                        <strong>영어청취연습 II</strong>
+                        <span class="prof">마선일 교수님</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="../assets/images/banner/sub/sample_lecture_03.png" alt="">
+                        <strong>가족상담및가족치료</strong>
+                        <span class="prof">원영재 교수님</span>
                     </a>
                 </li>
             </ul>
-            <!-- //후기 카드 -->
-
-            <!-- 목록 : 제목 줄바꿈 노출 -->
-            <ul class="board_list review_board">
-                <li>
-                    <a href="scholarship_student_view.html">
-                        <p class="tit"><span>2026년 1학기 성적우수 장학생(장려상) - 박지* 학습자</span><i class="ico_new">N</i></p>
-                        <p class="date">2026-01-07</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="scholarship_student_view.html">
-                        <p class="tit"><span>2026년 1학기 성적우수 장학생(우수상) - 이은* 학습자</span><i class="ico_new">N</i></p>
-                        <p class="date">2026-01-07</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="scholarship_student_view.html">
-                        <p class="tit"><span>2026년 1학기 성적우수 장학생(최우수상) - 이준* 학습자</span><i class="ico_new">N</i></p>
-                        <p class="date">2026-01-07</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="scholarship_student_view.html">
-                        <p class="tit"><span>2025년 2학기 성적우수 장학생(우수상) - 김고* 학습자</span></p>
-                        <p class="date">2025-08-04</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="scholarship_student_view.html">
-                        <p class="tit"><span>2025년 2학기 성적우수 장학생(최우수상) - 김고* 학습자</span></p>
-                        <p class="date">2025-08-04</p>
-                    </a>
-                </li>
-            </ul>
-            <!-- //목록 -->
-
-            <!-- 더보기 : (현재 노출 개수 / 전체 개수) -->
             <button type="button" class="btn_primary outline btn_more">더보기(5/26)</button>
         </section>
 
@@ -244,8 +231,8 @@
     <a href="#none" class="btn_top" aria-label="맨 위로"><img src="../assets/images/common/ico_top.svg" alt=""></a>
 
     <!-- 간편상담 신청 팝업 : 하단 퀵바 간편상담으로 열림 -->
-    <form class="layer_popup consult_layer" action="#none" role="dialog" aria-modal="true" aria-labelledby="consultTitle" hidden>
-        <h2 id="consultTitle">간편상담 신청</h2>
+    <form class="layer_popup consult_layer" action="#none" role="dialog" aria-modal="true" hidden>
+        <h2>간편상담 신청</h2>
         <button type="button" class="btn_x" aria-label="팝업 닫기"><img src="../assets/images/common/ico_close.svg" alt=""></button>
         <input type="text" name="name" placeholder="이름을 입력해 주세요." title="이름">
         <input type="tel" name="phone" placeholder="연락처를 입력해 주세요. (- 제외)" title="연락처" inputmode="numeric">
@@ -269,8 +256,8 @@
     <!-- //간편상담 신청 팝업 -->
 
     <!-- 개인정보 수집·이용 동의 팝업 : 간편상담 동의 체크 시 열림 -->
-    <div class="layer_popup agree_layer" role="dialog" aria-modal="true" aria-labelledby="agreeTitle" hidden>
-        <h2 id="agreeTitle">개인정보 수집 · 이용 및 제공 동의</h2>
+    <div class="layer_popup agree_layer" role="dialog" aria-modal="true" hidden>
+        <h2>개인정보 수집 · 이용 및 제공 동의</h2>
         <button type="button" class="btn_x" aria-label="팝업 닫기"><img src="../assets/images/common/ico_close.svg" alt=""></button>
         <div class="terms layer_scroll">
             <h3>1. 수집하는 개인정보의 항목</h3>

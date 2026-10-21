@@ -65,7 +65,7 @@
 .input_area input[type="tel"],
 .input_area input[type="password"],
 .input_area input[type="email"],
-.input_area select { width:100%; height:50px; padding:0 20px; }
+.input_area select { width:100%; height:46px; padding:0 20px; }
 .input_area select { padding-right:40px; }
 .field_label { display:flex; align-items:center; min-height:32px; padding-left:8px; font-size:var(--Font-medium); font-weight:500; line-height:1.5; }
 .field_label label { font-size:inherit; }
@@ -90,7 +90,7 @@
 
 /* 한 줄에 여러 입력 (아이디 + 중복확인, 이메일) */
 .multiple { display:flex; align-items:center; gap:8px; }
-.multiple .btn_check { flex:none; width:120px; height:50px; background:var(--Primary-500); border-radius:var(--Border-radius); font-size:var(--Font-medium); font-weight:600; color:var(--Neutral-0); }
+.multiple .btn_check { flex:none; width:120px; height:46px; background:var(--Primary-500); border-radius:var(--Border-radius); font-size:var(--Font-medium); font-weight:600; color:var(--Neutral-0); }
 .multiple.email input:first-child { flex:none; width:150px; }
 .multiple.email span { flex:none; font-weight:500; }
 .multiple.email > :last-child { flex:1; min-width:0; }
@@ -116,7 +116,7 @@
 .final_education select:nth-child(n+3) { grid-column:span 2; }
 
 /* 다중 선택 드롭다운 */
-.custom_select { position:relative; display:flex; align-items:center; height:50px; padding:0 40px 0 20px; background:var(--Neutral-0) url(../images/common/ico_select_arrow.svg) no-repeat calc(100% - 16px) center / 16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); cursor:pointer; }
+.custom_select { position:relative; display:flex; align-items:center; height:46px; padding:0 40px 0 20px; background:var(--Neutral-0) url(../images/common/ico_select_arrow.svg) no-repeat calc(100% - 16px) center / 16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); cursor:pointer; }
 .custom_select .selected { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--Placeholder); }
 .custom_select.is-selected .selected { color:var(--Neutral-900); }
 .custom_select .options { display:none; position:absolute; left:-1px; right:-1px; top:100%; z-index:10; max-height:240px; padding:8px 16px; overflow-y:auto; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:0 0 var(--Border-radius) var(--Border-radius); }
@@ -302,7 +302,7 @@
 /* 검색 : 셀렉트 2개 / 검색조건(120px) + 검색어 */
 .board_search { display:flex; flex-wrap:wrap; gap:4px; }
 .board_search select,
-.board_search input { flex:1 1 calc(50% - 2px); min-width:0; height:40px; padding:0 16px; font-size:var(--Font-base); }
+.board_search input { flex:1 1 calc(50% - 2px); min-width:0; height:46px; padding:0 16px; font-size:var(--Font-base); }
 .board_search select { padding-right:36px; background-position:right 12px center; }
 .board_search .search_type { flex:0 0 120px; }
 .board_search .full { flex-basis:100%; }
@@ -348,11 +348,11 @@
 /* 게시판 글쓰기 : 입력칸 40px */
 .write_form { display:flex; flex-direction:column; gap:16px; }
 .write_form .input_area input[type="text"],
-.write_form .input_area select { height:40px; font-size:var(--Font-base); }
+.write_form .input_area select { height:46px; font-size:var(--Font-base); }
 .write_form .input_area select { padding:0 40px 0 16px; }
 .write_form textarea { height:240px; padding:20px; font-size:var(--Font-base); resize:none; }
 .file_attach { display:flex; flex-direction:column; gap:10px; }
-.btn_file { display:flex; align-items:center; justify-content:center; height:40px; border:1px solid var(--Neutral-800); border-radius:var(--Border-radius); font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); cursor:pointer; }
+.btn_file { display:flex; align-items:center; justify-content:center; height:46px; border:1px solid var(--Neutral-800); border-radius:var(--Border-radius); font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); cursor:pointer; }
 .file_guide { padding-left:21px; font-size:var(--Font-small); font-weight:500; color:var(--Placeholder); letter-spacing:-0.14px; }
 .file_guide li { list-style:disc; font-size:inherit; color:inherit; }
 .write_form > .btn_primary { margin-top:40px; }
@@ -383,7 +383,7 @@
    서식자료실 (support_center/form_library)
    ============================== */
 .form_filter { padding-bottom:24px; border-bottom:1px solid var(--Neutral-300); }
-.form_filter select { width:100%; height:40px; padding:0 40px 0 16px; font-size:var(--Font-base); color:var(--Neutral-900); }
+.form_filter select { width:100%; height:46px; padding:0 40px 0 16px; font-size:var(--Font-base); color:var(--Neutral-900); }
 .form_list { display:flex; flex-direction:column; gap:16px; margin-top:32px; }
 .form_list button { display:flex; flex-direction:column; gap:4px; width:100%; padding:20px 48px 20px 20px; background:var(--Neutral-0) url(../images/common/ico_arrow_right.svg) no-repeat right 20px center / 20px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); font-size:var(--Font-small); font-weight:400; color:var(--Neutral-600); text-align:left; line-height:1.5; letter-spacing:-0.14px; }
 .form_list strong { font-size:var(--Font-medium); font-weight:600; color:var(--Neutral-900); letter-spacing:0; }
@@ -409,7 +409,7 @@
 /* 분류 선택 */
 .faq_filter { display:flex; flex-direction:column; gap:8px; }
 .faq_filter label { padding:0 8px; font-size:var(--Font-base); font-weight:500; color:var(--Neutral-800); }
-.faq_filter select { width:100%; height:40px; padding:0 40px 0 16px; font-size:var(--Font-base); color:var(--Neutral-900); }
+.faq_filter select { width:100%; height:46px; padding:0 40px 0 16px; font-size:var(--Font-base); color:var(--Neutral-900); }
 
 /* FAQ 목록 (아코디언) */
 .faq_list { display:flex; flex-direction:column; gap:16px; margin-top:32px; }
@@ -426,7 +426,7 @@
 .faq_layer .editor_content { max-height:50vh; margin:16px 0 24px; border:0; font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
 
 /* ==============================
-   이벤트 (event/event_list)
+   이벤트 (community/event_list)
    ============================== */
 .event_wrap { padding-bottom:40px; }
 .board_info select { height:32px; padding:0 36px 0 16px; font-size:var(--Font-small); font-weight:500; color:var(--Neutral-900); letter-spacing:-0.14px; background-position:right 12px center; }
@@ -438,7 +438,7 @@
 .event_list .date { margin:16px 20px 20px; font-size:var(--Font-small); color:var(--Neutral-600); line-height:1.5; letter-spacing:-0.14px; }
 
 /* ==============================
-   김영평생교육원 TV (event/tv)
+   김영평생교육원 TV (community/tv)
    ============================== */
 /* 라인 탭 (3등분) */
 .line_tab { display:flex; }
@@ -448,7 +448,7 @@
 /* 영상 카드 */
 .tv_panel { padding:24px var(--Gutter) 40px; }
 .tv_list { display:flex; flex-direction:column; gap:20px; }
-.tv_list button { display:flex; flex-direction:column; align-items:flex-start; gap:8px; width:100%; padding-bottom:20px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); overflow:hidden; text-align:left; }
+.tv_list :is(button, a) { display:flex; flex-direction:column; align-items:flex-start; gap:8px; width:100%; padding-bottom:20px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); overflow:hidden; text-align:left; }
 .tv_list img { width:100%; aspect-ratio:16 / 9; margin-bottom:12px; object-fit:cover; }
 .tv_list .badge { margin:0 20px; padding:0 12px; height:28px; background:var(--Info-soft); border-radius:100px; font-size:var(--Font-xsmall); font-weight:600; color:var(--Info); line-height:28px; }
 .tv_list .badge.info { background:var(--Error-soft); color:var(--Error); }
@@ -464,7 +464,7 @@
 .video_layer iframe { display:block; width:100%; height:100%; border:0; }
 
 /* ==============================
-   장학생 후기 (event/scholarship_student, scholarship_student_view)
+   장학생 후기 (community/scholarship_student, scholarship_student_view)
    ============================== */
 .scholarship_top img { width:100%; border-radius:var(--Border-2radius); }
 
@@ -565,7 +565,7 @@
 /* 검색 조건 : 과정 유형 → (24) 체크박스 → (16) 목록 */
 .schedule_filter { display:flex; flex-direction:column; align-items:flex-start; padding-top:24px; }
 .schedule_filter > label:first-child { padding:0 8px; font-size:var(--Font-base); font-weight:500; color:var(--Neutral-800); }
-.schedule_filter select { width:100%; height:40px; margin:8px 0 24px; font-size:var(--Font-base); }
+.schedule_filter select { width:100%; height:46px; margin:8px 0 24px; font-size:var(--Font-base); }
 .schedule_filter .form_check { font-size:var(--Font-base); }
 
 /* 기수 카드 : 기수명 + 상태 (+ 수강신청) → 일정표 */
@@ -652,12 +652,13 @@
 .lecture_list ol p { font-size:var(--Font-small); line-height:1.5; }
 .lecture_list ol .title { flex-basis:100%; font-weight:600; }
 .lecture_list ol .btn_primary { grid-column:1 / -1; font-size:var(--Font-small); }
+.lecture_list ol .btn_primary:disabled { background:var(--Neutral-300); border-color:var(--Neutral-500); color:var(--Neutral-500); } /* 수강중인 강좌 전용 비활성 (오픈 전) */
 .status { font-weight:600; color:var(--Neutral-600); }
 .status:is(.done, .ing) { color:var(--Primary-500); }
 .status.absent { color:var(--Error); }
 .btn_progress { display:flex; align-items:center; gap:2px; padding:6px 4px 6px 6px; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); font-size:var(--Font-2xsmall); font-weight:500; }
 .btn_progress:after { content:""; width:16px; height:16px; background:url(../images/common/ico_arrow_right.svg) no-repeat center / 16px; }
-.btn_progress:disabled { border-color:var(--Neutral-300); color:var(--Placeholder); }
+.btn_progress:disabled { background:var(--Neutral-0); border-color:var(--Neutral-300); } /* 수강중인 강좌 전용 비활성 (흰 배경), 글자색은 공통 */
 .btn_progress:disabled:after { background-image:url(../images/common/ico_arrow_right_off.svg); }
 
 /* 실습 과정 (current_courses_practice) : 출석 반영 대기, 오프라인 수업 주차 */
@@ -708,7 +709,7 @@
 /* 검색 : 라벨 + 셀렉트 2개 */
 .grade_filter { display:flex; flex-direction:column; gap:4px; }
 .grade_filter label { display:flex; align-items:center; height:32px; padding-left:8px; font-size:var(--Font-medium); font-weight:500; line-height:1.5; }
-.grade_filter select { width:100%; height:40px; font-size:var(--Font-small); }
+.grade_filter select { width:100%; height:46px; font-size:var(--Font-small); }
 
 /* 성적 관련 일정 : 3칸 */
 .grade_schedule { display:grid; grid-template-columns:repeat(3, 1fr); padding:16px 12px; background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); text-align:center; }
@@ -722,9 +723,9 @@
 .grade_head strong { font-weight:700; color:var(--Primary-500); }
 /* 평가 기준 툴팁 : 제목줄 아래로 펼침 */
 .btn_tooltip { flex:none; width:20px; height:20px; margin-left:-8px; background:url(../images/common/ico_help.svg) no-repeat center / 20px; }
-.grade_head .tooltip { position:absolute; left:-2px; top:calc(100% + 6px); z-index:10; width:min(100%, 300px); padding:16px 16px 24px; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); box-shadow:0 4px 12px rgba(17, 17, 17, .12); }
+.tooltip { position:absolute; left:-2px; top:calc(100% + 6px); z-index:10; width:min(100%, 300px); padding:16px 16px 24px; background:var(--Neutral-0); border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); box-shadow:0 4px 12px rgba(17, 17, 17, .12); }
 /* 위쪽 삼각형 화살표 : 버튼 가운데를 가리킴 (--arrow-x 는 스크립트가 열 때 지정) */
-.grade_head .tooltip:before { content:""; position:absolute; left:calc(var(--arrow-x, 20px) - 6px); top:-7px; width:12px; height:12px; background:var(--Neutral-0); border:solid var(--Neutral-500); border-width:1px 0 0 1px; transform:rotate(45deg); }
+.tooltip:before { content:""; position:absolute; left:calc(var(--arrow-x, 20px) - 6px); top:-7px; width:12px; height:12px; background:var(--Neutral-0); border:solid var(--Neutral-500); border-width:1px 0 0 1px; transform:rotate(45deg); }
 .grade_head .tooltip > strong { display:block; padding-bottom:12px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-base); font-weight:700; color:var(--Neutral-900); }
 .tooltip table { width:100%; }
 .tooltip :is(th, td) { height:30px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-small); text-align:center; }
@@ -792,3 +793,233 @@
 
 /* 쿠폰 등록 : 유의사항 → (16) 코드 입력 → (56) 등록하기 / 목록 */
 .coupon_form .btn_pair { margin-top:56px; }
+
+/* ==============================
+   수강신청 > 패키지 (course_registration/package, package_course_*)
+   ============================== */
+/* 패키지 목록 */
+.package_wrap { display:flex; flex-direction:column; gap:16px; padding:24px var(--Gutter) 40px; }
+.package_wrap > h3 { padding-bottom:16px; border-bottom:1px solid var(--Neutral-900); font-size:var(--Font-large); font-weight:700; }
+.package_filter { display:flex; flex-direction:column; gap:4px; margin-bottom:8px; }
+.package_filter + .package_filter { margin-top:-8px; } /* 필터 2개 이상 : 사이 8px */
+.package_filter label { display:flex; align-items:center; height:32px; padding-left:8px; font-size:var(--Font-base); font-weight:500; }
+.package_filter select { width:100%; height:46px; font-size:var(--Font-base); }
+.package_list { display:flex; flex-direction:column; gap:16px; }
+.package_list > li { display:grid; grid-template-columns:1fr auto; align-items:center; gap:8px; padding:16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
+.package_list strong { grid-column:1 / -1; font-weight:600; }
+.package_list strong a { font-weight:inherit; }
+.package_list .info { grid-column:1 / -1; display:flex; gap:8px; padding-bottom:8px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
+.package_list .info span + span:before { content:"|"; margin-right:8px; }
+.course_price { display:grid; grid-template-columns:auto auto; justify-content:start; column-gap:8px; font-size:var(--Font-medium); font-weight:600; line-height:1.5; }
+.course_price del { grid-column:1 / -1; justify-self:end; font-size:var(--Font-small); font-weight:400; color:var(--Neutral-600); }
+.course_price em { align-self:end; font-size:var(--Font-small); color:var(--Error); }
+.btn_course { display:flex; align-items:center; gap:2px; padding:6px; border:1px solid var(--Neutral-500); border-radius:var(--Border-radius); font-size:var(--Font-2xsmall); font-weight:500; }
+.btn_course:after { content:""; width:16px; height:16px; background:url(../images/common/ico_arrow_right.svg) no-repeat center / 16px; }
+
+/* 수강 과정 선택 : 패키지 정보 → (24) 기수 제목 → (16) 과정 목록 → (32) 다음 기수 */
+.course_wrap { display:flex; flex-direction:column; gap:16px; padding:24px var(--Gutter) 40px; }
+.package_summary { display:grid; grid-template-columns:70px 1fr; gap:8px 10px; padding:16px; background:var(--Neutral-200); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
+.package_summary dt { font-weight:700; }
+.package_summary dd { line-height:1.3; }
+.package_summary + .course_head { margin-top:8px; }
+:is(.course_list, .course_step) + .course_head { margin-top:16px; }
+.course_head { padding-left:8px; font-size:var(--Font-medium); font-weight:600; line-height:1.5; }
+.course_head span { margin-left:12px; font-size:var(--Font-small); color:var(--Neutral-800); letter-spacing:-0.14px; }
+.course_head em { font-weight:600; color:var(--Info); }
+
+/* 과정 목록 : 배지 줄 / 과정명 + (툴팁) + 체크박스 / (학점) */
+.course_list { padding:16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
+.course_list li { position:relative; display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.course_list li + li { padding-top:16px; }
+.course_list li:not(:last-child) { padding-bottom:16px; border-bottom:1px solid var(--Neutral-300); }
+.tags { display:flex; gap:4px; }
+.course_list .tags { flex-basis:100%; }
+.course_list label { font-size:var(--Font-base); font-weight:600; }
+.course_list input { width:20px; height:20px; margin:0 0 0 auto; background-size:20px; }
+.course_list .credit { flex-basis:100%; font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
+.course_list .btn_tooltip { margin-left:0; margin-top:-4px; }
+.course_list .tooltip { top:calc(100% - 4px); padding:12px 16px; font-size:var(--Font-small); }
+.tags span { display:flex; align-items:center; height:22px; padding:0 8px; border-radius:100px; font-size:var(--Font-2xsmall); font-weight:600; }
+.tags .badge { min-width:40px; justify-content:center; border:1px solid; }
+.tags .badge.blue { color:var(--Info); }
+.tags .badge.green { color:var(--Success); }
+.tags .badge.yellow { color:var(--Warning); }
+.tags .badge_deadline { background:#fdefec; color:#bd2c0f; }
+.tags .badge_closed { background:var(--Neutral-300); color:var(--Neutral-600); }
+.tags .type { padding:0; color:var(--Neutral-600); }
+
+/* 단계 묶음 (실습 혼합형) : 흰 제목줄 + 회색 목록 */
+.course_step { border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); overflow:hidden; }
+.course_step h4 { padding:16px; border-bottom:1px solid var(--Neutral-300); font-weight:600; line-height:1.5; }
+.course_step h4 em { color:var(--Info); }
+.course_step .course_list { border:0; border-radius:0; background:var(--Neutral-100); }
+
+/* 하단 고정 수강신청 버튼 : 퀵바 대신 (반투명 검정 배경) */
+.apply_bar { position:fixed; left:0; right:0; bottom:0; z-index:90; padding:16px var(--Gutter) calc(16px + var(--Safe-bottom)); background:rgba(17, 17, 17, .85); }
+.btn_apply { display:flex; align-items:center; justify-content:center; gap:4px; height:46px; background:var(--Info); border-radius:var(--Border-radius); font-weight:600; color:var(--Neutral-0); }
+.btn_apply:before { content:""; width:20px; height:20px; background:url(../images/common/ico_apply.svg) no-repeat center / 20px; }
+.footer:has(.apply_bar) { padding-bottom:calc(78px + var(--Safe-bottom)); } /* 버튼 높이만큼 여백 */
+body:has(.apply_bar) .btn_top { bottom:calc(90px + var(--Safe-bottom)); }
+
+/* 단과 강좌 (course_registration/single_course) : 패키지 목록 카드 재사용 */
+.term_info { padding:16px 12px; background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
+.term_info strong { display:block; padding:0 8px 8px; font-size:var(--Font-small); font-weight:700; }
+.term_info li { margin-left:24px; list-style:disc; font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.7; letter-spacing:-0.14px; }
+.single_list .tags { grid-column:1 / -1; }
+.single_list strong { grid-column:auto; } /* 과목명 옆 체크박스 (패키지 수강 과정과 같은 위치) */
+.single_list input { justify-self:end; width:20px; height:20px; background-size:20px; }
+.single_list .btns { display:flex; gap:8px; }
+.single_list .btn_course { justify-content:center; width:70px; }
+.single_list .btn_course:after { content:none; }
+
+/* 하단 고정 버튼 : 선택 수 + 장바구니 / 수강신청 */
+.apply_count { margin-bottom:8px; text-align:left; font-size:var(--Font-small); color:var(--Neutral-0); letter-spacing:-0.14px; }
+.apply_count em { font-weight:600; }
+.apply_bar .btn_pair > * { flex:1; }
+.btn_cart { display:flex; align-items:center; justify-content:center; gap:4px; height:46px; background:var(--Neutral-0); border-radius:var(--Border-radius); font-weight:600; color:var(--Info); }
+.btn_cart:before { content:""; width:20px; height:20px; background:url(../images/common/ico_cart_blue.svg) no-repeat center / 20px; }
+.footer:has(.apply_count) { padding-bottom:calc(107px + var(--Safe-bottom)); }
+body:has(.apply_count) .btn_top { bottom:calc(119px + var(--Safe-bottom)); }
+
+/* 단과 강좌 상세 (course_registration/single_course_detail) : 정보 박스·표·버튼 재사용 */
+.course_detail { display:flex; flex-direction:column; gap:16px; padding:24px var(--Gutter) 40px; }
+.detail_title { display:flex; align-items:center; gap:12px; }
+.detail_title h3 { font-size:var(--Font-large); font-weight:700; }
+.course_detail h4 { margin-top:24px; font-size:var(--Font-medium); font-weight:700; }
+.detail_title:has(h4) { margin-top:24px; justify-content:space-between; }
+.detail_title h4 { margin-top:0; }
+.course_detail .package_summary { gap:4px 0; }
+.course_detail .package_summary :is(dt, dd) { display:flex; align-items:center; gap:12px; min-height:30px; line-height:1.5; }
+.package_summary .deadline { color:var(--Error); }
+.package_summary .btn_small { min-width:0; height:30px; padding:0 12px; font-size:var(--Font-2xsmall); }
+.package_summary .fee { gap:4px; }
+.package_summary .fee del { color:var(--Neutral-600); }
+.package_summary .fee strong { font-size:var(--Font-small); font-weight:600; color:var(--Error); }
+.course_detail .btn_pair > * { flex:1; }
+.course_detail .btn_cart { border:1px solid var(--Info); }
+.course_detail h4 + .data_table { margin-top:0; }
+.course_intro { padding:16px; background:var(--Neutral-100); border:1px solid var(--Neutral-300); border-radius:var(--Border-radius); }
+.course_intro h5 { padding:0 12px 12px; border-bottom:1px solid var(--Neutral-500); font-size:var(--Font-base); font-weight:700; }
+.course_intro h5:not(:first-child) { margin-top:20px; }
+.course_intro .editor_content { padding-top:12px; font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.5; letter-spacing:-0.14px; }
+.course_intro ol[type="a"] > li { list-style:lower-alpha; }
+
+/* 일반 강좌 (course_registration/general_course) : 단과 강좌 카드 재사용 + 교재 / 가격 구분 */
+.general_list .info { padding-bottom:16px; }
+.general_list .info:has(+ .book_list) { padding-bottom:0; border-bottom:0; }
+.book_list { grid-column:1 / -1; display:flex; flex-direction:column; gap:6px; padding-bottom:16px; border-bottom:1px solid var(--Neutral-300); }
+.book_list li { display:flex; align-items:center; gap:8px; font-size:var(--Font-2xsmall); line-height:16px; }
+.book_list span { padding:0 8px; background:var(--Neutral-500); border-radius:var(--Border-radius); font-size:10px; color:var(--Neutral-0); }
+.price_list { display:grid; grid-template-columns:auto auto; justify-content:start; align-items:center; column-gap:8px; }
+.price_list dt { min-width:40px; font-size:var(--Font-2xsmall); font-weight:600; }
+.price_list dt span { color:var(--Info); }
+.price_list dd { display:flex; align-items:center; justify-content:flex-end; gap:4px; height:26px; font-size:var(--Font-base); font-weight:600; }
+.price_list del { margin-right:4px; font-size:var(--Font-2xsmall); font-weight:400; color:var(--Neutral-600); }
+.price_list em { font-size:var(--Font-2xsmall); color:var(--Error); }
+
+/* 일반 강좌 상세 : 수강료 여러 줄 / 교재 소개 표 */
+.package_summary .fee_list { flex-direction:column; align-items:flex-start; gap:0; }
+.fee_list p { display:flex; align-items:center; gap:4px; line-height:1.5; }
+.fee_list b { width:45px; margin-right:12px; font-weight:600; text-align:right; }
+.fee_list b span { color:var(--Info); }
+.book_table img { width:70px; height:95px; object-fit:cover; vertical-align:top; }
+.book_table .no_img { display:inline-flex; align-items:center; justify-content:center; width:70px; height:95px; background:var(--Neutral-300); font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
+.book_table td span:not(.no_img) { color:var(--Neutral-600); }
+.book_table .course_price { justify-content:end; font-size:var(--Font-base); }
+
+/* 교수님 소개 팝업 : 2명 이상이면 스와이퍼 (화살표 + 1/2) */
+.profile_layer { width:320px; }
+.profile_layer .swiper-slide { max-height:calc(100dvh - 260px); overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; }
+.profile_thumb img { display:block; height:100%; margin:0 auto; object-fit:cover; }
+.profile_layer h3 { padding:16px 0; border-bottom:1px solid var(--Neutral-900); font-size:var(--Font-medium); font-weight:700; text-align:left; }
+.profile_layer .data_table { border-top:0; }
+.profile_layer td ul { padding-left:18px; }
+.profile_layer td li { list-style:disc; font-size:inherit; color:inherit; }
+.profile_controls { display:flex; align-items:center; justify-content:center; gap:5px; }
+.profile_controls button { width:20px; height:20px; background:url(../images/common/ico_arrow_right.svg) no-repeat center / 20px; }
+.profile_controls .btn_prev { transform:scaleX(-1); }
+.profile_controls .profile_page { width:auto; font-size:var(--Font-xsmall); color:#33363d; letter-spacing:1.95px; padding-top:8px; } /* 스와이퍼 기본 width:100% 해제 */
+.profile_page .swiper-pagination-current { color:var(--Neutral-900); }
+.profile_layer > .btn_primary { margin-top:16px; }
+.profile_layer .profile_thumb { background:var(--Neutral-200); border-radius:var(--Border-radius); }
+
+/* ==============================
+   샘플 강의 (course_registration/sample_lecture) : TV 카드 재사용, 배지·날짜 대신 교수명
+   ============================== */
+.board_info + .sample_list { margin-top:20px; }
+.sample_list img { aspect-ratio:328 / 209; }
+.sample_list strong { margin-bottom:12px; }
+.tv_list .prof { margin:0 20px; font-size:var(--Font-small); color:var(--Neutral-800); letter-spacing:-0.14px; }
+
+/* ==============================
+   결제 내역 (classroom/payment_control/payment_history)
+   ============================== */
+.payment_wrap { padding:24px var(--Gutter) 40px; }
+.payment_wrap > .line_tab { margin:24px calc(var(--Gutter) * -1) 0; }
+.order + .divider { margin-bottom:32px; }
+.pay_search { display:flex; flex-direction:column; gap:8px; padding:24px 0; border-bottom:1px solid var(--Neutral-300); }
+.pay_search .label { padding-left:8px; font-size:var(--Font-base); font-weight:500; color:var(--Neutral-800); }
+.pay_search .label:not(:first-child) { margin-top:8px; }
+.date_range { display:flex; align-items:center; gap:12px; font-weight:700; }
+.date_range input { flex:1; min-width:0; font-size:var(--Font-small); }
+.pay_search select { width:100%; font-size:var(--Font-base); }
+.check_all { height:60px; font-size:var(--Font-base); }
+.payment_wrap .divider { margin-top:0; }
+.payment_wrap .order { padding-bottom:32px; }
+.payment_wrap .order:not(:has(~ .order)) { padding-bottom:0; } /* 마지막 주문 (뒤에 order_bar 가 있어서 :last-child 안 됨) */
+.order > .form_check { margin-bottom:16px; color:var(--Neutral-600); }
+.order strong { font-weight:500; color:var(--Neutral-900); }
+.order_card { border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); overflow:hidden; }
+.order_card + .order_card { margin-top:16px; }
+.order_card h4 { padding:16px; font-size:var(--Font-medium); font-weight:600; }
+.order_card ul { background:var(--Neutral-100); border-top:1px solid var(--Neutral-500); }
+.order_card li { display:flex; flex-direction:column; gap:8px; padding:16px; font-weight:600; }
+.order_card li + li { border-top:1px solid var(--Neutral-300); }
+.order_card li span { font-size:var(--Font-2xsmall); font-weight:400; color:var(--Neutral-600); line-height:16px; }
+.order_card .group { padding:14px 16px; background:var(--Neutral-300); text-align:center; }
+.order_card li span:has(b) { display:flex; align-items:center; gap:8px; }
+.order_card li b { padding:3px 8px; background:#fdefec; border-radius:100px; font-weight:600; color:#bd2c0f; line-height:normal; } /* 환불 처리중 */
+.order_card li b.done { background:var(--Neutral-300); color:var(--Neutral-600); } /* 환불 완료 */
+
+/* 하단 고정 버튼 : 퀵바 뒤까지 배경을 깔아 퀵바 둥근 모서리 사이로 본문이 비치지 않게 */
+.order_bar { position:fixed; left:0; right:0; bottom:0; z-index:89; gap:12px; padding:16px var(--Gutter) calc(76px + var(--Safe-bottom)); background:rgba(17, 17, 17, .8); }
+body:has(.order_bar) .footer { padding-bottom:calc(126px + var(--Safe-bottom)); }
+body:has(.order_bar) .btn_top { bottom:calc(152px + var(--Safe-bottom)); }
+.order_bar .btn_primary.info { background:var(--Info); border-color:var(--Info); } /* 수강신청 버튼과 같은 파란색 */
+
+/* 결제 정보 하단 시트 (결제 정보 확인) */
+.payinfo_layer { gap:0; }
+.payinfo_layer h2 { display:flex; align-items:center; justify-content:space-between; padding:0 44px 16px 0; }
+.payinfo_layer h2 span { font-size:var(--Font-small); font-weight:400; color:var(--Neutral-800); letter-spacing:-0.14px; }
+.payinfo_layer h2 em { font-weight:600; color:var(--Primary-500); }
+.pay_info { display:grid; grid-template-columns:auto 1fr; gap:10px 16px; padding:16px 8px; border-bottom:1px solid var(--Neutral-300); }
+.pay_info :is(dt, dd) { font-size:var(--Font-small); line-height:1.5; letter-spacing:-0.14px; }
+.pay_info dt { color:var(--Neutral-600); }
+.pay_info dd { font-weight:500; text-align:right; }
+.pay_info .deadline { color:var(--Error); }
+.pay_info .info { color:var(--Info); }
+.pay_info .note { grid-column:1 / -1; font-size:var(--Font-2xsmall); font-weight:400; color:var(--Neutral-800); line-height:16px; text-align:left; }
+.pay_note { margin-top:24px; padding:0 8px; font-size:var(--Font-2xsmall); color:var(--Neutral-800); line-height:16px; }
+.pay_nav { display:flex; justify-content:space-between; margin-top:24px; }
+.btn_receipt { margin-top:24px; } /* 결제 완료 : 영수증 보기 */
+.pay_nav .btn_small { gap:4px; }
+.pay_nav .btn_small:enabled { border-color:var(--Primary-500); color:var(--Primary-500); } /* 비활성은 공통 button:disabled */
+.pay_nav .btn_small:before,
+.pay_nav .btn_small:after { width:16px; height:16px; background:currentColor; -webkit-mask:url(../images/common/ico_arrow_right.svg) no-repeat center / 16px; mask:url(../images/common/ico_arrow_right.svg) no-repeat center / 16px; }
+.pay_nav .prev:before { content:""; transform:scaleX(-1); }
+.pay_nav .next:after { content:""; }
+.pay_nav[hidden] { display:none; }
+
+/* ==============================
+   환불 내역 (classroom/payment_control/refund_history) : 결제 내역 재사용
+   ============================== */
+.refund_wrap > .pay_search:first-child { padding-top:0; }
+.order_date { margin:-12px 0 16px 32px; font-size:var(--Font-base); color:var(--Neutral-600); line-height:1.5; }
+.order_card h4 .form_check { gap:20px; height:auto; font-size:inherit; font-weight:inherit; color:var(--Neutral-900); }
+.order_card li:has(> input) { display:grid; grid-template-columns:24px 1fr; align-items:center; column-gap:20px; row-gap:8px; }
+.order_card li > input { grid-row:span 3; }
+.order_card li em { font-size:var(--Font-small); font-weight:400; color:var(--Neutral-800); letter-spacing:-0.14px; }
+.order_bar:has(.bar_note) { flex-wrap:wrap; row-gap:8px; }
+.order_bar .bar_note { flex-basis:100%; font-size:var(--Font-2xsmall); color:var(--Neutral-0); line-height:16px; text-align:center; }
+body:has(.bar_note) .footer { padding-bottom:calc(150px + var(--Safe-bottom)); }
+body:has(.bar_note) .btn_top { bottom:calc(176px + var(--Safe-bottom)); }

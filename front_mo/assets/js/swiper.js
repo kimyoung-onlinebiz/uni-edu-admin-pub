@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initEventBannerSwipers();
     initScholarshipSwiper();
     initCertMarkSwiper();
+    initProfileSwiper();
 });
 
 // ==============================
@@ -106,7 +107,7 @@ function initScholarshipSwiper() {
 
 // ==============================
 // SECTION: 푸터 인증 마크 (ISMS / 교육부 로고)
-// - 두 이미지를 페이드로 번갈아 노출
+// - 두 이미지를 페이드로 번갈아 노출, 스와이프(마우스 드래그)로도 넘김
 // ==============================
 function initCertMarkSwiper() {
     const container = document.querySelector('.cert_mark');
@@ -120,7 +121,37 @@ function initCertMarkSwiper() {
         fadeEffect: { crossFade: true },
         loop: true,
         speed: 800,
-        allowTouchMove: false,
+        grabCursor: true, // 마우스로 끌어서 넘기기 (터치 스와이프 포함)
         autoplay: { delay: 3000, disableOnInteraction: false },
+    });
+}
+
+// ==============================
+// SECTION: 교수님 소개 팝업 (PC와 동일)
+// - 교수님이 2명 이상이면 반복 + 자동 넘김 + 화살표 / 페이지(1/2), 1명이면 컨트롤 숨김
+// - 팝업이 닫혀 있을 때 만들어지므로 observer 로 열릴 때 크기 다시 계산
+// ==============================
+function initProfileSwiper() {
+    const container = document.querySelector('.profile_swiper');
+
+    if (!container) {
+        return;
+    }
+
+    const total = container.querySelectorAll('.swiper-slide').length;
+    const controls = container.querySelector('.profile_controls');
+
+    if (total <= 1) {
+        controls.hidden = true;
+    }
+
+    new Swiper(container, {
+        loop: total > 1,
+        autoHeight: true,
+        autoplay: total > 1 ? { delay: 3000, disableOnInteraction: false } : false,
+        navigation: { prevEl: controls.querySelector('.btn_prev'), nextEl: controls.querySelector('.btn_next') },
+        pagination: { el: controls.querySelector('.profile_page'), type: 'fraction' },
+        observer: true,
+        observeParents: true,
     });
 }
