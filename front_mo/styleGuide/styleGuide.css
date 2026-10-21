@@ -74,3 +74,29 @@
 .sg_icons li.dark img { width:32px; height:32px; padding:4px; background:var(--Neutral-800); border-radius:50%; }
 .styleGuide_content > h2 + h3 { padding-top:10px; }
 .sg_tabpanel { margin-top:12px; padding:16px; background:var(--Neutral-100); border-radius:var(--Border-2radius); font-size:var(--Font-small); color:var(--Neutral-800); }
+
+/* ==============================
+   좁은 화면 (태블릿·모바일) : 왼쪽 고정 메뉴를 위로 올리고 본문 전체 폭 사용
+   ============================== */
+@media (max-width:1024px) {
+    .styleGuide_wrapper .styleGuide_lnb { position:static; width:auto; height:auto; padding:20px 16px 0; }
+    .styleGuide_wrapper .styleGuide_lnb h1 img { width:140px; }
+    .styleGuide_wrapper nav ul { display:flex; flex-wrap:wrap; gap:4px 16px; margin-top:16px; padding:12px 0; }
+    .styleGuide_wrapper nav ul a { padding-bottom:0; font-size:14px; }
+    .styleGuide_wrapper .adminHeader { height:auto; margin-left:0; padding:16px; }
+    .styleGuide_wrapper .adminHeader h1 { padding-top:0; font-size:26px; }
+    .styleGuide_wrapper .adminHeader p { font-size:14px; }
+    .styleGuide_wrapper .styleGuide_content { margin-left:0; padding:24px 16px 80px; }
+    .styleGuide_wrapper .styleGuide_content > h2,
+    .styleGuide_wrapper .styleGuide_content > h2 a { font-size:22px; }
+    .styleGuide_wrapper h3 { padding-top:24px; font-size:18px; }
+    .link .desc { display:block; margin-left:0; }
+    .sg_item { flex-direction:column; gap:12px; }
+    .sg_preview { width:100%; max-width:360px; }
+    .styleGuide_wrapper .color { grid-template-columns:repeat(2, 1fr); gap:8px; }
+    .sg_icons { grid-template-columns:repeat(4, 1fr); }
+    .sg_weight { flex-wrap:wrap; gap:16px 24px; padding:16px; }
+    .sg_table th,
+    .sg_table td { padding:8px; font-size:13px; word-break:break-all; }
+    .styleGuide_quickNav { top:0; }
+}

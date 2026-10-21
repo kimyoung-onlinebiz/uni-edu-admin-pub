@@ -918,9 +918,9 @@ body:has(.apply_count) .btn_top { bottom:calc(119px + var(--Safe-bottom)); }
 .price_list em { font-size:var(--Font-2xsmall); color:var(--Error); }
 
 /* 일반 강좌 상세 : 수강료 여러 줄 / 교재 소개 표 */
-.package_summary .fee_list { flex-direction:column; align-items:flex-start; gap:0; }
+.package_summary dd.fee_list { flex-direction:column; align-items:flex-start; gap:0; }
 .fee_list p { display:flex; align-items:center; gap:4px; line-height:1.5; }
-.fee_list b { width:45px; margin-right:12px; font-weight:600; text-align:right; }
+.fee_list b { flex:none; width:56px; font-weight:600; } /* 구분 글자 왼쪽 정렬 : 학습기간 · 교수님 값과 앞줄 맞춤 */
 .fee_list b span { color:var(--Info); }
 .book_table img { width:70px; height:95px; object-fit:cover; vertical-align:top; }
 .book_table .no_img { display:inline-flex; align-items:center; justify-content:center; width:70px; height:95px; background:var(--Neutral-300); font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
