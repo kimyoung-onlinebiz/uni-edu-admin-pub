@@ -100,8 +100,7 @@
 .multiple.email .btn_clear { right:12px; }
 
 /* 라디오, 체크박스 묶음 */
-.form_check { display:inline-flex; align-items:center; gap:8px; height:32px; font-size:var(--Font-medium); color:var(--Neutral-600); letter-spacing:-0.16px; }
-.form_check:has(:checked) { color:var(--Neutral-900); }
+.form_check { display:inline-flex; align-items:center; gap:8px; height:32px; font-size:var(--Font-medium); letter-spacing:-0.16px; }
 .agree_row { display:flex; align-items:center; gap:8px; padding:8px 0; }
 .agree_row dt { width:120px; padding-left:8px; font-size:var(--Font-medium); font-weight:500; }
 .agree_row dd { display:flex; gap:16px; }
@@ -760,7 +759,6 @@
 .feedback_list .question:before { content:counter(question) "."; flex:none; margin-right:4px; }
 .feedback_list .answer { display:flex; flex-direction:column; gap:4px; padding:10px 0; margin-left:12px; }
 .feedback_list label { display:flex; align-items:center; gap:8px; height:32px; line-height:1.5; }
-.feedback_list input[type="radio"] { width:20px; height:20px; background-size:20px; }
 
 /* 만족도 : 별점 + 의견 */
 .feedback_title { margin-top:16px; padding:10px 0 16px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-medium); font-weight:600; line-height:1.5; }
@@ -771,7 +769,7 @@
 .star_rating input:focus-visible + label { outline:2px solid var(--Primary-500); }
 .feedback_opinion { display:block; width:100%; height:228px; margin-top:16px; padding:20px; resize:none; }
 .feedback_agree { display:flex; align-items:flex-start; gap:6px; margin:16px calc(var(--Gutter) * -1) 0; padding:12px var(--Gutter) 0; border-top:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); line-height:16px; }
-.feedback_agree input { width:20px; height:20px; background-size:20px; }
+.feedback_agree input { width:22px; height:22px; background-size:22px; } /* 동의 문구 줄 높이에 맞춰 기본(24px)보다 작게 */
 .feedback_wrap > .btn_primary { margin-top:56px; }
 
 /* ==============================
@@ -805,7 +803,7 @@
 .package_filter label { display:flex; align-items:center; height:32px; padding-left:8px; font-size:var(--Font-base); font-weight:500; }
 .package_filter select { width:100%; height:46px; font-size:var(--Font-base); }
 .package_list { display:flex; flex-direction:column; gap:16px; }
-.package_list > li { display:grid; grid-template-columns:1fr auto; align-items:center; gap:8px; padding:16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
+.package_list > li { position:relative; display:grid; grid-template-columns:1fr auto; align-items:center; gap:8px; padding:16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
 .package_list strong { grid-column:1 / -1; font-weight:600; }
 .package_list strong a { font-weight:inherit; }
 .package_list .info { grid-column:1 / -1; display:flex; gap:8px; padding-bottom:8px; border-bottom:1px solid var(--Neutral-300); font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
@@ -828,14 +826,16 @@
 .course_head em { font-weight:600; color:var(--Info); }
 
 /* 과정 목록 : 배지 줄 / 과정명 + (툴팁) + 체크박스 / (학점) */
-.course_list { padding:16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
+.course_list { display:flex; flex-direction:column; gap:16px; padding:16px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
 .course_list li { position:relative; display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
-.course_list li + li { padding-top:16px; }
 .course_list li:not(:last-child) { padding-bottom:16px; border-bottom:1px solid var(--Neutral-300); }
 .tags { display:flex; gap:4px; }
 .course_list .tags { flex-basis:100%; }
 .course_list label { font-size:var(--Font-base); font-weight:600; }
-.course_list input { width:20px; height:20px; margin:0 0 0 auto; background-size:20px; }
+/* 체크박스 : 오른쪽 맨 위 고정 (단과·일반 강좌 카드 공통), 첫 줄은 체크박스 자리만큼 비움 */
+:is(.course_list li, .package_list > li) > input[type="checkbox"] { position:absolute; top:0; right:0; margin:0; }
+.package_list > li > input[type="checkbox"] { top:16px; right:16px; }
+:is(.course_list li, .package_list > li):has(> input[type="checkbox"]) > :first-child { padding-right:32px; }
 .course_list .credit { flex-basis:100%; font-size:var(--Font-2xsmall); color:var(--Neutral-600); line-height:16px; }
 .course_list .btn_tooltip { margin-left:0; margin-top:-4px; }
 .course_list .tooltip { top:calc(100% - 4px); padding:12px 16px; font-size:var(--Font-small); }
@@ -866,8 +866,6 @@ body:has(.apply_bar) .btn_top { bottom:calc(90px + var(--Safe-bottom)); }
 .term_info strong { display:block; padding:0 8px 8px; font-size:var(--Font-small); font-weight:700; }
 .term_info li { margin-left:24px; list-style:disc; font-size:var(--Font-small); color:var(--Neutral-800); line-height:1.7; letter-spacing:-0.14px; }
 .single_list .tags { grid-column:1 / -1; }
-.single_list strong { grid-column:auto; } /* 과목명 옆 체크박스 (패키지 수강 과정과 같은 위치) */
-.single_list input { justify-self:end; width:20px; height:20px; background-size:20px; }
 .single_list .btns { display:flex; gap:8px; }
 .single_list .btn_course { justify-content:center; width:70px; }
 .single_list .btn_course:after { content:none; }
@@ -947,7 +945,7 @@ body:has(.apply_count) .btn_top { bottom:calc(119px + var(--Safe-bottom)); }
    샘플 강의 (course_registration/sample_lecture) : TV 카드 재사용, 배지·날짜 대신 교수명
    ============================== */
 .board_info + .sample_list { margin-top:20px; }
-.sample_list img { aspect-ratio:328 / 209; }
+.sample_list img { aspect-ratio:1000 / 680; }
 .sample_list strong { margin-bottom:12px; }
 .tv_list .prof { margin:0 20px; font-size:var(--Font-small); color:var(--Neutral-800); letter-spacing:-0.14px; }
 

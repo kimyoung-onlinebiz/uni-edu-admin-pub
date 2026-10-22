@@ -103,6 +103,9 @@ input[type="radio"]:checked { background-image:url(../images/common/ico_radio_on
 input[type="checkbox"]:disabled { background-color:transparent; background-image:url(../images/common/ico_check_disabled.svg); }
 input[type="checkbox"]:disabled:checked { background-image:url(../images/common/ico_check_disabled_on.svg); }
 input[type="checkbox"]:focus-visible,input[type="radio"]:focus-visible { outline:2px solid var(--Primary-500); outline-offset:1px; }
+/* 라디오·체크박스 라벨 색상 : 미선택 Neutral-600 / 선택 Neutral-900 (약관 동의 목록 제외) */
+label:not(.agree_list label):has(> input:is([type="radio"],[type="checkbox"])),.form_check:has(> input:is([type="radio"],[type="checkbox"])),input:is([type="radio"],[type="checkbox"]) + label { color:var(--Neutral-600); }
+label:not(.agree_list label):has(> input:is([type="radio"],[type="checkbox"]):checked),.form_check:has(> input:is([type="radio"],[type="checkbox"]):checked),input:is([type="radio"],[type="checkbox"]):checked + label { color:var(--Neutral-900); }
 td:has(> input[type="checkbox"]:only-child):not(:has(> label)) > input[type="checkbox"],td:has(> input[type="radio"]:only-child):not(:has(> label)) > input[type="radio"],th:has(> input[type="checkbox"]:only-child):not(:has(> label)) > input[type="checkbox"],th:has(> input[type="radio"]:only-child):not(:has(> label)) > input[type="radio"] { margin: 0 !important;}
 select { appearance:none; background:#fff url(../images/common/ico_select_arrow.svg) no-repeat calc(100% - 16px) center / 16px; padding-right:40px; cursor:pointer; color:var(--Neutral-500); width:auto; line-height:1.2; font-size:var(--Font-base); }
 select.is-selected { color:var(--Neutral-900); font-weight:500; }

@@ -258,9 +258,11 @@ input.success,input.success:focus,textarea.success,textarea.success:focus,select
   display:flex;
   align-items:center;
   font-weight:400;
-  color:var(--Neutral-600);
 }
 .form_check strong { color:var(--Error); font-weight:400; }
+/* 라디오·체크박스 라벨 색상 : 미선택 Neutral-600 / 선택 Neutral-900 (시험·퀴즈 보기, 전체동의, 메인 팝업, 온라인실습 제외) */
+label:not(.answer_item, .all_agree_label, .layer_mainEvent label, .onlinePractice label):has(> input:is([type="radio"],[type="checkbox"])),.form_check:has(> input:is([type="radio"],[type="checkbox"])),input:is([type="radio"],[type="checkbox"]) + label:not(.layer_mainEvent label, .onlinePractice label) { color:var(--Neutral-600); }
+label:not(.answer_item, .all_agree_label, .layer_mainEvent label, .onlinePractice label):has(> input:is([type="radio"],[type="checkbox"]):checked),.form_check:has(> input:is([type="radio"],[type="checkbox"]):checked),input:is([type="radio"],[type="checkbox"]):checked + label:not(.layer_mainEvent label, .onlinePractice label) { color:var(--Neutral-900); }
 
 /* 체크/라디오 그룹 컨테이너 */
 .check_group { display:flex; flex-wrap:wrap; gap:20px; }
