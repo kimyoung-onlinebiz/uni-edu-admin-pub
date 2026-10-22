@@ -1146,6 +1146,10 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .composition .course_header, .layer_content .course_header { flex-direction:column; align-items:flex-start; justify-content:flex-start; gap:0; }
 .composition .course_header:first-child span { margin-top:8px; }
 .composition .course_header span,.layer_content .course_header span { color:var(--Neutral-900); font-weight:600; font-size:var(--Font-base); margin-top:24px; }
+/* 구성 과정 그룹 : 기수(실습+이론) / 자격증·독학사 / 기타 / 교재 를 테두리로 묶음 */
+.course_group { padding:24px 24px 32px; border:1px solid var(--Neutral-500); border-radius:var(--Border-2radius); }
+.course_group + .course_group { margin-top:16px; }
+.course_group > .course_header:first-child > span:first-child { margin-top:0; }
 
 .lecture_list .refund_detail { display:flex; justify-content:space-between; align-items:center; margin:0 24px 16px; padding-top:16px; border-top:1px solid var(--Neutral-300); }
 .lecture_list .refund_detail dt { font-size:var(--Font-2xsmall); color:var(--Neutral-600); }
