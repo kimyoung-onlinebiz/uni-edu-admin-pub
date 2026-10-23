@@ -1039,7 +1039,7 @@ body:has(.bar_note) .btn_top { bottom:calc(176px + var(--Safe-bottom)); }
 .cart_head + .divider,
 .cart_wrap > .divider:first-child { margin-top:0; } /* 강의계획서 확인 : 신청 단계 바로 아래 구분선 */
 .cart_group > h3 { display:flex; align-items:center; gap:12px; margin-bottom:16px; font-size:var(--Font-medium); font-weight:600; line-height:1.5; }
-.cart_group > h3 input { margin-right:-4px; } /* 체크박스 ~ 구분명 8px */
+.cart_group > h3 .form_check { height:auto; font-size:inherit; font-weight:inherit; color:var(--Neutral-900); } /* 체크박스 ~ 구분명 8px */
 :is(.cart_group, .cart_summary) > h3 span { font-size:var(--Font-small); font-weight:500; color:var(--Neutral-800); letter-spacing:-0.14px; }
 :is(.cart_group, .cart_summary) > h3 em { font-weight:700; color:var(--Primary-500); }
 
@@ -1100,6 +1100,8 @@ body:has(.plan_bar) .btn_top { bottom:calc(262px + var(--Safe-bottom)); }
 .pay_form :is(.info_message, .error_message) { font-size:var(--Font-2xsmall); line-height:16px; letter-spacing:0; }
 .pay_form .info_message { font-weight:400; }
 .pay_form .form_check { font-size:var(--Font-base); }
+.pay_form .check_group { padding:0; }
+.pay_form .input_area + .btn_primary { margin-top:4px; } /* 주민등록번호 인증 */
 .pay_form .input_area > .form_check { font-size:var(--Font-small); letter-spacing:-0.14px; } /* 회원정보 업데이트 동의 */
 .pay_form .btn_check { display:flex; align-items:center; justify-content:center; background:var(--Neutral-800); font-size:var(--Font-base); }
 .pay_form .lecture_notice { grid-template-columns:1fr auto; margin-top:8px; } /* 관련 법령 확인 버튼 오른쪽 */
@@ -1141,6 +1143,9 @@ body:has(.plan_bar) .btn_top { bottom:calc(262px + var(--Safe-bottom)); }
 .coupon_select .coupon_head { justify-content:space-between; padding:14px 20px; }
 .coupon_select li .coupon_head > label:has(> input[type]) { display:flex; align-items:center; gap:8px; color:var(--Neutral-800); } /* 공통 라디오 라벨 회색 대신 */
 .coupon_select .btn_course:after { content:none; }
+.coupon_select li { position:relative; cursor:pointer; }
+.coupon_select li .coupon_head > label:after { content:""; position:absolute; inset:0; } /* 카드 전체 클릭 시 선택 (취소 버튼 제외) */
+.coupon_select .btn_course { position:relative; z-index:1; }
 .coupon_select li:has(:checked) { border-color:var(--Info); box-shadow:0 0 0 2px var(--Info); }
 
 /* 구성 과정 확인 (payment/course_composition) : 수강 과정 선택 기수 제목 · 단계 묶음 재사용, PC는 레이어 */

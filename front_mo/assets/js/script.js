@@ -429,6 +429,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 결제 본인인증 구분 : 내국인 → 주민등록번호, 외국인 → 외국인등록번호 (순서대로 .js-nationality 노출)
+    const nationalityAreas = document.querySelectorAll('.js-nationality');
+    document.querySelectorAll('input[name="nationality"]').forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+            nationalityAreas.forEach((area, i) => {
+                area.hidden = i !== index;
+            });
+        });
+    });
+
     document.querySelectorAll('.agree_list .btn_view').forEach((button) => {
         button.addEventListener('click', () => {
             const item = button.closest('li');

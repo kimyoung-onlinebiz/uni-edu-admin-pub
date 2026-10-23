@@ -151,7 +151,7 @@
                 <h3 class="form_title">본인인증 정보</h3>
 
                 <div class="input_area">
-                    <p class="field_label">내/외국인</p>
+                    <p class="field_label">구분</p>
                     <div class="check_group">
                         <label class="form_check"><input type="radio" name="nationality" checked>내국인</label>
                         <label class="form_check"><input type="radio" name="nationality">외국인</label>
@@ -167,8 +167,10 @@
                     <p class="error_message">이름은 2자 이상 입력해 주세요.</p>
                 </div>
 
-                <!-- 주민등록번호 : 이메일 입력(.multiple.email) 구조 재사용 -->
-                <div class="input_area">
+                <!-- 주민등록번호 : 이메일 입력(.multiple.email) 구조 재사용
+                     [외국인] 구분에서 외국인 선택 시 주민등록번호 대신 외국인등록번호 노출 (13자리 동일)
+                     [인증] 회원가입 완료 화면 보조 버튼(.btn_primary) 재사용 -->
+                <div class="input_area js-nationality">
                     <label for="pay_rrn" class="field_label">주민등록번호</label>
                     <div class="multiple email">
                         <input type="text" id="pay_rrn" placeholder="**********" title="주민등록번호 앞자리" inputmode="numeric" maxlength="6">
@@ -176,6 +178,15 @@
                         <input type="password" placeholder="**********" title="주민등록번호 뒷자리" inputmode="numeric" maxlength="7">
                     </div>
                 </div>
+                <div class="input_area js-nationality" hidden>
+                    <label for="pay_frn" class="field_label">외국인등록번호</label>
+                    <div class="multiple email">
+                        <input type="text" id="pay_frn" placeholder="**********" title="외국인등록번호 앞자리" inputmode="numeric" maxlength="6">
+                        <span>-</span>
+                        <input type="password" placeholder="**********" title="외국인등록번호 뒷자리" inputmode="numeric" maxlength="7">
+                    </div>
+                </div>
+                <button type="button" class="btn_primary">인증</button>
 
                 <!-- 유의사항 : 수강중인 강좌 유의사항 박스(.lecture_notice) + 오른쪽 버튼 재사용 -->
                 <div class="lecture_notice">
@@ -321,18 +332,18 @@
                     <label for="pay_coupon" class="field_label">쿠폰</label>
                     <div class="multiple">
                         <input type="text" id="pay_coupon" placeholder="0">
-                        <a href="coupon_search.html" class="btn_check">쿠폰조회</a>
+                        <a href="coupon_search.html" class="btn_check">쿠폰 조회</a>
                     </div>
                     <p class="info_message">* 교재는 쿠폰 할인이 적용되지 않습니다.</p>
                 </div>
 
                 <div class="input_area pay_method">
-                    <p class="field_label">결제수단</p>
+                    <p class="field_label">결제 수단</p>
                     <div class="check_group">
                         <label class="form_check"><input type="radio" name="pay_method" checked>퀵 계좌이체</label>
-                        <label class="form_check"><input type="radio" name="pay_method">신용카드</label>
-                        <label class="form_check"><input type="radio" name="pay_method">가상계좌</label>
-                        <label class="form_check"><input type="radio" name="pay_method">수기결제</label>
+                        <label class="form_check"><input type="radio" name="pay_method">신용 카드</label>
+                        <label class="form_check"><input type="radio" name="pay_method">가상 계좌</label>
+                        <label class="form_check"><input type="radio" name="pay_method">수기 결제</label>
                     </div>
                     <ul class="pay_guide">
                         <li>결제 보안프로그램을 통해 결제 중 입력된 모든 개인정보를 철저하게 보호하고 있습니다.</li>
@@ -346,7 +357,7 @@
                     <label for="pay_zipcode" class="field_label">주소</label>
                     <div class="multiple">
                         <input type="text" id="pay_zipcode" placeholder="우편번호">
-                        <button type="button" class="btn_check">주소 검색</button>
+                        <button type="button" class="btn_check">검색</button>
                     </div>
                     <input type="text" placeholder="주소를 입력해 주세요." title="주소">
                     <input type="text" placeholder="상세 주소를 입력해 주세요." title="상세 주소">
@@ -358,7 +369,7 @@
 
             <!-- 결제금액 : 장바구니 상세내역 재사용, 총 할인 금액 아래 세부 할인(div.sub) -->
             <section class="cart_summary">
-                <h3>결제금액<span>총 <em>7</em>건</span></h3>
+                <h3>결제 상세내역<span>총 <em>7</em>건</span></h3>
                 <dl class="pay_info pay_amount">
                     <dt>총 상품 금액</dt><dd>5,302,000원</dd>
                     <dt>총 할인 금액</dt><dd class="deadline">- 3,254,500원</dd>

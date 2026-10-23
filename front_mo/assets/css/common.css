@@ -339,3 +339,10 @@ body:has(.layer_popup:not([hidden])) { pointer-events:none; }
 
 /* 20. 데이터 없음 (목록이 비었을 때 공통) : <p class="no_data">사용 가능한 쿠폰이 없습니다.</p> */
 .no_data { display:flex; align-items:center; justify-content:center; min-height:300px; font-size:var(--Font-small); color:var(--Neutral-600); line-height:1.5; letter-spacing:-0.14px; text-align:center; }
+
+/* 모션 */
+@keyframes FadeIn {
+	from { opacity:0; }
+	to { opacity:1; }
+}
+.flash_ani { animation:FadeIn 1s infinite; }
