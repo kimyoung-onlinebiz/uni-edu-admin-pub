@@ -208,6 +208,32 @@ document.addEventListener('DOMContentLoaded', () => {
         show(0);
     });
 
+    // 강의계획서 확인 (payment/course_plan_check) : "강의계획서 확인하기"를 누르면 확인 문구 체크 + 결제하기 활성화
+    // - 강의계획서 페이지에 다녀와도 유지되도록 세션 저장소에 기록 (실제 동의 여부 판단은 개발에서 처리)
+    document.querySelectorAll('.plan_bar').forEach((bar) => {
+        const pay = bar.querySelector('.js-plan-pay');
+        const confirmPlan = () => {
+            bar.classList.add('is-confirmed');
+            pay.disabled = false;
+        };
+        try {
+            if (sessionStorage.getItem('planConfirmed')) confirmPlan();
+        } catch (e) {
+            // 저장소 접근이 막힌 환경에서는 매번 비활성으로 시작
+        }
+        bar.querySelector('.js-plan-view').addEventListener('click', () => {
+            confirmPlan();
+            try {
+                sessionStorage.setItem('planConfirmed', '1');
+            } catch (e) {
+                // 저장 실패 시에도 현재 화면은 활성 상태 유지
+            }
+        });
+        pay.addEventListener('click', () => {
+            if (pay.dataset.href) location.href = pay.dataset.href;
+        });
+    });
+
     // 툴팁 (성적관리 평가 기준) : 버튼으로 열고 닫기, 바깥·툴팁 내용을 누르면 닫힘, 한 번에 하나만 열림, 화살표는 버튼 위치에 맞춤
     const tooltipButtons = document.querySelectorAll('.btn_tooltip');
     const closeTooltips = (except) => {
