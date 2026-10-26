@@ -553,6 +553,7 @@ ol.layer_guide li strong { color:var(--Info); }
 /* 게시판 리스트 */
 .board_list { display:flex; flex-direction:column; }
 .board_list .material-symbols-rounded { font-weight:300; }
+.board_list a.material-symbols-rounded:hover,.board_list button.material-symbols-rounded:hover { font-weight:400; }
 .board_search { display:flex; gap:16px; margin-bottom:32px; }
 .board_search select,.board_search input,.board_search button,.board_search a,.board_search label { height:40px; vertical-align:middle; }
 .board_search a { line-height:36px; min-width:110px; text-align:center; margin-left:auto; }
