@@ -1,0 +1,19 @@
+﻿@charset "UTF-8";
+
+/* 메가클럽 20261021 */
+.megaClub_section,.megaClub_section .topImg { position:relative;}
+.megaClub_section { width:960px; } /* 이미지 폭에 맞춤 */
+.megaClub_section .topImg:before { position:absolute; left:calc(50% - 20px); top:-20px; content:""; width:40px; height:3px; background:#01389b; }
+.megaClub_section img { vertical-align:top; }
+.megaClub_section .coupon { background:#cfe9fd; padding:30px 0 100px; }
+.megaClub_section .coupon input { width:545px; height:60px; box-sizing:border-box; border:1px solid #7d7d7d; font-size:16px; padding-left:20px; }
+.megaClub_section .coupon button { width:198px; height:60px; background:#333; color:#fff; vertical-align:middle; font-size:18px; transition:all .2s; border-radius:4px; }
+.megaClub_section .coupon button:hover { background:#01389b; }
+.megaClub_section .coupon dl { color:#627e98; margin:25px 0 30px 100px; }
+.megaClub_section .coupon dt { margin-bottom:5px; font-size:16px; font-weight:600;}
+.megaClub_section .coupon dd { position:relative; font-size:15px; padding-left:10px; }
+.megaClub_section .coupon dd:before { position:absolute; left:0; top:0; content:"- " }
+.megaClub_section .coupon.consulting { background:#b5dafb; }
+.megaClub_section .coupon label { display:flex; justify-content:center; gap:12px; }
+.megaClub_section .coupon.allPackage { background:#a0d1fa; }
+.megaClub_section .coupon.exam { background:#88c4f9; }
