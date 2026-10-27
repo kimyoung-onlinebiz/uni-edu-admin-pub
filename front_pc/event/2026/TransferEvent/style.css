@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* 환승이벤트 */
+.transfer_202307 { width:100%; position:relative; overflow:hidden; text-align:center; }
+.transfer_202307 * { color:#111; box-sizing:border-box; }
+.transfer_202307 img { vertical-align:top; }
+.transfer_202307 .content { position:relative; width:1200px; margin:0 auto; padding:70px 0 120px; }
+
+/* 바로가기 배너 */
+.transfer_202307 .aside { position:absolute; right:20px; width:160px; height:410px; border:1px solid #111; background:#fff; z-index:90; }
+.transfer_202307 .aside h3 { background:#fff; padding:10px 0 8px; font-size:16px; font-weight:700; }
+.transfer_202307 .aside .btn_top { display:none; position:fixed; bottom:30px; right:30px; width:60px; height:60px; padding-top:2px; background:#111; border-radius:30px; font-size:12px; line-height:1; color:#fff; transition:all .2s; }
+.transfer_202307 .aside .btn_top span { display:block; color:#fff; font-size:22px; transition:all .2s; padding-bottom:4px; }
+.transfer_202307 .aside .btn_top:hover span { transform:translateY(-3px); }
+
+/* 상단 이미지 */
+.transfer_202307 .topImg { position:relative; width:100%; height:960px; background:url(images/topBg.png) repeat; }
+.transfer_202307 .topImg h1 { padding-top:265px; display:flex; justify-content:center; }
+.transfer_202307 .topImg h1:after { margin-top:-160px; content:""; display:block; width:100%; height:100px; background:#ffd200; }
+.transfer_202307 .topImg h1 a { position:absolute; top:330px; left:50%; margin-left:290px; animation:transferScale .5s 1s both; transition:all .2s; }
+.transfer_202307 .topImg h1 a:hover { top:320px; }
+.transfer_202307 .left,.transfer_202307 .right { position:absolute; left:50%; top:385px; }
+.transfer_202307 .right { margin-left:-465px; }
+.transfer_202307 .left { margin-left:440px; }
+.transfer_202307 .left li { background:url(images/transfer_left.png) no-repeat; width:15px; height:27px; display:inline-block; margin-left:-4px; opacity:0; }
+.transfer_202307 .left li:first-child { animation:transferAniLeft 1.1s .1s ease-out infinite; }
+.transfer_202307 .left li:last-child { animation:transferAniLeft 1.1s ease-out infinite; }
+.transfer_202307 .right li { background:url(images/transfer_right.png) no-repeat; width:15px; height:27px; display:inline-block; margin-right:-4px; opacity:0; }
+.transfer_202307 .right li:first-child { animation:transferAniRight 1.1s ease-out infinite; }
+.transfer_202307 .right li:last-child { animation:transferAniRight 1.1s .1s ease-out infinite; }
+.transfer_202307 .topTxt,.transfer_202307 .airplane { position:relative; width:1200px; margin:0 auto; }
+.transfer_202307 .topTxt li:first-child { position:absolute; top:-380px; left:384px; overflow:hidden; animation:transferLine .4s .3s ease-out both; }
+.transfer_202307 .topTxt li:last-child { position:absolute; top:50px; left:-24px; }
+.transfer_202307 .airplane { animation:transferFadeIn .5s .8s both; }
+.transfer_202307 .airplane li:first-child { position:absolute; top:191px; left:497px; z-index:10; animation:transferUpDown 1.2s .8s ease-in-out infinite; }
+.transfer_202307 .airplane li:last-child { position:absolute; top:191px; left:497px; z-index:9; animation:transferShadow 1.2s .8s ease-in-out infinite; }
+
+/* 섹션 공통 */
+.transfer_202307 h2 { padding-top:60px; }
+.transfer_202307 h2:after { content:""; display:block; width:100%; height:1px; background:#222; margin-top:50px; }
+.transfer_202307 .section_01,.transfer_202307 .section_03 { background:#dfdfeb; }
+.transfer_202307 .section_02 { background:#1d1d27; }
+.transfer_202307 .section_02 h2:after { background:#d2d2d4; }
+
+/* 선택 이유 탭 */
+.transfer_202307 .select_tab { display:flex; justify-content:center; height:110px; margin-bottom:80px; background:url(images/tab_line.png) no-repeat bottom center; }
+.transfer_202307 .select_tab li { margin-right:50px; }
+.transfer_202307 .select_tab li:last-child { margin-right:0; }
+.transfer_202307 .select_tab li a { position:relative; font-size:23px; display:inline-block; background:#ababf4; padding:5px 80px 6px; border-radius:30px; transition:all .2s; color:#111; }
+.transfer_202307 .select_tab li a:before { position:absolute; left:50%; bottom:-72px; margin-left:-8px; border-radius:20px; display:block; content:""; width:16px; height:16px; background:#ababf4; transition:all .2s; }
+.transfer_202307 .select_tab li a:after { position:absolute; bottom:-14px; left:50%; margin-left:-14px; content:""; width:0; height:0; border-top:14px solid #ababf4; border-right:14px solid transparent; border-left:14px solid transparent; transition:all .2s; }
+.transfer_202307 .select_tab li a.current,.transfer_202307 .select_tab li a:hover { background:#ffd200; }
+.transfer_202307 .select_tab li a.current:before,.transfer_202307 .select_tab li a:hover:before { margin-left:-12px; width:24px; bottom:-75px; height:24px; background:#ffd200; }
+.transfer_202307 .select_tab li a.current:after,.transfer_202307 .select_tab li a:hover:after { border-top-color:#ffd200; }
+
+/* 수강후기 슬라이드 */
+.transfer_202307 .review_swiper .swiper-slide { width:285px; }
+.transfer_202307 .review_prev,.transfer_202307 .review_next { position:absolute; top:295px; width:22px; height:41px; background:url(images/slide_control.png) no-repeat; font-size:0; z-index:10; }
+.transfer_202307 .review_prev { left:-60px; }
+.transfer_202307 .review_next { right:-60px; background-position:-22px 0; }
+
+/* 신청하기 레이어 */
+.transfer_202307 .btn_layer { display:block; margin:60px auto 0; width:430px; height:75px; background:#451cde; transition:all .2s; border-radius:8px; }
+.transfer_202307 .btn_layer:hover { background:#2400ab; }
+.transfer_202307 .layer_event { display:none; position:absolute; top:300px; left:290px; z-index:100; background:#fff; box-shadow:10px 10px 10px rgba(0,0,0,.2); border:1px solid #222; width:660px; border-radius:10px; overflow:hidden; }
+.transfer_202307 .layer_event h3 { color:#fff; font-size:24px; height:65px; line-height:65px; font-weight:400; background:#222; margin-bottom:20px; }
+.transfer_202307 .layer_event strong { color:#ff4f4f; font-weight:500; font-size:18px; }
+.transfer_202307 .layer_event .layerClose { position:absolute; right:15px; top:15px; }
+.transfer_202307 .layer_event button[type=submit] { width:250px; height:50px; background:#451cde; color:#fff; margin-bottom:40px; border-radius:8px; font-size:18px; font-weight:500; transition:all .2s; }
+.transfer_202307 .layer_event button[type=submit]:hover { background:#662aff; }
+.transfer_202307 .file_search { position:relative; width:560px; display:inline-block; height:100px; padding-top:25px; }
+.transfer_202307 input[type=text].fileInput_textbox { width:400px; height:40px; vertical-align:top; border:1px solid #160c4b; font-size:16px; padding:0 10px; }
+.transfer_202307 a.btnFile_search { display:inline-block; background:#ffd200; width:120px; height:40px; line-height:38px; text-align:center; transition:all .2s; margin-left:-10px; font-size:18px; border:1px solid #160c4b; font-weight:500; }
+.transfer_202307 a.btnFile_search:hover { color:#222; }
+.transfer_202307 .fileInput_opacity { position:absolute; left:20px; top:25px; width:515px; height:40px; cursor:pointer; opacity:0; }
+
+/* 유의사항 */
+.transfer_202307 .guide { background:#28282d; padding:60px 0; text-align:left; }
+.transfer_202307 .guide .content { padding:0; }
+.transfer_202307 .guide dl { margin-left:55px; }
+.transfer_202307 .guide dt { font-weight:700; font-size:20px; margin-bottom:8px; color:#d2d2e5; }
+.transfer_202307 .guide dd { line-height:1.6; color:#d2d2e5; font-weight:300; }
+.transfer_202307 .guide dd:before { content:"※ "; font-size:20px; vertical-align:-1px; padding-right:3px; color:#d2d2e5; }
+.transfer_202307 .guide p { color:#d2d2e5; padding-left:12px; font-weight:300; }
+
+@media (min-width:1921px) {
+    .transfer_202307 .topImg h1 { display:block; }
+    .transfer_202307 .topTxt li:first-child { top:-320px; }
+    .transfer_202307 .topTxt li:last-child { top:110px; }
+}
+
+@keyframes transferLine { 0% { width:0; } 100% { width:430px; } }
+@keyframes transferFadeIn { 0% { opacity:0; } 100% { opacity:1; } }
+@keyframes transferAniLeft {
+    0% { transform:translateX(-80%); opacity:0; }
+    40% { transform:translateX(0%); opacity:1; }
+    90% { transform:translateX(0%); opacity:1; }
+    100% { transform:translateX(0%); opacity:0; }
+}
+@keyframes transferAniRight {
+    0% { transform:translateX(80%); opacity:0; }
+    40% { transform:translateX(0%); opacity:1; }
+    90% { transform:translateX(0%); opacity:1; }
+    100% { transform:translateX(0%); opacity:0; }
+}
+@keyframes transferUpDown { 0% { transform:translateY(0%); } 50% { transform:translateY(10%); } 100% { transform:translateY(0%); } }
+@keyframes transferShadow {
+    0% { opacity:.4; transform:translateY(0%); }
+    50% { opacity:1; transform:translateY(-1%); }
+    100% { opacity:.4; transform:translateY(0%); }
+}
+@keyframes transferScale { 0% { transform:scale(.5); opacity:0; } 100% { transform:scale(1); opacity:1; } }

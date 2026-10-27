@@ -6,6 +6,10 @@
 .subpage_layout.two_column_layout { grid-template-columns:1280px minmax(0, 320px); column-gap:32px; width:1280px; margin:0 auto; }
 .subpage_layout.two_column_layout .two_column_content { display:flex; gap:32px; }
 .subpage_layout.two_column_layout .two_column_left { width:928px; }
+
+/* 풀페이지 레이아웃 (이벤트/랜딩 페이지) */
+.fullpage_layout { position:relative; width:100%; min-width:1280px; background:var(--Neutral-0); }
+.fullpage_layout + .site_footer { margin-top:0; }
 .lnb_wrap { min-width:0; gap:24px; display:flex; flex-direction:column; align-items:stretch; }
 .lnb_wrap h2 { font-size:var(--Font-3xlarge); font-weight:700; line-height:1.2; padding:0 20px 0 20px; }
 .lnb_wrap nav > ul { display:flex; flex-direction:column; align-items:stretch; align-self:stretch; border-radius:var(--Border-2radius); border:1px solid var(--Neutral-300); padding-top:16px; }
@@ -1229,6 +1233,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .review_list a .material-symbols-rounded { display:inline-flex; align-items:center; justify-content:center; width:1em; height:1em; vertical-align:-2px; font-size:var(--Font-small); font-weight:600; transform-origin:center center; transition:transform .4s ease; padding-top:1px; }
 .review_list a:hover .material-symbols-rounded { transform:rotate(180deg); }
 .scholarship_student table { margin-top:40px; }
+.scholarship_student  > p { border-radius:var(--Border-2radius); overflow:hidden; }
 
 .ScholarShip_content dl { display:flex; flex-direction:column; margin:32px 24px 0px; }
 .ScholarShip_content dt { font-weight:600; color:var(--Neutral-900); margin-bottom:8px; font-size:var(--Font-medium); }
