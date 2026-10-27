@@ -344,7 +344,7 @@
                     <div class="layer_event">
                         <h3>환승 이벤트 수강증 인증</h3>
                         <a href="#none" class="layerClose"><img src="images/btn_layerClose.png" alt="레이어닫기"></a>
-                        <div class="layer_content">
+                        <div class="transfer_layer_content">
                             <p>환승 이벤트 증빙자료를 제출해주세요.</p>
                             <strong>유료 결제한 내역을 확인할 수 있는 사진 또는 캡쳐 화면, 이미지 파일</strong>
                             <div class="file_search">
@@ -458,6 +458,21 @@
 
 
     <script>
+        $(window).on('load', function () {
+            var $page = $('html, body');
+            var contentTop = $('.fullpage_layout').offset().top;
+
+            if ($(window).scrollTop() > 0 || location.hash) return; // 새로고침 위치 복원·앵커 진입 시 제외
+
+            setTimeout(function () {
+                $page.animate({ scrollTop: contentTop }, 800, 'swing');
+            }, 300);
+
+            $(window).one('wheel touchstart keydown', function () {
+                $page.stop();
+            }); // 사용자가 직접 스크롤하면 모션 중단 //
+        }); // 진입 시 GNB 건너뛰고 콘텐츠로 이동 //
+
         $(function () {
             var $event = $('.transfer_202307');
             var $aside = $event.find('.aside');
