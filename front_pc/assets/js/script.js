@@ -395,6 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { layer: '.layer_wrapper.layer_privacy', triggers: ['.btn_privacy'], closeCurrentLayer: true }, //개인정보 수집 동의 레이어
             { layer: '.layer_wrapper.layer_licenseNotice', triggers: ['.btn_licenseNotice'], closeCurrentLayer: true }, //자격관리기관 및 소비자 알림사항 레이어
             { layer: '.layer_wrapper.layer_coupon', triggers: ['.btn_coupon'], closeCurrentLayer: true }, //쿠폰등록 레이어
+            { layer: '.layer_wrapper.layer_couponSearch', triggers: ['.btn_couponSearch'], closeCurrentLayer: true }, //결제 쿠폰 조회 레이어
             { layer: '.layer_wrapper.layer_composition', triggers: ['.btn_composition'], closeCurrentLayer: true }, //구성과정 레이어
             { layer: '.layer_wrapper.layer_composition_complete', triggers: ['.btn_composition_complete'], closeCurrentLayer: true }, //구성과정 레이어(결제 완료 내역)
             { layer: '.layer_wrapper.layer_mockPlanSubmit', triggers: ['.btn_mockPlanSubmit'], closeCurrentLayer: true }, //모의수업지도안 레이어

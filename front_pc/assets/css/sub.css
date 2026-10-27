@@ -1148,6 +1148,21 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .layer_composition .lecture_list > li > .course_detail { padding:0 24px; transition:height 0.4s ease; }
 .layer_composition .lecture_list > li > .course_detail > :first-child { margin-top:24px; }
 .layer_composition .lecture_list > li > .course_detail > :last-child { margin-bottom:24px; }
+
+/* 레이어 / 쿠폰 조회 */
+.layer_couponSearch .layer_basic { width:880px; padding:40px 32px 40px 40px; }
+.layer_couponSearch header { padding-bottom:16px; margin-bottom:32px; }
+.layer_couponSearch .layer_guide { border-radius:var(--Border-radius); }
+.layer_couponSearch .layer_guide ul { gap:0; margin-top:0; }
+.layer_couponSearch .layer_guide li { font-size:var(--Font-small); line-height:1.5; }
+.layer_couponSearch .layer_guide li:before { content:"- "; }
+.layer_couponSearch .list_table th { height:40px; padding:0 8px; }
+.layer_couponSearch .list_table td { height:100px; padding:16px 8px; }
+.layer_couponSearch .list_table td.coupon_name { padding:16px 24px; }
+.layer_couponSearch .coupon_name strong { display:block; font-size:var(--Font-small); font-weight:400; line-height:1.5; }
+.layer_couponSearch .coupon_name p { margin-top:4px; color:var(--Neutral-600); font-size:var(--Font-2xsmall); line-height:16px; font-weight:500;}
+.layer_couponSearch .list_table .btn { min-width:100px; }
+.layer_couponSearch .list_table td.no_data { color:var(--Neutral-600); }
 .composition .course_header, .layer_content .course_header { flex-direction:column; align-items:flex-start; justify-content:flex-start; gap:0; }
 .composition .course_header:first-child span { margin-top:8px; }
 .composition .course_header span,.layer_content .course_header span { color:var(--Neutral-900); font-weight:600; font-size:var(--Font-base); margin-top:24px; }

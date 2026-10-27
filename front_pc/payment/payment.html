@@ -628,7 +628,7 @@
                                 <td>
                                     <div class="form_group">
                                         <input type="text" name="coupon" value="" placeholder="0원">
-                                        <button type="button" class="btn secondary">쿠폰 조회</button>
+                                        <button type="button" class="btn secondary btn_couponSearch">쿠폰 조회</button>
                                     </div>
                                     <p class="table_guide marginT16">* 교재는 쿠폰 할인이 적용되지 않습니다.</p>
                                 </td>
@@ -909,6 +909,97 @@
             
         </div>
         <!-- //레이어 / 구성 과정 확인 -->
+
+        <!-- 레이어 / 쿠폰 조회 -->
+        <div class="layer_wrapper layer_couponSearch"> <!-- active 추가 시 화면노출-->
+            <div class="layer_basic">
+
+                <header>
+                    <div>
+                        <h1>쿠폰 조회</h1>
+                    </div>
+                    <button type="button" class="btn_layerClose material-symbols-rounded">close</button>
+                </header>
+
+                <!-- layer 내용 -->
+                <div class="layer_content">
+                    <div class="layer_guide gray">
+                        <ul>
+                            <li>쿠폰 사용 전 반드시 사용 기간을 확인해 주세요.</li>
+                            <li>일부 상품은 쿠폰 적용이 제한될 수 있습니다. (쿠폰 조회시 사용 가능한 쿠폰만 노출됩니다.)</li>
+                            <li>결제 시 쿠폰은 1회에 1매만 사용 가능합니다.</li>
+                            <li>쿠폰은 할인 금액이 결제 금액을 초과하는 경우 사용할 수 없습니다.</li>
+                            <li>사용한 쿠폰은 결제 취소 / 환불 시 복원되지 않습니다.</li>
+                        </ul>
+                    </div>
+
+                    <table class="list_table marginT32">
+                        <caption>쿠폰 목록</caption>
+                        <colgroup>
+                            <col>
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:120px;">
+                            <col style="width:120px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">쿠폰명(코드)</th>
+                                <th scope="col">할인율(액)</th>
+                                <th scope="col">할인 대상 구분</th>
+                                <th scope="col">발급일</th>
+                                <th scope="col">사용 기간</th>
+                                <th scope="col">선택</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="coupon_name">
+                                    <strong>[메가]사회복지사2급 시험대비강좌<br>무료 쿠폰 (EV2617862)</strong>
+                                    <p>해당 쿠폰은 사회복지사2급<br>시험대비강좌 무료 쿠폰 입니다.</p>
+                                </td>
+                                <td>100%</td>
+                                <td>전체</td>
+                                <td>2026-06-14</td>
+                                <td>무기한</td>
+                                <td><button type="button" class="btn primary">선택</button></td>
+                            </tr>
+                            <tr>
+                                <td class="coupon_name">
+                                    <strong>조기등록 15%<br>(EV2617862)</strong>
+                                    <p>해당 쿠폰은 조기등록 쿠폰입니다.</p>
+                                </td>
+                                <td>15%</td>
+                                <td>전체</td>
+                                <td>2026-06-14</td>
+                                <td>2026-06-08<br>까지</td>
+                                <td><button type="button" class="btn primary">선택</button></td>
+                            </tr>
+                            <tr>
+                                <td class="coupon_name">
+                                    <strong>특정 과목만 할인 2<br>(EV2617864)</strong>
+                                    <p>해당 쿠폰은 사회복지사2급<br>시험대비강좌 무료 쿠폰 입니다.</p>
+                                </td>
+                                <td>30,000원</td>
+                                <td>패키지</td>
+                                <td>2026-06-14</td>
+                                <td>2026-06-08<br>~ 2026-12-11</td>
+                                <td><button type="button" class="btn primary">선택</button></td>
+                            </tr>
+                            <!-- 적용 가능한 쿠폰이 없을 때
+                            <tr>
+                                <td colspan="6" class="no_data">적용 가능한 쿠폰이 없습니다.</td>
+                            </tr>
+                            //적용 가능한 쿠폰이 없을 때 -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //layer 내용 -->
+
+            </div>
+        </div>
+        <!-- //레이어 / 쿠폰 조회 -->
 
         </section>
         <!--// 콘텐츠 영역 -->
