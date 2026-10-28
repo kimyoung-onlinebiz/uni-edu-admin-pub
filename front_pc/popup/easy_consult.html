@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=400px"/>
+    <title>간편상담 | 김영평생교육원</title>
+    <link rel="stylesheet" href="../assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="../assets/css/main.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <!--
+        팝업 열기 예시 (창 크기 400 x 460)
+        window.open('/popup/easy_consult.html', 'easyConsult', 'width=400,height=460,scrollbars=no,resizable=no');
+    -->
+</head>
+<body>
+
+    <!-- 팝업 간편상담 -->
+    <div class="popup_consult">
+
+        <section class="mainEasy_consult">
+            <h2>간편상담</h2>
+
+            <!-- 간편상담 내용(메인 최상단과 동일) -->
+            <form action="#none" method="post">
+                <div class="form_group">
+                    <input type="text" id="consultName" name="consultName" placeholder="이름을 입력해 주세요." class="width_100">
+                    <input type="tel" id="consultPhone" name="consultPhone" placeholder="연락처를 입력해 주세요." class="width_100">
+                    <select id="consultType" name="consultType" class="width_100">
+                        <option value="">상담 유형을 선택해주세요.</option>
+                        <option value="transfer">편입 학위과정</option>
+                        <option value="social">사회복지사</option>
+                        <option value="korean">한국어교원</option>
+                        <option value="certificate">TESAT&자격증</option>
+                    </select>
+
+                    <select id="consultDetail" name="consultDetail" class="width_100">
+                        <option value="">상세 내용을 선택해주세요.</option>
+                        <option value="transfer">편입 학위과정</option>
+                        <option value="social">사회복지사</option>
+                        <option value="korean">한국어교원</option>
+                        <option value="certificate">TESAT&자격증</option>
+                    </select>
+                </div>
+
+                <div class="form_check">
+                    <input type="checkbox" id="consultAgree_popup" name="consultAgree_popup">
+                    <label for="consultAgree_popup">개인정보 수집 및 제공 이용 동의 <strong>(필수)</strong></label>
+                </div>
+
+                <div class="layer_agree">
+                    <div class="agree_header">
+                        <h3>개인정보 수집 및 제공 이용 동의</h3>
+                        <button type="button" class="btn_layerClose" aria-label="레이어 닫기"><span class="material-symbols-rounded">close</span></button>
+                    </div>
+                    <div class="agree_content">
+                        <p><strong>1. 수집하는 개인정보의 항목</strong></p>
+                        <p>김영평생교육원은 상담 및 학습설계서 제공을 위해 필요한 최소한의 개인정보만을 수집합니다.학점은행제 상담 및 학습설계 수립을 이용하기 위해서는 상담 신청 시 성명, 연락처를 필수적으로 입력하셔야 합니다.</p>
+                        <br>
+                        <p><strong>2. 개인정보의 수집목적 및 이용목적</strong></p>
+                        <p>수집하는 개인정보 항목에 따른 구체적인 수집 목적 및 이용 목적은 다음과 같습니다.</p>
+                        <p>성명, 연락처: 학점은행제 제도 안내 및 학습 설계서 제공을 위해 유선연락 또는 문자 안내를 드릴 수 있습니다.</p>
+                        <br>
+                        <p><strong>3. 개인정보의 보유기간 및 이용기간</strong></p>
+                        <p>수집된 개인정보는 상담 자료로 이용된 이후 즉시 파기합니다. 다만, 상담 이후 추가 상담, 수강신청을 진행하는 경우 귀하의 개인정보를 이용목적 달성시 또는 법령이 정하는 규정에 따라 추가 보관할 수 있습니다.</p>
+                        <p>* 동의를 거부할 수 있으며 거부 시 상담 신청이 불가합니다.</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="mainEasy_apply">상담 신청</button>
+            </form>
+            <!-- //간편상담 내용(메인 최상단과 동일) -->
+        </section>
+
+    </div>
+    <!-- //팝업 간편상담 -->
+
+</body>
+</html>

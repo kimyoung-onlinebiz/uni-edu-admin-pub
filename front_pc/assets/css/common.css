@@ -190,7 +190,7 @@ a.btn { line-height:28px; font-weight:500; }
 .btn.primary:hover { border:1px solid var(--Primary-700); background:var(--Primary-700); }
 .btn.secondary { border:1px solid var(--Neutral-800); background:var(--Neutral-800); color:var(--Neutral-0); }
 .btn.secondary:hover { border:1px solid var(--Primary-800); background:var(--Primary-800); color:var(--Neutral-0); }
-.btn.medium,.btn.primary.medium,.btn.secondary.medium { height:40px; }
+.btn.medium,.btn.primary.medium,.btn.secondary.medium { height:40px; line-height:35px; }
 label.btn { line-height:28px; transition:all .2s; }
 
 /* 4. 기본 레이어 스타일 */

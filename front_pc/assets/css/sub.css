@@ -350,10 +350,11 @@ td .multiple .btn_delete { right:12px; bottom:6px; }
 .txt_guide:before,.login_guide:before,.pay_guide:before { position:absolute; content:"info"; font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1,'wght' 700; font-size:20px; left:30px; top:19px; }
 .login_guide { display:flex; flex-direction:column; gap:8px; margin-bottom:30px;}
 .login_guide a { width:120px; text-align:center; margin-left:80px;}
-.txt_guide strong { display:flex; justify-content:space-between; font-weight:700; font-size:var(--Font-base); }
+.txt_guide strong { display:flex; justify-content:space-between; font-weight:700; font-size:var(--Font-base); padding-bottom:8px; }
 .txt_guide strong .btn { height:28px; line-height:26px; font-size:var(--Font-xsmall); padding:0 12px; }
-.txt_guide ul { display:flex; flex-direction:column; gap:3px; margin-top:6px; }
+.txt_guide ul { display:flex; flex-direction:column; gap:8px; margin-top:6px; }
 .txt_guide ul > li { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
+.txt_guide p { display:flex; align-items:flex-start; font-size:var(--Font-small); color:var(--Neutral-800); }
 .txt_guide ul > li div { font-size:var(--Font-small); }
 .txt_guide ul > li::before { content:"•"; flex:0 0 12px; }
 .txt_guide ul > li em { color:var(--Info);  }
@@ -634,7 +635,7 @@ ol.layer_guide li strong { color:var(--Info); }
 
 .tabmenu_content { display:none; }
 .tabmenu_content.active { display:block; }
-.tabmenu_content > .sub_header:first-child { margin-top:-10px; }
+.tabmenu_content > .sub_header:first-child,.tabmenu_content > .txt_guide:first-child { margin-top:-10px; }
 .calendar_wrap .sub_header { position:relative; }
 .calendar_wrap .sub_header .sub_header_info { position:absolute; left:0; top:15px; }
 .calendar_wrap .calendar { border-top:1px solid var(--Neutral-300); margin-top:40px; }
@@ -1218,7 +1219,45 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .sample_list.tv p { padding-top:20px; }
 .sample_list.lecture img { aspect-ratio:1000 / 680; } /* 샘플 강의 이미지 원본 비율 */
 .dot_list li:before { content:"• "; color:var(--Neutral-600); position:absolute; left:0; top:0; }
-.dot_list li { position:relative; padding-left:12px; margin-bottom:8px; }
+.dot_list li { position:relative; padding-left:12px; margin-bottom:4px; }
+
+/* 제도 활용 / 응시 가능한 시험 */
+.exam_table td { line-height:1.6; }
+.exam_table td :is(p,ul,ol,li,span,strong) { font-size:inherit; line-height:inherit; /* common.css 기본 font-size 대신 td 크기 따름 */ }
+.exam_table td > p + .dot_list,.exam_table td > p + p { margin-top:8px; }
+.exam_table .dot_list { margin-top:0; }
+.exam_table .dot_list .note { color:var(--Neutral-800); }
+.exam_table .contact { margin-top:12px; }
+.exam_table .dot_list + .contact { margin-top:4px; }
+.exam_table .contact .material-symbols-rounded { font-size:18px; color:var(--Primary-500); vertical-align:-4px; margin-right:6px; }
+.exam_table .contact a { font-size:inherit; line-height:inherit; text-decoration:underline; text-underline-offset:3px; }
+.exam_table .contact a:hover { color:var(--Primary-500); }
+
+/* 대상별 가이드 : 대학편입 준비생 편입의 장점 */
+.transfer_point { margin-top:40px; }
+.transfer_point > li { display:flex; gap:16px; }
+.transfer_point > li + li { margin-top:16px; }
+.transfer_point .left_img { display:flex; align-items:center; justify-content:center; flex:0 0 180px; background:#ececf1; border-radius:var(--Border-2radius); overflow:hidden; /* 이미지 배경색과 동일 */ }
+.transfer_point .right_txt { flex:1; padding:24px; border:1px solid var(--Neutral-300); line-height:1.6; border-radius:var(--Border-2radius); overflow:hidden; }
+.transfer_point .right_txt > * + * { margin-top:16px; }
+.transfer_point .right_txt h5 { font-size:var(--Font-large); font-weight:500; color:var(--Info); margin-bottom:16px; }
+.transfer_point .right_txt h5 + p { margin-top:4px; }
+.transfer_point .right_txt .data_table { margin-top:16px; }
+
+/* 학점인정신청 : 학점원 소개 */
+.credit_source { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; margin-top:24px; }
+.credit_source > li { background:var(--Primary-100); border-radius:var(--Border-2radius); overflow:hidden; }
+.credit_source strong { display:block; padding:12px 16px; background:var(--Primary-200); text-align:center; font-size:var(--Font-large); font-weight:500; }
+.credit_source p { padding:24px; line-height:1.6; }
+
+/* 학점은행제 진행절차 */
+.credit_step { margin-top:40px; }
+.credit_step > li { display:flex; align-items:stretch; gap:24px; /* 양쪽 박스 높이 동일 */ }
+.credit_step > li + li { margin-top:56px; }
+.credit_step .step_tit { position:relative; display:flex; align-items:center; justify-content:center; flex:0 0 200px; min-height:80px; padding:16px; background:var(--Primary-700); color:var(--Neutral-0); font-weight:600; text-align:center; line-height:1.6; border-radius:var(--Border-2radius); }
+.credit_step > li + li .step_tit::before { position:absolute; left:50%; bottom:calc(100% + 12px); width:48px; height:32px; margin-left:-24px; content:""; background:linear-gradient(var(--Neutral-200), var(--Neutral-500)); clip-path:polygon(25% 0, 75% 0, 75% 40%, 100% 40%, 50% 100%, 0 40%, 25% 40%); /* 아래 화살표 */ }
+.credit_step .dot_list { display:flex; flex-direction:column; justify-content:center; flex:1; line-height:1.6; border:1px solid var(--Neutral-300); padding:16px; border-radius:var(--Border-2radius); }
+.credit_step .dot_list li:last-child { margin-bottom:0; }
 
 /* 장학제도 조항 번호 */
 .scholarship_program > ol { counter-reset:article; }
