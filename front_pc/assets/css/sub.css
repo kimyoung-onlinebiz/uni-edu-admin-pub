@@ -59,6 +59,7 @@
 .subpage_content .sub_header.borderGray { border-bottom: 1px solid var(--Neutral-300);  margin-bottom:24px; }
 .subpage_content .sub_header button,.subpage_content .sub_header a.btn { color:var(--Neutral-800); }
 .subpage_content .sub_header a.primary,.subpage_content .sub_header button.primary { color:var(--Neutral-0); }
+.subpage_content .sub_header + .sub_header { margin-top:0; }
 
 .sub_header .essential { font-size:var(--Font-2xsmall) !important; }
 .sub_header h5 { font-weight:500; }

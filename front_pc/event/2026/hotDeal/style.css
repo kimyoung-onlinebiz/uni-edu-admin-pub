@@ -1,0 +1,111 @@
+﻿@charset "UTF-8";
+
+/* 타입핫딜 20220928 */
+.hotDeal { position:relative; width:100%; overflow:hidden; text-align:center; }
+.hotDeal img { vertical-align:top; }
+.hotDeal .topImg { position:relative; background:url(images/topImg.png) no-repeat; width:960px; height:791px; }
+.hotDeal .topTxt li { position:absolute; opacity:0; }
+.hotDeal .topTxt li:first-child { top:85px; left:305px; animation:fadeIn_up .6s ease both; }
+.hotDeal .topTxt li:nth-child(2) { top:332px; left:339px; animation:fadeIn_up .6s .3s ease both; }
+.hotDeal .topTxt li:nth-child(3) { top:377px; left:218px; animation:fadeIn_up .6s .6s ease both; }
+.hotDeal .topTxt li:nth-child(4) { top:375px; left:465px; animation:scale .2s 1s ease both; }
+.hotDeal .topTxt li:nth-child(5) { top:587px; left:266px; animation:fadeIn_up .6s 1.2s ease both; }
+.hotDeal .event_content { padding:0 0 140px; margin:0; background:#2128c4; border-radius:10px; }
+.hotDeal .apply_section { position:relative; padding:0 40px 20px; background:#e4e4e4; text-align:left; }
+.hotDeal h3 { margin:0; padding:0; }
+.hotDeal h4 { padding:8px 0 20px 80px;  background:#2128c4 url(images/icon_open.png) no-repeat 30px 0; color:#fff; font-size:21px; }
+.hotDeal h4 strong { color:#fff; }
+.hotDeal .apply_section ul { background:#2128c4; display:flex;flex-wrap:wrap; justify-content:space-between; padding:0 30px;}
+.hotDeal .apply_section li { position:relative; display:inline-block; width:264px; height:160px; background:#fff; border-radius:5px 5px 6px 6px; margin-bottom:14px; }
+.hotDeal .apply_section li p { font-size:14px; color:#777; padding:5px 20px; border-bottom:1px solid #ccc; }
+.hotDeal .apply_section li strong { display:block; font-size:21px; font-weight:bold; padding:10px 20px 0 20px; }
+.hotDeal .apply_section li dt { font-size:16px; color:#777; background:url(images/bullet_del.png) no-repeat -20px 6px; padding:0 15px 0 5px; vertical-align:2px; }
+.hotDeal .apply_section li dl { margin-left:20px; }
+.hotDeal .apply_section li dt,.hotDeal .apply_section li dd { display:inline-block; }
+.hotDeal .apply_section li dd { font-size:24px; font-weight:900; color:#dc0000; }
+.hotDeal .apply_section li button,.hotDeal .apply_section li span { position:absolute; bottom:0; width:100%; font-size:18px; padding-bottom:5px; text-align:center; height:45px; background:#222;color:#fff; border-radius:0 0 5px 5px; transition:all .3s; font-weight:500; }
+.hotDeal .apply_section button:hover { background:#57f158; color:#222; }
+.hotDeal .apply_section li span { display:block; padding-top:8px;background:#57f158; color:#222; }
+.hotDeal .apply_section li span.applicationDeadline { background:#d3d3d3; color:#777; }
+.hotDeal .total { position:relative; background:#fff700; width:820px; height:90px; border-radius:5px; margin:10px 0 0 30px; padding:32px 0 0 55px; }
+.hotDeal .total dt,.hotDeal .total dd { font-size:20px; display:inline-block; }
+.hotDeal .hotDell_price { position:absolute; right:55px; top:20px; }
+.hotDeal .netPrice dd { background:url(images/bullet_del.png) no-repeat 4px 9px; padding:0 15px 0 8px; }
+.hotDeal .hotDell_price dt,.hotDeal .hotDell_price dd { font-size:32px; }
+.hotDeal .hotDell_price dt { padding-right:5px; }
+.hotDeal .total strong { color:#dc0000; font-weight:900; }
+.hotDeal .total dl:first-child, .hotDeal .total .netPrice { display:inline-block; }
+.hotDeal .total dl:first-child dd { position:relative; padding-right:28px; }
+.hotDeal .total dl:first-child dd:after { display:inline-block; position:absolute; right:10px; top:0px;content:""; width:1px; height:30px; background:#d0af34; }
+.hotDeal .btn_apply { display:inline-block; position:absolute; left:50%; margin-left:-160px; bottom:70px; width:320px; height:55px; border-radius:30px; text-align:center; font-size:20px; font-weight:bold; color:#fff; transition:all .3s; background:#0a033b url(images/bullet_arrow.png) no-repeat 235px 18px; padding:13px 12px 0 0; }
+.hotDeal .btn_apply strong { color:#57f158; }
+.hotDeal .btn_apply:hover { background:#57f158 url(images/bullet_arrowHover.png) no-repeat 235px 18px; }
+.hotDeal .btn_apply:hover { color:#222; }
+.hotDeal .btn_apply:hover strong { color:#2128c4; }
+.hotDeal .mark { position:absolute; right:25px; top:65px; animation:upDown .8s infinite ease-in-out; }
+.hotDeal .consultant_section { position:relative; padding:20px 0 0 0; background:#e4e4e4; }
+.hotDeal .consultant_section .btn_apply { bottom:50px; background:#0a033b url(images/bullet_arrow.png) no-repeat 255px 18px; }
+.hotDeal .consultant_section .btn_apply:hover { background:#2128c4 url(images/bullet_arrow.png) no-repeat 255px 18px; color:#fff; }
+.hotDeal .consultant_section .btn_apply:hover strong { color:#57f158; }
+
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+
+@keyframes fadeIn_up {
+	0% {
+		transform: translateY(15%);
+		opacity:0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity:1;
+	}
+}
+
+@keyframes scale {
+	0% {
+		opacity:0;
+		transform:scale(2);
+	}
+	100% {
+		opacity:1;
+		transform:scale(1);
+	}
+}
+
+@keyframes upDown {
+	0% {
+		transform: translateY(0%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	100% {
+        transform: translateY(0%);
+	}
+}
+
+/* 띠배너 */
+.hotDeal_banner { position:fixed; bottom:0; left:0; z-index:100; width:100%; height:90px; background:#2128c4; box-shadow:5px 5px 5px 5px rgba(0,0,0,.5); }
+.hotDeal_banner .banner_content { position:relative; width:1280px; height:90px; margin:0 auto; background:url(images/banner_img.png) no-repeat; }
+
+.hotDeal_banner .count_time { position:absolute; right:210px; top:14px;color:#57ff58;  }
+.hotDeal_banner .count_time dt { font-size:16px; }
+.hotDeal_banner .count_time dd { position:relative; padding-left:10px; }
+.hotDeal_banner .count_time dd strong { color:#57ff58; font-size:46px; font-weight:900; padding-right:4px; letter-spacing:-1px; }
+.hotDeal_banner .count_time dd.day { font-size:20px; }
+.hotDeal_banner .count_time dd.day:after { content:"" }
+.hotDeal_banner .count_time dd:after { position:absolute; right:-10px; top:6px; font-weight:normal; font-size:35px; content:":"; }
+.hotDeal_banner .count_time dd:last-child:after { content:"" }
+.hotDeal_banner .count_time dt,.hotDeal_banner .count_time dd { display:inline-block; color:#fff; }
+.hotDeal_banner a { position:absolute; right:0; top:20px; display:inline-block; width:160px; line-height:55px; height:55px; background:#0a033b; letter-spacing:-1px; color:#fff; text-align:center; font-size:20px; border-radius:50px; transition:.3s; font-weight:bold; }
+.hotDeal_banner a:hover { background:#57f158; color:#111; }
+
+

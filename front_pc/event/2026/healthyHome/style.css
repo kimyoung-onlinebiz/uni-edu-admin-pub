@@ -1,0 +1,115 @@
+﻿@charset "UTF-8";
+
+/* 건강가정사 이벤트 */
+.healthyHome { width:100%; overflow:hidden; text-align:center; }
+.healthyHome .topImg { position:relative; width:100%; height:925px; background:url(https://cdn.kystudy.co.kr/User//Content/images/event/2025/healthyHome/images/topBg.jpg) no-repeat center; background-size:cover; overflow:hidden; }
+.healthyHome .topImg h2 { position:absolute; right:20px; top:20px; }
+.healthyHome .content { position:relative; width:1200px; margin:0 auto; text-align:center; }
+.healthyHome .topTxt > li { color:#fff; }
+.healthyHome .topTxt > li:nth-child(1) { margin-top:110px; animation:blur .5s .2s ease-out both; }
+.healthyHome .topTxt > li:nth-child(2) { margin-top:50px; animation:blur .5s .6s ease-out both; }
+.healthyHome .topTxt > li:nth-child(3) { margin-top:40px; animation:blur .5s .9s ease-out both; }
+.healthyHome .topTxt li:nth-child(4) ul { margin-top:50px; display:flex; justify-content:space-between; }
+.healthyHome .topTxt li:nth-child(4) ul li:first-child { animation:fadeUp .5s 1.2s both ease; }
+.healthyHome .topTxt li:nth-child(4) ul li:nth-child(2) { animation:fadeUp .5s 1.4s both ease; }
+.healthyHome .topTxt li:nth-child(4) ul li:nth-child(3) { animation:fadeUp .5s 1.6s both ease; }
+.healthyHome .topTxt li:nth-child(5) { position:relative; width:1200px; height:120px; background:url(https://cdn.kystudy.co.kr/User//Content/images/event/2025/healthyHome/images/topBtn_bg.png) no-repeat; margin-top:24px; animation:fadeUp .5s 1.8s both ease; }
+
+.healthyHome .topImg a { position:absolute; right:16px; top:16px; display:block; width:371px; height:88px; background:#fdd93c; border-radius:10px; transition:all .2s; }
+.healthyHome .topImg a:hover { background:#fdfb3c; }
+.healthyHome .floatingMenu { position:fixed; right:0; top:465px; z-index:1000; }
+.healthyHome .floatingMenu h2 { margin-bottom:8px; }
+.healthyHome .floatingMenu ul { width:170px; border-radius:10px 0 0 10px; overflow:hidden; border:1px solid #444; border-right:none; }
+.healthyHome .floatingMenu ul li { position:relative; width:170px; border-bottom:1px solid #ddd;}
+.healthyHome .floatingMenu ul li:last-child { border-bottom:none; }
+.healthyHome .floatingMenu ul li:last-child a { padding-left:35px; }
+.healthyHome .floatingMenu ul li:last-child a:before { position:absolute; left:25px; top:10px; display:inline-block; content:""; width:32px; height:32px; background:url(https://cdn.kystudy.co.kr/User//Content/images/event/2025/healthyHome/images/kakao_icon.png) no-repeat; }
+.healthyHome .floatingMenu a { display:block; width:100%; height:50px; background:#fff; transition:all .2s; padding-top:16px; font-size:16px; font-weight:500;}
+.healthyHome .floatingMenu a:hover { color:#ff214e; background:#f9f9f9;}
+
+.healthyHome .section_01 { position:relative; height:744px; background:#fdd93c url(images/section01_bg.jpg) right bottom no-repeat; padding:110px 0 130px; }
+.healthyHome .section_01 p { margin:50px auto 60px; }
+.healthyHome .btnSection { display:flex; gap:16px; justify-content:center;}
+.healthyHome .section_01 a { display:block; width:380px; height:70px; background:#000; border-radius:10px; transition:all .2s; }
+.healthyHome .section_01 a:hover { background:#070346; }
+
+.healthyHome .section_02 { position:relative; background:#000 url(images/section02_bg.jpg) top left no-repeat; border-bottom:1px solid #808080; }
+.healthyHome .section_02 .content { display:flex; color:#fff; padding:80px 0 0 ; height:237px;}
+.healthyHome .section_02 .content h2 { color:#fff; font-size:48px; font-weight:800; padding:15px 40px 0 190px; }
+.healthyHome .section_02 .content p { color:#fff; font-size:18px; font-weight:500; text-align:left; }
+.healthyHome .section_02 .content strong { color:#fdd93c; }
+
+.healthyHome .section_03,.healthyHome .section_05,.healthyHome .section_08 { background:#000; padding:130px 0;}
+.healthyHome .section_04 { position:relative; background:#e1dfe2;padding:130px 0; }
+.healthyHome .section_04 h2 { margin-bottom:50px; }
+.healthyHome .section_04 p { margin-bottom:24px; }
+.healthyHome .section_04 p:last-child { margin-bottom:0; }
+.healthyHome .section_05 a,.healthyHome .section_08 a { display:block; width:480px; height:70px; background:#fdd93c; border-radius:10px; transition:all .2s; margin:60px auto 0;}
+.healthyHome .section_05 a:hover,.healthyHome .section_08 a:hover { background:#fdfb3c; }
+.healthyHome .section_06 { padding:160px 0; }
+.healthyHome .section_06 p:first-child { margin-bottom:50px; }
+.healthyHome .section_07 { background:#e1dfe2; padding:130px 0; }
+.healthyHome .section_09 { position:relative; background:#010b37 url(images/section09_bg.jpg) left bottom no-repeat; padding:100px 0 50px; }
+.healthyHome .section_09 ul { position:absolute; left:50%; margin-left:-600px; bottom:110px; display:flex; gap:16px; justify-content:center; }
+.healthyHome .section_09 .content { text-align:right; }
+.healthyHome .section_09 a { display:block; width:380px; height:70px; background:#fff; border-radius:10px; transition:all .2s; }
+.healthyHome .section_09 a:hover { background:#fdd93c; }
+
+
+/* 하단 빠른 상담 바 */
+.applyBar { position: fixed; bottom: 0; background: rgba(28, 29, 31, 0.9); width: 100%; height: 120px; z-index: 1000001; font-size: 18px; text-align: left; border-top:1px solid #555; }
+.apply_box { position: relative; width: 1090px; margin: 0 auto; }
+.apply_box p { color: #fff; }
+.apply_box .apply_tit { font-weight: 500; padding: 20px 50px 5px 0; border-bottom: 1px solid #555; font-size: 30px; width: -moz-fit-content; width: fit-content; }
+.apply_box .agree { position: absolute; top: 85px; right: 200px; color: #fff; font-weight: 300; cursor: pointer; }
+.apply_box .agree a { color: #fff; }
+.apply_box .apply_tit span { color: #fffc12; }
+.apply_box .info { padding-top: 10px; }
+.apply_box .apply_btn { background: #fffc12; text-align: center; font-weight: 700; color: #000; width: -moz-fit-content; width: fit-content; padding: 12px 40px; border-radius: 3px; display: inline-grid; align-items: center; font-size: 20px; height: 60px; position: absolute; top: 20px; right: 0; }
+.apply_box .apply_btn:hover { background: #ff004e; color: #fffc12; }
+.apply_box input[type=text] { width: 180px; height: 40px; margin: 0 20px 0 10px; padding: 20px 10px; }
+.apply_box .number { width: 325px !important; }
+.apply_box .conts { width: 388px !important; }
+.apply_box input[type=checkbox] { width: 20px; height: 20px; }
+
+
+@keyframes blur {
+    0% { opacity:0; filter:blur(8px); }
+    100% { opacity:1; filter:blur(0); }
+}
+
+@keyframes fadeUp {
+	0% {
+		opacity:0;
+		transform:translateY(20%)
+	}
+	100% {
+		opacity:1;
+		transform:translateY(0)
+	}
+}
+
+
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+/* 20250812 수정 */
+.link_certification { position:relative; height:884px; background:url(https://cdn.kystudy.co.kr/User//Content/images/event/2025/healthyHome/images/section04_img02_20250812.png) no-repeat top center; margin-bottom:24px; }
+.link_certification a { position:absolute; bottom:60px; left:50%; margin-left:-190px;display:block; width:380px; height:70px; background:#000; border-radius:10px; transition:all .2s; }
+.link_certification a:hover { background:#070346; }
+
+
+
+
+
+
+
+
+
+
