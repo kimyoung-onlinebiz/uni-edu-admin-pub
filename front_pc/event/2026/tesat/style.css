@@ -1,0 +1,180 @@
+.evt_wp {position: relative; width: 100%; min-width: 1300px; overflow: hidden;}
+.evt_wp .inner{width: 1200px; margin: 0 auto; position: relative;}
+
+.visual{background: linear-gradient(0deg, #233c7b 20%, #041b56 80%); height: 1286px;}
+.top_txt{position: absolute; top:50px; right:50px; }
+.object{overflow: hidden; text-align: center; display: none;}
+.object li{display: inline-block; padding: 0 20px; animation: zoom-in-blurred .3s cubic-bezier(.23,1.000,.32,1.000) both;}
+
+.object li:nth-child(1){animation-delay: .3s;}
+.object li:nth-child(2){animation-delay: .6s;}
+.object li:nth-child(3){animation-delay: .9s;}
+.object li:nth-child(4){animation-delay: 1.2s;}
+
+.scroll-down{animation: scroll-down .5s both;}
+.typo{animation: scale-up .3s .3s cubic-bezier(.39,.575,.565,1.000) both; padding-top:100px; padding-bottom:30px; } 
+
+.btn_view{border-radius: 2px; border: 1px solid #fff; padding: 3px 10px; text-align: center; color: #fff; font-size: 12px;}
+.btn_view::after{content: ''; width: 5px; height: 5px; display:inline-block; margin: 0 0 1px 4px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg);}
+.top_txt a{position: absolute; top: 380px; right: 50%; z-index:10; margin-right:-42px; animation: turn-up .5s 1.5s both; display: none;}
+.visual > .inner a{position: absolute; bottom:32px; right: 120px;}
+.btn_info{position: absolute; top: 310px; right: 130px; background: #222; color: #fff; padding: 5px 15px 3px; font-size: 15px; border-radius: 3px;}
+.btn_info::after{content: ''; width: 7px; height: 7px; display:inline-block; margin: 0 0 1px 4px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg);}
+
+* [class^="bg_"]{padding: 80px 0 100px;}
+.tit{text-align: center; font-size:55px; font-weight: 900; color: #000; padding-bottom:30px;}
+.bg_01 .tit{color: #fff;}
+.tit span{color: #461bc7;}
+
+.pack{width: 1100px; margin: 0 auto; background: #fff;  border-radius: 10px 10px 20px 20px;}
+.pack ul{overflow: hidden;}
+
+.pack .data{background: #fff; padding: 66px 0 25px; display: flex; align-items: center; width: fit-content; margin: 0 auto;}
+.pack .data li{position: relative; font-size: 27px; font-weight: 900; display: inline-flex; text-align: center; padding: 0 5px;}
+.pack .data .plus{padding:2px 8px 7px 5px; color: #fff; background: #461bc7; border-radius: 50%; font-size: 19px; width: 22px; height: 22px; margin: 0 25px; text-align: center; line-height:0.8; }
+.pack .data div{position: absolute; top: -35px; left: 20px; font-size: 14px; width: 136px; font-size: 13px;}
+.pack .data .add{background: #ececec; border-radius: 30px; padding: 5px 2px 3px; width: 80px; left: 3px;}
+
+.arrow_box{position: relative; border: 1px solid #000; padding: 5px 10px; border-radius: 2px; font-weight: 600;}
+.arrow_box:after{position: absolute; bottom: -4px; left: 62px; content: ''; width: 6px; height: 6px; border-left: 1px solid #000; border-bottom: 1px solid #000; background: #fff; transform: rotate(-45deg);} /*{top: 100%; left: 50%; border: solid transparent;  content: ""; height: 0; width: 0; position: absolute; border-top-color: #ececec; border-width: 10px; margin-left: -10px;}*/
+
+.pack .buy{border-radius: 0 0 10px 10px;}
+.pack .buy li{float: left; position: relative; background: #222; width: 50%;  text-align: center; font-size:45px; color: #fff; font-weight: 900;  display: grid; align-items: center; height: 80px;}
+.pack .buy li.btn{background: #000; border: 0; border-radius: 0;}
+.pack .buy li.btn a{ color: #00ffc6; font-size: 36px; width: 320px; margin: 0 auto;}
+.pack .buy li.btn a .material-symbols-rounded{font-size: 40px; color: #00ffc6;  margin-left: 2px;}
+
+.evt_wp .btn{overflow: hidden; text-align: center;}
+.evt_wp .btn li{display: inline-block;}
+.evt_wp .btn li:last-child{margin-left: 10px;}
+
+.vod_box{overflow: hidden; background: #191818; border-radius: 10px; width: 1080px; margin: 0 auto; padding: 10px;}
+.vod_box li{float: left; color: #fff; font-size: 16px; letter-spacing: 0.5px; line-height: 22px;}
+.vod_box li video{display: block; background: #000;}
+.vod_box li:last-child{padding: 50px 0 0 60px; width: 320px;}
+.vod_box li div{font-size: 28px; padding: 20px 0; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.3); font-weight:800; line-height: 30px; color:#fff; }
+
+/* 롤링 */
+.tabList {overflow: hidden; text-align: center; width: 1200px; margin: 0 auto;}
+.tabList li {display: inline-block; text-align: center; background: #333; padding: 20px 0 15px; width: 250px; margin-left: 3px; border-radius: 50px; font-weight: 200;}
+.tabList li.on {font-weight: 900; background: #ff025b;}
+.tabList li.on a{color: #fff;}
+.tabList li a {display: block; text-decoration: none; color: #ccc; font-size: 24px;}
+
+.tabGroup {width: 1200px; margin: 0 auto; height: 611px;}
+.tabGroup li { position:absolute; width: 100%; height: 650px; display: none;}
+.tabGroup li:first-child { display: block;}
+
+/* 이벤트 혜택 카드 (con2.png에서 01/02 뱃지를 제외한 영역만 노출) */
+.benefit{display: flex; justify-content: space-between; width: 1100px; margin:0 auto;}
+.benefit li{position: relative; width: 538px; height: 376px; background: #fff url('images/con2.png') no-repeat; border-radius: 4px;}
+.benefit li.ticket{background-position: -50px -90px;}
+.benefit li.scholarship{background-position: -611px -90px;}
+.benefit .blind{position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);}
+.benefit .btn_info{top: 222px; left: 353px; right: auto; padding: 4px 12px 3px; font-size: 13px;}
+
+.notice{width: 1100px; margin: 0 auto; color: #fff; font-size: 15px; letter-spacing: 0.5px; line-height: 28px; font-weight: 400; padding-bottom:120px;}
+.notice > strong{display: block; padding-bottom: 30px; border-bottom: 1px solid #fff; margin-bottom: 30px; font-size: 30px;}
+
+.evt{overflow: hidden;}
+.evt li{float: left; font-size: 21px; line-height: 38px; padding: 50px 0 30px 50px;}
+.evt li strong{font-weight: 800;}
+.evt li div{background: #e9f1f2; padding: 30px 70px 30px 35px; font-size: 16px; line-height: 24px; margin-top: 24px;}
+
+/* 기대평, 수강후기 글쓰기 */
+.reply_wp{width: 1100px; margin: 0 auto;}
+.reply{overflow: hidden; display: flex; align-items: center; margin: 30px auto 0;}
+.reply input,
+.reply select{color: #000 !important; border: 1px solid #000;}
+.reply input::placeholder{color: #000;}
+
+.reply input:first-child[type='text'] {width: 110px; padding: 25px 10px; text-align: center;}
+.reply input[type='text']:nth-child(3) {width: 733px; padding: 25px 10px;}
+.reply select{width: 90px; height: 52px; margin: 0 5px;}
+
+.evt_wp input:focus,
+.evt_wp select:focus{outline: none;}	
+
+.btn_replay{background: #000; width: 145px; text-align: center; color: #fff; padding: 16px 0; font-weight: 800; line-height: 20px; margin-left: -3px !important; letter-spacing: 0.5px;;}
+.btn_replay:hover{background: #461bc7; color: #fff;}
+
+/* 기대평, 수강후기 목록 */
+table.reply_list{margin-top: 50px;}	
+table.reply_list td{color: #000; font-size: 16px; padding: 15px 10px; font-weight: 300; text-align: center; border-bottom: 1px solid #777; line-height: 22px; letter-spacing: 0;}
+table.reply_list td:last-child{text-align: left; padding: 15px 30px;}
+	
+.evt_wp .paging_wp{text-align: center; overflow: hidden; margin-top: 20px;}
+.evt_wp .paging{align-items: center;  display: inline-flex;}
+.evt_wp .paging a{color: #222; border-radius: 50%; background: transparent; margin: 0 2px; width: 24px; height: 24px; display: grid; align-items: center; text-align: center;}
+.evt_wp .paging .arrow{position: relative; width: 28px; height: 28px; border: 1px solid #222; border-radius: 50%;  padding: 0; margin: 5px 5px 0; background: transparent; display: inline-block;}
+.evt_wp .paging .arrow.prev::after{position: absolute; top: 10px; right: 9px; content: ''; width: 5px; height: 5px; border-bottom: 2px solid #222; border-left: 2px solid #222; transform: rotate(45deg);}
+.evt_wp .paging .arrow.next::after{position: absolute; top: 10px; left: 9px; content: ''; width: 5px; height: 5px; border-top: 2px solid #222; border-right: 2px solid #222; transform: rotate(45deg);}	
+.evt_wp .paging .arrow:hover{background: #222; border-color: #222;}	
+.evt_wp .paging a:hover,
+.evt_wp .paging .active{font-weight: 900; background: #222; color: #fff;}
+.evt_wp .paging .arrow.prev:hover::after{border-color: #222; border-bottom: 2px solid #fff; border-left: 2px solid #fff;}	
+.evt_wp .paging .arrow.next:hover::after{border-color: #222; border-top: 2px solid #fff; border-right: 2px solid #fff;}	
+.reply select::selection{color: #000;}
+
+
+.bg_01{background: #461bc7;}
+.bg_02{background: #fff;}
+.bg_03{background: #dce7e8;}
+.bg_04{background: #0f1a2d; padding-bottom:0; }
+.bg_04 .tit { color:#fff; }
+
+.dungdung {animation: updown 1s both infinite alternate;}
+
+.secret_box{width: 1200px; margin: 0 auto 50px; position: relative;}
+.secret_box .swiper-container{width: 1100px; margin: 0 auto;}
+.secret_box .swiper-button-prev{left: -50px;}
+.secret_box .swiper-button-next{right: -50px;}  
+.secret_box .swiper-button-prev::after{content:  ''; width: 30px; height:  30px; border-bottom: 2px solid #000; border-left:  2px solid #000; transform:  rotate(45deg); }
+.secret_box .swiper-button-next::after{ content:  ''; width: 30px; height: 30px; border-top:  2px solid #000; border-right:  2px solid #000; transform:  rotate(45deg); }
+
+.secret_box .swiper-pagination{width: -webkit-fill-available; margin: 30px auto;}
+.secret_box .swiper-pagination-bullet{width: 15px; height: 15px; margin: 5px;}
+.secret_box .swiper-pagination-bullet-active{background: #461bc7;}
+
+/* popup */
+.popup{background: #fff; position: absolute; width: 850px; border-radius: 5px; border: 8px solid #461bc7; box-shadow: 2px 10px 50px 10px rgba(0,0,0,0.8); z-index: 9;} 
+
+.pop_wp{position: relative;}
+.pop_wp a.closeX{position: absolute; top: 25px; right: 50px; font-size: 60px; height: 36px; line-height: 36px; font-weight: 100; text-align: center; cursor: pointer; color: #fff; text-decoration: none;}
+.pop_wp a.closeX:hover{color: #ccc;}
+
+.pop_wp .pop_tit{background: #461bc7; text-align: center; color: #fff; padding: 25px 0 20px; font-size: 35px;}
+.pop_wp strong{font-weight: 900;}
+
+.pop_wp .basis{overflow: hidden; background: #f2f7f7; display: flex; align-items: center; padding: 0 70px;}
+.pop_wp .basis:nth-child(odd){background: #fff;}
+.pop_wp .basis li{padding: 50px 0 50px 25px; font-size: 18px; line-height: 26px; font-weight: 800; text-align: left;}
+.pop_wp .basis li:first-child{background: url('images/object.png') no-repeat center; width: 105px; height: 66px; padding-right: 25px; font-size: 20px; line-height: 24px; text-align: center; font-weight: 300;}
+
+.pop_wp .pop_conts{padding: 20px 50px 50px; font-size: 16px;}
+.pop_conts p{padding-bottom: 20px; letter-spacing: 0;}
+.pop_conts strong{font-size: 21px; display: block; padding: 20px 0 10px; border-top: 1px dashed #ccc;}
+.pop_conts strong:first-child{border-top: 0;}
+
+.pop_conts .pass{background: #f2f2f2; padding: 20px 35px; border-radius: 5px;}
+.pass li{border-top: 1px dashed #ddd; font-size: 14px; display: flex; padding: 20px 0;}
+.pass li:first-child{border-top: 0;}
+.pass li div{display: inline-grid; align-items: center;}
+.pass li div:first-child{width: 75px; height: 75px; border-radius: 5px; background: #461bc7; color: #fff; text-align: center; font-size: 23px; margin-right: 30px;}
+.pass li em{display: block; color: #461bc7; padding-bottom: 5px; font-weight: 900;}
+
+#popup1{top: 60px; left: 175px; z-index:20; }
+#popup2{top: 300px; left: 175px;}
+#popup3{top: -282px; left: 175px;}
+
+.up-on-scroll{transition: transform 0.7s, opacity 1.7s;}
+.blink{animation: blink 1s infinite;}
+
+.coin.big{animation: scale-center .2s .5s cubic-bezier(.39,.575,.565,1.000) both}
+
+@keyframes scale-center{0% {transform: scale(0); opacity: 0; filter: blur(20px);} 100% {transform: scale(1)}}
+@keyframes zoom-in-blurred{ 0% {opacity:0; transform: scale(6); filter: blur(20px);} 100% {opacity:1; transform: scale(1);}}
+@keyframes updown { 0% {transform: translateY(-3px);} 100% {transform: translateY(3px);}}
+@keyframes scroll-down { 0%{transform: translateY(-30px); opacity:0;} 100%{transform: translateY(0); opacity:1;}}
+@keyframes turn-up{0% {opacity: 0;} 100%{opacity: 1;}}
+@keyframes scale-up{0%{ opacity:0;} 100%{opacity:1;}}

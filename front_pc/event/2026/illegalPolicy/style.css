@@ -1,0 +1,121 @@
+﻿@charset "UTF-8";
+
+/* 불법대행주의 */
+.illegalPolicy { width:100%; overflow:hidden; text-align:center; }
+.illegalPolicy * { color:#111; box-sizing:border-box; }
+.illegalPolicy .content { padding-bottom:130px; }
+.illegalPolicy .content,.illegalPolicy .topTxt { width:1200px; position:relative; margin:0 auto; }
+.illegalPolicy .topImg { width:100%; position:relative; height:1017px; background:url(images/topBg.jpg) no-repeat center top; background-size:cover; }
+.illegalPolicy .topTxt { height:1017px; }
+.illegalPolicy .topTxt:before { width:1105px; height:355px; content:""; display:block; position:absolute; left:48px; top:205px; background:url(images/topLine.png) no-repeat; }
+.illegalPolicy .topTxt li,.topImg p,.illegalPolicy .section_01 li { position:absolute; }
+.topImg p { left:50%; top:0px; margin-left:-250px; z-index:10; }
+.topImg p:before { width:526px; height:352px; content:""; display:block; position:absolute; left:-10px; top:-35px; background:url(images/topImg_light.png) no-repeat; animation:light .5s infinite ease-in-out; }
+.illegalPolicy .topTxt li:first-child { top:275px; left:182px; animation:width .4s .1s both ease-in-out; overflow:hidden; }
+.illegalPolicy .topTxt li:nth-child(2) { top:351px; left:245px; animation:scale .2s .8s both ease-in-out; }
+.illegalPolicy .topTxt li:nth-child(3) { top:351px; left:430px; animation:scale .2s 1s both ease-in-out; }
+.illegalPolicy .topTxt li:nth-child(4) { top:351px; left:615px; animation:scale .2s 1.2s both ease-in-out }
+.illegalPolicy .topTxt li:nth-child(5) { top:351px; left:800px; animation:scale .2s 1.4s both ease-in-out }
+.illegalPolicy .topTxt li:nth-child(6) { bottom:210px; left:223px; animation:fadeIn .2s 1.6s both ease-in-out }
+.illegalPolicy .section_01 li:nth-child(1) { top:260px; left:195px; opacity:0; }
+.illegalPolicy .section_01 li:nth-child(2) { top:370px; left:260px; opacity:0; }
+.illegalPolicy .section_01 li:nth-child(3) { top:490px; left:110px; opacity:0; }
+.illegalPolicy .section_01 li:nth-child(4) { top:580px; left:315px; opacity:0; }
+.illegalPolicy .topImg_list li:nth-child(2) a:hover { background:#00049c; }
+.aniUp { animation:aniUp .3s both cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+.scale { animation:scale .2s both ease-in-out; }
+.illegalPolicy h2 { position:relative; padding:130px 0 60px;  }
+.illegalPolicy .section_01 { background:url(images/section01_bg.jpg) repeat-x; height:1528px; }
+.illegalPolicy .section_01 p { margin-top:484px; }
+.illegalPolicy .section_02 { background:#111; }
+.illegalPolicy .section_02 li { margin-bottom:30px; }
+.illegalPolicy .section_02 li:last-child { margin-bottom:0; }
+.illegalPolicy .section_03 { background:#cd0000 url(images/section03_bg.jpg) repeat-x center bottom; }
+.illegalPolicy .section_03 h2:before { content:""; display:block; width:234px; height:45px; position:absolute; left:478px; top:142px; background:url(images/h2_section03_02.png) no-repeat; animation:fadeIn .9s infinite cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+.illegalPolicy .section_04 { background:#111; }
+.illegalPolicy .section_04 .content div p { position:absolute; left:470px; top:410px; width:260px; letter-spacing:-10px; text-align:center; }
+.illegalPolicy .section_04 .counter { color:#ed0d0d; font-size:170px; }
+.illegalPolicy .section_04 small { color:#ed0d0d; font-size:86px; }
+.section_04 .content div li { position:absolute; }
+.section_04 .content div li:first-child { right:370px; top:540px; animation:upDown .8s infinite ease-in-out; }
+.section_04 .content div li:last-child { right:280px; top:580px; animation:upDown .8s .3s infinite ease-in-out; }
+.illegalPolicy .section_04 .content > p { margin-top:-50px; }
+
+.illegalPolicy .btn_apply { display:flex; justify-content:center; margin-top:60px; gap:20px; }
+.illegalPolicy .btn_apply a { display:block; background:#ed0d0d; width:400px; height:80px; border-radius:40px; text-align:center; transition:all .2s; padding-top:25px; }
+.illegalPolicy .btn_apply a:hover { background:#320ded; }
+.illegalPolicy .section_05 { background:#242424; }
+.illegalPolicy .section_05 ul { display:flex; justify-content:center; gap:60px; }
+.illegalPolicy .section_05 ul a { display:block; width:180px; height:180px; overflow:hidden; border-radius:100px; margin:0 auto 40px; }
+.illegalPolicy .section_05 ul a img { transition:.2s; }
+.illegalPolicy .section_05 ul a img:hover { transform:scale(1.1); }
+
+
+
+@keyframes width { 
+	0% {
+		width:0;
+	}
+	100% {
+		width:840px;
+	}
+} 
+
+@keyframes light { 
+	0% {
+		opacity:.7;
+	}
+	100% {
+		opacity:.1;
+	}
+} 
+
+@keyframes scale {
+	0% { transform:scale(2); opacity:0; }
+	100% { transform:scale(1); opacity:1; }
+}
+
+
+
+@keyframes aniUp {
+	0% {
+		transform: translateY(25%);
+		opacity:0;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity:1;
+	}
+}
+@keyframes aniDown {
+	0% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+
+@keyframes upDown {
+	0% {
+		transform: translateY(0%);
+	}
+	50%{
+		transform: translateY(15%);
+	}
+	100% {
+        transform: translateY(0%);
+	}
+}
+
+

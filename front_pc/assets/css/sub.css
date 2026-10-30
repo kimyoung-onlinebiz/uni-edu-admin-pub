@@ -66,6 +66,9 @@
 .sub_header.column h5 { width:100%; font-size:var(--Font-medium) !important; font-weight:500; margin-bottom:4px; }
 .sub_header.column h5 small { font-size:var(--Font-medium) !important; color:var(--Neutral-600); }
 .sub_header h5 strong { color:var(--Info); }
+.subpage_content .sub_header.bar { padding-bottom:16px; } /* 소제목 h5 : 왼쪽 세로줄 */
+.subpage_content .sub_header.bar h5 { padding-left:10px; border-left:3px solid var(--Primary-500); color:var(--Primary-500); font-size:var(--Font-large); font-weight:600; line-height:1; }
+.subpage_content .sub_header.column.bar h5 { font-size:var(--Font-large) !important; margin-bottom:0; } /* .column h5 !important 덮어씀 */
 
 .breadcrumb { position:absolute; right:0; top:-56px; }
 .breadcrumb .home { position:relative; }
@@ -1233,6 +1236,14 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .exam_table .contact .material-symbols-rounded { font-size:18px; color:var(--Primary-500); vertical-align:-4px; margin-right:6px; }
 .exam_table .contact a { font-size:inherit; line-height:inherit; text-decoration:underline; text-underline-offset:3px; }
 .exam_table .contact a:hover { color:var(--Primary-500); }
+.exam_table td .btn { display:inline-flex; align-items:center; }
+.exam_table td .btn .material-symbols-rounded { font-size:18px; line-height:1; vertical-align:0; margin:0 -6px 0 0; padding:0; } /* 버튼 뒤 > 아이콘 */
+
+/* 사회복지사 이수과목 안내 */
+.sw_course .txt_guide_gray p { line-height:1.6; }
+.sw_table td { line-height:1.5; }
+.sw_table td .badge { margin-right:6px; vertical-align:1px; } /* 개설 뱃지 */
+.sw_table td p { margin-top:2px; font-size:inherit; line-height:inherit; } /* 중복과목 인정 */
 
 /* 대상별 가이드 : 대학편입 준비생 편입의 장점 */
 .transfer_point { margin-top:40px; }
