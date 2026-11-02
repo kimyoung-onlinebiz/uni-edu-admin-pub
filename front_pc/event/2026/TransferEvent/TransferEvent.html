@@ -350,7 +350,7 @@
                             <div class="file_search">
                                 <input type="text" id="viewFile" class="fileInput_textbox" placeholder="10MB 미만의 이미지" readonly>
                                 <a href="#none" class="btnFile_search">찾아보기</a>
-                                <input type="file" class="fileInput_opacity" onchange="document.getElementById('viewFile').value=this.value;">
+                                <input type="file" class="fileInput_opacity" accept="image/*">
                             </div>
                             <button type="submit">인증자료 제출하기</button>
                         </div>
@@ -507,7 +507,7 @@
                 $event.find('.select_tab li > a').removeClass('current');
                 $(this).addClass('current');
                 $event.find('.tab_con').hide();
-                $('#' + $(this).attr('rel')).fadeIn();
+                $event.find('#' + $(this).attr('rel')).fadeIn();
             }); // 탭 //
 
             var reviewSwiper = new Swiper('.transfer_202307 .review_swiper', {
@@ -536,6 +536,18 @@
                 e.preventDefault();
                 $event.find('.layer_event').fadeOut('fast');
             }); // 레이어 닫기 //
+
+            $event.find('.fileInput_opacity').on('change', function () {
+                var file = this.files[0];
+
+                if (file && file.size >= 10 * 1024 * 1024) {
+                    alert('10MB 미만의 이미지만 첨부할 수 있습니다.');
+                    this.value = '';
+                    file = null;
+                }
+
+                $('#viewFile').val(file ? file.name : '');
+            }); // 첨부파일명 표시 //
         });
     </script>
 

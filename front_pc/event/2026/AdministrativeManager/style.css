@@ -1,0 +1,64 @@
+﻿@charset "UTF-8";
+
+/* 행정관리사 20210203 */
+.administration_0204 { width:100%; overflow:hidden; text-align:center; }
+.administration_0204 img { vertical-align:top; }
+.administration_0204 .content {  position:relative; width:1100px; height:100%; margin:0 auto; padding:0 0 130px; }
+.administration_0204 h2,.administration_0204 h3 { padding:60px 0 30px; }
+.administration_0204 .topImg { position:relative; width:100%; background:#ffe7bb; padding:110px 0 150px; }
+.administration_0204 .topImg span { z-index:10; position:absolute; top:220px; left:50%; margin-left:423px; animation:aniUp .5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; }
+.administration_0204 .topImg .topTxt_swiper { z-index:100; position:absolute; top:261px; left:50%; margin-left:430px; width:140px; height:84px; animation:fadeIn .3s .5s both; }
+.administration_0204 .topTxt_swiper li { padding:10px 0; box-sizing:border-box; }
+.administration_0204 .section_01,.administration_0204 .section_04 { background:#4d331e; }
+.administration_0204 .section_02,.administration_0204 .section_05 { background:#111; }
+.administration_0204 .section_03 { background:#e3ddd9; }
+.section_02 .apply a { position:absolute; top:267px; right:30px; background:#ff6f34; display:block; width:255px; height:70px; border-radius:3px; transition:all .3s; }
+.section_02 .apply a:hover { background:#ff9d36; }
+.section_02 .guide { color:#fff; text-align:left; padding-top:20px; }
+.section_02 .guide strong { color:#ff6f34; }
+.section_02 .btn_note { position:absolute; right:0; top:390px; padding:3px 15px 5px; color:#eee; border:1px solid #ccc; font-size:14px; transition:all .3s; }
+.section_02 .btn_note:hover { background:#eee; color:#222; }
+.administration_0204 .section_05 { padding:50px 0 40px; }
+.administration_0204 .note_content { display:none; position:absolute; top:70px; right:100px; width:500px; box-shadow:3px 3px 3px rgba(0,0,0,.3); text-align:left; padding:30px 30px; background:#fff; border:1px solid #000; }
+.administration_0204 .note_content h3 { font-size:20px; padding:0 0 15px; border-bottom:1px dashed #aaa; margin-bottom:20px; font-weight:600; }
+.administration_0204 .note_content li { position:relative; padding-left:10px; margin-bottom:5px; }
+.administration_0204 .note_content li:before { position:absolute; left:0; top:0; content:"- " }
+.administration_0204 .note_content a { position:absolute; right:15px; top:15px; }
+.administration_0204 .define_prev,.administration_0204 .define_next { z-index:10; position:absolute; top:50%; margin-top:-70px; width:23px; height:44px; padding:0; border:0; text-indent:-9999px; overflow:hidden; cursor:pointer; }
+.administration_0204 .define_prev { background:url(images/btn_controlLeft.png) no-repeat; left:-49px; }
+.administration_0204 .define_next { background:url(images/btn_controlRight.png) no-repeat; left:1125px; }
+
+
+
+@keyframes aniUp {
+	0% {
+		transform: translateY(40%);
+		opacity:0;
+	}
+	70% {
+		transform: translateY(-10%);
+		opacity:1;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity:1;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+/* 바로가기 배너 */
+.aside_right { position:absolute; left:50%; top:891px; margin-left:600px; width:165px; z-index:100; font-size:16px; }
+.aside_right h2 { background:#90bc36; color:#111; padding:8px 0; }
+.aside_right li a { display:block; width:100%; height:100%; padding:12px 0 12px 15px; border-bottom:1px dashed #d0d0d0; font-size:15px; transition:all .3s; line-height:1.2; color:#333;  text-align:left; box-sizing:border-box; background:#fff url(images/icon_arrow.png) no-repeat 142px 15px; font-weight:500; }
+.aside_right li:first-child a { background:#fff url(images/icon_ch.png) no-repeat 132px 5px; }
+.aside_right li a:hover { background:#f1f1f1 url(images/icon_arrow.png) no-repeat 142px 15px; }
+.aside_right li:first-child a:hover { background:#f1f1f1 url(images/icon_ch.png) no-repeat 132px 5px;  }
+.aside_right li:last-child a,.aside_right li a.current { border-bottom:0; }
+.aside_right li a:hover,.aside_right li a.current { color:#000; }

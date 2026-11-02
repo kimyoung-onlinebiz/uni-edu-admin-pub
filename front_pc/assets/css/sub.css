@@ -86,6 +86,7 @@
 .login_wrapper header { width:100%; }
 .login_wrapper header h1 { display:flex; justify-content:center; align-items:center; width:100%; height:80px; border-bottom:1px solid var(--Neutral-300); }
 .login_wrapper header h1 a { display:block; width:200px; height:auto; padding-top:3px; }
+.login_wrapper header h1 img { width:100%; }
 .login_wrapper header h2 { display:flex; justify-content:center; align-items:center; width:100%; margin:60px 0 40px; font-size:var(--Font-3xlarge); font-weight:700; }
 .login_box {  display:flex; align-items:center; flex-direction:column; }
 .login_box .tab { width:400px; display:flex; justify-content:center; align-items:center;  margin-bottom:40px; }
@@ -1310,3 +1311,136 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .layer_video .btn_layerClose { position:absolute; right:0; bottom:calc(100% + 8px); font-size:40px; color:var(--Neutral-0); }
 .layer_video .video_frame { aspect-ratio:16 / 9; background:#000; }
 .layer_video iframe { display:block; width:100%; height:100%; border:0; }
+
+/* 개인정보 처리방침 : .privacy_policy 블록 통째로 이동해서 사용 */
+.privacy_policy p,.privacy_policy li,.privacy_policy th,.privacy_policy td,.privacy_policy dt,.privacy_policy dd { line-height:1.6; }
+.privacy_policy strong { font-weight:700; }
+.privacy_policy .txt_info { color:var(--Info); }
+.privacy_policy .txt_error { color:var(--Error); }
+.privacy_policy .privacy_gap { margin-top:24px; }
+.privacy_intro p + p { margin-top:12px; }
+
+/* 목차 */
+.privacy_toc { display:grid; grid-template-columns:repeat(2, max-content); grid-template-rows:repeat(8, auto); grid-auto-flow:column; gap:6px 64px; margin-top:24px; padding:28px 36px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); background:var(--Neutral-100); }
+.privacy_toc a { display:grid; grid-template-columns:52px auto; color:var(--Neutral-800); }
+.privacy_toc a:hover { color:var(--Primary-500); text-decoration:underline; text-underline-offset:3px; }
+
+/* 주요 개인정보 처리표시 */
+.privacy_label { margin-top:48px; border-top:2px solid var(--Neutral-900); border-bottom:1px solid var(--Neutral-900); }
+.privacy_label h4 { padding:16px 0; border-bottom:1px solid var(--Neutral-900); text-align:center; font-size:var(--Font-large); font-weight:600; }
+.privacy_label ul { display:grid; grid-template-columns:repeat(3, 1fr); }
+.privacy_label li { border-right:1px solid var(--Neutral-300); }
+.privacy_label li:nth-child(3n) { border-right:0; }
+.privacy_label li:nth-child(-n+3) { border-bottom:1px solid var(--Neutral-300); }
+.privacy_label a { display:flex; flex-direction:column; align-items:center; gap:12px; padding:28px 0 24px; font-size:var(--Font-medium); font-weight:500; }
+.privacy_label a:hover { background:var(--Neutral-100); }
+.privacy_icon { display:block; flex-shrink:0; width:64px; height:74px; background:no-repeat center; } /* 아이콘 크기가 달라도 같은 박스 안에서 가운데 정렬 */
+.privacy_icon.icon01 { background-image:url(../images/sub/labeling_01.png); }
+.privacy_icon.icon02 { background-image:url(../images/sub/labeling_02.png); }
+.privacy_icon.icon03 { background-image:url(../images/sub/labeling_03.png); }
+.privacy_icon.icon04 { background-image:url(../images/sub/labeling_04.png); }
+.privacy_icon.icon05 { background-image:url(../images/sub/labeling_05.png); }
+.privacy_icon.icon06 { background-image:url(../images/sub/labeling_06.png); }
+.privacy_icon.icon07 { background-image:url(../images/sub/labeling_07.png); background-size:62px; } /* 2023.11 이전 방침 : 개인정보 수집항목 */
+.privacy_icon.icon08 { background-image:url(../images/sub/labeling_08.png); background-size:62px; } /* 2023.11 이전 방침 : 고유식별정보 */
+
+/* 조항 */
+.privacy_article { margin-top:48px; padding-top:48px; border-top:1px solid var(--Neutral-300); scroll-margin-top:24px; }
+.privacy_label + .privacy_article { border-top:0; }
+.privacy_article h4 { display:flex; align-items:center; gap:16px; margin-bottom:16px; font-size:var(--Font-2xlarge); font-weight:700; }
+.privacy_article > p + p { margin-top:8px; }
+
+/* 목록 : 번호/기호 내어쓰기로 줄맞춤 */
+.privacy_num { counter-reset:privacyNum; }
+.privacy_num > li { position:relative; padding-left:24px; counter-increment:privacyNum; }
+.privacy_num > li:before { content:counter(privacyNum) "."; position:absolute; left:0; top:0; }
+.privacy_num > li + li { margin-top:12px; }
+.privacy_num.strong > li:before { font-weight:700; }
+.privacy_sub { counter-reset:privacySub; margin-top:6px; }
+.privacy_sub > li { position:relative; padding-left:24px; counter-increment:privacySub; }
+.privacy_sub > li:before { content:counter(privacySub) ")"; position:absolute; left:0; top:0; }
+.privacy_sub > li + li { margin-top:6px; }
+.privacy_sub.strong > li:before { font-weight:700; }
+.privacy_kor { counter-reset:privacyKor; margin-top:6px; } /* 가. 나. 다. */
+.privacy_kor > li { position:relative; padding-left:24px; counter-increment:privacyKor; }
+.privacy_kor > li:before { content:counter(privacyKor, hangul) "."; position:absolute; left:0; top:0; }
+.privacy_kor > li + li { margin-top:6px; }
+.privacy_kor > li.skip { counter-increment:privacyKor 2; } /* 원문에서 번호 하나를 건너뛴 경우 (라. → 바.) */
+.privacy_group { margin-top:6px; } /* [전자결제] 처럼 제목 + 하위목록 묶음 */
+.privacy_group > li + li { margin-top:8px; }
+.privacy_law { margin-top:24px; padding:20px 24px; background:var(--Neutral-100); border-radius:var(--Border-2radius); }
+.privacy_law > strong { display:block; margin-bottom:8px; font-weight:600; }
+.privacy_law .privacy_note { margin-top:12px; font-weight:600; }
+.privacy_law .privacy_num { margin-top:4px; }
+.privacy_dash { margin-top:4px; }
+.privacy_dash > li { position:relative; padding-left:14px; }
+.privacy_dash > li:before { content:"-"; position:absolute; left:0; top:0; }
+.privacy_dash > li + li { margin-top:4px; }
+.privacy_num p,.privacy_sub p { margin-top:4px; }
+.privacy_note { position:relative; padding-left:14px; }
+.privacy_note:before { content:"*"; position:absolute; left:0; top:0; }
+
+/* 표 */
+.privacy_table { margin-top:16px; border-top:1px solid var(--Neutral-800); }
+.privacy_table th,.privacy_table td { padding:12px 16px; border:1px solid var(--Neutral-300); text-align:center; vertical-align:middle; word-break:keep-all; }
+.privacy_table tr > :first-child { border-left:0; }
+.privacy_table tr > :last-child { border-right:0; }
+.privacy_table thead th,.privacy_table th[scope="rowgroup"] { background:var(--Neutral-200); }
+.privacy_table td.left { text-align:left; }
+.privacy_table a { text-decoration:underline; text-underline-offset:3px; }
+.privacy_num .privacy_table { margin-top:12px; }
+
+/* 시행일자 · 이전 처리방침 */
+.privacy_date { margin-top:24px; }
+.privacy_date div { display:flex; }
+.privacy_date dt:after { content:" :"; margin-right:6px; }
+.privacy_history { width:400px; margin-top:12px; }
+.privacy_history li { display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--Neutral-300); }
+.privacy_history .btn { height:28px; line-height:24px; font-size:var(--Font-xsmall); color:var(--Neutral-800); }
+
+.privacy_btns { display:flex; justify-content:center; gap:16px; margin-top:56px; }
+.privacy_btns .btn { min-width:160px; }
+
+/* 이전 개인정보 처리방침 팝업(새 창) */
+.privacy_popup { width:1000px; margin:0 auto; padding:40px 0 60px; }
+.privacy_popup > header { padding-bottom:16px; margin-bottom:32px; border-bottom:1px solid var(--Neutral-900); }
+.privacy_popup > header h1 { font-size:var(--Font-2xlarge); font-weight:700; }
+.privacy_popup > header p { margin-top:4px; color:var(--Neutral-600); }
+
+/* 이용약관 : .terms_policy 블록 통째로 이동해서 사용 (번호 목록은 개인정보 처리방침의 .privacy_num / .privacy_kor 공용) */
+.terms_policy { padding:32px 40px 48px; border:1px solid var(--Neutral-300); border-radius:var(--Border-2radius); }
+.terms_policy p,.terms_policy li { line-height:1.6; }
+.terms_chapter { margin-top:48px; padding:12px 0; background:var(--Neutral-200); border-radius:var(--Border-radius); text-align:center; font-size:var(--Font-large); font-weight:700; }
+.terms_chapter:first-child { margin-top:0; }
+.terms_article { margin-top:32px; }
+.terms_chapter + .terms_article { margin-top:24px; }
+.terms_article h5 { margin-bottom:10px; font-size:var(--Font-medium); font-weight:700; }
+.terms_article > p + .privacy_num { margin-top:8px; }
+.terms_article li > p { margin-top:4px; }
+
+/* 휴면회원 정책 안내 : .dormant_policy 블록 통째로 이동해서 사용 (.terms_policy 박스 공용) */
+.dormant_intro { margin-bottom:24px; line-height:1.6; }
+.dormant_policy .terms_article:first-child { margin-top:0; }
+.dormant_policy .dormant_gap { margin-top:12px; }
+.terms_circle > li { position:relative; padding-left:22px; }
+.terms_circle > li + li { margin-top:10px; }
+.terms_circle > li > .mark { position:absolute; left:0; top:0; }
+.terms_circle .privacy_num { margin-top:6px; }
+
+/* 공통 상품페이지 패키지 리스트 */
+.package_design { display:flex; flex-direction:column;}
+.package_design .package_title { width:1280px; margin:0 auto; text-align:center; }
+.package_design .package_title > span { font-size:24px; }
+.package_design .package_title > strong { display:block; font-size:46px; font-weight:800; margin-bottom:8px; }
+.package_design .package_title > strong span { color:#001dbf; }
+.package_design .package_title > p { font-size:20px; }
+.product_PackageList { display:flex; width:1280px; margin:40px auto; gap:12px; flex-wrap:wrap; counter-reset:package_num; }
+.product_PackageList li { width:1280px; display:flex; align-items:center; background:#fff; border-radius:var(--Border-2radius); overflow:hidden; gap:40px; padding:24px 0; counter-increment:package_num; box-shadow:0 2px 6px 0 rgba(0, 0, 0, 0.04); }
+.product_PackageList li:before { content:counter(package_num); display:flex; align-items:center; justify-content:center; align-self:stretch; font-size:21px; font-weight:500;  border-right:1px solid var(--Neutral-300); width:80px; }
+.product_PackageList li dd,.product_PackageList .package_price { display:flex; gap:24px; }
+.product_PackageList dd strong { font-size:21px; margin-top:8px; width:655px; font-weight:600; }
+.product_PackageList li .btn_section { gap:12px; display:flex; }
+.product_PackageList li .btn_section button { height:62px; width:90px; }
+.product_PackageList .badge { font-size:var(--Font-xsmall) }
+.product_PackageList .course_price { width:210px;}
+.product_PackageList .course_price strong { font-size:var(--Font-2xlarge); font-weight:800; }
