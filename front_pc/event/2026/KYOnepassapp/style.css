@@ -1,0 +1,137 @@
+﻿@charset "UTF-8";
+
+/* KY원패스 프로그램 */
+.KyOnepass { width:100%; overflow:hidden; text-align:center; }
+.KyOnepass img { vertical-align:top; }
+.KyOnepass .topImg { position:relative; width:100%; height:825px; background:url(images/topBg.jpg) no-repeat center top; background-size:cover; }
+
+.KyOnepass .topTxt { position:absolute; width:1100px; left:50%; top:135px; margin-left:-550px; }
+.topImg .site_link { position:absolute; left:50%; bottom:68px; margin-left:-550px; width:1100px; }
+.topImg .site_link li { display:block; width:196px; height:196px; float:left; }
+.topImg .site_link li:first-child { margin:0 128px 0 290px; }
+.topImg .site_link li a { display:block; width:196px; height:196px; }
+.topImg .site_link li a img { position:absolute; display:block; width:196px; height:196px; transition:.4s ease; }
+.topImg .site_link li a .front { filter: alpha(opacity=100); opacity:1; z-index:2; }
+.topImg .site_link li a:hover .front { filter: alpha(opacity=0); opacity:0; z-index:1; }
+.topImg .site_link li a .back { filter: alpha(opacity=0); opacity:0; z-index:1; }
+.topImg .site_link li a:hover .back { filter: alpha(opacity=100); opacity:1; z-index:2; }
+
+.KyOnepass .inSeoul_txt { width:100%; height:133px; background:#1f0c0c; }
+.KyOnepass .inSeoul_txt p { padding-top:29px; font-size:27px; font-weight:300; line-height:1.4; letter-spacing:-.5px; color:#fff; }
+.KyOnepass .inSeoul_txt p strong { font-size:inherit; font-weight:700; letter-spacing:inherit; color:#fff; }
+.KyOnepass h2 { width:100%; padding:90px 0 40px 0; margin-bottom:50px; border-bottom:1px solid #333; }
+.KyOnepass .section_01 { position:relative; overflow:hidden; padding-bottom:110px; background:#e5e5e5; }
+.section_01:after { content:""; position:absolute; left:50%; bottom:-78px; width:125px; height:125px; margin-left:-62px; border-radius:50%; background:#fff; }
+.section_01 .section_ask { margin-top:62px; font-size:20px; line-height:1.4; letter-spacing:-.5px; color:#333; }
+.section_01 .section_way { display:inline-block; margin-top:6px; padding:0 14px; border-bottom:1px solid #222; font-size:34px; line-height:1.3; letter-spacing:-1px; }
+.section_01 .section_way strong { font-size:inherit; font-weight:700; letter-spacing:inherit; }
+.section_01 .section_txt { margin-bottom:15px; font-size:34px; font-weight:400; line-height:1.3; letter-spacing:-1px;  }
+.section_01 .section_txt strong { font-size:inherit; font-weight:700; letter-spacing:inherit; color:#111; }
+.section_01 .section_desc { margin-bottom:40px; font-size:18px; line-height:1.4; letter-spacing:-.5px; color:#444; }
+.section_01 .section_img { height:410px; overflow:hidden; }
+.section_01 .section_img img { display:block; margin:0 auto; } /* 이미지 하단 원은 CSS로 대체, 차트 영역(높이 410px)만 노출 */
+.KyOnepass .section_02 { position:relative; }
+.section_02 h2:before { display:block; content:""; width:72px; height:86px; position:absolute; top:-17px; left:50%; margin-left:-38px; background:url(images/section02_img.gif) no-repeat; z-index:10; }
+.section_02 .section_txt { margin-bottom:30px; font-size:28px; font-weight:400; line-height:1.3; letter-spacing:-.5px;  }
+.section_02 .section_txt strong { font-size:inherit; font-weight:600; letter-spacing:inherit; color:#111; }
+.section_02 .onepass_detail { position:relative; width:1280px; height:535px; background:#e5e5e5 url(images/detail_bg.png) no-repeat; margin:0 auto 120px; }
+.section_02 .onepass_detail li { position:absolute; left:485px; display:flex; align-items:center; width:765px; height:152px; padding-bottom:22px; box-sizing:border-box; border-bottom:1px solid #ccc; text-align:left; opacity:0; }
+.section_02 .onepass_detail li:last-child { border-bottom:none; }
+.onepass_detail .circle { display:flex; flex-direction:column; justify-content:center; flex:0 0 130px; height:130px; margin:0 23px 0 5px; border-radius:50%; background:#ffca00; text-align:center; }
+.onepass_detail .circle span { font-size:16px; line-height:1.3; letter-spacing:-.5px; }
+.onepass_detail .circle strong { font-size:20px; font-weight:700; line-height:1.3; letter-spacing:-.5px; color:#111; }
+.onepass_detail .txt h3 { margin-bottom:10px; font-size:23px; font-weight:600; line-height:1.3; letter-spacing:-.5px; color:#111; }
+.onepass_detail .txt h3 em { font-size:inherit; font-weight:inherit; font-style:normal; letter-spacing:inherit; color:#bd3800; }
+.onepass_detail .txt p { font-size:16px; line-height:1.5; letter-spacing:-.3px; color:#666; }
+.section_02 .onepass_detail li:first-child { top:30px; }
+.section_02 .onepass_detail li:nth-child(2) { top:202px; }
+.section_02 .onepass_detail li:nth-child(3) { top:374px; }
+
+.KyOnepass .slideTop { animation:slideTop .7s ease-in-out both; visibility: visible !important; }
+
+@keyframes slideTop {
+	0% {
+		transform: translateY(30%);
+		opacity:0;
+	}
+	70%{
+        transform: translateY(-10%);
+        opacity:1;
+	}
+	100% {
+        transform: translateY(0%);
+        opacity:1;
+	}
+}
+
+.KyOnepass .section_03 { background:#ffca00; }
+.KyOnepass .section_03 * { color:#111; }
+.KyOnepass .section_03 .course_wrap { width:1280px; margin:0 auto; }
+
+/* 우측 바로가기 배너 */
+.aside_right { position:absolute; right:0; top:1210px; width:140px; z-index:100; border:1px solid rgba(120,120,120,.8); border-right:none; }
+.aside_right a { display:block; width:100%; height:100%; padding:15px 0; border-bottom:1px dashed #ccc; background:#fff; font-size:16px; line-height:1.3; letter-spacing:-.5px; color:#111; transition:all .3s; }
+.aside_right a strong,.aside_right a span { display:block; color:#111; }
+.aside_right a strong { font-weight:600; }
+.aside_right a span { font-weight:400; }
+.aside_right .aside_02 strong:before { content:""; display:block; width:110px; height:1px; margin:6px auto; background:#222; }
+.aside_right .aside_03 strong { color:#e10000; }
+.aside_right .aside_03 strong:after { content:""; display:inline-block; width:6px; height:6px; margin-left:3px; border:solid #e10000; border-width:2px 2px 0 0; transform:rotate(45deg); vertical-align:2px; }
+.aside_right li:last-child a { border-bottom:none; }
+.aside_right li a:hover { background:#ddd; }
+.aside_right li a.current { background:#f1f1f1; }
+.aside_right li a.current > * { color:#b20000; }
+
+.section_03 h3 { position:relative; display:inline-block; font-size:32px; letter-spacing:-2px; margin:60px auto 35px; }
+.section_03 h3:before { content:""; display:block; position:absolute; left:-40px; top:-13px; width:44px; height:64px; background:url(images/h3_before.png) no-repeat; }
+.section_03 h3:after { content:""; display:block; position:absolute; right:-45px; top:-13px; width:44px; height:64px; background:url(images/h3_after.png) no-repeat; }
+.section_03 .info { background:#fff; box-sizing:border-box; border:2px solid #222;  }
+.section_03 .info:after { content:""; display:block; clear:both;  }
+.section_03 .info dl { width:50%; float:left; box-sizing:border-box; }
+.section_03 .info dl dd,.section_03 .info dl p { font-size:21px; }
+.section_03 .info dl dd { text-align:left; padding:35px 0 40px 125px; }
+.section_03 .info dl:first-child { border-right:1px solid #222; }
+.section_03 .info dl:first-child dd { background:url(images/icon_course01.png) no-repeat 25px 25px; font-size:23px; }
+.section_03 .info dl:last-child dd { background:url(images/icon_course02.png) no-repeat 25px 25px; }
+.section_03 .info dt { border-bottom:1px solid #d9d9d9; font-size:26px; padding:13px 0; font-weight:600; }
+.KyOnepass .course_tab { margin-top:30px; border-top:2px solid #222; border-bottom:none; }
+.KyOnepass .course_tab:after { content:""; display:block; clear:both; }
+.KyOnepass .course_tab li { float:left; width:33%; box-sizing:border-box; border-right:1px solid #222; }
+.KyOnepass .course_tab li a { background:#e5e5e5; display:block; width:100%; height:80px; font-size:26px; line-height:80px; }
+.KyOnepass .course_tab li a.current { background:#222; color:#fff !important; }
+.KyOnepass .course_tab li:first-child { border-left:2px solid #222; }
+.KyOnepass .course_tab li:last-child { width:34%; border-right:2px solid #222; }
+.KyOnepass .course_con { background:#fff; border:2px solid #222; border-top:none; text-align:left; padding:40px 0 50px 30px; box-sizing:border-box; }
+.course_con > ul > li { position:relative; display:inline-block; margin:0 7px 10px 0; }
+.course_con > ul > li :last-child { margin-right:0; }
+.course_con .campus_select,.course_select { cursor:pointer; }
+.course_con .campus_select span { display:inline-block; font-size:21px; width:398px; height:70px; box-sizing:border-box; padding:20px 0 0 65px; border:2px solid #ccc; background:url(images/check_off.png) no-repeat 24px 14px; }
+.course_con .campus_select span.on { background:#ed5656 url(images/check_on.png) no-repeat 24px 14px; border:2px solid #ed5656; }
+.campus_select input[type=radio],.course_select input[type=radio] { position:absolute; left:-9999px; text-indent:-9999px; overflow:hidden; }
+.KyOnepass .kyonepass_pay { position:relative; height:130px; border:2px solid #222; background:#222; text-align:left; box-sizing:border-box; padding:20px 0 0 40px; }
+.kyonepass_pay p { background:#ffca00; height:32px; line-height:31px; padding:0 30px; display:inline-block; border-radius:20px; font-size:18px; }
+.kyonepass_pay em { color:#fff !important; font-size:18px; display:block; margin:15px 0 0 5px; }
+.kyonepass_pay li { display:inline-block; font-size:18px; }
+.kyonepass_pay li:first-child * { color:#fff; }
+.kyonepass_pay li:first-child small { font-size:24px; padding-left:3px; }
+.kyonepass_pay li:first-child span { vertical-align:3px; padding-right:5px; }
+.kyonepass_pay li:first-child:after { content:" → "; display:inline-block;  color:#fff; padding:0 10px; font-size:32px;}
+.kyonepass_pay li strong { font-size:32px; }
+.kyonepass_pay li:last-child * { color:#fc2626; }
+.kyonepass_pay li:last-child strong { font-size:48px; letter-spacing:-1px; vertical-align:-2px; line-height:1; }
+.kyonepass_pay li:last-child small { font-size:26px; padding-left:3px; font-weight:normal; }
+.kyonepass_pay button { position:absolute; right:0; top:-2px; font-size:28px; width:210px; height:128px; background:#ed5656 url(images/btn_bullet.png) no-repeat 150px center; box-sizing:border-box; padding-right:18px; transition:all .3s; }
+.kyonepass_pay button:hover { background-color:#ff9000; }
+.KyOnepass .kyonepass_note { padding:30px 0 120px 20px; text-align:left; }
+.kyonepass_note dd strong { font-weight:normal; color:#e10000 !important; }
+.kyonepass_note dt { position:relative; font-size:21px; padding:0 0 8px 40px; line-height:30px; }
+.kyonepass_note dt:before { position:absolute; left:0; top:-3px; content:""; display:block; width:35px; height:35px; background:url(images/note_before.png) no-repeat; }
+.kyonepass_note dd { position:relative; padding:0 0 3px 12px; font-size:16px; }
+.kyonepass_note dd:before { position:absolute; left:0; top:1px; content:"- " }
+.layer_courseSelect { position:absolute; left:-60px; top:50px; width:510px; height:130px; background:#fff; z-index:100; border:1px solid #222; box-shadow:3px 3px 5px rgba(50,50,50,.3); }
+.layer_courseSelect h4 { background:#222; height:45px; text-align:center; line-height:45px; font-size:18px; color:#fff !important; }
+.layer_courseSelect h4 a { position:absolute; right:8px; top:8px; }
+.layer_courseSelect li { display:inline-block; margin-right:15px; }
+.layer_courseSelect ul { margin:22px 0 0 20px; }
+.course_con .course_select span { display:inline-block; font-size:21px; height:34px; box-sizing:border-box; background:url(images/check_off.png) no-repeat; padding:6px 0 0 38px; }
+.course_con .course_select span.on { background:url(images/check_on.png) no-repeat; color:#c10000; }
