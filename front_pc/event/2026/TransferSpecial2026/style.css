@@ -1,0 +1,228 @@
+﻿@charset "UTF-8";
+
+/* 편입 환승 이벤트 */
+
+/* Material icon */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@100..700&display=swap");
+.transferEvent .material-symbols-rounded { font-family:'Material Symbols Rounded'; font-weight:normal; font-style: normal; font-size:24px; vertical-align:-5px; line-height:1.2;  text-transform:none; letter-spacing:normal; word-wrap:normal; white-space: nowrap; direction: ltr; /* WebKit 브라우저 렌더링 최적화 */  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Opera */
+  text-rendering: optimizeLegibility; /* Firefox */  -moz-osx-font-smoothing: grayscale;}
+
+.transferEvent { width:100%; overflow:hidden; text-align:center; }
+.transferEvent *:not(.material-symbols-rounded) { font-family:'Pretendard', sans-serif; letter-spacing:-1px; color:#111; box-sizing:border-box; line-height:1.3; }
+.transferEvent .topImg { width:100%; position:relative; height:1440px; background:#111 url(images/topBg.jpg) no-repeat bottom; overflow:hidden; background-size:cover; }
+.transferEvent .content { position:relative; width:1200px; height:100%; margin:0 auto; }
+.transferEvent .topImg p { font-size:35px; color:#fff; font-weight:400; animation:aniUp .8s ease-out .3s forwards; opacity:0; margin-top:120px; }
+.transferEvent .topImg p strong { color:#00ffa1; }
+.transferEvent .topImg h2 { font-size:94px; color:#fff; font-weight:800; animation:aniUp .6s ease-out .6s forwards; opacity:0; margin-top:50px; line-height:1; letter-spacing:-2px; }
+.transferEvent .topImg h2 strong { font-size:126px; color:#00ffa1; }
+.transferEvent .topImg h2 span { display:inline-block; margin:0px 15px; vertical-align:-30px;}
+.transferEvent .topImg .coupon { width:503px; height:314px; background:url(images/topCoupon.png) no-repeat; margin:20px auto 0; display:flex; justify-content:space-between; align-items:end; animation:aniUp .6s ease-out .9s forwards; opacity:0; gap:15px; padding-bottom:10px; }
+.transferEvent .topImg .coupon li { font-size:24px; color:#fff; flex:1; }
+.transferEvent .topImg .coupon li strong { font-size:24px; color:#fff; }
+.transferEvent .topImg .info { width:1200px; margin:75px auto 70px; animation:aniUp .6s ease-out 1.1s forwards; opacity:0; display:flex; gap:8px; flex-direction:column; }
+.transferEvent .topImg .info dl { background:rgba(0,0,0,.7); border-radius:8px; display:flex; padding:16px 0; align-items:center; justify-content:center; }
+.transferEvent .topImg .info dt, .transferEvent .topImg .info dd { color:#fff; font-size:21px; }
+.transferEvent .topImg .info dt { position:relative; color:#00ffa1; font-weight:800; width:180px; display:flex; align-items:center; gap:16px; }
+.transferEvent .topImg .info dt:after { position:absolute; right:0; content:"|"; font-weight:100; color:#ddd; }
+.transferEvent .topImg a { font-size:21px; color:#00ffa1; font-weight:600; display:inline-block; animation:aniUp .6s ease-out 1.3s forwards; opacity:0; border:2px solid #00ffa1; padding:12px 100px;
+	border-radius:30px; transition:all .2s ease; }
+.transferEvent .topImg a:hover { border:2px solid #fff; color:#fff; }
+.transferEvent .topImg .info dd { width:450px;
+	text-align:left;
+	padding-left:20px; }
+
+/* 기본 레이어 스타일 */
+.layer_wrapper { background:#fff; display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.4); justify-content:center; align-items:center; z-index: 1000; }
+.layer_wrapper.active { display:flex; }
+.layer_wrapper .layer_header { position:relative; display:flex; flex-flow:column; text-align:left; padding:0 16px 18px 16px; }
+.layer_wrapper .layer_header .btn_layerClose { position:absolute; right:0; top:-6px; font-size:30px; }
+.layer_wrapper .layer_header h2 { display:flex;  align-items:center; font-size:20px; font-weight:600; gap:16px }
+.layer_wrapper .layer_box { position:relative; background:#fff; border-radius:12px; padding:30px 24px 30px 32px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); text-align:center; min-width:500px; }
+
+/* Cautions accordion */
+.cautions h4 { cursor:pointer; user-select:none; }
+.layer_wrapper .layer_content { overflow:auto; overflow-x:hidden; max-height:580px;min-height:150px; padding-right:8px; }
+.layer_wrapper .layer_content dl { display:flex; align-items:center; border-top:1px solid #ddd;  padding:8px 0; }
+.layer_wrapper .layer_content dt { font-size:15px; font-weight:600; width:100px; }
+.layer_wrapper .layer_content dd { width:300px; }
+.layer_wrapper .layer_content label { cursor: pointer; }
+.layer_wrapper .layer_content dt label { font-size:inherit; font-weight:inherit; }
+.layer_wrapper .layer_content input:not([type="checkbox"]) { height:30px; border:1px solid #ccc; padding:0 8px; width:100%; font-size:13px; }
+.layer_wrapper .layer_content input[type="checkbox"] { width:20px; height:20px; }
+.layer_wrapper .layer_content .agree_check div { width:100%; text-align:left; background:#f1f1f1; border:1px solid #ccc; padding:8px; margin-top:8px; font-size:13px; }
+.layer_wrapper .layer_content div { text-align:left; }
+.layer_wrapper .layer_btnSection button { background:#274ee0; color:#fff; border:none; border-radius:8px; font-size:16px; cursor:pointer; transition:all .2s ease; padding:8px 30px; margin:0 auto; }
+
+.layer_btnSection { display:flex; gap:16px; margin:20px auto 0; }
+.layer_btnSection.left { right:initial; left:32px; }
+.layer_btnSection .btn { min-width:120px; height:40px; }
+
+.transferEvent h3 span { display:block; margin-bottom:20px; }
+.transferEvent h3 { font-size:46px; font-weight:800; margin:0 0 40px; }
+.transferEvent .step { display:flex; gap:24px; justify-content:center; }
+.transferEvent .step li { display:flex; background:#fff; border-radius:16px; width:384px; height:340px; padding:30px; flex-flow:column; align-items:center;  }
+.transferEvent .how { background:#dedee4; padding:80px 0 120px; }
+.transferEvent .how .num,.transferEvent .ribbon { background:#111; color:#fff; font-size:20px; font-weight:500; display:inline-block; width:150px; border-radius:30px; margin:0 auto 30px; padding:3px 0; }
+.transferEvent .ribbon { margin-bottom:0; }
+.transferEvent .how p { font-size:20px; margin:30px 0 10px; }
+.transferEvent .how li:first-child p { margin:16px 0 10px; }
+.transferEvent .step a { background:#274ee0; color:#fff; border:none; border-radius:8px; font-size:20px; cursor:pointer; transition:all .2s ease; padding:6px 40px; }
+.transferEvent .cautions h4 { margin-top:30px; background:#5a5a70; color:#fff; border-radius:8px; font-size:18px; cursor:pointer; transition:all .2s ease; }
+.transferEvent .cautions h4 button { display:block; width:100%; padding:12px 40px; background:none; border:0; color:#fff; font-size:18px; cursor:pointer; }
+.transferEvent .cautions ul { max-height:0; overflow:hidden; margin-top:0; background:#fff; padding:0 50px; border-radius:8px; text-align:left; transition:max-height .3s ease, padding .3s ease, margin-top .3s ease; }
+.transferEvent .cautions.open ul { max-height: 1000px; margin-top:16px; padding:30px 50px; }
+.transferEvent .cautions ul li { position:relative; margin-bottom:8px; padding-left:12px; }
+.transferEvent .cautions ul li:before { content:"- "; position:absolute; left:0;  }
+.transferEvent .benefit { background:#274ee0; padding:80px 0 120px; }
+.transferEvent .benefit h3 { color:#fff; }
+.transferEvent .benefit h3 span img { filter: brightness(0) invert(1); }
+.transferEvent .benefit .benefit_box { background:#fff; padding:50px; border-radius:16px; display:flex; flex-flow:column; justify-content: center; margin-bottom:24px; }
+.transferEvent .benefit .title { font-size:35px; display:flex; justify-content: center; align-items: center; gap:32px; }
+.transferEvent .benefit .title em { font-weight:800; color:#274ee0 }
+.transferEvent .benefit .title div { margin-top:20px; font-size:35px; font-weight:600; }
+.transferEvent .benefit .title p { margin-top:10px; padding-right:150px; font-size:16px; font-weight:400; }
+.transferEvent .benefit .check_list { border:1px solid #d3d3dc; border-radius:8px; padding:20px; display:flex; gap:50px; justify-content: center; margin-top:20px;}
+.transferEvent .check_list p { font-size:26px; font-weight:800; width:25%; text-align:right; margin-top:8px; }
+.transferEvent .check_list ul { display:flex; flex-wrap:wrap; width:70%; text-align:left; }
+.transferEvent .check_list li { font-size:21px; width:48%; margin-top:8px; }
+.transferEvent .check_list li span { padding-right:5px; }
+.transferEvent .feature h4 { font-size:26px; font-weight:800; margin:50px auto 30px; }
+.transferEvent .feature ul { display:flex; gap:24px; }
+
+.transferEvent .feature ul li { padding-top:30px; height:225px; background:#ececf2; border-radius:8px; width:257px; }
+.transferEvent .benefit_box:last-child .feature ul li { width:350px; }
+.transferEvent .feature li span { display:block; height:85px; }
+.transferEvent .feature p { font-size:21px; margin-top:25px; }
+
+.transferEvent .section_01 {
+    background: #00006a; padding:120px 0;
+}
+
+.transferEvent .section_01 .content p img { border:1px solid #aaa; border-radius:16px; padding:50px 0; }
+
+.transferEvent .section_02 {
+    background: #0082ff; padding:120px 0;
+}
+.transferEvent .section_01 h3, .transferEvent .section_02 h3 { color:#fff; }
+.transferEvent .section_01 h3 strong { color:#00ffa1 }
+.transferEvent .section_02 h3 small { font-weight:400; color:#fff; font-size:21px; margin-top:10px; display:block; }
+
+.bottom_bn { background: #271d1a url(images/sec14_bg.jpg) no-repeat; height: 320px;}
+.bottom_bn .inner_1200 { width:1200px; margin:0 auto; }
+
+
+
+@keyframes aniUp {
+	0% {
+		transform: translateY(25%);
+		opacity:0;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity:1;
+	}
+}
+
+/* ===== 이벤트 참여방법: 비행기 7시→2시 통과 후 원위치 정착 (1회 재생) ===== */
+.transferEvent .how h3 span{
+    position:relative;
+    overflow:visible;
+}
+.transferEvent .how h3 span img{
+    position:relative;
+    z-index:2;
+    opacity:0;
+}
+.transferEvent .how.animate h3 span img{
+    animation:planeFly .8s ease-out forwards;
+}
+@keyframes planeFly{
+    0%   {transform:translate(-34px, 34px); opacity:0;}
+    20%  {opacity:1;}
+    100% {transform:translate(0, 0);        opacity:1;}
+}
+
+/* 속도선: 2시 → 7시 방향, 길어졌다 짧아짐 (1회 재생) */
+.transferEvent .how h3 span::before,
+.transferEvent .how h3 span::after{
+    content:'';
+    position:absolute;
+    width:22px; height:2px;
+    background:currentColor;
+    border-radius:2px;
+    transform-origin:center;
+    pointer-events:none;
+    z-index:1;
+    opacity:0;
+}
+.transferEvent .how.animate h3 span::before{
+    top:30%; left:55%;
+    animation:speedLine .8s linear forwards;
+}
+.transferEvent .how.animate h3 span::after{
+    top:62%; left:45%;
+    animation:speedLine 1.1s linear .3s forwards;
+}
+@keyframes speedLine{
+    0%   {transform:translate(22px, -22px)  rotate(-45deg) scaleX(0);   opacity:0;}
+    20%  {transform:translate(10px, -10px)  rotate(-45deg) scaleX(1);   opacity:.85;}
+    50%  {transform:translate(-5px, 5px)    rotate(-45deg) scaleX(1.6); opacity:.85;}
+    80%  {transform:translate(-20px, 20px)  rotate(-45deg) scaleX(.6);  opacity:.4;}
+    100% {transform:translate(-34px, 34px)  rotate(-45deg) scaleX(0);   opacity:0;}
+}
+
+/* ===== benefit 섹션: 동일한 비행기 비행 + 속도선 (뷰포트 진입 시 1회) ===== */
+.transferEvent .benefit h3 span{
+    position:relative;
+    overflow:visible;
+}
+.transferEvent .benefit h3 span img{
+    position:relative;
+    z-index:2;
+    opacity:0;
+}
+.transferEvent .benefit.animate h3 span img{
+    animation:planeFly .8s ease-out forwards;
+}
+.transferEvent .benefit h3 span::before,
+.transferEvent .benefit h3 span::after{
+    content:'';
+    position:absolute;
+    width:22px; height:2px;
+    background:#fff;
+    border-radius:2px;
+    transform-origin:center;
+    pointer-events:none;
+    z-index:1;
+    opacity:0;
+}
+.transferEvent .benefit.animate h3 span::before{
+    top:30%; left:55%;
+    animation:speedLine .8s linear forwards;
+}
+.transferEvent .benefit.animate h3 span::after{
+    top:62%; left:45%;
+    animation:speedLine 1.1s linear .3s forwards;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .transferEvent .how.animate h3 span img,
+    .transferEvent .how.animate h3 span::before,
+    .transferEvent .how.animate h3 span::after,
+    .transferEvent .benefit.animate h3 span img,
+    .transferEvent .benefit.animate h3 span::before,
+    .transferEvent .benefit.animate h3 span::after,
+    .transferEvent .topImg h2 strong span img,
+    .transferEvent .topImg h2 strong span::before,
+    .transferEvent .topImg h2 strong span::after{
+        animation:none !important;
+        opacity:1;
+    }
+}
+
+/* 레이어 파일 선택 */
+.layer_wrapper .layer_content .file_search { position:relative; display:flex; width:100%; }
+.layer_wrapper .layer_content .file_search input.fileInput_textbox { flex:1; min-width:0; height:30px; border:1px solid #ccc; border-right:0; border-radius:4px 0 0 4px; padding:0 8px; font-size:13px; background:#fff; }
+.layer_wrapper .layer_content .file_search a.btnFile_search { display:inline-flex; flex:0 0 90px; align-items:center; justify-content:center; height:30px; background:#274ee0; color:#fff; font-size:13px; border-radius:0 4px 4px 0; white-space:nowrap; }
+.layer_wrapper .layer_content .file_search input.fileInput_opacity { position:absolute; left:0; top:0; z-index:1; width:100%; height:100%; padding:0; border:0; opacity:0; cursor:pointer; }
+.layer_wrapper .layer_content .file_search:focus-within a.btnFile_search { outline:2px solid #111; outline-offset:1px; }

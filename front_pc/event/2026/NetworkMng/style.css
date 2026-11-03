@@ -53,10 +53,14 @@
 .network_20211230 .marginB30 { margin-bottom:30px; }
 .network_20211230 .section_03 { display:none; background:linear-gradient(90deg, rgba(201,0,211,1) 50%, rgba(151,0,160,1) 50%); text-align:center; }
 .network_20211230 .section_04 { background:#00031c; }
-.network_20211230 .section_04 ul { position:absolute; bottom:180px; right:52px; }
+.network_20211230 .section_04 ul { position:absolute; bottom:180px; right:52px; z-index:1; }
 .network_20211230 .section_04 li a { display:block; width:345px; height:85px; padding-right:20px; box-sizing:border-box; line-height:85px; background:#010a51 url(images/btn_bullet.png) no-repeat 210px center; border-radius:8px; color:#fff; font-size:21px; transition:all .2s; }
 .network_20211230 .section_04 li a:hover { background:#0013a6 url(images/btn_bullet.png) no-repeat 210px center; }
-.network_20211230 .section_04 span { position:absolute; right:105px; top:700px; animation:upDown 1s ease-out infinite; }
+.network_20211230 .section_04 span { position:absolute; right:105px; top:700px; z-index:1; animation:upDown 1s ease-out infinite; }
+.network_20211230 .section_04 .price_wrap { position:relative; }
+.network_20211230 .section_04 .price { position:absolute; left:705px; top:182px; text-align:left; white-space:nowrap; }
+.network_20211230 .section_04 .price del { display:block; width:207px; height:35px; margin-left:5px; border:2px solid #ccc; border-radius:18px; line-height:31px; text-align:center; text-decoration:none; color:#999; font-size:20px; }
+.network_20211230 .section_04 .price strong { display:block; margin-top:10px; line-height:70px; color:#c90909; font-size:60px; font-weight:900; letter-spacing:-3px; }
 
 .network_20211230 .guide { background:#e4e4eb; padding:70px 0; color:#222; }
 .network_20211230 .guide dl { margin-left:55px;  }

@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css'); 
+
+.FriendRcmmdRenewal *{font-family: 'Pretendard', 'Malgun Gothic', sans-serif; }
+.FriendRcmmdRenewal strong, 
+.FriendRcmmdRenewal b{font-weight: 900;}
+.FriendRcmmdRenewal i{font-style: normal;}
+.conbox,
+.inner_1200{position: relative; width: 1200px; margin: 0 auto;}
+
+/* visual */
+.visual_wp{background: #ff8e30 url('images/visual_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 1240px;}
+.visual_wp .megagroup { position: absolute; top: 75px; left: 50%; margin-left: -97px; animation:line 0.5s 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; overflow:hidden;}
+.visual_wp .top_tx01 {position: absolute; top: 140px; left: 50%; margin-left: -325px; animation: fadeIn_up .6s 0.8s both;}
+.visual_wp .top_tit { position: absolute; top: 240px; left: 50%; margin-left: -390px; animation: fadeIn_up .6s 1s both;}
+.visual_wp .top_tx02 {position: absolute; top: 549px; left: 50%; margin-left: -323px; animation: fadeIn_up .6s 1.4s both;}
+.visual_wp .visual_img { position: absolute; top: 650px; animation: fadeIn_up .6s 1.6s both;}
+.visual_wp .visual_starL { position: absolute; top:260px; left: 108px; animation: fadeIn 0.6s 2s both, blink 1s 2.4s infinite;}
+.visual_wp .visual_starR { position: absolute; top:187px; right: 129px; animation: fadeIn 0.6s 2.3s both, blink 1.4s 2.4s infinite;}
+.con02 {background: #ff8e30 url('images/con02_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 1057px;}
+.con02 .stepwrap { position: relative; display: flex; gap: 15px;}
+.con02 .arrow {margin-top: 170px;}
+.con02_noti { padding: 70px 0 100px;}
+
+/* con02: step01 버튼 */
+.loginbtn { position: absolute;  top: 140px; left: 30px; background: #ff8e30;color: #fff; border-radius: 10px; text-align: center; padding: 20px 78px; font-size: 20px; width: fit-content; font-weight: 700; display: block;}
+.loginbtn:hover { background: #ef6c00; color: #fff;}
+.id-copy{font-size: 19px; font-weight: 800; position: absolute; top: 150px; left: 30px; }
+.id-copy li {float: left; padding: 18px; text-align: center;}
+.id-copy li:first-child{width: 150px; background: #fff; border-right: 0;border: 1px solid #b1b9cf;}
+.btn_copy{width: 80px; color: #fff; background: #ff8e30; border-left: 0; cursor: pointer; transition: all .2s; border: 1px solid #ff8e30;}
+.btn_copy:hover { background:#ef6c00;}
+
+.con02 .topbn { background: url('images/con03_topbn.png')no-repeat center 0;background-size: cover; height: 216px;}
+.con02 .con03_toptx { padding: 150px 0 0 110px;}
+
+/* con03: 동반 등록 할인 이벤트*/
+.con03 { background: #ff8e30 url('images/con03_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 1110px;}
+
+/* con04 */ 
+.con04 { background: #1443b4; height: 224px; }
+.con04 p { color: #fff; font-size: 26px; font-weight: 700;}
+.con04 li { width: 400px; float: left; padding:50px 0; text-align: center; position: relative;}
+.con04 li::after {content: ""; display: block; position: absolute; top: 50%; right: 0;transform: translateY(-50%); width: 2px; height: 90px; background-color: #567fe1;}
+.con04 li:last-child::after {content: none;}
+.joinbtn {background: #1d1d1d; color: #fff; border-radius: 10px; text-align: center; padding: 20px 100px; font-size: 20px; width: fit-content; margin: 30px auto 0; font-weight: 700; display: block; transition: all .2s;}
+.joinbtn:hover{cursor: pointer; background: #000; color: #fff;}
+.kakako { background: #fae100; color: #000; border-radius: 10px; text-align: center; padding: 20px 75px; font-size: 20px; width: fit-content; margin: 30px auto 0; font-weight: 700; display: block; transition: all .2s; }
+.kakako:hover {cursor: pointer; background: #ffcc00; color: #000; }
+
+/* 유의사항 */
+details{position: relative; font-size: 15px; line-height: 25px; line-height: 1.5;}
+details p{color: #fff; padding-right: 30px;}
+details summary{background: #000; text-align: center; border-bottom: 1px solid #ccc; padding: 33px 0;cursor: pointer;}
+details summary p{font-size: 24px; font-weight: 900;}
+details summary .arrow{position: relative; display: inline-block; width: 30px; height: 1.5em; vertical-align: top;}
+details summary:first-of-type{list-style:none}
+details[open] summary .arrow::after {position: absolute; top: 12px; left: 10px; content: ''; width: 12px; height: 12px; border-top: 3px solid #fff;border-right: 3px solid #fff; transform: rotate(-45deg);}
+details summary .arrow::after {position: absolute; top: 5px; left: 10px; content: ''; width: 12px; height: 12px; border-top: 3px solid #fff; border-right: 3px solid #fff; transform: rotate(135deg);}
+
+details div{width: 1200px; margin: 0 auto; padding: 60px 0;}
+details div p{padding: 18px 0 8px 0; font-weight: 600; color: #000;}
+.btn_info{border: 1px solid #000; padding: 2px 8px 3px; border-radius: 2px; font-size: 12px; margin-left: 10px;}
+.blink{animation: blink 1s infinite;}
+
+@keyframes blink{
+	0% {
+		opacity:1
+	}
+	50%{opacity:.2}
+	100%{opacity:1}
+}
+
+@keyframes line {
+	0% {
+		width:0;
+	}
+	100% {
+		width:194px;
+	}
+	}
+
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@keyframes fadeIn_up {
+	0% {
+		opacity:0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity:1;
+		transform: translateY(0);
+	}
+}

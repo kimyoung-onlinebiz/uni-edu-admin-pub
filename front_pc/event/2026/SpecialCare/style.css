@@ -1,0 +1,96 @@
+.SpecialCare .content { position:relative; width:1200px; margin:0 auto; text-align:center; }
+.SpecialCare .main { position:relative; width:100%; height:970px; background:#444444 url(images/main_bg.png) no-repeat;}
+.SpecialCare .con_tit {padding:130px 0 70px;}
+.main .top_tx { position: absolute; top: 110px; left: 50%; margin-left: -234px; animation:line 0.5s 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; overflow:hidden;}
+.main .top_title { position: absolute; top: 160px; left: 50%; margin-left: -505px; animation: fadeIn_up .8s 1.2s both; } 
+.main .sub_tx { position: absolute; top: 380px; left: 50%; margin-left: -385px; animation: fadeIn 1s 1.6s ease-out both; }
+.main .sub_tx2 {position: absolute; top: 500px; left: 50%; margin-left: -350px; animation: fadeIn 0.8s 1.8s ease-out both; }
+.main .main_img { position: absolute; top: 650px; left: 50%; margin-left: -600px; animation: fadeIn 1s 2s ease-out both;}
+
+.con01 { width: 100%; background: #fff; margin-bottom: 120px; }
+.con01 .con01_img { position: absolute; top: 330px; left: 50%; margin-left: -550px;}
+.con01 .bottom_tx { position: absolute; top: 750px;}
+.con02 {width: 100%; background: #0082ff; padding-bottom: 120px; }
+.con03 { padding-bottom: 60px; }
+.con03 .player { height: 320px; }
+.con03 .player li {display: inline-block; margin-left: 13px; float: left; padding-top: 50px; }
+.con03 .player li:first-child { margin: 0;}
+.con03 .player> li a:before { content:""; display:block; position:absolute; width:390px; height:230px; background:url(images/play_hover.png) no-repeat; transition:all .3s; opacity:0}
+.con03 .player> li a:hover:before {opacity:1; }
+
+/* 영상 플레이어 */
+.SpecialCare .vod_wrap{position: relative; width: fit-content; border-radius: 5px; margin: 0 auto;}
+.vod_wrap .closeX{position: absolute; top: 8px; right: -50px; line-height: 0.8rem; font-size: 2.5rem; cursor: pointer; color: #fff; text-decoration: none;}
+.SpecialCare .popup-wrapper{position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,0.7); display: inline-flex; align-items: center;  font-size: 15px; z-index: 3; word-spacing: 0; overflow-x: hidden;}
+.con04 { width: 100%; background: #0a277f;}  
+.con04 .flash_tx { padding: 70px 0 110px; animation: flash 1s ease-in infinite both}
+.con05 .con05_tx { padding: 80px 0;}
+.con06 { background: #0a277f; height: 120px; position: relative; }
+.con06 .bn_icon {  position: absolute; top: 20px; left: 40px;  animation: updown 0.5s both infinite alternate;}
+.con06 .btn { display: block; width: 300px; height: 70px; position: absolute; top: 25px; right: 40px; background: #fcff23; border-radius: 10px; transition: all 0.3s }
+.con06 .btn:hover { background:#e2f1ff; animation: headShake 0.7s ease-in-out alternate;}
+ 
+/*aside : top_위로가기*/  
+.SpecialCare .aside { z-index: 1; }
+.SpecialCare .aside .top { display:none; position:fixed; bottom:30px; right:30px; background:#111 url(images/icon_top.png) no-repeat center 18px; width:60px; height:60px; color:#fff; border-radius:30px; box-sizing:border-box; padding-top:26px; padding-left: 18px; font-size:12px; letter-spacing:0; transition:all .2s; z-index: 555; }
+.SpecialCare .aside .top:hover { background:#111 url(images/icon_top.png) no-repeat center 15px;}
+
+.play01 .mySwiper01 {padding: 0 60px; overflow: hidden;}
+.play01 .swiper-slide {	display: flex; justify-content: center;padding-top: 50px;}
+.play01 .swiper-slide a {display: block;width: 100%;max-width: 280px;}
+
+@keyframes updown {0%{transform: translateY(-5px);} 100%{transform: translateY(0);}}
+
+@keyframes flash {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 1;}
+}
+
+@keyframes line {
+	0% {
+		width:0;
+	}
+	100% {
+		width:468px;
+	}
+}
+
+@keyframes fadeIn {0%{opacity: 0;} 100%{opacity: 1;}}
+@keyframes fadeIn_up {
+	0% {
+		opacity:0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity:1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes headShake {
+	0% {
+		transform: translateX(0);
+	}
+
+	6.5% {
+		transform: translateX(-6px) rotateY(-9deg);
+	}
+
+	18.5% {
+		transform: translateX(5px) rotateY(7deg);
+	}
+
+	31.5% {
+		transform: translateX(-3px) rotateY(-5deg);
+	}
+
+	43.5% {
+		transform: translateX(2px) rotateY(3deg);
+	}
+
+	50% {
+		transform: translateX(0);
+	}
+}
+

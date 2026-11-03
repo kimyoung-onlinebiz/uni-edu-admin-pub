@@ -408,9 +408,27 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .quick_floating .quick_top:hover { background:var(--Primary-100); }
 .quick_floating .quick_top span { font-size:16px; font-weight:500; padding:3px 0; display:block; }
 .mainEasy_consult .btn_layerClose,.mainEasy_consult .btn_popupClose { position:absolute; right:10px; top:6px; font-size:24px; }
-.layer_consult .layer_basic,.popup_consult { width:400px; padding:24px 0 32px; }
-.layer_consult .mainEasy_consult,.popup_consult .mainEasy_consult { padding:0 25px; }
-.layer_consult .mainEasy_consult .layer_agree,.popup_consult .mainEasy_consult .layer_agree { top:-10px; }
+
+/* 새 창 팝업 공통 */
+.layer_consult .layer_basic { width:400px; padding:24px 0 32px; }
+.popup_wrap { display:flex; flex-direction:column; min-width:400px; height:100vh; padding:12px 0 24px; } /* 창 크기에 맞춰 늘어남 (최소 400px) */
+.layer_consult .mainEasy_consult,.popup_wrap > section { padding:0 25px; }
+.popup_wrap > section { display:flex; flex-direction:column; flex:1; min-height:0; }
+.popup_wrap .popup_content { flex:1; min-height:0; overflow-y:auto; padding-right:5px; } /* 내용만 스크롤, 제목·버튼 고정 */
+.layer_consult .mainEasy_consult .layer_agree,.popup_wrap .mainEasy_consult .layer_agree { top:-10px; }
+.popup_wrap .popup_tit { font-size:var(--Font-xlarge); font-weight:700; color:var(--Primary-500); margin-bottom:20px; padding-bottom:8px; border-bottom:1px solid var(--Neutral-900); text-align:center; }
+.popup_wrap .popup_btn { display:block; width:100%; height:45px; margin-top:24px; border:1px solid var(--Primary-500); border-radius:var(--Border-radius); background:var(--Primary-500); color:var(--Neutral-0); font-size:var(--Font-medium); font-weight:700; cursor:pointer; }
+
+/* 팝업 개인정보 수집·활용 동의 안내 */
+.popup_agree .agree_list { counter-reset:agree; }
+.popup_agree .agree_list > li { position:relative; padding-left:16px; counter-increment:agree; }
+.popup_agree .agree_list > li + li { margin-top:16px; }
+.popup_agree .agree_list > li::before { content:counter(agree) "."; position:absolute; left:0; top:0; font-size:var(--Font-small); font-weight:700; line-height:1.4; }
+.popup_agree .agree_list strong { display:block; margin-bottom:4px; font-size:var(--Font-small); font-weight:700; }
+.popup_agree .agree_list p,.popup_agree .agree_note { font-size:var(--Font-xsmall); line-height:1.5; letter-spacing:-0.02em; color:var(--Neutral-800); }
+.popup_agree .agree_list p + p { margin-top:8px; }
+.popup_agree .agree_list .point { color:var(--Info); }
+.popup_agree .agree_note { margin-top:16px; padding-top:12px; border-top:1px solid var(--Neutral-300); }
 
 /* 이벤트 스와이퍼 */
 .layer_mainEvent .btn_layerClose { position:absolute; top:50%; margin:-300px 0 0 400px; font-size:30px; font-weight:300; color:var(--Neutral-0); }

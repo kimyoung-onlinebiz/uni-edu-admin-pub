@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.kTeacherEV .inner_1200{position: relative; width: 1200px; margin: 0 auto;}
+.kTeacherEV .con_tit { padding: 110px 0 80px; text-align: center;}
+.kTeacherEV .pt110 { padding: 110px 0; text-align: center;}
+.kTeacherEV .pt80 {padding: 80px 0;}
+
+/* 상담 신청 : 공통 스타일은 assets/css/sub.css (.applyBar.simple) */
+
+/* quick */
+.quick_menu { width: 190px; position: fixed; right: 50px; top: 250px; z-index: 10; animation: fadeIn .6s 2s both;}
+.menu_box { list-style: none; padding: 0; margin: 0 0 10px 0; border: 1px solid #333; border-radius: 10px; background: #fff; overflow: hidden;}
+.menu_box li {text-align: center; border-bottom: 1px solid #eee;}
+.menu_box li:last-child {border-bottom: none;}
+.menu_box li a { display: block; padding: 15px 0;text-decoration: none;color: #000;  font-weight: bold; font-size: 18px;}
+.quick_menu .kakao_btn { display: block; }
+.quick_menu .top_btn { display: inline-block; margin: 15px 0 0 65px; }
+
+/* 활성화된 메뉴 항목 스타일 */
+.menu_box li.active { background-color: #333;}
+.menu_box li.active a { color: #fff !important;}
+
+/* visual */
+.visual_wp {background: #c4fee5 url('images/visual_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 1166px; position:relative;}
+.visual_wp .megagroup { position: absolute; top: 178px; left: 50%; margin-left: -111px; animation:line 0.6s 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; overflow:hidden; z-index:1; }
+.visual_wp .visual_img { position: absolute; top: 52px; left: 50%; margin-left: -548px;  animation:fadeIn_up .6s 0.4s both;}
+.visual_wp .top_tx01 {position: absolute; top: 237px; left: 50%; margin-left: -238px; animation: fadeIn_up .6s 1s both;z-index:1;}
+.visual_wp .top_tit { position: absolute; top: 294px; left: 50%; margin-left: -294px; animation: fadeIn .6s 1.2s both; z-index:1;}
+.visual_wp ul { position: absolute; top:770px; left: 50%; margin-left: -464px;}
+.visual_wp ul li { float: left; }
+.visual_wp ul li:first-child { margin: 0; animation: fadeIn_up .6s 1.6s both;}
+.visual_wp ul li:nth-child(2) {animation: fadeIn_up .6s 1.8s both; }
+.visual_wp ul li:nth-child(3) {animation: fadeIn_up .6s 2s both; }
+
+/* con01 : 패키지 리스트 */
+.package_list > li dt {background:#291e16; padding-top:20px; }
+.package_list > li dt span { font-size:20px; color:#666; line-height:1.1; }
+.con01 { background-color: #ffeddc; text-align: center; padding-bottom: 110px;}
+.package_list > li dd { width:1000px; padding:25px 0 0 25px;}
+.package_list .subject_noti { display: flex; font-size: 16px; background-color: #eeeeee;  border-radius: 5px; font-weight: 500; padding: 7px 20px; width: 460px; margin-top: 15px; }
+.package_list .subject_noti li { display: flex; align-items: center; position: relative; padding: 0 8px; }
+.package_list .subject_noti li:first-child { padding-left: 0;}
+.package_list .subject_noti li:not(:last-child)::after { content: "|"; position: absolute; right: 0; color: #999; font-size: 12px; font-weight: normal;}
+.package_list .apply_section { right:5px; top:25px;}
+.package_list > li dt strong { font-size:26px;}
+.package_list > li dt strong.all_pack { color:#fff; padding-top: 20px; }
+.package_list > li { border-radius:10px; height:170px; overflow:hidden; }
+.package_list > li dt { width:185px; height:170px; }
+.package_list .apply_section li, .package_list .apply_section li a { width:140px; height:120px; line-height:120px; }
+.package_list .apply_section li:first-child a { background:#00624e; }
+.package_list .apply_section li:first-child a:hover { background:#015342; }
+.package_list .apply_section li:last-child a { background:#888888; }
+.package_list .apply_section li:last-child a:hover { background:#666666; }
+.package_list .subject_pay { margin-top:8px; }
+.package_list .subject_name li { letter-spacing:-1px; }
+.package_list .subject_name span{ top:-28px; font-size:13px; color:#333; letter-spacing:0; }
+.package_list .subject_pay del { font-size:23px; }
+.package_list .subject_pay li strong { font-size:34px; }
+.package_list .subject_name li:after { padding:0 10px 0 5px; }
+
+.con02 {background: #000 url('images/con02_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 1753px;}
+.con03 { background: #cea589 url('images/con03_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 356px;}
+.con04 { background: #f1d6c6 url('images/con04_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 659px;}
+.con05 {background: #fff url('images/con05_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 1295px;}
+.con06 { background-color: #00624e;}
+.con08 { background-color: #0082ff;}
+.bottom_bn {background: #000 url('images/bottom_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 442px; }
+
+/* evnet : 친구추천 이벤트 */
+.kTeacherEV .event { background-color: #e6efff; position: relative; padding-bottom: 200px;}
+.kTeacherEV .event .btn { position: absolute; bottom: -90px; left: 50%; margin-left: -300px; width: 600px; height: 90px; background: #000; border-radius: 10px; display: block; transition:all .3s;}
+.kTeacherEV .event .btn:hover {background: #191818;}
+
+.visual_wp .top_table { position: absolute; top: 445px; left: 50%; margin-left: -339px; animation: fadeIn .6s 1.6s both; z-index:1;}
+.visual_wp .emoji { position: absolute; top: 950px; left: 130px; animation: fadeIn 0.6s 2s both, blink 1s 2.4s infinite;}
+
+.blink{animation: blink 1s infinite;}
+@keyframes blink{
+	0%{
+		opacity:1
+	}
+	50%{
+		opacity:.2
+	}
+	100%{
+		opacity:1
+	}
+}
+
+@keyframes line {
+	0% {
+		width:0;
+	}
+	100% {
+		width:222px;
+	}
+	}
+
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@keyframes fadeIn_up {
+	0% {
+		opacity:0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity:1;
+		transform: translateY(0);
+	}
+}

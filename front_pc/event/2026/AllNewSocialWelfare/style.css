@@ -1,0 +1,158 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+.AllNewSocialWelfare *{font-family: 'Pretendard', 'Malgun Gothic', sans-serif;}
+.AllNewSocialWelfare strong,
+.AllNewSocialWelfare b{font-weight: 900;}
+.AllNewSocialWelfare i{font-style: normal;}
+.conbox,
+.inner{position: relative; width: 1200px; margin: 0 auto;}
+
+/* visual */
+.visual_wp{background: #185448 url('images/visual_bg.png') no-repeat center 0; background-size: cover; text-align: center; height: 850px;}
+.visual_wp .megagroup { position: absolute; top: 100px; left: 50%; margin-left: -140px; animation:line 0.5s 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; overflow:hidden;}
+
+@keyframes line {
+	0% {
+		width:0;
+	}
+	100% {
+		width:280px;
+	}
+	}
+
+.visual_wp .top_tx01 {position: absolute; top: 212px; left: 50%; margin-left: -114px; animation: fadeIn_up .6s 0.8s both;}
+.visual_wp .top_tx02 { position: absolute; top: 224px; left: 50%; margin-left: -485px; animation: fadeIn_up .6s 1s both;}
+@keyframes fadeIn_up {
+	0% {
+		opacity:0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity:1;
+		transform: translateY(0);
+	}
+}
+.visual_wp .top_tx03 {position: absolute; top: 492px; left: 50%; margin-left: -315px; animation: fadeIn_up .6s 1.4s both;}
+.visual_wp .notice { position: absolute; top: 590px; left: 50%; margin-left: -350px;animation: fadeIn_up .6s 1.6s both;}
+.visual_wp .visual_new { position: absolute; top:800px; left: 190px; animation: fadeIn_up 0.6s 2s both, blink 1s 2.4s infinite;}
+
+.evbtn {background: #1d1d1d; color: #fff; border-radius: 10px; text-align: center; padding: 28px 150px; font-size: 36px; width: fit-content; margin: 60px auto 0; font-weight: 700; display: block;}
+.evbtn:hover{cursor: pointer; background: #000; color: #fff;}
+
+.btn_wp{overflow: hidden; width: fit-content; margin: 0 auto;}
+.btn_wp li{display: inline-block; margin-left: 10px;}
+.btn_wp li:first-child{margin-left: 0;}
+.btn_wp a { color: #fff;font-size: 36px; }
+
+* [class^="bg_"] {position: relative; padding: 100px 0;}
+.bg_01{background: #fff;}
+.bg_02{background: #dbfeed;}
+.stn05 {background: #130e08 url('images/con03.png') no-repeat center 0; background-size: cover; }
+.AllNewSocialWelfare .dungdung{animation: dungdung 1s both infinite alternate;}
+
+.blink{animation: blink 1s infinite;}
+@keyframes blink{0%{opacity:1} 50%{opacity:.2} 100%{opacity:1}}
+@keyframes dungdung {0%{transform: translateY(-5px);} 100%{transform: translateY(5px);}}
+
+/* Initial state: Hidden by default (or whatever your site's default is) */
+.bg_01 .flobn {
+    display: none; /* Hide it initially */
+    position: absolute; /* Default if not fixed */
+    bottom: 200px;
+    right: 250px;
+    /* You might want to add a transition for smoother appearance/disappearance */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* When it should be visible and fixed */
+.bg_01 .flobn.is-fixed {
+    display: block; /* Make it visible */
+    position: fixed;
+    bottom: 200px;
+    right: 250px;
+    z-index: 1000; /* Ensure it stays on top */
+    opacity: 1; /* For transition effect */
+    visibility: visible; /* For transition effect */
+}
+
+/* When it should be hidden (e.g., in stn00) */
+.bg_01 .flobn.is-hidden {
+    display: none; /* Make it invisible */
+    opacity: 0; /* For transition effect */
+    visibility: hidden; /* For transition effect */
+}
+
+/* 고정 TAB */
+.reason { scroll-margin-top: 80px; }
+.bg-tab { background: #cccccc; height: 80px;}
+.bg-tab .tab_wp { width: 100%; }
+.bg-tab .tab_wp.fix { background: #cccccc; position: fixed; top: 0; z-index: 100; box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);}
+.bg-tab .tab_wp .conts_tab { width: 1100px; margin: 0 auto; overflow: hidden; text-align: center; display: flex; box-sizing: border-box; }
+.bg-tab .tab_wp .conts_tab li { position: relative; width: calc(1200px / 3); height: 80px;}
+.bg-tab .tab_wp .conts_tab li:not(:nth-child(1))::before { content: ""; width: 2px; height: 26px; background: #c2c2c2; display: block; position: absolute; left: -1px; top: 50%; transform: translateY(-50%); }
+.bg-tab .tab_wp .conts_tab li.on a { background: #00bb6e; color: #fff; }
+.bg-tab .tab_wp .conts_tab a { width: 100%; background: #cccccc; color: #000; cursor: pointer; display: inline-block; font-size: 26px; font-weight: 600; text-align: center; line-height: 80px; }
+.evtBn_0818 { position: absolute; top: 10%; right: 10%; }
+.evtBn_0818 img.dungdung { position: absolute; bottom: 53px; left: -30px; }
+
+/* All Care 실습 지원 */
+.service-list{display:flex;flex-wrap:wrap;gap:48px;justify-content:center;padding:0;margin:0;list-style:none;}
+.service-item{width:300px;height:330px; }
+.card{position:relative;display:block;width:100%;height:100%;overflow:hidden;border-radius:20px;text-decoration:none;}
+.card__default{width:100%;height:100%;}
+.card__default img{display:block;width:100%;height:100%}
+.card__hover{position:absolute;top:0;left:0;width:100%;height:100%;padding:40px 24px;box-sizing:border-box;background:rgba(0,0,0,.9);opacity:0;visibility:hidden;transition:.3s; }
+.card:hover .card__hover{opacity:1;visibility:visible;}
+.hover-content{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;width:100%;height:100%;text-align:center;color:#fff;}
+.hover-content.card_center {justify-content: center;}
+.hover-content.card_center .hover-list {margin-bottom: 0; }
+.hover-content h3{margin:0 0 20px;font-size:26px;line-height:1.3;color:#16f4a3; font-weight: 700;}
+.hover-list{display:inline-block;margin:0 auto 20px; padding:0;list-style:none;text-align:left;}
+.hover-list li{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:18px;padding-left:0; color:#fff;}
+.hover-list li::before{content:"";flex-shrink:0;width:20px;height:20px;background:url("images/check_circle_24dp_24FFA5.svg") no-repeat center/contain;}
+
+.service-btn{margin-top:auto;display:flex;align-items:center;justify-content:center;width:100%;height:45px; flex-shrink: 0; border:1px solid #fff;border-radius:6px;color:#fff;font-size:18px;font-weight:500;text-decoration:none;box-sizing:border-box;}
+
+.cursor{cursor:pointer;}
+
+/* 현장실습안내 */
+.section_01 h2, .AllNewSocialWelfare .section_04 h2 { font-size:70px; color:#fff; font-weight:800; text-align:center; padding:95px 0 45px;}
+.section_01 h3, .AllNewSocialWelfare .section_04 h3 { font-size:36px; font-weight:800; }
+
+.section_01 h3 {padding: 45px 0 10px;}
+.AllNewSocialWelfare .section_01 { background:#012a22; padding-bottom:130px; }
+.AllNewSocialWelfare .open_content { background:#fff; margin:0 auto; border-radius:20px; padding:40px; text-align:left;}
+.AllNewSocialWelfare .open_content li {font-size:20px;}
+.AllNewSocialWelfare .open_content strong { color:#ec1a1e; }
+
+.AllNewSocialWelfare .creditsinfo_tab { display:flex; justify-content:space-between; gap:20px; margin-bottom:40px; width:100%; }
+.AllNewSocialWelfare .creditsinfo_tab li { flex:1; height:80px; }
+.AllNewSocialWelfare .creditsinfo_tab li a { display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%; height:100%; border-radius:15px; background:#d1d1dc; color:#111; font-size:27px; font-weight:700; text-align:center; text-decoration:none; box-sizing:border-box; }
+.AllNewSocialWelfare .creditsinfo_tab li a.current { background:#00bb6e; color:#fff000; }
+.AllNewSocialWelfare .creditsinfo_tab li a strong { display:inline; margin-left:8px; color:#00bb6e; font-size:27px; }
+.AllNewSocialWelfare .creditsinfo_tab li a.current strong { color:#fff; }
+
+.AllNewSocialWelfare .open_content table { margin-top:20px; }
+.AllNewSocialWelfare .open_content th,.AllNewSocialWelfare .open_content td { font-weight:600; text-align:left; padding:15px 0 15px 50px;}
+.AllNewSocialWelfare .guide { font-size:21px; background:url(images/icon_guide.png) no-repeat; padding:25px 0 15px 80px; margin-top:15px; color:#ec1a1e; }
+
+.AllNewSocialWelfare .btn_apply { position:relative; display:block; box-sizing: border-box;background:#ffd800; width:570px; height:80px; line-height: 80px; border-radius:40px; font-size:30px; text-align:center; font-weight:700; padding:0; margin:60px auto 0;color:#111; transition:all .2s; }
+.AllNewSocialWelfare .btn_apply:hover { background:#fff; }
+.AllNewSocialWelfare .btn_apply:after { position:absolute; right:70px; top:28px; background:url(images/bullet_right.png); content:""; width:15px; height:24px; }
+.AllNewSocialWelfare .btn_apply strong { color:#0005d4; }
+.AllNewSocialWelfare .btn_apply:last-child { background:#07f192 !important; }
+.AllNewSocialWelfare .btn_apply:last-child:hover { background:#fff !important; }
+
+/* 리스트 테이블 */
+.table_list { border-top:2px solid #3e3e55; }
+.table_list.borderT0 { border-top:1px solid #cfcfda; }
+.table_list th,.table_list td { box-sizing:border-box; padding:10px 13px;font-size: 20px;}
+.table_list.alignC th,.table_list.alignC td { text-align:center; }
+.table_list th {background:#ededf2;border-bottom:1px solid #cfcfda;border-top:none;}
+.table_list td { border-bottom:1px solid #cfcfda; }
+
+/* 친구추천 이벤트 */
+.AllNewSocialWelfare .section_04 { background:#00049c; padding-bottom:130px;}
+.AllNewSocialWelfare .section_04 h2 { padding-bottom: 5px;}
+.AllNewSocialWelfare .section_04 h3 { padding:0 0 40px; text-align:center; color:#fff; }

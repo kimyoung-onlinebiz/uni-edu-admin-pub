@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.SWSystem strong,.SWSystem b{font-weight: 900;}
+.SWSystem i{font-style: normal;}
+.SWSystem .conbox,
+.SWSystem .inner{position: relative; width: 1200px; margin: 0 auto; text-align: center;}
+
+/* visual */
+.visual_wp{background: #e1fff6 url('images/visual_bg.png') no-repeat center 0; background-size: cover; height: 1150px;}
+.visual_wp .top_tx01 {padding-top:90px; animation: fadeIn_up .6s 0.8s both;}
+.visual_wp .top_tx02 {padding-top:23px; animation: fadeIn_up .6s 1s both;}
+.visual_wp .top_tx03 {padding-top:13px; animation: fadeIn_up .6s 1.2s both;}
+.visual_wp .notebook {padding-top:60px; animation: fadeIn_up .6s 1.6s both;}
+.visual_wp .bottomtx {padding-top:70px; animation: fadeIn_up 0.6s 2s both;}
+.con01 { background: #fff url(images/con01_bg.png)no-repeat center 0;background-size: cover;height: 1037px; }
+.SWSystem h2 { padding:120px 0 90px 0;}
+
+/* con02 : swiper */
+.con02 { background: #1a1826; height: 1710px;}
+.con02 .point_wrap { width: 100%; height: 723px; position: relative;}
+.point_swiper {overflow: hidden;width: 1200px; position: absolute; top: 0; left: 50%; margin-left: -600px; }
+.point_swiper__prev, .point_swiper__next { position: absolute; top: 560px; display: inline-block; padding: 0; width: 36px; height: 60px; cursor: pointer;}
+.point_swiper__prev { left: -80px; }
+.point_swiper__prev::before { content: ''; display: block; width: 36px; height: 60px; background: url("images/left_arrow.png") no-repeat 0 0; background-size: contain; }
+.point_swiper__next { right: -80px; }
+.point_swiper__next::before { content: ''; display: block; width: 36px; height: 60px; background: url("images/right_arrow.png") no-repeat 0 0; background-size: contain; }
+
+.middlebn { background: #00c389; height: 120px; text-align: center; margin-top: 110px; }
+
+.con04 { background: #ddfff5; padding-bottom: 120px; }
+.SWSystem .con04 h2 { padding: 0; }
+.con04 ul { padding-top: 70px; padding-left: 160px;  display: flow-root;}
+.con04 ul li { float: left; padding-left: 27px;}
+.con04 ul li:first-child { padding: 0;}
+.con04 .arrow { padding-top: 100px;}
+
+.con05 { background: url(images/con05_bg.png)no-repeat center 0; height: 952px; }
+.con05 ul {position: relative; }
+.con05 li { padding-bottom: 26px; }
+.con05 li:last-child {padding: 0;}
+.con05 .btn_go { font-size: 15px; color: #fff; background: #00c389; padding:0 12px 0; line-height: 30px; border-radius: 5px; display: inline-block; position: absolute; top: 170px; right:200px; }
+.con05 .btn_go::after { content: '>'; margin-left: 5px; }
+.con05 .btn_go:hover { background: #049e70; transition: all .3s; }
+.con06 {background: #05060a; height: 227px; }
+.SWSystem .con06 h2 {padding: 70px 0; }
+
+/* btn */
+.SWSystem .evbtn {background: #1d1d1d; color: #fff; border-radius: 10px; text-align: center; padding: 20px 150px; font-size: 28px; width: fit-content; margin: 60px auto 0; font-weight: 700; display: block;}
+.SWSystem .evbtn:hover{cursor: pointer; background: #000; color: #fff;}
+
+/* 상담 신청 : 공통 스타일은 assets/css/sub.css (.applyBar.simple) */
+/* 이 페이지만 '실습 일정 확인하기' 버튼이 추가되어 간격·입력칸을 줄임 */
+.SWSystem .applyBar.simple .apply_box { gap:20px; }
+.SWSystem .applyBar.simple .apply_form input[type="text"] { width:110px; }
+.SWSystem .applyBar.simple .apply_form input.number { width:180px; }
+.SWSystem .applyBar.simple .day_btn { display:inline-flex; align-items:center; height:48px; margin-right:-12px; padding:0 24px; border-radius:var(--Border-radius); background:#4a485a; color:var(--Neutral-0); font-size:var(--Font-large); font-weight:500; white-space:nowrap; transition:background .2s; }
+.SWSystem .applyBar.simple .day_btn:hover { background:#5d5b70; }
+
+@keyframes fadeIn_up {
+	0% {
+		opacity:0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity:1;
+		transform: translateY(0);
+	}
+}

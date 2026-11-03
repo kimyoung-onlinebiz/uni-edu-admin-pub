@@ -1,0 +1,136 @@
+﻿@charset "UTF-8"; @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+
+.SocialWelfareTransfer * { font-family: "Pretendard", "Malgun Gothic", sans-serif; line-height: 1; }
+.SocialWelfareTransfer strong, .SocialWelfareTransfer b { font-weight: 900; }
+.SocialWelfareTransfer i { font-style: normal; }
+.evt_top { background: #0c1842 url("images/topBn_bg.png") no-repeat center 0;}
+.SocialWelfareTransfer .conbox, .SocialWelfareTransfer .inner { position: relative; width: 1100px; margin: 0 auto; }
+
+/* 상담 신청 : 공통 스타일은 assets/css/sub.css (.applyBar.simple) */
+
+/* 건강가정사 배너 */
+.healthy_floating { position: fixed; right:20px; top:12%; z-index: 9999; animation:healthyHome_ani 1s ease-in-out infinite; }
+.healthy_floating img { width: 100%; }
+
+/* 퀵배너 */
+.quick { position: fixed; top: 35%; right: 0; z-index: 999; box-shadow: 0 1px 3px rgba(0,0,0,0.3); border-radius: 8px 0 0 8px;}
+.quick li { position: relative; }
+.quick li > a,
+.quick li > .quick_tit { display: block; text-align: center; font-size: 17px; padding: 15px; font-weight: 700; color: #fff; }
+.quick li > a:hover { color: #ffec33; }
+.quick li:first-child > .quick_tit { background: #fff; color: #ef144c; font-size: 22px; font-weight: 900; border-top-left-radius: 10px; padding-top: 18px; }
+.quick li:nth-child(even) > a { background: #ef1468; }
+.quick li:nth-child(odd) > a { background: #d41242; }
+.quick li:last-child > a { border-bottom-left-radius: 10px; }
+.quick .arrow { background: #ef144c; position: absolute; top: -10px; left: 70px; width: 22px; height: 22px; border-radius: 50%; animation: updown 0.5s both infinite alternate; }
+.quick .arrow::after { position: absolute; left: 7px; top: 5px; content: ""; width: 6px; height: 6px; border-bottom: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); }
+
+.visual_wp { background: #3d39f8 url("images/bg_visual.png") no-repeat center 0; background-size: cover; text-align: center; }
+.visual_typo { position: absolute; top: 130px; left: 50%; margin-left: 450px; }
+.visual_wp .visual { animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.visual_wp .sub { animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.SocialWelfareTransfer .abs {position: absolute;}
+.SocialWelfareTransfer .tit { position: relative; width: fit-content; margin: 0 auto 50px; font-size: 65px; line-height: 1.15; text-align: center; color: #000; font-weight: 900; }
+.SocialWelfareTransfer .tit *:nth-child(2) { margin-top: 30px; }
+.SocialWelfareTransfer .tit span { display: block; font-size: 30px; font-weight: 500;}
+.SocialWelfareTransfer .tit > span:first-child { margin-bottom: 10px; }
+.SocialWelfareTransfer .tit strong { color: #ef144c; }
+.SocialWelfareTransfer .tit i { display: block; margin: 8px 0 10px; font-size: 40px; font-weight: 900; }
+.SocialWelfareTransfer .tit_no { border: 1px solid #ef144c; width: fit-content; margin: 0 auto 20px; display: grid; align-items: center; text-align: center; padding: 14px 26px; border-radius: 30px; color: #ef144c; font-size: 22px; font-weight: 700; }
+
+.txt_noti { margin-top: 10px; font-size: 16px !important; line-height: 1.4; color: #666;}
+.txt_noti.abs {bottom: 30px; left: 80px;}
+.txt_small { text-align: center; font-size: 16px !important; padding-top: 20px; line-height: 1.4; color: #666; }
+
+.SocialWelfareTransfer .con_tit { background: #000; margin-top: 50px; padding: 18px 10px; font-size: 32px; color: #fff; text-align: center; font-weight: 800; border-radius: 10px; }
+.con_txt { width: fit-content; margin: 40px auto 0; text-align: center; font-size: 40px; }
+.con_txt strong { padding-top: 10px; line-height: 1.5; }
+.con_txt span { display: block; font-size: 30px; line-height: 1.4; }
+.con_txt span:nth-of-type(2) { display: block; font-size: 18px; line-height: 1.4; }
+.con_txt i {color: #ef144c;}
+.con_txt b {font-weight: 800;}
+.SocialWelfareTransfer .evbtn { background: #000; color: #fff; border-radius: 10px; text-align: center; padding: 30px 80px; font-size: 36px; width: fit-content; margin: 60px auto 0; font-weight: 700; display: block; }
+.SocialWelfareTransfer .evbtn:hover { cursor: pointer; background: #ef144c; color: #fff; }
+.btn_about { position: absolute; top: 73px; right: 0; }
+.btn_view { position: absolute; top: 421px; right: 282px; }
+.SocialWelfareTransfer .btn_590 { width: 590px; padding: 25px 0; margin: 0 auto; }
+.SocialWelfareTransfer .btn_590:hover { background: #660511;}
+
+.btn_wp { overflow: hidden; width: fit-content; margin: 0 auto; }
+.btn_wp li { display: inline-block; margin-left: 10px; }
+.btn_wp li:first-child { margin-left: 0; }
+.pop_txt { position: absolute; top: 350px; right: 80px; }
+
+.SocialWelfareTransfer [class^="bg_"] { position: relative; padding: 100px 0; }
+.bg_pink { background: #ffe9f1; }
+.bg_white { background: #fff; }
+.bg_black { background: #000}
+.bg_gray {background: #e8e8e8;}
+.bg_gray2 {background: #f5f5f5;}
+
+.blink { animation: blink 1s infinite; }
+.SocialWelfareTransfer .dungdung { animation: dungdung 1s both infinite alternate; }
+
+#stn02 .tit { margin: 0 auto 65px; }
+#stn02 .tit strong, #stn06 .tit strong { color: #000; }
+#stn03 .conbox, #stn05 .conbox { background: #fff; border-radius: 10px; }
+
+#band_black { background: #000 url(images/bg_black.png) no-repeat center; padding: 0; height: 180px;}
+#band_black .con_txt {color: #fff; margin: 0 auto; padding: 30px 0;}
+#band_black .con_txt strong {font-size: 55px;}
+#band_black .tit { color: #fff; font-size: 45px; }
+#band_black .tit strong { color: #fff; font-size: 65px; }
+#band_black .tit .txt_small { color: #fff; }
+#band_pink {background: #313131 url("images/bg_05.png") no-repeat center 0; background-size: cover; }
+.bnr { background: #0f0804 url("images/bg_bnr.png") no-repeat center 0; }
+
+#stn04 .badgebn {right: 78px; bottom: -150px;}
+
+#stn06 .radio_select {margin-bottom: 40px;}
+#stn06 form {display: flex; position: absolute; top: 29px; left: 380px;}
+#stn06 form label {display: flex;}
+#stn06 form label span{font-size: 20px; font-weight: 700; cursor: pointer;}
+#stn06 form label input[type='radio'] { -webkit-appearance: none; -moz-appearance: none; appearance: none; margin-left: 60px; margin-right: 10px; width: 24px; height: 24px; border: 2px solid #ddd; border-radius: 50%; outline: none; cursor: pointer; }
+#stn06 form label input[type='radio']:checked { background-color: #ef144c; box-shadow: 0 0 0 2px #ef144c; border: 3px solid #fff !important; }
+#stn06 #degree_b_img {display: none;}
+
+.bg-tab { background: #ef144c; height: 80px;}
+.bg-tab .tab_wp { width: 100%; }
+.bg-tab .tab_wp.fix { background: #ef144c; position: fixed; top: 0; z-index: 100; box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);}
+.bg-tab .tab_wp .conts_tab { width: 1100px; margin: 0 auto; overflow: hidden; text-align: center; display: flex; box-sizing: border-box; }
+.bg-tab .tab_wp .conts_tab li { position: relative; width: calc(1100px / 3); height: 80px;}
+.bg-tab .tab_wp .conts_tab li:not(:nth-child(1))::before { content: ""; width: 2px; height: 26px; background: #f78aa6; display: block; position: absolute; left: -1px; top: 50%; transform: translateY(-50%); }
+.bg-tab .tab_wp .conts_tab li.on a { color: #fffc12; }
+.bg-tab .tab_wp .conts_tab a { width: 100%; background: #ef144c; color: #fff; cursor: pointer; display: inline-block; font-size: 20px; font-weight: 600; text-align: center; line-height: 80px; }
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+@keyframes updown {
+  0% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+@keyframes dungdung {
+  0% { transform: translateY(-5px); }
+  100% { transform: translateY(5px); }
+}
+@keyframes slide-bottom {
+0% { transform: translateY(-100px); opacity: 0; }
+100% { transform: translateY(0); }
+}
+@keyframes healthyHome_ani {
+  0% { transform: translateY(0%); }
+  50% { transform: translateY(8%); }
+  100% { transform: translateY(0%); }
+}
+@keyframes slide-top {
+0% { transform: translateY(100px); opacity: 0; }
+100% { transform: translateY(0); }
+}
+
+@media (max-width : 1600px) {
+  .SocialWelfareTransfer .quick {display: none;}
+}
