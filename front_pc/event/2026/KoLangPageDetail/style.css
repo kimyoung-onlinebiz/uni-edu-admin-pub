@@ -1,0 +1,74 @@
+
+.KoLangPractice * { letter-spacing: -0.5px; transition: all 0.2s ease-in-out; overflow: hidden; }
+.KoLangPractice { min-width: 1400px; overflow-y: hidden; color: #111; }
+.KoLangPractice section:not(.mainTop, .bottom) { padding: 120px 0 0 0; }
+.KoLangPractice section:not(.mainTop, .bottom) .inner { position: relative; width: 1100px; padding: 0; margin: 0 auto; text-align: center; }
+.KoLangPractice .title { margin-bottom: 60px; }
+.KoLangPractice .title h1 { font-size: 58px; font-weight: 900; color: #111; line-height:1.2; }
+.KoLangPractice .title h2 { margin-top: 20px; font-size: 30px; font-weight: 700; color: #111; }
+.KoLangPractice .title h2 strong { color: #e42614; font-weight: 700; }
+.KoLangPractice .title h3 { height: 52px; padding: 0 28px; margin: 0 auto 24px; border: 2px solid #111; border-radius: 999px; display: inline-flex; justify-content: center; align-items: center; font-size: 24px; font-weight: 700; background: transparent; box-sizing: border-box; }
+.KoLangPractice .w520 { width: 520px; height: 80px; border-radius: 10px; display: flex; justify-content: center; align-items: center; margin: 60px auto 0; z-index: 10; }
+.KoLangPractice .w520 span { font-size: 24px; font-weight: 700; color: #fff; display: inline-flex; align-items: center; gap: 8px; }
+.KoLangPractice .w520 span::after { content: ""; display: block; width: 11px; height: 20px; background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/KoLangPractice_0326/imgs/arrow_white.png) no-repeat center/contain; }
+.KoLangPractice .w520.gray { background: #333; }
+.KoLangPractice .w520.gray:hover { background: rgb(38.25, 38.25, 38.25); }
+.KoLangPractice .w520.yellow { background: #ffb745; }
+.KoLangPractice .w520.yellow:hover { background: rgb(255, 173.1290322581, 43.5); }
+.KoLangPractice .w520.yellow span { color: #111; }
+.KoLangPractice .w520.yellow span::after { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/KoLangPractice_0326/imgs/arrow_black.png) no-repeat center/contain; }
+
+.KoLangPractice .mainTop { position: relative; overflow: hidden; padding: 120px 0; background: url("https://cdn.kystudy.co.kr/User/Content/images/event/2026/KoLangPractice_0326/imgs/mainTop_bg.jpg") center/cover no-repeat; z-index: 1; }
+.KoLangPractice .mainTop .inner { position: relative; width: 1200px; margin: 0 auto; text-align: center; }
+.KoLangPractice .mainTop .mainTop_title { z-index: 3; }
+.KoLangPractice .mainTop .mainTop_title li:nth-of-type(2) { margin-top: 48px; animation: lineReveal 0.8s 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; }
+.KoLangPractice .mainTop .mainTop_title li:nth-of-type(3) { margin-top: 30px; animation: scale_02 0.4s 1.2s ease-out both; }
+.KoLangPractice .mainTop .mainTop_title li:nth-of-type(4) { margin-top: 66px; animation: fadeIn_up 0.5s 0.8s linear both; }
+.KoLangPractice .mainTop .mainTop_img { position: relative; margin-top: 80px; display: flex; justify-content: center; gap: 20px; }
+.KoLangPractice .mainTop .mainTop_img li:nth-of-type(1) { animation: fadeIn_up 0.5s 1s linear both; }
+.KoLangPractice .mainTop .mainTop_img li:nth-of-type(2) { animation: fadeIn_up 0.5s 1.2s linear both; }
+.KoLangPractice .mainTop .mainTop_img li:nth-of-type(3) { animation: fadeIn_up 0.5s 1.4s linear both; }
+.KoLangPractice .stn-wrap { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/KoLangPractice_0326/imgs/stn_bg.jpg) top center/cover no-repeat; padding-bottom: 120px; }
+.KoLangPractice .stn01 .yellowList { display: flex; justify-content: center; align-items: center; margin-top: 40px; gap: 52px; }
+.KoLangPractice .stn01 .yellowList li { width: 220px; height: 220px; border-radius: 50%; background: #ffb745; color: #111; font-size: 30px; font-weight: 700; line-height: 1.4; display: flex; justify-content: center; align-items: center; text-align: center; }
+.KoLangPractice .stn01 .boxList { display: flex; justify-content: center; align-items: center; margin-top: 60px; gap: 40px; flex-direction: column; }
+.KoLangPractice .stn04 .title { margin-bottom: 0; }
+.KoLangPractice .stn04 .title .content { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; }
+.KoLangPractice .stn04 .title .content h2 { text-align: left; }
+.KoLangPractice .bottom { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/KoLangPractice_0326/imgs/bottom_bg.jpg) center/cover no-repeat; }
+.KoLangPractice .bottom .inner { padding: 80px 0 !important; text-align: center; }
+.KoLangPractice .bottom .inner .title p { font-size: 40px; color: #fff; font-weight: 700; margin-bottom: 10px; }
+.KoLangPractice .bottom .inner .title h1 { color: #ffb745; }
+.KoLangPractice .bottom .inner .title h2 { color: #fff; opacity: 0.8; font-weight: 500; font-size: 28px; }
+.KoLangPractice .bottom .button-wrap button { margin: 0; }
+.KoLangPractice .bottom .button-wrap { margin-top: 60px; display: flex; justify-content: center; align-items: center; gap: 20px; }
+
+@keyframes fadeIn_up {
+  0% { opacity: 0; transform: translateY(30%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale_02 {
+  0% { opacity: 0; transform: scale(1.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes lineReveal {
+  0% { clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+.KoLangPractice .schedule_guide { background: #eee; }
+.KoLangPractice .schedule_guide .title { margin-bottom: 0; }
+.KoLangPractice .schedule_guide .title h1 { margin-bottom: 20px; }
+
+.KoLangPractice .schedule_table { width: 100%; border-collapse: collapse; table-layout: fixed; background: #eee;}
+.KoLangPractice .schedule_table + .schedule_table { margin-top: 30px; }
+.KoLangPractice .schedule_table th, .KoLangPractice .schedule_table td { border: 1px solid #f59a4b; padding: 14px 20px; font-size: 21px; color: #111; line-height: 1.3; text-align: center; vertical-align: middle; background: #fff8f3; }
+.KoLangPractice .schedule_table thead th { background: #fa9a00; color: #fff; font-size: 30px; font-weight: 800; letter-spacing: -1px; padding: 16px 10px; }
+.KoLangPractice .schedule_table thead th span { color: #fff4a3; }
+.KoLangPractice .schedule_table tbody th { font-weight: 600; background: #ffe9db; }
+.KoLangPractice .schedule_table td strong { color: #ff0000; font-weight:700; }
+.KoLangPractice .schedule_table td del { color:#3a3a3a; text-decoration: line-through; }
+.KoLangPractice .schedule_guide a { margin-bottom:120px; }
+
+.KoLangPractice .schedule_table thead.date th { font-size: 45px; padding-bottom: 20px; color: #333; border: none; background: #eee;}
+.KoLangPractice .schedule_table thead.date th span {color: #e42614;}
+.KoLangPractice .schedule_guide .inner div:nth-of-type(3) {margin-top: 50px;}

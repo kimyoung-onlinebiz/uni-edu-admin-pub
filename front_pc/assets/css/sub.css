@@ -1468,7 +1468,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .product_PackageList li dd,.product_PackageList .package_price { display:flex; gap:24px; }
 .product_PackageList dd strong { font-size:21px; margin-top:8px; width:655px; font-weight:600; }
 .product_PackageList li .btn_section { gap:12px; display:flex; }
-.product_PackageList li .btn_section button { height:62px; width:90px; }
+.product_PackageList li .btn_section button { height:62px; width:90px; font-size:var(--Font-base); }
 .product_PackageList .badge { font-size:var(--Font-xsmall) }
 .product_PackageList .course_price { width:210px;}
 .product_PackageList .course_price strong { font-size:var(--Font-2xlarge); font-weight:800; }

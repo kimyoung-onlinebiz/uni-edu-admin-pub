@@ -1,0 +1,89 @@
+
+.OpenCourseInfo { text-align: center; }
+
+/* 디데이 */
+.Dday { position: absolute; top: 0; width: 100%; height: 100px; display: flex; align-items: center; background: rgba(0, 0, 0, .9); color: #fff; z-index: 100; }
+.Dday .content { display: flex; align-items: center; }
+.Dday p { display: flex; align-items: center; justify-content: center; font-size: 23px; color: #fff; border: 2px solid #fff; border-radius: 30px; width: 320px; padding: 4px 0;}
+.Dday dl { position: absolute; top: -16px; left: 450px; background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0424/images/icon_clock.png) no-repeat 70px 15px;	font-size: 52px; color: #fff; padding-left: 200px; margin-top: 2px;}
+.Dday dt:after { content: "일"; font-size: 21px; vertical-align: 2px; font-weight: 500; }
+.Dday dt, .Dday dd { display: inline-block; letter-spacing: -2px; font-weight: 500; }
+.Dday dt, .Dday dd, .Dday dd li { color: #fff; font-size:45px;}
+.Dday dd li { display: inline-block; font-weight: 500; }
+.Dday dd li:after { content: " : "; vertical-align: 4px; margin-right: 6px;}
+.Dday dd li:last-child:after { content: ""; }
+.Dday a { position: absolute; right: 0; top: -11px; display: inline-block; width: 228px; height: 65px; background: #eb3922; border-radius: 5px; transition: all .2s; color: #fff; font-size: 22px; font-weight: 600; line-height: 65px; text-align: center; }
+.Dday a:hover { filter: brightness(.9); }
+
+.content { width: 1200px; position: relative; margin: 0 auto; }
+.topImg { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0424/images/topBg.jpg) repeat;	position: relative; height: 1678px; }
+.topImg .top_title { border: 0; line-height: 100%; vertical-align: top; padding: 200px 0 30px; animation: aniUp .6s both ease-in-out; height: 586px; box-sizing: border-box; z-index: 10;}
+.topImg .top_title p { position: relative; font-size: 35px; letter-spacing: -2px; }
+.topImg .top_title p:after { position: absolute; bottom: -20px; right: 390px; content: "＊2020~2026년 김영편입 누적 합격 신고생 중 김영평생교육원 가입 회원 기준(중복 합격자 포함)"; color: #999; font-size: 14px; letter-spacing: -1px; }
+.topImg .top_title span { font-size:55px; padding-top: 80px; display: block; color: #5d11ea; letter-spacing: -2px; font-weight: 700; }
+.topImg .top_title > strong { font-size: 110px; font-weight: 900; letter-spacing: -3px; padding-top: 90px; display: block; }
+.topImg .top_title em { position: absolute; left: 0; top: 280px; animation: aniUp .6s .4s both ease-in-out,upDown 1s .3s infinite ease-in-out; }
+
+.topImg .top_sub { padding: 45px 0; }
+.topImg .topDate .dateBg1 { display: flex; justify-content: center; }
+.topImg .topDate .dateBg1 p { width: 490px; height: 150px; font-size: 44px; color: #ffffff; font-weight: 700; margin: 10px; }
+.topImg .topDate .dateBg1 p span { line-height: 192px; }
+.topImg .topDate .dateBg1 p:nth-child(1) { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0424/images/top_datebg01.png) no-repeat;}
+.topImg .topDate .dateBg1 p:nth-child(2) { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0424/images/top_datebg02.png) no-repeat;}
+.topImg .topDate .dateBg2 { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0424/images/top_datebg03.png) no-repeat;	width: 547px; height: 210px; margin: 10px auto; text-align: center; }
+.topImg .topDate .dateBg2 p { font-size: 44px; color: #111111; font-weight: 700; display: inline; margin: 74px; }
+.topImg .topDate .dateBg2 p span { line-height: 316px; }
+.topImg .topDeco1 { bottom: -566px; left: 50%; transform: translateX(-50%); position: absolute; }
+.topImg .topDeco2 { top: 130px; right: -170px; position: absolute; animation: shake 2s alternate infinite; z-index: 0;}
+
+.section01 { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0424/images/sec01_Bg.jpg);
+	width: 100%; height: 1178px; }
+.section01 h2 { padding: 120px 0 80px; }
+.section02 h2, .section03 h2 { padding: 80px 0 50px; }
+/* 버튼 */
+.button { display: flex; gap: 20px; width: 1200px; margin: 30px auto; }
+.btn_black { width: 590px; height: 80px; border-radius: 16px; background-color: #232227; }
+.btn_black:hover { background-color: #5d11ea; }
+.btn_black p { color: #fff; font-size: 30px; font-weight: 500; text-align: center; line-height: 80px; }
+.btn_white { width: 590px; height: 80px; border-radius: 16px; border: solid 3px #232227; box-sizing: border-box; background-color: #fff; }
+.btn_white p { font-size: 26px; font-weight: 500; text-align: center; color: #232227; margin-top:10px; line-height:1; }
+.btn_white span { font-size: 22px; font-weight: 600; }
+.btn_white:hover { border-color: #5d11ea; box-shadow: inset 0 0 0 2px #5d11ea; }
+.btn_white:hover p { color: #5d11ea; }
+.btn_white:hover span { color: #5d11ea; }
+/* 탭 */
+.section02 .bg-tab { background: #fff; padding-top: 100px; }
+.section02 .tab_wp { width: 100%; border-bottom: 3px solid #232227 ; box-shadow: 1.5px 2.6px 0 0 rgba(129, 129, 129, 0.25); }
+.section02 .tab_wp.fix { background: #fff; position: fixed; top: 0; z-index: 100; padding: 10px 0 0; }
+.section02.section02 .conts_tab { width: 1200px; margin: 0 auto; overflow: hidden; text-align: center; }
+.section02 .conts_tab li { float: left; position: relative; margin-left: 2px; }
+.section02 .conts_tab li:first-child { margin-left: 0; }
+.section02 .conts_tab li:last-child a { width: 240px; }
+.section02 .conts_tab li a { background: #e2e1e6; color: #232227; cursor: pointer; display: inline-block; width: 238px; padding: 20px 0 18px; line-height: 25px; font-size: 22px; border-radius: 10px 10px 0 0; text-align: center; }
+.section02 .conts_tab li.on a { color: #fff; background: #232227; font-weight:600; }
+.section03 { background-color: #efeff4; height: 1300px; margin-top: 120px; }
+.section03 img { display: block; margin: 0 auto; }
+.section03 .button { margin: 0 auto; }
+.section04 { overflow: hidden; }
+
+@keyframes upDown {
+	0% { transform: translateY(0%); }
+	50% { transform: translateY(8%); }
+	100% { transform: translateY(0%); }
+}
+@keyframes aniUp {
+	0% { transform: translateY(40%); opacity: 0; }
+	100% { transform: translateY(0%); opacity: 1; }
+}
+.topImg .top_img01 { animation: fadeIn_02 .6s .5s both ease-in-out; }
+@keyframes fadeIn_02 {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes shake {
+	80% { transform: rotate(0); }
+	85% { transform: rotate(-4deg); }
+	90% { transform: rotate(4deg); }
+	95% { transform: rotate(-2deg); }
+	100% { transform: rotate(2deg); }
+}

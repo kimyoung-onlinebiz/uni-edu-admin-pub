@@ -1,0 +1,188 @@
+﻿@charset "UTF-8";
+
+/* 합격자 홍보페이지 */
+html { -webkit-text-size-adjust: 100%; }
+.PassTransUni { width:100%; overflow:hidden; text-align:center; }
+.PassTransUni img { vertical-align:top; }
+.PassTransUni .content { position:relative; width:1200px; height:100%; margin:0 auto; padding-bottom:120px; }
+.PassTransUni .topImg { position:relative; height:983px; overflow:hidden; }
+.PassTransUni .topImg .top_txt { position:absolute; left:50%; z-index:100; width:1200px; margin-left:-600px; }
+.PassTransUni .topImg .top_txt li:first-child { position:absolute; top:210px; right:80px;animation:fadeIn .5s .5s ease-in-out both,upDown 1.2s .8s infinite ease-in-out; }
+.PassTransUni .topImg .top_txt li:nth-child(2) { margin-top:125px; animation:fadeIn .6s .8s ease-in-out both; }
+.PassTransUni .top_txt02 { position:absolute; right:30px; top:30px; z-index:10; }
+.PassTransUni .topBg { width:100%; height:983px; background:#180b04 url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/topBg.jpg) no-repeat top center; animation:zoom 3s ease-in-out both; }
+.PassTransUni .topImg p:last-of-type { position:absolute; right:50%; bottom:120px; margin-right:-450px; z-index:100; animation:fadeIn .6s 1.2s ease-in-out both; }
+canvas{z-index:10;pointer-events: none;position: fixed; top: 0; left:0; transform: scale(1.2); z-index:1000; }
+
+@media (min-width:2000px) {
+	.PassTransUni .topBg { background-size:cover;}
+}
+
+@keyframes upDown {
+	0% {
+		transform: translateY(0%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	100% {
+        transform: translateY(0%);
+	}
+}
+
+
+@keyframes zoom{
+	0% { transform:scale(1.5); }
+	100% { transform:scale(1); }
+	}
+@keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:1; }
+	}
+
+.PassTransUni h2 { padding:120px 0 40px; }
+.PassTransUni .section_01 { background:#00006a; }
+.PassTransUni .section_01 .content { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/section01_bg.png) no-repeat; }
+.section_02 { background:#0082ff; }
+.PassTransUni .passVideo_section:after,.epilogue_txt a:after { content:""; display:block; clear:both; }
+.PassTransUni .passVideo_section { display:flex; flex-wrap:nowrap; gap:24px; width:1200px; overflow-x:auto; overflow-y:hidden; cursor:grab; scrollbar-width:none; -ms-overflow-style:none; margin-bottom: 30px;}
+.PassTransUni .passVideo_section::-webkit-scrollbar { display:none; }
+.PassTransUni .passVideo_section.dragging { cursor:grabbing; }
+.PassTransUni .passVideo_section li { position:relative; flex:0 0 320px; width:320px; height:180px; overflow:hidden; border-radius: 10px;}
+.PassTransUni .passVideo_section li dl { position:absolute; top:24px; left:20px; color:#fff; text-align:left; z-index:100; }
+.PassTransUni .passVideo_section li dt { font-size:20px; padding-bottom:10px; color:#fdca00; }
+.PassTransUni .passVideo_section li dd { font-size:16px; color:#fff; }
+.PassTransUni .passVideo_section li a { display:block; width:100%; height:100%; overflow:hidden; }
+.PassTransUni .passVideo_section li a:before { position:absolute; left:50%; top:50%; margin:-29px 0 0 -29px; content:""; display:block; width:58px; height:58px; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/btn_movie.png) no-repeat; z-index:100; }
+.PassTransUni .passVideo_section li a img { transition:all .25s; z-index:90; }
+.PassTransUni .passVideo_section li a:hover img { transform:scale(1.1); }
+.PassTransUni .epilogue_txt li { position:relative; height:200px; box-sizing:border-box; padding:20px; background:#e7e7e7 url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/btn_more.png) no-repeat right 0; margin-bottom:10px; }
+.PassTransUni .epilogue_txt li:last-child { margin-bottom:0; }
+.epilogue_txt li p,.epilogue_txt li a > dl { float:left; }
+.epilogue_txt li p { margin-right:30px; }
+.epilogue_txt li a > dl { width:950px; text-align:left; padding:20px 0; line-height:1.4; color:#333; }
+.epilogue_txt li a dt { font-size:18px; padding-bottom:10px; font-weight:bold; }
+.epilogue_txt li a dt strong { font-size:23px; color:#0e2bc9; }
+.epilogue_txt li dd { font-size:16px; }
+.epilogue_txt li dd strong { color:#bd0444; font-weight:normal; }
+.epilogue_txt li .btn_txtMore { opacity:0; display:block; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.7); border-radius:3px; transition:all .3s; }
+.epilogue_txt li a:hover .btn_txtMore { opacity:1; }
+.epilogue_txt li .btn_txtMore strong { color:#fff; font-size:18px; font-weight:normal; border:2px solid #fff; padding:5px 25px; display:inline-block; margin-top:105px; }
+.epilogue_txt .epilogue_layer { display:none; position:fixed; width:700px; top:45%; left:50%; transform:translate(-50%, -50%); text-align:left; z-index:1001;background:#fff; }
+.epilogue_layer .layer_content dl { background:#fff; color:#333; }
+.epilogue_layer .layer_content { padding:20px; box-sizing:border-box; background:#fff; overflow-y:scroll; overflow-x:hidden; height:650px; }
+.epilogue_layer h3 { position:relative; width:700px; height:60px; font-size:18px; text-align:center; background:#0e2bc9; color:#fff; line-height:60px; box-sizing:border-box;}
+.epilogue_layer h3 a { position:absolute; right:20px; top:13px; }
+.epilogue_layer h3 strong { color:#ffd800; }
+.epilogue_layer dt { position:relative; display:flex; align-items:center; background:#ebebeb; font-size:16px; min-height:62px; font-weight:bold; letter-spacing:-1px; padding:10px 20px 10px 60px; box-sizing:border-box; }
+.epilogue_layer dt.line_01 { padding-top:10px; }
+.epilogue_layer dt:before { position:absolute; left:0; top:0; width:46px; height:100%; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/icon_q.png) no-repeat center center; box-shadow:inset -2px 0 0 #fff; content:""; display:block; }
+.epilogue_layer dd{ font-size:14px; padding:15px 15px 30px; }
+.modal_layer { display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:700px; z-index:1001; }
+.modal_layer .youTube_view { position:relative; width:700px; background:#000; }
+.modal_layer .youTube_view iframe { display:block; width:700px; height:394px; }
+.modal_layer .btn_modalClose { position:absolute; right:-48px; top:0; z-index:1002; }
+.modal_layer .btn_modalClose img { display:block; }
+.modal_layerBg { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.8); z-index:1000; display:none; pointer-events:auto; }
+.epilogue_layer .modal_layerBg { display:none !important; z-index:-1; }
+.modal_layer .modal_layerBg { display:none !important; z-index:-1; }
+
+/* 매년 바뀌는 이미지 */
+.PassTransUni .section_04 { position:relative; width:100%; height:935px; text-align:center; background:#00006a url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/PassTransUni/images/passList_bg.png) no-repeat center 190px; }
+/* 매년 바뀌는 이미지 */
+
+.PassTransUni .section_04 .bx-wrapper { margin:140px auto 0 !important; height:480px; width:1200px; overflow:hidden; }
+.PassTransUni .bxslider_passList { text-align:left; box-sizing:border-box; margin:0 50px; } 
+.PassTransUni .bxslider_passList:after { content:""; display:block; clear:both; } 
+.PassTransUni .bxslider_passList div { float:left; width:380px; height:82px; font-size:16px; color:#fff; padding:0 15px 15px 80px; box-sizing:border-box; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; background-size:60px; line-height:60px; }
+.PassTransUni .bxslider_passList div strong { color:#ffae00; font-weight:normal; }
+.section_04 span { position:absolute; left:50%; bottom:100px; margin-left:470px; z-index:100; }
+
+.hanyang { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hanyang.jpg) no-repeat; }
+.hufs { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hufs.jpg) no-repeat; }
+.korea { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/korea.jpg) no-repeat; }
+.skku { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/skku.jpg) no-repeat; }
+.ewha { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/ewha.jpg) no-repeat; }
+.khu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/khu.jpg) no-repeat; }
+.sogang { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/sogang.jpg) no-repeat; }
+.cau { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/cau.jpg) no-repeat; }
+.kau { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kau.jpg) no-repeat; }
+.seoultech { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/seoultech.jpg) no-repeat; }
+.hongik { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hongik.jpg) no-repeat; }
+.duksung { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/duksung.jpg) no-repeat; }
+.swu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/swu.jpg) no-repeat; }
+.kookmin { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kookmin.jpg) no-repeat; }
+.konkuk { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/konkuk.jpg) no-repeat; }
+.syu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/syu.jpg) no-repeat; }
+.sejong { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/sejong.jpg) no-repeat; }
+.smu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/smu.jpg) no-repeat; }
+.mju { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/mju.jpg) no-repeat; }
+.sungshin { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/sungshin.jpg) no-repeat; }
+.ssu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/ssu.jpg) no-repeat; }
+.dongguk { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/dongguk.jpg) no-repeat; }
+.dongduk { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/dongduk.jpg) no-repeat; }
+.kyonggi { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kyonggi.jpg) no-repeat; }
+.hansung { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hansung.jpg) no-repeat; }
+.kw { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kw.jpg) no-repeat; }
+.sookmyung { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/sookmyung.jpg) no-repeat; }
+.skuniv { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/skuniv.jpg) no-repeat; }
+.ajou { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/ajou.jpg) no-repeat; }
+.gachon { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/gachon.jpg) no-repeat; }
+.inha { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/inha.jpg) no-repeat; }
+.eulji { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/eulji.jpg) no-repeat; }
+.catholic { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/catholic.jpg) no-repeat; }
+.mju { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/mju.jpg) no-repeat; }
+.dankook { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/dankook.jpg) no-repeat; }
+.kpu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kpu.jpg) no-repeat; }
+.hs { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hs.jpg) no-repeat; }
+.suwon { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/suwon.jpg) no-repeat; }
+.khu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/khu.jpg) no-repeat; }
+.kangnam { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kangnam.jpg) no-repeat; }
+.anyang { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/anyang.jpg) no-repeat; }
+.cau { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/cau.jpg) no-repeat; }
+.incheon { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/incheon.jpg) no-repeat; }
+.pusan { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/pusan.jpg) no-repeat; }
+.yonsei { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/yonsei.jpg) no-repeat; }
+.shinhan { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/shinhan.jpg) no-repeat; }
+.jnu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/jnu.jpg) no-repeat; }
+.jbnu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/jbnu.jpg) no-repeat; }
+.jbnu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/jbnu.jpg) no-repeat; }
+.gwnu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/gwnu.jpg) no-repeat; }
+.konyang { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/konyang.jpg) no-repeat; }
+.dongnam { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/dongnam.jpg) no-repeat; }
+.wku { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/wku.jpg) no-repeat; }
+.hoseo { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hoseo.jpg) no-repeat; }
+.yu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/yu.jpg) no-repeat; }
+.uos { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/uos.jpg) no-repeat; }
+.kangwon { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kangwon.jpg) no-repeat; }
+.yongin { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/yongin.jpg) no-repeat; }
+.cnu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/cnu.jpg) no-repeat; }
+.knu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/knu.jpg) no-repeat; }
+.chungbuk { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/chungbuk.jpg) no-repeat; }
+.jeonbuk { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/jeonbuk.jpg) no-repeat; }
+.tukorea { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/tukorea.jpg) no-repeat; }
+.skku { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/skku.jpg) no-repeat; }
+.jeju { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/jeju.jpg) no-repeat; }
+.cku { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/cku.jpg) no-repeat; }
+.gnu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/gnu.jpg) no-repeat; }
+.mmu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/mmu.jpg) no-repeat; }
+.donga { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/donga.jpg) no-repeat; }
+.deu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/deu.jpg) no-repeat; }
+.pknu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/pknu.jpg) no-repeat; }
+.sch { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/sch.jpg) no-repeat; }
+.csu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/csu.jpg) no-repeat; }
+.hknu { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hknu.jpg) no-repeat; }
+.kmou { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/kmou.jpg) no-repeat; }
+.hansei { background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/hansei.jpg) no-repeat; }
+
+.PassTransUni .section_05 { width:100%; height:580px; background:#0e29be url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/PassTransUni/images/comment_bg.jpg) no-repeat top right; box-sizing:border-box; padding-top:90px; }
+
+.PassTransUni .aside_right { position:absolute; right:0; top:1353px; width:175px; z-index:105; overflow:hidden; border-top:2px solid #111; border-bottom:1px solid #111; background:rgba(255,255,255,.7);}
+.PassTransUni .aside_right li { border-bottom:1px solid rgba(0,0,0,.3); }
+.PassTransUni .aside_right li:last-child { border-bottom:none; }
+.PassTransUni .aside_right a { display:block; width:100%; height:100%;color:#111; font-size:15px; font-weight:400; box-sizing:border-box; text-align:center; padding: 15px 10px; transition: all .2s; font-weight:500; }
+.PassTransUni .aside_right a:hover { background:rgba(255,255,255,.4); color:#0e2bc9;}
+
+@media (max-width:1400px) {
+	.aside_right { display:none; }
+}

@@ -1,0 +1,107 @@
+
+.SocialWelfareCert * { text-decoration: none; box-sizing: border-box; letter-spacing: -0.5px; transition: all 0.2s ease-in-out; }
+.SocialWelfareCert { min-width: 1400px; overflow-y: hidden; color: #111; }
+.SocialWelfareCert section:not(.mainTop) .inner { position: relative; width: 1200px; padding: 120px 0; margin: 0 auto; text-align: center; }
+.SocialWelfareCert .abs { position: absolute; }
+.SocialWelfareCert .shadow { filter: drop-shadow(0 2px 12px rgba(78, 94, 90, 0.16)); }
+.SocialWelfareCert h1 { margin-bottom: 60px; }
+.SocialWelfareCert .notice { padding: 20px 20px 20px 60px; border-radius: 10px; background: #e5e8e9; text-align: left; width: 1000px; margin: 0 auto; }
+.SocialWelfareCert .notice li { color: #333; font-size: 16px; list-style: decimal; font-weight: 500; line-height: 28px; }
+.SocialWelfareCert .mainTop { position: relative; overflow: hidden; padding: 120px 0; background: url("https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/mainTop_bg.jpg") center/cover no-repeat; position: relative; z-index: 1; }
+.SocialWelfareCert .mainTop .inner { position: relative; width: 1200px; margin: 0 auto; text-align: center; }
+.SocialWelfareCert .mainTop .mainTop_title { z-index: 3; }
+.SocialWelfareCert .mainTop .mainTop_title li:nth-of-type(1) { animation: fadeIn_up 0.4s linear both; }
+.SocialWelfareCert .mainTop .mainTop_title li:nth-of-type(2) { margin-top: 48px; animation: fadeIn_up 0.5s 0.5s linear both; }
+.SocialWelfareCert .mainTop .mainTop_title li:nth-of-type(3) { margin-top: 30px; animation: scale_02 0.3s 0.8s ease-out both; }
+.SocialWelfareCert .mainTop .mainTop_title li:nth-of-type(4) { margin-top: 66px; }
+.SocialWelfareCert .mainTop .mainTop_img { position: relative; margin-top: 80px; display: flex; justify-content: center; gap: 8px; }
+.SocialWelfareCert .mainTop .abs { bottom: -90px; right: -20px; display: inline-block; z-index: 4; }
+.SocialWelfareCert .w520 { width: 520px; height: 80px; border-radius: 10px; display: flex; justify-content: center; align-items: center; margin: 60px auto 0; z-index: 10; }
+.SocialWelfareCert .w520 span { font-size: 24px; font-weight: 700; color: #fff; }
+.SocialWelfareCert .w520.green { background: #07513c; }
+.SocialWelfareCert .w520.green:hover { background: rgb(4.9715909091, 57.5284090909, 42.6136363636); }
+.SocialWelfareCert .w520.yellow { background: #fff001; }
+.SocialWelfareCert .w520.yellow:hover { background: rgb(230.5, 216.8877952756, 0); }
+.SocialWelfareCert .w520.yellow span { color: #111; }
+.SocialWelfareCert .w520.purple { background: #7813c6; }
+.SocialWelfareCert .w520.purple:hover { background: rgb(105.8986175115, 16.767281106, 174.732718894); }
+.SocialWelfareCert .w260 { width: 260px; height: 64px; border-radius: 4px; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
+.SocialWelfareCert .w260 span { font-size: 24px; font-weight: 700; color: #fff; }
+.SocialWelfareCert .w260.black { background: #111; }
+.SocialWelfareCert .w260.black:hover { background: #252525; }
+.SocialWelfareCert .w260.green2 { background: #009168; }
+.SocialWelfareCert .w260.green2:hover { background: rgb(0, 119.5, 85.7103448276); }
+.SocialWelfareCert .stn01 { background: #07513c; }
+.SocialWelfareCert .stn01 .swiper { width: 1200px; height: 520px; position: relative; }
+.SocialWelfareCert .stn01 .swiper .swiper-slide img { width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
+.SocialWelfareCert .stn01 .swiper .swiper-button-next::after, .SocialWelfareCert .stn01 .swiper .swiper-button-prev::after { content: ""; }
+.SocialWelfareCert .stn01 .swiper .swiper-button-next { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/arrow_R.png) no-repeat center/contain; width: 64px; height: 64px; right: 20px; }
+.SocialWelfareCert .stn01 .swiper .swiper-button-prev { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/arrow_L.png) no-repeat center/contain; left: 20px; width: 64px; height: 64px; }
+.SocialWelfareCert .stn01 .swiper .swiper-pagination-bullet { width: 10px; height: 10px; background: #ccc; opacity: 1; }
+.SocialWelfareCert .stn01 .swiper .swiper-pagination-bullet-active { background: #7813c6; }
+.SocialWelfareCert .stn02 { background: #fff url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/stn02_bg.jpg) top center/cover no-repeat; }
+.SocialWelfareCert .stn02 .point { margin-top: 100px; }
+.SocialWelfareCert .stn02 .point:nth-of-type(1) { margin-top: 60px; }
+.SocialWelfareCert .stn02 .point h3 { margin-bottom: 54px; }
+.SocialWelfareCert .stn02 .point02 .content { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.SocialWelfareCert .stn02 .point02 .content li { position: relative; }
+.SocialWelfareCert .stn02 .point02 .content li:nth-child(n+5) { margin-top: 20px; }
+.SocialWelfareCert .stn02 .point02 .content .abs { top: 20px; right: 20px; }
+.SocialWelfareCert .stn02 .point03 .content { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.SocialWelfareCert .stn02 .point03 .content li { position: relative; }
+.SocialWelfareCert .stn02 .point03 .content li:nth-child(n+3) { margin-top: 20px; }
+.SocialWelfareCert .stn02 .point03 .content .abs { top: 36px; right: 24px; }
+.SocialWelfareCert .stn03 { background: #f5f5f7 url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/stn03_bg.jpg) center center/contain no-repeat; height: 1160px; }
+.SocialWelfareCert .stn03 .inner { padding: 0; margin: 120px auto 0; }
+.SocialWelfareCert .stn03 .inner h1 { margin-bottom: 30px; }
+.SocialWelfareCert .stn03 .inner h2 { margin-top: 32px; }
+.SocialWelfareCert .stn03 .inner p { font-size: 20px; font-weight: 600; margin-bottom: 24px; margin-top: 450px; }
+.SocialWelfareCert .stn03 .inner .abs { top: 628px; right: 375px; }
+.SocialWelfareCert .stn04 { background: #fff url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/stn04_bg.jpg) bottom right/contain no-repeat; }
+.SocialWelfareCert .stn04 .packageWarp { display: flex; flex-direction: column; gap: 30px; }
+.SocialWelfareCert .stn04 .packageWarp li { width: 1200px; height: 260px; display: block; position: relative; }
+.SocialWelfareCert .stn04 .packageWarp li:nth-of-type(1) { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/package01.png); }
+.SocialWelfareCert .stn04 .packageWarp li:nth-of-type(2) { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/package02.png); }
+.SocialWelfareCert .stn04 .packageWarp li:nth-of-type(3) { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/package03.png); }
+.SocialWelfareCert .stn04 .packageWarp li span.red { color: #f8321d; font-size: 22px; font-weight: 700; position: absolute; top: 74px; right: 384px; animation: blink 0.7s infinite ease-in alternate; }
+.SocialWelfareCert .stn04 .packageWarp li .buttonWrap { position: absolute; top: 30px; right: 40px; }
+.SocialWelfareCert .stn04 .packageWarp li .buttonWrap button:nth-of-type(1) { margin-bottom: 8px; }
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+.SocialWelfareCert .stn05 { background: #68c9be; }
+.SocialWelfareCert .stn05 .notice { background: #a4dfd8; margin-top: 40px; }
+.SocialWelfareCert .bottom { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/SocialWelfareCert_260113/imgs/bottom_bg.jpg) center/cover no-repeat; }
+.SocialWelfareCert .bottom .inner { padding: 80px 0 !important; }
+.SocialWelfareCert .bottom p { color: #555; font-weight: 600; font-size: 24px; margin-bottom: 24px; }
+.SocialWelfareCert .bottom div { margin-bottom: 30px; }
+.SocialWelfareCert .bottom .small { color: #888; font-weight: 500; font-size: 16px; margin-bottom: 20px; display: block; }
+.SocialWelfareCert .bottom .w520 { margin: 0 auto; }
+@keyframes fadeIn_up {
+  0% { opacity: 0; transform: translateY(30%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale_02 {
+  0% { opacity: 0; transform: scale(1.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 상담 신청 */
+.applyBar { position: fixed; bottom: 0; background: rgba(28, 29, 31, 0.9); width: 100%; height: 120px; z-index: 1000001; font-size: 18px; }
+.apply_box { position: relative; width: 1090px; margin: 0 auto; }
+.apply_box p { color: #fff; }
+.apply_box .apply_tit { font-weight: 500; padding: 10px 50px 5px 0; border-bottom: 1px solid #555; font-size: 30px; width: fit-content; }
+.apply_box .agree { position: absolute; top: 85px; right: 260px; color: #fff; font-weight: 300; cursor: pointer; }
+.apply_box .agree a { color: #fff; }
+.apply_box .apply_tit span { color: #fffc12; }
+.apply_box .info { padding-top: 10px; }
+.apply_box .apply_btn { background: #fffc12; text-align: center; font-weight: 700; color: #000; width: fit-content; padding: 12px 60px; border-radius: 3px; display: inline-grid; align-items: center; font-size: 20px; height: 60px; position: absolute; top: 20px; right: 0; }
+.apply_box .apply_btn:hover { background: #ff004e; color: #fffc12; }
+.apply_box input[type="text"] { width: 180px; height: 40px; margin: 0 20px 0 10px; padding: 20px 10px; }
+.apply_box .number { width: 325px !important; }
+.apply_box .conts { width: 388px !important; }
+.apply_box input[type="checkbox"] { width: 20px; height: 20px; }
+.hidden { opacity: 0; pointer-events: none; }
+/*# sourceMappingURL=style.css.map */

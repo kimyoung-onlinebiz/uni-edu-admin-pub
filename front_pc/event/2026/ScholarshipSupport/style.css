@@ -1,0 +1,53 @@
+.ScholarshipSupport * { font-family: Pretendard, sans-serif; text-decoration: none; color: #111; box-sizing: border-box; letter-spacing: -1px; transition: 0.3s all; }
+.ScholarshipSupport { min-width: 1400px; }
+.ScholarshipSupport .inner { position: relative; width: 1200px; margin: 0 auto; text-align: center; }
+.ScholarshipSupport .button400 { width: 400px; height: 82px; background: #152e66; border-radius: 41px; text-align: left; display: flex; justify-content: center; align-items: center; }
+.ScholarshipSupport .button400 p { position: relative; font-size: 28px; font-weight: 700; color: #fff; display: inline-block; text-align: center; }
+.ScholarshipSupport .button400 p::after { content: ""; background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/benefit_241023/imgs/btn_arrow01.png);  margin-left: 14px; width: 11px; height: 20px; display: inline-block; }
+.ScholarshipSupport .button400:hover { color: #fff; background: #053db8; }
+.ScholarshipSupport .button_wrap { display: flex; justify-content: center; gap: 24px; }
+.ScholarshipSupport .button_wrap li:nth-child(2) a { padding: 21px 90px; }
+.ScholarshipSupport .mainTop { background: #aed3ff url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/benefit_241023/imgs/mainTop_bg.jpg)  no-repeat center; background-size: cover; height: 1241px; position: relative; margin-top: -50px; }
+.ScholarshipSupport .mainTop .inner { padding: 0; }
+.ScholarshipSupport .mainTop .textWrap { position: relative; top: 150px; z-index: 2; }
+.ScholarshipSupport .mainTop .textWrap li:nth-of-type(1) { margin-top: 50px; animation: scale_02 0.3s 1s ease-out both; }
+.ScholarshipSupport .mainTop .textWrap li:nth-of-type(2) { margin-top: 80px; animation: fadeIn_up 0.5s linear; }
+.ScholarshipSupport .mainTop .textWrap li:nth-of-type(3) { margin-top: 80px; animation: fadeIn_up 0.7s linear; }
+.ScholarshipSupport .mainTop::before { content: ""; background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/benefit_241023/imgs/mainTop_deco01.png);  width: 980px; height: 973px; bottom: 0; left: 0; position: absolute; z-index: 1; }
+.ScholarshipSupport .mainTop::after { content: ""; background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/benefit_241023/imgs/mainTop_deco02.png);  width: 1757px; height: 1142px; top: 0; right: 0; position: absolute; z-index: 1; }
+.ScholarshipSupport .mainTop a { position: relative; top: 220px; margin: 0 auto; z-index: 5; }
+.ScholarshipSupport .stn01 .inner { padding: 140px 0 100px; }
+.ScholarshipSupport .stn01 h2 { margin-bottom: 80px; }
+.ScholarshipSupport .stn01 div:nth-of-type(1) { margin-bottom: 20px; }
+.ScholarshipSupport .stn01 div:nth-of-type(1) a { position: absolute; top: 622px; left: 332px; }
+.ScholarshipSupport .stn01 div:nth-of-type(2) a { position: absolute; top: 1055px; left: 423px; }
+.ScholarshipSupport .stn01 a img.img_on,
+.ScholarshipSupport .stn01 a:hover img { display: none; }
+.ScholarshipSupport .stn01 a:hover img.img_on { display: inline; }
+.ScholarshipSupport .stn02 div { position: relative; margin: 0 auto; text-align: center; width: 100%; overflow: hidden; height: 334px; }
+.ScholarshipSupport .stn02 div img { position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); }
+.ScholarshipSupport .stn02 div p { z-index: 1; position: absolute; width: 100%; height: 300px; bottom: 0; background: linear-gradient(to right, #fdf3f7, #d6e5fc); }
+.ScholarshipSupport .stn03 { background: #152e66 url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/benefit_241023/imgs/stn03_bg.png)  no-repeat right; height: 524px; overflow: hidden; }
+.ScholarshipSupport .stn03 .inner { padding-top: 100px; }
+.ScholarshipSupport .stn03 .button_wrap { margin-top: 60px; }
+.ScholarshipSupport .stn03 .button_wrap .button400 { background: #ffeda2; }
+.ScholarshipSupport .stn03 .button_wrap .button400 p { color: #000; }
+.ScholarshipSupport .stn03 .button_wrap .button400 p::after { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/benefit_241023/imgs/btn_arrow02.png);}
+.ScholarshipSupport .stn03 .button_wrap .button400:hover { background: #6ca0ff; }
+@keyframes fadeIn_up {
+  0% { opacity: 0; transform: translateY(30%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale {
+  0% { opacity: 0; transform: scale(0); }
+  80% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes scale_02 {
+  0% { opacity: 0; transform: scale(1.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes line {
+  0% { width: 0; }
+  100% { width: 573px; }
+}

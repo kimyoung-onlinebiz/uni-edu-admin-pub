@@ -1,6 +1,4 @@
-﻿@charset "UTF-8"; @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
-
-.SocialWelfareTransfer * { font-family: "Pretendard", "Malgun Gothic", sans-serif; line-height: 1; }
+﻿.SocialWelfareTransfer * { line-height: 1; }
 .SocialWelfareTransfer strong, .SocialWelfareTransfer b { font-weight: 900; }
 .SocialWelfareTransfer i { font-style: normal; }
 .evt_top { background: #0c1842 url("images/topBn_bg.png") no-repeat center 0;}

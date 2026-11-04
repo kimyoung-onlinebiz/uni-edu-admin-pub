@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.loan_240827 * { font-family: Pretendard, sans-serif; text-decoration: none; color: #111; box-sizing: border-box; letter-spacing: -1px; transition: 0.2s all; }
+.loan_240827 { min-width: 1400px; }
+.loan_240827 .inner { position: relative; width: 1200px; margin: 0 auto; text-align: center; }
+.loan_240827 h2 { padding: 100px 0 40px 0; font-size: 60px; color: #111; font-weight: 900; }
+.loan_240827 h2 span { color: #1a35da; font-size: 60px; }
+/* 탭 */
+.bg-tab { background: #fff; padding-top: 100px; min-height: 87px; } /* 탭 고정 시 아래 내용이 밀려 올라가지 않도록 탭 높이 확보 */
+.bg-tab .tab_wp { width: 100%; border-bottom: 3px solid #1a35da; }
+.bg-tab .tab_wp.fix { background: #fff; position: fixed; top: 0; z-index: 100; padding: 10px 0 0; }
+.bg-tab .tab_wp .conts_tab { width: 1200px; margin: 0 auto; overflow: hidden; text-align: center; display: flex; box-sizing: border-box; }
+.bg-tab .tab_wp .conts_tab li { position: relative; width: 300px; height: 84px; }
+.bg-tab .tab_wp .conts_tab li.on a { color: #fff; background: #1a35da; border-color: #1a35da; }
+.bg-tab .tab_wp .conts_tab a { width: 100%; height: 84px; border: 1px solid #d6d6d6; background: #fff; color: #111; cursor: pointer; display: inline-block; font-size: 24px; font-weight: 600; text-align: center; line-height: 82px; }
+.button400 { width: 400px; height: 82px; font-size: 28px; font-weight: 700; color: #fff; background: #111; border-radius: 41px; padding: 21px 70px; position: relative; display: inline-block; text-align: left; }
+.button400 span { position: absolute; top: 30px; right: 51px; display: inline-block; }
+.button400:hover { color: #fff; background: #152e66; }
+.button_wrap { display: flex; justify-content: center; gap: 24px; }
+.button_wrap li:nth-child(2) a { padding: 21px 90px; }
+.topImg { background: #aed3ff url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/loan_240827/top_bg.jpg) no-repeat center;
+  height: 1118px; }
+.topImg .top_text { position: relative; top: 140px; }
+.topImg .top_text li:nth-child(1) { position: absolute; top: 25px; left: 315px; animation: line 0.7s 0.4s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; overflow: hidden; }
+.topImg .top_text li:nth-child(3) { margin-top: 50px; animation: fadeIn_up 0.5s ease-out; }
+.topImg .top_text li:nth-child(4) { margin-top: 50px; animation: scale_02 0.3s 1.2s ease-out both; }
+.topImg .top_text li:nth-child(5) { margin-top: 50px; animation: scale_02 0.3s 1.5s ease-out both; }
+.topImg .top_text li:nth-child(6) { margin-top: 60px; }
+.topImg .button_wrap { margin-top: 220px; }
+.topImg .button_wrap .button400 { background: #152e66; }
+.topImg .button_wrap .button400:hover { background: #1a35da; }
+#stn02 div:nth-child(3) { margin-top: 80px; position: relative; }
+#stn02 div:nth-child(3) .button400 { position: absolute; right: 40px; top: 33px; }
+#stn03 ul { display: flex; gap: 33px; position: absolute; bottom: 198px; left: 56px; }
+#stn03 ul li { display: inline-block; width: 154px; height: 42px; border-radius: 21px; font-weight: 500; }
+#stn03 ul li a { display: block; position: relative; color: #fff; font-size: 20px; line-height: 42px; }
+#stn03 ul li:nth-child(1) { background: #1a35da; }
+#stn03 ul li:nth-child(1):hover { background: #333; }
+#stn03 ul li:nth-child(2) { background: #ff6702; }
+#stn03 ul li:nth-child(2):hover { background: #333; }
+#stn03 ul li span { padding-left: 16px; }
+#stn03 ul li span img { position: absolute; width: 8px; height: 14px; top: 13px; }
+.stn05 { background: #ecf6ff url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/loan_240827/stn05_bg.jpg) no-repeat right;
+  height: 524px; overflow: hidden; margin-top: 120px; }
+.stn05 .inner { padding-top: 100px; }
+.stn05 .button_wrap { margin-top: 60px; }
+.stn05 .button_wrap .button400 { background: #152e66; }
+.stn05 .button_wrap .button400:hover { background: #1a35da; }
+.stn06 { padding: 0; background: #111; overflow: hidden; text-align: center; height: 80px; }
+.stn06 img { display: block; text-align: center; margin: 0 auto; padding: 27px; }
+/* popup */
+.popup-wrapper { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0, 0, 0, 0.85); display: inline-flex; align-items: center; font-size: 15px; z-index: 100; word-spacing: 0; overflow-x: hidden; }
+.closeX { position: absolute; top: 15px; right: 15px; width: 2rem; line-height: 0.8rem; font-size: 3rem; text-align: center; cursor: pointer; color: #000; text-decoration: none; }
+.closeX:hover { color: #ccc; }
+.pop_wrap { position: relative; background: #fff; width: 510px; padding: 30px 20px 40px; border-radius: 5px; overflow-y: auto; border: 2px solid #000; margin: 0 auto; z-index: 22; }
+.pop_conts { width: 92%; margin: 3px auto 0; letter-spacing: -0.5px; padding-bottom: 50px; }
+.popup-wrapper .pop_tit { text-align: center; }
+.popup-wrapper .tit { font-weight: 800; font-size: 28px; letter-spacing: -1px; border-bottom: 1px solid #000; margin: 0 0 10px; padding-bottom: 5px; color: #000 !important; }
+.pop_conts table { table-layout: fixed; word-break: break-all; width: 100%; margin: 12px auto 0; }
+.pop_conts table th, .pop_conts table td { padding: 8px; text-align: left; font-size: 16px; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; color: #555; font-weight: 500; }
+.pop_conts table img { width: 23px; vertical-align: middle; }
+.pop_conts table span { margin: 0 5px; }
+.pop_conts a { color: #fff; }
+.pop_conts .btn { position: absolute; bottom: 0; left: 0; width: 100%; margin: 0 auto; background: #e41545; text-align: center; padding: 18px 0; color: #fff; font-weight: 900; font-size: 22px; border-radius: 0; }
+.btn_view { background: #333; text-align: center; color: #fff; border-radius: 3px; padding: 3px 10px 5px; font-size: 11px; margin-left: 2px; }
+.popup-wrapper textarea { width: 99%; height: 80px; overflow-y: scroll; border: 1px solid #ccc; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; font-size: 16px; }
+.popup-wrapper input { width: 75%; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; border: 0; border-bottom: 1px solid #aaa; padding-bottom: 3px; font-size: 16px; }
+.popup-wrapper select { font-size: 14px; width: 75%; }
+.popup-wrapper input[type=text].data { width: 35%; }
+.popup-wrapper select { padding: 5px; border: 1px solid #ccc; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+.popup-wrapper button { border: 0; cursor: pointer; padding: 0; margin-right: 15px; }
+.popup-wrapper textarea, .popup-wrapper select { border-radius: 5px; padding: 2px 0 2px 10px; }
+.popup-wrapper label { cursor: pointer; margin-right: 8px; }
+.popup-wrapper input[type=checkbox] { width: 20px; height: 20px; vertical-align: middle; accent-color: #e41545; margin-right: 5px; }
+.popup-wrapper button { background: none; }
+.popup-wrapper input:focus, .popup-wrapper textarea:focus, .popup-wrapper select:focus { outline: none; }
+.popup-wrapper textarea::-moz-placeholder { font-size: 13px; color: #ccc; }
+.popup-wrapper textarea::placeholder { font-size: 13px; color: #ccc; }
+/* layer */
+.layer-pop { position: fixed; top: 0; left: 0; display: inline-flex; align-items: center; background: rgba(0, 0, 0, 0.2); width: 100%; height: 100%; z-index: 2; }
+.layer-pop .tit { margin-bottom: 0; font-size: 22px; text-align: center; }
+.pop_layer { background: #fff; width: 470px; position: relative; margin: 0 auto; padding: 25px 20px; box-shadow: 0px 1px 6px 3px rgba(0, 0, 0, 0.3); border-radius: 10px; text-align: left; }
+.layer_conts { position: relative; width: 100%; font-size: 14px; overflow-y: auto; line-height: 22px; height: 240px; margin: 0 auto; padding: 0 2.5%; word-spacing: 3px; }
+.layer_conts strong { padding-top: 16px; display: block; font-weight: 500; }
+.layer-pop a { position: absolute; right: 10px; top: 20px; width: 2rem; line-height: 0.8rem; font-size: 2rem; text-align: center; cursor: pointer; color: #000; text-decoration: none; }
+.layer-pop a:hover { color: #ccc; }
+.noti_txt { font-size: 12px; }
+.red { color: #e41545; }
+.bg_gray { background: #efefef; margin: 5px 0; padding: 10px 20px; text-align: left; font-size: 13px; }
+@keyframes fadeIn_up {
+  0% { opacity: 0; transform: translateY(30%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale {
+  0% { opacity: 0; transform: scale(0); }
+  80% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes scale_02 {
+  0% { opacity: 0; transform: scale(1.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes line {
+  0% { width: 0; }
+  100% { width: 573px; }
+}

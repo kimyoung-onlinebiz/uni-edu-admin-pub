@@ -1,7 +1,6 @@
 ﻿@charset "UTF-8";
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css'); 
 
-.business *{font-family: 'Pretendard', 'Malgun Gothic', sans-serif; line-height: 1;}
+.business *{line-height: 1;}
 .business strong, 
 .business b{font-weight: 900;}
 .business i{font-style: normal;}
@@ -60,7 +59,7 @@
 .con_txt strong{padding-top: 10px; line-height: 1.5;}
 .con_txt span{display: block; font-size: 25px;}
 
-.evbtn, .evbtn02{background: #000; color: #fff; border-radius: 10px; text-align: center; padding: 30px 80px; font-size: 32px; width: fit-content; margin: 60px auto 0; font-weight: 700; display: block;}
+.evbtn, .evbtn02{background: #000; color: #fff; border-radius: 10px; text-align: center; padding: 20px 80px; font-size: 28px; width: fit-content; margin: 60px auto 0; font-weight: 700; display: block;}
 .evbtn:hover{cursor: pointer; background: #2958f1; color: #fff;}
 .btn_about{position: absolute; top: 73px; right: 20px;}
 .btn_wp{overflow: hidden; width: fit-content; margin: 0 auto;}

@@ -1,0 +1,72 @@
+
+.MedicalGuide * { text-decoration: none; box-sizing: border-box; letter-spacing: -0.5px; transition: all 0.2s ease-in-out; overflow: hidden; }
+.MedicalGuide { min-width: 1400px; overflow-y: hidden; color: #111; }
+.MedicalGuide section:not(.mainTop, .bottom) .inner { position: relative; width: 1200px; margin: 0 auto; padding: 120px 0; text-align: center; }
+.MedicalGuide h1 { font-size: 56px; font-weight: 800; color: #111; }
+.MedicalGuide h2 { margin-top: 10px; font-size: 32px; font-weight: 600; color: #111; }
+.MedicalGuide h2 strong { color: #0567e5; font-weight: 700; }
+.MedicalGuide [class^=stn][class$=_imgWrap] { margin-top: 60px;}
+.MedicalGuide .w520 { width: 520px; height: 80px; border-radius: 10px; display: flex; justify-content: center; align-items: center; margin: 60px auto 0; z-index: 10; }
+.MedicalGuide .w520 span { font-size: 24px; font-weight: 700; color: #fff; display: inline-flex; align-items: center; gap: 8px; }
+.MedicalGuide .w520.gray { background: #333; }
+.MedicalGuide .w520.gray:hover { background: #1a1a1a; }
+.MedicalGuide .w520.sky { background: #73fee2; }
+.MedicalGuide .w520.sky:hover { background: #40fed8; }
+.MedicalGuide .w520.sky span { color: #111; }
+.MedicalGuide .mainTop { position: relative; background: url("https://cdn.kystudy.co.kr/User/Content/images/event/2026/medicalStr_0625/imgs/mainTop_bg.jpg") center/cover no-repeat; position: relative; z-index: 1; }
+.MedicalGuide .mainTop .inner { position: relative; width: 1600px; margin: 0 auto; text-align: center; padding: 120px 0; }
+.MedicalGuide .mainTop .mainTop_title { z-index: 3; }
+.MedicalGuide .mainTop .mainTop_title li:nth-of-type(2) { margin-top: 48px; animation: lineReveal 0.8s 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; }
+.MedicalGuide .mainTop .mainTop_title li:nth-of-type(3) { margin-top: 30px; animation: scale_02 0.4s 1.2s ease-out both; }
+.MedicalGuide .mainTop .mainTop_title li:nth-of-type(4) { margin-top: 60px; }
+.MedicalGuide .mainTop .mainTop_title::before { content: ""; background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/medicalStr_0625/imgs/mainTop_deco01.png); width: 227px; height: 285px; top: 110px; left: 20px; display: inline-block; position: absolute; animation: decoFadeInLeft 1s 1.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.MedicalGuide .mainTop .mainTop_title::after { content: ""; background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/medicalStr_0625/imgs/mainTop_deco02.png); width: 177px; height: 320px; top: 280px; right: 80px; display: inline-block; position: absolute; animation: decoFadeInRight 1s 1.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.MedicalGuide .stn01 { background: #eff0f6; }
+.MedicalGuide .stn01 .stn01_imgWrap { position: relative; width: 1100px; height: 600px; }
+.MedicalGuide .stn01 .stn01_imgWrap ul li { position: absolute; z-index: 2; }
+.MedicalGuide .stn01 .stn01_imgWrap ul li:nth-of-type(1) { left: 230px; top: 10px; }
+.MedicalGuide .stn01 .stn01_imgWrap ul li:nth-of-type(2) { right: 50px; top: 110px; }
+.MedicalGuide .stn01 .stn01_imgWrap ul li:nth-of-type(3) { left: 0; top: 190px; }
+.MedicalGuide .stn01 .stn01_imgWrap ul li:nth-of-type(4) { right: 0; bottom: 200px; }
+.MedicalGuide .stn01 .stn01_imgWrap ul li:nth-of-type(5) { left: 160px; bottom: 120px; }
+.MedicalGuide .stn01 .stn01_imgWrap p { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 1; }
+.MedicalGuide .stn02 { background: #fff; }
+.MedicalGuide .stn03 { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/medicalStr_0625/imgs/stn03_bg.jpg) no-repeat center bottom/cover; }
+.MedicalGuide .stn03 .stn03_imgWrap { display: flex; justify-content: space-between; }
+.MedicalGuide .stn03 .stn03_imgWrap .movie01, .MedicalGuide .stn03 .stn03_imgWrap .movie02 { cursor: pointer; }
+.MedicalGuide .stn04 { background: #fff; }
+.MedicalGuide .stn04 h2 { margin-top: 40px; }
+.MedicalGuide .stn04 .stn04_imgWrap { position: relative; z-index: 1; }
+.MedicalGuide .stn04 .abs { position: absolute; bottom: 0; right: 0; z-index: 2; }
+.MedicalGuide .stn05 { background: #eff0f6; }
+.MedicalGuide .bottom { background: url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/medicalStr_0625/imgs/bottom_bg.jpg) center/cover no-repeat; }
+.MedicalGuide .bottom .inner { padding: 80px 0 !important; text-align: center; }
+.MedicalGuide .bottom .inner h1 { margin-bottom: 40px; color: #022a64; }
+.MedicalGuide .bottom .inner h2 { color: #022a64; }
+.MedicalGuide .modal_layer { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; height: 394px; z-index: 1001; overflow: visible; }
+.MedicalGuide .modal_layer .youTube_view { position: relative; width: 700px; height: 394px; background: #000; overflow: visible; }
+.MedicalGuide .modal_layer .youTube_view iframe { display: block; width: 700px; height: 394px; max-width: none; border: 0; overflow: visible; }
+.MedicalGuide .modal_layer .btn_modalClose { position: absolute; right: -48px; top: 0; z-index: 1002; }
+.MedicalGuide .modal_layer .btn_modalClose img { display: block; }
+.MedicalGuide .modal_layerBg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; display: none; pointer-events: auto; }
+@keyframes fadeIn_up {
+  0% { opacity: 0; transform: translateY(30%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale_02 {
+  0% { opacity: 0; transform: scale(1.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes lineReveal {
+  0% { clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+@keyframes decoFadeInLeft {
+  0% { opacity: 0; transform: translate(-24px, 18px) scale(0.96); }
+  100% { opacity: 0.9; transform: translate(0, 0) scale(1); }
+}
+@keyframes decoFadeInRight {
+  0% { opacity: 0; transform: translate(24px, 18px) scale(0.96); }
+  100% { opacity: 0.9; transform: translate(0, 0) scale(1); }
+}
+/*# sourceMappingURL=style.css.map */

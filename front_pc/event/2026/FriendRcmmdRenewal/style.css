@@ -1,7 +1,5 @@
 @charset "UTF-8";
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css'); 
 
-.FriendRcmmdRenewal *{font-family: 'Pretendard', 'Malgun Gothic', sans-serif; }
 .FriendRcmmdRenewal strong, 
 .FriendRcmmdRenewal b{font-weight: 900;}
 .FriendRcmmdRenewal i{font-style: normal;}
