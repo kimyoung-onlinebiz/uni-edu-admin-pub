@@ -15,7 +15,7 @@
 .applyBar.simple { --apply-point:#ef4444; position:fixed; left:0; bottom:0; width:100%; z-index:1000001; background:rgba(0,0,0,.9); transition:opacity .3s; }
 .applyBar.hidden { opacity:0; pointer-events:none; }
 .applyBar.simple .apply_box { display:flex; align-items:center; gap:40px; width:1280px; height:80px; margin:0 auto; }
-.applyBar.simple .apply_tit { color:var(--Neutral-0); font-size:var(--Font-xlarge); font-weight:600; line-height:1.8; white-space:nowrap; }
+.applyBar.simple .apply_tit { color:var(--Neutral-0); font-size:21px; font-weight:600; line-height:1.8; white-space:nowrap; }
 .applyBar.simple .apply_tit strong { color:var(--apply-point); font-size:inherit; font-weight:800; }
 .applyBar.simple .apply_tit span { display:block; color:var(--Neutral-500); font-size:var(--Font-base); font-weight:400; line-height:1; }
 .applyBar.simple .apply_form { display:flex; align-items:center; gap:8px; margin-left:auto; }
@@ -335,11 +335,10 @@ td .multiple .btn_delete { right:12px; bottom:6px; }
 .classroom_subjects .subject_item { width:100%; display:flex; align-items:center; justify-content:space-between; padding-left:10px; }
 .classroom_subjects .subject_item a { width:200px; height:40px; text-align:center; padding-top:5px; border:1px solid var(--Primary-500); }
 .classroom_subjects .subject_item_head { display:flex; gap:40px; }
-.classroom_subjects .subject_item_head dl:nth-child(1) { width:140px; }
+.classroom_subjects .subject_item_head dl:nth-child(1) { width:150px; }
 .classroom_subjects .subject_item_head dl:nth-child(2) { width:230px; }
 .classroom_subjects .subject_item_head dl dt { color:var(--Neutral-600); font-size:var(--Font-2xsmall); margin-bottom:6px; }
-.classroom_subjects .subject_item_head dl dd { font-size:var(--Font-large); font-weight:700; word-break:break-all; }
-.classroom_subjects .subject_item_head dl dd span { font-weight:400; color:var(--Neutral-600); }
+.classroom_subjects .subject_item_head dl dd,.classroom_subjects .subject_item_head dl dd a { font-size:var(--Font-large); font-weight:700; word-break:break-all; }
 .classroom_subjects .subject_item li:last-child { margin-top:12px; }
 .subject_item:not(:has(> a, > ul)) > .subject_item_head { padding-left:40px; }
 .subject_item:not(:has(> a, > ul)) > .subject_item_head dl:nth-child(2) { width:360px; }

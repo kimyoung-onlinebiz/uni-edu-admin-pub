@@ -47,45 +47,6 @@
 .stn05 .button_wrap .button400:hover { background: #1a35da; }
 .stn06 { padding: 0; background: #111; overflow: hidden; text-align: center; height: 80px; }
 .stn06 img { display: block; text-align: center; margin: 0 auto; padding: 27px; }
-/* popup */
-.popup-wrapper { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0, 0, 0, 0.85); display: inline-flex; align-items: center; font-size: 15px; z-index: 100; word-spacing: 0; overflow-x: hidden; }
-.closeX { position: absolute; top: 15px; right: 15px; width: 2rem; line-height: 0.8rem; font-size: 3rem; text-align: center; cursor: pointer; color: #000; text-decoration: none; }
-.closeX:hover { color: #ccc; }
-.pop_wrap { position: relative; background: #fff; width: 510px; padding: 30px 20px 40px; border-radius: 5px; overflow-y: auto; border: 2px solid #000; margin: 0 auto; z-index: 22; }
-.pop_conts { width: 92%; margin: 3px auto 0; letter-spacing: -0.5px; padding-bottom: 50px; }
-.popup-wrapper .pop_tit { text-align: center; }
-.popup-wrapper .tit { font-weight: 800; font-size: 28px; letter-spacing: -1px; border-bottom: 1px solid #000; margin: 0 0 10px; padding-bottom: 5px; color: #000 !important; }
-.pop_conts table { table-layout: fixed; word-break: break-all; width: 100%; margin: 12px auto 0; }
-.pop_conts table th, .pop_conts table td { padding: 8px; text-align: left; font-size: 16px; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; color: #555; font-weight: 500; }
-.pop_conts table img { width: 23px; vertical-align: middle; }
-.pop_conts table span { margin: 0 5px; }
-.pop_conts a { color: #fff; }
-.pop_conts .btn { position: absolute; bottom: 0; left: 0; width: 100%; margin: 0 auto; background: #e41545; text-align: center; padding: 18px 0; color: #fff; font-weight: 900; font-size: 22px; border-radius: 0; }
-.btn_view { background: #333; text-align: center; color: #fff; border-radius: 3px; padding: 3px 10px 5px; font-size: 11px; margin-left: 2px; }
-.popup-wrapper textarea { width: 99%; height: 80px; overflow-y: scroll; border: 1px solid #ccc; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; font-size: 16px; }
-.popup-wrapper input { width: 75%; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; border: 0; border-bottom: 1px solid #aaa; padding-bottom: 3px; font-size: 16px; }
-.popup-wrapper select { font-size: 14px; width: 75%; }
-.popup-wrapper input[type=text].data { width: 35%; }
-.popup-wrapper select { padding: 5px; border: 1px solid #ccc; font-family: "Plus Jakarta Sans", "Noto Sans KR", "Malgun Gothic", sans-serif; }
-.popup-wrapper button { border: 0; cursor: pointer; padding: 0; margin-right: 15px; }
-.popup-wrapper textarea, .popup-wrapper select { border-radius: 5px; padding: 2px 0 2px 10px; }
-.popup-wrapper label { cursor: pointer; margin-right: 8px; }
-.popup-wrapper input[type=checkbox] { width: 20px; height: 20px; vertical-align: middle; accent-color: #e41545; margin-right: 5px; }
-.popup-wrapper button { background: none; }
-.popup-wrapper input:focus, .popup-wrapper textarea:focus, .popup-wrapper select:focus { outline: none; }
-.popup-wrapper textarea::-moz-placeholder { font-size: 13px; color: #ccc; }
-.popup-wrapper textarea::placeholder { font-size: 13px; color: #ccc; }
-/* layer */
-.layer-pop { position: fixed; top: 0; left: 0; display: inline-flex; align-items: center; background: rgba(0, 0, 0, 0.2); width: 100%; height: 100%; z-index: 2; }
-.layer-pop .tit { margin-bottom: 0; font-size: 22px; text-align: center; }
-.pop_layer { background: #fff; width: 470px; position: relative; margin: 0 auto; padding: 25px 20px; box-shadow: 0px 1px 6px 3px rgba(0, 0, 0, 0.3); border-radius: 10px; text-align: left; }
-.layer_conts { position: relative; width: 100%; font-size: 14px; overflow-y: auto; line-height: 22px; height: 240px; margin: 0 auto; padding: 0 2.5%; word-spacing: 3px; }
-.layer_conts strong { padding-top: 16px; display: block; font-weight: 500; }
-.layer-pop a { position: absolute; right: 10px; top: 20px; width: 2rem; line-height: 0.8rem; font-size: 2rem; text-align: center; cursor: pointer; color: #000; text-decoration: none; }
-.layer-pop a:hover { color: #ccc; }
-.noti_txt { font-size: 12px; }
-.red { color: #e41545; }
-.bg_gray { background: #efefef; margin: 5px 0; padding: 10px 20px; text-align: left; font-size: 13px; }
 @keyframes fadeIn_up {
   0% { opacity: 0; transform: translateY(30%); }
   100% { opacity: 1; transform: translateY(0); }
