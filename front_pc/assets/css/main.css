@@ -140,7 +140,8 @@ padding:0;	background:transparent;	color:#fff;display:flex;	align-items:center;	
 .mainEasy_consult.login_after .mypage_shortcuts a:hover { background:var(--Neutral-300); }
 .mainEasy_consult.login_after .mypage_shortcuts strong { font-size:var(--Font-xsmall); font-weight:600; line-height:1; }
 
-.mainEasy_consult.login_after .mypage_notice_wrap { background:var(--Neutral-200); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:12px; }
+.mainEasy_consult.login_after .mypage_notice_wrap { background:var(--Neutral-200); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:12px; height:143px; }
+.mainEasy_consult.login_after .mypage_notice_wrap > p { color: var(--Neutral-600); font-size:var(--Font-small); font-weight:500; line-height:100px; letter-spacing:-0.02em;  text-align:center;}
 .mainEasy_consult.login_after .mypage_notice { display:flex; flex-direction:column; gap:7px; }
 .mainEasy_consult.login_after .mypage_notice span { width:max-content; height:23px; padding:0 10px; border:1px solid var(--Primary-500); border-radius:100px; color:var(--Primary-500); font-size:12px; font-weight:600; display:inline-flex; align-items:center; line-height:1; }
 .mainEasy_consult.login_after .mypage_notice p { font-size:14px; line-height:1.4; letter-spacing:-0.01em; font-weight:600; letter-spacing:-0.02em; }
