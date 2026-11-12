@@ -199,8 +199,8 @@ function initMainVisualSwiper() {
             // 배너 읽기 시간을 고려해 2.8초 간격 유지.
             delay: 2800,
             disableOnInteraction: false,
-            // 마우스를 올린 동안 자동재생을 일시정지한다.
-            pauseOnMouseEnter: true,
+            // [수정 2026-11-12] pauseOnMouseEnter 제거 - 아래 호버 처리와 중복되어 재생/정지 버튼이 꼬이는 문제
+            // pauseOnMouseEnter: true,
         },
         fadeEffect: {
             crossFade: true,
@@ -235,7 +235,21 @@ function initMainVisualSwiper() {
         },
     });
 
-    bindSwiperHoverPause(mainVisualSwiper, root);
+    // [수정 2026-11-12] 재생/정지 버튼 오작동 수정 시작
+    // 기존: bindSwiperHoverPause(mainVisualSwiper, root);
+    //  → 버튼에 마우스를 올리는 순간 자동재생이 멈춰서, 정지 버튼이 재생으로 동작하고
+    //    마우스를 빼면 정지 상태여도 다시 재생되던 문제
+
+    // 사용자가 정지 버튼을 눌렀는지 여부 (호버 일시정지와 구분)
+    let isUserPaused = false;
+
+    // 호버 시 일시정지 / 벗어나면 재개 (사용자가 정지한 상태면 건드리지 않음)
+    root.addEventListener('mouseenter', () => {
+        if (!isUserPaused) mainVisualSwiper.autoplay.stop();
+    });
+    root.addEventListener('mouseleave', () => {
+        if (!isUserPaused) mainVisualSwiper.autoplay.start();
+    });
 
     setPlayPauseUi(true);
 
@@ -246,21 +260,19 @@ function initMainVisualSwiper() {
     // ---------------------------------
     // BLOCK: 재생/정지 토글 이벤트 연결
     // ---------------------------------
+    // [수정 2026-11-12] autoplay.running 대신 isUserPaused 기준으로 토글
     playPauseButton.addEventListener('click', () => {
-        if (!mainVisualSwiper.autoplay) {
-            return;
-        }
+        isUserPaused = !isUserPaused;
 
-        // 현재 상태를 기준으로 stop/start를 토글하고 아이콘도 즉시 반영한다.
-        if (mainVisualSwiper.autoplay.running) {
+        if (isUserPaused) {
             mainVisualSwiper.autoplay.stop();
-            setPlayPauseUi(false);
-            return;
+        } else {
+            mainVisualSwiper.autoplay.start();
         }
 
-        mainVisualSwiper.autoplay.start();
-        setPlayPauseUi(true);
+        setPlayPauseUi(!isUserPaused);
     });
+    // [수정 2026-11-12] 재생/정지 버튼 오작동 수정 끝
 }
 
 // =========================================
