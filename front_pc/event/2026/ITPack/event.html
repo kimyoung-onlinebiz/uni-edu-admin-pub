@@ -243,7 +243,7 @@
                 <a href="#benefit"><img src="images/quick2.png"></a>
             </li>
             <li>
-                <img src="images/quick3.png">
+                <a href="https://consumer.tosspayments.com/notice/free-installment" target="_blank" rel="noopener"><img src="images/quick3.png"></a>
             </li>
         </ul>
         <!-- 상단 이미지 -->
@@ -266,7 +266,7 @@
         <!-- //상단 이미지 -->
 
         <!-- 패키지 구매영역 -->
-        <div  class="section_04 package_design">
+        <div id="pack" class="section_04 package_design">
 
             <div class="package_title">
                 <span>담당 컨설턴트의 1:1 전문적인 관리가 포함된</span>
@@ -528,57 +528,16 @@
                 <p><img src="images/coupon.png" alt="종합반 7만원 할인, 김영패스 15만원 할인, 단과캠퍼스 10% 할인, 단강좌 15% 할인"></p>		
                 <ul>
                     <li>
-                        <a href="#none" onclick="showPop(1)">
+                        <a href="#none" onclick="window.open('PopBenefit.html', 'popBenefit', 'width=400,height=560'); return false;">
                             <img src="images/btn1.png">
                         </a>
                     </li>
                     <li>
-                        <a href="#none" onclick="showPop(2)">
+                        <a href="#none" onclick="window.open('PopLicense.html', 'popLicense', 'width=400,height=560'); return false;">
                             <img src="images/btn2.png">
                         </a>
                     </li>
                 </ul>		
-                
-                <div id="popup1" class="popup" style="display: none;">	
-                    <div class="header"><p class="title">혜택 안내</p></div>
-                    <div class="layer_content">
-                        <strong>2023년 8월 9일 개강반</strong><br>
-                        김영편입 할인 수강권은 8월 8일(화)까지 결제한 학습자에게만 지급하며,
-                        8월 11일(금) 이후 일괄 지급됩니다.<br>
-                        반드시 8월 8일(수)까지 김영편입 홈페이지에서 회원가입 한 아이디를 김영평생교육원 개인정보 수정 페이지에 입력해주셔야 할인쿠폰이 지급됩니다.<br>
-                        
-                        <div class="txt">
-                        <span>-</span> 3종 할인권: 김영편입 종합반 7만원 + 김영편입 단과 캠퍼스 10% 할인권 + 김영패스15만원 할인권<br />
-                        <span>-</span> 3종 할인권의 경우 단 1회만 사용 가능합니다.<br />
-                        <span>-</span> 해당 혜택은 패키지 결제 대상 및 학점은행제 강좌 6과목 이상 수강신청자에 한하여 제공됩니다.<br />
-                        <span>-</span> 단과캠퍼스 10% 할인 수강권의 경우 의학계열을 제외한 최대 2과목 이내에 한하며, 매월 할인 적용 가능합니다.<br />
-                        <span>-</span> 김영패스 및 단과 할인은 김영편입의 상품 정책에 따라 변경될 수 있습니다.<br />
-                        <span>-</span> 김영편입 단강좌 15% 할인의 경우 2022년 3월 2일 개강대비 패키지 구매자 부터 할인 적용 대상이며, 김영편입 논술/자소서/학업계획서 첨삭 강좌는 제외입니다.
-                        </div>
-                                        
-                    </div>
-                    <div class="btn_section">					
-                        <a href="#none" onclick="showPop(1)">
-                            <button class="btn_txt color_grayBg">닫기</button>
-                        </a>
-                    </div>
-                </div> 
-                <div id="popup2" class="popup" style="display: none;">				
-                    <div class="header"><p class="title">자격증 강좌 수강료 혜택</p></div>
-                    <div class="layer_content">
-                        · 컴퓨터활용능력 2급 강좌 30% 할인 <br>
-                        · 행정관리사 3급 응시료 30% 할인 <br>
-                        · 독학사 1단계 5과목 패키지 5만원 할인 <br>
-                        · 독학사 2단계 2과목 30% 할인 <br>
-                        · 테셋 수시 강의 재등록 시 50% 할인 <br>
-                        · 테셋 정기 + 매경TEST 합격 시까지 무제한 수강
-                    </div>
-                    <div class="btn_section">
-                        <a href="#none"  onclick="showPop(2)">
-                            <button class="btn_txt color_grayBg">닫기</button>
-                        </a>
-                    </div>
-                </div> 
                 
 
             </div>
@@ -662,13 +621,7 @@
 
     <script type="text/javascript">
 	$(function(){
-		$(window).scroll(function(){ 
-			if($(this).scrollTop() <=1683){
-			$(".aside_right_20220602").css({position:"absolute",top:"1733px" });
-			}else{
-			$(".aside_right_20220602").css({position:"fixed",top:"50px" });
-			} // 우측 바로가기 배너 //
-
+		$(window).scroll(function(){
 			$(".benefit_img").each(function(){
 			var imagePos = $(this).offset().top;
 
@@ -679,16 +632,6 @@
 			}); //  스크롤 시 애니메이션 클래스 추가 //
 
 		}); 
-
-		$(".btn_benefit").click(function(event){
-			$(".layer_event").fadeIn("fast"); //레이어 열기//
-		});
-		$(".btn_science").click(function(event){
-			$(".layer_info").fadeIn("fast"); //레이어 열기//
-		});
-		$(".btn_close").click(function(event){
-			$(".layer_info").fadeOut("fast"); //레이어 닫기//
-		});
 
 		$(".college_con").hide();
 		$(".college_con:first").show();
@@ -709,43 +652,7 @@
 			var activeTab = $(this).attr("rel");
 			$("#" + activeTab).fadeIn()
 		}); // 2년제 학사 탭 //
-
-		$(".creditsinfo_tab li > a").click(function () {
-			$(".creditsinfo_tab li > a").removeClass("current");
-			$(this).addClass("current");
-			$(".tab_con").hide();
-			$("#" + $(this).attr("rel")).show();
-			closePackageLayer();
-		}); // 패키지 탭 //
-
-		$(".layer_tesatApply .btn_layerClose").click(function () {
-			closePackageLayer();
-		}); // 패키지 레이어 닫기 //
-
-		function repeat(){
-			$(".aside_right_20220602 li").eq(0).fadeIn(400).delay(2000).fadeOut(400, function() {
-				$(".aside_right_20220602 li").eq(1).fadeIn(400).delay(2000).fadeOut(400, function() {
-					repeat();
-				});
-			});
-		}
-		repeat();
-	}); //퀵메뉴 롤링 //
-	
-	// it공학 tab 
-	function openCity(evt, cityName) {
-			var i, tab_content, lnb_tabs;
-			tabcontent = document.getElementsByClassName("it_con");
-			for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-			}
-			tablinks = document.getElementsByClassName("tabs");
-			for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-			}
-			document.getElementById(cityName).style.display = "block";
-			evt.currentTarget.className += " active";
-		}
+	});
 
 	// 롤링 관련 스크립트
 	(function($){
@@ -864,43 +771,13 @@
 		autoControl : true
 		});		
 
-	//pop
-	function showPop(no) {
-        var tmp = "";
-        $("[id^=popup]").each(function(idx, obj) {
-        tmp = $(this).attr("id").replace("popup", "");
-        if(tmp != no) {
-        $(this).hide();
-        }
-        });
-        if($("#popup"+no).css("display") == "none") {
-        $("#popup"+no).show();
-        } else {
-        $("#popup"+no).hide();
-        }
-        }
-        var evtpageToggle = true;
-
-	// 패키지 레이어
-	function closePackageLayer() {
-		$(".package_list > li.layer_on").removeClass("layer_on").find(".layer_tesatApply").hide();
-	}
-	window.goPackageOrderLayerPop = window.goPackageOrderLayerPop || function(el) {
-		var $item = $(el).closest(".package_list > li");
-		var isOpen = $item.hasClass("layer_on");
-		closePackageLayer();
-		if(!isOpen) {
-			$item.addClass("layer_on").find(".layer_tesatApply").show();
-		}
-	};
-
-	// 주문, 상담 함수 개발 연동 전 임시 처리
-	window.goPackageOrderTesat = window.goPackageOrderTesat || function(no) {
-		console.warn("goPackageOrderTesat 개발 연동 필요", no);
-	};
-	window.goCounsel = window.goCounsel || function(type) {
-		console.warn("goCounsel 개발 연동 필요", type);
-	};
+	// 퀵배너 부드러운 스크롤 이동
+	$(".quick a[href^='#']").on("click", function(e){
+		var $target = $($(this).attr("href"));
+		if(!$target.length) return;
+		e.preventDefault();
+		window.scrollTo({ top: $target.offset().top, behavior: "smooth" });
+	});
 </script>
 
 </body>
