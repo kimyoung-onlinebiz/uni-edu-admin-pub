@@ -1,39 +1,43 @@
 ﻿@charset "UTF-8";
 
+/* 경영학패키지 */
+.evt_wp { position:relative; width:100%; min-width:1300px; overflow:hidden; }
+.evt_wp .inner { width:fit-content; margin:0 auto; text-align:center; position:relative; }
+.evt_wp [class^="bg_"] { position:relative; padding:100px 0; }
+.evt_wp .tit { position:relative; padding-bottom:30px; }
+.evt_wp .bg_01 { background:#dadae8; }
+.evt_wp .bg_02 { background:#efefef; }
 
-.evt_wp {position: relative; width: 100%; min-width: 1300px; overflow: hidden;}
-.inner{width: fit-content; margin: 0 auto; text-align: center; position: relative;}
+/* 퀵메뉴 */
+.evt_wp .quick { position:fixed; right:0; top:80px; z-index:100000; }
+.evt_wp .quick li:last-child { margin-top:5px; }
 
-.quick{position: fixed; right: 0; top: 80px; z-index: 100000;}
-.quick li:last-child{margin-top: 5px;}
+/* 상단 비주얼 */
+.evt_wp .visual_wp { background:#5666ff url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/allinone/imgs/bg_visual.png) no-repeat center; }
+.evt_wp .top_txt { animation:slide-down .5s both; }
+.evt_wp .visual { margin-top:-30px; animation:slit-in-horizontal .45s .5s ease-out both; }
+.evt_wp .txt { animation:slide-down .5s 1s both; }
+.evt_wp .typo { position:absolute; top:166px; left:-46px; animation:scale-in-center .3s 1s cubic-bezier(.25,.46,.45,.94) both; }
 
-.visual_wp{background: #5666ff url('imgs/bg_visual.png') no-repeat center;}
-.top_txt{animation: slide-down .5s both;}
-.visual{margin-top: -30px; animation: slit-in-horizontal .45s .5s ease-out both;}
-.txt{animation: slide-down .5s 1s both;}
-.typo{position: absolute; top: 166px; left: -46px; animation:scale-in-center .3s 1s cubic-bezier(.25,.46,.45,.94) both;}
-@keyframes scale-in-center{0%{transform: scale(0); opacity: 1} 100%{transform: scale(1); opacity: 1}}
-@keyframes slide-down{0%{transform: translateY(-100px); opacity: 0;} 100%{transform: translateY(0);}}
-@keyframes slit-in-horizontal{0%{transform: translateZ(-800px) rotateX(90deg); opacity:0} 54%{transform:translateZ(-160px) rotateX(87deg); opacity:0} 100%{transform:translateZ(0) rotateX(0)}}
+/* 패키지 구매영역 */
+.evt_wp .package_design .package_title > strong span { color:#ff025b; }
 
-* [class^="bg_"] {position: relative; padding: 100px 0;}
-.tit {position: relative;  padding-bottom: 30px;}
-.bg_01{background: #dadae8;}
-.bg_02{background: #efefef;}
+/* 롤링 탭 */
+.evt_wp .tabList { overflow:hidden; text-align:center; width:1200px; margin:0 auto; }
+.evt_wp .tabList li { display:inline-grid; align-items:center; text-align:center; background:#333; height:55px; width:250px; margin-left:3px; border-radius:50px; font-weight:200; }
+.evt_wp .tabList li a { display:block; text-decoration:none; color:#ccc; font-size:24px; }
+.evt_wp .tabList li.on { font-weight:900; background:#ff025b; }
+.evt_wp .tabList li.on a { color:#fff; }
+.evt_wp .tabGroup { width:1200px; margin:0 auto; height:520px; }
+.evt_wp .tabGroup li { position:absolute; height:620px; display:none; }
+.evt_wp .tabGroup li:first-child { display:block; }
 
-/* 롤링 */
-.tabList {overflow: hidden; text-align: center; width: 1200px; margin: 0 auto;}
-.tabList li {display: inline-grid; text-align: center; background: #333;  align-items: center; height: 55px; width: 250px; margin-left: 3px; border-radius: 50px; font-weight: 200;}
-.tabList li.on {font-weight: 900; background: #ff025b;}
-.tabList li.on a{color: #fff;}
-.tabList li a {display: block; text-decoration: none; color: #ccc; font-size: 24px;}
+/* 혜택 안내 */
+.evt_wp .btn_biz { overflow:hidden; text-align:center; padding-top:30px; }
+.evt_wp .btn_biz li { display:inline-block; }
+.evt_wp .btn_biz li:last-child { margin-left:10px; }
 
-.tabGroup {width: 1200px; margin: 0 auto; height: 520px;}
-.tabGroup li { position:absolute; height: 620px; display: none;}
-.tabGroup li:first-child { display: block;}
-
-.btn_biz {overflow: hidden; text-align: center; padding-top: 30px;}
-.btn_biz li{display: inline-block;}
-.btn_biz li:last-child{margin-left: 10px;}
-
-.package_design .package_title > strong span { color:#ff025b !important; }
+/* 애니메이션 */
+@keyframes scale-in-center { 0% { transform:scale(0); opacity:1; } 100% { transform:scale(1); opacity:1; } }
+@keyframes slide-down { 0% { transform:translateY(-100px); opacity:0; } 100% { transform:translateY(0); } }
+@keyframes slit-in-horizontal { 0% { transform:translateZ(-800px) rotateX(90deg); opacity:0; } 54% { transform:translateZ(-160px) rotateX(87deg); opacity:0; } 100% { transform:translateZ(0) rotateX(0); } }

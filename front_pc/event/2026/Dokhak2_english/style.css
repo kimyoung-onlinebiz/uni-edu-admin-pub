@@ -1,0 +1,64 @@
+﻿@charset "UTF-8";
+
+/* 독학사 영문법 */
+.self_education { width:100%; overflow:hidden; text-align:center; }
+.self_education img { vertical-align:top; }
+.self_education h2 { padding:74px 0 50px; }
+.self_education .content { position:relative; width:1200px; height:100%; margin:0 auto; padding:0 0 110px; }
+
+/* 우측 퀵 배너 */
+.self_education .fixed_img { position:fixed; right:0; top:280px; width:150px; z-index:100; text-align:center; }
+.self_education .fixed_img ul { height:140px; background:#020d00; padding-top:18px; box-sizing:border-box; border-radius:8px 0 0 8px;  }
+.self_education .fixed_img li:after { content:""; width:10px; height:9px; margin:6px auto; display:block; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/fixed_after.gif); }
+.self_education .fixed_img li:last-child:after { background:none; margin-bottom:0; }
+.self_education .fixed_img li a { color:#fff; transition:color .3s; }
+.self_education .fixed_img li a:hover { color:#fdad00; }
+.self_education .fixed_img .btn_consult { display:block; margin-top:12px; height:40px; line-height:38px;border-radius:8px 0 0 8px; background:#fdad00; color:#000; font-size:15px; font-weight:600; box-sizing:border-box; transition:all .3s; }
+.self_education .fixed_img .btn_consult:hover { background:#020d00; color:#fff; }
+
+/* 상단 이미지 */
+.self_education .topImg { position:relative; width:100%; background:#ceddd2 url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/topBg.png) no-repeat top center; height:706px; box-sizing:border-box; padding-top:120px; }
+.self_education .topImg p { animation:aniUp .8s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; }
+
+/* 수강신청 */
+.self_education .section_01 { background:#006733; }
+.section_01 span { position:absolute; right:245px; top:-12px; animation:upDown 1s ease-out infinite; }
+.section_01 .btn_apply { position:absolute; top:30px; right:30px; background:#fdad00; border:1px solid #fdad00; display:block; width:180px; height:160px; border-radius:3px; transition:all .3s; font-size:20px; color:#222; font-weight:bold; letter-spacing:-2px; box-sizing:border-box; padding:66px 15px 0 0; }
+.section_01 .btn_apply:hover { background:#fd9500; border:1px solid #fd9500; }
+.section_01 .btn_apply:after { position:absolute; right:43px; top:70px; content:""; display:block; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/apply_right.png) no-repeat; width:12px; height:18px; }
+.section_01 .btn_info { position:absolute; right:0; bottom:70px; }
+.section_01 .btn_info li { transition:all .3s; display:inline-block; border:1px solid #a3ada6; width:110px; height:28px; }
+.section_01 .btn_info li a { display:inline-block; width:100%; height:100%; font-size:13px; text-align:center; color:#fff; line-height:28px; }
+.section_01 .btn_info li:hover { background:#fff; border:1px solid #fff; }
+.section_01 .btn_info li:hover a { color:#333; }
+
+/* 학습방법 */
+.self_education .section_02 { background:#d9d9d9; }
+
+/* 강좌 특징 */
+.self_education .section_03 { background:#006733; }
+.self_education .section_03 h2 { padding-bottom:0; }
+
+/* 하단 상담 */
+.self_education .section_04 { background:#001e14; padding:50px 0; }
+.self_education .section_04 ul { margin-top:30px; }
+.self_education .section_04 li { display:inline-block; width:360px; height:65px; }
+.self_education .section_04 li:last-child { margin-left:5px; }
+.self_education .section_04 li a { position:relative; display:inline-block; width:100%; height:100%; border-radius:3px; transition:all .3s; font-size:20px; color:#222; font-weight:bold; letter-spacing:-2px; box-sizing:border-box; line-height:65px; }
+.self_education .section_04 li a:after { position:absolute; right:105px; top:24px; content:""; display:block; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/apply_right.png) no-repeat; width:12px; height:18px; }
+.self_education .section_04 li:first-child a { background:#00b95c; border:1px solid #00b95c; }
+.self_education .section_04 li:first-child a:hover { background:#00e06f; border:1px solid #00e06f; }
+.self_education .section_04 li:last-child a { background:#fdad00; border:1px solid #fdad00; }
+.self_education .section_04 li:last-child a:hover { background:#fdd600; border:1px solid #fdd600; }
+.self_education .section_04 li:last-child a:after { right:78px; }
+
+/* 애니메이션 */
+@keyframes aniUp {
+    0% { transform:translateY(20%); opacity:0; }
+    100% { transform:translateY(0%); opacity:1; }
+}
+@keyframes upDown {
+    0% { transform:translateY(0%); }
+    50% { transform:translateY(-15%); }
+    100% { transform:translateY(0%); }
+}

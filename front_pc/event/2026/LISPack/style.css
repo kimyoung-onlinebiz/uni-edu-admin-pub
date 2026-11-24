@@ -1,46 +1,37 @@
 ﻿@charset "UTF-8";
 
+/* 도서관정사서패키지 */
 .LIS_Package .content { position:relative; width:1200px; margin:0 auto; text-align:center; }
 
-/* quick */
-.LIS_Package .quick{position: fixed; right: 0; top: 80px; z-index: 100000;}
-.LIS_Package .quick li:nth-child(n+2){margin-top: 10px;}
+/* 퀵메뉴 */
+.LIS_Package .quick { position:fixed; right:0; top:80px; z-index:100000; }
+.LIS_Package .quick li:nth-child(n+2) { margin-top:10px; }
 
-/* con01 : main */
-.LIS_Package .con01 { position:relative; width:100%; height:940px; background:#ff6f3c url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/LISPackage_0311/visual.png) no-repeat center;}
-.con01 .sub_title li:first-child{ position: absolute; top: 100px; left: 50%; margin-left: -117px; animation: fadeIn_up 0.7s 0.6s both; overflow:hidden; z-index: 5;}
-.con01 .sub_title li:nth-child(2) { position: absolute; top: 186px; left: 50%; margin-left: -369px; animation:line 0.7s 1s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; overflow:hidden; }
+/* con01 : 메인 */
+.LIS_Package .con01 { position:relative; width:100%; height:940px; background:#ff6f3c url(https://cdn.kystudy.co.kr/User/Content/images/event/2025/LISPackage_0311/visual.png) no-repeat center; }
+.LIS_Package .con01 .sub_title li:first-child { position:absolute; top:100px; left:50%; margin-left:-117px; animation:fadeIn_up .7s .6s both; overflow:hidden; z-index:5; }
+.LIS_Package .con01 .sub_title li:nth-child(2) { position:absolute; top:186px; left:50%; margin-left:-369px; animation:line .7s 1s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; overflow:hidden; }
+.LIS_Package .con01 .main_title { position:absolute; top:255px; left:50%; margin-left:-370px; animation:fadeIn_up 1s 1.4s ease-out both; overflow:hidden; }
+.LIS_Package .con01 .con_img { position:absolute; top:620px; left:50%; margin-left:-400px; animation:fadeIn_up .6s 1.6s both; }
 
-@keyframes line {
-    0% {
-        width:0;
-    }
-    100% {
-        width:739px;
-    }
-}
+/* con02 : 패키지 구매영역 */
+.LIS_Package .con02 { background-color:#feece2; padding:110px 0; }
+.LIS_Package .package_design .package_title > strong span { color:#ff5114; }
+.LIS_Package .product_PackageList .btn.primary { border-color:#ff5114; background:#ff5114; }
+.LIS_Package .product_PackageList .btn.primary:hover { border-color:#d93d06; background:#d93d06; }
 
-.con01 .main_title { position: absolute; top: 220px; left: 50%; margin-left: -370px; animation: fadeIn_up 1s 1.4s ease-out both; overflow:hidden;}
-.con01 .con_img {position: absolute; top: 620px; left: 50%; margin-left: -400px; animation: fadeIn_up 0.6s 1.6s both;}
+/* event : 친구추천 이벤트 */
+.LIS_Package .event { background-color:#e6efff; position:relative; padding-bottom:200px; }
+.LIS_Package .event .btn { position:absolute; bottom:-90px; left:50%; margin-left:-300px; width:600px; height:90px; background:#244cf2; border-radius:10px; display:block; transition:all .3s; }
+.LIS_Package .event .btn:hover { background:#000; }
 
-/* con02 : 패키지 구매 영역 */
-.LIS_Package .con02 { background-color: #feece2; padding: 110px 0; }
-.package_design .package_title > strong span { color:#ff5114 !important; }
-.product_PackageList .btn.primary { border-color:#ff5114; background:#ff5114; }
-.product_PackageList .btn.primary:hover { border-color:#d93d06; background:#d93d06; }
-
-/* evnet : 친구추천 이벤트 */
-.event { background-color: #e6efff; position: relative; padding-bottom: 200px;}
-.event .btn { position: absolute; bottom: -90px; left: 50%; margin-left: -300px; width: 600px; height: 90px; background: #244cf2; border-radius: 10px; display: block; transition:all .3s;}
-.event .btn:hover {background: #000;  }
-
-/* con03 :  혜택 */
-.con03 { background-color: #28282d; }
-.con03 ul { position: absolute; top: 280px;}
-.con03 ul li { float: left; padding-left: 66px;}
-.con03 ul li:first-child { padding-left: 20px; }
-.con03 li a img { transition:all .15s; }
-.con03 li a:hover img {transform:scale(1.05); }
+/* con03 : 혜택 */
+.LIS_Package .con03 { background-color:#28282d; }
+.LIS_Package .con03 ul { position:absolute; top:280px; }
+.LIS_Package .con03 ul li { float:left; padding-left:66px; }
+.LIS_Package .con03 ul li:first-child { padding-left:20px; }
+.LIS_Package .con03 li a img { transition:all .15s; }
+.LIS_Package .con03 li a:hover img { transform:scale(1.05); }
 
 /* benefit : 혜택 안내 */
 .LIS_Package .bg_01 { position:relative; padding:100px 0; background:#dadae8; }
@@ -50,5 +41,6 @@
 .LIS_Package .btn_biz li { display:inline-block; }
 .LIS_Package .btn_biz li:last-child { margin-left:10px; }
 
-@keyframes fadeIn_up {0%{opacity:0; transform: translateY(20%);} 100%{opacity:1; transform: translateY(0%);}}
-
+/* 애니메이션 */
+@keyframes line { 0% { width:0; } 100% { width:739px; } }
+@keyframes fadeIn_up { 0% { opacity:0; transform:translateY(20%); } 100% { opacity:1; transform:translateY(0%); } }
