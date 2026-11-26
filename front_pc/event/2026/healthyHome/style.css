@@ -36,7 +36,7 @@
 .healthyHome .section_02 { position:relative; background:#000 url(images/section02_bg.jpg) top left no-repeat; border-bottom:1px solid #808080; }
 .healthyHome .section_02 .content { display:flex; color:#fff; padding:80px 0 0 ; height:237px;}
 .healthyHome .section_02 .content h2 { color:#fff; font-size:48px; font-weight:800; padding:15px 40px 0 190px; }
-.healthyHome .section_02 .content p { color:#fff; font-size:18px; font-weight:500; text-align:left; }
+.healthyHome .section_02 .content p { color:#fff; font-size:17px; font-weight:500; text-align:left; }
 .healthyHome .section_02 .content strong { color:#fdd93c; }
 
 .healthyHome .section_03,.healthyHome .section_05,.healthyHome .section_08 { background:#000; padding:130px 0;}
