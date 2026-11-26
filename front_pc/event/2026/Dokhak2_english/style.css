@@ -3,34 +3,71 @@
 /* 독학사 영문법 */
 .self_education { width:100%; overflow:hidden; text-align:center; }
 .self_education img { vertical-align:top; }
-.self_education h2 { padding:74px 0 50px; }
+.self_education h2 { padding:94px 0 50px; font-size:46px; font-weight:800; }
+.self_education h2 strong { color:#fdd600; }
+.self_education .section_03 h2,.section_04 h2 { color:#fff; }
 .self_education .content { position:relative; width:1200px; height:100%; margin:0 auto; padding:0 0 110px; }
 
 /* 우측 퀵 배너 */
-.self_education .fixed_img { position:fixed; right:0; top:280px; width:150px; z-index:100; text-align:center; }
-.self_education .fixed_img ul { height:140px; background:#020d00; padding-top:18px; box-sizing:border-box; border-radius:8px 0 0 8px;  }
-.self_education .fixed_img li:after { content:""; width:10px; height:9px; margin:6px auto; display:block; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/fixed_after.gif); }
-.self_education .fixed_img li:last-child:after { background:none; margin-bottom:0; }
+.self_education .fixed_img { position:fixed; right:0; top:280px; width:150px; z-index:100; }
+.self_education .fixed_img ul { height:140px; padding-top:18px; border-radius:8px 0 0 8px; background:#020d00; box-sizing:border-box; }
+.self_education .fixed_img li:after { content:""; display:block; width:10px; height:9px; margin:6px auto; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/fixed_after.gif); }
+.self_education .fixed_img li:last-child:after { margin-bottom:0; background:none; }
 .self_education .fixed_img li a { color:#fff; transition:color .3s; }
 .self_education .fixed_img li a:hover { color:#fdad00; }
-.self_education .fixed_img .btn_consult { display:block; margin-top:12px; height:40px; line-height:38px;border-radius:8px 0 0 8px; background:#fdad00; color:#000; font-size:15px; font-weight:600; box-sizing:border-box; transition:all .3s; }
+.self_education .fixed_img .btn_consult { display:block; height:40px; margin-top:12px; line-height:38px; border-radius:8px 0 0 8px; background:#fdad00; color:#000; font-size:15px; font-weight:600; box-sizing:border-box; transition:all .3s; }
 .self_education .fixed_img .btn_consult:hover { background:#020d00; color:#fff; }
 
 /* 상단 이미지 */
-.self_education .topImg { position:relative; width:100%; background:#ceddd2 url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/topBg.png) no-repeat top center; height:706px; box-sizing:border-box; padding-top:120px; }
+.self_education .topImg { position:relative; width:100%; height:706px; padding-top:120px; background:#ceddd2 url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/topBg.png) no-repeat top center; box-sizing:border-box; }
 .self_education .topImg p { animation:aniUp .8s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; }
 
 /* 수강신청 */
-.self_education .section_01 { background:#006733; }
-.section_01 span { position:absolute; right:245px; top:-12px; animation:upDown 1s ease-out infinite; }
-.section_01 .btn_apply { position:absolute; top:30px; right:30px; background:#fdad00; border:1px solid #fdad00; display:block; width:180px; height:160px; border-radius:3px; transition:all .3s; font-size:20px; color:#222; font-weight:bold; letter-spacing:-2px; box-sizing:border-box; padding:66px 15px 0 0; }
-.section_01 .btn_apply:hover { background:#fd9500; border:1px solid #fd9500; }
-.section_01 .btn_apply:after { position:absolute; right:43px; top:70px; content:""; display:block; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/apply_right.png) no-repeat; width:12px; height:18px; }
-.section_01 .btn_info { position:absolute; right:0; bottom:70px; }
-.section_01 .btn_info li { transition:all .3s; display:inline-block; border:1px solid #a3ada6; width:110px; height:28px; }
-.section_01 .btn_info li a { display:inline-block; width:100%; height:100%; font-size:13px; text-align:center; color:#fff; line-height:28px; }
-.section_01 .btn_info li:hover { background:#fff; border:1px solid #fff; }
-.section_01 .btn_info li:hover a { color:#333; }
+.self_education .section_01 { padding:100px 0 120px; background:#015f30; }
+.self_education .package_design { position:relative; }
+.self_education .package_title,
+.self_education .package_title p { color:#fff; }
+.self_education .package_title p { font-size:24px; }
+.self_education .package_title strong { line-height:1.2; }
+.self_education .package_title strong span { display:block; color:#fdd600; }
+.self_education .package_title del { opacity:.6; }
+.self_education .package_title del:after { content:" → "; display:inline-block; white-space:pre; text-decoration:none; }
+
+/* 쿠폰 다운로드 버튼 */
+.self_education .btn_coupon { display:block; width:384px; height:60px; margin:40px auto 0; border-radius:30px; background:#141414; color:#fff; font-size:18px; font-weight:700; transition:background .3s; }
+.self_education .btn_coupon:hover { background:#000; }
+
+/* 상품 리스트 */
+.self_education .product_list { width:1100px; margin:60px auto 0; text-align:left; }
+.self_education .product_list li { display:flex; align-items:center; height:128px; padding-right:34px; border-radius:8px; background:#fff; box-sizing:border-box; }
+.self_education .product_list li + li { margin-top:16px; }
+.self_education .product_list .tit,
+.self_education .product_list .book,
+.self_education .product_list .price div,
+.self_education .product_list .price dd { display:flex; align-items:center; }
+.self_education .product_list .num { flex:none; width:90px; height:72px; line-height:72px; border-right:1px solid #ddd; text-align:center; font-size:18px; font-weight:600; color:#222; }
+.self_education .product_list .info { flex:1; padding-left:36px; }
+.self_education .product_list .tit strong { font-size:21px; font-weight:700; color:#222; }
+.self_education .product_list .tit span { margin-left:34px; font-size:16px; color:#888; }
+.self_education .product_list .book { margin-top:14px; color:#222; }
+.self_education .product_list .book em { display:inline-block; width:67px; height:27px; line-height:27px; margin-right:12px; border-radius:14px; background:#e5e5e5; text-align:center; font-style:normal; }
+.self_education .product_list .price { margin-right:60px; }
+.self_education .product_list .price div + div { margin-top:8px; }
+.self_education .product_list .price dt { width:28px; font-weight:600; color:#222; }
+.self_education .product_list .price del { width:80px; margin-left:12px; font-size:16px; color:#888; }
+.self_education .product_list .price .rate,
+.self_education .product_list .price dd strong { text-align:right; font-size:24px; }
+.self_education .product_list .price .rate { width:70px; font-weight:700; color:#222; }
+.self_education .product_list .price dd strong { width:126px; font-weight:700; color:#f01e1e; }
+.self_education .product_list .btn_select { flex:none; width:124px; height:72px; border:1px solid #00a050; border-radius:4px; background:#fff; color:#006733; font-size:16px; transition:all .3s; }
+.self_education .product_list .btn_select:hover { border-color:#006733; background:#006733; color:#fff; }
+
+/* 무료상담 · 구매 유의사항 */
+.self_education .btn_info { position:absolute; right:50%; bottom:-50px; margin-right:-550px;}
+.self_education .btn_info li { display:inline-block; width:110px; height:28px; border:1px solid #a3ada6; transition:all .3s; border-radius:4px;  }
+.self_education .btn_info li a { display:inline-block; width:100%; height:100%; line-height:28px; font-size:13px; text-align:center; color:#fff;  }
+.self_education .btn_info li:hover { border-color:#fff; background:#fff; }
+.self_education .btn_info li:hover a { color:#333; }
 
 /* 학습방법 */
 .self_education .section_02 { background:#d9d9d9; }
@@ -40,25 +77,21 @@
 .self_education .section_03 h2 { padding-bottom:0; }
 
 /* 하단 상담 */
-.self_education .section_04 { background:#001e14; padding:50px 0; }
+.self_education .section_04 { padding:80px 0; background:#111; }
+.self_education .section_04 h3 { color:#fff; font-size:36px; font-weight:600; line-height:1.3; }
 .self_education .section_04 ul { margin-top:30px; }
 .self_education .section_04 li { display:inline-block; width:360px; height:65px; }
-.self_education .section_04 li:last-child { margin-left:5px; }
-.self_education .section_04 li a { position:relative; display:inline-block; width:100%; height:100%; border-radius:3px; transition:all .3s; font-size:20px; color:#222; font-weight:bold; letter-spacing:-2px; box-sizing:border-box; line-height:65px; }
-.self_education .section_04 li a:after { position:absolute; right:105px; top:24px; content:""; display:block; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/apply_right.png) no-repeat; width:12px; height:18px; }
-.self_education .section_04 li:first-child a { background:#00b95c; border:1px solid #00b95c; }
-.self_education .section_04 li:first-child a:hover { background:#00e06f; border:1px solid #00e06f; }
-.self_education .section_04 li:last-child a { background:#fdad00; border:1px solid #fdad00; }
-.self_education .section_04 li:last-child a:hover { background:#fdd600; border:1px solid #fdd600; }
+.self_education .section_04 li:last-child { margin-left:12px; }
+.self_education .section_04 li a { position:relative; display:inline-block; width:100%; height:100%; line-height:65px; border:1px solid transparent; border-radius:8px; font-size:20px; font-weight:bold; letter-spacing:-2px; color:#222; box-sizing:border-box; transition:all .3s; }
+.self_education .section_04 li a:after { content:""; position:absolute; right:105px; top:24px; display:block; width:12px; height:18px; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/self_education_0304/images/apply_right.png) no-repeat; }
+.self_education .section_04 li:first-child a { border-color:#00b95c; background:#00b95c; }
+.self_education .section_04 li:first-child a:hover { border-color:#00e06f; background:#00e06f; }
+.self_education .section_04 li:last-child a { border-color:#fdad00; background:#fdad00; }
+.self_education .section_04 li:last-child a:hover { border-color:#fdd600; background:#fdd600; }
 .self_education .section_04 li:last-child a:after { right:78px; }
 
 /* 애니메이션 */
 @keyframes aniUp {
     0% { transform:translateY(20%); opacity:0; }
     100% { transform:translateY(0%); opacity:1; }
-}
-@keyframes upDown {
-    0% { transform:translateY(0%); }
-    50% { transform:translateY(-15%); }
-    100% { transform:translateY(0%); }
 }
