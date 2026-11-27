@@ -1,0 +1,132 @@
+﻿@charset "UTF-8";
+.event_wrap .content { position:relative; width:1200px; margin:0 auto; text-align:center; }
+.event_wrap .main { position:relative; width:100%; height:710px; background:#d4ccf2 url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0325/imgs/topBg.png) no-repeat;background-position:calc(50% + 40px) top; }
+
+.event_wrap h2 {padding: 110px 0 0px; font-size:68px; color:#fff; font-weight:800; }
+.event_wrap h2 small { display:block; font-size:40px; font-weight:600; }
+.event_wrap h2 strong { color:#fdd600; }
+.event_wrap .con02 h2 { color:#111; }
+.event_wrap .con02 h2 strong { color:#4500c3; }
+.event_wrap .pt70 { padding-top: 70px;}
+.event_wrap .pt40 { padding-top: 40px;}
+
+/* main : main */
+.main p { padding-top: 120px;}
+
+/* con01 */
+.con01 {background:#4500c3; padding-bottom: 100px;}
+.con01 span.info { position:relative; display:inline-block; vertical-align:top; color:#fff; font-size:28px; }
+
+.con01 li { padding-top: 20px; position: relative; }
+.con01 li:first-child { padding: 0;}
+.con01 li a {  position: absolute; top: 40px; right: 30px; width: 220px; height: 160px; background: #190046; border-radius: 5px; display: block; transition:all .3s; }
+.con01 li a:hover { background-color: #000;}
+.con01 li:nth-child(n+2) a { top:60px;}
+.con01 li .label { position: absolute; top: 30px; right: 500px; transition:all 0.2s; animation: upDown 0.8s ease-in infinite both;}
+
+.con01 li:nth-child(n+2) .label { top:45px}
+
+/* con02 */
+.con02 { width:100%; height:1404px; background:#d4ccf2 url(https://cdn.kystudy.co.kr/User/Content/images/event/2024/0325/imgs/sec02_bg.png) no-repeat;}
+.con02 h2 { padding-bottom:40px;}
+
+/* con03 */
+.con03 { background: #4500c3; padding-bottom: 100px;}
+
+/* con04 */
+.con04 { background: #190046; padding-bottom: 160px; }
+.con04 h3 {  padding-top: 60px;}
+.con04 li { float: left;}
+.con04 li a { width: 360px; height: 64px;  display: block; transition:all .3s; position: absolute;  top:170px; }
+
+.con04 .btn01 a{ background: #00b95c; left: 240px; }
+.con04 .btn01 a:hover { background: #26e887;}
+.con04 .btn02 a{ background: #fdad00; right: 220px;}
+.con04 .btn02 a:hover { background: #fff455;}
+
+
+@keyframes upDown { 0%{transform: translateY(0%);} 50%{transform: translateY(-8%);} 100%{transform: translateY(0%);}}
+
+/* 수강신청 탭 */
+.event_wrap .tab_menu { display:flex; gap:12px; width:1200px; margin:60px auto 60px; }
+.event_wrap .tab_menu button { width:50%; height:62px; border-radius:8px; background:rgba(255,255,255,.2); color:#fff; font-size:18px; font-weight:500; transition:all .3s; }
+.event_wrap .tab_menu button:hover { background:rgba(255,255,255,.3); }
+.event_wrap .tab_menu button.on { background:#fff; color:#4500c3; font-weight:700; }
+.event_wrap .tab_menu button.on:after { content:""; display:inline-block; width:10px; height:16px; margin:0 0 4px 10px; border:solid #4500c3; border-width:0 3px 3px 0; transform:rotate(45deg); vertical-align:middle; }
+.event_wrap .tab_cont { display:none; }
+.event_wrap .tab_cont.on { display:block; }
+
+/* 수강신청 */
+.event_wrap .package_design { position:relative; }
+.event_wrap .package_title,
+.event_wrap .package_title p { color:#fff; }
+.event_wrap .package_title p { font-size:24px; }
+.event_wrap .package_title strong { line-height:1.2; }
+.event_wrap .package_title strong span { display:block; color:#fdd600; }
+.event_wrap .package_title del { opacity:.6; }
+.event_wrap .package_title del:after { content:" → "; display:inline-block; white-space:pre; text-decoration:none; }
+
+/* 쿠폰 다운로드 버튼 */
+.event_wrap .btn_coupon { display:block; width:384px; height:60px; margin:40px auto 0; border-radius:30px; background:#141414; color:#fff; font-size:18px; font-weight:700; transition:background .3s; }
+.event_wrap .btn_coupon:hover { background:#000; }
+
+/* 수강신청 · 장바구니 버튼 */
+.event_wrap .btn_area { display:flex; justify-content:center; margin-top:50px; gap:24px; }
+.event_wrap .btn_area li { display:block; width:300px; height:60px; padding:0; }
+.event_wrap .btn_area li a { position:static; display:block; width:100%; height:100%; line-height:60px; border-radius:8px; background:#fdd600; color:#111; font-size:18px; font-weight:700; box-sizing:border-box; transition:background .3s; }
+.event_wrap .btn_area li:last-child a { line-height:58px; border:1px solid #fdd600; color:#fdd600; background:#4500c3; }
+
+/* 상품 리스트 */
+.event_wrap .product_list { width:1200px; margin:60px auto 0; text-align:left; }
+.event_wrap .product_list li { display:flex; align-items:center; height:128px; padding-right:34px; border-radius:8px; background:#fff; box-sizing:border-box; }
+.event_wrap .product_list li + li { margin-top:16px; }
+.event_wrap .product_list .tit,
+.event_wrap .product_list .book,
+.event_wrap .product_list .price div,
+.event_wrap .product_list .price dd { display:flex; align-items:center; }
+.event_wrap .product_list .num { flex:none; width:90px; height:72px; line-height:72px; border-right:1px solid #ddd; text-align:center; font-size:18px; font-weight:600; color:#222; }
+.event_wrap .product_list .info { flex:1; padding-left:36px; }
+.event_wrap .product_list .tit strong { font-size:21px; font-weight:700; color:#222; }
+.event_wrap .product_list .tit span { margin-left:34px; font-size:16px; color:#888; }
+.event_wrap .product_list .book { margin-top:14px; color:#222; }
+.event_wrap .product_list .book em { display:inline-block; width:67px; height:27px; line-height:27px; margin-right:12px; border-radius:14px; background:#e5e5e5; text-align:center; font-style:normal; }
+.event_wrap .product_list .price { margin-right:60px; }
+.event_wrap .product_list .price div + div { margin-top:8px; }
+.event_wrap .product_list .price dt { width:28px; font-weight:600; color:#222; }
+.event_wrap .product_list .price del { width:80px; margin-left:12px; font-size:16px; color:#888; }
+.event_wrap .product_list .price .rate,
+.event_wrap .product_list .price dd strong { text-align:right; font-size:24px; }
+.event_wrap .product_list .price .rate { width:70px; font-weight:700; color:#222; }
+.event_wrap .product_list .price dd strong { width:126px; font-weight:700; color:#f01e1e; }
+.event_wrap .product_list .btn_select { flex:none; width:124px; height:72px; border:1px solid #4500c3; border-radius:4px; background:#fff; color:#4500c3; font-size:16px; transition:all .3s; }
+.event_wrap .product_list .btn_select:hover { border-color:#4500c3; background:#4500c3; color:#fff; }
+
+/* 무료상담 · 구매 유의사항 */
+.event_wrap .btn_info { position:absolute; right:50%; bottom:-50px; margin-right:-550px;}
+.event_wrap .btn_info li { display:inline-block; width:110px; height:28px; border:1px solid #a3ada6; transition:all .3s; border-radius:4px;  }
+.event_wrap .btn_info li a { display:inline-block; width:100%; height:100%; line-height:28px; font-size:13px; text-align:center; color:#fff;  }
+.event_wrap .btn_info li:hover { border-color:#fff; background:#fff; }
+.event_wrap .btn_info li:hover a { color:#333; }
+
+/* 학습방법 */
+.event_wrap .section_02 { background:#d9d9d9; }
+
+/* 강좌 특징 */
+.event_wrap .section_03 { background:#006733; }
+.event_wrap .section_03 h2 { padding-bottom:0; }
+
+/* 하단 상담 */
+.event_wrap .section_04 { padding:80px 0; background:#111; }
+.event_wrap .section_04 h3 { color:#fff; font-size:36px; font-weight:600; line-height:1.3; }
+.event_wrap .section_04 ul { margin-top:30px; }
+.event_wrap .section_04 li { display:inline-block; width:360px; height:65px; }
+.event_wrap .section_04 li:last-child { margin-left:12px; }
+.event_wrap .section_04 li a { position:relative; display:inline-block; width:100%; height:100%; line-height:65px; border:1px solid transparent; border-radius:8px; font-size:20px; font-weight:bold; letter-spacing:-2px; color:#222; box-sizing:border-box; transition:all .3s; }
+.event_wrap .section_04 li a:after { content:""; position:absolute; right:105px; top:24px; display:block; width:12px; height:18px; background:url(https://cdn.kystudy.co.kr/User/Content/images/event/2021/event_wrap_0304/images/apply_right.png) no-repeat; }
+.event_wrap .section_04 li:first-child a { border-color:#00b95c; background:#00b95c; }
+.event_wrap .section_04 li:first-child a:hover { border-color:#00e06f; background:#00e06f; }
+.event_wrap .section_04 li:last-child a { border-color:#fdad00; background:#fdad00; }
+.event_wrap .section_04 li:last-child a:hover { border-color:#fdd600; background:#fdd600; }
+.event_wrap .section_04 li:last-child a:after { right:78px; }
+
+
