@@ -1458,7 +1458,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .package_design { display:flex; flex-direction:column;}
 .package_design .package_title { width:1280px; margin:0 auto; text-align:center; }
 .package_design .package_title > span { font-size:24px; }
-.package_design .package_title > strong { display:block; font-size:46px; font-weight:800; margin-bottom:8px; }
+.package_design .package_title > strong { display:block; font-size:46px; font-weight:900; margin-bottom:8px; }
 .package_design .package_title > strong span { color:#001dbf; }
 .package_design .package_title > p { font-size:20px; }
 .product_PackageList { display:flex; width:1280px; margin:40px auto 0; gap:12px; flex-wrap:wrap; counter-reset:package_num; }
