@@ -1,0 +1,121 @@
+﻿@charset "UTF-8";
+
+.English_Package .content { position:relative; width:1200px; margin:0 auto; text-align:center; } 
+.English_Package .con01 { position:relative; width:100%; height:970px; background:#5badf7 url(https://cdn.kystudy.co.kr/User/Content/images/event/2026/engPack_0410/images/con01_main_bg.png) no-repeat center; } 
+
+/* quick */
+.English_Package .quick { position: fixed; right: 0; top: 80px; z-index: 100000; } 
+.English_Package .quick li:nth-child(n+3) { margin-top: 10px; } 
+
+/* con01 : main */
+.con01 .sub_title { position: absolute; top: 80px; left: 50%; margin-left: -334px; animation: fadeIn_up 0.6s 0.8s ease-out both; } 
+.con01 .main_title { position: absolute; top: 170px; left: 50%; margin-left: -356px; animation: fadeIn_up 1s 1s ease-out both; } 
+.con01 .icon_img { position: absolute; top: 590px; left: 50%; margin-left: -469px; animation: fadeIn_up 1s 1.3s ease-out both; }
+.con01 .deco_L { position: absolute; top: 130px; left: -160px; overflow: hidden; animation: fadeIn 1s 0.6s ease both; padding: 10px; } 
+.con01 .deco_R { position: absolute; top: 380px; right: -30px; overflow: hidden; animation: fadeIn 1s 1s ease both; padding: 10px; }
+.dungdung { animation: moveUpDown 0.5s infinite alternate; } 
+.dungdung2 { animation: moveUpDown 0.7s infinite alternate; }
+
+@keyframes moveUpDown { 
+ 0% { transform: translateY(0); } 
+ 100% { transform: translateY(10px); } 
+ }
+
+ @keyframes fadeIn { 
+ 0% { opacity: 0; } 100% { opacity: 1; } 
+ } 
+
+@keyframes fadeIn_up { 
+ 0% { opacity:0; transform: translateY(20%); } 100% { opacity:01; transform: translateY(20%); } 
+ } 
+
+.con02, .con03, .con04 { padding-bottom: 110px;}
+
+/* con02 : 패키지 구매 영역 */
+.English_Package .con02 { background-color: #dadae8; } 
+.group_div:after { content:""; display:block; clear:both; } 
+.group_div { margin-bottom:40px; border:2px solid #1e1e1e; } 
+.group_div li { float:left; width:398px; } 
+.group_div li:nth-child(2) { float:left; width:400px; } 
+.group_div li a { position:relative; display:block; height:80px; line-height:80px; font-size:21px; color:#333; letter-spacing:-3px; background:#fff; box-sizing:border-box; border-right:1px solid #31277b; } 
+.group_div li:last-child a { border-right:none; } 
+.group_div li a.current { background:#d40006; color:#ffe506; font-weight: 500; } 
+.package_list > li dd { width:1000px; padding:50px 0 0 25px } 
+.package_list .apply_section { right:5px; top:20px; } 
+.package_list > li dt strong { font-size:25px; padding-top:15px; } 
+.package_list > li { height:140px; } 
+.package_list > li dt { width:185px; height:140px; } 
+.package_list .apply_section li, .package_list .apply_section li a { width:105px; height:95px; line-height:95px; } 
+.package_list .apply_section li { margin-left:4px; } 
+.package_list .apply_section li:first-child a { background:#d40006 !important; } 
+.package_list .apply_section li:first-child a:hover { background:#9b0004 !important; } 
+.package_list .subject_pay { margin-top:8px; } 
+.package_list .subject_name li { letter-spacing:-1px; } 
+.package_list .subject_name span { top:-28px; font-size:13px; color:#333; letter-spacing:0; } 
+.package_list .subject_pay del { font-size:23px; } 
+.package_list .subject_pay li strong { font-size:34px; } 
+.package_list .subject_name li:after { padding:0 10px 0 5px; } 
+
+/* con07 */
+.English_Package .con07 { background-color: #28282d; } 
+.English_Package .con07 ul { position: absolute; top: 280px; } 
+.English_Package .con07 ul li { float: left; padding-left: 66px; } 
+.English_Package .con07 ul li:first-child { padding-left: 20px; } 
+.English_Package .con07 li a img { transition:all .15s; } 
+.English_Package .con07 li a:hover img { transform:scale(1.05); } 
+
+/* 패키지 상담신청_무한재수강 추가 20250409 */
+.package_list > li dl { width: 1200px; overflow:hidden; margin: 0 auto; } 
+.package_list .unlimited dd { height:140px; padding:35px 0 0 25px; } 
+.packageTitle { text-align:center; padding:100px 0 48px; } 
+.packageTitle span { font-size:24px; } 
+.packageTitle h5 { font-size:54px; padding:8px 0 10px; font-weight:bold; letter-spacing:-2px; } 
+.packageTitle h5 strong { color:#d40006; line-height:1.1; } 
+.packageTitle p { font-size:20px; } 
+.packageTitle .noti_tx { font-size: 15px; color: #888; } 
+
+.package_list .subject_name li { letter-spacing:0; } 
+.package_list .unlimited { height:auto; } 
+.package_list .unlimited .package_guide { background:#f6f6f6; padding:20px 30px; text-align:left; border-radius:5px; } 
+.package_list .unlimited .package_guide strong { padding-bottom:3px; display:block; font-size:18px; } 
+.package_list .subject_name span { line-height:18px; } 
+
+/* con03: 학사과정 */
+.card_wrap { display: flex; gap: 20px; max-width: 1200px; width: 100%; } 
+.card { flex: 1; min-width: 350px; background: #fff; border: 1px solid #333; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); } 
+.card-header { background-color: #000; color: #fff; padding: 20px; text-align: center; font-size: 1.5rem; font-weight: bold; } 
+.highlight { color: #ffeb3b; } 
+table { width: 100%; border-collapse: collapse; } 
+th, td { border-bottom: 1px solid #ccc; padding: 20px; font-size: 18px; line-height: 1.6; vertical-align: middle; } 
+td:first-child { width: 35%; background-color: #fff; border-right: 1px solid #ccc; text-align: center; font-weight: bold; } 
+tr:last-child td { border-bottom: none; } 
+.subject-list { text-align: center; color: #333; word-break: keep-all; } 
+
+/* con04: 통합 커리큘럼 */
+.English_Package .con04 { background-color: #f5f5f5; }
+.table-container { width: 100%; max-width: 1200px; background: #fff; border: 1px solid #333; border-radius: 15px; overflow: hidden; margin-bottom: 60px; } 
+table { width: 100%; border-collapse: collapse; text-align: center; } 
+
+/* 헤더 스타일 */
+thead th { background-color: #000; color: #fff; padding: 15px; font-weight: bold; border-right: 1px solid #444; }
+thead th:last-child { border-right: none; } 
+
+/* 셀 공통 스타일 */
+td { padding: 18px 10px; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; font-size: 18px; color: #333; } 
+tr:last-child td { border-bottom: none; } 
+td:last-child { border-right: none; }
+td:first-child { background-color: #e3f2fd; font-weight: bold; } 
+
+/* 자격증 발급 신청하기 버튼 */
+.apply-button { display: inline-block; background-color: #000; color: #fff; padding: 25px 150px; font-size: 36px; font-weight: bold; text-decoration: none; border-radius: 15px; transition: background-color 0.3s ease; cursor: pointer; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+.package_design { background:#dadae8; padding:100px 0 110px; }
+.bg_01 .packageTitle { padding-bottom:0; }
+.bg_01 { text-align:center; }
+.bg_01 .inner { margin-top:-30px; }
+.bg_01 .btn_area { display:flex; justify-content:center; gap:24px; margin-bottom:110px; }
+.bg_01 .btn_area li { width:360px; height:60px;  }
+.bg_01 .btn_area li a,.con04 .btn { display:block; width:360px; height:60px; font-size:18px; line-height:58px; }
+.con04 .btn { margin:0 auto; }
+
+

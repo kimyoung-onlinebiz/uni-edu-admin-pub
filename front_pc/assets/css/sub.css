@@ -1461,7 +1461,7 @@ list-style:none; margin-bottom:32px; border-top: 1px solid var(--Neutral-300);bo
 .package_design .package_title > strong { display:block; font-size:46px; font-weight:800; margin-bottom:8px; }
 .package_design .package_title > strong span { color:#001dbf; }
 .package_design .package_title > p { font-size:20px; }
-.product_PackageList { display:flex; width:1280px; margin:40px auto; gap:12px; flex-wrap:wrap; counter-reset:package_num; }
+.product_PackageList { display:flex; width:1280px; margin:40px auto 0; gap:12px; flex-wrap:wrap; counter-reset:package_num; }
 .product_PackageList li { width:1280px; display:flex; align-items:center; background:#fff; border-radius:var(--Border-2radius); overflow:hidden; gap:40px; padding:24px 0; counter-increment:package_num; box-shadow:0 2px 6px 0 rgba(0, 0, 0, 0.04); }
 .product_PackageList li:before { content:counter(package_num); display:flex; align-items:center; justify-content:center; align-self:stretch; font-size:21px; font-weight:500;  border-right:1px solid var(--Neutral-300); width:80px; }
 .product_PackageList li dd,.product_PackageList .package_price { display:flex; gap:24px; }
